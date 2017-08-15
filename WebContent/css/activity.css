@@ -14,8 +14,13 @@ table, table th,table td{
 }
 
 #actmainphoto{
-	width:300px;
-	height:100px;
+	width:900px;
+	height:300px;
 	margin:auto;
 
+}
+.planimage{
+	width:300px;
+	height:150px;
+	margin:20px;
 }
