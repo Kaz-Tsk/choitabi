@@ -19,10 +19,16 @@ table, table th,table td{
 	margin:auto;
 
 }
+
+.plan{
+	position:absolute;
+}
 }.planimage{
 	float:left;
+
 }
 
 .planinfo{
 	float:left;
+	margin-left:20px;
 }
