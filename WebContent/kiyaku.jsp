@@ -144,6 +144,13 @@
 
 <p>本規約は、日本標準時2017年8月1日より有効とします。</p>
 
+<div align="center">
+<a href="index.jsp">
+戻る
+</a>
+</div>
+
+
 <footer></footer>
 
 </body>
