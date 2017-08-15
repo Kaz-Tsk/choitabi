@@ -13,6 +13,16 @@ table, table th,table td{
 
 }
 
-.planinfo{float:left;}
+#actmainphoto{
+	width:900px;
+	height:300px;
+	margin:auto;
+
 }
+}.planimage{
+	float:left;
+}
+
+.planinfo{
+	float:left;
 }
