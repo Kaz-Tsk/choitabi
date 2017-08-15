@@ -20,15 +20,4 @@ table, table th,table td{
 
 }
 
-.plan{
-	position:absolute;
-}
-}.planimage{
-	float:left;
-
-}
-
-.planinfo{
-	float:left;
-	margin-left:20px;
 }
