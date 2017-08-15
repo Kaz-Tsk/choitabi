@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>お問い合わせ送信完了</title>
-  <link href="WebContent/css/contactsend.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/contactsend.css">
 </head>
 <body>
 
