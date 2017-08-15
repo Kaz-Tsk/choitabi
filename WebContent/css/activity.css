@@ -13,10 +13,6 @@ table, table th,table td{
 
 }
 
-#actmainphoto{
-	width:900px;
-	height:300px;
-	margin:auto;
-
+.planinfo{float:left;}
 }
 }
