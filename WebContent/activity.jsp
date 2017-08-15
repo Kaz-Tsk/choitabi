@@ -5,17 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type = "text/css" href = "css/activity.css">
-<title>Insert title here</title>
+<title>アクティビティツアー</title>
 </head>
 <body>
 <div id="wrapper">
 <body>
     <h1>アクティビティツアー</h1>
     <h2>自然に触れ合う健康的なツアーが満載！</h2>
-    <img id ="actmainphoto" src ="image/activity.jpg">
+    <img id ="actmainphoto" src ="img/activity.jpg">
     <div class="plan">
         <div class="planimage">
-            <img src="image/raft.jpg"><br>
+            <img src="img/raft.jpg"><br>
         </div>
         <div class="planinfo">
             <table>
@@ -53,7 +53,7 @@
     </div>
     <div class="plan">
         <div class="planimage">
-            <img src="image/raft.jpg"><br>
+            <img src="img/raft.jpg"><br>
         </div>
         <div class="planinfo">
             <table>
@@ -91,7 +91,7 @@
     </div>
     <div class="plan">
         <div class="planimage">
-            <img src="image/raft.jpg"><br>
+            <img src="img/raft.jpg"><br>
         </div>
         <div class="planinfo">
             <table>
