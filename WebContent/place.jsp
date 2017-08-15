@@ -18,14 +18,14 @@
   <!--place1部分↓--------------------------------->
   <div class = "place1">
    <img class = "img1" src = "img/ryuzin.jpg">
-   <div class = "place1sadd1">
+   <div class = "place1sadd">
     住所<br>
     　(仮)関東　茨城
    </div>
-   <div class = "place1title1">
+   <div class = "place1title">
      (仮)竜神大吊橋
    </div>
-   <div class = "place1context1">
+   <div class = "place1text">
     ※テキスト、タイトル、写真、色などは仮です。
    </div>
    </div>
@@ -33,14 +33,14 @@
   <!--place2部分↓---------------------------------->
   <div class = "place2">
    <img class = "img2" src = "img/hituziyama.jpg">
-   <div class = "place1sadd2">
+   <div class = "place2sadd">
     住所<br>
     　(仮)埼玉県、関東
    </div>
-   <div class = "place1title2">
+   <div class = "place2title">
      (仮)羊山公園
    </div>
-   <div class = "place1context2">
+   <div class = "place2text">
     ※テキスト、タイトル、写真、色などは仮です。
    </div>
   </div>
@@ -48,14 +48,14 @@
   <!--place3部分↓---------------------------------->
   <div class = "place3">
    <img class = "img3" src = "img/wakamatu.jpg">
-   <div class = "place1sadd3">
+   <div class = "place3sadd">
     住所<br>
     　(仮)福島県、東北
    </div>
-   <div class = "place1title3">
+   <div class = "place3title">
      (仮)若松城
    </div>
-   <div class = "place1context3">
+   <div class = "place3text">
     ※テキスト、タイトル、写真、色などは仮です。
    </div>
   </div>
@@ -63,14 +63,14 @@
   <!--place4部分↓---------------------------------->
   <div class = "place4">
    <img class = "img4" src = "img/chusonzi.jpg">
-   <div class = "place1sadd4">
+   <div class = "place4sadd">
     住所<br>
     　(仮)岩手県、東北
    </div>
-   <div class = "place1title4">
+   <div class = "place4title">
      (仮)中尊寺
    </div>
-   <div class = "place1context4">
+   <div class = "place4text">
     ※テキスト、タイトル、写真、色などは仮です。
    </div>
   </div>
@@ -78,14 +78,14 @@
   <!--place5部分↓---------------------------------->
   <div class = "place5">
    <img class = "img5" src = "img/himezi.jpg">
-   <div class = "place1sadd5">
+   <div class = "place5sadd">
     住所<br>
     　(仮)兵庫県、関西
    </div>
-   <div class = "place1title5">
+   <div class = "place5title">
      (仮)姫路城
    </div>
-   <div class = "place1context5">
+   <div class = "place5text">
     ※テキスト、タイトル、写真、色などは仮です。
    </div>
   </div>
@@ -93,14 +93,14 @@
   <!--place6部分↓---------------------------------->
   <div class = "place6">
    <img class = "img6" src = "img/nijoujou.jpg">
-   <div class = "place1sadd6">
+   <div class = "place6sadd">
     住所<br>
     　(仮)京都、関西
    </div>
-   <div class = "place1title6">
+   <div class = "place6title">
      (仮)二条城
    </div>
-   <div class = "place1context6">
+   <div class = "place6text">
     ※テキスト、タイトル、写真、色などは仮です。
    </div>
   </div>

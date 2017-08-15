@@ -28,7 +28,7 @@ h1{
     width:160px;
 }
 
-.place1title1{
+.place1title{
     position:absolute;
     top:10px;
     left:180px;
@@ -38,7 +38,7 @@ h1{
     text-align:right;
 }
 
-.place1context1{
+.place1text{
     position:absolute;
     top:50px;
     left:180px;
@@ -46,7 +46,7 @@ h1{
     width:310px;
     text-align:right;}
 
-.place1sadd1{
+.place1sadd{
     position:absolute;
     top:170px;
     left:0;
@@ -55,7 +55,7 @@ h1{
     border:1px solid #ffa500;
 }
 
-.place1text1{
+.place1text{
     position:absolute;
     top:60;
     left:180;
@@ -80,7 +80,7 @@ h1{
     width:160px;
 }
 
-.place1title2{
+.place2title{
     position:absolute;
     top:10px;
     left:180px;
@@ -89,7 +89,7 @@ h1{
     border-bottom:solid #ffa500;
     text-align:right;}
 
-.place1context2{
+.place2text{
     position:absolute;
     top:50px;
     left:180px;
@@ -97,7 +97,7 @@ h1{
     width:310px;
     text-align:right;}
 
-.place1sadd2{
+.place2sadd{
     position:absolute;
     top:170px;
     left:0;
@@ -106,7 +106,7 @@ h1{
     border:1px solid #ffa500;
 }
 
-.place1text2{
+.place2text{
     position:absolute;
     top:60;
     left:180;
@@ -131,7 +131,7 @@ h1{
     width:160px;
 }
 
-.place1title3{
+.place3title{
     position:absolute;
     top:10px;
     left:180px;
@@ -140,7 +140,7 @@ h1{
     border-bottom:solid #ffa500;
     text-align:right;}
 
-.place1context3{
+.place3text{
     position:absolute;
     top:50px;
     left:180px;
@@ -148,7 +148,7 @@ h1{
     width:310px;
     text-align:right;}
 
-.place1sadd3{
+.place3sadd{
     position:absolute;
     top:170px;
     left:0;
@@ -157,7 +157,7 @@ h1{
     border:1px solid #ffa500;
 }
 
-.place1text3{
+.place3text{
     position:absolute;
     top:60;
     left:180;
@@ -182,7 +182,7 @@ h1{
     width:160px;
 }
 
-.place1title4{
+.place4title{
     position:absolute;
     top:10px;
     left:180px;
@@ -191,7 +191,7 @@ h1{
     border-bottom:solid #ffa500;
     text-align:right;}
 
-.place1context4{
+.place4text{
     position:absolute;
     top:50px;
     left:180px;
@@ -199,7 +199,7 @@ h1{
     width:310px;
     text-align:right;}
 
-.place1sadd4{
+.place4sadd{
     position:absolute;
     top:170px;
     left:0;
@@ -208,7 +208,7 @@ h1{
     border:1px solid #ffa500;
 }
 
-.place1text4{
+.place4text{
     position:absolute;
     top:60;
     left:180;
@@ -233,7 +233,7 @@ h1{
     width:160px;
 }
 
-.place1title5{
+.place5title{
     position:absolute;
     top:10px;
     left:180px;
@@ -242,7 +242,7 @@ h1{
     border-bottom:solid #ffa500;
     text-align:right;}
 
-.place1context5{
+.place5text{
     position:absolute;
     top:50px;
     left:180px;
@@ -250,7 +250,7 @@ h1{
     width:310px;
     text-align:right;}
 
-.place1sadd5{
+.place5sadd{
     position:absolute;
     top:170px;
     left:0;
@@ -259,7 +259,7 @@ h1{
     border:1px solid #ffa500;
 }
 
-.place1text5{
+.place5text{
     position:absolute;
     top:60;
     left:180;
@@ -284,7 +284,7 @@ h1{
     width:160px;
 }
 
-.place1title6{
+.place6title{
     position:absolute;
     top:10px;
     left:180px;
@@ -293,7 +293,7 @@ h1{
     border-bottom:solid #ffa500;
     text-align:right;}
 
-.place1context6{
+.place6text{
     position:absolute;
     top:50px;
     left:180px;
@@ -301,7 +301,7 @@ h1{
     width:310px;
     text-align:right;}
 
-.place1sadd6{
+.place6sadd{
     position:absolute;
     top:170px;
     left:0;
@@ -310,10 +310,10 @@ h1{
     border:1px solid #ffa500;
 }
 
-.place1text6{
+.place6text{
     position:absolute;
-    top:60;
-    left:180;
+    top:60px;
+    left:180px;
     height:200px;
     width:310px;
 }
