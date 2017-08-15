@@ -1,0 +1,271 @@
+/*--placeïîï™Å´-------------------------*/
+.place{
+    position:absolute;
+    left:450px;
+    height:auto;
+    width:auto;
+}
+
+h1{
+    font-size:30px;
+    border-bottom:solid #ffa500;
+}
+
+/*--place1ïîï™Å´-------------------------*/
+.place1{
+    position:relative;
+    height:280px;
+    width:500px;
+    margin-top:40px;
+    border-bottom:solid #ffa500;
+}
+
+.img1{
+    position:absolute;
+    top:10px;
+    left:0;
+    height:140px;
+    width:160px;
+}
+
+.place1title1{
+    position:absolute;
+    top:10px;
+    left:180px;
+    height:20px;
+    width:310px;
+    border-bottom:solid #ffa500;
+    text-align:right;
+}
+
+.place1sadd1{
+    position:absolute;
+    top:170;
+    left:0;
+    height:80px;
+    width:160px;
+    border:1px solid #ffa500;
+}
+
+.place1text1{
+    position:absolute;
+    top:60;
+    left:180;
+    height:200px;
+    width:310px;
+}
+
+/*--place2ïîï™Å´-------------------------*/
+.place2{
+    position:relative;
+    height:280px;
+    width:500px;
+    border-bottom:solid #ffa500;
+    margin-top:20px;
+}
+
+.img2{
+    position:absolute;
+    top:10px;
+    left:0;
+    height:140px;
+    width:160px;
+}
+
+.place1title2{
+    position:absolute;
+    top:10px;
+    left:180px;
+    height:20px;
+    width:310px;
+    border-bottom:solid #ffa500;
+    text-align:right;}
+
+.place1sadd2{
+    position:absolute;
+    top:170;
+    left:0;
+    height:80px;
+    width:160px;
+    border:1px solid #ffa500;
+}
+
+.place1text2{
+    position:absolute;
+    top:60;
+    left:180;
+    height:200px;
+    width:310px;
+}
+
+/*--place3ïîï™Å´-------------------------*/
+.place3{
+    position:relative;
+    height:280px;
+    width:500px;
+    border-bottom:solid #ffa500;
+    margin-top:20px;
+}
+
+.img3{
+    position:absolute;
+    top:10px;
+    left:0;
+    height:140px;
+    width:160px;
+}
+
+.place1title3{
+    position:absolute;
+    top:10px;
+    left:180px;
+    height:20px;
+    width:310px;
+    border-bottom:solid #ffa500;
+    text-align:right;}
+
+.place1sadd3{
+    position:absolute;
+    top:170;
+    left:0;
+    height:80px;
+    width:160px;
+    border:1px solid #ffa500;
+}
+
+.place1text3{
+    position:absolute;
+    top:60;
+    left:180;
+    height:200px;
+    width:310px;
+}
+
+/*--place4ïîï™Å´-------------------------*/
+.place4{
+    position:relative;
+    height:280px;
+    width:500px;
+    border-bottom:solid #ffa500;
+    margin-top:20px;
+}
+
+.img4{
+    position:absolute;
+    top:10px;
+    left:0;
+    height:140px;
+    width:160px;
+}
+
+.place1title4{
+    position:absolute;
+    top:10px;
+    left:180px;
+    height:20px;
+    width:310px;
+    border-bottom:solid #ffa500;
+    text-align:right;}
+
+.place1sadd4{
+    position:absolute;
+    top:170;
+    left:0;
+    height:80px;
+    width:160px;
+    border:1px solid #ffa500;
+}
+
+.place1text4{
+    position:absolute;
+    top:60;
+    left:180;
+    height:200px;
+    width:310px;
+}
+
+/*--place5ïîï™Å´-------------------------*/
+.place5{
+    position:relative;
+    height:280px;
+    width:500px;
+    border-bottom:solid #ffa500;
+    margin-top:20px;
+}
+
+.img5{
+    position:absolute;
+    top:10px;
+    left:0;
+    height:140px;
+    width:160px;
+}
+
+.place1title5{
+    position:absolute;
+    top:10px;
+    left:180px;
+    height:20px;
+    width:310px;
+    border-bottom:solid #ffa500;
+    text-align:right;}
+
+.place1sadd5{
+    position:absolute;
+    top:170;
+    left:0;
+    height:80px;
+    width:160px;
+    border:1px solid #ffa500;
+}
+
+.place1text5{
+    position:absolute;
+    top:60;
+    left:180;
+    height:200px;
+    width:310px;
+}
+
+/*--place6ïîï™Å´-------------------------*/
+.place6{
+    position:relative;
+    height:280px;
+    width:500px;
+    border-bottom:solid #ffa500;
+    margin-top:20px;
+}
+
+.img6{
+    position:absolute;
+    top:10px;
+    left:0;
+    height:140px;
+    width:160px;
+}
+
+.place1title6{
+    position:absolute;
+    top:10px;
+    left:180px;
+    height:20px;
+    width:310px;
+    border-bottom:solid #ffa500;
+    text-align:right;}
+
+.place1sadd6{
+    position:absolute;
+    top:170;
+    left:0;
+    height:80px;
+    width:160px;
+    border:1px solid #ffa500;
+}
+
+.place1text6{
+    position:absolute;
+    top:60;
+    left:180;
+    height:200px;
+    width:310px;
+}
