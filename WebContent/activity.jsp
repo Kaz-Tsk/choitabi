@@ -1,0 +1,133 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="wrapper">
+<body>
+    <h1>アクティビティツアー</h1>
+    <h2>自然に触れ合う健康的なツアーが満載！</h2>
+    <img id ="actmainphoto" src ="image/activity.jpg">
+    <div class="plan">
+        <div class="planimage">
+            <img src="image/raft.jpg"><br>
+        </div>
+        <div class="planinfo">
+            <table>
+            <tr colspan="1">
+                <th colspan="2">群馬ラフティングツアー</th>
+            </tr>
+            <tr>
+                <td>価格</td>
+                <td>８０００円</td>
+            </tr>
+            <tr>
+                <td>ツアー日時</td>
+                <td>１０月１０日　10：00～15：00</td>
+            </tr>
+            <tr>
+                <td>集合場所</td>
+                <td>板橋駅8：00</td>
+            </tr>
+            <tr>
+                <td>解散場所</td>
+                <td>板橋駅16：00</td>
+            </tr>
+            <tr>
+                <td>内容</td>
+                <td>8:30 駅出発<br>
+                    9:30  現地到着<br>
+                    10:00 ラフティング<br>
+                    15:00 現地出発<br>
+                    15:30 駅到着<br>
+                    16:00 解散<br>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+    <div class="plan">
+        <div class="planimage">
+            <img src="image/raft.jpg"><br>
+        </div>
+        <div class="planinfo">
+            <table>
+            <tr colspan="1">
+                <th colspan="2">群馬ラフティングツアー</th>
+            </tr>
+            <tr>
+                <td>価格</td>
+                <td>８０００円</td>
+            </tr>
+            <tr>
+                <td>ツアー日時</td>
+                <td>１０月１０日　10：00～15：00</td>
+            </tr>
+            <tr>
+                <td>集合場所</td>
+                <td>板橋駅8：00</td>
+            </tr>
+            <tr>
+                <td>解散場所</td>
+                <td>板橋駅16：00</td>
+            </tr>
+            <tr>
+                <td>内容</td>
+                <td>8:30 駅出発<br>
+                    9:30  現地到着<br>
+                    10:00 ラフティング<br>
+                    15:00 現地出発<br>
+                    15:30 駅到着<br>
+                    16:00 解散<br>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+    <div class="plan">
+        <div class="planimage">
+            <img src="image/raft.jpg"><br>
+        </div>
+        <div class="planinfo">
+            <table>
+            <tr colspan="1">
+                <th colspan="2">群馬ラフティングツアー</th>
+            </tr>
+            <tr>
+                <td>価格</td>
+                <td>８０００円</td>
+            </tr>
+            <tr>
+                <td>ツアー日時</td>
+                <td>１０月１０日　10：00～15：00</td>
+            </tr>
+            <tr>
+                <td>集合場所</td>
+                <td>板橋駅8：00</td>
+            </tr>
+            <tr>
+                <td>解散場所</td>
+                <td>板橋駅16：00</td>
+            </tr>
+            <tr>
+                <td>内容</td>
+                <td>8:30 駅出発<br>
+                    9:30  現地到着<br>
+                    10:00 ラフティング<br>
+                    15:00 現地出発<br>
+                    15:30 駅到着<br>
+                    16:00 解散<br>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+</body>
+    </div>
+</html>
+</body>
+</html>
