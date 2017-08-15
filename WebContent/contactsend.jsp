@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>お問い合わせ送信完了</title>
+</head>
+<body>
+
+    <div class="end">お問い合わせ送信完了</div>
+    <div class="contact">
+       <h2>お問い合わせの送信が完了いたしました。</h2>
+    
+    <div class="notice">お問い合わせいただいた内容につきましては、<br>
+        3営業日以内にご返信させていただきます。</div>
+    
+       <h2>ご利用ありがとうございました。</h2>
+        </div>
+    
+    <div class="top">
+        <a href="">トップに戻る</a>
+    </div>
+
+</body>
+</html>
