@@ -64,10 +64,10 @@
         </div>
     </div>
     <div class="plan">
-        <div class="planimage">
+        <div class="planimage1">
             <img src="img/raft.jpg"><br>
         </div>
-        <div class="planinfo">
+        <div class="planinfo1">
             <table>
             <tr colspan="1">
                 <th colspan="2">群馬ラフティングツアー</th>
@@ -102,10 +102,10 @@
         </div>
     </div>
     <div class="plan">
-        <div class="planimage">
+        <div class="planimage2">
             <img src="img/raft.jpg"><br>
         </div>
-        <div class="planinfo">
+        <div class="planinfo2">
             <table>
             <tr colspan="1">
                 <th colspan="2">群馬ラフティングツアー</th>
