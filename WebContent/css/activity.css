@@ -1,0 +1,15 @@
+#wrapper{
+    max-width:1020px;
+    margin: 0 auto;
+}
+
+
+table, table th,table td{
+    background-color: aliceblue;
+    border: solid 3px white;
+    text-align:center;
+    padding: 4px;
+    font-size: 50px;
+
+}
+
