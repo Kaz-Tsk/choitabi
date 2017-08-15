@@ -5,11 +5,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type = "text/css" href = "css/activity.css">
+<link rel = "stylesheet" type = "text/css" href = "css/index.css">
 <title>アクティビティツアー</title>
 </head>
 <body>
 <div id="wrapper">
 <body>
+<!--ヘッダー部分----------------------------------------------->
+<div class = "header">
+    <div class = "headerLogo">choitabi</div>
+    <div class = "headerMenuBox">
+        <div class = "headerMenu">choitabiについて</div>
+        <div class = "headerMenu">Ｑ＆Ａ/ お問い合わせ</div>
+        <div class = "headerMenu">ログイン</div>
+    </div>
+</div>
+
+
     <h1>アクティビティツアー</h1>
     <h2>自然に触れ合う健康的なツアーが満載！</h2>
     <img id ="actmainphoto" src ="img/activity.jpg">
