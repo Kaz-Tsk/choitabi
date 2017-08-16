@@ -26,5 +26,6 @@ table, table th,table td{
 }
 
 #main{
-	float:left;
+	float:right;
+	margin-right:300px;
 }
