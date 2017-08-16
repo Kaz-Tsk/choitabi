@@ -1,0 +1,30 @@
+#wrapper{
+    width:100%;
+    margin: 0 auto;
+}
+
+
+table, table th,table td{
+    background-color: aliceblue;
+    border: solid 3px white;
+    text-align:center;
+    padding: 4px;
+    font-size:20px;
+    width:450px;
+    height:300px;
+
+
+}
+
+#actmainphoto{
+	width:900px;
+	height:300px;
+	margin:auto;
+
+}
+
+.planimage{
+	width:450px;
+	height:300px;
+
+}
