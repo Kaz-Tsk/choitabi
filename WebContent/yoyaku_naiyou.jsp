@@ -10,7 +10,18 @@
 
 <body>
 
-<div class ="header">
+<div class = "header">
+    <div class = "headerLogo">choitabi</div>
+    <div class = "headerMenuBox">
+        <div class = "headerMenu">
+	        choitabiについて　　
+	        Ｑ＆Ａ / お問い合わせ　　
+	        ログイン
+        </div>
+    </div>
+</div>
+
+<div class ="log">
     予約内容確認_<b>山田 太郎</b>様_<a href="">ログアウト</a>
 </div>
 
@@ -35,11 +46,16 @@
         <td>○○○○○円</td>
     </tr>
 </table>
-   
-    <div class="link">
-    <a href="">会社概要</a><br>
-    <a href="">利用規約</a><br>
-    <a href="">トップページ</a><br>
+  
+<div class = "footer">
+
+    <div class = "ARRLogo">All Rights Reserved.</div>
+    <div class = "footerMenuBox">
+        <div class = "footerMenu">会社概要</div>
+        <div class = "footerMenu">利用規約</div>
+    </div>
+    <div class = "clear"></div>
+
 </div>
 </body>
 </html>

@@ -7,7 +7,18 @@
 <title>お問い合わせ送信完了</title>
   <link rel="stylesheet" type="text/css" href="css/contactsend.css">
 </head>
+
 <body>
+<div class = "header">
+    <div class = "headerLogo">choitabi</div>
+    <div class = "headerMenuBox">
+        <div class = "headerMenu">
+	        choitabiについて　　
+	        Ｑ＆Ａ / お問い合わせ　　
+	        ログイン
+        </div>
+    </div>
+</div>
 
     <div class="end">お問い合わせ送信完了</div>
     <div class="contact">
@@ -23,5 +34,13 @@
         <a href="">トップに戻る</a>
     </div>
 
+<div class = "footer">
+
+    <div class = "ARRLogo">All Rights Reserved.</div>
+    <div class = "footerMenuBox">
+        <div class = "footerMenu">会社概要</div>
+        <div class = "footerMenu">利用規約</div>
+    </div>
+    <div class = "clear"></div>
 </body>
 </html>
