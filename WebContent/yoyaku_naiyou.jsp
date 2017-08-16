@@ -25,9 +25,7 @@
     </tr>
         <tr>
    <th class="naiyou">ツアー内容</th>
-            <td class="syosai">こんなことしますよー<br>
-            時間とかどこに寄るとか、そんなことを表示するスペース<br>
-            反映させられる方法はしらぬい</td>
+            <td class="syosai">ここにツアー内容がきます</td>
         </tr>         
     <tr>
         <th>予約人数</th><td>3　名</td>
