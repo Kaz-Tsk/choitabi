@@ -35,7 +35,7 @@
                 <th colspan="2">群馬ラフティングツアー</th>
             </tr>
             <tr>
-            	<td> <img src="img/raft.jpg"></td>
+            	<td colspan="2"> <img src="img/raft.jpg"></td>
             </tr>
             <tr>
                 <td>価格</td>
