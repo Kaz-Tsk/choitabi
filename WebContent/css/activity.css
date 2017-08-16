@@ -23,10 +23,12 @@ table, table th,table td{
 }
 #side{
 	float:left;
+	width:30%;
 }
 
 #main{
 	float:right;
 	margin:auto;
 	text-align:center;
+	width:70%
 }
