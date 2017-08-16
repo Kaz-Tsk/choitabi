@@ -135,7 +135,7 @@
             </table>
               <table>
                 <tr>
-                    <th colspan="2">群馬ラフティングツアー</th>
+                    <th colspan="3">群馬ラフティングツアー</th>
                 </tr>
                 <tr>
                     <td　rowspan="6"><img src="img/raft.jpg"></td>
