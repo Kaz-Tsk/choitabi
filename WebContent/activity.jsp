@@ -14,11 +14,14 @@
 <div class = "header">
     <div class = "headerLogo">choitabi</div>
     <div class = "headerMenuBox">
-        <div class = "headerMenu">choitabiについて</div>
-        <div class = "headerMenu">Ｑ＆Ａ/ お問い合わせ</div>
-        <div class = "headerMenu">ログイン</div>
+        <div class = "headerMenu">
+	        choitabiについて　　
+	        Ｑ＆Ａ / お問い合わせ　　
+	        ログイン
+        </div>
     </div>
 </div>
+
 
 <!--body部分 --------------------------------------------------------->
     <h1>アクティビティツアー</h1>
@@ -150,8 +153,18 @@
                 </td>
             </tr>
             </table>
-    </div>
+     </div>
    </div>
+   <div class = "footer">
+
+    <div class = "ARRLogo">All Rights Reserved.</div>
+    <div class = "footerMenuBox">
+        <div class = "footerMenu">会社概要</div>
+        <div class = "footerMenu">利用規約</div>
+    </div>
+    <div class = "clear"></div>
+
+</div>
 </body>
 </div>
 </html>
