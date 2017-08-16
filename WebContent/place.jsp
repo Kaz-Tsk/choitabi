@@ -14,16 +14,15 @@
     
 <!--ヘッダー部分------------------------->
 <header>
- <div class = "header">
- <div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div>
- <div class = "headerMenuBox">
-  <div class = "headerMenue"><a href = "./about.jsp">choitabiについて</a></div>
-  <div class = "headerMenue"><a href = "">Ｑ＆Ａ/ お問い合わせ</a></div>
-  <div class = "headerMenue"><a href = "./login.jsp">ログイン</a></div>
-
-</div>
-</div>
+<div class = "divlink1"><div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div></div>
+    <div class = "headerMenuBox">
+        <div class = "headerMenu"><div class = "divlink1">choitabiについて</div></div>
+        <div class = "headerMenu"><div class = "divlink1">Ｑ＆Ａ/お問い合わせ</div></div>
+        <div class = "headerMenu"><div class = "divlink1"><a href = "./login.jsp">ログイン</a></div></div>
+    </div>
 </header>
+
+<div class = "clear"></div>
     
 <!--画面左側、カラム部分-------------------->
  <div class = "Column">
@@ -137,13 +136,12 @@
     
 <!--フッター部分------------------------------->
 <footer>
- <div class = "footer">
-  <div class = "ARRLogo">All Right Reserved.</div>
-  <div class = "footerMenuBox">
-   <div class = "footerMenu"><a href = "companys outline.jsp">会社概要</a></div>
-   <div class = "footerMenu"><a href = "./kiyaku.jsp">利用規約</a></div>
-  </div>
- </div>
+ <div class = "ARRLogo">All Rights Reserved.</div>
+    <div class = "footerMenuBox">
+        <div class = "footerMenu"><div class = "divlink1"><a href = "./companys outline.jsp">会社概要</a></div></div>
+        <div class = "footerMenu"><div class = "divlink1"><a href = "./kiyaku.jsp">利用規約</a></div></div>
+    </div>
+    <div class = "clear"></div>
 </footer>
 
 </body>

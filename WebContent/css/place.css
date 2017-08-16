@@ -10,8 +10,8 @@ body{
     height:100%;
 }
 
-/*--ヘッダー部分------------------------*/
-.header{
+/*ここからヘッダー設定--------------------------------------------------------------*/
+header{
     top:0px;
     right:0px;
     left:0px;
@@ -20,6 +20,7 @@ body{
     font-size:24px;
     text-align:left;
     background-color:orange;
+    white-space:nowrap;
 }
 
 /*ヘッダーの「choitabi」ロゴの文字列部分----------------------------------------------*/
@@ -31,21 +32,48 @@ body{
     color:white;
 }
 
+
+.clear{
+	clear:both;
+}
+
 /*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
 .headerMenuBox{
-    margin-top:12px;
-    margin-left:1000px;
+	position:relative;
+	top:30px;
+	float:left;
+    right:10px;
+    left:640px;
+    text-align:right;
+    white-space:nowrap;
 }
 
 /*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
-.headerMenue{
-    margin-right:5%;
+.headerMenu{
+	position:relative;
+	right:20px;
     float:left;
+    margin-right:30px;
     color:white;
     font-size:18px;
-    line-height:72px;    
+    line-height:10px;
+    white-space:nowrap;
 }
 
+/*リンク部分の色・装飾の設定(はぎわらさんありがとう！)---------*/
+
+.divlink1 a:link { color : white;}
+.divlink1 a:visited { color : white;}
+.divlink1 a:hover { color : yellow;}
+.divlink1 a:active { color : white;}
+
+.divlink2 a:link { color : darkorange;}
+.divlink2 a:visited { color : orange;}
+.divlink2 a:hover { color : yellow;}
+.divlink2 a:active { color : darkorange;}
+
+
+a {text-decoration : none;}
 /*--画面左側、カラム部分--------------------*/
 .Column{
     float:left;
@@ -381,13 +409,11 @@ h1{
     width:310px;
 }
 
-/*--フッター部分------------------------*/
+/*ここからフッター -----------------------------------------------------------------*/
 footer{
     position:absolute;
-    top:2050px;
+    top:2000px;
     width:100%;
-}
-.footer{
     height:50px;
     width:100%;
     float:left;
@@ -414,7 +440,7 @@ footer{
 
 .footerMenu{
     float:left;
-    margin-left:12%;
+    margin-left:40px;
     color:white;
     font-size:16px;
 }
