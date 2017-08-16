@@ -11,13 +11,11 @@
 
 <!--ヘッダー部分----------------------------------------------->
 <div class = "header">
-    <div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div>
+    <div class = "divlink1"><div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div></div>
     <div class = "headerMenuBox">
-        <div class = "headerMenu">
-	        choitabiについて　　
-	        Ｑ＆Ａ / お問い合わせ　　
-	        <a href = "./login.jsp">ログイン</a>
-        </div>
+        <div class = "headerMenu"><div class = "divlink1">choitabiについて</div></div>
+        <div class = "headerMenu"><div class = "divlink1">Ｑ＆Ａ/お問い合わせ</div></div>
+        <div class = "headerMenu"><div class = "divlink1"><a href = "./login.jsp">ログイン</a></div></div>
     </div>
 </div>
 
@@ -41,10 +39,10 @@
     <div class = "Column">
         ツアー検索メニュー<br>
         - - - - - - - - - -<br>
-        ◆テーマで探す<br>
-        　┣ <a href = "./choimesi.jsp">グルメ</a><br>
-        　┣ 名所<br>
-        　┗ アクティビティ<br>
+        ◆テーマで探す
+        <div class = "divlink2">　┣ <a href = "./choimesi.jsp">グルメ</a></div>
+        <div class = "divlink2">　┣ <a href = "./place.jsp">名所</a></div>
+        <div class = "divlink2">　┗ <a href = "./activity.jsp">アクティビティ</a></div>
         <br>
         ◆エリアで探す<br>
         　┣ 東北<br>
@@ -68,8 +66,8 @@
 
     <div class = "ARRLogo">All Rights Reserved.</div>
     <div class = "footerMenuBox">
-        <div class = "footerMenu"><a href = "./companys outline.jsp">会社概要</a></div>
-        <div class = "footerMenu"><a href = "./kiyaku.jsp">利用規約</a></div>
+        <div class = "footerMenu"><div class = "divlink1"><a href = "./companys outline.jsp">会社概要</a></div></div>
+        <div class = "footerMenu"><div class = "divlink1"><a href = "./kiyaku.jsp">利用規約</a></div></div>
     </div>
     <div class = "clear"></div>
 

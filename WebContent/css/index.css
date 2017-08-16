@@ -4,6 +4,21 @@ body{
     white-space: nowrap;
 }
 
+/*リンク部分の色・装飾の設定(はぎわらさんありがとう！)---------*/
+
+.divlink1 a:link { color : white;}
+.divlink1 a:visited { color : white;}
+.divlink1 a:hover { color : yellow;}
+.divlink1 a:active { color : white;}
+
+.divlink2 a:link { color : darkorange;}
+.divlink2 a:visited { color : orange;}
+.divlink2 a:hover { color : yellow;}
+.divlink2 a:active { color : darkorange;}
+
+
+a {text-decoration : none;}
+
 /*ここからヘッダー設定--------------------------------------------------------------*/
 .header{
     top:0px;
@@ -33,22 +48,21 @@ body{
 
 /*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
 .headerMenuBox{
-	position:absolute;
+	position:relative;
+	top:30px;
+	float:left;
     right:10px;
-    left:240px;
+    left:640px;
     text-align:right;
     white-space:nowrap;
 }
 
 /*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
 .headerMenu{
-	position:absolute;
-	top:30px;
-	right:10px;
-	left:100px;
-    margin-right:40px;
-    margin-left:80px;
+	position:relative;
+	right:20px;
     float:left;
+    margin-right:30px;
     color:white;
     font-size:18px;
     line-height:10px;
@@ -154,18 +168,6 @@ body{
     color:white;
     font-size:16px;
 }
-
-/*リンク部分の色・装飾の設定(はぎわらさんありがとう！)*/
-
-
-a:visited { color : white;}
-
-a:hover { color : yellow;}
-
-a:active { color : white;}
-
-a {text-decoration : none;}
-
 
 
 

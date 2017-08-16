@@ -11,17 +11,15 @@
 
 <!--ヘッダー部分----------------------------------------------->
 <div class = "header">
-    <div class = "headerLogo"><a href = "./index_login.jsp">choitabi</a>></div>
-    <div class = "headerMenuBox">
-        <div class = "headerMenu">
-        	＜ようこそ○○さん＞　　　　　
-	        choitabiについて　　
-	        Ｑ＆Ａ / お問い合わせ　　
-	        予約確認　　
-	        ログアウト
-        </div>
+    <div class = "headerLogo"><div class = "divlink1"><a href = "./index_login.jsp">choitabi</a></div></div>
+  		<div class = "headerMenuBox">
+  			<div class = "headerMenu">＜ようこそ○○さん＞　　</div>
+     	 	<div class = "headerMenu"><div class = "divlink1">choitabiについて</div></div>
+     	   	<div class = "headerMenu"><div class = "divlink1">Ｑ＆Ａ/お問い合わせ</div></div>
+    	    <div class = "headerMenu"><div class = "divlink1"><a href = "./index.jsp">ログアウト</a></div></div>
     </div>
 </div>
+
 
 <div class = "clear"></div>
 
