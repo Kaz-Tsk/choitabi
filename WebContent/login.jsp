@@ -16,8 +16,8 @@
     <div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div>
     <div class = "headerMenuBox">
         <div class = "headerMenu">
-	        choitabiについて　　
-	        Ｑ＆Ａ / お問い合わせ　　
+	       <a href = " ./about.jsp">choitabiについて　　
+	       <a href = "./otoiawase.jsp"> Ｑ＆Ａ / お問い合わせ　　</a>
 	        <a href = "./login.jsp">ログイン</a>
         </div>
     </div>

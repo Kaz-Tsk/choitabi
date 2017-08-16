@@ -5,15 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="./css/kiyaku.css">
-<title>Insert title here</title>
+<title>利用規約</title>
 </head>
 <body>
 <div class = "header">
     <div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div>
     <div class = "headerMenuBox">
         <div class = "headerMenu">
-	        choitabiについて　　
-	        Ｑ＆Ａ / お問い合わせ　　
+	        <a href = " ./about.jsp">choitabiについて　　</a>
+	       <a href = "./otoiawase.jsp"> Ｑ＆Ａ / お問い合わせ　　</a>
 	        <a href = "./login.jsp">ログイン</a>
         </div>
     </div>
