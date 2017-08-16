@@ -133,50 +133,7 @@
                 </td>
             </tr>
             </table>
-              <table>
-                <tr>
-                    <th colspan="3">群馬ラフティングツアー</th>
-                </tr>
-                <tr>
-                    <td　rowspan="4"><img src="img/raft.jpg"></td>
-                    <td>価格</td>
-                    <td>８０００円</td>
-                </tr>
-                <tr><td></td>
-                    <td>ツアー日時</td>
-                    <td>１０月１０日　10：00～15：00</td>
-                </tr>
-                <tr><td></td>
-                    <td>集合場所</td>
-                    <td>前橋駅8:00</td>
-                </tr>
-                <tr><td></td>
-                    <td>解散場所</td>
-                    <td>前橋駅16:00</td>
-                </tr>
-                <tr><td></td>
-                    <td>内容</td>
-                    <td>8:30 駅出発<br>
-                        9:30 現地到着<br>
-                        10:00 ラフティング<br>
-                        15:00 現地出発<br>
-                        15:30 駅到着<br>
-                        16:00 解散<br>
-                    </td>
-                </tr>
 
-            </table>
-
-<!--↓ここからフッター------------------------------------------>
-<div class = "footer">
-
-    <div class = "ARRLogo">All Right Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu">会社概要</div>
-        <div class = "footerMenu">利用規約</div>
-    </div>
-
-</div>
 </body>
 </div>
 </html>
