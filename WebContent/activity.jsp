@@ -97,6 +97,7 @@
                 </td>
             </tr>
             </table>
+    </div>
    <div class="planinfo">
             <table>
 
@@ -133,17 +134,7 @@
                 </td>
             </tr>
             </table>
-
-<!--↓ここからフッター------------------------------------------>
-<div class = "footer">
-
-    <div class = "ARRLogo">All Right Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu">会社概要</div>
-        <div class = "footerMenu">利用規約</div>
     </div>
-
-</div>
 </body>
 </div>
 </html>

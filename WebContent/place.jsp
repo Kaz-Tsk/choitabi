@@ -10,15 +10,16 @@
 </head>
 
 <body>
-
+    
 <!--ヘッダー部分------------------------->
 <header>
  <div class = "header">
  <div class = "headerLogo">choitabi</div>
  <div class = "headerMenuBox">
-  <div class = "headerMenu">choitabiについて</div>
-  <div class = "headerMenu">Ｑ＆Ａ/ お問い合わせ</div>
-  <div class = "headerMenu">ログイン</div>
+  <div class = "headerMenu"><a href = "./about.jsp">choitabiについて</a></div>
+  <div class = "headerMenu"><a href = "">Ｑ＆Ａ/ お問い合わせ</a></div>
+  <div class = "headerMenu"><a href = "./login.jsp">ログイン</a></div>
+
 </div>
 </div>
 </header>
@@ -123,8 +124,8 @@
  <div class = "footer">
   <div class = "ARRLogo">All Right Reserved.</div>
   <div class = "footerMenuBox">
-   <div class = "footerMenu">会社概要</div>
-   <div class = "footerMenu">利用規約</div>
+   <div class = "footerMenu"><a href = "./companys outline.jsp">会社概要</a></div>
+   <div class = "footerMenu"><a href = "kiyaku.jsp">利用規約</a></div>
   </div>
  </div>
 </footer>

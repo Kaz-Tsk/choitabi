@@ -1,6 +1,7 @@
 #wrapper{
     width:100%;
     margin: 0 auto;
+    text-aligan:center;
 }
 
 
@@ -8,8 +9,9 @@ table, table th,table td{
     background-color: aliceblue;
     border: solid 3px white;
     text-align:center;
-    padding: 4px;
+    padding:0px;
     font-size:20px;
+    margin:auto;
 
 }
 
@@ -17,6 +19,7 @@ table, table th,table td{
 	width:900px;
 	height:300px;
 	margin:auto;
+	text-align:center;
 
 }
 
