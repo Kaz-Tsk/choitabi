@@ -38,19 +38,33 @@ body{
 }
 
 /*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
-.headerMenu{
-    margin-right:40px;
+.headerMenue{
+    margin-right:5%;
     float:left;
     color:white;
     font-size:18px;
-    line-height:72px;
+    line-height:72px;    
+}
+
+/*--画面左側、カラム部分--------------------*/
+.Column{
+    float:left;
+    margin-top:5%;
+    margin-left:13%;
+    padding-top:20px;
+    padding-left:30px;
+    height:400px;
+    width:200px;
+    border:2px solid darkorange;
+    font-size:18px;
+    color:darkorange;
 }
 
 /*--place部分↓-------------------------*/
 .place{
     position:absolute;
-    left:500px;
-    margin-top:30px;
+    left:36%;
+    margin-top:30;
     height:auto;
     width:auto;
 }
@@ -370,7 +384,8 @@ h1{
 /*--フッター部分------------------------*/
 footer{
     position:absolute;
-    top:2020px;
+    top:2050px;
+    width:100%;
 }
 .footer{
     height:50px;
@@ -399,7 +414,7 @@ footer{
 
 .footerMenu{
     float:left;
-    margin-left:40px;
+    margin-left:12%;
     color:white;
     font-size:16px;
-}}
+}

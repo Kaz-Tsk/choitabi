@@ -14,18 +14,21 @@
 <div class = "header">
     <div class = "headerLogo">choitabi</div>
     <div class = "headerMenuBox">
-        <div class = "headerMenu">choitabiについて</div>
-        <div class = "headerMenu">Ｑ＆Ａ/ お問い合わせ</div>
-        <div class = "headerMenu">ログイン</div>
+        <div class = "headerMenu">
+	        choitabiについて　　
+	        Ｑ＆Ａ / お問い合わせ　　
+	        ログイン
+        </div>
     </div>
 </div>
+
 
 <!--body部分 --------------------------------------------------------->
     <h1>アクティビティツアー</h1>
     <h2>自然に触れ合う健康的なツアーが満載！</h2>
     <img id ="actmainphoto" src ="img/actmain.jpg">
     <br>
-    <p>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</p>
+    <Marquee font-size="15px"><strong>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</strong></Marquee>
     <br>
 <!-- カラム要素(仮)----------------------------------------------->
 	<div id="side">
@@ -59,11 +62,11 @@
             </tr>
             <tr>
                 <td>集合場所</td>
-                <td>板橋駅8：00</td>
+                <td>前橋駅8：00</td>
             </tr>
             <tr>
                 <td>解散場所</td>
-                <td>板橋駅16：00</td>
+                <td>前橋駅16：00</td>
             </tr>
             <tr>
                 <td>内容</td>
@@ -96,11 +99,11 @@
             </tr>
             <tr>
                 <td>集合場所</td>
-                <td>板橋駅8：00</td>
+                <td>前橋駅8：00</td>
             </tr>
             <tr>
                 <td>解散場所</td>
-                <td>板橋駅16：00</td>
+                <td>前橋駅16：00</td>
             </tr>
             <tr>
                 <td>内容</td>
@@ -133,11 +136,11 @@
             </tr>
             <tr>
                 <td>集合場所</td>
-                <td>板橋駅8：00</td>
+                <td>前橋駅8：00</td>
             </tr>
             <tr>
                 <td>解散場所</td>
-                <td>板橋駅16：00</td>
+                <td>前橋駅16：00</td>
             </tr>
             <tr>
                 <td>内容</td>
@@ -150,8 +153,18 @@
                 </td>
             </tr>
             </table>
-    </div>
+     </div>
    </div>
+   <div class = "footer">
+
+    <div class = "ARRLogo">All Rights Reserved.</div>
+    <div class = "footerMenuBox">
+        <div class = "footerMenu">会社概要</div>
+        <div class = "footerMenu">利用規約</div>
+    </div>
+    <div class = "clear"></div>
+
+</div>
 </body>
 </div>
 </html>
