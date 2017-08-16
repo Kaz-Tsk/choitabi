@@ -1,0 +1,19 @@
+h1{
+    font-family:"ƒƒCƒŠƒI";
+
+    width:100%;
+}
+
+.main{
+    width:100%;
+    color:black;
+    text-align:center;
+}
+
+.link{
+    position:absolute;
+    bottom:10px;
+    text-align:center;
+    font-size:15px;
+
+}
