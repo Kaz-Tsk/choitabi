@@ -13,15 +13,13 @@
 
 <div class="link1">
 
-<a href="あ.jsp">
+<a href="about.jsp">
 choitabiについて
 </a>
 <a href="い.jsp">
 Q&A
 </a>
-<a href="う.jsp">
-ログイン
-</a>
+
 
 </div>
 
@@ -50,8 +48,8 @@ Q&A
 
 
     <div class="link2">
-    <a href="か.jsp">会社概要</a>
-    <a href="な.jsp">利用規約</a>
+    <a href="companys outline.jsp">会社概要</a>
+    <a href="kiyaku.jsp">利用規約</a>
     </div>
 
 </div>
