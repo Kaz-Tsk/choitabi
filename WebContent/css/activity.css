@@ -1,23 +1,17 @@
 #wrapper{
-    width:100%;
+    max-width:1020px;
     margin: 0 auto;
 }
 
 
-table{
+table, table th,table td{
     background-color: aliceblue;
     border: solid 3px white;
     text-align:center;
     padding: 4px;
     font-size:20px;
-    width:430px;
 
-table tr,table td{
-	border: solid 3px white;
-
- }
-
-
+}
 
 #actmainphoto{
 	width:900px;
@@ -25,9 +19,5 @@ table tr,table td{
 	margin:auto;
 
 }
-
-.planimage{
-	width:450px;
-	height:300px;
 
 }
