@@ -31,10 +31,10 @@
 	<div id="side">
 	<table>
 	<tr>
-		<td>仮</td>
+		<td height="200px" width="300px">仮</td>
 	</tr>
 	<tr>
-		<td>カラム</td>
+		<td height="300px" width="300px">カラム</td>
 	</tr>
 	</table>
 	</div>
