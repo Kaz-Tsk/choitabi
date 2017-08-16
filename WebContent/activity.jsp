@@ -135,10 +135,10 @@
             </table>
               <table>
                 <tr>
-                    <th>群馬ラフティングツアー</th>
+                    <th colspan="3">群馬ラフティングツアー</th>
                 </tr>
                 <tr>
-                    <td　rowspan="5"><img src="image/raft.jpg"></td>
+                    <td　rowspan="5"><img src="img/raft.jpg"></td>
                     <td>価格</td>
                     <td>８０００円</td>
                 </tr>
