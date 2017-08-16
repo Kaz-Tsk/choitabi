@@ -64,11 +64,11 @@
    <div class="images">
   <td>
       <tr>
-<img src="imｇ/fre1.jpg" alt="image" width="250" height="150">
+<img src="img/fre1.jpg" alt="image" width="250" height="150">
       </tr>
 
      <br><tr>
-      <img src="imｇ/fre2.jpg" alt="image2" width="250" height="150">
+      <img src="img/fre2.jpg" alt="image2" width="250" height="150">
       </tr>
  </td>
 </div>
