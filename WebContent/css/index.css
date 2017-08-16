@@ -34,8 +34,8 @@ body{
 /*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
 .headerMenuBox{
 	position:absolute;
-    right:40px;
-    left:200px;
+    right:10px;
+    left:240px;
     text-align:right;
     white-space:nowrap;
 }
@@ -44,7 +44,7 @@ body{
 .headerMenu{
 	position:absolute;
 	top:30px;
-	right:20px;
+	right:10px;
 	left:100px;
     margin-right:40px;
     margin-left:80px;
@@ -84,26 +84,26 @@ body{
 /*メイン部分全体を囲むエリア----------------------------------------------------------*/
 
 .mainArea{
-
     margin-top:20px;
     margin-bottom:20px;
     height:1100px;
+    padding-top:20px;
     background-color:beige;
-    padding:20px;
+    width:100%;
     white-space:nowrap;
 }
 
 /*画面左側、カラム部分---------------------------------------------------------------*/
 .Column{
     float:left;
-    margin-top:20px;
-    margin-left:40px;
-    margin-right:10px;
+    margin-top:10px;
+	margin-left:40px;
+	margin-right:40px;
     padding-top:20px;
     padding-left:30px;
     height:400px;
-    width:200px;
-    border:2px solid darkorange;
+    width:15%;
+    border:2px solid orange;
     font-size:18px;
     color:darkorange;
 
@@ -112,11 +112,10 @@ body{
 
 /*ここから、右側のツアー一覧部分-------------------------------------------------------*/
 .TourList{
-    margin-top:20px;
-    margin-right:40px;
-    margin-left:300px;
+	margin-top:10px;
+	margin-left:310px;
     height:1050px;
-    width:1160px;
+    width:75%;
     border:2px solid darkorange;
     font-size:18px;
 }

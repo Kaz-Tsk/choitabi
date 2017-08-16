@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>choitabi トップ</title>
+<title>choitabi ログイントップ</title>
 <link rel = "stylesheet" type = "text/css" href = "./css/index.css">
 </head>
 <body>
@@ -14,9 +14,11 @@
     <div class = "headerLogo">choitabi</div>
     <div class = "headerMenuBox">
         <div class = "headerMenu">
+        	＜ようこそ○○さん＞　　　　　
 	        choitabiについて　　
 	        Ｑ＆Ａ / お問い合わせ　　
-	        ログイン
+	        予約確認　　
+	        ログアウト
         </div>
     </div>
 </div>
