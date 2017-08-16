@@ -25,7 +25,7 @@
     <h2>自然に触れ合う健康的なツアーが満載！</h2>
     <img id ="actmainphoto" src ="img/actmain.jpg">
     <br>
-    <Marquee>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</Marquee>
+    <Marquee font-size="15px"><strong>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</strong></Marquee>
     <br>
 <!-- カラム要素(仮)----------------------------------------------->
 	<div id="side">
