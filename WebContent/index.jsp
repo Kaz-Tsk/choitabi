@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>choitabi トップ</title>
-<link rel = "stylesheet" type = "text/css" href = "css/index.css">
+<link rel = "stylesheet" type = "text/css" href = "./css/index.css">
 </head>
 <body>
 
@@ -19,6 +19,7 @@
     </div>
 </div>
 
+<div class = "clear"></div>
 
 <!--↓キャッチフレーズとスクロール画面の部分------------------------->
 <div class = "catchPhrase">【キャッチフレーズとか一言コメントとか】</div>
@@ -55,7 +56,7 @@
 
 </div>
 
-
+<div class = "clear"></div>
 
 
 <!--↓ここからフッター------------------------------------------>
@@ -66,6 +67,7 @@
         <div class = "footerMenu">会社概要</div>
         <div class = "footerMenu">利用規約</div>
     </div>
+    <div class = "clear"></div>
 
 </div>
 

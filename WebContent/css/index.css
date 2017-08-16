@@ -1,6 +1,7 @@
 body{
     background-color:snow;
     font-family:メイリオ;
+    white-space: nowrap;
 }
 
 /*ここからヘッダー設定--------------------------------------------------------------*/
@@ -9,7 +10,7 @@ body{
     right:0px;
     left:0px;
     height:60px;
-    width:100%;
+    width:800px;
     font-size:24px;
     text-align:left;
     background-color:orange;
@@ -24,10 +25,16 @@ body{
     color:white;
 }
 
+
+.clear{
+	clear:both;
+}
+
 /*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
 .headerMenuBox{
-    margin-top:12px;
-    margin-left:1000px;
+	position:absolute;
+    top:12px;
+    right:40px;
 }
 
 /*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
@@ -43,18 +50,20 @@ body{
 /*ヘッダー直下、キャッチフレーズやスクロール画面部分--------------------------------------*/
 
 .catchPhrase{
-    margin-top:50px;
+	position:absolute;
+	top:50px;
+	left:10px;
     height:80px;
-    font-size:24px;
+    font-size:5px;
     color:black;
-    text-align:center;
-    line-height: :240px;
+    text-align:left;
+    line-height:240px;
 }
 
 .scroll{
     background-color:beige;
     border:2px solid orange;
-    width:100%;
+    width:1000px;
     height:200px;
 }
 
@@ -100,7 +109,7 @@ body{
 .footer{
     bottom:0;
     height:50px;
-    width:100%;
+    width:800px;
     float:left;
     background-color:orange;
     color:white;
