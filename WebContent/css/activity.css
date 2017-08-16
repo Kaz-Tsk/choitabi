@@ -12,13 +12,14 @@ table, table th,table td{
     padding: 4px;
     font-size:20px;
     margin:auto;
+    padding:0;
 
 }
 
 #actmainphoto{
 	width:900px;
 	height:300px;
-	margin:15 auto;
+	margin:auto;
 	text-align:center;
 
 }

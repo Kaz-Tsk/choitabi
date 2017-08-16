@@ -97,6 +97,7 @@
                 </td>
             </tr>
             </table>
+    </div>
    <div class="planinfo">
             <table>
 
@@ -133,7 +134,7 @@
                 </td>
             </tr>
             </table>
-
+    </div>
 </body>
 </div>
 </html>
