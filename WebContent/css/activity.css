@@ -16,8 +16,7 @@ table, table th,table td{
 }
 
 #actmainphoto{
-	width:900px;
-	height:300px;
+	width:100%;
 	margin:auto;
 	text-align:center;
 
