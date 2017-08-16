@@ -24,10 +24,6 @@
     <h1>アクティビティツアー</h1>
     <h2>自然に触れ合う健康的なツアーが満載！</h2>
     <img id ="actmainphoto" src ="img/activity.jpg">
-    <div class="plan">
-        <div class="planimage">
-            <img src="img/raft.jpg">
-        </div>
         <div class="planinfo">
             <table>
 
@@ -64,16 +60,15 @@
                 </td>
             </tr>
             </table>
-        </div>
     </div>
-    <div class="plan">
-        <div class="planimage1">
-            <img src="img/raft.jpg"><br>
-        </div>
-        <div class="planinfo1">
+   <div class="planinfo">
             <table>
-            <tr colspan="1">
+
+            <tr>
                 <th colspan="2">群馬ラフティングツアー</th>
+            </tr>
+            <tr>
+            	<td colspan="2"> <img src="img/raft.jpg"></td>
             </tr>
             <tr>
                 <td>価格</td>
@@ -102,16 +97,14 @@
                 </td>
             </tr>
             </table>
-        </div>
-    </div>
-    <div class="plan">
-        <div class="planimage2">
-            <img src="img/raft.jpg"><br>
-        </div>
-        <div class="planinfo2">
+   <div class="planinfo">
             <table>
-            <tr colspan="1">
+
+            <tr>
                 <th colspan="2">群馬ラフティングツアー</th>
+            </tr>
+            <tr>
+            	<td colspan="2"> <img src="img/raft.jpg"></td>
             </tr>
             <tr>
                 <td>価格</td>
@@ -140,8 +133,7 @@
                 </td>
             </tr>
             </table>
-        </div>
-    </div>
+
 <!--↓ここからフッター------------------------------------------>
 <div class = "footer">
 
