@@ -8,7 +8,6 @@
 <link rel = "stylesheet" type = "text/css" href = "css/index.css">
 <title>アクティビティツアー</title>
 </head>
-<body>
 <div id="wrapper">
 <body>
 <!--ヘッダー部分----------------------------------------------->
@@ -139,8 +138,16 @@
             </table>
         </div>
     </div>
-</body>
+<!--↓ここからフッター------------------------------------------>
+<div class = "footer">
+
+    <div class = "ARRLogo">All Right Reserved.</div>
+    <div class = "footerMenuBox">
+        <div class = "footerMenu">会社概要</div>
+        <div class = "footerMenu">利用規約</div>
     </div>
-</html>
+
+</div>
 </body>
+</div>
 </html>
