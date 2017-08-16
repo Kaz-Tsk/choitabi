@@ -8,26 +8,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header>
- choitabi
-
-<div class="link1">
-
-<a href="about.jsp">
-choitabiについて
-</a>
-<a href="j.jsp">
-Q&A
-</a>
-<a href="login.jsp">
-ログイン
-</a>
-
+<div class = "header">
+    <div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div>
+    <div class = "headerMenuBox">
+        <div class = "headerMenu">
+	        choitabiについて　　
+	        Ｑ＆Ａ / お問い合わせ　　
+	        <a href = "./login.jsp">ログイン</a>
+        </div>
+    </div>
 </div>
 
-</header>
-
-
+<div class = "clear"></div>
 <div align="center">
     <h1>利用規約</h1>
 </div>
@@ -165,23 +157,17 @@ Q&A
 </a>
 </div>
 
-     <footer>
+ <div class = "footer">
 
-<div class="zenntai" >
-
-    <div class="allright">
-    All rights reserved.
+    <div class = "ARRLogo">All Rights Reserved.</div>
+    <div class = "footerMenuBox">
+        <div class = "footerMenu"><a href = "./companys outline.jsp">会社概要</a></div>
+        <div class = "footerMenu"><a href = "./kiyaku.jsp">利用規約</a></div>
     </div>
-
-
-    <div class="link2">
-    <a href="companys outline.jsp">会社概要</a>
-    <a href="kiyaku.jsp">利用規約</a>
-    </div>
+    <div class = "clear"></div>
 
 </div>
 
 
-</footer>
 </body>
 </html>
