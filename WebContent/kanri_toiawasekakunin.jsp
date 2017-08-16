@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet"type="text/css"href="kanri_toiawasekakunin.css">
+    <link rel="stylesheet"type="text/css"href="./css/kanri_toiawasekakunin.css">
 </head>
 <body>
 
