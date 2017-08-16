@@ -27,6 +27,6 @@ table, table th,table td{
 
 #main{
 	float:right;
-	margin-right:auto;
+	margin:auto;
 	text-align:center;
 }
