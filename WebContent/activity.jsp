@@ -24,6 +24,21 @@
     <h1>アクティビティツアー</h1>
     <h2>自然に触れ合う健康的なツアーが満載！</h2>
     <img id ="actmainphoto" src ="img/actmain.jpg">
+    <br>
+    <p>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</p>
+    <br>
+<!-- カラム要素(仮)----------------------------------------------->
+	<div id="side">
+	<table>
+	<tr>
+		<td>仮</td>
+	</tr>
+	<tr>
+		<td>カラム</td>
+	</tr>
+	</table>
+	</div>
+	<div id="main">
         <div class="planinfo">
             <table>
 
@@ -135,6 +150,7 @@
             </tr>
             </table>
     </div>
+   </div>
 </body>
 </div>
 </html>

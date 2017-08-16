@@ -21,5 +21,12 @@ table, table th,table td{
 	text-align:center;
 
 }
+#side{
+	float:left;
+	height:500px;
+	width:300px;
+}
 
+#main{
+	float:right;
 }
