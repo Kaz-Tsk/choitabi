@@ -12,15 +12,14 @@
 <body>
 <!--ヘッダー部分----------------------------------------------->
 <div class = "header">
-    <div class = "headerLogo">choitabi</div>
+    <div class = "divlink1"><div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div></div>
     <div class = "headerMenuBox">
-        <div class = "headerMenu">
-	        choitabiについて　　
-	        Ｑ＆Ａ / お問い合わせ　　
-	        ログイン
-        </div>
+        <div class = "headerMenu"><div class = "divlink1">choitabiについて</div></div>
+        <div class = "headerMenu"><div class = "divlink1">Ｑ＆Ａ/お問い合わせ</div></div>
+        <div class = "headerMenu"><div class = "divlink1"><a href = "./login.jsp">ログイン</a></div></div>
     </div>
 </div>
+
 
 
 <!--body部分 --------------------------------------------------------->
@@ -28,7 +27,7 @@
     <h2>自然に触れ合う健康的なツアーが満載！</h2>
     <img id ="actmainphoto" src ="img/actmain.jpg">
     <br>
-    <Marquee font-size="15px"><strong>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</strong></Marquee>
+    <Marquee><strong>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</strong></Marquee>
     <br>
 <!-- カラム要素(仮)----------------------------------------------->
 	<div id="side">
@@ -155,12 +154,13 @@
             </table>
      </div>
    </div>
-   <div class = "footer">
+  <!--↓ここからフッター------------------------------------------>
+<div class = "footer">
 
     <div class = "ARRLogo">All Rights Reserved.</div>
     <div class = "footerMenuBox">
-        <div class = "footerMenu">会社概要</div>
-        <div class = "footerMenu">利用規約</div>
+        <div class = "footerMenu"><div class = "divlink1"><a href = "./companys outline.jsp">会社概要</a></div></div>
+        <div class = "footerMenu"><div class = "divlink1"><a href = "./kiyaku.jsp">利用規約</a></div></div>
     </div>
     <div class = "clear"></div>
 
