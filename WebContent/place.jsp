@@ -11,6 +11,18 @@
 
 <body>
 
+<!--ヘッダー部分------------------------->
+<header>
+ <div class = "header">
+ <div class = "headerLogo">choitabi</div>
+ <div class = "headerMenuBox">
+  <div class = "headerMenu">choitabiについて</div>
+  <div class = "headerMenu">Ｑ＆Ａ/ お問い合わせ</div>
+  <div class = "headerMenu">ログイン</div>
+</div>
+</div>
+</header>
+ 
  <!--place部分↓------------------------->
  <div class = "place">
   <h1>名所</h1>
@@ -105,5 +117,17 @@
    </div>
   </div>
   </div>
+    
+<!--フッター部分------------------------------->
+<footer>
+ <div class = "footer">
+  <div class = "ARRLogo">All Right Reserved.</div>
+  <div class = "footerMenuBox">
+   <div class = "footerMenu">会社概要</div>
+   <div class = "footerMenu">利用規約</div>
+  </div>
+ </div>
+</footer>
+
 </body>
 </html>

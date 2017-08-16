@@ -1,7 +1,55 @@
+html{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+/*--ヘッダー部分------------------------*/
+.header{
+    top:0px;
+    right:0px;
+    left:0px;
+    height:60px;
+    width:100%;
+    font-size:24px;
+    text-align:left;
+    background-color:orange;
+}
+
+/*ヘッダーの「choitabi」ロゴの文字列部分----------------------------------------------*/
+.headerLogo{
+    float:left;
+    margin-left:30px;
+    font-size:40px;
+    line-height:64px;
+    color:white;
+}
+
+/*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
+.headerMenuBox{
+    margin-top:12px;
+    margin-left:1000px;
+}
+
+/*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
+.headerMenu{
+    margin-right:40px;
+    float:left;
+    color:white;
+    font-size:18px;
+    line-height:72px;
+}
 /*--place部分↓-------------------------*/
 .place{
     position:absolute;
-    left:450px;
+    left:500px;
+    margin-top:30px;
     height:auto;
     width:auto;
 }
@@ -317,3 +365,40 @@ h1{
     height:200px;
     width:310px;
 }
+
+/*--フッター部分------------------------*/
+footer{
+    position:absolute;
+    top:2020px;
+}
+.footer{
+    height:50px;
+    width:100%;
+    float:left;
+    background-color:orange;
+    color:white;
+    text-align:center;
+    font-size:12px;
+    line-height:50px;
+
+}
+
+.ARRLogo{
+    float:left;
+    margin-left:740px;
+    line-height:54px;
+    color:white;
+}
+
+.footerMenuBox{
+    margin-left:1200px;
+    margin-right:40px;
+
+}
+
+.footerMenu{
+    float:left;
+    margin-left:40px;
+    color:white;
+    font-size:16px;
+}}
