@@ -20,10 +20,10 @@
     </div>
 </div>
 
-
+<!--body部分 --------------------------------------------------------->
     <h1>アクティビティツアー</h1>
     <h2>自然に触れ合う健康的なツアーが満載！</h2>
-    <img id ="actmainphoto" src ="img/activity.jpg">
+    <img id ="actmainphoto" src ="img/actmain.jpg">
         <div class="planinfo">
             <table>
 
