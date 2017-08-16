@@ -26,12 +26,16 @@
     <img id ="actmainphoto" src ="img/activity.jpg">
     <div class="plan">
         <div class="planimage">
-            <img src="img/raft.jpg"><br>
+            <img src="img/raft.jpg">
         </div>
         <div class="planinfo">
             <table>
+
             <tr>
-                <th colspan="1">群馬ラフティングツアー</th>
+                <th colspan="2">群馬ラフティングツアー</th>
+            </tr>
+            <tr>
+            	<td> <img src="img/raft.jpg"></td>
             </tr>
             <tr>
                 <td>価格</td>
