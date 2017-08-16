@@ -4,6 +4,7 @@
 <html>
 <head>
  <meta charset ="UTF-8">
+ <project name="properties-exchanger" default="devlocal">
     <title>ちょいたびのホームページ</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel = "stylesheet" type= "text/css" href ="./css/place.css">
