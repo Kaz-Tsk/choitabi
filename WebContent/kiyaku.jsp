@@ -8,9 +8,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header></header>
- <br>
+<header>
+ choitabi
 
+<div class="link1">
+
+<a href="あ.jsp">
+choitabiについて
+</a>
+<a href="い.jsp">
+Q&A
+</a>
+<a href="う.jsp">
+ログイン
+</a>
+
+</div>
+
+</header>
 
 
 <div align="center">
@@ -150,7 +165,23 @@
 </a>
 </div>
 
-<footer></footer>
+     <footer>
 
+<div class="zenntai" >
+
+    <div class="allright">
+    All rights reserved.
+    </div>
+
+
+    <div class="link2">
+    <a href="か.jsp">会社概要</a>
+    <a href="な.jsp">利用規約</a>
+    </div>
+
+</div>
+
+
+</footer>
 </body>
 </html>
