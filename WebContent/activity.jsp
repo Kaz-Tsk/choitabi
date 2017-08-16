@@ -30,8 +30,8 @@
         </div>
         <div class="planinfo">
             <table>
-            <tr colspan="1">
-                <th colspan="2">群馬ラフティングツアー</th>
+            <tr>
+                <th>群馬ラフティングツアー</th>
             </tr>
             <tr>
                 <td>価格</td>
