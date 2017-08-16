@@ -22,6 +22,8 @@
 <div class = "clear"></div>
 
 <!--↓キャッチフレーズとスクロール画面の部分------------------------->
+
+
 <div class = "catchPhrase">【キャッチフレーズとか一言コメントとか】</div>
 <div class = "scroll">
     (※ここ画面スクロールです)<br>
