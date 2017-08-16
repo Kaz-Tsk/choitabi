@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+
+body{
+    font-family:メイリオ;
+}
+
+.header{
+    text-align:right;
+    margin-top:20px;
+    margin-right:40px;
+}
+
+h1{
+    text-align:center;
+}
+
+.direction{
+    text-align:center;
+    margin-top:20px;
+}
+
+table{
+    margin-top:20px;
+    margin-right:auto;
+    margin-left:auto;
+    border:2px solid grey;
+    width:600px;
+    height:450px;
+    border-spacing:0px;
+    font-size:14px;
+    text-align:center;
+}
+
+th{
+    width:auto;
+    border:1px solid grey;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+td{
+    border:1px solid grey;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.naiyou{
+    height:250px;
+    width: 100px;
+}
+
+.syosai{
+    text-align: left;
+}
+
+.link{
+    margin-top:80px;
+    margin-left:20px;
+}
