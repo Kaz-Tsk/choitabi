@@ -11,12 +11,12 @@
 
 <!--ヘッダー部分----------------------------------------------->
 <div class = "header">
-    <div class = "headerLogo">choitabi</div>
+    <div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div>
     <div class = "headerMenuBox">
         <div class = "headerMenu">
 	        choitabiについて　　
 	        Ｑ＆Ａ / お問い合わせ　　
-	        ログイン
+	        <a href = "./login.jsp">ログイン</a>
         </div>
     </div>
 </div>
@@ -42,7 +42,7 @@
         ツアー検索メニュー<br>
         - - - - - - - - - -<br>
         ◆テーマで探す<br>
-        　┣ グルメ<br>
+        　┣ <a href = "./choimesi.jsp">グルメ</a><br>
         　┣ 名所<br>
         　┗ アクティビティ<br>
         <br>
@@ -68,8 +68,8 @@
 
     <div class = "ARRLogo">All Rights Reserved.</div>
     <div class = "footerMenuBox">
-        <div class = "footerMenu">会社概要</div>
-        <div class = "footerMenu">利用規約</div>
+        <div class = "footerMenu"><a href = "./companys outline.jsp">会社概要</a></div>
+        <div class = "footerMenu"><a href = "./kiyaku.jsp">利用規約</a></div>
     </div>
     <div class = "clear"></div>
 

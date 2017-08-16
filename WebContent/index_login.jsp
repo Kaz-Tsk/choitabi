@@ -11,7 +11,7 @@
 
 <!--ヘッダー部分----------------------------------------------->
 <div class = "header">
-    <div class = "headerLogo">choitabi</div>
+    <div class = "headerLogo"><a href = "./index_login.jsp">choitabi</a>></div>
     <div class = "headerMenuBox">
         <div class = "headerMenu">
         	＜ようこそ○○さん＞　　　　　

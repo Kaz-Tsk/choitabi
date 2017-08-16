@@ -155,3 +155,17 @@ body{
     font-size:16px;
 }
 
+/*リンク部分の色・装飾の設定(はぎわらさんありがとう！)*/
+
+
+a:visited { color : white;}
+
+a:hover { color : yellow;}
+
+a:active { color : white;}
+
+a {text-decoration : none;}
+
+
+
+
