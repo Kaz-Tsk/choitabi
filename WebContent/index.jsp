@@ -61,7 +61,7 @@
 <!--↓ここからフッター------------------------------------------>
 <div class = "footer">
 
-    <div class = "ARRLogo">All Right Reserved.</div>
+    <div class = "ARRLogo">All Rights Reserved.</div>
     <div class = "footerMenuBox">
         <div class = "footerMenu">会社概要</div>
         <div class = "footerMenu">利用規約</div>
