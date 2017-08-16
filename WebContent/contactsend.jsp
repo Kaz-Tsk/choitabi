@@ -42,5 +42,6 @@
         <div class = "footerMenu">利用規約</div>
     </div>
     <div class = "clear"></div>
+    </div>
 </body>
 </html>
