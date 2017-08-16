@@ -36,6 +36,30 @@ input[type="password"] {
     margin: 0 auto;
 }
 
+.link1{     text-align: right;
+           word-spacing: 2px;
+
+
+
+}
+
+.link2{
+            text-align: right;
+            word-spacing: 2px;
+}
+
+.zentai{    bottom: 0px;
+            height:90px;
+            width:100%;
+            margin-right:auto;
+            margin-left:auto;
+
+
+}
+
+.allright{   text-align:center;
+}
+
 
 
 #form{

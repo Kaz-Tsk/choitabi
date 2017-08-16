@@ -8,7 +8,23 @@
 <link rel="stylesheet" type="text/css" href="login.css" media="all" />
 </head>
 <body>
-<header></header>
+<header>
+ choitabi
+
+<div class="link1">
+
+<a href="about.jsp">
+choitabiについて
+</a>
+<a href="い.jsp">
+Q&A
+</a>
+
+
+</div>
+
+</header>
+
 
 <div id="form">
     <p class="form-title">Login</p>
@@ -22,7 +38,24 @@
     </form>
 </div>
 
-<footer></footer>
+<footer>
+
+<div class="zenntai" >
+
+    <div class="allright">
+    All rights reserved.
+    </div>
+
+
+    <div class="link2">
+    <a href="companys outline.jsp">会社概要</a>
+    <a href="kiyaku.jsp">利用規約</a>
+    </div>
+
+</div>
+
+
+</footer>
 
 </body>
 </html>
