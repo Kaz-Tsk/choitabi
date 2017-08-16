@@ -35,11 +35,11 @@
 <div class="images">
   <td>
       <tr>
-<img src="./image/wasyoku1.jpg" alt="image" width="250" height="150">
+<img src="img/wasyoku1.jpg" alt="image" width="250" height="150">
       </tr>
 
      <br><tr>
-      <img src="./image/wasyoku2.jpg" alt="image2" width="250" height="150">
+      <img src="img/wasyoku2.jpg" alt="image2" width="250" height="150">
       </tr>
  </td>
 </div>
@@ -64,11 +64,11 @@
    <div class="images">
   <td>
       <tr>
-<img src="./image/fre1.jpg" alt="image" width="250" height="150">
+<img src="imｇ/fre1.jpg" alt="image" width="250" height="150">
       </tr>
 
      <br><tr>
-      <img src="./image/fre2.jpg" alt="image2" width="250" height="150">
+      <img src="imｇ/fre2.jpg" alt="image2" width="250" height="150">
       </tr>
  </td>
 </div>
@@ -94,11 +94,11 @@
 <div class="images">
   <td>
       <tr>
-<img src="./image/ita1.jpg" alt="image" width="250" height="150">
+<img src="img/ita1.jpg" alt="image" width="250" height="150">
       </tr>
 
      <br><tr>
-      <img src="./image/ita2.jpg" alt="image2" width="250" height="150">
+      <img src="img/ita2.jpg" alt="image2" width="250" height="150">
       </tr>
  </td>
 </div>
