@@ -13,9 +13,11 @@
 <div class = "header">
     <div class = "headerLogo">choitabi</div>
     <div class = "headerMenuBox">
-        <div class = "headerMenu">choitabiについて</div>
-        <div class = "headerMenu">Ｑ＆Ａ/ お問い合わせ</div>
-        <div class = "headerMenu">ログイン</div>
+        <div class = "headerMenu">
+	        choitabiについて　　　
+	        Ｑ＆Ａ / お問い合わせ　　　
+	        ログイン
+        </div>
     </div>
 </div>
 

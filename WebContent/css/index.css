@@ -14,7 +14,7 @@ body{
     font-size:24px;
     text-align:left;
     background-color:orange;
-    white-spacing:nowrap;
+    white-space:nowrap;
 }
 
 /*ヘッダーの「choitabi」ロゴの文字列部分----------------------------------------------*/
@@ -34,7 +34,6 @@ body{
 /*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
 .headerMenuBox{
 	position:absolute;
-    top:12px;
     right:40px;
     left:200px;
     text-align:right;
@@ -43,12 +42,16 @@ body{
 
 /*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
 .headerMenu{
+	position:absolute;
+	top:30px;
+	right:20px;
+	left:100px;
     margin-right:40px;
     margin-left:80px;
     float:left;
     color:white;
     font-size:18px;
-    line-height:72px;
+    line-height:10px;
     white-space:nowrap;
 }
 
@@ -59,9 +62,9 @@ body{
 .catchPhrase{
 	position:absolute;
 	top:50px;
-	left:10px;
+	right:100px;
+	left:100px;
     height:80px;
-    width:100%;
     font-size:24px;
     color:black;
     text-align:center;
