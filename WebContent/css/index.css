@@ -4,7 +4,7 @@ body{
     white-space: nowrap;
 }
 
-/*リンク部分の色・装飾の設定(はぎわらさんありがとう！)---------*/
+/*リンク部分の色・装飾の設定---------*/
 
 .divlink1 a:link { color : white;}
 .divlink1 a:visited { color : white;}
@@ -13,11 +13,11 @@ body{
 
 .divlink2 a:link { color : darkorange;}
 .divlink2 a:visited { color : orange;}
-.divlink2 a:hover { color : yellow;}
+.divlink2 a:hover { color : orangered;}
 .divlink2 a:active { color : darkorange;}
 
-
 a {text-decoration : none;}
+
 
 /*ここからヘッダー設定--------------------------------------------------------------*/
 .header{
@@ -117,7 +117,7 @@ a {text-decoration : none;}
     padding-left:30px;
     height:400px;
     width:200px;
-    border:2px solid orange;
+    border:2px solid darkorange;
     font-size:18px;
     color:darkorange;
 
