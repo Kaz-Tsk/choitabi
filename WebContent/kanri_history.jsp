@@ -9,7 +9,6 @@
 <body>
 <h1>購入履歴一覧</h1>
     <hr>
-    管理ツアー一覧<br>
     ※表示内容は仮です
     <br>
 <table border = "1px" cellspacing = "0px" cellpadding = "10px">
@@ -32,8 +31,6 @@
 
 </table>
     <br>
-    <hr>
-    ツアーを追加する(ボタンにします)
     <br>
     <br>
     管理ページトップに戻る<br>
