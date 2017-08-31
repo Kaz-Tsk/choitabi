@@ -1,178 +1,115 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!-- 国際化 -->
-<fmt:bundle basename="com.internousdev.choitabi.property.cart">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="cart.css">
-<meta charset="UTF-8">
-<title><s:text name="lang.cart.shopping.cart" /></title>
-<script src="./js/jquery-3.1.1.min.js"></script>
-<script src="./js/cart.js"></script>
-
-
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+  	<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  	<link href="css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">		<!-- bootstrapの読み込み -->
+  	<link href="css/orderddetails.css" rel="stylesheet">
+	<!-- 国際化 -->
+	<fmt:setLocale value="${pageContext.request.locale.language}" />
+	<fmt:setBundle basename="com.internousdev.choitabi.property.cart" var="lang" />
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<title>choitabi</title>
 </head>
-<body>
-	<s:include value="header.jsp"></s:include>
-<div class="center">
-		<div id="side">
-		<s:include value="sidebar.jsp" />
-		</div>
-	<div class="contents">
-		<s:if test="list.size() !=0">
-			<s:iterator value="list">
-				<s:if test="payOffCategory==false">
-					<table class="type03">
-						<tr>
-							<th><s:text name="lang.cart.image" /></th>
-							<th><s:text name="lang.cart.name" /></th>
-							<th><s:text name="lang.cart.purchase.price" /></th>
-							<th><s:text name="lang.cart.purchase.amount" /></th>
-							<th><s:text name="lang.cart.purchase.count" /></th>
-							<th><s:text name="lang.cart.delete" /></th>
-						</tr>
-						<tr>
-							<td>
-								<img src="./images/<s:property value="imgAddress001" /> " class="purchaseimg">
-							</td>
-							<td>
-									<s:property value="itemName" />
-							</td>
-							<td>
-								<font class="pr"><s:property value="purchasePrice" /></font>
-						</td>
-							<td>
-								<font class="am"><s:property value="purchaseAmount" /></font>
-							</td>
-							<td>
-									<s:form action="CartPurchaseUpdateAction" method="post">
-										<input type="hidden" name="itemId"
-											value="<s:property value="itemId" />">
-										<input type="hidden" name="purchasePrice"
-											value="<s:property value="purchasePrice" />">
-										<select name="purchaseOrderCount"
-											onChange="this.form.submit()">
-											<option value="<s:property value="purchaseOrderCount" />"
-												selected><s:property value="purchaseOrderCount" /></option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
-											<option value="10">10</option>
-										</select>
-									</s:form>
-								</td>
-							<td>
-									<s:form action="CartDeleteAction">
-										<s:hidden class="itemId" name="itemId" value="%{itemId}" />
-										<s:hidden class="payOffCategory" name="payOffCategory"
-											value="%{payOffCategory}" />
-										<s:submit label="%{getText('lang.cart.delete')}" type="button" />
-									</s:form>
-							</td>
-						</tr>
-					</table>
-				</s:if>
-			</s:iterator>
 
-			<s:iterator value="list">
-				<s:if test="payOffCategory==true">
-					<table class="type03">
-						<tr>
-							<th><s:text name="lang.cart.image" /></th>
-							<th><s:text name="lang.cart.name" /></th>
-							<th><s:text name="lang.cart.rental.price" /></th>
-							<th><s:text name="lang.cart.rental.amount" /></th>
-							<th><s:text name="lang.cart.rental.date" /></th>
-							<th><s:text name="lang.cart.rental.count" /></th>
-							<th><s:text name="lang.cart.delete" /></th>
-						</tr>
-						<tr>
-							<td>
-									<img src="./images/<s:property value="imgAddress001" /> " class="rentalimg">
-							</td>
-							<td>
-								<s:property value="itemName" />
-							</td>
-							<td>
-								<font class="pr"><s:property value="rentalPrice" /></font>
-							</td>
-							<td>
-								<font class="am2"><s:property value="rentalAmount" /></font>
-							</td>
-							<td>
-									<s:property value="loanDate" />
-							</td>
-							<td>
-									<s:form action="CartRentalUpdateAction" method="post">
-										<input type="hidden" name="userId"
-											value="<s:property value="userId" />">
-										<input type="hidden" name="itemId"
-											value="<s:property value="itemId" />">
-										<input type="hidden" name="rentalPrice"
-											value="<s:property value="rentalPrice" />">
-										<input type="hidden" name="loanDate"
-											value="<s:property value="loanDate" />">
-										<select name="rentalOrderCount" onChange="this.form.submit()">
-											<option value="<s:property value="rentalOrderCount" />"
-												selected><s:property value="rentalOrderCount" /></option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
-											<option value="10">10</option>
-										</select>
-									</s:form>
-							</td>
-							<td>
-									<s:form action="CartDeleteAction">
-										<s:hidden class="itemId" name="itemId" value="%{itemId}" />
-										<s:hidden class="payOffCategory" name="payOffCategory"
-											value="%{payOffCategory}" />
-										<s:submit label="%{getText('lang.cart.delete')}" type="button"/>
-									</s:form>
-							</td>
-						</tr>
-					</table>
-				</s:if>
-			</s:iterator>
-			<div class="total">
-					<s:text name="lang.cart.amount" />:
- 				<font class="sum"></font>
- 				</div>
-				<s:form action="SelectCreditcardAction">
-						<s:submit type="submit" value="%{getText('lang.cart.payment')}" class="btn" />
-				</s:form>
-		</s:if>
-
-		<s:else>
-					<s:text name="%{getText('lang.cart.empty')}" />
-		</s:else>
-	<footer>
-			<!-- フッター -->
-			<div id="footer">
-				<c:import url="http://localhost:8080/openconnect/footer.jsp" />
+<body style="background-color: #fcfcf0;">
+ 	<header>
+		
+	</header>
+	<div class="row" style="padding-bottom: 50px;">
+		<div class="col-xs-4 col-xs-offset-4 text-center" style="padding-right:0; padding-left: 0;">
+			<div class="col-xs-6 col-xs-offset-3" style="sidplay:inline-block; padding:5px 0; color:#fff; background:#2ecc71; border-radius:4px;">
+				<s:text name="lang.cart.cartlist"/>
 			</div>
-		</footer>
-		<!-- フッター終了 -->
+		</div>
 	</div>
-</div>
+<article>
+	<!-- カートの中身を表示するテーブル -->
+	<div class="container col-xs-8 col-xs-offset-2">
+		<div class="panel panel-success">
+			<div class="panel-heading" style="height:50px;">
+				<table class="table">
+		  			<tr>
+		    			<th class="text-center" style="width:25%;"><s:text name="lang.cart.tourname"/></th>
+		    			<th class="text-center" style="width:25%;"><s:text name="lang.cart.quantity"/></th>
+		    			<th class="text-center" style="width:25%;"><s:text name="lang.cart.unitprice"/></th>
+		    			<th class="text-center" style="width:25%;"><s:text name="lang.cart.control"/></th>
+					</tr>
+				</table>
+			</div>
+			<div class="panel-body text-center">
+				<!-- ここからイテレート -->
+				<table class="table">
+					<s:iterator value="selectList">
+						<tr>
+	    					<td style="width:25%;">
+	    						<s:property value="tour_name"/>
+	    					</td>
+	    					<td style="width:25%;">
+	    					<div class="col-xs-5">
+	    					</div>
+	    						<s:form action="UpdateCartProduct">
+		    						<s:select list="{\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"10\"}" name="quantity" Value="%{quantity}"  onChange="this.form.submit()"/>
+		    						<s:hidden name="cart_id" value="%{cart_id}"/>
+	    						</s:form>
+	    					</td>
+	    					<td style="width:25%;">
+	    						<s:property value="unit_price"/><s:text name="lang.cart.yen"/>
+	    					</td>
+	    					<td style="width:25%;">
+	    						<s:form action="DeleteAction">
+	    							<s:hidden name="cart_id" value="%{cart_id}" />
+	    							<button type="submit" class="btn btn-danger" ><s:text name="lang.cart.delete"/></button>
+	    						</s:form>
+	    					</td>
+						</tr>
+					</s:iterator>
+				</table>
+				<!-- ここまでイテレート -->
+				<!-- 合計金額の表示 -->
+				<h3><s:text name="total"/><s:text name="lang.cart.yen"/></h3>
+				<!-- ここまで -->
+				<div style="color:red;"><s:property value="errmsg"/></div>
+				<!-- 各アクションを呼ぶためのボタン -->
+				<div class="form1">
+					<!-- TOP画面へ遷移 -->
+					<div class="col-xs-4">
+						<s:form action="GoTopAction">
+							<button type="submit" class="btn btn-primary"><s:text name="lang.cart.continue"/></button>
+						</s:form>
+					</div>
+					<!-- クレジット情報入力画面へ遷移 -->
+					<div class="col-xs-4">
+						<s:form action="GoCreditCardinfoAction">
+							<s:hidden name="total" value="%{total}"/>
+							<button type="submit" class="btn btn-success"><s:text name="lang.cart.next"/></button>
+						</s:form>
+					</div>
+					<!-- カートを空にするアクション -->
+					<div class="col-xs-4">
+						<s:form action="DeleteAllAction">
+							<button type="submit" class="btn btn-danger"><s:text name="lang.cart.deleteall"/></button>
+						</s:form>
+					</div>
+				</div>
+				<!-- ここまで -->
+			</div>
+		</div>
+	</div>
+</article>
+<footer style="width:97%;">
+				<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+</footer>
+
 </body>
 </html>
-</fmt:bundle>
