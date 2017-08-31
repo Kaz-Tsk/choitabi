@@ -3,148 +3,83 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
- <meta charset ="UTF-8">
- <project name="properties-exchanger" default="devlocal">
-    <title>ちょいたびのホームページ</title>
-    <link href="./css/header.css" rel="stylesheet" type="text.css">
-    <link rel = "stylesheet" type= "text/css" href ="./css/footer.css">
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <link rel = "stylesheet" type= "text/css" href ="./css/place.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel = "stylesheet" type= "text/css" href = "base.css">
+<title>名所</title>
 </head>
-
 <body>
 
-<!--ヘッダー部分------------------------->
-<header>
-<div class = "divlink1"><div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div></div>
-    <div class = "headerMenuBox">
-        <div class = "headerMenu"><div class = "divlink1">choitabiについて</div></div>
-        <div class = "headerMenu"><div class = "divlink1">Ｑ＆Ａ/お問い合わせ</div></div>
-        <div class = "headerMenu"><div class = "divlink1"><a href = "./login.jsp">ログイン</a></div></div>
-    </div>
-</header>
-
-<div class = "clear"></div>
-
-<!--画面左側、カラム部分-------------------->
- <div class = "Column">
+<div class = "Column">
         ツアー検索メニュー<br>
         - - - - - - - - - -<br>
-        ◆テーマで探す<br>
-        　┣ グルメ<br>
-        　┣ 名所<br>
-        　┗ アクティビティ<br>
+        ◆テーマで探す
+        <div class = "divlink2">　┣ <a href = "./choimesi.jsp">グルメ</a></div>
+        <div class = "divlink2">　┣ <a href = "./place.jsp">名所</a></div>
+        <div class = "divlink2">　┗ <a href = "./activity.jsp">アクティビティ</a></div>
         <br>
         ◆エリアで探す<br>
         　┣ 東北<br>
         　┣ 関東<br>
-        　┗ 関西<br>
- </div>
+        　┣ 関西<br>
+        　┗ 九州<br>
+        </div>
 
- <!--place部分↓------------------------->
- <div class = "place">
-  <h1>名所</h1>
+        <div class="main">
+            <div class="sub">
+                <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
 
-  <!--place1部分↓--------------------------------->
-  <div class = "place1">
-   <img class = "img1" src = "img/ryuzin.jpg">
-   <div class = "place1sadd">
-    住所<br>
-    　(仮)関東　茨城
-   </div>
-   <div class = "place1title">
-     (仮)竜神大吊橋
-   </div>
-   <div class = "place1text">
-    ※テキスト、タイトル、写真、色などは仮です。
-   </div>
-   </div>
+            <div class="sub">
+                <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
 
-  <!--place2部分↓---------------------------------->
-  <div class = "place2">
-   <img class = "img2" src = "img/hituziyama.jpg">
-   <div class = "place2sadd">
-    住所<br>
-    　(仮)埼玉県、関東
-   </div>
-   <div class = "place2title">
-     (仮)羊山公園
-   </div>
-   <div class = "place2text">
-    ※テキスト、タイトル、写真、色などは仮です。
-   </div>
-  </div>
+            <div class="sub">
+                <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
 
-  <!--place3部分↓---------------------------------->
-  <div class = "place3">
-   <img class = "img3" src = "img/wakamatu.jpg">
-   <div class = "place3sadd">
-    住所<br>
-    　(仮)福島県、東北
-   </div>
-   <div class = "place3title">
-     (仮)若松城
-   </div>
-   <div class = "place3text">
-    ※テキスト、タイトル、写真、色などは仮です。
-   </div>
-  </div>
+            <div class="sub">
+                <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
 
-  <!--place4部分↓---------------------------------->
-  <div class = "place4">
-   <img class = "img4" src = "img/chusonzi.jpg">
-   <div class = "place4sadd">
-    住所<br>
-    　(仮)岩手県、東北
-   </div>
-   <div class = "place4title">
-     (仮)中尊寺
-   </div>
-   <div class = "place4text">
-    ※テキスト、タイトル、写真、色などは仮です。
-   </div>
-  </div>
+            <div class="sub">
+                <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
 
-  <!--place5部分↓---------------------------------->
-  <div class = "place5">
-   <img class = "img5" src = "img/himezi.jpg">
-   <div class = "place5sadd">
-    住所<br>
-    　(仮)兵庫県、関西
-   </div>
-   <div class = "place5title">
-     (仮)姫路城
-   </div>
-   <div class = "place5text">
-    ※テキスト、タイトル、写真、色などは仮です。
-   </div>
-  </div>
+            <div class="sub">
+                <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
 
-  <!--place6部分↓---------------------------------->
-  <div class = "place6">
-   <img class = "img6" src = "img/nijoujou.jpg">
-   <div class = "place6sadd">
-    住所<br>
-    　(仮)京都、関西
-   </div>
-   <div class = "place6title">
-     (仮)二条城
-   </div>
-   <div class = "place6text">
-    ※テキスト、タイトル、写真、色などは仮です。
-   </div>
-  </div>
-  </div>
+            <div class="sub">
+                 <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
 
-<!--フッター部分------------------------------->
-<footer>
- <div class = "ARRLogo">All Rights Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu"><div class = "divlink1"><a href = "./companys outline.jsp">会社概要</a></div></div>
-        <div class = "footerMenu"><div class = "divlink1"><a href = "./kiyaku.jsp">利用規約</a></div></div>
-    </div>
-    <div class = "clear"></div>
-</footer>
+            <div class="sub">
+                <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
+
+            <div class="sub">
+                <img class = "img" src = "img/hituziyama.jpg">
+                <div class="name">羊山公園</div>
+                <div class="price">37564億人</div>
+            </div>
+        </div>
 
 </body>
 </html>
