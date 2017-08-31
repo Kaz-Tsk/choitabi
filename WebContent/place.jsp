@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <link rel = "stylesheet" type= "text/css" href = "base.css">
+<link rel = "stylesheet" type= "text/css" href = "css/base.css">
 <title>名所</title>
 </head>
 <body>
