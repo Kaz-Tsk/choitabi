@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
 
-#header{
+.header{
 	background-color:orange;
 	height:150px;
 	width: 100%;
@@ -13,17 +13,6 @@
 	float: left;
 }
 
-ul.admin_header li {
-	display: inline-block;
-	margin-right:6px;
-	padding-left:10px;
-}
-ul.admin_header {
-	text-align:right;
-}
-ul.admin_header li+li {
-	border-left:1px solid #999;
-}
 
 #headerimg{
 	float: right;
