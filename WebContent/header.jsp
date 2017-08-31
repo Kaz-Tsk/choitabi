@@ -7,10 +7,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<div class="header">
-choitabi
-</div>
 <body>
-
+<div class="header">
+<div class = "headerLogo">choitabi</div>
+      <ul id="dropmenu" class="dropmenu" style="list-style:none;">
+        <li><a href ="about.jsp">choitabiについて</a></li>
+        <li><a href = "contact_nyuuryoku.jsp">Ｑ＆Ａ/お問い合わせ</a></li>
+        <li><a href = "./login.jsp">ログイン</a></li>
+      </ul>
+</div>
 </body>
 </html>

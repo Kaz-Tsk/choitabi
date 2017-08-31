@@ -2,18 +2,53 @@
 
 
 .header{
-	background-color:orange;
-	height:150px;
-	width: 100%;
-	z-index:10;
-	text-color:white;
+	background: orange;
+	height: 125px;
+	position : relative ;
+	margin:0;
+	width:100%;
 }
 
-#headerlogo{
+
+.headerLogo{
+	font-size:80px;
+    color:white;
 	float: left;
 }
 
-
-#headerimg{
-	float: right;
+.dropmenu{
+  width: 960px;
+  margin: 10px;
+  padding: 0;
+	position : absolute ;
+	bottom : 0 ;
+	left : 140px ;
 }
+.dropmenu:before, .dropmenu:after{
+  content: "";
+  display: table;
+}
+.dropmenu:after{
+  clear: both;
+}
+
+.dropmenu li{
+  position: relative;
+  width: 15%;
+  float: left;
+  margin-left: 50px;
+  padding: 0;
+  text-align: center;
+}
+
+.dropmenu li a{
+  display: orange;
+  margin-top:20px ;
+  padding: 0 ;
+  background: orange;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+
+
