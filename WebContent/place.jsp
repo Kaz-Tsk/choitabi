@@ -6,12 +6,13 @@
  <meta charset ="UTF-8">
  <project name="properties-exchanger" default="devlocal">
     <title>ちょいたびのホームページ</title>
+    <link href="./css/header.css" rel="stylesheet" type="text.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel = "stylesheet" type= "text/css" href ="./css/place.css">
 </head>
 
 <body>
-    
+
 <!--ヘッダー部分------------------------->
 <header>
 <div class = "divlink1"><div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div></div>
@@ -23,7 +24,7 @@
 </header>
 
 <div class = "clear"></div>
-    
+
 <!--画面左側、カラム部分-------------------->
  <div class = "Column">
         ツアー検索メニュー<br>
@@ -38,7 +39,7 @@
         　┣ 関東<br>
         　┗ 関西<br>
  </div>
- 
+
  <!--place部分↓------------------------->
  <div class = "place">
   <h1>名所</h1>
@@ -133,7 +134,7 @@
    </div>
   </div>
   </div>
-    
+
 <!--フッター部分------------------------------->
 <footer>
  <div class = "ARRLogo">All Rights Reserved.</div>
