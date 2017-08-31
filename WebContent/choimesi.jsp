@@ -3,7 +3,7 @@
 <!DOCTYPE html >
 <html>
 <head>
-<link rel="stylesheet" href="choimesi.css">
+<link rel="stylesheet" href="choimesi.css" type="text.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
