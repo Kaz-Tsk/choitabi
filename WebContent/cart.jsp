@@ -26,7 +26,7 @@
 
 <body style="background-color: #fcfcf0;">
  	<header>
-		
+	<!-- 未定 -->	
 	</header>
 	<div class="row" style="padding-bottom: 50px;">
 		<div class="col-xs-4 col-xs-offset-4 text-center" style="padding-right:0; padding-left: 0;">
@@ -109,8 +109,8 @@
 		</div>
 	</div>
 </article>
-<footer style="width:97%;">
-				<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+<footer>
+<!-- 未定 -->
 </footer>
 
 </body>
