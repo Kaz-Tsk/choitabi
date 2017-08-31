@@ -22,7 +22,8 @@
   padding: 0;
 	position : absolute ;
 	bottom : 0 ;
-	left : 140px ;
+	/*left : 140px ;*/
+	right : 20px;
 }
 .dropmenu:before, .dropmenu:after{
   content: "";
@@ -34,7 +35,7 @@
 
 .dropmenu li{
   position: relative;
-  width: 15%;
+  width: /*15%;*/ 20%;
   float: left;
   margin-left: 50px;
   padding: 0;
@@ -47,8 +48,8 @@
   padding: 0 ;
   background: orange;
   color: #fff;
-  font-size: 16px;
+  font-size: /*16px;*/ 20px;
   line-height: 1;
-  text-decoration: none;
+  /*text-decoration: none;*/
 
 
