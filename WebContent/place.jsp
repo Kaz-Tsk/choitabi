@@ -7,6 +7,7 @@
  <project name="properties-exchanger" default="devlocal">
     <title>ちょいたびのホームページ</title>
     <link href="./css/header.css" rel="stylesheet" type="text.css">
+    <link rel = "stylesheet" type= "text/css" href ="./css/footer.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel = "stylesheet" type= "text/css" href ="./css/place.css">
 </head>
