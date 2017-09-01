@@ -7,8 +7,12 @@
 <link rel = "stylesheet" type= "text/css" href = "css/Q&A.css">
 <title>Q&A</title>
 </head>
-<body>
 
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
+<body>
 <div class="main">
         <h1>Q&A</h1>
         <br>
@@ -27,4 +31,8 @@
     </div>
 
 </body>
+
+<footer>
+          <jsp:include page="footer.jsp"/>
+</footer>
 </html>
