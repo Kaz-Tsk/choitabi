@@ -4,10 +4,7 @@
 "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-<constant name="struts.devMode" value="true"/>
-
-<package name="com.internousdev.choitabi.action" extends="struts-default">
-<action name="LoginAction" class="com.internousdev.choitabi.action.LoginAction" method="execute">
-</action>
+	<constant name="struts.devMode" value="true" />
+	<package name="com.internousdev.choitabi.action"  extends="struts-default">
 </package>
 </struts>
