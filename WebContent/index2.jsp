@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>choitabi トップ</title>
-<link rel = "stylesheet" type = "text/css" href = "index.css">
+<link rel = "stylesheet" type = "text/css" href = "index2.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="./jquery.bxslider/jquery.bxslider.js"></script>
 <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
