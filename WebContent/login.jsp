@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +9,9 @@
 </head>
 
 <body>
-
+<header>
+<s:include value="header.jsp"></s:include>
+</header>
 
 
 
@@ -19,10 +21,14 @@
 		<div class="login-logo">
 		</div>
 		<div class="login-text">
-			<p>mail address</p>
-			<input type="text" name="username" placeholder="choitabi@tour.ne.jp" >
-			<p>password</p>
-			<input type="password" name="password" placeholder="password">
+			<form action="LoginAction">
+				<p>mail address</p>
+				<input type="text" name="mailadderss"  required="required" placeholder="choitabi@tour.ne.jp" >
+				<p>password</p>
+				<input type="password" name="password" required="required"  placeholder="password">
+				<br>
+				<input type="submit"  name="loginbutton" value="login">
+			</form>
 		</div>
 	</div>
 
@@ -34,7 +40,9 @@
 
 
 
-
+<footer>
+	<s:include value="footer.jsp"></s:include>
+</footer>
 
 
 </html>
