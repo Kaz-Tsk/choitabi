@@ -1,20 +1,21 @@
-<%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel = "stylesheet" type= "text/css" href = "css/terms_of_use.css">
 <title>利用規約</title>
-
 </head>
 <body>
-<div class ="terms">
-	<div class="contents">
 
-		<h1>利用規約</h1>
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
+
+<div class="tou">
+        		<h1>利用規約</h1>
 		<br>
 
 
@@ -100,7 +101,10 @@
 			本サービスに関して紛争が生じた場合には，当社の本店所在地を管轄する裁判所を専属的合意管轄とします。</p>
 
 		<p>以上</p>
-	</div>
-	</div>
+        </div>
+
+   <footer>
+          <jsp:include page="footer.jsp"/>
+</footer>
 </body>
 </html>
