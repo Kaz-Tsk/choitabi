@@ -1,117 +1,79 @@
-<!-- コピペの為機能しません -->
-
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
-<!-- 国際化 -->
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale-1.0">
-  	<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  	<link href="css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">		<!-- bootstrapの読み込み -->
-  	<link href="css/orderddetails.css" rel="stylesheet">
-	<!-- 国際化 -->
-	<fmt:setLocale value="${pageContext.request.locale.language}" />
-	<fmt:setBundle basename="com.internousdev.choitabi.property.cart" var="lang" />
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
-	<title>choitabi</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>カート画面</title>
+  <link rel="stylesheet" type="text/css" href="css/cart.css">
 </head>
 
-<body style="background-color: #fcfcf0;">
- 	<header>
-	<!-- 未定 -->	
-	</header>
-	<div class="row" style="padding-bottom: 50px;">
-		<div class="col-xs-4 col-xs-offset-4 text-center" style="padding-right:0; padding-left: 0;">
-			<div class="col-xs-6 col-xs-offset-3" style="sidplay:inline-block; padding:5px 0; color:#fff; background:#2ecc71; border-radius:4px;">
-				<s:text name="lang.cart.cartlist"/>
-			</div>
-		</div>
-	</div>
-<article>
-	<!-- カートの中身を表示するテーブル -->
-	<div class="container col-xs-8 col-xs-offset-2">
-		<div class="panel panel-success">
-			<div class="panel-heading" style="height:50px;">
-				<table class="table">
-		  			<tr>
-		    			<th class="text-center" style="width:25%;"><s:text name="lang.cart.tourname"/></th>
-		    			<th class="text-center" style="width:25%;"><s:text name="lang.cart.quantity"/></th>
-		    			<th class="text-center" style="width:25%;"><s:text name="lang.cart.unitprice"/></th>
-		    			<th class="text-center" style="width:25%;"><s:text name="lang.cart.control"/></th>
-					</tr>
-				</table>
-			</div>
-			<div class="panel-body text-center">
-				<!-- ここからイテレート -->
-				<table class="table">
-					<s:iterator value="selectList">
-						<tr>
-	    					<td style="width:25%;">
-	    						<s:property value="tour_name"/>
-	    					</td>
-	    					<td style="width:25%;">
-	    					<div class="col-xs-5">
-	    					</div>
-	    						<s:form action="UpdateCartProduct">
-		    						<s:select list="{\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"10\"}" name="quantity" Value="%{quantity}"  onChange="this.form.submit()"/>
-		    						<s:hidden name="cart_id" value="%{cart_id}"/>
-	    						</s:form>
-	    					</td>
-	    					<td style="width:25%;">
-	    						<s:property value="unit_price"/><s:text name="lang.cart.yen"/>
-	    					</td>
-	    					<td style="width:25%;">
-	    						<s:form action="DeleteAction">
-	    							<s:hidden name="cart_id" value="%{cart_id}" />
-	    							<button type="submit" class="btn btn-danger" ><s:text name="lang.cart.delete"/></button>
-	    						</s:form>
-	    					</td>
-						</tr>
-					</s:iterator>
-				</table>
-				<!-- ここまでイテレート -->
-				<!-- 合計金額の表示 -->
-				<h3><s:text name="total"/><s:text name="lang.cart.yen"/></h3>
-				<!-- ここまで -->
-				<div style="color:red;"><s:property value="errmsg"/></div>
-				<!-- 各アクションを呼ぶためのボタン -->
-				<div class="form1">
-					<!-- TOP画面へ遷移 -->
-					<div class="col-xs-4">
-						<s:form action="GoTopAction">
-							<button type="submit" class="btn btn-primary"><s:text name="lang.cart.continue"/></button>
-						</s:form>
-					</div>
-					<!-- クレジット情報入力画面へ遷移 -->
-					<div class="col-xs-4">
-						<s:form action="GoCreditCardinfoAction">
-							<s:hidden name="total" value="%{total}"/>
-							<button type="submit" class="btn btn-success"><s:text name="lang.cart.next"/></button>
-						</s:form>
-					</div>
-					<!-- カートを空にするアクション -->
-					<div class="col-xs-4">
-						<s:form action="DeleteAllAction">
-							<button type="submit" class="btn btn-danger"><s:text name="lang.cart.deleteall"/></button>
-						</s:form>
-					</div>
-				</div>
-				<!-- ここまで -->
-			</div>
-		</div>
-	</div>
-</article>
-<footer>
-<!-- 未定 -->
-</footer>
+<body>
+<div class = "header">
+    <div class = "headerLogo">choitabi</div>
+    <div class = "headerMenuBox">
+        <div class = "headerMenu">
+	        choitabiについて　　
+	        Ｑ＆Ａ / お問い合わせ　　
+	        ログイン
+        </div>
+    </div>
+</div>
 
+    <div class="end">カートの商品</div>
+
+    <table border="1" cellpadding="0">
+    <tr>
+        <td>ツアー名：○○○○</td><td>日程：XX月XX日</td><td>金額：○○○○円</td><td>人数：
+        <form style="display:inline">
+            <select name="ninzu">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+            </select>
+        </form>
+        </td>
+        <td><button type="submit" name="" value="">削除</button></td>
+        </tr>
+    <tr>
+        <td>ツアー名：○○○○</td><td>日程：XX月XX日</td><td>金額：○○○○円</td><td>人数：
+        <form style="display:inline">
+            <select name="ninzu">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+            </select>
+        </form>
+        </td><td><button type="submit" name="" value="">削除</button></td>
+        </tr>
+    </table>
+
+    <div class="total">合計金額：○○○○円</div>
+    <div class="kaikei">
+        <button type="submit" name="" value="">購入</button></div>
+
+<div class = "footer">
+
+    <div class = "ARRLogo">All Rights Reserved.</div>
+    <div class = "footerMenuBox">
+        <div class = "footerMenu">会社概要</div>
+        <div class = "footerMenu">利用規約</div>
+    </div>
+    <div class = "clear"></div>
+    </div>
 </body>
 </html>
