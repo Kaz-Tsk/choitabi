@@ -7,8 +7,12 @@
 <link rel = "stylesheet" type= "text/css" href = "css/base.css">
 <title>名所</title>
 </head>
-<body>
 
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
+<body>
 <div class = "Column">
         ツアー検索メニュー<br>
         - - - - - - - - - -<br>
@@ -28,57 +32,61 @@
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
 
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
 
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
 
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
 
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
 
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
 
             <div class="sub">
                  <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
 
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
 
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
                 <div class="name">羊山公園</div>
-                <div class="price">37564億人</div>
+                <div class="price">100円</div>
             </div>
         </div>
 
 </body>
+
+<footer>
+          <jsp:include page="footer.jsp"/>
+</footer>
 </html>
