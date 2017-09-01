@@ -40,7 +40,7 @@
                 <li><img src="img/ryuzin.jpg"></li>
             </ul>
 
-    <script type="text/javascript" src ="index.js"></script>
+    <script type="text/javascript" src ="./js/index.js"></script>
 
 
 </div>
