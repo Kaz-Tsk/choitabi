@@ -5,10 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>choitabi トップ</title>
-<link rel = "stylesheet" type = "text/css" href = "index2.css">
+<link rel = "stylesheet" type = "text/css" href = "./css/index2.css">
+<!-- jqueryの宣言 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="./jquery.bxslider/jquery.bxslider.js"></script>
-<link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
+<script src="./js/jquery.bxslider/jquery.bxslider.js"></script>
+<link href="./js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
 
 </head>
 <body>
@@ -32,11 +33,11 @@
 
     <div class="flame">
             <ul class="bxslider">
-                <li><img src="image/fre1.jpg"></li>
-                <li><img src="image/himezi.jpg"></li>
-                <li><img src="image/hituziyama.jpg"></li>
-                <li><img src="image/ita1.jpg"></li>
-                <li><img src="image/ryuzin.jpg"></li>
+                <li><img src="img/fre1.jpg"></li>
+                <li><img src="img/himezi.jpg"></li>
+                <li><img src="img/hituziyama.jpg"></li>
+                <li><img src="img/ita1.jpg"></li>
+                <li><img src="img/ryuzin.jpg"></li>
             </ul>
 
     <script type="text/javascript" src ="index.js"></script>
@@ -79,14 +80,14 @@
             <h2>東北ツアー</h2>
             <p>新幹線でゆく</p>
                 <div class="img">
-                    <img class="Tohoku" src="image/touhokutop.jpg">
+                    <img class="Tohoku" src="img/touhokutop.jpg">
                 </div>
         </div>
 
         <div class = "post">
             <h2>アクティビティツアー</h2>
             <p>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</p>
-            <img class="nijoujou" src="image/nijoujou.jpg">
+            <img class="nijoujou" src="img/nijoujou.jpg">
         </div>
     </div>
 </div>
