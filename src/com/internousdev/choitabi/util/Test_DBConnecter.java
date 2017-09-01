@@ -5,12 +5,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /*【松村】データベースとの接続…MySQLへのログイン（のみ）を行うクラスをテストで作ってみました。
- * 作った接続を戻り値として返すようにしてあるので、
+ * 作った接続は戻り値に設定してあるので、呼び出すとそいつを投げ返してくれます。
  * DAOクラスの最初の処理で使いまわせる………かも。
  * */
 
 public class Test_DBConnecter {
-
 
 //※↓単体で動きをチェックするためのメインメソッドです。プロジェクト起動時に勝手に動いてしまうと大変なので、普段はコメントにしてあります。
 //	public static void main(String[] args)throws IllegalAccessException, InstantiationException{
@@ -18,10 +17,12 @@ public class Test_DBConnecter {
 //		tdbc.createConnection();
 //	}
 
-	private String className = "com.mysql.jdbc.Driver";
-	private String connectUrl = "jdbc:mysql://localhost/test";
-	private String connectUser = "root";
-	private String connectPassword = "mysql";
+	//ここから本文----------------------------------------------------------------------
+
+	private String className = "com.mysql.jdbc.Driver";			//←ロードするドライバー名
+	private String connectUrl = "jdbc:mysql://localhost/test_choitabi";  //←接続先のデータベース
+	private String connectUser = "root";								//←接続するユーザー
+	private String connectPassword = "mysql";						//←接続するときのパスワード
 
 
 
