@@ -1,19 +1,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="html" uri="/struts-tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<html lang ="ja">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>お問合せ内容入力画面</title>
+
+
+   <title>お問合せ内容入力画面</title>
 <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
+
 </head>
+
 
 <body>
 
-    <div class ="header"><b>お問合せ内容入力</b>_内容確認_送信完了</div>
+<div class ="header"><b>お問合せ内容入力</b>_内容確認_送信完了</div>
+
+
+
+<s:form action="InsertContactAction" method="post">
 
 <h1>お問合せ内容入力</h1>
-    <div class = "direction">以下のフォームに入力してください<br>(※配色等は仮です)</div>
+    <div class = "direction">以下のフォームに入力してください<br></div>
+
 
 
 <table>
@@ -29,8 +48,8 @@
     </tr>
     <tr>
         <th>メールアドレス</th><td colspan = "4">
-            <input type = "text" name = "" size = "20"> @
-            <input type = "text" name = "" size = "20">
+            <s:textfield name="email"/>
+
         </td>
     </tr>
     <tr>
@@ -40,8 +59,10 @@
 
 </table>
 
-<div class = "button1">確認</div>
-<div class = "button2">前のページに戻る</div>
+<input type="submit" value="確認">
+<input type="submit" value="トップに戻る">
+
+</s:form>
 
 <br>
 <br>
