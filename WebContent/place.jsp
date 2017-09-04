@@ -8,11 +8,14 @@
 <title>名所</title>
 </head>
 
+<!-- ヘッダー部分--------------------- -->
 <header>
         <jsp:include page="header.jsp"/>
 </header>
 
 <body>
+
+<!-- サイドバー部分--------------------------------------------------------------------------- -->
 <div class = "Column">
         ツアー検索メニュー<br>
         - - - - - - - - - -<br>
@@ -28,6 +31,7 @@
         　┗ 九州<br>
         </div>
 
+<!-- 商品一覧部分------------------------------------------- -->
         <div class="main">
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
@@ -86,6 +90,7 @@
 
 </body>
 
+<!-- フッター部分----------------------- -->
 <footer>
           <jsp:include page="footer.jsp"/>
 </footer>
