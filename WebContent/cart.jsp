@@ -13,9 +13,9 @@
     <div class = "headerLogo">choitabi</div>
     <div class = "headerMenuBox">
         <div class = "headerMenu">
-	        choitabiについて　　
-	        Ｑ＆Ａ / お問い合わせ　　
-	        ログイン
+	        <a href="./about.jsp">choitabiについて</a>
+	        <a href="./Q&A.jsp">Ｑ＆Ａ / お問い合わせ</a>
+	        <a href=".login.jsp">ログイン</a>
         </div>
     </div>
 </div>
@@ -70,8 +70,8 @@
 
     <div class = "ARRLogo">All Rights Reserved.</div>
     <div class = "footerMenuBox">
-        <div class = "footerMenu">会社概要</div>
-        <div class = "footerMenu">利用規約</div>
+        <div class = "footerMenu"><a href="./company_overview">会社概要</a></div>
+        <div class = "footerMenu"><a href="">利用規約</a></div>
     </div>
     <div class = "clear"></div>
     </div>

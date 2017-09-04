@@ -1,92 +1,54 @@
 @CHARSET "UTF-8";
 
-body{
-    text-align:center;
-    background-color:snow;
-    font-family:メイリオ;
-    white-space: nowrap;
-}
-
-.end{
-	margin-top:20px;
-    font-size:40px;
-    font-weight:100;
-    text-align:center;
-}
-
-table{
-    width: 900px;
-    margin-top:30px;
-    margin-right:auto;
-    margin-left: auto;
-    text-align: center;
-}
-
-.total {
-    float:left;
-    margin-top:30px;
-    margin-left:1000px;
-    font-size: 30px;
-}
-
-kaikei {
-    float:right;
-    margin-top:40px;
-    margin-right:100px;
-}
-
-
 /*ここからヘッダー設定--------------------------------------------------------------*/
 .header{
-    top:0px;
-    right:0px;
-    left:0px;
-    height:60px;
-    width:100%;
-    font-size:24px;
-    text-align:left;
-    background-color:orange;
-    white-space:nowrap;
+	background: orange;
+	height: 125px;
+	position : relative ;
+	margin:0;
+	width:100%;
 }
 
-/*ヘッダーの「choitabi」ロゴの文字列部分----------------------------------------------*/
 .headerLogo{
-    float:left;
-    margin-left:30px;
-    font-size:40px;
-    line-height:64px;
+	font-size:80px;
     color:white;
+	float: left;
 }
 
-
-.clear{
-	clear:both;
+.dropmenu{
+  width: 960px;
+  margin: 10px;
+  padding: 0;
+	position : absolute ;
+	bottom : 0 ;
+	right : 20px;
+}
+.dropmenu:before, .dropmenu:after{
+  content: "";
+  display: table;
+}
+.dropmenu:after{
+  clear: both;
 }
 
-/*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
-.headerMenuBox{
-	position:absolute;
-    right:10px;
-    left:240px;
-    text-align:right;
-    white-space:nowrap;
+.dropmenu li{
+  position: relative;
+  width:20%;
+  float: left;
+  margin-left: 50px;
+  padding: 0;
+  text-align: center;
 }
 
-/*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
-.headerMenu{
-	position:absolute;
-	top:30px;
-	right:10px;
-	left:100px;
-    margin-right:40px;
-    margin-left:80px;
-    float:left;
-    color:white;
-    font-size:18px;
-    line-height:10px;
-    white-space:nowrap;
+.dropmenu li a{
+  display: orange;
+  margin-top:20px ;
+  padding: 0 ;
+  background: orange;
+  color: #fff;
+  font-size:20px;
+  line-height: 1;
 }
-
 
 /*ヘッダー直下、キャッチフレーズやスクロール画面部分--------------------------------------*/
 
@@ -155,16 +117,10 @@ kaikei {
 
 /*ここからフッター -----------------------------------------------------------------*/
 .footer{
-    bottom:0px;
-    height:50px;
-    width:100%;
-    float:left;
-    background-color:orange;
-    color:white;
-    text-align:center;
-    font-size:12px;
-    line-height:50px;
-
+text-align:center;
+height: 150px;
+ clear:left
+ width: 100%;
 }
 
 .ARRLogo{
@@ -185,4 +141,39 @@ kaikei {
     margin-left:40px;
     color:white;
     font-size:16px;
+}
+
+body{
+    text-align:center;
+    background-color:snow;
+    font-family:メイリオ;
+    white-space: nowrap;
+}
+
+.end{
+	margin-top:20px;
+    font-size:40px;
+    font-weight:100;
+    text-align:center;
+}
+
+table{
+    width: 900px;
+    margin-top:30px;
+    margin-right:auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.total {
+    float:left;
+    margin-top:30px;
+    margin-left:1000px;
+    font-size: 30px;
+}
+
+kaikei {
+    float:right;
+    margin-top:40px;
+    margin-right:100px;
 }
