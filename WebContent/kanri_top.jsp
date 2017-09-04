@@ -12,13 +12,13 @@
     <br>
     -----管理メニュー-----<br>
     <br>
-    ■商品管理　ツアー一覧<br>
+    <a href="./kanri_tourList.jsp">■商品管理　ツアー一覧</a><br>
     <br>
-    ■顧客情報一覧<br>
+    <a href="./kanri_customerList.jsp">■顧客情報一覧</a><br>
     <br>
-    ■購入履歴一覧<br>
+    <a href="./kanri_history.jsp">■購入履歴一覧</a><br>
     <br>
-    ■問い合わせ一覧<br>
+    <a href="./kanri_toiawasekakunin.jsp">■問い合わせ一覧</a><br>
     <br>
     【　　ログアウト　　】
 </font>
