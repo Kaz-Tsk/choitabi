@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<header>
+<header >
 <s:include value="header.jsp"></s:include>
 </header>
 
@@ -21,14 +21,12 @@
 		<div class="login-logo">
 		</div>
 		<div class="login-text">
-			<form action="LoginAction">
-				<p>mail address</p>
-				<input type="text" name="mailadderss"  required="required" placeholder="choitabi@tour.ne.jp" >
-				<p>password</p>
-				<input type="password" name="password" required="required"  placeholder="password">
+			<s:form action="LoginAction">
+				<s:textfield name = "mail address"  label= "mail address" required = "repuired" placeholder = "choitabi@tour.ne.jp"/>
+				<s:password name="password" required="required" label = "password" placeholder="password"/>
 				<br>
-				<input type="submit"  name="loginbutton" value="login">
-			</form>
+				<s:submit  value="login" />
+			</s:form>
 		</div>
 	</div>
 
