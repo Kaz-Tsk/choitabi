@@ -7,7 +7,7 @@
 <title>管理ページトップ</title>
 </head>
 <body>
-<h1>管理者画面トップ</h1>
+<h1>choitabi 管理者画面トップ</h1>
 <font size = "3">
     <br>
     -----管理メニュー-----<br>

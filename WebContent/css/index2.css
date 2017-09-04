@@ -1,10 +1,10 @@
 body{
     background-color:snow;
-    font-family:ƒƒCƒŠƒI;
+    font-family:ãƒ¡ã‚¤ãƒªã‚ª;
     white-space: nowrap;
 }
 
-/*ƒŠƒ“ƒN•”•ª‚ÌFE‘•ü‚Ìİ’è---------*/
+/*ãƒªãƒ³ã‚¯éƒ¨åˆ†ã®è‰²ãƒ»è£…é£¾ã®è¨­å®š---------*/
 
 .divlink1 a:link { color : white;}
 .divlink1 a:visited { color : white;}
@@ -19,7 +19,7 @@ body{
 a {text-decoration : none;}
 
 
-/*‚±‚±‚©‚çƒwƒbƒ_[İ’è--------------------------------------------------------------*/
+/*ã“ã“ã‹ã‚‰ãƒ˜ãƒƒãƒ€ãƒ¼è¨­å®š--------------------------------------------------------------*/
 .header{
     top:0px;
     right:0px;
@@ -32,7 +32,7 @@ a {text-decoration : none;}
     white-space:nowrap;
 }
 
-/*ƒwƒbƒ_[‚ÌuchoitabivƒƒS‚Ì•¶š—ñ•”•ª----------------------------------------------*/
+/*ãƒ˜ãƒƒãƒ€ãƒ¼ã®ã€Œchoitabiã€ãƒ­ã‚´ã®æ–‡å­—åˆ—éƒ¨åˆ†----------------------------------------------*/
 .headerLogo{
     float:left;
     margin-left:30px;
@@ -46,7 +46,7 @@ a {text-decoration : none;}
 	clear:both;
 }
 
-/*ƒwƒbƒ_[‚ÌŠeƒƒjƒ…[€–Ú‚ğˆê‚Ü‚Æ‚ß‚É‚µ‚Ä‚¢‚éƒOƒ‹[ƒv(ƒƒjƒ…[‘S‘Ì‚ÌêŠ’²®‚Ég‚Á‚Ä‚¢‚Ü‚·)----*/
+/*ãƒ˜ãƒƒãƒ€ãƒ¼ã®å„ãƒ¡ãƒ‹ãƒ¥ãƒ¼é …ç›®ã‚’ä¸€ã¾ã¨ã‚ã«ã—ã¦ã„ã‚‹ã‚°ãƒ«ãƒ¼ãƒ—(ãƒ¡ãƒ‹ãƒ¥ãƒ¼å…¨ä½“ã®å ´æ‰€èª¿æ•´ã«ä½¿ã£ã¦ã„ã¾ã™)----*/
 .headerMenuBox{
 	position:relative;
 	top:30px;
@@ -57,7 +57,7 @@ a {text-decoration : none;}
     white-space:nowrap;
 }
 
-/*uchoitabi‚É‚Â‚¢‚ÄvuQ&A/‚¨–â‚¢‡‚í‚¹vuƒƒOƒCƒ“v‚ÌŠe•¶š—ñ‚ğ’²®‚µ‚Ä‚¢‚é‚Æ‚±‚ë---------*/
+/*ã€Œchoitabiã«ã¤ã„ã¦ã€ã€ŒQ&A/ãŠå•ã„åˆã‚ã›ã€ã€Œãƒ­ã‚°ã‚¤ãƒ³ã€ã®å„æ–‡å­—åˆ—ã‚’èª¿æ•´ã—ã¦ã„ã‚‹ã¨ã“ã‚---------*/
 .headerMenu{
 	position:relative;
 	right:20px;
@@ -70,7 +70,102 @@ a {text-decoration : none;}
 }
 
 
-/*ƒwƒbƒ_[’¼‰ºAƒLƒƒƒbƒ`ƒtƒŒ[ƒY‚âƒXƒNƒ[ƒ‹‰æ–Ê•”•ª--------------------------------------*/
+/*ãƒ˜ãƒƒãƒ€ãƒ¼â‘¡-----------------------------------------------------------------------------------*/
+
+.dropmenu{
+    list-style-type: none;
+    width: 800px;
+    height: 40px;
+    margin: 30px auto 300px;
+    padding: 0;
+    background: #8a9b0f;
+    border-bottom: 5px solid #535d09;
+    border-radius: 5px 5px 0 0;
+}
+
+.dropmenu li{
+    position: relative;
+    width: 20%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.dropmenu li a{
+    display: block;
+    margin: 0;
+    padding: 15px 0 11px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.dropmenu li:hover > a{
+    background: #6e7c0c;
+    color: #eff7b1;
+}
+
+.dropmenu > li:hover > a{
+    border-radius: 5px 5px 0 0;
+}
+
+.dropmenu li ul{
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.dropmenu li:last-child ul{
+    width: 100%
+}
+
+.dropmenu li ul li{
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    -ms-transition: .2s;
+    transition: .2s;
+}
+
+.dropmenu li ul li a{
+    padding: 13px 15px;
+    background: #6e7c0c;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.dropmenu li:hover ul li{
+    overflow: visible;
+    height: 38px;
+    border-top: 1px solid #7c8c0e;
+    border-bottom: 1px solid #616d0b;
+}
+
+.dropmenu li:hover ul li:first-child{
+    border-top: 0;
+}
+
+.dropmenu li:hover ul li:last-child{
+    border-bottom: 0;
+}
+
+.dropmenu li:hover ul li:last-child a{
+    border-radius: 0 0 5px 5px;
+}
+
+/*ãƒ˜ãƒƒãƒ€ãƒ¼ç›´ä¸‹ã€ã‚­ãƒ£ãƒƒãƒãƒ•ãƒ¬ãƒ¼ã‚ºã‚„ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ç”»é¢éƒ¨åˆ†--------------------------------------*/
 
 
 .catchPhrase{
@@ -107,7 +202,7 @@ img{
     height:400px;
 }
 
-/*ƒƒCƒ“•”•ª‘S‘Ì‚ğˆÍ‚ŞƒGƒŠƒA----------------------------------------------------------*/
+/*ãƒ¡ã‚¤ãƒ³éƒ¨åˆ†å…¨ä½“ã‚’å›²ã‚€ã‚¨ãƒªã‚¢----------------------------------------------------------*/
 
 .mainArea{
     margin-top:50px;
@@ -121,7 +216,7 @@ img{
 
 
 
-/*ƒTƒCƒhƒo[•”•ª---------------------------------------------------------------*/
+/*ã‚µã‚¤ãƒ‰ãƒãƒ¼éƒ¨åˆ†---------------------------------------------------------------*/
 *{
     margin:0;
     padding:0;
@@ -153,9 +248,9 @@ img{
     color:grey;
     text-align:center;
 }
-/*‚±‚±‚Ü‚ÅƒTƒCƒhƒo[•”•ª---------------------------------------------------------*/
+/*ã“ã“ã¾ã§ã‚µã‚¤ãƒ‰ãƒãƒ¼éƒ¨åˆ†---------------------------------------------------------*/
 
-/*‚±‚±‚©‚çA‰E‘¤‚ÌƒcƒA[ˆê——•”•ª-------------------------------------------------------*/
+/*ã“ã“ã‹ã‚‰ã€å³å´ã®ãƒ„ã‚¢ãƒ¼ä¸€è¦§éƒ¨åˆ†-------------------------------------------------------*/
 .TourList{
     margin-top:10px;
 	margin-left:280px;
@@ -188,7 +283,7 @@ img{
 }
 
 
-/*‚±‚±‚©‚çƒtƒbƒ^[ -----------------------------------------------------------------*/
+/*ã“ã“ã‹ã‚‰ãƒ•ãƒƒã‚¿ãƒ¼ -----------------------------------------------------------------*/
 .footer{
     bottom:0px;
     height:50px;

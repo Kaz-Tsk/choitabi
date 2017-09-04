@@ -18,13 +18,51 @@
 <div class = "header">
     <div class = "divlink1"><div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div></div>
     <div class = "headerMenuBox">
-        <div class = "headerMenu"><div class = "divlink1">choitabiについて</div></div>
+        <div class = "headerMenu"><div class = "divlink1"><a href = "./about.jsp">choitabiについて</a></div></div>
         <div class = "headerMenu"><div class = "divlink1">Ｑ＆Ａ/お問い合わせ</div></div>
         <div class = "headerMenu"><div class = "divlink1"><a href = "./login.jsp">ログイン</a></div></div>
     </div>
 </div>
 
 <div class = "clear"></div>
+<!--ヘッダー②　　萩原さんからもらったヘッダー部分のドロップメニュー--------------------------------------->
+
+
+<div class="container">
+
+        <ul class="dropmenu">
+        <li><a href="#">メニュー1</a>
+        <ul>
+            <li><a href="#">サブメニュー</a></li>
+            <li><a href="#">サブメニュー</a></li>
+            </ul>
+            </li>
+        <li><a href="#">メニュー2</a>
+        <ul>
+            <li><a href="#">サブメニュー</a></li>
+            <li><a href="#">サブメニュー</a></li>
+            </ul>
+            </li>
+            <li><a href="#">メニュー3</a>
+        <ul>
+            <li><a href="#">サブメニュー</a></li>
+            <li><a href="#">サブメニュー</a></li>
+            </ul>
+            </li>
+            <li><a href="#">メニュー4</a>
+        <ul>
+            <li><a href="#">サブメニュー</a></li>
+            <li><a href="#">サブメニュー</a></li>
+            </ul>
+            </li>
+            <li><a href="#">メニュー5</a>
+        <ul>
+            <li><a href="#">サブメニュー</a></li>
+            <li><a href="#">サブメニュー</a></li>
+            </ul>
+            </li>
+        </ul>
+</div>
 
 <!--↓キャッチフレーズとスクロール画面の部分------------------------->
 
@@ -56,15 +94,15 @@
             <li>
                 <div class = "category">テーマで探す</div>
                 <ul class = "menu">
-                    <li><a href = "#">グルメ</a></li>
-                    <li><a href = "#">名所</a></li>
-                    <li><a href = "#">アクティビティ</a></li>
+                    <li><a href = "./choimesi.jsp">グルメ</a></li>
+                    <li><a href = "./place.jsp">名所</a></li>
+                    <li><a href = "./activity.jsp">アクティビティ</a></li>
                 </ul>
             </li>
             <li>
                 <div class = "category">エリアで探す</div>
                 <ul class = "menu">
-                    <li><a href = "#">東北</a></li>
+                    <li><a href = "./touhoku.jsp">東北</a></li>
                     <li><a href = "#">関東</a></li>
                     <li><a href = "#">関西</a></li>
                     <li><a href = "#">九州</a></li>
@@ -77,16 +115,16 @@
     <!--↓ツアーの一覧を表示する部分---------------------------------->
     <div class = "TourList">
         <div class = "post">
-            <h2>東北ツアー</h2>
-            <p>新幹線でゆく</p>
+            <h2><a href="touhoku.jsp">東北ツアー</a></h2>
+            <p><a href="touhoku.jsp">新幹線でゆく</a></p>
                 <div class="img">
                     <img class="Tohoku" src="img/touhokutop.jpg">
                 </div>
         </div>
 
         <div class = "post">
-            <h2>アクティビティツアー</h2>
-            <p>本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</p>
+            <h2><a href="activity.jsp">アクティビティツアー</a></h2>
+            <p><a href="activity.jsp">本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</a></p>
             <img class="nijoujou" src="img/nijoujou.jpg">
         </div>
     </div>
