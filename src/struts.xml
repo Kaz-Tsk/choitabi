@@ -6,5 +6,10 @@
 <struts>
 	<constant name="struts.devMode" value="true" />
 	<package name="com.internousdev.choitabi.action"  extends="struts-default">
+
+	<action name="IndicateTourListAction" class="com.internousdev.choitabi.action.IndicateTourListAction" method="execute">
+		<result name="success">kanri_tourList.jsp</result>
+		<result name="error">kanri_top.jsp</result>
+	</action>
 </package>
 </struts>
