@@ -1,0 +1,26 @@
+/*会社概要部分-----------*/
+h1{
+	margin-top:90px;
+	margin-left:600px;
+}
+
+/*会社概要詳細部分---------------*/
+table{
+	margin-left:370px;
+}
+
+th{
+	width:100px;
+	background-color:#dcdcdc;
+	text-align:left;
+}
+
+td{
+	width:500px;
+	background-color:#f5f5f5;
+}
+
+/*フッター部分---------*/
+footer{
+	margin-top:90px;
+}

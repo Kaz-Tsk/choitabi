@@ -1,30 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/footer.css">
-
+<link rel="stylesheet" href="css/company_overview.css">
 <meta charset="UTF-8">
-<title><s:text name="%{getText('lang.companyOverview.Title')}"/></title>
+<title>会社概要</title>
 </head>
+
 <body>
 
-<!-------------- ヘッダー -------------->
+<!--ヘッダー部分--------------------->
 <jsp:include page="header.jsp" />
-<!-------------- ヘッダー -------------->
-<div class="col-sm-3"></div>
-<div class="col-sm-6">
-	<div class="contents">
+
+<!-- 会社概要部分------- -->
 		<h1>会社概要</h1>
 		<br>
 
-		<div class="nakayose">
-			<table class="tbl">
+<!-- 会社概要詳細部分------------------------------------------------------------------------- -->
+			<table>
 				<tr>
 					<th>会社名</th>
 					<td>プログラマカレッジ（御茶ノ水研修所）</td>
@@ -61,12 +55,11 @@
 					</td>
 				</tr>
 			</table>
-			<br>
-		</div>
 
-	</div>
-	</div>
-	<div class="col-sm-3"></div>
+<!-- フッター部分----------------------- -->
+			<footer>
+          <jsp:include page="footer.jsp"/>
+           </footer>
     </body>
 </html>
 
