@@ -14,7 +14,7 @@ import com.internousdev.util.DBConnector;
  *@since 2017/9/4
  *@version 1.0
  */
-public class LogOutDAO {
+public class LogoutDAO {
 
 	/**
 	 * @param loginId

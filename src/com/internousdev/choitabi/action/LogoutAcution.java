@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.choitabi.dao.LogOutDAO;
+import com.internousdev.choitabi.dao.LogoutDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -17,7 +17,7 @@ import com.opensymphony.xwork2.ActionSupport;
  *@version 1.0
  *ログアウトする為のクラス
  */
-public class LogOutAcution extends ActionSupport implements SessionAware {
+public class LogoutAcution extends ActionSupport implements SessionAware {
 
 	/**
 	 * シリアルバージョン
@@ -61,7 +61,7 @@ public class LogOutAcution extends ActionSupport implements SessionAware {
 	 * @throws SQLException エラー処理
 	 */
 	public String execute()throws SQLException{
-		LogOutDAO dao = new LogOutDAO();
+		LogoutDAO dao = new LogoutDAO();
 		String result = ERROR;
 
 		if(session.get("userId")==null){

@@ -7,9 +7,23 @@
 	<constant name="struts.devMode" value="true" />
 	<package name="com.internousdev.choitabi.action"  extends="struts-default">
 
+
+<!-- 管理画面関連 -->
 	<action name="IndicateTourListAction" class="com.internousdev.choitabi.action.IndicateTourListAction" method="execute">
 		<result name="success">kanri_tourList.jsp</result>
 		<result name="error">kanri_tourList.jsp</result>
+	</action>
+
+	<!-- ログイン画面関連 -->
+	<action name="LoginAction" class="com.internousdev.choitabi.action.LoginAction" method="execute">
+		<result name="success" type="chain"></result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<!-- ログアウト -->
+	<action name="LogoutAction" class="com.internousdev.choitabi.action.LogoutAction" method="execute">
+		<result name="success" type="chain"></result>
+		<result name="error" >login.jp</result>
 	</action>
 </package>
 </struts>
