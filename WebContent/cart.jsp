@@ -8,17 +8,13 @@
   <link rel="stylesheet" type="text/css" href="css/cart.css">
 </head>
 
+
+
 <body>
-<div class = "header">
-    <div class = "headerLogo">choitabi</div>
-    <div class = "headerMenuBox">
-        <div class = "headerMenu">
-	        <a href="./about.jsp">choitabiについて</a>
-	        <a href="./Q&A.jsp">Ｑ＆Ａ / お問い合わせ</a>
-	        <a href=".login.jsp">ログイン</a>
-        </div>
-    </div>
-</div>
+
+<!-------------- ヘッダー -------------->
+<jsp:include page="header.jsp" />
+<!-------------- ヘッダー -------------->
 
     <div class="end">カートの商品</div>
 
