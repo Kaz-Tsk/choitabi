@@ -5,24 +5,45 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>管理ページトップ</title>
+<title>ツアー情報一覧</title>
 </head>
 <body>
-<h1>管理者画面トップ</h1>
-<font size = "3">
+<h1>ツアー情報一覧</h1>
+    <hr>
     <br>
-    -----管理メニュー-----<br>
+<table border = "1px" cellspacing = "0px" cellpadding = "10px">
+	<tr>
+		<th>ツアーID</th>
+		<th>ツアー名</th>
+		<th>価格</th>
+		<th>定員</th>
+		<th>最終編集日</th>
+		<th>出発地</th>
+		<th></th>
+	</tr>
+
+	<s:iterator value="allTourList">
+	<tr>
+		<td><s:property value="tourId"></s:property></td>
+		<td><s:property value="tourName"></s:property></td>
+		<td><s:property value="price"></s:property></td>
+		<td><s:property value="persons"></s:property></td>
+		<td><s:property value="date"></s:property></td>
+		<td><s:property value="departure"></s:property></td>
+		<td>編集</td>
+	</tr>
+	</s:iterator>
+
+
+
+</table>
     <br>
-    <a href="<s:url action="IndicateTourListAction"/>">■商品管理　ツアー一覧</a><br>
+
     <br>
-    <a href="./kanri_customerList.jsp">■顧客情報一覧</a><br>
+    管理ページトップに戻る<br>
     <br>
-    <a href="./kanri_history.jsp">■購入履歴一覧</a><br>
     <br>
-    <a href="./kanri_toiawasekakunin.jsp">■問い合わせ一覧</a><br>
     <br>
-    【　　ログアウト　　】
-</font>
 
 
 

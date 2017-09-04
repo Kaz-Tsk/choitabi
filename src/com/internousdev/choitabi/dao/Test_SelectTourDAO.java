@@ -70,11 +70,17 @@ public class Test_SelectTourDAO {
 				e.printStackTrace();
 				return null;
 
-			}catch(Exception e){
-				System.out.println("java/SQL以外でエラーが発生しました");
+			} catch (IllegalAccessException e) {
+				System.out.println("アクセスエラーです");
+				e.printStackTrace();
+				return null;
+
+			} catch (InstantiationException e) {
+				System.out.println("ドライバのロードに失敗しました");
 				e.printStackTrace();
 				return null;
 			}
+
 
 
 

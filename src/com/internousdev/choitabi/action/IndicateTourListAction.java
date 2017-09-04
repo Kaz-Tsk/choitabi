@@ -52,6 +52,8 @@ public class IndicateTourListAction extends ActionSupport{
 			result = ERROR;
 		}
 
+		System.out.println(result);
+
 		return result;
 	}
 
