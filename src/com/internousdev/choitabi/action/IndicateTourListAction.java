@@ -11,8 +11,11 @@ public class IndicateTourListAction extends ActionSupport{
 
 	/*作成者：松村
 	 * 管理画面のツアー情報の管理で使用するアクションです。
-	 * DBからツアーのデータを取得し、リストにしてJSPに渡し、表示させます。	 *
+	 * DBからツアーのデータを取得し、リストにしてJSPに渡して、表示させます。	 *
 	 * */
+
+	/*検索ワード（初期状態はnullなので、ifで例外回避を）*/
+	private String selectWord;
 
 	/*取得されたすべてのツアー情報*/
 	private ArrayList<Test_SelectTourDTO> allTourList = new ArrayList<Test_SelectTourDTO>();
@@ -52,7 +55,7 @@ public class IndicateTourListAction extends ActionSupport{
 			result = ERROR;
 		}
 
-		System.out.println(result);
+		/*後消し*/System.out.println(result);
 
 		return result;
 	}
@@ -61,6 +64,16 @@ public class IndicateTourListAction extends ActionSupport{
 	/*以下、各変数、リストのgetter/setter
 	 * */
 
+
+	/*検索ワードのgetter*/
+	public String getSelectWord(){
+		return selectWord;
+	}
+
+	/*検索ワードのsetter*/
+	public void setSelectWord(String selectWord){
+		this.selectWord = selectWord;
+	}
 
 	/*ツアーリスト（すべて）のgetter*/
 	public ArrayList<Test_SelectTourDTO> getAllTourList(){
@@ -72,11 +85,36 @@ public class IndicateTourListAction extends ActionSupport{
 		this.allTourList = allTourList;
 	}
 
+	/*表示中ツアーリストのgetter*/
+	public ArrayList<Test_SelectTourDTO> getCurrentTourList(){
+		return currentTourList;
+	}
+
+	/*表示中ツアーリストのsetter*/
+	public void setCurrentTourList(ArrayList<Test_SelectTourDTO> currentTourList){
+		this.currentTourList = currentTourList;
+	}
 
 
+	/*ツアー情報総ページ数のgetter*/
+	public int getAllPages(){
+		return allPages;
+	}
 
+	/*ツアー情報総ページ数のsetter*/
+	public void serAllPages(int allPages){
+		this.allPages = allPages;
+	}
 
+	/*ツアー情報の現在のページ番号のgetter*/
+	public int getCurrentPage(){
+		return currentPage;
+	}
 
+	/*ツアー情報の現在のページ番号のsetter*/
+	public void setCurrentPage(int currentPage){
+		this.currentPage = currentPage;
+	}
 
 
 }

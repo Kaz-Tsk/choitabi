@@ -11,16 +11,12 @@
 <h1>ツアー情報一覧</h1>
     <hr>
     <br>
+    ツアー検索<br>
     <s:form>
-    	ツアー検索
-    	<table>
-    		<tr>
-	    		<td><s:textfield name="selectWord"></s:textfield></td>
-	    		<td><s:submit value="検索"></s:submit></td>
-    		</tr>
-    	</table>
-    <br>
-    </s:form>
+		<s:textfield name="selectWord"></s:textfield>
+		<s:submit value="検索"></s:submit>
+	</s:form>
+	<br>
 <table border = "1px" cellspacing = "0px" cellpadding = "10px">
 	<tr>
 		<th>ツアーID</th>
