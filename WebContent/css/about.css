@@ -1,0 +1,19 @@
+/*choitabiについて---------------*/
+h1{
+    font-family:"メイリオ";
+
+    width:100%;
+}
+
+/*div_class="main"部分-----------*/
+.main{
+	margin-top:90px;
+	margin-left:500px;
+    width:100%;
+    color:black;
+}
+
+/*フッター部分-----------------------*/
+footer{
+	margin-top:90px;
+}

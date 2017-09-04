@@ -5,12 +5,19 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet"type="text/css"href="./css/choitabistyle.css">
+    <link rel="stylesheet"type="text/css"href="./css/about.css">
+    <title>about</title>
 </head>
 
 
 <body>
 
+<!-- ヘッダー部分------------------------------->
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
+<!-- about部分---------------------------------------------------------->
     <div class="main">
         <p>
         <h1>choitabiについて</h1>
@@ -25,11 +32,12 @@
         <br>
 
         <p>『choitabi』で素敵な旅をお楽しみください。</p>
-
-        <div class="link">
-        <a href="http:www.internousdev.com/choitabi/">トップに戻る</a>
-        </div>
-
     </div>
+
+<!-- フッター部分---------------------------->
+    <footer>
+          <jsp:include page="footer.jsp"/>
+</footer>
+
 </body>
 </html>
