@@ -1,4 +1,4 @@
-package com.internousdev.choitabi.util;
+package src.com.internousdev.choitabi.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -33,7 +33,7 @@ public class Test_DBConnecter {
 		try{
 			Class.forName(className).newInstance();
 			con = DriverManager.getConnection(connectUrl, connectUser, connectPassword);
-			System.out.println("接続が完了しました");
+			System.out.println("Test_DBConnecter.java:接続が完了しました");
 		}catch(ClassNotFoundException e){
 			System.out.println("指定されたクラスが見つかりません");
 			e.printStackTrace();
