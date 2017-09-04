@@ -7,12 +7,14 @@
 <link rel = "stylesheet" type= "text/css" href = "css/Q&A.css">
 <title>Q&A</title>
 </head>
-
+<!-- ヘッダー部分---------------------- -->
 <header>
         <jsp:include page="header.jsp"/>
 </header>
 
 <body>
+
+<!-- Q&A部分----------------------------------------------------------------- -->
 <div class="main">
         <h1>Q&A</h1>
         <br>
@@ -32,6 +34,7 @@
 
 </body>
 
+<!-- フッター部分----------------------- -->
 <footer>
           <jsp:include page="footer.jsp"/>
 </footer>
