@@ -54,4 +54,19 @@ public class TourListPagination {
 	}
 
 
+	public int rerturnMaxPage(ArrayList<SelectTourDTO> allTourList){
+		int maxPage;
+
+		if( (allTourList.size() % tourNumber)  != 0 ){
+			maxPage = (allTourList.size() / tourNumber) + 1;
+		}else{
+			maxPage = (allTourList.size() / tourNumber);
+		}
+
+		return maxPage;
+	}
+
+
+
+
 }

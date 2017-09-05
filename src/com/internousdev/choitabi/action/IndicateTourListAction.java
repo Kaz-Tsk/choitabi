@@ -25,11 +25,11 @@ public class IndicateTourListAction extends ActionSupport{
 	/*現在表示している＝１ページに表示するツアー情報（ページネート）*/
 	private ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
-	/*ツアー情報の総ページ数*/
-	private int allPages;
+	/*ツアー情報の最大ページ数*/
+	private int maxPage;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage =1;
+	private int currentPage =1;/*ここは本来、JSPから持ってくる*/
 
 
 
@@ -40,15 +40,17 @@ public class IndicateTourListAction extends ActionSupport{
 	public String execute(){
 		String result = ERROR;
 
-		/*①DAOでツアーの一覧を持ってくる*/
+		/*DAOでツアーの一覧を持ってくる*/
 		SelectTourDAO tstl = new SelectTourDAO();
 		allTourList = tstl.selectTour();
 
-		/*②持ってきた全ツアーを、ページネートで分割されたリストにします*/
+		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/
 		TourListPagination tlp = new TourListPagination();
 		 currentTourList = tlp.paginateTourList(allTourList, currentPage);
+		 maxPage = tlp.rerturnMaxPage(allTourList);/*ついでに最大ページ数も持ってきます。*/
 
-		 /*③リストがうまく作れたらSUCCESS、そうでなかったらERRORを返します*/
+
+		 /*リストがうまく作れたらSUCCESS、そうでなかったらERRORを返します*/
 		if(currentTourList != null){
 			result = SUCCESS;
 		}else{
@@ -97,13 +99,13 @@ public class IndicateTourListAction extends ActionSupport{
 
 
 	/*ツアー情報総ページ数のgetter*/
-	public int getAllPages(){
-		return allPages;
+	public int getMaxPage(){
+		return maxPage;
 	}
 
 	/*ツアー情報総ページ数のsetter*/
-	public void serAllPages(int allPages){
-		this.allPages = allPages;
+	public void setMaxPage(int allPages){
+		this.maxPage = allPages;
 	}
 
 	/*ツアー情報の現在のページ番号のgetter*/
