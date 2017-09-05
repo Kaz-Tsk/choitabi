@@ -26,20 +26,24 @@ public class TourListPagination {
 	/*一度に表示するツアーの件数（可変になったときのために、ここにまとめておく）*/
 	private int tourNumber = 10;
 
-	/*呼び出し元に返すツアーのリスト*/
-	ArrayList<SelectTourDTO> currentTourList;
+
 
 
 
 	public ArrayList<SelectTourDTO> paginateTourList(ArrayList<SelectTourDTO> allTourList, int currentPage){
+
+		/*呼び出し元に返すツアーのリスト*/
+		ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
+
 		lastIndex = lastIndex + (currentPage * tourNumber);
 		currentPage -= 1;
 		firstIndex = firstIndex * (currentPage * tourNumber);
 
 		for(int i = firstIndex; i < lastIndex; i ++){
 			currentTourList.add(allTourList.get(i));
+			System.out.println("paginate : " + currentTourList.get(i));
 
-			if(i == allTourList.size()){
+			if(i < allTourList.size()){
 				break;
 			}
 
