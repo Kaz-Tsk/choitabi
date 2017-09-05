@@ -11,8 +11,9 @@
 <h1>ツアー情報一覧</h1>
     <hr>
     ツアー検索<br>
-    <s:form>
+    <s:form action="IndicateTourListAction">
 		<s:textfield name="selectWord"/>
+		<s:hidden name="currentPage" value="1"/>
 		<s:submit value="検索"/>
 	</s:form>
 	<br>

@@ -17,7 +17,7 @@ public class IndicateTourListAction extends ActionSupport{
 	 * */
 
 	/*検索ワード（初期状態はnullなので、ifで例外回避を）*/
-	private String selectWord;
+	private String selectWord = "";
 
 	/*取得されたすべてのツアー情報*/
 	private ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
@@ -26,10 +26,10 @@ public class IndicateTourListAction extends ActionSupport{
 	private ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
 	/*ツアー情報の最大ページ数*/
-	private int maxPage;
+	private int maxPage = 0;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage;/*ここは、JSPから持ってくる*/
+	private int currentPage = 0;/*ここは、JSPから持ってくる*/
 
 
 
@@ -49,7 +49,8 @@ public class IndicateTourListAction extends ActionSupport{
 		 maxPage = tlp.rerturnMaxPage(allTourList);/*ついでに最大ページ数も持ってきます。*/
 
 		/*「＜＜」「＞＞」の移動で現在ページがマイナスになったり、
-		 * 最大ページ数を超えたりしないようにするための処理です。*/
+		 * 最大ページ数を超えたりしないようにするための処理です。
+		 * ※後ほどこの処理はJSP上で行うようにします。（URLで0ページ目と4ページ目ができてしまうのでなんだか気持ち悪い）*/
 		if(currentPage > maxPage){
 			currentPage = maxPage;
 		}else if(currentPage <= 1){
