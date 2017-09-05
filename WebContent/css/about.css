@@ -1,11 +1,12 @@
-/*choitabi‚É‚Â‚¢‚Ä---------------*/
+@CHARSET "UTF-8";
+/*choitabiã«ã¤ã„ã¦---------------*/
 h1{
-    font-family:"ƒƒCƒŠƒI";
+    font-family:"ãƒ¡ã‚¤ãƒªã‚ª";
 
     width:100%;
 }
 
-/*div_class="main"•”•ª-----------*/
+/*div_class="main"éƒ¨åˆ†-----------*/
 .main{
 	margin-top:90px;
 	margin-left:600px;
@@ -13,7 +14,7 @@ h1{
     color:black;
 }
 
-/*ƒtƒbƒ^[•”•ª-----------------------*/
+/*ãƒ•ãƒƒã‚¿ãƒ¼éƒ¨åˆ†-----------------------*/
 footer{
 	margin-top:90px;
 }
