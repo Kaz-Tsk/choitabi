@@ -12,41 +12,35 @@ import com.internousdev.util.DBConnector;
  * @since 2017/09/05
  * @version 1.1
  */
+
 public class UpdateCartDAO {
+    public int updateCart(int cart_id,int user_id,int quantity){
+        int update_count = 0;
+        DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+        Connection con = (Connection) db.getConnection();
+        String sql ="update cart set quantity=? where user_id=? and cart_id=?";
 
+        try{
+            PreparedStatement ps = (PreparedStatement) con.prepareStatement(sql);
+            ps.setInt(1, quantity);
+            ps.setInt(2, user_id);
+            ps.setInt(3, cart_id);
+            update_count = ps.executeUpdate();
 
-	/**
-	 * カートの購入数を変更するためのメソッド
-	 * @author HINAKO HAGIWARA
-	 * @since 2017/09/05
-	 * @version 1.1
-	 * @param quantity 購入数
-	 * @param cart_id カートID
-	 * @return count 更新できたら1、できなかったら0を繰り返す
-	 */
-	public int cart_update(int quantity, int cart_id) {
-		int count = 0;
-		DBConnector con = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
-		String sql ="update cart set quantity=? where cart_id=?";
+        }catch(SQLException e){
+            e.printStackTrace();
 
-		try {
-			PreparedStatement ps = ((Connection) con).prepareStatement(sql);
-			ps.setInt(1, quantity);
-			ps.setInt(2, cart_id);
-			count = ps.executeUpdate();
+        }finally{
+            if(con!=null){
+                try{
+                    con.close();
 
-		}catch(SQLException e) {
-			e.printStackTrace();
-
-		}finally {
-				try {
-					((Connection) con).close();
-
-				}catch(SQLException e) {
-					e.printStackTrace();
-				}
-			}
-		return count;
-	}
+                }catch(SQLException e){
+                    e.printStackTrace();
+                    }
+                }
+            }
+        return update_count;
+        }
 
 }
