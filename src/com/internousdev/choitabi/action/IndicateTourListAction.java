@@ -61,7 +61,7 @@ public class IndicateTourListAction extends ActionSupport{
 	}
 
 
-	/*以下、各変数、リストのgetter/setter
+	/*以下、各変数、リストのgetter/setter----------------------------------------------------------------------
 	 * */
 
 
