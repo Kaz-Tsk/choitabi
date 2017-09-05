@@ -72,7 +72,7 @@
 
             <div class="sub">
                 <img class = "img" src = "img/hituziyama.jpg">
-                <div class="name">価格:羊山公園<br>(関東/埼玉県)</div>
+                <div class="name">羊山公園<br>(関東/埼玉県)</div>
                 <div class="price">価格:9999円</div>
             </div>
         </div>
