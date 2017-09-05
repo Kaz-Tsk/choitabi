@@ -5,10 +5,12 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.choitabi.dto.CartDTO;
+import com.internousdev.choitabi.dao.SelectCartDAO;
+import com.internousdev.choitabi.dto.SelectCartDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
+ * カートの中身をセレクトするアクション
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
  * @version 1.1
@@ -22,44 +24,25 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	private int user_id;
 
 	/**
-	 * ツアーID
+	 * カートID
 	 */
-	private int tour_id;
+	private int cart_id;
 
 	/**
-	 * ツアー名
-	 */
-	private String tour_name;
-
-	/**
-	 * 価格
-	 */
-	private int price;
-
-	/**
-	 * 購入数
-	 */
-	private int quantity;
-
-	/**
-	 * 合計金額
-	 */
-	private int total_price;
-
-	/**
-	 * カート内の商品情報
-	 */
-	private ArrayList<CartDTO> cart_list = new ArrayList<>();
-
-	/**
-	 * セッション情報
+	 * セッション
 	 */
 	private Map<String, Object> session;
 
 	/**
-	 * 小計
+	 * 該当するカートの中身を格納する配列
 	 */
-	private int sub_total;
+	private ArrayList<SelectCartDTO> selectList = new ArrayList<>();
+
+	/**
+	 * 合計金額
+	 */
+	private int total = 0;
+
 
 	/**
 	 * エラーメッセージ
@@ -69,113 +52,63 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 
 
 	/**
-	 * 実行メソッド
-	 * 処理内容と順番
-	 * 1 : セッション情報を持っているか判断
-	 * 2 : session内のuser_idを使用し、カートへ登録された上昇を取得
-	 * 3 : カート内の情報を元に合計金額を算出
-	 *
+	 * ユーザーIDからカートテーブル内の商品をセレクトできたらSUCCESSを返すメソッド
 	 * @author HINAKO HAGIWARA
-	 * @since 2017/09/00
+	 * @since 2017/09/05
 	 * @version 1.1
+	 * @return SUCCESS
 	 */
+	public String execute() {
+		String result = ERROR;
+		user_id = (int) session.get("user_id");
 
+		if (session.get("user_id") != null) {
+			SelectCartDAO SCdao = new SelectCartDAO();
+			result = SUCCESS;
 
+			if (SCdao.selectCart(user_id)) {
+
+				selectList = SCdao.getSelectList();
+
+				total = SCdao.getTotalPrice();
+			} else {
+				setErrmsg("＊カートにツアーがありません");
+			}
+
+		}
+		return result;
+	}
 
 	/**
 	 * ユーザーIDを取得するメソッド
 	 * @return user_id ユーザーID
 	 */
-	public int getUserId() {
+	public int getUser_id() {
 		return user_id;
 	}
 
 	/**
 	 * ユーザーIDを格納するメソッド
-	 * @param user_id ユーザーID
+	 * @param user_id   ユーザーID
 	 */
-	public void setUserId(int user_id) {
+	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
 
 	/**
-	 * ツアーIDを取得するメソッド
-	 * @return tour_id ツアーID
+	 * カートIDを取得するメソッド
+	 * @return cart_id カートID
 	 */
-	public int getTourId() {
-		return tour_id;
+	public int getCart_id() {
+		return cart_id;
 	}
 
 	/**
-	 * ツアーIDを格納するメソッド
-	 * @param tour_id ツアーID
+	 * カートIDを格納するメソッド
+	 * @param cart_id カートID
 	 */
-	public void setTourId(int tour_id) {
-		this.tour_id = tour_id;
-	}
-
-	/**
-	 * ツアー名を取得するメソッド
-	 * @return tour_name ツアー名
-	 */
-	public String getTourName() {
-		return tour_name;
-	}
-
-	/**
-	 * ツアー名を格納するメソッド
-	 * @param tour_name ツアー名
-	 */
-	public void setTourName(String tour_name) {
-		this.tour_name = tour_name;
-	}
-
-	/**
-	 * 価格を取得するメソッド
-	 * @return price 価格
-	 */
-	public int getPrice() {
-		return price;
-	}
-
-	/**
-	 * 価格を格納するメソッド
-	 * @param price 価格
-	 */
-	public void sePrice(int price) {
-		this.price = price;
-	}
-
-	/**
-	 * 合計金額を取得するメソッド
-	 * @return total_price 合計金額
-	 */
-	public int getTotalPrice() {
-		return total_price;
-	}
-
-	/**
-	 * 合計金額を格納するメソッド
-	 * @param total_price 合計金額
-	 */
-	public void setTotalPrice(int total_price) {
-		this.total_price = total_price;
-	}
-
-	/**
-	 * カート内の商品情報を入れるリストを取得するメソッド
-	 * @return cart_list カート内の商品情報を入れるリスト
-	 */
-	public ArrayList<CartDTO> getCartList() {
-		return cart_list;
-	}
-
-	/**
-	 * カート内の商品情報を入れるリストを格納するメソッド
-	 * @param cart_list カート内の商品情報を入れるリスト
-	 */
-	public void setCartList(ArrayList<CartDTO> cart_list) {
-		this.cart_list = cart_list;
+	public void setCart_id(int cart_id) {
+		this.cart_id = cart_id;
 	}
 
 	/**
@@ -195,49 +128,49 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * 購入数を取得するメソッド
-	 * @return quantity 購入数
+	 * カートの中身を格納する配列を取得するメソッド
+	 * @return selectList カートの中身を格納する配列
 	 */
-	public int getQuantity() {
-		return quantity;
+	public ArrayList<SelectCartDTO> getSelectList() {
+		return selectList;
 	}
 
 	/**
-	 * 購入数を格納するメソッド
-	 * @param quantity 購入数
+	 * カートの中身を格納する配列を格納するメソッド
+	 * @param selectList カートの中身を格納する配列
 	 */
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setSelectList(ArrayList<SelectCartDTO> selectList) {
+		this.selectList = selectList;
 	}
 
 	/**
-	 * 小計を取得するメソッド
-	 * @return sub_total 小計
+	 * 合計金額を取得するメソッド
+	 * @return total 合計金額
 	 */
-	public int getSubTotal() {
-		return sub_total;
+	public int getTotal() {
+		return total;
 	}
 
 	/**
-	 * 小計を格納するメソッド
-	 * @param sub_total 小計
+	 * 合計金額を格納するメソッド
+	 * @param total  合計金額
 	 */
-	public void setSubTotal(int sub_total) {
-		this.sub_total = sub_total;
+	public void setTotal(int total) {
+		this.total = total;
 	}
 
-	/**
-	 * エラーメッセージを取得するメソッド
-	 * @return errmsg エラーメッセージ
-	 */
+		/**
+		*	errmsgを取得するメソッド
+		*	@return errmsg
+		*/
 	public String getErrmsg() {
 		return errmsg;
 	}
 
-	/**
-	 * エラーメッセージを格納するメソッド
-	 * @param errmsg エラーメッセージ
-	 */
+		/**
+		*	errmsgを格納する
+		*	@param errmsg
+		*/
 	public void setErrmsg(String errmsg) {
 		this.errmsg = errmsg;
 	}

@@ -1,66 +1,100 @@
 package com.internousdev.choitabi.dao;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.internousdev.choitabi.dto.CartDTO;
+import com.internousdev.choitabi.dto.SelectCartDTO;
 import com.internousdev.util.DBConnector;
+import com.mysql.jdbc.Connection;
 
 /**
- * @author カート情報を取得
- * @since 2017/09/05
+ * カート情報を取得するクラス
+ * @author HINAKO HAGIWARA
+ * @since 2017/09/052
  * @version 1.1
  */
 public class SelectCartDAO {
-	public ArrayList<CartDTO> select_cart(int user_id) {
+
+	/**
+	 * カート情報を格納するリスト
+	 */
+	private ArrayList<SelectCartDTO> selectList = new ArrayList<>();
+	private int total_price;
+
+	/**
+	 * カート情報を取得する為のメソッド
+	 * @author HINAKO HAGIWARA
+	 * @since 2017/09/05
+	 * @version 1.1
+	 * @param user_id ユーザーID
+	 * @return result 取得できたらリストに格納してtrue、できなかったらfalseを返す
+	 */
+	public boolean selectCart(int user_id) {
+
+		boolean result = false;
+		total_price = 0;
+
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
-		Connection con = db.getConnection();
-		ArrayList<CartDTO> cart_list = new ArrayList<CartDTO>();
-
-		String sql = "select * from cart where user_id=?";
-		String select2 = "SELECT * FROM tours where tour_id=?";
-
+        Connection con = (Connection) db.getConnection();
+		String sql = "select * from cart join tour on cart.tour_id = tour.tour_id where user_id=?";
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, user_id);
 			ResultSet rs = ps.executeQuery();
-
-			while(rs.next()) {
-				CartDTO dto = new CartDTO();
-				dto.setUserId(rs.getInt("user_id"));
+			while (rs.next()) {
+				SelectCartDTO dto = new SelectCartDTO();
 				dto.setCartId(rs.getInt("cart_id"));
-				dto.setTourId(rs.getInt("tour_id"));
-				dto.setQuantity(rs.getInt("quanttity"));
-				cart_list.add(dto);
-
-				PreparedStatement ps2 = con.prepareStatement(select2);
-				ps2.setInt(1,  dto.getTourId());
-				ResultSet rs2 = ps2.executeQuery();
-
-				while(rs2.next()) {
-					dto.setTourName(rs2.getString("tour_name"));
-					dto.setPrice(rs2.getInt("price"));
-					dto.setSubTotal(dto.getPrice()*dto.getQuantity());
-				}
+				dto.setTourName(rs.getString("tour_name"));
+				dto.setQuantity(rs.getInt("quantity"));
+				dto.setPrice(rs.getInt("price"));
+				total_price += ((rs.getInt("price")) * (rs.getInt("quantity")));
+				selectList.add(dto);
+				result = true;
 			}
-
-		}catch(SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
-
-		}finally {
+		} finally {
 			try {
 				con.close();
-
-			}catch(Exception e) {
+			} catch (SQLException e) {
 				e.printStackTrace();
-				}
 			}
-
-		return cart_list;
 		}
+		return result;
+	}
 
+	/**
+	 * カート情報のリストを取得するメソッド
+	 * @return selectList カート情報のリスト
+	 */
+	public ArrayList<SelectCartDTO> getSelectList() {
+		return selectList;
+	}
+
+	/**
+	 * カート情報のリストを格納するメソッド
+	 * @param selectList カート情報のリスト
+	 */
+	public void setSelectList(ArrayList<SelectCartDTO> selectList) {
+		this.selectList = selectList;
+	}
+
+	/**
+	 * 合計を取得するメソッド
+	 * @return totalprice
+	 */
+	public int getTotalPrice() {
+		return total_price;
+	}
+
+	/**
+	 * 合計を格納する
+	 * @param totalprice 合計
+	 */
+	public void setTotalPrice(int total_price) {
+		this.total_price = total_price;
+	}
 
 }
