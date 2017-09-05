@@ -17,7 +17,7 @@ import com.opensymphony.xwork2.ActionSupport;
  *@version 1.0
  *ログアウトする為のクラス
  */
-public class LogoutAcution extends ActionSupport implements SessionAware {
+public class LogoutAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * シリアルバージョン
