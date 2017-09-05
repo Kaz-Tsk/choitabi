@@ -26,10 +26,10 @@ public class IndicateTourListAction extends ActionSupport{
 	private ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
 	/*ツアー情報の最大ページ数*/
-	private int maxPage = 0;
+	private int maxPage = 1;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage = 0;/*ここは、JSPから持ってくる*/
+	private int currentPage = 1;/*ここは、JSPから持ってくる*/
 
 
 

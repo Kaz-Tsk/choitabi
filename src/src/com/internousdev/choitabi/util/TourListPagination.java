@@ -62,6 +62,7 @@ public class TourListPagination {
 		}else{
 			maxPage = (allTourList.size() / tourNumber);
 		}
+		System.out.println("returnMaxPage : " + maxPage);
 
 		return maxPage;
 	}

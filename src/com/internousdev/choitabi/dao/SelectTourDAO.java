@@ -23,6 +23,8 @@ public class SelectTourDAO {
 //		dao.selectTour();
 //	}
 
+	String tour_name = "ツアー";
+
 
 	public ArrayList<SelectTourDTO> selectTour(){
 
@@ -35,6 +37,7 @@ public class SelectTourDAO {
 			Connection con = tdc.createConnection();
 			String sql = "SELECT * FROM tour";
 			PreparedStatement ps = con.prepareStatement(sql);
+			System.out.println("DAO : " + sql);
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()){

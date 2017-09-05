@@ -26,6 +26,7 @@
         <th>出発地</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
     </tr>
 
+
 </table>
 <br>
 <hr>
