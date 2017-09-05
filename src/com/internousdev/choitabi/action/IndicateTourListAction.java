@@ -6,6 +6,8 @@ import com.internousdev.choitabi.dao.SelectTourDAO;
 import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
+import src.com.internousdev.choitabi.util.TourListPagination;
+
 public class IndicateTourListAction extends ActionSupport{
 
 
@@ -27,7 +29,7 @@ public class IndicateTourListAction extends ActionSupport{
 	private int allPages;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage;
+	private int currentPage =1;
 
 
 
@@ -35,29 +37,19 @@ public class IndicateTourListAction extends ActionSupport{
 	/*アクションクラスの「execute」メソッド。
 	 * DAOクラスを呼び出してツアーの情報をリストとして取得。
 	 * うまく取得できたら、Strutsに「SUCCESS」を、リストが種t句できなかったら「ERROR」を返すこと。*/
-
 	public String execute(){
 		String result = ERROR;
 
+		/*①DAOでツアーの一覧を持ってくる*/
 		SelectTourDAO tstl = new SelectTourDAO();
-
 		allTourList = tstl.selectTour();
 
-		/*
-		 * この部分に、さらにページネート処理を追加。
-		 * ↓の記述も微調整を忘れずに。
-		 *
-		 * */
+		/*②持ってきた全ツアーを、ページネートで分割されたリストにします*/
+		TourListPagination tlp = new TourListPagination();
+		 currentTourList = tlp.paginateTourList(allTourList, currentPage);
 
-		/*
-		 * currentTourList = paginateTourList(allTourList, currentPage);
-		 * ↑このメソッドをutilに作り、JSPに渡す
-		 * ＝下のallTourListはcurrentTourListに変更する
-		 *
-		 * */
-
-
-		if(allTourList != null){
+		 /*③リストがうまく作れたらSUCCESS、そうでなかったらERRORを返します*/
+		if(currentTourList != null){
 			result = SUCCESS;
 		}else{
 			result = ERROR;
