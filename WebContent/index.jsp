@@ -12,8 +12,7 @@
 <script src="./js/jquery.bxslider/jquery.bxslider.js"></script>
 <link href="./js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
 
-<link href="./img/favicon.ico" rel="favicon.ico" />
-<link rel="favicon.ico" href=”http://./img/favicon.ico” />
+<link rel="shortcut icon" href="./img/favicon.ico">
 </head>
 <body>
 <!--ログイン機能（実験中）----------------------------------------------->
