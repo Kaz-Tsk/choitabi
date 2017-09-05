@@ -70,97 +70,6 @@ a {text-decoration : none;}
 }
 
 
-/*ヘッダー②-----------------------------------------------------------------------------------*/
-
-.dropmenu{
-    list-style-type: none;
-    width: 800px;
-    height: 40px;
-    margin: 30px auto 300px;
-    padding: 0;
-    background: #8a9b0f;
-    border-bottom: 5px solid #535d09;
-    border-radius: 5px 5px 0 0;
-}
-
-.dropmenu li{
-    position: relative;
-    width: 20%;
-    float: left;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.dropmenu li a{
-    display: block;
-    margin: 0;
-    padding: 15px 0 11px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1;
-    text-decoration: none;
-}
-
-.dropmenu li:hover > a{
-    background: #6e7c0c;
-    color: #eff7b1;
-}
-
-.dropmenu > li:hover > a{
-    border-radius: 5px 5px 0 0;
-}
-
-.dropmenu li ul{
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    border-radius: 0 0 5px 5px;
-}
-
-.dropmenu li:last-child ul{
-    width: 100%
-}
-
-.dropmenu li ul li{
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    color: #fff;
-    transition: .2s;
-}
-
-.dropmenu li ul li a{
-    padding: 13px 15px;
-    background: #6e7c0c;
-    text-align: left;
-    font-size: 12px;
-    font-weight: normal;
-}
-
-.dropmenu li:hover ul li{
-    overflow: visible;
-    height: 38px;
-    border-top: 1px solid #7c8c0e;
-    border-bottom: 1px solid #616d0b;
-}
-
-.dropmenu li:hover ul li:first-child{
-    border-top: 0;
-}
-
-.dropmenu li:hover ul li:last-child{
-    border-bottom: 0;
-}
-
-.dropmenu li:hover ul li:last-child a{
-    border-radius: 0 0 5px 5px;
-}
-
 /*ヘッダー直下、キャッチフレーズやスクロール画面部分--------------------------------------*/
 
 
@@ -186,22 +95,10 @@ a {text-decoration : none;}
     white-space:nowrap;
 }
 
-.flame{
-    width:700px;
-    height:400px;
-    margin-left:auto;margin-right:auto;
-    margin-top:100px;
-}
-
-img{
-    width:700px;
-    height:400px;
-}
-
 /*メイン部分全体を囲むエリア----------------------------------------------------------*/
 
 .mainArea{
-    margin-top:50px;
+    margin-top:20px;
     margin-bottom:20px;
     height:1100px;
     padding-top:20px;
@@ -210,72 +107,31 @@ img{
     white-space:nowrap;
 }
 
+/*画面左側、カラム部分---------------------------------------------------------------*/
+.Column{
+    float:left;
+    margin-top:10px;
+	margin-left:40px;
+	margin-right:40px;
+    padding-top:20px;
+    padding-left:30px;
+    height:400px;
+    width:200px;
+    border:2px solid darkorange;
+    font-size:18px;
+    color:darkorange;
 
 
-/*サイドバー部分---------------------------------------------------------------*/
-*{
-    margin:0;
-    padding:0;
 }
-
-.outline, .menu{
-    list-style:none;
-}
-
-.outline{
-    width:220px;
-}
-
-.category{
-    color: white;
-    margin-top:5px;
-    height:40px;
-    line-height:40px;
-    background-color:orange;
-    cursor:pointer;
-    text-align:center;
-}
-
-
-.menu a{
-    display:block;
-    height:35px;
-    line-height:35px;
-    color:grey;
-    text-align:center;
-}
-/*ここまでサイドバー部分---------------------------------------------------------*/
 
 /*ここから、右側のツアー一覧部分-------------------------------------------------------*/
 .TourList{
-    margin-top:10px;
-	margin-left:280px;
-    height:850px;
+	margin-top:10px;
+	margin-left:310px;
+    height:1050px;
     width:75%;
     border:2px solid darkorange;
     font-size:18px;
-}
-
-.Tohoku{
-    width:350px;
-    height:auto;
-    margin-top:100px;
-    margin-left:600px;
-}
-
-.nijoujou{
-    width:350px;
-    height:auto;
-    margin-top:100px;
-    margin-left:600px;
-}
-
-.post{
-    margin:50px;
-}
-
-.img{
-    width:500px;
 }
 
 
