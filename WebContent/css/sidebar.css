@@ -1,0 +1,35 @@
+/*サイドバー部分---------------------------------------------------------------*/
+*{
+    margin:0;
+    padding:0;
+}
+
+.outline, .menu{
+    list-style:none;
+}
+
+.outline{
+    width:220px;
+    padding:10px;
+	margin-right:20px;
+}
+
+.category{
+    color: white;
+    margin-top:5px;
+    height:40px;
+    line-height:40px;
+    background-color:orange;
+    cursor:pointer;
+    text-align:center;
+}
+
+
+.menu a{
+    display:block;
+    height:35px;
+    line-height:35px;
+    color:grey;
+    text-align:center;
+}
+/*ここまでサイドバー部分---------------------------------------------------------*/
