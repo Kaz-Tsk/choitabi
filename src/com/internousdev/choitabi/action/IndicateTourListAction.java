@@ -2,8 +2,8 @@ package com.internousdev.choitabi.action;
 
 import java.util.ArrayList;
 
-import com.internousdev.choitabi.dao.Test_SelectTourDAO;
-import com.internousdev.choitabi.dto.Test_SelectTourDTO;
+import com.internousdev.choitabi.dao.SelectTourDAO;
+import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class IndicateTourListAction extends ActionSupport{
@@ -18,10 +18,10 @@ public class IndicateTourListAction extends ActionSupport{
 	private String selectWord;
 
 	/*取得されたすべてのツアー情報*/
-	private ArrayList<Test_SelectTourDTO> allTourList = new ArrayList<Test_SelectTourDTO>();
+	private ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
 
 	/*現在表示している＝１ページに表示するツアー情報（ページネート）*/
-	private ArrayList<Test_SelectTourDTO> currentTourList = new ArrayList<Test_SelectTourDTO>();
+	private ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
 	/*ツアー情報の総ページ数*/
 	private int allPages;
@@ -39,7 +39,7 @@ public class IndicateTourListAction extends ActionSupport{
 	public String execute(){
 		String result = ERROR;
 
-		Test_SelectTourDAO tstl = new Test_SelectTourDAO();
+		SelectTourDAO tstl = new SelectTourDAO();
 
 		allTourList = tstl.selectTour();
 
@@ -48,6 +48,14 @@ public class IndicateTourListAction extends ActionSupport{
 		 * ↓の記述も微調整を忘れずに。
 		 *
 		 * */
+
+		/*
+		 * currentTourList = paginateTourList(allTourList, currentPage);
+		 * ↑このメソッドをutilに作り、JSPに渡す
+		 * ＝下のallTourListはcurrentTourListに変更する
+		 *
+		 * */
+
 
 		if(allTourList != null){
 			result = SUCCESS;
@@ -76,22 +84,22 @@ public class IndicateTourListAction extends ActionSupport{
 	}
 
 	/*ツアーリスト（すべて）のgetter*/
-	public ArrayList<Test_SelectTourDTO> getAllTourList(){
+	public ArrayList<SelectTourDTO> getAllTourList(){
 		return allTourList;
 	}
 
 	/*ツアーリスト（すべて）のsetter*/
-	public void setAllTourList(ArrayList<Test_SelectTourDTO> allTourList){
+	public void setAllTourList(ArrayList<SelectTourDTO> allTourList){
 		this.allTourList = allTourList;
 	}
 
 	/*表示中ツアーリストのgetter*/
-	public ArrayList<Test_SelectTourDTO> getCurrentTourList(){
+	public ArrayList<SelectTourDTO> getCurrentTourList(){
 		return currentTourList;
 	}
 
 	/*表示中ツアーリストのsetter*/
-	public void setCurrentTourList(ArrayList<Test_SelectTourDTO> currentTourList){
+	public void setCurrentTourList(ArrayList<SelectTourDTO> currentTourList){
 		this.currentTourList = currentTourList;
 	}
 

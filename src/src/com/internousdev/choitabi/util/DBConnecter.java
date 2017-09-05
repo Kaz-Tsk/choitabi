@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * DAOクラスの最初の処理で使いまわせる………かも。
  * */
 
-public class Test_DBConnecter {
+public class DBConnecter {
 
 //※↓単体で動きをチェックするためのメインメソッドです。プロジェクト起動時に勝手に動いてしまうと大変なので、普段はコメントにしてあります。
 //	public static void main(String[] args)throws IllegalAccessException, InstantiationException{

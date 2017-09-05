@@ -1,6 +1,6 @@
 package com.internousdev.choitabi.dto;
 
-public class Test_SelectTourDTO {
+public class SelectTourDTO {
 
 
 

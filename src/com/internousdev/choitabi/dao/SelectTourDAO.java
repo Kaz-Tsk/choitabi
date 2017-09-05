@@ -6,11 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.internousdev.choitabi.dto.Test_SelectTourDTO;
+import com.internousdev.choitabi.dto.SelectTourDTO;
 
-import src.com.internousdev.choitabi.util.Test_DBConnecter;
+import src.com.internousdev.choitabi.util.DBConnecter;
 
-public class Test_SelectTourDAO {
+public class SelectTourDAO {
 
 	/*作成者：松村
 	 * 管理画面のツアー管理で使用するDAOクラスのテスト版です。
@@ -18,20 +18,20 @@ public class Test_SelectTourDAO {
 	 */
 
 	 // ↓単体で動きを確認するためのメインメソッドです。サイトを起動した際勝手に動いてしまうと大変なので、普段はコメントにしています。
-	public static void main(String[] args){
-		Test_SelectTourDAO dao = new Test_SelectTourDAO();
-		dao.selectTour();
-	}
+//	public static void main(String[] args){
+//		Test_SelectTourDAO dao = new Test_SelectTourDAO();
+//		dao.selectTour();
+//	}
 
 
-	public ArrayList<Test_SelectTourDTO> selectTour(){
+	public ArrayList<SelectTourDTO> selectTour(){
 
 		/*呼び出し元に返すツアー情報のリストを作ります*/
-			ArrayList<Test_SelectTourDTO> allTourList = new ArrayList<Test_SelectTourDTO>();
+			ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			Test_DBConnecter tdc = new Test_DBConnecter();
+			DBConnecter tdc = new DBConnecter();
 			Connection con = tdc.createConnection();
 			String sql = "SELECT * FROM tour";
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -40,7 +40,7 @@ public class Test_SelectTourDAO {
 			while(rs.next()){
 				/*DBから検索された内容を、dtoに一つずつしまって、リストにしていきます*/
 				/*箱を用意する→データ一式を入れる→リストに追加→また新しい箱を用意する…を必要な分だけ繰り返す処理*/
-				Test_SelectTourDTO tstdto = new Test_SelectTourDTO();
+				SelectTourDTO tstdto = new SelectTourDTO();
 				tstdto.setTourName(rs.getString("tour_name"));
 				tstdto.setTourId(rs.getInt("tour_id"));
 				tstdto.setPrice(rs.getInt("price"));
