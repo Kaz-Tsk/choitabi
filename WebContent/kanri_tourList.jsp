@@ -10,11 +10,10 @@
 <body>
 <h1>ツアー情報一覧</h1>
     <hr>
-    <br>
     ツアー検索<br>
     <s:form>
-		<s:textfield name="selectWord"></s:textfield>
-		<s:submit value="検索"></s:submit>
+		<s:textfield name="selectWord"/>
+		<s:submit value="検索"/>
 	</s:form>
 	<br>
 <table border = "1px" cellspacing = "0px" cellpadding = "10px">
@@ -41,7 +40,16 @@
 	</s:iterator>
 </table>
     <br>
-	＜＜ <s:property value="currentPage"></s:property> / <s:property value="maxPage"></s:property>　＞＞
+
+    <a href='<s:url action="IndicateTourListAction">
+    <s:param name="currentPage" value="currentPage-1"/></s:url>'>
+    ＜＜
+    </a>
+    <s:property value="currentPage"></s:property> / <s:property value="maxPage"></s:property>
+       <a href='<s:url action="IndicateTourListAction">
+    <s:param name="currentPage" value="currentPage+1"/></s:url>'>
+    ＞＞
+    </a>
     <br>
     管理ページトップに戻る<br>
     <br>

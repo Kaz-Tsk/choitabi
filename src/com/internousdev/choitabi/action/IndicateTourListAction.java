@@ -29,7 +29,7 @@ public class IndicateTourListAction extends ActionSupport{
 	private int maxPage;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage;/*ここは本来、JSPから持ってくる*/
+	private int currentPage;/*ここは、JSPから持ってくる*/
 
 
 
@@ -46,8 +46,18 @@ public class IndicateTourListAction extends ActionSupport{
 
 		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/
 		TourListPagination tlp = new TourListPagination();
-		 currentTourList = tlp.paginateTourList(allTourList, currentPage);
 		 maxPage = tlp.rerturnMaxPage(allTourList);/*ついでに最大ページ数も持ってきます。*/
+
+		/*「＜＜」「＞＞」の移動で現在ページがマイナスになったり、
+		 * 最大ページ数を超えたりしないようにするための処理です。*/
+		if(currentPage > maxPage){
+			currentPage = maxPage;
+		}else if(currentPage <= 1){
+			currentPage = 1;
+		}
+
+		 currentTourList = tlp.paginateTourList(allTourList, currentPage, maxPage);
+
 
 
 		 /*リストがうまく作れたらSUCCESS、そうでなかったらERRORを返します*/

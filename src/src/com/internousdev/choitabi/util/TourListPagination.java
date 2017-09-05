@@ -10,7 +10,7 @@ import com.internousdev.choitabi.dto.SelectTourDTO;
  * 呼び出し元からツアーの一覧と現在のページ番号を渡されたら、
  * そこから必要な分のツアーのリストを抜き出して返します。
  *
- * ※動きはまだ未確認
+ * ※動き確認中。
  * */
 
 
@@ -30,25 +30,23 @@ public class TourListPagination {
 
 
 
-	public ArrayList<SelectTourDTO> paginateTourList(ArrayList<SelectTourDTO> allTourList, int currentPage){
+	public ArrayList<SelectTourDTO> paginateTourList(ArrayList<SelectTourDTO> allTourList, int currentPage, int maxPage){
 
 		/*呼び出し元に返すツアーのリスト*/
 		ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
-		System.out.println(currentPage);
+		/*後消し*/System.out.println("TourListPagination.java - currentPage : " + currentPage);
 
 		firstIndex = firstIndex + ( (currentPage - 1)  * tourNumber );
 		lastIndex = lastIndex + (currentPage * tourNumber);
 
 		for(int i = firstIndex; i < lastIndex; i ++){
+			if(i >= allTourList.size()){
+				break;
+			}
 			currentTourList.add(allTourList.get(i));
 			System.out.println("firstIndex : " + firstIndex);
 			System.out.println("lastIndex : " + lastIndex);
 			System.out.println("paginate : " + currentTourList.size());
-
-			if(i >= allTourList.size()){
-				break;
-			}
-
 		}
 
 		return currentTourList;
