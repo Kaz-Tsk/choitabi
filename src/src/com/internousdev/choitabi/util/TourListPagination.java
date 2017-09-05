@@ -35,15 +35,16 @@ public class TourListPagination {
 		/*呼び出し元に返すツアーのリスト*/
 		ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
+		firstIndex = firstIndex * ( (currentPage - 1)  * tourNumber );
 		lastIndex = lastIndex + (currentPage * tourNumber);
-		currentPage -= 1;
-		firstIndex = firstIndex * (currentPage * tourNumber);
 
 		for(int i = firstIndex; i < lastIndex; i ++){
 			currentTourList.add(allTourList.get(i));
-			System.out.println("paginate : " + currentTourList.get(i));
+			System.out.println("firstIndex : " + firstIndex);
+			System.out.println("lastIndex : " + lastIndex);
+			System.out.println("paginate : " + currentTourList.size());
 
-			if(i < allTourList.size()){
+			if(i >= allTourList.size()){
 				break;
 			}
 

@@ -28,7 +28,7 @@
 		<th></th>
 	</tr>
 
-	<s:iterator value="allTourList">
+	<s:iterator value="currentTourList">
 	<tr>
 		<td><s:property value="tourId"></s:property></td>
 		<td><s:property value="tourName"></s:property></td>
