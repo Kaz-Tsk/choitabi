@@ -39,12 +39,9 @@
 		<td>編集</td>
 	</tr>
 	</s:iterator>
-
-
-
 </table>
     <br>
-
+	＜＜ <s:property value="currentPage"></s:property> / <s:property value="maxPage"></s:property>　＞＞
     <br>
     管理ページトップに戻る<br>
     <br>

@@ -29,7 +29,7 @@ public class IndicateTourListAction extends ActionSupport{
 	private int maxPage;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage =1;/*ここは本来、JSPから持ってくる*/
+	private int currentPage;/*ここは本来、JSPから持ってくる*/
 
 
 
@@ -115,6 +115,7 @@ public class IndicateTourListAction extends ActionSupport{
 
 	/*ツアー情報の現在のページ番号のsetter*/
 	public void setCurrentPage(int currentPage){
+
 		this.currentPage = currentPage;
 	}
 

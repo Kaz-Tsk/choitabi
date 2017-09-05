@@ -34,8 +34,9 @@ public class TourListPagination {
 
 		/*呼び出し元に返すツアーのリスト*/
 		ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
+		System.out.println(currentPage);
 
-		firstIndex = firstIndex * ( (currentPage - 1)  * tourNumber );
+		firstIndex = firstIndex + ( (currentPage - 1)  * tourNumber );
 		lastIndex = lastIndex + (currentPage * tourNumber);
 
 		for(int i = firstIndex; i < lastIndex; i ++){
