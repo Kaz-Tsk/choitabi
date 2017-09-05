@@ -1,4 +1,3 @@
-/*サイドバー部分---------------------*/
 .Column{
     float:left;
     margin-top:200px;
@@ -13,7 +12,6 @@
     color:darkorange;
 }
 
-/*商品一覧部分--------------------*/
 .main{
     position:absolute;
     left:25%;
@@ -50,7 +48,6 @@ img{
     text-align:center;
 }
 
-/*フッター部分----------*/
 footer{
 	margin-top:1400px;
 }
