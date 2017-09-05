@@ -12,6 +12,7 @@
 <script src="./js/jquery.bxslider/jquery.bxslider.js"></script>
 <link href="./js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
 
+<link href="favicon.ico" rel="./img/favicon.ico" />
 </head>
 <body>
 <!--ログイン機能（実験中）----------------------------------------------->
@@ -92,11 +93,11 @@
 
 
 <!--↓ここからメイン画面------------------------------------------>
-<div class = "mainArea">
 
     <!--↓検索メニューの部分-->
 
     <!-- ここからサイドバー -->
+    <div class = "sidebar">
        <ul class = "outline">
             <li>
                 <div class = "category">テーマで探す</div>
@@ -117,7 +118,10 @@
             </li>
         </ul>
     <script type = "text/javascript" src = "script.js"></script>
+    </div>
 		<!-- ここまでサイドバー -->
+
+<div class = "mainArea">
 
     <!--↓ツアーの一覧を表示する部分---------------------------------->
     <div class = "TourList">
@@ -138,7 +142,9 @@
 </div>
 
 <div class = "clear"></div>
-
+<div class = "tourgallery">
+	<h1></h1>
+</div>
 
 <!--↓ここからフッター------------------------------------------>
 <div class = "footer">
