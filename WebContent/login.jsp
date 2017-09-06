@@ -9,14 +9,12 @@
 </head>
 
 <body>
+<!-- header include部分 -->
 <header >
 <s:include value="header.jsp"></s:include>
 </header>
 
-
-
-
-</body>
+<!-- main部分 -->
 	<div class="login-box">
 		<div class="login-logo">
 		</div>
@@ -32,15 +30,10 @@
 
 
 
-
-
-
-
-
-
+<!-- footer include部分 -->
 <footer>
 	<s:include value="footer.jsp"></s:include>
 </footer>
-
+</body>
 
 </html>
