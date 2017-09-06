@@ -41,21 +41,33 @@
 </table>
     <br>
 
-    <a href='
-    <s:url action="IndicateTourListAction">
-    		<s:param name="currentPage" value="currentPage-1"/>
-    </s:url>'>
-    ＜＜
+	<s:if test="currentPage != 1">
+	    <a href='
+	    <s:url action="IndicateTourListAction">
+	    		<s:param name="currentPage" value="currentPage-1"/>
+	    </s:url>'>
+	    ＜＜
     </a>
+    </s:if>
+    <s:else>
+    	＜＜
+    </s:else>
 
     <s:property value="currentPage"></s:property> / <s:property value="maxPage"></s:property>
 
+	<s:if test="currentPage < maxPage">
     <a href='
     <s:url action="IndicateTourListAction">
     		<s:param name="currentPage" value="currentPage+1"/>
     </s:url>'>
     ＞＞
     </a>
+    </s:if>
+    <s:else>
+    ＞＞
+    </s:else>
+
+
     <br>
     <br>
     管理ページトップに戻る<br>
