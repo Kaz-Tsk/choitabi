@@ -24,17 +24,15 @@
     <tr>
         <th>価格</th>
         <td>変更前</td><td><s:property value="price"/></td>
-        <td>変更後</td><td><s:textfield name="price"/></td>
+
     </tr>
     <tr>
         <th>定員</th>
         <td>変更前</td><td><s:property value="persons"/></td>
-        <td>変更後</td><td><s:textfield name="persons"/></td>
     </tr>
     <tr>
         <th>出発地</th>
         <td>変更前</td><td><s:property value="departure"/></td>
-        <td>変更後</td><td><s:textfield name="departure"/></td>
     </tr>
 </table>
 <br>
