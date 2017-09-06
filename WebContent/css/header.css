@@ -1,11 +1,20 @@
-.clear{
+
+.title h1{
+	
+}
+
+h1
+
+.header{
+		
+}
+
+.crear{
 	clear:both;
 }
 .body{
   padding: 0;
   font-size: 15px;
-  width:30%;
-  top:100px;
 }
 .title{
   position: absolute;
