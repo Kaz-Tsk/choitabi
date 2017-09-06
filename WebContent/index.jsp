@@ -6,13 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>choitabi トップ</title>
-<link rel = "stylesheet" type = "text/css" href = "./css/index.css">
+<link rel = "stylesheet" type = "text/css" href = "css/index.css">
 <!-- jqueryの宣言 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="./js/jquery.bxslider/jquery.bxslider.js"></script>
-<link href="./js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
+<script src="js/jquery.bxslider/jquery.bxslider.js"></script>
+<link href="js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
 
-<link rel="shortcut icon" href="./img/favicon.ico">
+<link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
 
@@ -22,14 +22,12 @@
 </header>
 
 
-<div class = "clear"></div>
-
 <!--↓キャッチフレーズとスクロール画面の部分------------------------->
 
 
 <div class = "catchPhrase">【ちょいたびで、ちょいといい旅。】</div>
 
-    <div class="flame">
+<div class="flame">
             <ul class="bxslider">
             	<li><img src="img/kannontakikouen.jpg"></li>
                 <li><img src="img/chickennanban.jpg"></li>
@@ -40,7 +38,7 @@
                 <li><img src="img/paraglider_tandem_flight.jpg"></li>
                 <li><img src="img/obanzai.jpg"></li>
             </ul>
-    <script type="text/javascript" src ="./js/index.js"></script>
+    <script type="text/javascript" src ="js/index.js"></script>
 </div>
 
 <!--↓ここからメイン画面------------------------------------------>
@@ -102,6 +100,21 @@
 </div>
 
 <!--↓ここから------------------------------------------>
+
+<article>
+	<ul>
+		<li>
+			<figure class="">
+				<img src="img/sea.jpg"  width="400" height="300">
+				<figcaption>
+					<h2>海</h2>
+					<p>海岸線を走る</p>
+				</figcaption>
+				<a rel="leanModal" href=""></a>
+		</li>
+	</ul>
+</article>
+
 <!--↑ここまで------------------------------------------>
 
 
