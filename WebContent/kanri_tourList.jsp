@@ -41,13 +41,19 @@
 </table>
     <br>
 
-    <a href='<s:url action="IndicateTourListAction">
-    <s:param name="currentPage" value="currentPage-1"/></s:url>'>
+    <a href='
+    <s:url action="IndicateTourListAction">
+    		<s:param name="currentPage" value="currentPage-1"/>
+    </s:url>'>
     ＜＜
     </a>
+
     <s:property value="currentPage"></s:property> / <s:property value="maxPage"></s:property>
-       <a href='<s:url action="IndicateTourListAction">
-    <s:param name="currentPage" value="currentPage+1"/></s:url>'>
+
+    <a href='
+    <s:url action="IndicateTourListAction">
+    		<s:param name="currentPage" value="currentPage+1"/>
+    </s:url>'>
     ＞＞
     </a>
     <br>

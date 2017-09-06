@@ -49,9 +49,6 @@ public class SelectTourDAO {
 				tstdto.setPersons(rs.getInt("persons"));
 				tstdto.setDate(rs.getString("date")); /*これString型で動くんだ……*/
 				tstdto.setDeparture(rs.getString("departure"));
-				/*↓System.out…挙動チェック用の記述です */
-				System.out.println("Test_SelectTourDAO:" + tstdto.getTourName());
-				System.out.println("Test_SelectTourDAO:" + tstdto.getDate());
 				allTourList.add(tstdto);
 			}
 
@@ -61,6 +58,7 @@ public class SelectTourDAO {
 			rs.close();
 
 			/*作ったリストを、呼び出し元に返します*/
+			/*後消し*/System.out.println("SelectTourDAO - 該当データ数 : " + allTourList.size());
 			return allTourList;
 
 
