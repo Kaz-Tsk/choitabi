@@ -6,8 +6,6 @@
 <link  rel = "stylesheet" type= "text/css" href ="./css/footer.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">
-a:link { color : #ffffff; }
-a:visited { color : #ffffff; }
 </style>
 <title>choitabi</title>
 </head>
