@@ -24,7 +24,7 @@
 		<th>定員</th>
 		<th>最終編集日</th>
 		<th>出発地</th>
-		<th></th>
+		<th>　　　</th>
 	</tr>
 
 	<s:iterator value="currentTourList">
@@ -41,13 +41,15 @@
 </table>
     <br>
 
+<!-- ↓ページの「＜＜1/3＞＞」の部分です -->
+
 	<s:if test="currentPage != 1">
 	    <a href='
-	    <s:url action="IndicateTourListAction">
-	    		<s:param name="currentPage" value="currentPage-1"/>
-	    </s:url>'>
-	    ＜＜
-    </a>
+		    <s:url action="IndicateTourListAction">
+		    		<s:param name="currentPage" value="currentPage-1"/>
+		    </s:url>'>
+		    ＜＜
+		</a>
     </s:if>
     <s:else>
     	＜＜
@@ -56,17 +58,18 @@
     <s:property value="currentPage"></s:property> / <s:property value="maxPage"></s:property>
 
 	<s:if test="currentPage < maxPage">
-    <a href='
-    <s:url action="IndicateTourListAction">
-    		<s:param name="currentPage" value="currentPage+1"/>
-    </s:url>'>
-    ＞＞
-    </a>
+	    <a href='
+		    <s:url action="IndicateTourListAction">
+		    		<s:param name="currentPage" value="currentPage+1"/>
+		    </s:url>'>
+		    ＞＞
+	    </a>
     </s:if>
     <s:else>
-    ＞＞
+    	＞＞
     </s:else>
 
+<!-- ↑「＜＜1/3＞＞」部分ここまで -->
 
     <br>
     <br>
