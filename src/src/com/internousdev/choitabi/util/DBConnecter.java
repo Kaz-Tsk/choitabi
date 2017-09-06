@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/*【松村】データベースとの接続…MySQLへのログイン（のみ）を行うクラスをテストで作ってみました。
- * 作った接続は戻り値に設定してあるので、呼び出すとそいつを投げ返してくれます。
- * DAOクラスの最初の処理で使いまわせる………かも。
+/*@author:YUKA MATSUMURA
+ *@since:2017/09/05
+ *@version:1.1
  * */
 
 public class DBConnecter {
