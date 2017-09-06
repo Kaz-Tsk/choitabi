@@ -4,9 +4,8 @@ import java.util.ArrayList;
 
 import com.internousdev.choitabi.dao.SelectTourListDAO;
 import com.internousdev.choitabi.dto.SelectTourDTO;
+import com.internousdev.choitabi.util.TourListPagination;
 import com.opensymphony.xwork2.ActionSupport;
-
-import src.com.internousdev.choitabi.util.TourListPagination;
 
 public class IndicateTourListAction extends ActionSupport{
 

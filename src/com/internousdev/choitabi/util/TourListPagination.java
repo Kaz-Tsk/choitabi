@@ -1,4 +1,4 @@
-package src.com.internousdev.choitabi.util;
+package com.internousdev.choitabi.util;
 
 import java.util.ArrayList;
 
