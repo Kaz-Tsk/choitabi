@@ -10,7 +10,7 @@ import com.internousdev.choitabi.dto.SelectTourDTO;
 
 import src.com.internousdev.choitabi.util.DBConnecter;
 
-public class SelectTourDAO {
+public class SelectTourListDAO {
 
 
 	/* @author:YUKA MATSUMURA
@@ -19,7 +19,7 @@ public class SelectTourDAO {
 	 * */
 
 
-	public ArrayList<SelectTourDTO> selectTour(String selectWord){
+	public ArrayList<SelectTourDTO> selectTourList(String selectWord){
 
 		/*呼び出し元に返すツアー情報のリストを作ります*/
 			ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();

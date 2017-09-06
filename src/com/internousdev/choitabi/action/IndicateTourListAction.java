@@ -2,7 +2,7 @@ package com.internousdev.choitabi.action;
 
 import java.util.ArrayList;
 
-import com.internousdev.choitabi.dao.SelectTourDAO;
+import com.internousdev.choitabi.dao.SelectTourListDAO;
 import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -43,8 +43,8 @@ public class IndicateTourListAction extends ActionSupport{
 		String result = ERROR;
 
 		/*DAOでツアーの一覧を持ってくる*/
-		SelectTourDAO tstl = new SelectTourDAO();
-		allTourList = tstl.selectTour(selectWord);
+		SelectTourListDAO tstl = new SelectTourListDAO();
+		allTourList = tstl.selectTourList(selectWord);
 
 		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/
 		TourListPagination tlp = new TourListPagination();

@@ -6,6 +6,9 @@ public class SelectTourDTO {
 	/*@author:YUKA MATSUMURA
 	 *@since:2017/09/05
 	 *@version:1.1
+	 *
+	 *DBから、ツアー1件分の情報を入れるためのDTOです。
+	 *ツアーの検索と、編集・削除操作の両方で使います。
 	 * */
 
 	/*ツアー名*/
@@ -23,7 +26,7 @@ public class SelectTourDTO {
 
 
 
-	/*以下、各変数のgettr/setter----------------------------*/
+	/*以下、各変数のgetter/setter----------------------------*/
 
 
 
