@@ -12,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ComfirmContactAction extends ActionSupport {
 
     /**
-     * 生成されたシリアルナンバー
+     * 生成されたシリアルナンバー(規定)
      */
     private static final long serialVersionUID = 7193520504007481422L;
 
@@ -42,57 +42,45 @@ public class ComfirmContactAction extends ActionSupport {
         return SUCCESS;
     }
 
-    /**
-     * 送信者名を取得するためのメソッド
-     * @return postingName 送信者名
-     */
-    public String getContact_name
-() {
-        return contact_name
-;
+
+    //送信者名を取得する
+
+    public String getContact_name() {
+        return contact_name;
     }
 
-    /**
-     * 送信者名を格納するためのメソッド
-     * @param postingName 送信者名
-     */
-    public void setContact_name(String contact_name
-) {
-        this.contact_name =contact_name;
-    }
+    //送信者メールアドレスを取得
 
-    /**
-     * 送信者メールアドレスを取得するためのメソッド
-     * @return postingEmail 送信者メールアドレス
-     */
-    public String getContact_mailAddress
-() {
+    public String getContact_mailAddress() {
         return contact_mailAddress;
     }
 
-    /**
-     * 送信者メールアドレスを格納ためのメソッド
-     * @param postingEmail
-     *            送信者メールアドレス
-     */
-    public void setContact_mailAddress(String contact_mailAddress) {
-        this.contact_mailAddress = contact_mailAddress;
-    }
+   // 問い合わせ内容を取得するためのメソッド
 
-    /**
-     * 問い合わせ内容を取得するためのメソッド
-     * @return postingText 問い合わせ内容
-     */
     public String getContact_contents() {
         return contact_contents;
     }
 
-    /**
-     * 問い合わせ内容を格納するためのメソッド
-     * @param postingText 問い合わせ内容
-     */
+
+    //送信者名を格納
+    public void setContact_name(String contact_name) {
+        this.contact_name =contact_name;
+    }
+
+
+    //送信者メールアドレスを格納
+
+    public void setContact_mailAddress(String contact_mailAddress) {
+        this.contact_mailAddress = contact_mailAddress;
+    }
+
+
+    // 問い合わせ内容を格納
     public void setContact_contents(String contact_contents) {
         this.contact_contents= contact_contents;
     }
+
+
+
 
 }

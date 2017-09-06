@@ -23,15 +23,15 @@
     <div class="end">お問い合わせ送信完了</div>
     <div class="contact">
        <h2>お問い合わせの送信が完了いたしました。</h2>
-    
+
     <div class="notice">お問い合わせいただいた内容につきましては、<br>
         3営業日以内にご返信させていただきます。</div>
-    
+
        <h2>ご利用ありがとうございました。</h2>
         </div>
-    
+
     <div class="top">
-        <a href="">トップに戻る</a>
+        <a href="index.jsp">トップに戻る</a>
     </div>
 
 <div class = "footer">

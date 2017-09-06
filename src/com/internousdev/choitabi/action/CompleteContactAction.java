@@ -23,7 +23,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 
 	/**
-	 * お問い合わせ者の名前
+	 * 送信者の名前
 	 */
 	private String contact_name;
 
@@ -49,7 +49,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 	private Map<String, Object> session;
 
 	/**
-	 * 説明 お問い合わせ情報をデータベースに登録できたらSUCCESSを返すメソッド
+	 * 説明 お問い合わせ情報をデータベースに登録できたらSUCCESSを返す(初期値：ERROR)
 	 * @author kanako miyazono
 	 * @since 2017/9/5
 	 * @version 1.1
@@ -73,8 +73,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 	}
 
 	/**
-	 * お問い合わせ者の名前を取得するメソッド
-	 * @return contactName お問い合わせ者の名前
+	 * お問い合わせ者の名前を取得する
 	 */
 	public String getContact_name() {
 		return contact_name;
@@ -82,7 +81,6 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * お問い合わせ者の名前を格納する
-	 * @param contactName  お問い合わせ者の名前
 	 */
 	public void setContact_name(String contact_name) {
 		this.contact_name = contact_name;
@@ -90,7 +88,6 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * メールアドレスを取得するメソッド
-	 * @return email メールアドレス
 	 */
 	public String getContact_mailAddress() {
 		return contact_mailAddress;
@@ -98,7 +95,6 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * メールアドレスを格納する
-	 * @param email メールアドレス
 	 */
 	public void setContact_mailAddress(String contact_mailAddress) {
 		this.contact_mailAddress= contact_mailAddress;
@@ -122,7 +118,6 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * セッションを取得するメソッド
-	 * @return session セッション
 	 */
 	public Map<String, Object> getSession() {
 		return session;
@@ -130,7 +125,6 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * セッションを格納する
-	 * @param session  セッション
 	 */
 	public void setSession(Map<String, Object> session) {
 		this.session = session;

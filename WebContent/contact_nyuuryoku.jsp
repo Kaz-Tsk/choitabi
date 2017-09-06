@@ -40,30 +40,28 @@
 
     <tr>
         <th>名前</th>
-           <td><s:textfield name = "contact_name" size = "12"></s:textfield>    </td>
+           <td><s:textfield name = "contact_name" size = "12"></s:textfield></td>
     </tr>
-    <tr>
-        <th>メールアドレス</th><td colspan = "4">
-            <s:textfield  name="contact_mailAddress" size = "12"></s:textfield>
 
-        </td>
+    <tr>
+        <th>メールアドレス</th>
+        <td colspan = "4"><s:textfield  name="contact_mailAddress" size = "12"></s:textfield></td>
     </tr>
+
     <tr>
         <th>お問い合わせ内容</th><td colspan = "4">
         <s:textarea name="contact_contents" rows="10" cols="45"></s:textarea>
-
     </tr>
 
 
-   <input type="submit" value="確認画面へ" >
+   <center><input type="submit" value="確認画面へ" ></center>
 
 </s:form>
 
-    2013-12-17
 
-<input type="button" value="トップ画面へ戻る" onClick="location.href='index.jsp'">
+<a href="index.jsp">トップ画面に戻る</a>
 
-<input type="button" value="入力ページに戻る" onClick="location.href='contact_nyuuryoku.jsp'">
+<a href="./contact_nyuuryoku.jsp">入力画面に戻る</a>
 
 
 <br>
