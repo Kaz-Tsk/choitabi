@@ -35,6 +35,12 @@ public class TourListPagination {
 		firstIndex = firstIndex + ( (currentPage - 1)  * tourNumber );
 		lastIndex = lastIndex + (currentPage * tourNumber);
 
+		/*後消し*/System.out.println("paginateTourList - allTourList " + allTourList.size() );
+
+		if(allTourList.size() == 0){
+			return null;
+		}
+
 		for(int i = firstIndex; i < lastIndex; i ++){
 			if(i >= allTourList.size()){
 				break;

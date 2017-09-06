@@ -14,7 +14,8 @@
     -----管理メニュー-----<br>
     <br>
     <a href='<s:url action="IndicateTourListAction">
-    <s:param name="currentPage" value="1"/></s:url>'>
+    <s:param name="currentPage" value="1"/>
+    <s:param name="selectWord" value = ""/></s:url>'>
     ■商品管理　ツアー一覧
     </a><br>
 

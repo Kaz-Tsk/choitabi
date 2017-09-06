@@ -11,7 +11,9 @@ import src.com.internousdev.choitabi.util.TourListPagination;
 public class IndicateTourListAction extends ActionSupport{
 
 
-	/*作成者：松村
+	/*@author YUKA MATSUMURA
+	 * @since 2017/09/05
+	 * @virsion 1.1
 	 * 管理画面のツアー情報の管理で使用するアクションです。
 	 * DBからツアーのデータを取得し、リストにしてJSPに渡して、表示させます。	 *
 	 * */
@@ -42,7 +44,7 @@ public class IndicateTourListAction extends ActionSupport{
 
 		/*DAOでツアーの一覧を持ってくる*/
 		SelectTourDAO tstl = new SelectTourDAO();
-		allTourList = tstl.selectTour();
+		allTourList = tstl.selectTour(selectWord);
 
 		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/
 		TourListPagination tlp = new TourListPagination();

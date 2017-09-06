@@ -22,7 +22,7 @@ public class SelectTourDAO {
 	String tour_name = "ツアー";
 
 
-	public ArrayList<SelectTourDTO> selectTour(){
+	public ArrayList<SelectTourDTO> selectTour(String selectWord){
 
 		/*呼び出し元に返すツアー情報のリストを作ります*/
 			ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
@@ -31,15 +31,18 @@ public class SelectTourDAO {
 			/*SQLに接続し、コマンドを実行してもらいます*/
 			DBConnecter tdc = new DBConnecter();
 			Connection con = tdc.createConnection();
-			String sql = "SELECT * FROM tour";
+			String sql = "SELECT * FROM tour WHERE tour_name LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);
-			System.out.println("DAO : " + sql);
+			/*後消し*/System.out.println("DAO : " + sql);
+			ps.setString(1, "%" + selectWord + "%");
 			ResultSet rs = ps.executeQuery();
+
 
 			while(rs.next()){
 				/*DBから検索された内容を、dtoに一つずつしまって、リストにしていきます*/
 				/*箱を用意する→データ一式を入れる→リストに追加→また新しい箱を用意する…を必要な分だけ繰り返す処理*/
 				SelectTourDTO tstdto = new SelectTourDTO();
+
 				tstdto.setTourName(rs.getString("tour_name"));
 				tstdto.setTourId(rs.getInt("tour_id"));
 				tstdto.setPrice(rs.getInt("price"));
@@ -77,6 +80,10 @@ public class SelectTourDAO {
 			} catch (InstantiationException e) {
 				System.out.println("ドライバのロードに失敗しました");
 				e.printStackTrace();
+				return null;
+
+			}catch(Exception e){
+				System.out.println("その他のエラーです");
 				return null;
 			}
 
