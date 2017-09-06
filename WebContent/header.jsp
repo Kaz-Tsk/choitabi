@@ -67,8 +67,8 @@ a:visited { color : #ffffff; }
 					<li><a href="<s:url action="contact_nyuuryoku.jsp"/>">お問い合わせ</a></li>
 				</s:else>
 			</ul>
-		</nav>
-		</div>
+			</nav>
+			</div>
 	</header>
 	</body>
 	</html>

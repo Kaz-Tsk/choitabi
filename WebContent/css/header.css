@@ -4,6 +4,8 @@
 .body{
   padding: 0;
   font-size: 15px;
+  width:30%;
+  top:100px;
 }
 .title{
   position: absolute;
