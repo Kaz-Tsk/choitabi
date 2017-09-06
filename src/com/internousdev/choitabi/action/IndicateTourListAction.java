@@ -2,7 +2,7 @@ package com.internousdev.choitabi.action;
 
 import java.util.ArrayList;
 
-import com.internousdev.choitabi.dao.SelectTourDAO;
+import com.internousdev.choitabi.dao.SelectTourListDAO;
 import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -11,7 +11,9 @@ import src.com.internousdev.choitabi.util.TourListPagination;
 public class IndicateTourListAction extends ActionSupport{
 
 
-	/*作成者：松村
+	/*@author YUKA MATSUMURA
+	 * @since 2017/09/05
+	 * @virsion 1.1
 	 * 管理画面のツアー情報の管理で使用するアクションです。
 	 * DBからツアーのデータを取得し、リストにしてJSPに渡して、表示させます。	 *
 	 * */
@@ -26,10 +28,10 @@ public class IndicateTourListAction extends ActionSupport{
 	private ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
 	/*ツアー情報の最大ページ数*/
-	private int maxPage = 1;
+	private int maxPage;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage = 1;/*ここは、JSPから持ってくる*/
+	private int currentPage;/*ここは、JSPから持ってくる*/
 
 
 
@@ -41,8 +43,8 @@ public class IndicateTourListAction extends ActionSupport{
 		String result = ERROR;
 
 		/*DAOでツアーの一覧を持ってくる*/
-		SelectTourDAO tstl = new SelectTourDAO();
-		allTourList = tstl.selectTour();
+		SelectTourListDAO tstl = new SelectTourListDAO();
+		allTourList = tstl.selectTourList(selectWord);
 
 		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/
 		TourListPagination tlp = new TourListPagination();
@@ -51,13 +53,14 @@ public class IndicateTourListAction extends ActionSupport{
 		/*「＜＜」「＞＞」の移動で現在ページがマイナスになったり、
 		 * 最大ページ数を超えたりしないようにするための処理です。
 		 * ※後ほどこの処理はJSP上で行うようにします。（URLで0ページ目と4ページ目ができてしまうのでなんだか気持ち悪い）*/
-		if(currentPage > maxPage){
+		if(currentPage >= maxPage){
 			currentPage = maxPage;
 		}else if(currentPage <= 1){
 			currentPage = 1;
 		}
 
-		 currentTourList = tlp.paginateTourList(allTourList, currentPage, maxPage);
+		 currentTourList = tlp.paginateTourList(allTourList, currentPage);
+
 
 
 

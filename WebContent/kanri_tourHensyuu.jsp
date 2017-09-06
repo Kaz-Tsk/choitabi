@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,7 +15,9 @@
 <table border = "1px" cellspacing = "0px" cellpadding = "10px">
 
     <tr>
-        <th>名称</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
+        <th>名称</th>
+        <td>変更前</td><td><s:property value="tourName"/></td>
+        <td>変更後</td><td>　　　</td>
     </tr>
     <tr>
         <th>価格</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>

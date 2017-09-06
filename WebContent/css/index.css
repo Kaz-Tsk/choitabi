@@ -19,44 +19,6 @@ body{
 a {text-decoration : none;}
 
 
-/*ここからヘッダー設定--------------------------------------------------------------*/
-.header{
-    top:0px;
-    right:0px;
-    left:0px;
-    height:60px;
-    width:100%;
-    font-size:24px;
-    text-align:left;
-    background-color:orange;
-    white-space:nowrap;
-}
-
-/*ヘッダーの「choitabi」ロゴの文字列部分----------------------------------------------*/
-.headerLogo{
-    float:left;
-    margin-left:30px;
-    font-size:40px;
-    line-height:64px;
-    color:white;
-}
-
-
-.clear{
-	clear:both;
-}
-
-/*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
-.headerMenuBox{
-	position:relative;
-	top:30px;
-	float:left;
-    right:10px;
-    left:640px;
-    text-align:right;
-    white-space:nowrap;
-}
-
 /*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
 .headerMenu{
 	position:relative;
@@ -78,8 +40,8 @@ a {text-decoration : none;}
     height: 40px;
     margin: 30px auto 300px;
     padding: 0;
-    background: #8a9b0f;
-    border-bottom: 5px solid #535d09;
+    background-color:#f19a0a !important;
+    border-bottom: 5px solid #b47307;
     border-radius: 5px 5px 0 0;
 }
 
@@ -104,8 +66,8 @@ a {text-decoration : none;}
 }
 
 .dropmenu li:hover > a{
-    background: #6e7c0c;
-    color: #eff7b1;
+    background: #f19a0a;
+    color: #b47307;
 }
 
 .dropmenu > li:hover > a{
@@ -136,7 +98,7 @@ a {text-decoration : none;}
 
 .dropmenu li ul li a{
     padding: 13px 15px;
-    background: #6e7c0c;
+    background: #f19a0a;
     text-align: left;
     font-size: 12px;
     font-weight: normal;
@@ -145,8 +107,8 @@ a {text-decoration : none;}
 .dropmenu li:hover ul li{
     overflow: visible;
     height: 38px;
-    border-top: 1px solid #7c8c0e;
-    border-bottom: 1px solid #616d0b;
+    border-top: 1px solid #f19a0a;
+    border-bottom: 1px solid #f19a0a;
 }
 
 .dropmenu li:hover ul li:first-child{

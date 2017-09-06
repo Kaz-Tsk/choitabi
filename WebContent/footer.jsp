@@ -10,8 +10,8 @@
 <body>
 <div class="footer">
  <div class = "ARRLogo">All Rights Reserved.</div>
-    <div class = "divlink1"><a href = "./companys outline.jsp">会社概要</a></div>
-    <div class = "divlink1"><a href = "./kiyaku.jsp">利用規約</a></div>
+    <div class = "divlink1"><a href = "./company_overview.jsp">会社概要</a></div>
+    <div class = "divlink1"><a href = "./terms_of_use.jsp">利用規約</a></div>
 </div>
 </body>
 </html>

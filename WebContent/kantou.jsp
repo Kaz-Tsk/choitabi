@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type= "text/css" href = "css/base.css">
-<title>名所</title>
+<title>関東</title>
 </head>
 
 <!-- ヘッダー-------------------------- -->
@@ -22,16 +22,17 @@
 
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
-            <div class="sub">
-                <img class = "img" src = "img/aquamarine_hukusima.jpg">
-                <div class="name">アクアマリンふくしま<br>(東北/福島県)</div>
-                <div class="price">価格:1800円</div>
+
+        <div class="sub">
+                <img class = "img" src = "img/utunomiyagyouza.jpg">
+                <div class="name">宇都宮餃子<br>(関東/栃木県)</div>
+                <div class="price">価格:1481円</div>
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/oirasekeiryu.jpg">
-                <div class="name">奥入瀬渓流<br>(東北/青森県)</div>
-                <div class="price">価格:1145円</div>
+                <img class = "img" src = "img/yokosukakaiguncurry.jpg">
+                <div class="name">よこすか海軍カレー<br>(関東/神奈川県)</div>
+                <div class="price">価格:464円</div>
             </div>
 
             <div class="sub">
@@ -47,27 +48,15 @@
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/nanbayasakazinja.jpg">
-                <div class="name">難波八阪神社<br>(関西/大阪府)</div>
-                <div class="price">価格:5555円</div>
+                <img class = "img" src = "img/mobarashi_twin_circuit.jpg">
+                <div class="name">茂原ツインサーキット<br>(関東/千葉県)</div>
+                <div class="price">価格:2500円</div>
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/ryouonzi.jpg">
-                <div class="name">龍穏寺<br>(関西/京都府)</div>
-                <div class="price">価格:4419円</div>
-            </div>
-
-            <div class="sub">
-                 <img class = "img" src = "img/kannontakikouen.jpg">
-                <div class="name">観音滝公園<br>(九州/鹿児島県)</div>
-                <div class="price">価格:4430円</div>
-            </div>
-
-            <div class="sub">
-                <img class = "img" src = "img/mihuneyamarakuen.jpg">
-                <div class="name">御船山楽園<br>(九州/佐賀県)</div>
-                <div class="price">価格:7777円</div>
+                <img class = "img" src = "img/sarugakyou_bungee.jpg">
+                <div class="name">猿ヶ京バンジー<br>(関東/群馬県)</div>
+                <div class="price">価格:11000円</div>
             </div>
         </div>
 

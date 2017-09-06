@@ -15,22 +15,12 @@
 <link rel="shortcut icon" href="./img/favicon.ico">
 </head>
 <body>
-<!--ログイン機能（実験中）----------------------------------------------->
-	<s:form action="MainTopAction">
-		<s:textfield name="name"/>
-		<s:password name="password"/>
-		<s:submit value="ログイン"/>
-	</s:form>
 
 <!--ヘッダー部分----------------------------------------------->
-<div class = "header">
-    <div class = "divlink1"><div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div></div>
-    <div class = "headerMenuBox">
-        <div class = "headerMenu"><div class = "divlink1"><a href = "./about.jsp">choitabiについて</a></div></div>
-        <div class = "headerMenu"><div class = "divlink1">Ｑ＆Ａ/お問い合わせ</div></div>
-        <div class = "headerMenu"><div class = "divlink1"><a href = "./login.jsp">ログイン</a></div></div>
-    </div>
-</div>
+<header>
+	<jsp:include page="header.jsp"/>
+</header>
+
 
 <div class = "clear"></div>
 <!--ヘッダー②　　萩原さんからもらったヘッダー部分のドロップメニュー--------------------------------------->
@@ -79,11 +69,14 @@
 
     <div class="flame">
             <ul class="bxslider">
-                <li><img src="img/fre1.jpg"></li>
-                <li><img src="img/himezi.jpg"></li>
-                <li><img src="img/hituziyama.jpg"></li>
-                <li><img src="img/ita1.jpg"></li>
-                <li><img src="img/ryuzin.jpg"></li>
+            	<li><img src="img/kannontakikouen.jpg"></li>
+                <li><img src="img/chickennanban.jpg"></li>
+                <li><img src="img/hananukikeikoku.jpg"></li>
+                <li><img src="img/iruka_watching_tour.jpg"></li>
+                <li><img src="img/sarugakyou_bungee.jpg"></li>
+                <li><img src="img/yokosukakaiguncurry.jpg"></li>
+                <li><img src="img/paraglider_tandem_flight.jpg"></li>
+                <li><img src="img/obanzai.jpg"></li>
             </ul>
 
     <script type="text/javascript" src ="./js/index.js"></script>
