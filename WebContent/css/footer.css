@@ -8,3 +8,18 @@ clear:left;
 width:100%;
 background-color:orange;
 }
+
+.link a:link{
+	color:#ffffff;
+}
+.link a:visited{
+	color:#ffffff;
+}
+
+.link a:hover{
+	color:#ffffff;
+}
+
+.link a:active{
+	color:#ffffff;
+}
