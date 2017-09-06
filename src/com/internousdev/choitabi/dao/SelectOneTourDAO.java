@@ -22,6 +22,7 @@ public class SelectOneTourDAO {
 	public SelectTourDTO selectOneTour(int tourId){
 
 		SelectTourDTO dto = null;
+		/*後消し*/System.out.println("SlectOneTour - tourId : " + tourId);
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/

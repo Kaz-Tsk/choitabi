@@ -41,6 +41,12 @@ public class EditTourAction extends ActionSupport {
 		SelectTourDTO dto =sotdao.selectOneTour(tourId);
 
 		if(dto != null){
+			this.tourName = dto.getTourName();
+			this.tourId = dto.getTourId();
+			this.price = dto.getPrice();
+			this.persons = dto.getPersons();
+			this.date = dto.getDate();
+			this.departure = dto.getDeparture();
 			result = SUCCESS;
 		}
 
@@ -64,7 +70,7 @@ public class EditTourAction extends ActionSupport {
 		return tourId;
 	}
 
-	public void serTourId(int tourId){
+	public void setTourId(int tourId){
 		this.tourId = tourId;
 	}
 
@@ -72,7 +78,7 @@ public class EditTourAction extends ActionSupport {
 		return price;
 	}
 
-	public void serPrice(int price){
+	public void setPrice(int price){
 		this.price = price;
 	}
 
