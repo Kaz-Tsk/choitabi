@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type= "text/css" href = "css/base.css">
-<title>アクティビティ</title>
+<title>関西</title>
 </head>
 
 <!-- ヘッダー-------------------------- -->
@@ -22,28 +22,29 @@
 
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
-            <div class="sub">
-                <img class = "img" src = "img/mogamigawarafting.jpg">
-                <div class="name">最上川ラフティング半日コース<br>(東北/山形県県)</div>
-                <div class="price">価格:7000円</div>
+        <div class="sub">
+                <img class = "img" src = "img/osakanokusikatsu.jpg">
+                <div class="name">大阪の串かつ
+                <br>(関西/大阪府)</div>
+                <div class="price">価格:555円</div>
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/paraglider_tandem_flight.jpg">
-                <div class="name">パラグライダータンデムフライト体験<br>(東北/宮城県)</div>
-                <div class="price">価格:7000円</div>
+                <img class = "img" src = "img/obanzai.jpg">
+                <div class="name">おばんざい<br>(関西/京都府)</div>
+                <div class="price">価格:441円</div>
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/mobarashi_twin_circuit.jpg">
-                <div class="name">茂原ツインサーキット<br>(関東/千葉県)</div>
-                <div class="price">価格:2500円</div>
+                <img class = "img" src = "img/nanbayasakazinja.jpg">
+                <div class="name">難波八阪神社<br>(関西/大阪府)</div>
+                <div class="price">価格:5555円</div>
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/sarugakyou_bungee.jpg">
-                <div class="name">猿ヶ京バンジー<br>(関東/群馬県)</div>
-                <div class="price">価格:11000円</div>
+                <img class = "img" src = "img/ryouonzi.jpg">
+                <div class="name">龍穏寺<br>(関西/京都府)</div>
+                <div class="price">価格:4419円</div>
             </div>
 
             <div class="sub">
@@ -58,19 +59,7 @@
                 <div class="price">価格:7000円</div>
             </div>
 
-            <div class="sub">
-                 <img class = "img" src = "img/iruka_watching_tour.jpg">
-                <div class="name">イルカウォッチングツアー<br>(九州/熊本県)</div>
-                <div class="price">価格:2250円</div>
-            </div>
-
-            <div class="sub">
-                <img class = "img" src = "img/aroma_botanical_candle.jpg">
-                <div class="name">アロマ＆ボタニカルキャンドル<br>(九州/福岡県)</div>
-                <div class="price">価格:3500円</div>
-            </div>
-          </div>
-
+        </div>
 
 </body>
 

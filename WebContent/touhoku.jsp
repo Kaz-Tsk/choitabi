@@ -1,92 +1,68 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel = "stylesheet" type = "text/css" href = "css/index.css">
-<link rel = "stylesheet" type = "text/css" href = "css/touhoku.css">
-<title>東北エリアで探す</title>
+<link rel = "stylesheet" type= "text/css" href = "css/base.css">
+<title>東北</title>
 </head>
-<div class= "wrapper">
+
+<!-- ヘッダー-------------------------- -->
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
 <body>
-<!--ヘッダー部分----------------------------------------------->
-<div class = "header">
-    <div class = "divlink1"><div class = "headerLogo"><a href = "./index.jsp">choitabi</a></div></div>
-    <div class = "headerMenuBox">
-        <div class = "headerMenu"><div class = "divlink1">choitabiについて</div></div>
-        <div class = "headerMenu"><div class = "divlink1">Ｑ＆Ａ/お問い合わせ</div></div>
-        <div class = "headerMenu"><div class = "divlink1"><a href = "./login.jsp">ログイン</a></div></div>
-    </div>
-</div>
 
-<!--メイン部分 ----------------------------------------------------------->
-<!--body部分 --------------------------------------------------------->
-    <h1>東北エリアで探す</h1>
-    <img id ="actmainphoto" src ="img/touhokutop.jpg">
-    <br>
-<!-- カラム要素(仮)----------------------------------------------->
-	<div id="side">
-	<table>
-	<tr>
-		<td height="200px" width="300px">仮</td>
-	</tr>
-	<tr>
-		<td height="300px" width="300px">カラム</td>
-	</tr>
-	</table>
-	</div>
-	<!-- ------------------------------------------------------------- -->
-	<div id="main">
-        <div class="planinfo">
-            <table>
+<!-- サイドバー--------------------------------------------------------------------------------- -->
+<div class = "sidebar">
+         <jsp:include page="sidebar.jsp"/>
+        </div>
 
-            <tr>
-                <th colspan="2">秋田きりたんぽツアー</th>
-            </tr>
-            <tr>
-            	<td colspan="2"> <img src="img/raft.jpg"></td>
-            </tr>
-            <tr>
-                <td>価格</td>
-                <td>８０００円</td>
-            </tr>
-            <tr>
-                <td>ツアー日時</td>
-                <td>１０月１０日　10：00～15：00</td>
-            </tr>
-            <tr>
-                <td>集合場所</td>
-                <td>秋田駅8：00</td>
-            </tr>
-            <tr>
-                <td>解散場所</td>
-                <td>秋田駅16：00</td>
-            </tr>
-            <tr>
-                <td>内容</td>
-                <td>8:30 駅出発<br>
-                    9:30  現地到着<br>
-                    10:00 きりたんぽ<br>
-                    15:00 現地出発<br>
-                    15:30 駅到着<br>
-                    16:00 解散<br>
-                </td>
-            </tr>
-            </table>
-    </div>
-</div>
-  <!--↓ここからフッター------------------------------------------>
-<div class = "footer">
+<!-- 商品一覧-------------------------------------------------- -->
+        <div class="main">
+            <div class="sub">
+                <img class = "img" src = "img/namieyakizoba.jpg">
+                <div class="name">なみえ焼きそば<br>(東北/福島県)</div>
+                <div class="price">価格:1800円</div>
+            </div>
 
-    <div class = "ARRLogo">All Rights Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu"><div class = "divlink1"><a href = "./companys outline.jsp">会社概要</a></div></div>
-        <div class = "footerMenu"><div class = "divlink1"><a href = "./kiyaku.jsp">利用規約</a></div></div>
-    </div>
-    <div class = "clear"></div>
- </div>
+            <div class="sub">
+                <img class = "img" src = "img/zundamochi.jpg">
+                <div class="name">ずんだ餅<br>(東北/宮城県)</div>
+                <div class="price">価格:1145円</div>
+            </div>
+
+            <div class="sub">
+                <img class = "img" src = "img/aquamarine_hukusima.jpg">
+                <div class="name">アクアマリンふくしま<br>(東北/福島県)</div>
+                <div class="price">価格:1800円</div>
+            </div>
+
+            <div class="sub">
+                <img class = "img" src = "img/oirasekeiryu.jpg">
+                <div class="name">奥入瀬渓流<br>(東北/青森県)</div>
+                <div class="price">価格:1145円</div>
+            </div>
+
+            <div class="sub">
+                <img class = "img" src = "img/mogamigawarafting.jpg">
+                <div class="name">最上川ラフティング半日コース<br>(東北/山形県県)</div>
+                <div class="price">価格:7000円</div>
+            </div>
+
+            <div class="sub">
+                <img class = "img" src = "img/paraglider_tandem_flight.jpg">
+                <div class="name">パラグライダータンデムフライト体験<br>(東北/宮城県)</div>
+                <div class="price">価格:7000円</div>
+            </div>
+        </div>
 
 </body>
-</div>
+
+<!-- フッター--------------------------- -->
+<footer>
+          <jsp:include page="footer.jsp"/>
+</footer>
 </html>

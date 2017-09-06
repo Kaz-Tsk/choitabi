@@ -23,9 +23,9 @@
                 <div class = "category">エリアで探す</div>
                 <ul class = "menu">
                     <li><a href = "./touhoku.jsp">東北</a></li>
-                    <li><a href = "#">関東</a></li>
-                    <li><a href = "#">関西</a></li>
-                    <li><a href = "#">九州</a></li>
+                    <li><a href = "./kantou.jsp">関東</a></li>
+                    <li><a href = "./kansai.jsp">関西</a></li>
+                    <li><a href = "./kyushu.jsp">九州</a></li>
                 </ul>
             </li>
         </ul>

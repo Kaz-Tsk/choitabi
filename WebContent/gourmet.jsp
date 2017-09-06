@@ -70,12 +70,6 @@
                 <div class="name">長崎ちゃんぽん<br>(九州/長崎県)</div>
                 <div class="price">価格:777円</div>
             </div>
-
-            <div class="sub">
-                <img class = "img" src = "img/namerou.jpg">
-                <div class="name">なめろう<br>(関東/千葉県)</div>
-                <div class="price">価格:999円</div>
-            </div>
         </div>
 
 </body>
