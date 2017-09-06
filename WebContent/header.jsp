@@ -11,7 +11,6 @@
 <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/header.css" rel="stylesheet">
 <style type="text/css">
-<!--
 a:link { color : #ffffff; }
 a:visited { color : #ffffff; }
 </style>
@@ -69,8 +68,6 @@ a:visited { color : #ffffff; }
 				</s:else>
 			</ul>
 		</nav>
-		<div class="clear">
-			<hr />
 		</div>
 	</header>
 	</body>
