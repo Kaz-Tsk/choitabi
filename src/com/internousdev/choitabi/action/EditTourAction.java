@@ -1,5 +1,7 @@
 package com.internousdev.choitabi.action;
 
+import com.internousdev.choitabi.dao.SelectOneTourDAO;
+import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class EditTourAction extends ActionSupport {
@@ -11,6 +13,7 @@ public class EditTourAction extends ActionSupport {
 	 * 管理画面でツアー情報の更新・削除操作を行うためのクラスです
 	 *
 	 * **/
+
 
 	/*ツアー名*/
 	private String tourName;
@@ -32,12 +35,22 @@ public class EditTourAction extends ActionSupport {
 	/*executeメソッド-------------------------------------------------*/
 
 	public String execute(){
-		String result = SUCCESS;
+		String result = ERROR;
 
-		/*if(tourId >= 1){
-			result =  SUCCESS;
-		}*/
+		SelectOneTourDAO sotdao = new SelectOneTourDAO();
+		SelectTourDTO dto =sotdao.selectOneTour(tourId);
 
+		if(dto != null){
+			this.tourName = dto.getTourName();
+			this.tourId = dto.getTourId();
+			this.price = dto.getPrice();
+			this.persons = dto.getPersons();
+			this.date = dto.getDate();
+			this.departure = dto.getDeparture();
+			result = SUCCESS;
+		}
+
+		/*後消し*/System.out.println("EdittourAction - result : " + result);
 		return result;
 	}
 
@@ -57,7 +70,7 @@ public class EditTourAction extends ActionSupport {
 		return tourId;
 	}
 
-	public void serTourId(int tourId){
+	public void setTourId(int tourId){
 		this.tourId = tourId;
 	}
 
@@ -65,7 +78,7 @@ public class EditTourAction extends ActionSupport {
 		return price;
 	}
 
-	public void serPrice(int price){
+	public void setPrice(int price){
 		this.price = price;
 	}
 

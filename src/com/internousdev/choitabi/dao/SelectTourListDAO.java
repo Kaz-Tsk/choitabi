@@ -7,8 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.SelectTourDTO;
-
-import src.com.internousdev.choitabi.util.DBConnecter;
+import com.internousdev.choitabi.util.DBConnector;
 
 public class SelectTourListDAO {
 
@@ -26,7 +25,7 @@ public class SelectTourListDAO {
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			DBConnecter tdc = new DBConnecter();
+			DBConnector tdc = new DBConnector();
 			Connection con = tdc.createConnection();
 			String sql = "SELECT * FROM tour WHERE tour_name LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);
