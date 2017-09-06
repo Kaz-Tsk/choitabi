@@ -1,6 +1,8 @@
 package com.internousdev.choitabi.action;
 
-public class EditTourAction {
+import com.opensymphony.xwork2.ActionSupport;
+
+public class EditTourAction extends ActionSupport {
 
 	/*@author YUKA MATSUMURA
 	 * since 2017/0906
@@ -22,6 +24,23 @@ public class EditTourAction {
 	private String date;
 	/*出発地*/
 	private String departure;
+
+	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
+	private boolean deleteCheck = false;
+
+
+	/*executeメソッド-------------------------------------------------*/
+
+	public String execute(){
+		String result = SUCCESS;
+
+		/*if(tourId >= 1){
+			result =  SUCCESS;
+		}*/
+
+		return result;
+	}
+
 
 
 	/*以下、getter/setter---------------------------------------------*/
@@ -72,6 +91,14 @@ public class EditTourAction {
 
 	public void setDeparture(String departure){
 		this.departure = departure;
+	}
+
+	public boolean getDeleteCheck(){
+		return deleteCheck;
+	}
+
+	public void setDeleteCheck(boolean deleteCheck){
+		this.deleteCheck = deleteCheck;
 	}
 
 

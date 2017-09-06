@@ -19,9 +19,6 @@ public class SelectTourDAO {
 	 * */
 
 
-	String tour_name = "ツアー";
-
-
 	public ArrayList<SelectTourDTO> selectTour(String selectWord){
 
 		/*呼び出し元に返すツアー情報のリストを作ります*/

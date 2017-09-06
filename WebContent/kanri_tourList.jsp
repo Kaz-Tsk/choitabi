@@ -35,7 +35,12 @@
 		<td><s:property value="persons"></s:property></td>
 		<td><s:property value="date"></s:property></td>
 		<td><s:property value="departure"></s:property></td>
-		<td>編集</td>
+		<td>
+			<a href='<s:url action="EditTourAction">
+	    	<s:param name="tourId" value = "tourId"/></s:url>'>
+  			編集
+    		</a>
+		</td>
 	</tr>
 	</s:iterator>
 </table>
