@@ -31,104 +31,12 @@ a {text-decoration : none;}
     white-space:nowrap;
 }
 
-
-/*ヘッダー②-----------------------------------------------------------------------------------*/
-
-.dropmenu{
-    list-style-type: none;
-    width: 800px;
-    height: 40px;
-    margin: 30px auto 300px;
-    padding: 0;
-    background-color:#f19a0a !important;
-    border-bottom: 5px solid #b47307;
-    border-radius: 5px 5px 0 0;
-}
-
-.dropmenu li{
-    position: relative;
-    width: 20%;
-    float: left;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.dropmenu li a{
-    display: block;
-    margin: 0;
-    padding: 15px 0 11px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1;
-    text-decoration: none;
-}
-
-.dropmenu li:hover > a{
-    background: #f19a0a;
-    color: #b47307;
-}
-
-.dropmenu > li:hover > a{
-    border-radius: 5px 5px 0 0;
-}
-
-.dropmenu li ul{
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    border-radius: 0 0 5px 5px;
-}
-
-.dropmenu li:last-child ul{
-    width: 100%
-}
-
-.dropmenu li ul li{
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    color: #fff;
-    transition: .2s;
-}
-
-.dropmenu li ul li a{
-    padding: 13px 15px;
-    background: #f19a0a;
-    text-align: left;
-    font-size: 12px;
-    font-weight: normal;
-}
-
-.dropmenu li:hover ul li{
-    overflow: visible;
-    height: 38px;
-    border-top: 1px solid #f19a0a;
-    border-bottom: 1px solid #f19a0a;
-}
-
-.dropmenu li:hover ul li:first-child{
-    border-top: 0;
-}
-
-.dropmenu li:hover ul li:last-child{
-    border-bottom: 0;
-}
-
-.dropmenu li:hover ul li:last-child a{
-    border-radius: 0 0 5px 5px;
-}
-
 /*ヘッダー直下、キャッチフレーズやスクロール画面部分--------------------------------------*/
 
 
 .catchPhrase{
 	position:absolute;
-	top:70px;
+	top:100px;
 	right:100px;
 	left:100px;
     height:80px;
@@ -233,7 +141,7 @@ img{
     margin-left:600px;
 }
 
-.nijoujou{
+.raft{
     width:350px;
     height:auto;
     margin-top:100px;
@@ -250,11 +158,11 @@ img{
 
 
 .tourgallery{
-	margin-top:500px;
+	margin-top:100px;
 	margin-bottom:300px;
 	top:100px;
 	width:100%;
-	height:800px;
+	height:1300px;
 	font-size:24px;
 	font-family:メイリオ;
 	text-align:center;
@@ -262,6 +170,16 @@ img{
 
 	border-top:solid 40px #00c3ff;
 	border-bottom:solid 60px orange;
+}
+
+.content{
+	top:30px;;
+}
+
+.sea{
+	width:100%;
+	height:auto;
+
 }
 
 /*ここからフッター -----------------------------------------------------------------*/

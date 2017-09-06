@@ -23,44 +23,6 @@
 
 
 <div class = "clear"></div>
-<!--ヘッダー②　　萩原さんからもらったヘッダー部分のドロップメニュー--------------------------------------->
-
-
-<div class="container">
-
-        <ul class="dropmenu">
-        <li><a href="#">メニュー1</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            </ul>
-            </li>
-        <li><a href="#">メニュー2</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            </ul>
-            </li>
-            <li><a href="#">メニュー3</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            </ul>
-            </li>
-            <li><a href="#">メニュー4</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            </ul>
-            </li>
-            <li><a href="#">メニュー5</a>
-        <ul>
-            <li><a href="#">サブメニュー</a></li>
-            <li><a href="#">サブメニュー</a></li>
-            </ul>
-            </li>
-        </ul>
-</div>
 
 <!--↓キャッチフレーズとスクロール画面の部分------------------------->
 
@@ -78,14 +40,11 @@
                 <li><img src="img/paraglider_tandem_flight.jpg"></li>
                 <li><img src="img/obanzai.jpg"></li>
             </ul>
-
     <script type="text/javascript" src ="./js/index.js"></script>
-
-
 </div>
 
-
 <!--↓ここからメイン画面------------------------------------------>
+
 
     <!--↓検索メニューの部分-->
 
@@ -95,7 +54,7 @@
             <li>
                 <div class = "category">テーマで探す</div>
                 <ul class = "menu">
-                    <li><a href = "./choimesi.jsp">グルメ</a></li>
+                    <li><a href = "./gourmet.jsp">グルメ</a></li>
                     <li><a href = "./place.jsp">名所</a></li>
                     <li><a href = "./activity.jsp">アクティビティ</a></li>
                 </ul>
@@ -114,13 +73,12 @@
     </div>
 		<!-- ここまでサイドバー -->
 
+ <!--↓ツアーの一覧を表示する部分---------------------------------->
 <div class = "mainArea">
-
-    <!--↓ツアーの一覧を表示する部分---------------------------------->
     <div class = "TourList">
         <div class = "post">
             <h2><a href="touhoku.jsp">東北ツアー</a></h2>
-            <p><a href="touhoku.jsp">新幹線でゆく</a></p>
+            <p><a href="touhoku.jsp">そうだ、東北に</a></p>
                 <div class="img">
                     <img class="Tohoku" src="img/touhokutop.jpg">
                 </div>
@@ -129,15 +87,23 @@
         <div class = "post">
             <h2><a href="activity.jsp">アクティビティツアー</a></h2>
             <p><a href="activity.jsp">本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</a></p>
-            <img class="nijoujou" src="img/nijoujou.jpg">
+            <img class="raft" src="img/raft.jpg">
         </div>
     </div>
 </div>
 
 <div class = "clear"></div>
 <div class = "tourgallery">
+	<div class="content">
+		<img class="sea" src="img/sea.jpg">
+
+	</div>
 	<h1></h1>
 </div>
+
+<!--↓ここから------------------------------------------>
+<!--↑ここまで------------------------------------------>
+
 
 <!--↓ここからフッター------------------------------------------>
 <div class = "footer">
