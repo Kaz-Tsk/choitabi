@@ -11,11 +11,11 @@
 <h1>ツアー情報一覧</h1>
     <hr>
     ツアー検索<br>
-    <s:form>
+    <s:form action="IndicateTourListAction">
 		<s:textfield name="selectWord"/>
+		<s:hidden name="currentPage" value="1"/>
 		<s:submit value="検索"/>
 	</s:form>
-	<br>
 <table border = "1px" cellspacing = "0px" cellpadding = "10px">
 	<tr>
 		<th>ツアーID</th>
@@ -50,6 +50,7 @@
     <s:param name="currentPage" value="currentPage+1"/></s:url>'>
     ＞＞
     </a>
+    <br>
     <br>
     管理ページトップに戻る<br>
     <br>

@@ -12,16 +12,14 @@ import src.com.internousdev.choitabi.util.DBConnecter;
 
 public class SelectTourDAO {
 
-	/*作成者：松村
-	 * 管理画面のツアー管理で使用するDAOクラスのテスト版です。
-	 * SQLと接続し「Test_SelectTourDTO」クラスの雛形にデータを入れて返します。
-	 */
 
-	 // ↓単体で動きを確認するためのメインメソッドです。サイトを起動した際勝手に動いてしまうと大変なので、普段はコメントにしています。
-//	public static void main(String[] args){
-//		Test_SelectTourDAO dao = new Test_SelectTourDAO();
-//		dao.selectTour();
-//	}
+	/* @author:YUKA MATSUMURA
+	 * @since:2017/09/05
+	 * @version:1.1
+	 * */
+
+
+	String tour_name = "ツアー";
 
 
 	public ArrayList<SelectTourDTO> selectTour(){
@@ -35,6 +33,7 @@ public class SelectTourDAO {
 			Connection con = tdc.createConnection();
 			String sql = "SELECT * FROM tour";
 			PreparedStatement ps = con.prepareStatement(sql);
+			System.out.println("DAO : " + sql);
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()){

@@ -23,5 +23,22 @@
 	<action name="LogoutAction" class="com.internousdev.choitabi.action.LogoutAction" method="execute">
 	<result name="success" type="chain">MainTopAction</result>
 	</action>
+
+
+<!-- お問い合わせ画面関連 -->
+
+<action name="ComfirmContactAction" class="com.internousdev.choitabi.action.ComfirmContactAction" method="execute">
+   <result name="success">contact_kakunin.jsp</result>
+		<result name="error">contact_nyuuryoku.jsp</result>
+		</action>
+
+<action name="CompleteContactAction" class="com.internousdev.choitabi.action.CompleteContactAction" method="execute">
+   <result name="success">contactsend.jsp</result>
+		<result name="error">contact_nyuuryoku.jsp</result>
+		</action>
+
+
+
+
 </package>
 </struts>

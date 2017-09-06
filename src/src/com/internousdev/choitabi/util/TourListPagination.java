@@ -4,13 +4,9 @@ import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.SelectTourDTO;
 
-
-/*作成者：松村
- * 管理画面のツアー管理で、ページネートを行うためのクラスです。
- * 呼び出し元からツアーの一覧と現在のページ番号を渡されたら、
- * そこから必要な分のツアーのリストを抜き出して返します。
- *
- * ※動き確認中。
+/*@author:YUKA MATSUMURA
+ *@since:2017/09/05
+ *@version:1.1
  * */
 
 
@@ -62,6 +58,7 @@ public class TourListPagination {
 		}else{
 			maxPage = (allTourList.size() / tourNumber);
 		}
+		System.out.println("returnMaxPage : " + maxPage);
 
 		return maxPage;
 	}

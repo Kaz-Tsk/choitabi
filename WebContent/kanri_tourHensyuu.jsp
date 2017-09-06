@@ -17,29 +17,15 @@
         <th>名称</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
     </tr>
     <tr>
-        <th>開始日</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
-    </tr>
-    <tr>
-        <th>終了日</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
+        <th>価格</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
     </tr>
     <tr>
         <th>定員</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
     </tr>
     <tr>
-        <th>一言アピール</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
+        <th>出発地</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
     </tr>
-    <tr>
-        <th>説明文</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
-    </tr>
-    <tr>
-        <th>スケジュール概要</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
-    </tr>
-    <tr>
-        <th>画像1</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
-    </tr>
-    <tr>
-        <th>画像2</th><td>変更前</td><td>　　　</td><td>変更後</td><td>　　　</td>
-    </tr>
+
 
 </table>
 <br>

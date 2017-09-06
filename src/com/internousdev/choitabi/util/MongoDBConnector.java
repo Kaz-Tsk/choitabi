@@ -10,9 +10,9 @@ import com.mongodb.MongoClient;
 
 /**
  * MongoDBConnectorクラス
- * @author Sawako Nakahara
- * @author Shimpei Takaishi
- * @since 2017/07/04
+ * @author kanako miyazono
+ * @author kanako miyazono
+ * @since 2017/09/05
  */
 public class MongoDBConnector {
 
@@ -23,7 +23,6 @@ public class MongoDBConnector {
 	 * @return データベース名
 	 * @throws UnknownHostException ホストの IP アドレスが判定できなかった場合にスローされます。
 	 */
-	@SuppressWarnings("deprecation")
 	public DB getConnection() throws UnknownHostException {
 
 		/*Mongodbに接続
@@ -35,7 +34,7 @@ public class MongoDBConnector {
 		/*
 		 * 接続するデータベース名
 		 */
-		DB db =client.getDB("tabiyashi");
+		DB db =client.getDB("test_choitabi");
 
 		return db;
 

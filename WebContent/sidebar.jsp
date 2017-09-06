@@ -14,7 +14,7 @@
             <li>
                 <div class = "category">テーマで探す</div>
                 <ul class = "menu">
-                    <li><a href = "./choimesi.jsp">グルメ</a></li>
+                    <li><a href = "./gourmet.jsp">グルメ</a></li>
                     <li><a href = "./place.jsp">名所</a></li>
                     <li><a href = "./activity.jsp">アクティビティ</a></li>
                 </ul>
