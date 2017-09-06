@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,37 +13,38 @@
 
     <div class ="header">お問合せ内容入力_<b>内容確認</b>_送信完了</div>
 
+<s:form action="CompleteContactAction" method="post">
+
+
 <h1>お問合せ内容確認</h1>
     <div class = "direction">以下の内容で送信します。よろしいですか？<br>(※配色等は仮です)</div>
 
 
-<table>
-    <tr>
-        <th>お客様氏名</th>
-            <td>田中　太郎　様</td>
-    </tr>
-    <tr>
-        <th>フリガナ</th>
-            <td>タナカ　タロウ　様</td>
-    </tr>
-    <tr>
-        <th>メールアドレス</th><td colspan = "4">
-            aaa@bbb
-        </td>
-    </tr>
-    <tr>
-        <th>お問い合わせ内容</th><td colspan = "4">
-        予約のキャンセルはできますか？
-    </tr>
 
-</table>
+						<table>
 
-<div class = "button1">送信する</div>
-<div class = "button2">前のページに戻る</div>
+							<tr>
+								<td><s:property value="contact_name" /></td>
+							</tr>
 
-<br>
-<br>
-<br>
+							<tr>
+								<td><s:property value="contact_mailAddress" /></td>
+							</tr>
+
+							<tr>
+								<td><s:property value="contact_contents" /></td>
+							</tr>
+						</table>
+
+  <input type="submit" value="送信" >
+
+</s:form>
+
+<input type="button" value="トップ画面へ戻る" onClick="location.href='index.jsp'">
+
+<input type="button" value="入力ページに戻る" onClick="location.href='contact_nyuuryoku.jsp'">
+
+
 
 </body>
 

@@ -17,7 +17,7 @@
 
 
    <title>お問合せ内容入力画面</title>
-<link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
+   <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
 
 </head>
 
@@ -28,41 +28,43 @@
 
 
 
-<s:form action="InsertContactAction" method="post">
+
+
+<s:form action="ComfirmContactAction" method="post">
+
+
 
 <h1>お問合せ内容入力</h1>
     <div class = "direction">以下のフォームに入力してください<br></div>
 
 
-
-<table>
     <tr>
-        <th>お客様氏名</th>
-            <th>姓</th><td><input type = "text" name = "" size = "12"></td>
-            <th>名</th><td><input type = "text" name = "" size = "12"></td>
-    </tr>
-    <tr>
-        <th>フリガナ</th>
-            <th>セイ</th><td><input type = "text" name = "" size = "12"></td>
-            <th>メイ</th><td><input type = "text" name = "" size = "12"></td>
+        <th>名前</th>
+           <td><s:textfield name = "contact_name" size = "12"></s:textfield>    </td>
     </tr>
     <tr>
         <th>メールアドレス</th><td colspan = "4">
-            <s:textfield name="email"/>
+            <s:textfield  name="contact_mailAddress" size = "12"></s:textfield>
 
         </td>
     </tr>
     <tr>
         <th>お問い合わせ内容</th><td colspan = "4">
-        <textarea rows="10" cols="45"></textarea>
+        <s:textarea name="contact_contents" rows="10" cols="45"></s:textarea>
+
     </tr>
 
-</table>
 
-<input type="submit" value="確認">
-<input type="submit" value="トップに戻る">
+   <input type="submit" value="確認画面へ" >
 
 </s:form>
+
+    2013-12-17
+
+<input type="button" value="トップ画面へ戻る" onClick="location.href='index.jsp'">
+
+<input type="button" value="入力ページに戻る" onClick="location.href='contact_nyuuryoku.jsp'">
+
 
 <br>
 <br>
