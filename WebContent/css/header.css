@@ -1,14 +1,18 @@
 
-.title h1{
-	
+.header a:link{
+	color:#ffffff;
+}
+.header a:visited{
+	color:#ffffff;
 }
 
-h1
-
-.header{
-		
+.header a:hover{
+	color:#ffffff;
 }
 
+.header a:active{
+	color:#ffffff;
+}
 .crear{
 	clear:both;
 }
