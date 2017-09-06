@@ -1,6 +1,6 @@
 package com.internousdev.choitabi.dto;
 
-
+import java.sql.Date;
 
 /**
  * カート情報に関するDTOクラス
@@ -60,6 +60,16 @@ public class CartDTO {
      * 小計
      */
     private int sub_total;
+
+    /**
+     * 日程
+     */
+    private Date date;
+
+    /**
+     * 出発地
+     */
+    private String departure;
 
 
 
@@ -222,5 +232,37 @@ public class CartDTO {
     public void setSubTotal(int sub_total) {
         this.sub_total = sub_total;
         }
+
+    /**
+     * 日程を取得するメソッド
+     * @return date 日程
+     */
+    public Date getDate() {
+    	return date;
+    }
+
+    /**
+     * 日程を格納するメソッド
+     * @param date 日程
+     */
+    public void setDate(Date date) {
+    	this.date = date;
+    }
+
+    /**
+     * 出発地を取得するメソッド
+     * @return departure 出発地
+     */
+    public String getDeparture() {
+    	return departure;
+    }
+
+    /**
+     * 出発地を格納するメソッド
+     * @param departure 出発地
+     */
+    public void setDeparture(String departure) {
+    	this.departure = departure;
+    }
 
 }
