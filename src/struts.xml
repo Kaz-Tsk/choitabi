@@ -28,16 +28,23 @@
 		<result name="error">kanri_tourList.jsp</result>
 	</action>
 
-<!-- ログイン画面関連 -->
+<!-- ログイン画面 -->
 	<action name="LoginAction" class="com.internousdev.choitabi.action.LoginAction" method="execute">
 	<result name="success" type="chain">MainTopAction</result>
 	<result name="error" >login.jsp</result>
 	</action>
-	<!-- ログアウト画面関連 -->
+
+
+	<!-- ログアウト画面 -->
 	<action name="LogoutAction" class="com.internousdev.choitabi.action.LogoutAction" method="execute">
 	<result name="success" type="chain">MainTopAction</result>
 	</action>
 
+<!-- マイページ遷移 -->
+<action name="MypageAction" class="com.internousdev.choitabi.action.MypageAction" method="execute">
+<result name="success" >mypage_new.jsp</result>
+<result name="error">index.jsp</result>
+</action>
 
 <!-- お問い合わせ画面関連 -->
 
