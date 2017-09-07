@@ -5,6 +5,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/login.css">
 <title>login</title>
 </head>
 
@@ -31,7 +32,7 @@
 
 
 <!-- footer include部分 -->
-<footer>
+<footer style=margin-top:1000px>
 	<s:include value="footer.jsp"></s:include>
 </footer>
 </body>
