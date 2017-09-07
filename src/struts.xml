@@ -27,6 +27,13 @@
 		<result name="success">kanri_tourHensyuu.jsp</result>
 		<result name="error">kanri_tourList.jsp</result>
 	</action>
+		<action name="ConfirmEditingAction" class="com.internousdev.choitabi.action.ConfirmEditingAction" method="execute">
+		<result name="success">kanri_tourHensyuuKakunin.jsp</result>
+		<result name="error">kanri_tourHensyuu.jsp</result>
+	</action>
+
+
+
 
 <!-- ログイン画面関連 -->
 	<action name="LoginAction" class="com.internousdev.choitabi.action.LoginAction" method="execute">

@@ -53,7 +53,7 @@
 
 <br>
 <hr>
-    <input type = "checkbox" name = "deleteCheck" value = "false"><font color = "red">このツアーを削除する</font>
+    <input type = "checkbox" name = "deleteCheck" value = "true"><font color = "red">このツアーを削除する</font>
 <hr>
     <br>
     <s:submit value="確認画面へ"/>
