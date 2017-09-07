@@ -1,5 +1,3 @@
-<!-- 終わる気がしない -->
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- と宣言することで、JSPファイルとして機能させることが出来る -->
@@ -16,16 +14,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<!-- 国際化 ※ここでは国を判別しています。
-    言語コード( ja,en など)を示すロケールID を取得します。-->
+<!-- 国際化 ここから -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
-<fmt:setBundle basename="com.internousdev.choitabi.property.cart"
-	var="lang" />
+<fmt:setBundle basename="com.internousdev.choitabi.property.cart" var="lang" />
+<!-- 国際化 ここまで -->
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
 
 <title>chitabi-カート画面</title>
 
@@ -37,8 +30,7 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-<!-- cart.css -->
-<link rel="stylesheet" type="text/css" href="css/cart.css">
+<link rel="stylesheet"type="text/css"href="./css/cart.css">
 
 </head>
 
@@ -48,10 +40,10 @@
 
 <!-------------- ヘッダー -------------->
 <header>
-<jsp:include page="header.jsp" />
+  <jsp:include page="header.jsp" />
 </header>
 
-	<div id="contents" style="margin-bottom: 50px;">
+	<div id="contents" style="margin-top: 150px; margin-bottom: 200px;">
 
 		<div class="col-sm-12 center">
 
@@ -65,10 +57,10 @@
 			<table class="cartlist">
 				<thead>
 					<tr>
-						<th><s:text name="lang.cart.tour_name" /></th>
+						<th><s:text name="lang.cart.tourname" /></th>
+						<th><s:text name="lang.cart.date" /></th>
 						<th><s:text name="lang.cart.price" /></th>
 						<th><s:text name="lang.cart.count" /></th>
-						<th><s:text name="lang.cart.date" /></th>
 						<th><s:text name="lang.cart.price" /></th>
 						<th><s:text name="lang.cart.count" /></th>
 						<th><s:text name="lang.cart.delete" /></th>
@@ -77,9 +69,9 @@
 				<tbody>
 					<s:iterator value="cartList">
 						<tr>
-							<td><img src="<s:property value="imgAddress001"/>" alt=""
-								width="100" height="100"></td>
 							<td><s:property value="tour_name" /></td>
+
+							<td><s:property value="date" /></td>
 
 							<td><fmt:formatNumber value="${price}" pattern="###,###,###" />
 								<s:text name="lang.cart.yen" /></td>
@@ -87,8 +79,7 @@
 							<td><s:property value="quantity" /></td>
 
 
-							<td><s:property value="date" /></td>
-							<td><fmt:formatNumber value="${subTotal}"
+							<td><fmt:formatNumber value="${sub_total}"
 									pattern="###,###,###" /> <s:text name="lang.cart.yen" /></td>
 
 							<td><s:form action="UpdateCartAction">
@@ -131,7 +122,7 @@
 			</table>
 			<h2 class="text-danger text-right">
 				<s:text name="lang.cart.total" />
-				<fmt:formatNumber value="${total_price}" pattern="###,###,###" />
+				<fmt:formatNumber value="${tital_price}" pattern="###,###,###" />
 				<s:text name="lang.cart.tax_include" />
 			</h2>
 
@@ -144,23 +135,18 @@
 		</s:if>
 		<s:else>
 			<br>
-			<br>
-			<br>
-			<h1 class='empty'>
+
+			<h1 class="empty" style="margin-top:150px;">
 				<s:text name="lang.cart.empty" />
 			</h1>
 		</s:else>
 
 	</div>
 
-<div class = "footer">
+<!-------------- フッター -------------->
+<footer>
+   <jsp:include page="footer.jsp" />
+</footer>
 
-    <div class = "ARRLogo">All Rights Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu"><a href="./company_overview">会社概要</a></div>
-        <div class = "footerMenu"><a href="">利用規約</a></div>
-    </div>
-    <div class = "clear"></div>
-    </div>
 </body>
 </html>
