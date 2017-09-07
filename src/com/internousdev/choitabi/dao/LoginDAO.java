@@ -33,8 +33,8 @@ public class LoginDAO {
 		/*データベースへの接続*/
 		Connection con = db.getConnection();
 		UsersDTO dto = new UsersDTO();
-		String sql ="select mailAddress,user_id,login_flg"
-				+"from users where mailAddress = ? and password = ?";
+		String sql ="select phone_email,user_id,login_flg"
+				+"from users where phone _email = ? and password = ?";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -44,7 +44,7 @@ public class LoginDAO {
 			ResultSet rs = ps.executeQuery();
 
 			if(rs.next()){
-				dto.setMailAddress(rs.getString("mailAddress"));
+				dto.setMailAddress(rs.getString("phone_email"));
 				dto.setPassword(rs.getString("password"));
 				dto.setUserId(rs.getInt("user_id"));
 				dto.setLoginFlg(rs.getBoolean("login_flg"));
@@ -68,7 +68,7 @@ public class LoginDAO {
 		int count = 0;
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
-		String sql = "update users set login_flg = true where mailAddress = ? and password = ?";
+		String sql = "update users set login_flg = true where phone_email = ? and password = ?";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
