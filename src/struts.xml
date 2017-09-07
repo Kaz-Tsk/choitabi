@@ -5,6 +5,16 @@
 
 <struts>
 	<constant name="struts.devMode" value="true" />
+
+<!-- 国際化 -->
+<constant name="struts.custom.i18n.resources"
+      value="com.internousdev.choitabi.property.cart"
+
+
+
+      />
+
+
 	<package name="com.internousdev.choitabi.action"  extends="struts-default">
 
 
@@ -38,6 +48,21 @@
 <action name="CompleteContactAction" class="com.internousdev.choitabi.action.CompleteContactAction" method="execute">
    <result name="success">contactsend.jsp</result>
 		<result name="error">contact_nyuuryoku.jsp</result>
+		</action>
+
+
+<!-- 商品詳細からカートへの遷移 -->
+<action name="InsertCartAction" class="com.internousdev.choitabi.action.InsertCartAction" method="execute">
+<result name="success" >cart2.jsp</result>
+<result name="error" >login.jsp</result>
+
+</action>
+
+<!-- カートの情報を取得する -->
+		<action name="SelectCartAction" class="com.internousdev.choitabi.action.SelectCartAction"
+			method="execute">
+			<result name="success">cart.jsp</result>
+			<result name="error">login.jsp</result>
 		</action>
 
 
