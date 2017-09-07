@@ -1,1 +1,8 @@
-login.box[]
+.login-box{
+	width:500px;
+	hight:500px;
+	margin:o auto;
+	text-align; center;
+	border:2px solid color:#ffffff;
+
+}
