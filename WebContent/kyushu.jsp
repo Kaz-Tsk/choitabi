@@ -22,6 +22,12 @@
 
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
+         <div class="sub">
+                 <img class = "img" src = "img/chickennanban.jpg">
+                <div class="name">チキン南蛮<br>(九州/宮崎県)</div>
+                <div class="price">価格:443円</div>
+            </div>
+
             <div class="sub">
                 <img class = "img" src = "img/nagasakichanpon.jpg">
                 <div class="name">長崎ちゃんぽん<br>(九州/長崎県)</div>

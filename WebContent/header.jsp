@@ -10,10 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale-1.0">
 <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/header.css" rel="stylesheet">
-<style type="text/css">
-a:link { color : #ffffff; }
-a:visited { color : #ffffff; }
-</style>
 
 <!-- 国際化 -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
@@ -30,12 +26,13 @@ a:visited { color : #ffffff; }
 </head>
 <body >
 <header >
+<div class="header">
 		<div class="title">
-			<h1 class="col-sm-9" style="text-color:#ffffff" >
+			<h1 class="col-sm-9"  >
 				<a href="<s:url action="about.jsp"/>"><span
 					class="glyphicon glyphicon-globe"></span>choitabi</a>
 			</h1>
-			<p class="col-sm-3" style="text-align: right" style="text-color:#ffffff">
+			<p class="col-sm-3" style="text-align: right">
 				<s:property value="Session.get(\"name\")" />
 				<br>
 			</p>

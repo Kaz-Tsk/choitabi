@@ -1,11 +1,24 @@
-.clear{
+
+.header a:link{
+	color:#ffffff;
+}
+.header a:visited{
+	color:#ffffff;
+}
+
+.header a:hover{
+	color:#ffffff;
+}
+
+.header a:active{
+	color:#ffffff;
+}
+.crear{
 	clear:both;
 }
 .body{
   padding: 0;
   font-size: 15px;
-  width:30%;
-  top:100px;
 }
 .title{
   position: absolute;
