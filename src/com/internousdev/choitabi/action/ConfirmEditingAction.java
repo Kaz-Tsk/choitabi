@@ -37,13 +37,14 @@ public class ConfirmEditingAction extends ActionSupport{
 	/*executeメソッド-------------------------------------------------*/
 
 	public String execute(){
-		String result = ERROR;
+		String result = SUCCESS;
 
 		/*後消し*/System.out.println("ConfirmEditingAction : " + editTourName);
 		/*後消し*/System.out.println("ConfirmEditingAction : " + editPrice);
 		/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons);
 		/*後消し*/System.out.println("ConfirmEditingAction : " + editDeparture);
 		/*後消し*/System.out.println("ConfirmEditingAction : " + deleteCheck);
+		/*後消し*/System.out.println("ConfirmEditingAction - result : " + result);
 		return result;
 	}
 
@@ -55,7 +56,7 @@ public class ConfirmEditingAction extends ActionSupport{
 		return editTourName;
 	}
 
-	public void seteditTourName(String editTourName){
+	public void setEditTourName(String editTourName){
 		this.editTourName = editTourName;
 	}
 
@@ -95,7 +96,7 @@ public class ConfirmEditingAction extends ActionSupport{
 		return editDeparture;
 	}
 
-	public void setDeparture(String editDeparture){
+	public void setEditDeparture(String editDeparture){
 		this.editDeparture = editDeparture;
 	}
 
