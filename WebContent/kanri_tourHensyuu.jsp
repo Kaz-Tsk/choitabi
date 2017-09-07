@@ -14,34 +14,51 @@
 【変更後】欄に情報を入力してください
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
 
-<s:form>
 <table border = "1px" cellspacing = "0px" cellpadding = "10px">
-    <tr>
-        <th>名称</th>
-        <td>変更前</td><td><s:property value="tourName"/></td>
-        <td>変更後</td><td><s:textfield name="tourName"/></td>
-    </tr>
-    <tr>
-        <th>価格</th>
-        <td>変更前</td><td><s:property value="price"/></td>
-
-    </tr>
-    <tr>
-        <th>定員</th>
-        <td>変更前</td><td><s:property value="persons"/></td>
-    </tr>
-    <tr>
-        <th>出発地</th>
-        <td>変更前</td><td><s:property value="departure"/></td>
-    </tr>
+   <tr>
+   		<th colspan="2">現在のツアー情報</th>
+   </tr>
+   <tr>
+   		<th>名称</th><td><s:property value="tourName"/></td>
+   </tr>
+      <tr>
+   		<th>価格</th><td><s:property value="price"/>円</td>
+   </tr>
+      <tr>
+   		<th>定員</th><td><s:property value="perons"/>名</td>
+   </tr>
+      <tr>
+   		<th>出発地</th><td><s:property value="departure"/></td>
+   </tr>
 </table>
+
+<s:form action="ConfirmEditingAction">
+<table cellspacing = "0px" cellpadding = "10px">
+   <tr>
+   		<th colspan="2">ツアー情報編集</th>
+   </tr>
+   <tr>
+   		<th>名称変更：</th><td><s:textfield value="editTourName"/></td>
+   </tr>
+      <tr>
+   		<th>価格変更：</th><td><s:textfield value="editPrice"/>円</td>
+   </tr>
+      <tr>
+   		<th>定員変更</th><td><s:textfield value="editPerons"/>名</td>
+   </tr>
+      <tr>
+   		<th>出発地変更：</th><td><s:textfield value="editDeparture"/></td>
+   </tr>
+</table>
+
 <br>
 <hr>
-    <input type = "checkbox" name = "" value = ""><font color = "red">このツアーを削除する</font>
+    <input type = "checkbox" name = "deleteCheck" value = "false"><font color = "red">このツアーを削除する</font>
 <hr>
     <br>
     <s:submit value="確認画面へ"/>
 </s:form>
+
 <!-- ここまで編集フォーム -->
 
     <br>
