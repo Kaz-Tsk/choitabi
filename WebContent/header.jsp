@@ -38,6 +38,7 @@
 		</div>
 		</s:elseif>
 
+
 	<!-- 未ログイン時ヘッダー -->
 	<s:else>
 	    <div class="logo"><a href="<s:url action="MainTopAction"/>"><span
