@@ -1,8 +1,161 @@
-.login-box{
-	width:500px;
-	hight:500px;
-	margin:o auto;
-	text-align; center;
-	border:2px solid color:#ffffff;
+body,p,form,input{margin: 0
+                  padding-bottom:90px;
+}
+#form{
+    width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #555;
+    margin-top: 150px;
+}
+
+form p{
+    font-size: 14px;
+}
+
+.form-title{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom:solid 3px #fff;
+}
+
+.username {
+    margin-bottom: 20px;
+}
+
+.password {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 350px;
+    padding: 4px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+
+
+
+#form{
+  background:#f78181;
+  border-radius: 6px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+}
+
+.submit input {
+  background: #f78181;
+  border-radius: 8px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.submit input:hover {
+  background: #f5c7c7;
+  text-decoration: none;
+}
+
+.header{
+    top:0px;
+    right:0px;
+    left:0px;
+    height:60px;
+    width:100%;
+    font-size:24px;
+    text-align:left;
+    background-color:orange;
+    white-space:nowrap;
+}
+
+/*ヘッダーの「choitabi」ロゴの文字列部分----------------------------------------------*/
+.headerLogo{
+    float:left;
+    margin-left:30px;
+    font-size:40px;
+    line-height:64px;
+    color:white;
+}
+
+
+.clear{
+	clear:both;
+}
+
+/*ヘッダーの各メニュー項目を一まとめにしているグループ(メニュー全体の場所調整に使っています)----*/
+.headerMenuBox{
+	position:absolute;
+    right:10px;
+    left:240px;
+    text-align:right;
+    white-space:nowrap;
+}
+
+/*「choitabiについて」「Q&A/お問い合わせ」「ログイン」の各文字列を調整しているところ---------*/
+.headerMenu{
+	position:absolute;
+	top:30px;
+	right:10px;
+	left:100px;
+    margin-right:40px;
+    margin-left:80px;
+    float:left;
+    color:white;
+    font-size:18px;
+    line-height:10px;
+    white-space:nowrap;
+}
+
+
+.footer{
+    bottom:0px;
+    height:50px;
+    width:100%;
+    float:left;
+    background-color:orange;
+    color:white;
+    text-align:center;
+    font-size:12px;
+    line-height:50px;
 
 }
+
+.ARRLogo{
+    float:left;
+    margin-left:500px;
+    line-height:54px;
+    color:white;
+}
+
+.footerMenuBox{
+    margin-left:800px;
+    margin-right:40px;
+
+}
+
+.footerMenu{
+    float:left;
+    margin-left:40px;
+    color:white;
+    font-size:16px;
+}
+
+/*リンク部分の色・装飾の設定(はぎわらさんありがとう！)*/
+
+
+a:visited { color : white;}
+
+a:hover { color : yellow;}
+
+a:active { color : white;}
+
+a {text-decoration : none;}
+
