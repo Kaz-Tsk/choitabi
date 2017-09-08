@@ -45,9 +45,9 @@
 	</s:iterator>
 </table>
     <br>
-
+    <a href='<s:url action="GoTourInsertPageAction"></s:url>'>
     ツアーの新規登録を行う
-
+    </a><br>
     <br>
 <!-- ↓ページの「＜＜1/3＞＞」の部分です -->
 
