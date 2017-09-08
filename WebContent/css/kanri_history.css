@@ -1,0 +1,189 @@
+@CHARSET "UTF-8";
+
+li{
+list-style:none;
+}
+
+/* --- 全体のリンクテキスト --- */
+a:link { color: #0000ff; }
+a:hover { color: #ff0000; }
+a:active { color: #ff0000; }
+
+/* --- コンテナ --- */
+#container {
+	width: 100%; /* ページの幅 */
+	background: url(sidebar_200.gif) repeat-y left; /* サイドバーの背景画像 */
+	background-color: #ffffff; /* メインカラムの背景色 */
+}
+
+/* --- ヘッダ --- */
+#header {
+	background-color:#d3f2f4;
+	height:150px;
+	width:100%;
+}
+
+.logoutbutton {
+	position:absolute;
+	left:1505px;
+	top:30px;
+}
+
+/* --- ナビゲーション --- */
+#nav {
+float: left;
+width: 180px; /* サイドバーの幅 */
+background-color:lightgrey;
+height:1000px;
+}
+
+
+/* --- メインカラム --- */
+#content {
+width: 100%; /* メインカラムの幅 */
+
+}
+/* --- メインカラム --- */
+#contents {
+width: 100%; /* メインカラムの幅 */
+height:1000px;
+}
+
+.itemdisplay{
+	position:relative;
+	width:1500px;
+	margin-left:200px;
+	margin-top:100px;
+}
+
+.center{
+	text-align:center;
+}
+
+
+.salessum {
+	margin:20px;
+	top:30px;
+	left:30px;
+	text-align:center;
+	vertical-align:botom;
+}
+
+textarea {
+	vertical-align:top;
+}
+
+table{
+	margin:10px 30px;
+	text-align:center;
+	border:1px solid lightgrey;
+
+}
+
+th{
+	border:1px solid lightgrey;
+	width:180px;
+	height:20px;
+	font-size:12px;
+	background-color:lightgrey;
+	text-align:center;
+}
+
+td{
+	border:1px solid lightgrey;
+	width:180px;
+	height:20px;
+	font-size:12px;
+	text-align:center;
+}
+
+#submit {
+font-family: FontAwesome;
+}
+
+#cboxOverlay {
+    background: #000;
+}
+#cboxLoadedContent {
+    background: #fff;
+}
+#cboxLoadedContent {
+  padding: 0;
+  overflow: auto;
+    -moz-box-shadow: 0px 1px 10px #000000;
+    -webkit-box-shadow: 0px 1px 10px #000000;
+    box-shadow: 0px 1px 10px #000000;
+}
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose , #cboxTitle {
+  top: -30px;
+}
+#colorbox, #cboxOverlay, #cboxWrapper {
+  overflow: visible ;
+}
+#cboxTitle {
+  color: #fff;
+}
+#inline-content {/* インラインを使用する時のみ */
+    margin: 20px;
+}
+#ajax-wrap {/* ajaxを使用する時のみ */
+  margin: 20px;
+}
+
+.notwide{
+	width:60px;
+
+}
+
+/* --- グラフエリア --- */
+svg{
+	width:450px;
+	height:240px;
+	border:1px solid black;
+	float:left;
+
+}
+
+.bar{
+	fill:lightblue;
+}
+
+.barNum{
+	font-size:10pt;
+	text-anchor:middle;
+	color:white;
+}
+
+.axis text{
+	font-size:11px;
+}
+
+.axis path,
+.axis line{
+	fill:none;
+	stroke:black;
+}
+
+.barName{
+	font-size:9pt;
+	text-anchor:middle;
+}
+
+.display{
+	position:relative;
+	width:1500px;
+margin-left:200px;
+	margin-top:250px;
+}
+
+footer{
+	display:inline;
+}
+
+.invalid{
+	height:1000px;
+}
+
+span{
+	color:white;
+}

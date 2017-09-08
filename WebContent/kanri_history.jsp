@@ -30,13 +30,12 @@
 <header>choitabi</header>
 
 	<div id="contents">
-		<h3><s:text name="lang.admin_ordersearch.orderSearch"/></h3>
+		<h3><s:text name="lang.kanri_history.orderSearch"/></h3>
 		<div class="toursearch">
 			<s:form action="KanriHistoryAction" method="post">
 				<p>
-					<s:text name="lang.adz
-					in_ordersearch.itemName"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="itemName">
-					<input type="submit" id="submit" value="&#xf002; <s:text name="lang.admin_ordersearch.search"/>">
+					<s:text name="kanri_history.tourName"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="tourName">
+					<input type="submit" id="submit" value="&#xf002; <s:text name="lang.kanri_history.search"/>">
 				</p>
 			</s:form>
 		</div>
@@ -44,23 +43,21 @@
 		<div class="tourdisplay">
 			<table>
 				<tr>
-					<th class="notwide"><s:text name="lang.admin_ordersearch.userID"/></th>
+					<th class="notwide"><s:text name="lang.kanri_history.userID"/></th>
 					<th>ユーザー名</th>
-					<th class="notwide"><s:text name="lang.admin_ordersearch.itemID"/></th>
-					<th><s:text name="lang.admin_ordersearch.tourName"/></th>
-					<th class="notwide"><s:text name="lang.admin_ordersearch.size" /></th>
-					<th class="notwide"><s:text name="lang.admin_ordersearch.quantity"/></th>
-					<th><s:text name="lang.admin_ordersearch.total_price"/></th>
-					<th><s:text name="lang.admin_ordersearch.registrationDate"/></th>
+					<th class="notwide"><s:text name="lang.kanri_history.tourID"/></th>
+					<th><s:text name="lang.kanri_history.tourName"/></th>
+					<th class="notwide"><s:text name="lang.kanri_hisrtory.quantity"/></th>
+					<th><s:text name="lang.kanri_history.totalPrice"/></th>
+					<th><s:text name="lang.kanri_history.registrationDate"/></th>
 				</tr>
 				<s:iterator value="displayList">
 					<tr>
 						<td class="notwide"><s:property value="userId"/></td>
-						<td><s:property value="family_name_kanji"/>&nbsp;<s:property value="given_name_kanji"/></td>
-						<td class="notwide"><s:property value="itemId"/></td>
-						<td><s:property value="itemName"/></td>
-						<td class="notwide"><s:property value="size"/></td>
-						<td class="notwide"><s:property value="orderCount"/></td>
+						<td><s:property value="familyNameKanji"/>&nbsp;<s:property value="givenNameKanji"/></td>
+						<td class="notwide"><s:property value="tourId"/></td>
+						<td><s:property value="tourName"/></td>
+						<td class="notwide"><s:property value="quantity"/></td>
 						<td><fmt:formatNumber value="${amount}" pattern="###,###,###" /></td>
 						<td><fmt:formatDate value="${registrationDate}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 					</tr>
@@ -78,7 +75,7 @@
 
 					<!-- ページネーション:1ページ目以外 -->
 					<s:else>
-						<a href='<s:url action="AdminOrderAction">
+						<a href='<s:url action="KanriHistoryAction">
 							<s:param name="pageNum" value="pageNum-1"/></s:url>'>&laquo;
 							<s:text name="戻る" />
 						</a>
@@ -94,7 +91,7 @@
 
 					<!-- 最終ページ以外 -->
 					<s:else>
-						<a href='<s:url action="AdminOrderAction">
+						<a href='<s:url action="KanriHistoryAction">
 							<s:param name="pageNum" value="pageNum+1"/></s:url>'><s:text name="進む" />&raquo;
 						</a>
 					</s:else>

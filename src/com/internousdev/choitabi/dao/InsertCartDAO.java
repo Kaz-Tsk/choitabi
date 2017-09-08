@@ -108,7 +108,7 @@ public class InsertCartDAO {
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1,  userId);
+			ps.setInt(1, userId);
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()) {
