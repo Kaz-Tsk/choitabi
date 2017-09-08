@@ -10,7 +10,7 @@ import com.internousdev.choitabi.dto.CartDTO;
  * 渡されたリストに対してページネーションを行うクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/08
- * @version 1.1
+ * @version 1.0
  */
 
 public class AllPagesC {
@@ -68,6 +68,7 @@ public class AllPagesC {
      * @param count 1ページあたりに掲載されるオブジェクトの個数
      * @return maxPages
      */
+
     public int getMaxPage(ArrayList<?> list, int count) {
         int maxPages = 0;
 
@@ -82,4 +83,3 @@ public class AllPagesC {
         }
 
 }
-

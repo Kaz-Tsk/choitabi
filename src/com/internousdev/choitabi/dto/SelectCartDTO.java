@@ -1,10 +1,12 @@
 package com.internousdev.choitabi.dto;
 
+
+
 /**
  * カート情報を格納・取得するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.1
+ * @version 1.0
  */
 
 public class SelectCartDTO {
@@ -12,12 +14,12 @@ public class SelectCartDTO {
 	    /**
 	     * 商品ID
 	     */
-	    private int tour_id;
+	    private int tourId;
 
 	    /**
 	     * 商品名
 	     */
-	    private String tour_name;
+	    private String tourName;
 
 	    /**
 	     * 価格
@@ -33,34 +35,34 @@ public class SelectCartDTO {
 
 	    /**
 	     * ツアーIDを取得するメソッド
-	     * @return tour_id ツアーID
+	     * @return tourId ツアーID
 	     */
 	    public int getTourId(){
-	        return tour_id;
+	        return tourId;
 	    }
 
 	    /**
 	     * ツアーIDを格納するメソッド
-	     * @param tour_id ツアーID
+	     * @param tourId ツアーID
 	     */
-	    public void setTourId(int tour_id){
-	        this.tour_id = tour_id;
+	    public void setTourId(int tourId){
+	        this.tourId = tourId;
 	    }
 
 	    /**
 	     * ツアー名を取得するメソッド
-	     * @return tour_name ツアー名
+	     * @return tourName ツアー名
 	     */
 	    public String getTourName(){
-	        return tour_name;
+	        return tourName;
 	    }
 
 	    /**
 	     * ツアー名を格納するメソッド
-	     * @param tour_name ツアー名
+	     * @param tourName ツアー名
 	     */
-	    public void setTourName(String tour_name){
-	        this.tour_name = tour_name;
+	    public void setTourName(String tourName){
+	        this.tourName = tourName;
 	    }
 
 	    /**
