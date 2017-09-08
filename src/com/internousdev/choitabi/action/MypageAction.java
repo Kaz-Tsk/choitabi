@@ -177,9 +177,7 @@ public class MypageAction extends ActionSupport implements SessionAware {
 			 this.payOffResult = payOffResult;
 		 }
 
-		@Override
-		public void setSession(Map<String, Object> arg0) {
-			// TODO 自動生成されたメソッド・スタブ
 
-		}
+
+
 }
