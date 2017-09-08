@@ -7,10 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.SelectTourDTO;
+import com.internousdev.choitabi.util.DBConnector;
 
-import src.com.internousdev.choitabi.util.DBConnecter;
-
-public class SelectTourDAO {
+public class SelectTourListDAO {
 
 
 	/* @author:YUKA MATSUMURA
@@ -19,17 +18,14 @@ public class SelectTourDAO {
 	 * */
 
 
-	String tour_name = "ツアー";
-
-
-	public ArrayList<SelectTourDTO> selectTour(String selectWord){
+	public ArrayList<SelectTourDTO> selectTourList(String selectWord){
 
 		/*呼び出し元に返すツアー情報のリストを作ります*/
 			ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			DBConnecter tdc = new DBConnecter();
+			DBConnector tdc = new DBConnector();
 			Connection con = tdc.createConnection();
 			String sql = "SELECT * FROM tour WHERE tour_name LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -49,9 +45,6 @@ public class SelectTourDAO {
 				tstdto.setPersons(rs.getInt("persons"));
 				tstdto.setDate(rs.getString("date")); /*これString型で動くんだ……*/
 				tstdto.setDeparture(rs.getString("departure"));
-				/*↓System.out…挙動チェック用の記述です */
-				System.out.println("Test_SelectTourDAO:" + tstdto.getTourName());
-				System.out.println("Test_SelectTourDAO:" + tstdto.getDate());
 				allTourList.add(tstdto);
 			}
 
@@ -61,6 +54,7 @@ public class SelectTourDAO {
 			rs.close();
 
 			/*作ったリストを、呼び出し元に返します*/
+			/*後消し*/System.out.println("SelectTourDAO - 該当データ数 : " + allTourList.size());
 			return allTourList;
 
 

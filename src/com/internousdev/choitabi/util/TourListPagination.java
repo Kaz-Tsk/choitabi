@@ -1,4 +1,4 @@
-package src.com.internousdev.choitabi.util;
+package com.internousdev.choitabi.util;
 
 import java.util.ArrayList;
 
@@ -26,11 +26,11 @@ public class TourListPagination {
 
 
 
-	public ArrayList<SelectTourDTO> paginateTourList(ArrayList<SelectTourDTO> allTourList, int currentPage, int maxPage){
+	public ArrayList<SelectTourDTO> paginateTourList(ArrayList<SelectTourDTO> allTourList, int currentPage){
 
 		/*呼び出し元に返すツアーのリスト*/
 		ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
-		/*後消し*/System.out.println("TourListPagination.java - currentPage : " + currentPage);
+		/*後消し*/System.out.println("TourListPagination.java - 表示中ページ数 : " + currentPage);
 
 		firstIndex = firstIndex + ( (currentPage - 1)  * tourNumber );
 		lastIndex = lastIndex + (currentPage * tourNumber);
@@ -46,9 +46,9 @@ public class TourListPagination {
 				break;
 			}
 			currentTourList.add(allTourList.get(i));
-			System.out.println("firstIndex : " + firstIndex);
-			System.out.println("lastIndex : " + lastIndex);
-			System.out.println("paginate : " + currentTourList.size());
+//			System.out.println("firstIndex : " + firstIndex);
+//			System.out.println("lastIndex : " + lastIndex);
+//			System.out.println("paginate : " + currentTourList.size());
 		}
 
 		return currentTourList;
@@ -59,7 +59,10 @@ public class TourListPagination {
 	public int rerturnMaxPage(ArrayList<SelectTourDTO> allTourList){
 		int maxPage;
 
-		if( (allTourList.size() % tourNumber)  != 0 ){
+		if(allTourList.size() == 0){
+			maxPage = 1;
+		}
+		else if( (allTourList.size() % tourNumber)  != 0 ){
 			maxPage = (allTourList.size() / tourNumber) + 1;
 		}else{
 			maxPage = (allTourList.size() / tourNumber);

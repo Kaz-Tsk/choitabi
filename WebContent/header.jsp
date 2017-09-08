@@ -1,20 +1,59 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<link  rel = "stylesheet" type= "text/css" href ="./css/header.css">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>choitabi</title>
+     <link rel="stylesheet" type="text/css"  href="/css/header.css">
+     <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="header">
-<div class = "headerLogo">choitabi</div>
-      <ul id="dropmenu" class="dropmenu" style="list-style:none;">
-        <li><a href ="about.jsp">choitabiについて</a></li>
-        <li><a href = "contact_nyuuryoku.jsp">Ｑ＆Ａ/お問い合わせ</a></li>
-        <li><a href = "./login.jsp">ログイン</a></li>
-      </ul>
-</div>
+
+	<!-- ログイン時ヘッダー -->
+	<s:if test="session.get(\"user\").equals(\"success\")">
+			<div class="logo"><a href="MainTopAction"><span
+					class="glyphicon glyphicon-globe"></span>choitabi</a>
+			<div class="navi2">
+				<div class="naviloginbox"><a href="MainTopAction" class="underline"></div>
+				<div class="naviloginbox"><a href="SelectCartAction" class="underline"></div>
+				<div class="naviloginbox"><a href="MypageAction" class="underline"></div>
+				<div class="naviloginbox"><a href="ComfirmContactAction" class="underline"></div>
+				<div class="naviloginbox"><a href="CompleteCartAction" class="underline"></div>
+				<div class="naviloginboxright"><a href="LogoutAction" class="underline"></div>
+			</div>
+			</div>
+	</s:if>
+
+	<!-- 管理者ログイン時ヘッダー  -->
+		<s:elseif test="session.get(\"user\").equals(\"login\")">
+		<div class="logo"><a href="MasterTopAction" class="underline">choitabi</a></div>
+		<div class="navi">
+			<div class="navibox"><a href="MasterTopAction" class="underline"></div>
+			<div class="navibox"><a href="<!--MasterHistoryAction-->" class="underline"></div>
+			<div class="navibox"><a href= "<!--MasterContactAction-->"class="underline"></div>
+			<div class="navibox"><a href="<!--MasterItemAction-->" class="underline"></div>
+			<div class="naviboxright"><a href="LogoutAction"  class="underline"></div>
+		</div>
+		</s:elseif>
+
+	<!-- 未ログイン時ヘッダー -->
+	<s:else>
+		<div class="logo"><a href="<s:url action="MainTopAction" />" class="underline">choitabi</a></div>
+		<div class="logout-name"></div>
+		<div class="navi">
+		<div class="navibox"><a href="index.jsp" class="underline"></div>
+		<div class="navibox"><a href="<!--UserItemListAction-->" class="underline"></div>
+		<div class="navibox"><a href="about.jsp"  class="underline"></div>
+		<div class="navibox"><a href="contact_nyuuryoku.jsp"  class="underline"></div>
+		<div class="naviboxright"><a href="login.jsp"  class="underline"></div>
+		</div>
+	</s:else>
+
 </body>
 </html>

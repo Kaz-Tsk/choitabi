@@ -1,7 +1,5 @@
 package com.internousdev.choitabi.dto;
 
-
-
 /**
  * カート情報に関するDTOクラス
  * @author HINAKO HAGIWARA
@@ -20,6 +18,21 @@ public class CartDTO {
      * ユーザーID
      */
     private int user_id;
+
+    /**
+     * 姓
+     */
+    private String family_name_kanji;
+
+    /**
+     * 名
+     */
+    private String given_name_kanji;
+
+    /**
+     * 支払い方法
+     */
+    private int paymentMethod;
 
     /**
      * ツアーID
@@ -47,6 +60,16 @@ public class CartDTO {
     private int total_price;
 
     /**
+     * 備考
+     */
+    private String note;
+
+    /**
+     * 画像パス
+     */
+    private String imgAddress001;
+
+    /**
      * 登録日
      */
     private String registration_date;
@@ -55,6 +78,11 @@ public class CartDTO {
      * 更新日
      */
     private String updated_date;
+
+    /**
+     * ツアーカテゴリー
+     */
+    private String tourCategory;
 
     /**
      * 小計
@@ -94,6 +122,54 @@ public class CartDTO {
     public void setUserId(int user_id) {
         this.user_id = user_id;
         }
+
+    /**
+     * 姓を取得するメソッド
+     * @return family_name_kanji 姓
+     */
+    public String getFamilyNameKanji() {
+    	return family_name_kanji;
+    }
+
+    /**
+     * 姓を格納するメソッド
+     * @parem family_name_kanji 姓
+     */
+    public void setFamilyNameKanji(String family_name_kanji) {
+    	this.family_name_kanji = family_name_kanji;
+    }
+
+    /**
+     * 名を取得するメソッド
+     * @return given_name_kanji 名
+     */
+    public String getGivenNameKanji() {
+    	return given_name_kanji;
+    }
+
+    /**
+     * 名を格納するメソッド
+     * @param given_name_kanji 名
+     */
+    public void setGivenNameKanji(String given_name_kanji) {
+    	this.given_name_kanji = given_name_kanji;
+    }
+
+    /**
+     * 支払い方法を取得するメソッド
+     * @return paymentMethod 支払い方法
+     */
+    public int getPaymentMethod() {
+    	return paymentMethod;
+    }
+
+    /**
+     * 支払い方法を格納するメソッド
+     * @param paymentMethod 支払い方法
+     */
+    public void setPaymentMethod(int paymentMethod) {
+    	this.paymentMethod = paymentMethod;
+    }
 
     /**
      * ツアーIDを取得するメソッド
@@ -176,6 +252,38 @@ public class CartDTO {
         }
 
     /**
+    * 備考を取得するメソッド
+    * @return note 備考
+    */
+   public String getNote() {
+	   return note;
+   }
+
+   /**
+    * 備考を格納するメソッド
+    * @oaram note 備考
+    */
+   public void setNote(String note) {
+	   this.note = note;
+   }
+
+   /**
+    * 画像パスを取得するメソッド
+    * @return imgAddress001 画像パス
+    */
+   public String getImgAddress001() {
+	   return imgAddress001;
+   }
+
+   /**
+    * 画像パスを格納するメソッド
+    * @param imgAddress001 画像パス
+    */
+   public void setImgAddress(String imgAddress) {
+	   this.imgAddress001 = imgAddress;
+   }
+
+    /**
      * 登録日を取得するメソッド
      * @return registration_date 登録日
      */
@@ -206,6 +314,22 @@ public class CartDTO {
     public void setUpdatedDate(String updated_date) {
         this.updated_date = updated_date;
         }
+
+    /**
+     * ツアーカテゴリーを取得するメソッド
+     * @return tourCategory ツアーカテゴリー
+     */
+    public String getTourCategory() {
+    	return tourCategory;
+    	}
+
+    /**
+     * ツアーカテゴリーを格納するメソッド
+     * @oaram tourCategory ツアーカテゴリー
+     */
+    public void setTourCategory(String tourCategory) {
+    	this.tourCategory = tourCategory;
+    }
 
     /**
      * 小計を取得するメソッド

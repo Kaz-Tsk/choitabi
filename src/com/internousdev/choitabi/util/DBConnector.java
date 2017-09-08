@@ -1,4 +1,4 @@
-package src.com.internousdev.choitabi.util;
+package com.internousdev.choitabi.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.sql.SQLException;
  *@version:1.1
  * */
 
-public class DBConnecter {
+public class DBConnector {
 
 //※↓単体で動きをチェックするためのメインメソッドです。プロジェクト起動時に勝手に動いてしまうと大変なので、普段はコメントにしてあります。
 //	public static void main(String[] args)throws IllegalAccessException, InstantiationException{

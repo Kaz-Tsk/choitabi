@@ -1,53 +1,39 @@
-@CHARSET "UTF-8";
 
-
-.header{
-	background: orange;
-	height: 125px;
-	position : relative ;
-	margin:0;
-	width:100%;
+.header a:link{
+	color:#ffffff;
+}
+.header a:visited{
+	color:#ffffff;
 }
 
-
-.headerLogo{
-	font-size:80px;
-    color:white;
-	float: left;
+.header a:hover{
+	color:#ffffff;
 }
 
-.dropmenu{
-  width: 960px;
-  margin: 10px;
+.header a:active{
+	color:#ffffff;
+}
+.crear{
+	clear:both;
+}
+.body{
   padding: 0;
-	position : absolute ;
-	bottom : 0 ;
-	right : 20px;
+  font-size: 15px;
 }
-.dropmenu:before, .dropmenu:after{
-  content: "";
-  display: table;
+.title{
+  position: absolute;
+  top:0;
+  left:0px;
+  z-index: 1;
+  width:100%;
+  background-color:orange;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
-.dropmenu:after{
-  clear: both;
+.text-right{
+  position: absolute;
+  top:65px;
+  right: 10px;
+  z-index: 1;
+  font-size: 23px;
 }
-
-.dropmenu li{
-  position: relative;
-  width:20%;
-  float: left;
-  margin-left: 50px;
-  padding: 0;
-  text-align: center;
-}
-
-.dropmenu li a{
-  display: orange;
-  margin-top:20px ;
-  padding: 0 ;
-  background: orange;
-  color: #fff;
-  font-size:20px;
-  line-height: 1;
-
-

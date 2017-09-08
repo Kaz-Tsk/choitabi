@@ -10,9 +10,9 @@
 <body>
 <h1>ツアー情報一覧</h1>
     <hr>
-    ツアー検索<br>
+    ツアー名検索<br>
     <s:form action="IndicateTourListAction">
-		<s:textfield name="selectWord"/>
+		<s:textfield name="selectWord" property="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
 		<s:submit value="検索"/>
 	</s:form>
@@ -24,7 +24,7 @@
 		<th>定員</th>
 		<th>最終編集日</th>
 		<th>出発地</th>
-		<th></th>
+		<th>　　　</th>
 	</tr>
 
 	<s:iterator value="currentTourList">
@@ -35,21 +35,49 @@
 		<td><s:property value="persons"></s:property></td>
 		<td><s:property value="date"></s:property></td>
 		<td><s:property value="departure"></s:property></td>
-		<td>編集</td>
+		<td>
+			<a href='<s:url action="EditTourAction">
+	    	<s:param name="tourId" value = "tourId"/></s:url>'>
+  			編集
+    		</a>
+		</td>
 	</tr>
 	</s:iterator>
 </table>
     <br>
 
-    <a href='<s:url action="IndicateTourListAction">
-    <s:param name="currentPage" value="currentPage-1"/></s:url>'>
-    ＜＜
-    </a>
+<!-- ↓ページの「＜＜1/3＞＞」の部分です -->
+
+	<s:if test="currentPage != 1">
+	    <a href='
+		    <s:url action="IndicateTourListAction">
+		    		<s:param name="selectWord" value="selectWord"/>
+		    		<s:param name="currentPage" value="currentPage-1"/>
+		    </s:url>'>
+		    ＜＜
+		</a>
+    </s:if>
+    <s:else>
+    	＜＜
+    </s:else>
+
     <s:property value="currentPage"></s:property> / <s:property value="maxPage"></s:property>
-       <a href='<s:url action="IndicateTourListAction">
-    <s:param name="currentPage" value="currentPage+1"/></s:url>'>
-    ＞＞
-    </a>
+
+	<s:if test="currentPage < maxPage">
+	    <a href='
+		    <s:url action="IndicateTourListAction">
+		    		<s:param name="selectWord" value="selectWord"/>
+		    		<s:param name="currentPage" value="currentPage+1"/>
+		    </s:url>'>
+		    ＞＞
+	    </a>
+    </s:if>
+    <s:else>
+    	＞＞
+    </s:else>
+
+<!-- ↑「＜＜1/3＞＞」部分ここまで -->
+
     <br>
     <br>
     管理ページトップに戻る<br>
