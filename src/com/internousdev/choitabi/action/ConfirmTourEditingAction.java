@@ -2,7 +2,7 @@ package com.internousdev.choitabi.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class ConfirmEditingAction extends ActionSupport{
+public class ConfirmTourEditingAction extends ActionSupport{
 
 	/**
 	 * @author YUKA MATSUMURA

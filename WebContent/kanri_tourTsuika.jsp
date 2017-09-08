@@ -21,10 +21,10 @@
         <th>名称</th><td><input type="text" name="newTourName"></td>
     </tr>
     <tr>
-        <th>価格</th><td><input type="text" name="newTourPrice" size="5">円</td>
+        <th>価格</th><td><input type="text" name="newTourPrice" size="5">　円</td>
     </tr>
     <tr>
-        <th>定員</th><td><input type="text" name="newTourPersons" size = "5">仁</td>
+        <th>定員</th><td><input type="text" name="newTourPersons" size = "5">　名</td>
     </tr>
     <tr>
         <th>出発地</th><td><input type="text" name="newTourDeparture"></td>

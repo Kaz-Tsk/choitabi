@@ -16,7 +16,7 @@
 <font color="red"><s:property value="errorMsg"/></font>
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
-<s:form action="ConfirmEditingAction">
+<s:form action="ConfirmTourEditingAction">
 <table border = "1px" cellspacing = "0px" cellpadding = "10px">
    <tr>
    		<th></th><th>変更前</th><th>変更後</th>

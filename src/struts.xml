@@ -28,7 +28,7 @@
 		<result name="success">kanri_tourHensyuu.jsp</result>
 		<result name="error">kanri_tourList.jsp</result>
 	</action>
-		<action name="ConfirmEditingAction" class="com.internousdev.choitabi.action.ConfirmEditingAction" method="execute">
+		<action name="ConfirmTourEditingAction" class="com.internousdev.choitabi.action.ConfirmTourEditingAction" method="execute">
 		<result name="success">kanri_tourHensyuuKakunin.jsp</result>
 		<result name="error">kanri_tourHensyuu.jsp</result>
 	</action>
