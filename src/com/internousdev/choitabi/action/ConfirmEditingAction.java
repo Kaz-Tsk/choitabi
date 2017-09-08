@@ -24,8 +24,6 @@ public class ConfirmEditingAction extends ActionSupport{
 	private int price;
 	/*定員*/
 	private int persons;
-	/*最終編集日*/
-	private String date;
 	/*出発地*/
 	private String departure;
 
@@ -39,8 +37,6 @@ public class ConfirmEditingAction extends ActionSupport{
 	private String editPrice;
 	/*定員*/
 	private String editPersons;
-	/*最終編集日*/
-	private String editDate;
 	/*出発地*/
 	private String editDeparture;
 
@@ -66,9 +62,13 @@ public class ConfirmEditingAction extends ActionSupport{
 				errorMsg = "入力が不完全です";
 				/*後消し*/System.out.println(errorMsg);
 			}else{
+				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
+				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
+				int editPrice_int = Integer.parseInt(editPrice);
+				int editPersons_int = Integer.parseInt(editPersons);
 				/*後消し*/System.out.println("ConfirmEditingAction : " + editTourName);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + Integer.parseInt(editPrice));
-				/*後消し*/System.out.println("ConfirmEditingAction : " + Integer.parseInt(editPersons));
+				/*後消し*/System.out.println("ConfirmEditingAction : " + editPrice_int);
+				/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons_int);
 				/*後消し*/System.out.println("ConfirmEditingAction : " + editDeparture);
 				/*後消し*/System.out.println("ConfirmEditingAction : " + deleteCheck);
 				if(errorMsg.equals("")){
@@ -122,14 +122,6 @@ public class ConfirmEditingAction extends ActionSupport{
 		this.persons = persons;
 	}
 
-	public String gerDate(){
-		return date;
-	}
-
-	public void setDate(String date){
-		this.date = date;
-	}
-
 	public String getDeparture(){
 		return departure;
 	}
@@ -172,14 +164,6 @@ public class ConfirmEditingAction extends ActionSupport{
 
 	public void setEditPersons(String editPersons){
 		this.editPersons = editPersons;
-	}
-
-	public String gerEditDate(){
-		return editDate;
-	}
-
-	public void setEditDate(String editDate){
-		this.editDate = editDate;
 	}
 
 	public String getEditDeparture(){

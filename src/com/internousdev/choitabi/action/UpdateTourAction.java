@@ -1,5 +1,8 @@
 package com.internousdev.choitabi.action;
 
+import java.sql.SQLException;
+
+import com.internousdev.choitabi.dao.UpdateTourDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UpdateTourAction extends ActionSupport{
@@ -13,7 +16,7 @@ public class UpdateTourAction extends ActionSupport{
 	 * (SUCCESSでもERRORでも画面一覧に戻るようにしています)
 	 * */
 
-	/**編集後の情報＝入力されたデータを格納する変数です（JSPを通して、CpnfirmEditingActionの値を持ってきます）*/
+	/**編集後の情報＝入力されたデータを格納する変数です（JSPを通して、ConfirmEditingActionの値を持ってきます）*/
 	/*ツアー名*/
 	private String editTourName;
 	/*ツアーID*/
@@ -22,8 +25,6 @@ public class UpdateTourAction extends ActionSupport{
 	private String editPrice;
 	/*定員*/
 	private String editPersons;
-	/*最終編集日*/
-	private String editDate;
 	/*出発地*/
 	private String editDeparture;
 
@@ -36,9 +37,27 @@ public class UpdateTourAction extends ActionSupport{
 	/**editPriceとeditPersonsは「String型」になっています。
 	 * 画面のフォームから入力された情報は文字列として扱われるため、
 	 * まずはそのまま受け取って、javaの機能で数値に変換しています。
+	 * @throws SQLException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
 	 * **/
 
+	public String execute() throws IllegalAccessException, InstantiationException, SQLException{
+		String result = ERROR;
+		int count = 0;
 
+		UpdateTourDAO utdao = new UpdateTourDAO();
+		count = utdao.updateTour(editTourName, editTourId, editPrice, editPersons, editDeparture,deleteCheck);
+
+		if(count > 0){
+			result = SUCCESS;
+		}
+
+
+
+
+		return result;
+	}
 
 
 
@@ -77,14 +96,6 @@ public class UpdateTourAction extends ActionSupport{
 
 	public void setEditPersons(String editPersons){
 		this.editPersons = editPersons;
-	}
-
-	public String gerEditDate(){
-		return editDate;
-	}
-
-	public void setEditDate(String editDate){
-		this.editDate = editDate;
 	}
 
 	public String getEditDeparture(){
