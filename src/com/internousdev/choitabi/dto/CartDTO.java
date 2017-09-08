@@ -279,9 +279,9 @@ public class CartDTO {
 
    /**
     * 画像パスを格納するメソッド
-    * @param imgAddress001 画像パス
+    * @param imgAdsetImgAddress001dress001 画像パス
     */
-   public void setImgAddress(String imgAddress) {
+   public void setImgAddress001(String imgAddress) {
 	   this.imgAddress001 = imgAddress;
    }
 

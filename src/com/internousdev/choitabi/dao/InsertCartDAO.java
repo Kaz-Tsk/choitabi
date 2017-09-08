@@ -36,6 +36,7 @@ public class InsertCartDAO {
 				SelectCartDTO scDto = new SelectCartDTO();
 				scDto.setTourName(rs.getString("tourName"));
 				scDto.setPrice(rs.getInt("price"));
+                scDto.setImgAddress001(rs.getString("imgAddress001"));
 
 				tourStatus.add(scDto);
 				}
@@ -112,10 +113,10 @@ public class InsertCartDAO {
 
 			while(rs.next()) {
 				CartDTO dto = new CartDTO();
-				dto.setUserId(rs.getInt("userId"));
-				dto.setTourId(rs.getInt("tourId"));
-				dto.setQuantity(rs.getInt("quantity"));
-				dto.setCartId(rs.getInt("cartId"));
+				dto.setUserId(rs.getInt("userId"));//ユーザID
+				dto.setTourId(rs.getInt("tourId"));//商品ID
+				dto.setQuantity(rs.getInt("quantity"));//購入数
+				dto.setCartId(rs.getInt("cartId"));//カートID
 
 				cartList.add(dto);
 
@@ -127,6 +128,7 @@ public class InsertCartDAO {
 					dto.setTourName(rs2.getString("tourName"));
 					dto.setPrice(rs2.getInt("price"));
 					dto.setSubTotal(dto.getPrice() * dto.getQuantity());
+                    dto.setImgAddress001(rs2.getString("imgAddress001")); //イメージパス
 					}
 			}
 		}catch(SQLException e) {

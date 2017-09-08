@@ -31,6 +31,11 @@ public class SelectCartDTO {
 	     */
 	    private int quantity;
 
+	    /**
+	     * 画像パス
+	     */
+	    private String imgAddress001;
+
 
 
 	    /**
@@ -95,6 +100,22 @@ public class SelectCartDTO {
 	     */
 	    public void setQuantity(int quantity) {
 	        this.quantity = quantity;
+	    }
+
+	    /**
+	     * ツアーIDを取得するメソッド
+	     * @return tourId ツアーID
+	     */
+	    public String getImgAddress001(){
+	        return imgAddress001;
+	    }
+
+	    /**
+	     * ツアーIDを格納するメソッド
+	     * @param tourId ツアーID
+	     */
+	    public void setImgAddress001(String imgAddress001){
+	        this.imgAddress001 = imgAddress001;
 	    }
 
 	}
