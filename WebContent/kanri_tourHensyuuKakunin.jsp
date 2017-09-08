@@ -94,6 +94,7 @@
 		    <s:param name="editPrice" value = "editPrice"/>
 		    <s:param name="editPersons" value = "editPersons"/>
 		    <s:param name="editDeparture" value = "editDeparture"/>
+		    <s:param name="deleteCheck" value="deleteCheck"/>
 	    </s:url>'>
     操作を完了する
     </a>

@@ -57,8 +57,9 @@ public class ConfirmEditingAction extends ActionSupport{
 		String result = ERROR;
 
 		try{
-
-			if(editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") || editDeparture.equals("")){
+			if(deleteCheck.equals("true")){
+				result = SUCCESS;
+			}else if(deleteCheck.equals("false") && (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") || editDeparture.equals(""))){
 				errorMsg = "入力が不完全です";
 				/*後消し*/System.out.println(errorMsg);
 			}else{
