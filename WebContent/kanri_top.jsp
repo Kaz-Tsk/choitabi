@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,9 +28,14 @@
     <br>
     <a href="./kanri_history.jsp">■購入履歴一覧</a><br>
     <br>
-    <a href="./kanri_toiawasekakunin.jsp">■問い合わせ一覧</a><br>
-    <br>
-    【　　ログアウト　　】
+
+
+
+   <!-- お問い合わせ画面へ遷移 -->
+					<br><a href='<s:url action="KanriContactAction">
+					<s:param name="pageNum" value="1"/>
+					</s:url>'>お問い合わせ</a><br>
+
 </font>
 
 

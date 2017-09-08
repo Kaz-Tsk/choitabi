@@ -13,8 +13,6 @@
 
     <div class ="header">お問合せ内容入力_<b>内容確認</b>_送信完了</div>
 
-<s:form action="CompleteContactAction" method="post">
-
 
 <h1>お問合せ内容確認</h1>
     <div class = "direction">以下の内容で送信します。よろしいですか？<br>(※配色等は仮です)</div>
@@ -25,20 +23,24 @@
 
 							<tr>
 								<td><s:property value="contact_name" /></td>
-							</tr>
 
+							</tr>
 							<tr>
 								<td><s:property value="contact_mailAddress" /></td>
 							</tr>
-
 							<tr>
 								<td><s:property value="contact_contents" /></td>
+
 							</tr>
 						</table>
+ <a href='<s:url action="CompleteContactAction">
+   	<s:param name="contact_name" value="contact_name"/>
+   	<s:param name="contact_mailAddress" value="contact_mailAddress"/>
+    <s:param name="contact_contents" value="contact_contents"/>
+    </s:url>'>
+   確認画面へ
+    </a>
 
-  <input type="submit" value="送信" >
-
-</s:form>
 
 <input type="button" value="トップ画面へ戻る" onClick="location.href='index.jsp'">
 
