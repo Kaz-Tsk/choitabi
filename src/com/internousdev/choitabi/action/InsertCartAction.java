@@ -1,6 +1,5 @@
 package com.internousdev.choitabi.action;
 
-import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
@@ -12,11 +11,13 @@ import com.internousdev.choitabi.dto.CartDTO;
 import com.internousdev.choitabi.dto.SelectCartDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
+
+
 /**
  * 商品詳細からカートに遷移するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/06
- *@version 1.1
+ *@version 1.0
  */
 
 public class InsertCartAction extends ActionSupport implements SessionAware {
@@ -29,22 +30,22 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * カートID
 	 */
-	private int cart_id;
+	private int cartId;
 
 	/**
 	 * ユーザーID
 	 */
-	private int user_id;
+	private int userId;
 
 	/**
 	 * ツアーID
 	 */
-	private int tour_id;
+	private int tourId;
 
 	/**
 	 * ツアー名
 	 */
-	private String tour_name;
+	private String tourName;
 
 	/**
 	 * 価格
@@ -64,7 +65,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 合計金額
 	 */
-	private int total_price;
+	private int totalPrice;
 
 	/**
 	 * カート情報
@@ -82,14 +83,10 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	private int addCount;
 
 	/**
-	 * 日程
-	 */
-	private Date date;
-
-	/**
 	 * 小計
 	 */
-	private int sub_total;
+	private int subTotal;
+
 
 
 	/**
@@ -98,17 +95,18 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	 * @return success or error
 	 * @author HINAKO HAGIWARA
 	 * @since 2017/09/06
-	 * @version 1.1
+	 * @version 1.0
 	 */
+
 	public String execute() throws SQLException {
 		String result = ERROR;
 
-		if(session.containsKey("user_id")) {
-			user_id = (int) session.get("user_id");
+		if(session.containsKey("userId")) {
+			userId = (int) session.get("userId");
 			InsertCartDAO icDao = new InsertCartDAO();
-			tourStatus = icDao.tourStatus(tour_id);
-			addCount = icDao.addToCart(user_id, tour_id, quantity, date);
-			cartList = icDao.selected(user_id);
+			tourStatus = icDao.tourStatus(tourId);
+			addCount = icDao.addToCart(userId, tourId, quantity);
+			cartList = icDao.selected(userId);
 
 			if(cartList.size() > 0) {
 				for(int i = 0; i < cartList.size(); i++) {
@@ -126,66 +124,66 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * カートIDを取得するメソッド
-	 * @return cart_id カートID
+	 * @return cartId カートID
 	 */
 	public int getCartId() {
-		return cart_id;
+		return cartId;
 	}
 
 	/**
 	 * カートIDを格納するメソッド
-	 * @param cart_id カートID
+	 * @param cartId カートID
 	 */
-	public void setCartId(int cart_id) {
-		this.cart_id = cart_id;
+	public void setCartId(int cartId) {
+		this.cartId = cartId;
 	}
 
 	/**
 	 * ユーザーIDを取得するメソッド
-	 * @return user_id ユーザーID
+	 * @return userId ユーザーID
 	 */
 	public int getUserId() {
-		return user_id;
+		return userId;
 	}
 
 	/**
 	 * ユーザーIDを格納するメソッド
-	 * @param user_id ユーザーID
+	 * @param userId ユーザーID
 	 */
-	public void setUserId(int user_id) {
-		this.user_id = user_id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	/**
 	 * ツアーIDを取得するメソッド
-	 * @return tour_id ツアーID
+	 * @return tourId ツアーID
 	 */
 	public int getTourId() {
-		return tour_id;
+		return tourId;
 	}
 
 	/**
 	 * ツアーIDを格納するメソッド
-	 * @param tour_id ツアーID
+	 * @param tourId ツアーID
 	 */
-	public void setTourId(int tour_id) {
-		this.tour_id = tour_id;
+	public void setTourId(int tourId) {
+		this.tourId = tourId;
 	}
 
 	/**
 	 * ツアー名を取得するメソッド
-	 * @return tour_name ツアー名
+	 * @return tourName ツアー名
 	 */
 	public String getTourName() {
-		return tour_name;
+		return tourName;
 	}
 
 	/**
 	 * ツアー名を格納するメソッド
-	 * @param tour_name ツアー名
+	 * @param tourName ツアー名
 	 */
-	public void setTourName(String tour_name) {
-		this.tour_name = tour_name;
+	public void setTourName(String tourName) {
+		this.tourName = tourName;
 	}
 
 	/**
@@ -238,18 +236,18 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 
     /**
      * 合計金額を取得するメソッド
-     * @return total_price 合計金額
+     * @return totalPrice 合計金額
      */
     public int getTtalPrice() {
-    	return total_price;
+    	return totalPrice;
     }
 
     /**
      * 合計金額を格納するメソッド
-     * @param total_price 合計金額
+     * @param totalPrice 合計金額
      */
-    public void setTotalPrice(int total_price) {
-    	this.total_price = total_price;
+    public void setTotalPrice(int totalPrice) {
+    	this.totalPrice = totalPrice;
     }
 
     /**
@@ -301,34 +299,19 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
     }
 
     /**
-     * 日程を取得するメソッド
-     * @return date 日程
-     */
-    public Date getDate() {
-    	return date;
-    }
-
-    /**
-     * 日程を格納するメソッド
-     * @param date 日程
-     */
-    public void setDate(Date date) {
-    	this.date = date;
-    }
-
-    /**
      * 小計を取得するメソッド
-     * @return sub_total 小計
+     * @return subTotal 小計
      */
     public int getSubTotal() {
-    	return sub_total;
+    	return subTotal;
     }
 
     /**
      * 小計を格納するメソッド
-     * @param sub_total 小計
+     * @param subTotal 小計
      */
-    public void setSubTotal(int sub_total) {
-    	this.sub_total = sub_total;
+    public void setSubTotal(int subTotal) {
+    	this.subTotal = subTotal;
     }
+
 }
