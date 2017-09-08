@@ -35,7 +35,6 @@ public class SelectCartDAO {
 				dto.setCartId(rs.getInt("cart_id"));
 				dto.setTourId(rs.getInt("tour_id"));
 				dto.setQuantity(rs.getInt("quantity"));
-				dto.setDate(rs.getDate("date"));
 				cartList.add(dto);
 
 				PreparedStatement ps2 = con.prepareStatement(select2);

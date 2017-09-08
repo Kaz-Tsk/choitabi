@@ -135,7 +135,7 @@
 				<s:text name="lang.cart.tax_include" />
 			</h2>
 
-			<s:form action="GoSettlementAction">
+			<s:form action="GoXXXXXAction">
 				<!-- 購入ボタンフォーム -->
 				<button type="submit" class="btn btn-warning center-block">
 					<s:text name="lang.cart.payment" />

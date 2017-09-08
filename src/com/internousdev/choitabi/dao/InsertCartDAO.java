@@ -1,7 +1,6 @@
 package com.internousdev.choitabi.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -54,19 +53,18 @@ public class InsertCartDAO {
 		return tourStatus;
 	}
 
-	public int addToCart(int user_id, int tour_id, int quantity, Date date) {
+	public int addToCart(int user_id, int tour_id, int quantity) {
 		int addCount = 0;
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
-		String sql = "insert into cart (user_id, tour_id, quantity, date) values(?, ?, ?, ?)";
+		String sql = "insert into cart (user_id, tour_id, quantity) values(?, ?, ?)";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, user_id);
 			ps.setInt(2, tour_id);
 			ps.setInt(3, quantity);
-			ps.setDate(4, date);
 			addCount = ps.executeUpdate();
 
 		}catch(SQLException e) {
@@ -115,7 +113,6 @@ public class InsertCartDAO {
 				dto.setUserId(rs.getInt("user_id"));
 				dto.setTourId(rs.getInt("tour_id"));
 				dto.setQuantity(rs.getInt("quantity"));
-				dto.setDate(rs.getDate("date"));
 				dto.setCartId(rs.getInt("cart_id"));
 
 				cartList.add(dto);
