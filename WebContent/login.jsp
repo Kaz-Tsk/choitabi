@@ -17,7 +17,7 @@
 		</div>
 		<div class="login-text">
 			<s:form action="LoginAction">
-				<s:textfield name = "mail address"  label= "mail address" required = "repuired" placeholder = "choitabi@tour.ne.jp"/>
+				<s:textfield name = "mailAddress"  label= "mail address" required = "repuired" placeholder = "choitabi@tour.ne.jp"/>
 				<s:password name="password" required="required" label = "password" placeholder="password"/>
 				<br>
 				<s:submit  value="login" />
