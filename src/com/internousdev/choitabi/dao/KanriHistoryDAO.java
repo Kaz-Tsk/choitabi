@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import com.internousdev.choitabi.dto.CartDTO;
 import com.internousdev.util.DBConnector;
 
+
+
 /**
  * 管理者画面で受注情報を取得するクラス
  * @author HINAKO HAGIWARA
@@ -17,8 +19,6 @@ import com.internousdev.util.DBConnector;
  */
 
 public class KanriHistoryDAO {
-
-	public class AdminOrderDAO {
 		/**
 	     * 受注情報をDBから検索するメソッド
 	     * @param user_id ユーザーID
@@ -42,7 +42,7 @@ public class KanriHistoryDAO {
 	        		+ "openconnect.users.given_name_kanji,choitabi.payoff.tour_id,choitabi.tours.tour_name,"
 	        		+ "choitabi.payoff.quantity,choitabi.tours.price,choitabi.payoff.registrationDate"
 	        		+ " from (openconnect.users inner join choitabi.payoff on openconnect.users.user_id = choitabi.payoff.user_id) "
-	        		+ "inner join choitaib.tours on choitabi.payoff.tour_id = choitabi.tours.tour_id";
+	        		+ "inner join choitabi.tours on choitabi.payoff.tour_id = choitabi.tours.tour_id";
 
 	        if (!searchName.equals("")) {
 	            sql = sql + " " + "where choitabi.tours.tour_name like \"%" + searchName + "%\"";
@@ -76,6 +76,4 @@ public class KanriHistoryDAO {
 
 	        return searchList;
 	        }
-
-	}
-}
+	    }

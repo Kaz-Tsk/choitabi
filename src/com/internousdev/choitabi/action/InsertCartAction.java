@@ -1,6 +1,5 @@
 package com.internousdev.choitabi.action;
 
-import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
@@ -82,11 +81,6 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	private int addCount;
 
 	/**
-	 * 日程
-	 */
-	private Date date;
-
-	/**
 	 * 小計
 	 */
 	private int sub_total;
@@ -107,7 +101,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 			user_id = (int) session.get("user_id");
 			InsertCartDAO icDao = new InsertCartDAO();
 			tourStatus = icDao.tourStatus(tour_id);
-			addCount = icDao.addToCart(user_id, tour_id, quantity, date);
+			addCount = icDao.addToCart(user_id, tour_id, quantity);
 			cartList = icDao.selected(user_id);
 
 			if(cartList.size() > 0) {
@@ -298,22 +292,6 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
      */
     public void setAddCount(int addCount) {
     	this.addCount = addCount;
-    }
-
-    /**
-     * 日程を取得するメソッド
-     * @return date 日程
-     */
-    public Date getDate() {
-    	return date;
-    }
-
-    /**
-     * 日程を格納するメソッド
-     * @param date 日程
-     */
-    public void setDate(Date date) {
-    	this.date = date;
     }
 
     /**

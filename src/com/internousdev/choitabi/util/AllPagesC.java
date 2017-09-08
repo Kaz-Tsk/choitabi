@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.CartDTO;
 
+
+
 /**
  * 渡されたリストに対してページネーションを行うクラス
  * @author HINAKO HAGIWARA
@@ -57,6 +59,7 @@ public class AllPagesC {
 
         return displayBook;
         }
+
 
 
     /**

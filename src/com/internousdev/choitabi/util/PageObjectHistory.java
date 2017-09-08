@@ -4,12 +4,15 @@ import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.CartDTO;
 
+
+
 /**
  * ページネーションが必要なリストのために、1ページごとの情報を保持するためのクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/08
  * @version 1.0
  */
+
 public class PageObjectHistory {
 
 	/**
