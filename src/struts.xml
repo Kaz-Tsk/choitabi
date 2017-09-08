@@ -8,7 +8,8 @@
 
 <!-- 国際化 -->
 <constant name="struts.custom.i18n.resources"
-      value="com.internousdev.choitabi.property.cart"
+      value="com.internousdev.choitabi.property.cart
+             com.internousdev.choitabi.property.kanri_history"
 
 
 
@@ -27,19 +28,40 @@
 		<result name="success">kanri_tourHensyuu.jsp</result>
 		<result name="error">kanri_tourList.jsp</result>
 	</action>
-		<action name="ConfirmEditingAction" class="com.internousdev.choitabi.action.ConfirmEditingAction" method="execute">
+	<action name="ConfirmTourEditingAction" class="com.internousdev.choitabi.action.ConfirmTourEditingAction" method="execute">
 		<result name="success">kanri_tourHensyuuKakunin.jsp</result>
 		<result name="error">kanri_tourHensyuu.jsp</result>
 	</action>
+	<action name="UpdateTourAction" class="com.internousdev.choitabi.action.UpdateTourAction" method="execute">
+		<result name="success" type="chain">IndicateTourListAction</result>
+		<result name="error" type="chain">IndicateTourListAction</result>
+	</action>
+    <action name="KanriContactAction" class="com.internousdev.choitabi.action.KanriContactAction" method="execute">
+		<result name="success">kanri_toiawasekakunin.jsp</result>
+		<result name="error">kanri_top.jsp</result>
+	</action>
+	<action name="GoTourInsertPageAction" class="com.internousdev.choitabi.action.GoTourInsertPageAction" method="execute">
+		<result name="success">kanri_tourTsuika.jsp</result>
+		<result name="error">kanri_tourTsuika.jsp</result>
+	</action>
+	<action name="ConfirmTourInsertingAction" class="com.internousdev.choitabi.action.ConfirmTourInsertingAction" method="execute">
+		<result name="success">kanri_tourTsuikaKakunin.jsp</result>
+		<result name="error">kanri_tourTsuikaKakunin.jsp</result>
+	</action>
 
 
+
+	<!-- 管理　受注情報を検索表示するアクション-->
+	<action name="KanriHistoryAction" class="com.internousdev.choitabi.action.KanriHistoryAction" method="execute">
+		<result name="success">kanri_history.jsp</result>
+		<result name="error">kanri_history.jsp</result>
+	</action>
 
 
 <!-- ログイン画面 -->
 	<action name="LoginAction" class="com.internousdev.choitabi.action.LoginAction" method="execute">
 	<result name="success" type="chain">MainTopAction</result>
-	<result name="admin" type="chain">MasterTopAction</result>
-	<result name="error">login.jsp</result>
+	<result name="error" >login.jsp</result>
 	</action>
 
 
