@@ -27,10 +27,10 @@ public class IndicateTourListAction extends ActionSupport{
 	private ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
 	/*ツアー情報の最大ページ数*/
-	private int maxPage;
+	private int maxPage = 1;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage;/*ここは、JSPから持ってくる*/
+	private int currentPage = 1;/*ここは、JSPから持ってくる*/
 
 
 
@@ -43,6 +43,7 @@ public class IndicateTourListAction extends ActionSupport{
 
 		/*DAOでツアーの一覧を持ってくる*/
 		SelectTourListDAO tstl = new SelectTourListDAO();
+		/*後消し*/System.out.println("IndicateTourAction - 検索ワード：" + selectWord);
 		allTourList = tstl.selectTourList(selectWord);
 
 		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/

@@ -67,7 +67,7 @@
 	    <tr>
 	        <th>価格</th>
 	        <td>変更前</td><td><s:property value="price"/></td>
-	        <td>変更後</td><td><s:property value = "PeditPrice"/></td>
+	        <td>変更後</td><td><s:property value = "EditPrice"/></td>
 	    </tr>
 	    <tr>
 	        <th>定員</th>
@@ -83,11 +83,24 @@
 </s:else>
 <!-- テーブル部分ここまで--------------------------------------------------------- -->
 
-
 <hr>
+
+<!-- 画面下部のメニュー画面------------------------------------------------------- -->
 <br>
-    操作を完了する（！：元には戻せません）<br>
+    <a href=
+	    '<s:url action="UpdateTourAction">
+		    <s:param name="editTourId" value="tourId"/>
+		    <s:param name="editTourName" value = "editTourName"/>
+		    <s:param name="editPrice" value = "editPrice"/>
+		    <s:param name="editPersons" value = "editPersons"/>
+		    <s:param name="editDeparture" value = "editDeparture"/>
+	    </s:url>'>
+    操作を完了する
+    </a>
 <br>
+
+
+
 <hr>
 <br>
     編集画面に戻る<br>

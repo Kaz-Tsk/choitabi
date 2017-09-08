@@ -74,6 +74,7 @@ public class SelectOneTourDAO {
 
 			}catch(Exception e){
 				System.out.println("その他のエラーです");
+				e.printStackTrace();
 				return null;
 			}
 	}

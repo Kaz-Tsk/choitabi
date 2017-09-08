@@ -12,7 +12,7 @@
     <hr>
     ツアー名検索<br>
     <s:form action="IndicateTourListAction">
-		<s:textfield name="selectWord"/>
+		<s:textfield name="selectWord" property="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
 		<s:submit value="検索"/>
 	</s:form>
@@ -51,6 +51,7 @@
 	<s:if test="currentPage != 1">
 	    <a href='
 		    <s:url action="IndicateTourListAction">
+		    		<s:param name="selectWord" value="selectWord"/>
 		    		<s:param name="currentPage" value="currentPage-1"/>
 		    </s:url>'>
 		    ＜＜
@@ -65,6 +66,7 @@
 	<s:if test="currentPage < maxPage">
 	    <a href='
 		    <s:url action="IndicateTourListAction">
+		    		<s:param name="selectWord" value="selectWord"/>
 		    		<s:param name="currentPage" value="currentPage+1"/>
 		    </s:url>'>
 		    ＞＞

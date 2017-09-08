@@ -3,6 +3,7 @@ package com.internousdev.choitabi.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.internousdev.choitabi.util.DBConnector;
@@ -24,22 +25,28 @@ public class UpdateTourDAO {
 		int count = 0;
 
 		Date today = new Date();
+		SimpleDateFormat sdf  = new SimpleDateFormat("yyyyMMdd");
+		String formatedToday = sdf.format(today);
 
 
 		try{
-			/*SQLに接続し、コマンドを実行してもらいます*/
-			DBConnector dbc = new DBConnector();
-			Connection con = dbc.createConnection();
 
 			/*削除チェックのボックスにチェックが入っていない＝ツアーデータ更新の場合*/
 			if(deleteCheck.equals("false")){
+
+				/*SQLに接続し、コマンドを実行してもらいます*/
+				DBConnector dbc = new DBConnector();
+				Connection con = dbc.createConnection();
+
 				String sql = "UPDATE tour SET tour_name =   ?, price = ?, persons = ?, date = ?, departure = ? WHERE tour_id = ?";/*Update/DELETE文、文法確認中*/
+
 				PreparedStatement ps = con.prepareStatement(sql);
 				/*後消し*/System.out.println("UpdateTourDAO - 作成SQL文 : " + sql);
 				ps.setString(1, editTourName);
 				ps.setInt(2, Integer.parseInt(editPrice));
 				ps.setInt(3, Integer.parseInt(editPersons));
-				ps.setDate(4, (java.sql.Date) today);
+				ps.setString(4, formatedToday);
+				/*後消し*/System.out.println("UpdateTourDAO - 更新後の日付データ：" + formatedToday);
 				ps.setString(5,editDeparture);
 				ps.setInt(6, Integer.parseInt(editTourId));
 
@@ -49,8 +56,15 @@ public class UpdateTourDAO {
 				con.close();
 				ps.close();
 
+
+
 			/*削除チェックのボック氏にチェックが入っていた＝ツアーデータ削除の場合*/
 			}else if(deleteCheck.equals("true")){
+
+				/*SQLに接続し、コマンドを実行してもらいます*/
+				DBConnector dbc = new DBConnector();
+				Connection con = dbc.createConnection();
+
 				String sql = "DLETE FROM tour WHERE tour_id =  ?";/*Update/DELETE文、文法確認中*/
 				PreparedStatement ps = con.prepareStatement(sql);
 				/*後消し*/System.out.println("UpdateTourDAO - 作成SQL文 : " + sql);
@@ -84,8 +98,14 @@ public class UpdateTourDAO {
 				e.printStackTrace();
 				return 0;
 
+			}catch(ClassCastException e){
+				System.out.println("変換できないデータがありました");
+				e.printStackTrace();
+				return 0;
+
 			}catch(Exception e){
 				System.out.println("その他のエラーです");
+				e.printStackTrace();
 				return 0;
 			}
 

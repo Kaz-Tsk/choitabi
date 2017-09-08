@@ -55,7 +55,7 @@ public class UpdateTourAction extends ActionSupport{
 
 
 
-
+		/*後消し*/System.out.println("UpdateTourAction - result :" + result );
 		return result;
 	}
 
