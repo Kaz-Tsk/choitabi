@@ -19,6 +19,7 @@ import com.opensymphony.xwork2.ActionSupport;
 	 * シリアルID
 	 */
 	private static  final long serialVersionUID =1L;
+
 	/**
 	 * パスワード
 	 */
@@ -32,13 +33,10 @@ import com.opensymphony.xwork2.ActionSupport;
 	 */
 	private int userId;
 	/**
-	 * ログインフラグ
+	 * ユーザーフラグ
 	 */
-	private boolean loginFlg;
-	/**
-	 * エラーメッセージ
-	 */
-	public String errorMsg;
+	private int userFlg;
+
 	/**
 	 * セッション情報
 	 */
@@ -52,34 +50,26 @@ import com.opensymphony.xwork2.ActionSupport;
 	 */
 	public String execute(){
 		String result = ERROR;
-		this.errorMsg = "メールアドレス、もしくはパスワードが間違っています。";
-		session.clear();
-
 		LoginDAO dao = new LoginDAO();
 		UsersDTO dto = new UsersDTO();
 
-		dto = dao.select(mailAddress, password);
+		dto = dao.select(mailAddress, password,userFlg);
 
 		if(mailAddress.equals(dto.getMailAddress())){
 			if(password.equals(dto.getPassword())){
-				if(dto.isUserdelFlg() ==false){
-					if(dao.update(dto.getMailAddress(),dto.getPassword())>0){
-						/*update実行後のログインフラグを取得する取得するために再度select*/
-						dto=dao.select(dto.getMailAddress(),dto.getPassword());
-
-						loginFlg = dto.isLoginFlg();
-						userId = dto.getUserId();
-
-						result = SUCCESS;
-					}
+				if(dto.getUserFlg()==3){
+				result = "ADMIN";
+				session.put("userFlg",dto.getUserFlg());
+				}else{
+				result =  SUCCESS;
+				session.put("userFlg",dto.getUserFlg());
 				}
-
 			}
-		}else{
-			session.put("errorMsg",false);
 		}
 		return result;
 	}
+
+
 	/**
 	 * メールアドレス取得メソッド
 	 * @return mailAddress メールアドレス
@@ -123,20 +113,7 @@ import com.opensymphony.xwork2.ActionSupport;
 	public void setUserId(int userId){
 		this.userId = userId;
 	}
-	/**
-	 * ログインフラグ取得メソッド
-	 * @retrun loginFlg ログインフラグ
-	 */
-	public boolean isLoginFlg(){
-		return loginFlg;
-	}
-	/**
-	 * ログインフラグ格納メソッド
-	 * @param loginFlg ログインフラグ
-	 */
-	public void seLoginFlg(boolean loginFlg){
-		this.loginFlg = loginFlg;
-	}
+
 	/**
 	 * セッション取得メソッド
 	 * @return session セッション
@@ -152,20 +129,17 @@ import com.opensymphony.xwork2.ActionSupport;
 		this.session = session;
 	}
 	/**
-	 * エラーメッセージ取得メソッド
-	 * @return errorMsg エラーメッセージ
+	 * userFlg取得メソッド
 	 */
-	public String getErrorMsg(){
-		return errorMsg;
+	public int getUserFlg(){
+		return userFlg;
 	}
 	/**
-	 * エラーメッセージ格納メソッド
-	 * @param errorMsg エラーメッセージ
+	 * userFlg格納メソッド
 	 */
-	public void setErrorMsg(String errorMsg){
-		this.errorMsg = errorMsg;
+	public void setUserFlg(int userFlg){
+		this.userFlg = userFlg;
 	}
-
 }
 
 

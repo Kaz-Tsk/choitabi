@@ -27,27 +27,26 @@ public class LoginDAO {
  * @param password パスワード
  * @param dto ユーザー情報
  */
-	public UsersDTO select(String mailAddress,String password){
+	public UsersDTO select(String mailAddress,String password,int userFlg){
 		/*コンストラクタへ代入*/
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		/*データベースへの接続*/
 		Connection con = db.getConnection();
 		UsersDTO dto = new UsersDTO();
-		String sql ="select phone_email,user_id,login_flg"
-				+"from users where phone _email = ? and password = ?";
+		String sql = "SELECT * FORM users WHERE phone_email = ? and password = ? and userFlg = ?";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 
 			ps.setString(1, mailAddress);
 			ps.setString(2,password);
+			ps.setInt(3, userFlg);
 			ResultSet rs = ps.executeQuery();
 
 			if(rs.next()){
 				dto.setMailAddress(rs.getString("phone_email"));
 				dto.setPassword(rs.getString("password"));
-				dto.setUserId(rs.getInt("user_id"));
-				dto.setLoginFlg(rs.getBoolean("login_flg"));
+				dto.setUserFlg(rs.getInt("user_flg"));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();

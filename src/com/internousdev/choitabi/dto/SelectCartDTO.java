@@ -1,12 +1,10 @@
 package com.internousdev.choitabi.dto;
 
-
-
 /**
  * カート情報を格納・取得するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.0
+ * @version 1.1
  */
 
 public class SelectCartDTO {
@@ -14,12 +12,12 @@ public class SelectCartDTO {
 	    /**
 	     * 商品ID
 	     */
-	    private int tourId;
+	    private int tour_id;
 
 	    /**
 	     * 商品名
 	     */
-	    private String tourName;
+	    private String tour_name;
 
 	    /**
 	     * 価格
@@ -31,43 +29,38 @@ public class SelectCartDTO {
 	     */
 	    private int quantity;
 
-	    /**
-	     * 画像パス
-	     */
-	    private String imgAddress001;
-
 
 
 	    /**
 	     * ツアーIDを取得するメソッド
-	     * @return tourId ツアーID
+	     * @return tour_id ツアーID
 	     */
 	    public int getTourId(){
-	        return tourId;
+	        return tour_id;
 	    }
 
 	    /**
 	     * ツアーIDを格納するメソッド
-	     * @param tourId ツアーID
+	     * @param tour_id ツアーID
 	     */
-	    public void setTourId(int tourId){
-	        this.tourId = tourId;
+	    public void setTourId(int tour_id){
+	        this.tour_id = tour_id;
 	    }
 
 	    /**
 	     * ツアー名を取得するメソッド
-	     * @return tourName ツアー名
+	     * @return tour_name ツアー名
 	     */
 	    public String getTourName(){
-	        return tourName;
+	        return tour_name;
 	    }
 
 	    /**
 	     * ツアー名を格納するメソッド
-	     * @param tourName ツアー名
+	     * @param tour_name ツアー名
 	     */
-	    public void setTourName(String tourName){
-	        this.tourName = tourName;
+	    public void setTourName(String tour_name){
+	        this.tour_name = tour_name;
 	    }
 
 	    /**
@@ -100,22 +93,6 @@ public class SelectCartDTO {
 	     */
 	    public void setQuantity(int quantity) {
 	        this.quantity = quantity;
-	    }
-
-	    /**
-	     * ツアーIDを取得するメソッド
-	     * @return tourId ツアーID
-	     */
-	    public String getImgAddress001(){
-	        return imgAddress001;
-	    }
-
-	    /**
-	     * ツアーIDを格納するメソッド
-	     * @param tourId ツアーID
-	     */
-	    public void setImgAddress001(String imgAddress001){
-	        this.imgAddress001 = imgAddress001;
 	    }
 
 	}

@@ -12,14 +12,13 @@ import com.internousdev.choitabi.dto.CartDTO;
 import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-
-
 /**
  * カート内の商品の購入数を変更するアクション
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.0
+ * @version 1.1
  */
+
 
 public class UpdateCartAction extends ActionSupport implements SessionAware{
 
@@ -28,25 +27,26 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      */
     private static final long serialVersionUID = 1L;
 
+
    /**
      * カートID
      */
-    private int cartId;
+    private int cart_id;
 
     /**
      * ユーザーID
      */
-    private int userId;
+    private int user_id;
 
     /**
      * ツアーID
      */
-    private int tourId;
+    private int tour_id;
 
     /**
      * ツアー名
      */
-    private String tourName;
+    private String tour_name;
 
     /**
      * 価格
@@ -61,12 +61,12 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
     /**
      * 合計金額
      */
-    private int totalPrice;
+    private int total_price;
 
     /**
      * 更新処理をした件数
      */
-    private int updateCount;
+    private int update_count;
 
     /**
      * カート情報
@@ -89,25 +89,24 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * カートの上限処理を実行するメソッド
      * @author HINAKO HAGIWARA
      * @since 2017/09/05
-     * @version 1.0
+     * @version 1.1
      * @return succeess or login
      */
-
     public String execute() throws SQLException{
         String result = LOGIN;
 
-        if(session.containsKey("userId")) {
-        	userId = (int) session.get("userId");
+        if(session.containsKey("user_id")) {
+        	user_id = (int) session.get("user_id");
         	UpdateCartDAO ucDao = new UpdateCartDAO();
 
         	SelectCartDAO scDao = new SelectCartDAO();
 
-        	updateCount = ucDao.updateCart(cartId, userId, quantity);
-        	cartList = scDao.selectCart(userId);
+        	update_count = ucDao.updateCart(cart_id, user_id, quantity);
+        	cartList = scDao.selectCart(user_id);
 
         if (cartList.size() > 0) {
         	for(int i = 0; i < cartList.size(); i++) {
-        		totalPrice += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantity());
+        		total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantity());
         	}
 
         	result = SUCCESS;
@@ -119,69 +118,68 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
     }
 
 
-
     /**
      * カートIDを取得するメソッド
-     * @return cartId カートID
+     * @return cart_id カートID
      */
     public int getCartId() {
-        return cartId;
+        return cart_id;
         }
 
     /**
      * カートIDを格納するメソッド
-     * @param cartId カートID
+     * @param cart_id カートID
      */
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
+    public void setCartId(int cart_id) {
+        this.cart_id = cart_id;
         }
 
     /**
      * ユーザーIDを取得するメソッド
-     * @return userId ユーザーID
+     * @return user_id ユーザーID
      */
     public int getUserId() {
-    	return userId;
+    	return user_id;
     }
 
     /**
      * ユーザーIDを格納メソッド
-     * @oaram userId ユーザーID
+     * @oaram user_id ユーザーID
      */
-    public void setUserId(int userId) {
-    	this.userId = userId;
+    public void setUserId(int user_id) {
+    	this.user_id = user_id;
     }
 
     /**
      * ツアーIDを取得するメソッド
-     * @return tourId ツアーID
+     * @return tour_id ツアーID
      */
     public int getTourId() {
-    	return tourId;
+    	return tour_id;
     }
 
     /**
      * ツアーIDを格納するメソッド
-     * @param tourId ツアーID
+     * @param tour_id ツアーID
      */
-    public void setTourId(int tourId) {
-    	this.tourId = tourId;
+    public void setTourId(int tour_id) {
+    	this.tour_id = tour_id;
     }
 
     /**
      * ツアー名を取得するメソッド
-     * @return tourName ツアー名
+     * @return tour_name ツアー名
      */
     public String getTourName() {
-    	return tourName;
+    	return tour_name;
     }
 
     /**
      * ツアー名を格納するメソッド
-     * @param tourName ツアー名
+     * @param tour_name ツアー名
      */
-    public void setTourName(String tourName) {
-    	this.tourName = tourName;
+    public void setTourName(String tour_name) {
+    	this.tour_name = tour_name;
     }
 
     /**
@@ -218,34 +216,34 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
 
     /**
      * 合計金額を取得するメソッド
-     * @return totalPrice 合計金額
+     * @return total_price 合計金額
      */
     public int getTotalPrice() {
-    	return totalPrice;
+    	return total_price;
     }
 
     /**
      * 合計金額を格納するメソッド
-     * @param totalPrice 合計金額
+     * @param total_price 合計金額
      */
-    public void setTotalPrice(int totalPrice) {
-    	this.totalPrice = totalPrice;
+    public void setTotalPrice(int total_price) {
+    	this.total_price = total_price;
     }
 
     /**
      * 更新処理をした件数を取得するメソッド
-     * @return updateCount 更新処理をした件数
+     * @return update_count 更新処理をした件数
      */
     public int getUpdateCount() {
-    	return updateCount;
+    	return update_count;
     }
 
     /**
      * 更新処理をした件数を格納するメソッド
-     * @param updateCount 更新処理をした件数
+     * @param update_count 更新処理をした件数
      */
-    public void setUpdateCount(int updateCount) {
-    	this.updateCount = updateCount;
+    public void setUpdateCount(int update_count) {
+    	this.update_count = update_count;
     }
 
     /**

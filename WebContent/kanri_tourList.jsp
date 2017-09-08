@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,9 +10,9 @@
 <body>
 <h1>ツアー情報一覧</h1>
     <hr>
-    ツアー名検索<br>
+    ツアー検索<br>
     <s:form action="IndicateTourListAction">
-		<s:textfield name="selectWord" property="selectWord"/>
+		<s:textfield name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
 		<s:submit value="検索"/>
 	</s:form>
@@ -45,16 +45,12 @@
 	</s:iterator>
 </table>
     <br>
-    <a href='<s:url action="GoTourInsertPageAction"></s:url>'>
-    ツアーの新規登録を行う
-    </a><br>
-    <br>
+
 <!-- ↓ページの「＜＜1/3＞＞」の部分です -->
 
 	<s:if test="currentPage != 1">
 	    <a href='
 		    <s:url action="IndicateTourListAction">
-		    		<s:param name="selectWord" value="selectWord"/>
 		    		<s:param name="currentPage" value="currentPage-1"/>
 		    </s:url>'>
 		    ＜＜
@@ -69,7 +65,6 @@
 	<s:if test="currentPage < maxPage">
 	    <a href='
 		    <s:url action="IndicateTourListAction">
-		    		<s:param name="selectWord" value="selectWord"/>
 		    		<s:param name="currentPage" value="currentPage+1"/>
 		    </s:url>'>
 		    ＞＞

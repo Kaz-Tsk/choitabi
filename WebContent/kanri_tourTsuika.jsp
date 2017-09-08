@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,26 +12,41 @@
 <hr>
     ツアー情報を入力してください
 <br>
-
-
-<s:form action="ConfirmTourInsertingAction">
 <table border = "1px" cellspacing = "0px" cellpadding = "10px">
+
     <tr>
-        <th>名称</th><td><input type="text" name="newTourName"></td>
+        <th>名称</th><td>　　　</td>
     </tr>
     <tr>
-        <th>価格</th><td><input type="text" name="newTourPrice" size="5">　円</td>
+        <th>開始日</th><td>　　　</td>
     </tr>
     <tr>
-        <th>定員</th><td><input type="text" name="newTourPersons" size = "5">　名</td>
+        <th>終了日</th><td>　　　</td>
     </tr>
     <tr>
-        <th>出発地</th><td><input type="text" name="newTourDeparture"></td>
+        <th>定員</th><td>　　　</td>
+    </tr>
+    <tr>
+        <th>一言アピール</th><td>　　　</td>
+    </tr>
+    <tr>
+        <th>説明文</th><td>　　　</td>
+    </tr>
+    <tr>
+        <th>スケジュール概要</th><td>　　　</td>
+    </tr>
+    <tr>
+        <th>画像1</th><td>　　　</td>
+    </tr>
+    <tr>
+        <th>画像2</th><td>　　　</td>
+    </tr>
+
 </table>
 <br>
-<input type="submit" value="確認"/>
-</s:form>
-
+<hr>
+<br>
+    <font color = "black">確認(※ボタンにします)</font><br>
 <br>
 <hr>
 <br>

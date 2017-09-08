@@ -28,6 +28,8 @@ public class EditTourAction extends ActionSupport {
 	/*出発地*/
 	private String departure;
 
+	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
+	private boolean deleteCheck = false;
 
 
 	/*executeメソッド-------------------------------------------------*/
@@ -104,7 +106,13 @@ public class EditTourAction extends ActionSupport {
 		this.departure = departure;
 	}
 
+	public boolean getDeleteCheck(){
+		return deleteCheck;
+	}
 
+	public void setDeleteCheck(boolean deleteCheck){
+		this.deleteCheck = deleteCheck;
+	}
 
 
 
