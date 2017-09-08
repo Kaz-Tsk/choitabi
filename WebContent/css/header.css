@@ -1,39 +1,54 @@
 
-.header a:link{
-	color:#ffffff;
-}
-.header a:visited{
-	color:#ffffff;
-}
-
-.header a:hover{
-	color:#ffffff;
+header{
+	posotion:absolute;
+	margin-bottom:30px;
+	width:100%;
+	height:80px;
+	background-color:orange;
+	text-align:right;
 }
 
-.header a:active{
+
+.logo{
+	position:absolute;
 	color:#ffffff;
+	font-size:40px;
+	margin-top:10px;
+	text-align:light;
 }
-.crear{
-	clear:both;
+
+
+.login{
+	text-align:right;
 }
-.body{
-  padding: 0;
-  font-size: 15px;
+
+.navi{
+	width:770px;
+	height:50px;
+  	margin:0 auto;
+  	font-family:"メイリオ";
 }
-.title{
-  position: absolute;
-  top:0;
-  left:0px;
-  z-index: 1;
-  width:100%;
-  background-color:orange;
-  padding-top: 13px;
-  padding-bottom: 13px;
+
+.navi2{
+	width:910px;
+	height:50px;
+  	margin:0 auto;
+  	font-family:"メイリオ";
 }
-.text-right{
-  position: absolute;
-  top:65px;
-  right: 10px;
-  z-index: 1;
-  font-size: 23px;
+
+
+
+header a:link{
+	              color:#ffffff;
 }
+header a:visited{
+	              color:#ffffff;
+}
+header a:hover{
+	              color:#ffffff;
+}
+header a:active{
+	              color:#ffffff;
+}
+
+
