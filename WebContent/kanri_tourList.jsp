@@ -10,7 +10,7 @@
 <body>
 <h1>ツアー情報一覧</h1>
     <hr>
-    ツアー検索<br>
+    ツアー名検索<br>
     <s:form action="IndicateTourListAction">
 		<s:textfield name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
