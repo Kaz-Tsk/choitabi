@@ -18,7 +18,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * カートの中身を削除するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.1
+ * @version 1.0
  */
 
 public class DeleteCartAction extends ActionSupport implements SessionAware {
@@ -31,7 +31,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 	/**
      * 合計金額
      */
-    private int total_price;
+    private int totalPrice;
 
     /**
      * 購入数
@@ -41,17 +41,17 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
     /**
      * ユーザーID
      */
-    private int user_id;
+    private int userId;
 
     /**
      * カートID
      */
-    private int cart_id;
+    private int cartId;
 
     /**
      * 削除処理をした件数
      */
-    private int del_count;
+    private int delCount;
 
     /**
      *  セッション情報
@@ -69,25 +69,26 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * カートの商品を削除処理をする実行メソッド
      * @author HINAKO HAGIWARA
      * @since 2017/09/05
-     * @version 1.1
+     * @version 1.0
      */
+
     public String execute() throws SQLException{
         String result =ERROR;
 
-        if(session.get("user_id") != null){
-            int user_id = (int) session.get("user_id");
+        if(session.get("userId") != null){
+            int userId = (int) session.get("userId");
 
             DeleteCartDAO dao = new DeleteCartDAO();
             SelectCartDAO dao2 =new SelectCartDAO();
 
-            del_count= dao.delete(user_id,cart_id);
+            delCount= dao.delete(userId, cartId);
 
-            if(del_count>0){
-                cartList =dao2.selectCart(user_id);
+            if(delCount>0){
+                cartList =dao2.selectCart(userId);
 
                 if(cartList.size() > 0){
                     for(int i = 0; i < cartList.size(); i++ ){
-                        total_price += (cartList.get(i).getPrice())*(cartList.get(i).getQuantity());
+                        totalPrice += (cartList.get(i).getPrice())*(cartList.get(i).getQuantity());
                         }
 
                     result =SUCCESS;
@@ -99,20 +100,21 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
         }
 
 
+
     /**
      * ユーザーIDを取得するためのメソッド
-     * @return user_id ユーザーID
+     * @return userId ユーザーID
      */
     public int getUserId() {
-        return user_id;
+        return userId;
         }
 
     /**
      * ユーザーIDを格納するためのメソッド
-     * @param user_id ユーザーID
+     * @param userId ユーザーID
      */
-    public void setUserId(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
         }
 
     /**
@@ -149,18 +151,18 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 
     /**
      * 合計金額を取得するメソッド
-     * @return total_price 合計金額
+     * @return totalPrice 合計金額
      */
     public int getTotalPrice() {
-        return total_price;
+        return totalPrice;
         }
 
     /**
      * 合計金額を格納するメソッド
-     * @param total_price 合計金額
+     * @param totalPrice 合計金額
      */
-    public void setTotalPrice(int total_price) {
-        this.total_price = total_price;
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
         }
 
     /**
@@ -181,34 +183,34 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 
     /**
      * 削除処理をした件数を取得するメソッド
-     * @return del_count 削除処理をした件数
+     * @return delCount 削除処理をした件数
      */
     public int getDelCount() {
-        return del_count;
+        return delCount;
         }
 
     /**
      * 削除処理をした件数を格納するメソッド
-     * @param del_count 削除処理をした件数
+     * @param delCount 削除処理をした件数
      */
-    public void setDelCount(int del_count) {
-        this.del_count = del_count;
+    public void setDelCount(int delCount) {
+        this.delCount = delCount;
         }
 
     /**
      * カートIDを取得するメソッド
-     * @return cart_id カートID
+     * @return cartId カートID
      */
     public int getCartId() {
-        return cart_id;
+        return cartId;
         }
 
     /**
      * カートIDを格納するメソッド
-     * @param cart_id カートID
+     * @param cartId カートID
      */
-    public void setCartId(int cart_id) {
-        this.cart_id = cart_id;
+    public void setCartId(int cartId) {
+        this.cartId = cartId;
         }
 
     /**
@@ -218,4 +220,5 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
     public static long getSerialversionuid() {
         return serialVersionUID;
         }
+
 }
