@@ -91,7 +91,7 @@ public class KanriContactAction extends ActionSupport {
 	            searchName = "";
 	        }
 	        searchName = searchName.trim();
-         searchList = dao.display("searchName");
+         searchList = dao.display("searchName");//この名前で検索したデータすべてをsearchListに入れる
 
          if(searchName == null || searchName.equals("")) {
              searchList = dao.display("");
@@ -103,23 +103,21 @@ public class KanriContactAction extends ActionSupport {
              result=SUCCESS;
              }
 
-         number=searchList.size();
+         number=searchList.size();//searchListに入ったデータの個数をnumberに記録する
 
 
 
-            if(number > 0){
-
+            if(number > 0){//記録されたデータが一つ以上あったら…
+            		/*動作確認*/System.out.println("KAnriContactAction -現在のページ：" + pageNum);
 
 
             	   ArrayList<PageContact> KanriPages = new ArrayList<PageContact>();
                    KanriContactPagenation Kanrip = new KanriContactPagenation();
-                   KanriPages=Kanrip.paginate(searchList, 10);
+                   KanriPages=Kanrip.paginate(searchList, number);
                    maxPage = Kanrip.getMaxPage(searchList, 10);
 
                    displayList = KanriPages.get(pageNum-1).getPaginatedList();
-                   for(int i=0; i<maxPage; i++ ) {
-   					list.add(i);
-   				}
+
                    result = SUCCESS;
                }
 

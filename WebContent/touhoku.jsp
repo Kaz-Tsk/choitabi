@@ -23,7 +23,7 @@
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
             <div class="sub">
-                <input type= "image" src = "img/namieyakizoba.jpg">
+                <a href="InsertCartAction"><img src= "img/namieyakizoba.jpg"></a>
                 <div class="name">なみえ焼きそば<br>(東北/福島県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;1800</span></div>
             </div>

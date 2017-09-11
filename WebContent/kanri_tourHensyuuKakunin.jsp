@@ -28,7 +28,7 @@
 
 <s:if test="deleteCheck.equals('true')">
 削除するツアー
-	<table border = "1px" cellspacing = "0px" cellpadding = "10px">
+	<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="360">
 	    <tr>
 	        <tr>
 	        <th>ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
@@ -63,7 +63,7 @@
 	    </tr>
 	    <tr>
 	        <th>コメント</th>
-	        <td width="30px"><s:property value="currentComment"/></td>
+	        <td width="200px"><font size="2px"><s:property value="currentComment"/></font></td>
 	    </tr>
 	    <tr>
 	        <th>画像URL</th>
@@ -134,7 +134,7 @@
 <br>
     <a href=
 	    '<s:url action="UpdateTourAction">
-		    <s:param name="editTourId" value="editTourId"/>
+		    <s:param name="editTourId" value="currentTourId"/>
 		    <s:param name="editTourName" value = "editTourName"/>
 		    <s:param name="editPrice" value = "editPrice"/>
 		    <s:param name="editPersons" value = "editPersons"/>
