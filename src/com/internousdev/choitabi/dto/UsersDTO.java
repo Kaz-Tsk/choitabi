@@ -6,7 +6,11 @@ public class UsersDTO {
 
 	private String password;
 	private String mailAddress;
+	private int userId;
+	private boolean loginFlg;
 	private int userFlg;
+
+
 
 
 	/**
@@ -35,16 +39,44 @@ public class UsersDTO {
 	}
 
 	/**
-	 * userFlg
+	 *@return userId
+	 */
+	public int getUserId(){
+		return userId;
+	}
+
+	/**
+	 * @param userId
+	 */
+	public void setUserId(int userId){
+		this.userId = userId;
+	}
+
+	/**
+	 *@return loginFlg
+	 */
+	public boolean isLoginFlg(){
+		return loginFlg;
+	}
+
+	/**
+	 * @param loginFlg
+	 */
+	public void setLoginFlg(boolean loginFlg){
+		this.loginFlg = loginFlg;
+	}
+
+	/**
+	 * @return userFlg
 	 */
 	public int getUserFlg(){
 		return userFlg;
 	}
+
 	/**
-	 * @param userFlg set
+	 * @param userFlg
 	 */
 	public void setUserFlg(int userFlg){
 		this.userFlg = userFlg;
 	}
-	}
-
+}

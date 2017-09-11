@@ -60,8 +60,9 @@
 
 <!-- ログイン画面 -->
 	<action name="LoginAction" class="com.internousdev.choitabi.action.LoginAction" method="execute">
-	<result name="success" type="chain">MainTopAction</result>
+	<result name="success" >index.jsp</result>
 	<result name="error" >login.jsp</result>
+	<result name="admin">kanri_top</result>
 	</action>
 
 
