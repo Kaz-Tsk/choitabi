@@ -20,7 +20,7 @@ public class DBConnector {
 	//ここから本文----------------------------------------------------------------------
 
 	private String className = "com.mysql.jdbc.Driver";			//←ロードするドライバー名
-	private String connectUrl = "jdbc:mysql://localhost/test_choitabi";  //←接続先のデータベース
+	private String connectUrl = "jdbc:mysql://localhost/choitabi";  //←接続先のデータベース
 	private String connectUser = "root";								//←接続するユーザー
 	private String connectPassword = "mysql";						//←接続するときのパスワード
 

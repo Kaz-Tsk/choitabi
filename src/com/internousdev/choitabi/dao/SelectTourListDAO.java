@@ -29,7 +29,7 @@ public class SelectTourListDAO {
 			Connection con = tdc.createConnection();
 			String sql = "SELECT * FROM tour WHERE tour_name LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);
-			/*後消し*/System.out.println("DAO : " + sql);
+			/*後消し*/System.out.println("SelectTourListDAO : " + sql);
 			ps.setString(1, "%" + selectWord + "%");
 			ResultSet rs = ps.executeQuery();
 
@@ -37,15 +37,29 @@ public class SelectTourListDAO {
 			while(rs.next()){
 				/*DBから検索された内容を、dtoに一つずつしまって、リストにしていきます*/
 				/*箱を用意する→データ一式を入れる→リストに追加→また新しい箱を用意する…を必要な分だけ繰り返す処理*/
-				SelectTourDTO tstdto = new SelectTourDTO();
+				SelectTourDTO stdto = new SelectTourDTO();
 
-				tstdto.setTourName(rs.getString("tour_name"));
-				tstdto.setTourId(rs.getInt("tour_id"));
-				tstdto.setPrice(rs.getInt("price"));
-				tstdto.setPersons(rs.getInt("persons"));
-				tstdto.setDate(rs.getString("date")); /*これString型で動くんだ……*/
-				tstdto.setDeparture(rs.getString("departure"));
-				allTourList.add(tstdto);
+				stdto.setTourId(rs.getInt("tour_id"));
+				stdto.setTourName(rs.getString("tour_name"));
+				stdto.setPrice(rs.getInt("price"));
+				stdto.setDeparture(rs.getString("departure"));
+				stdto.setRegion(rs.getString("region"));
+				stdto.setPrefectures(rs.getString("prefectures"));
+				stdto.setTheme(rs.getString("theme"));
+				stdto.setComment(rs.getString("comment"));
+				stdto.setImg(rs.getString("img"));
+				/*動作確認*/System.out.println(stdto.getTourId());
+				/*動作確認*/System.out.println(stdto.getTourName());
+				/*動作確認*/System.out.println(stdto.getPrice());
+				/*動作確認*/System.out.println(stdto.getDeparture());
+				/*動作確認*/System.out.println(stdto.getRegion());
+				/*動作確認*/System.out.println(stdto.getPrefectures());
+				/*動作確認*/System.out.println(stdto.getTheme());
+				/*動作確認*/System.out.println(stdto.getComment());
+				/*動作確認*/System.out.println(stdto.getImg());
+
+
+				allTourList.add(stdto);
 			}
 
 			/*SQL接続の後片付けです*/
