@@ -28,7 +28,10 @@
    <tr>
    		<th>ツアーID</th><td><s:property value="currentTourId"/></td><td>(変更不可です)</td>
    </tr>
-	<!-- 価格は現在非表示にしています -->
+      <tr>
+   		<th>価格</th><td><s:property value="currentPrice"/>円</td>
+   		<td><input type="text" size="5" name="editPrice" value=<s:property value="currentPrice"/>></input>　円</td>
+   </tr>
    <tr>
    		<th>定員</th><td><s:property value="currentPersons"/>名</td>
    		<td><input type="text" size="5" name="editPersons" value=<s:property value="currentPersons"/>></input>　名</td>
@@ -42,7 +45,7 @@
    		<td><input type="text" name="editRegion" value=<s:property value="currentRegion"/>></input></td>
    </tr>
       <tr>
-   		<th>県</th><td><s:property value="currentPrefectures"/></td>
+   		<th>都道府県</th><td><s:property value="currentPrefectures"/></td>
    		<td><input type="text" name="editPrefectures" value=<s:property value="currentPrefectures"/>></input></td>
    </tr>
       <tr>
@@ -55,7 +58,7 @@
    </tr>
       <tr>
    		<th>画像URL</th><td><s:property value="currentImg"/></td>
-   		<td><input type="file" name="editImg"><s:property value = "currentImg"/></td>
+   		<td><input type="file" name="editImg" value = <s:property value = "currentImg"/>></input></td>
    </tr>
 </table>
 <hr>
