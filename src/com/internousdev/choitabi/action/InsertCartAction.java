@@ -238,7 +238,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
      * 合計金額を取得するメソッド
      * @return totalPrice 合計金額
      */
-    public int getTtalPrice() {
+    public int getTotalPrice() {
     	return totalPrice;
     }
 
