@@ -11,7 +11,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -61,10 +61,11 @@
 			</h1>
 		</div>
 
-		<s:if test="%{cartList.size() > 0 && #session.user_id != null}">
+		<s:if test="%{cartList.size() > 0 && #session.userId != null}">
 			<table class="cartlist">
 				<thead>
 					<tr>
+					    <th><s:text name="lang.cart.imgAddress001" /></th>
 						<th><s:text name="lang.cart.tour_name" /></th>
 						<th><s:text name="lang.cart.price" /></th>
 						<th><s:text name="lang.cart.count" /></th>
@@ -79,7 +80,7 @@
 						<tr>
 							<td><img src="<s:property value="imgAddress001"/>" alt=""
 								width="100" height="100"></td>
-							<td><s:property value="tour_name" /></td>
+							<td><s:property value="tourName" /></td>
 
 							<td><fmt:formatNumber value="${price}" pattern="###,###,###" />
 								<s:text name="lang.cart.yen" /></td>
@@ -92,8 +93,8 @@
 									pattern="###,###,###" /> <s:text name="lang.cart.yen" /></td>
 
 							<td><s:form action="UpdateCartAction">
-									<s:hidden name="cart_id" value="%{cart_id}" />
-									<s:hidden name="tour_id" value="%{tour_id}" />
+									<s:hidden name="cartId" value="%{cartId" />
+									<s:hidden name="tourId" value="%{tourId}" />
 									<div class="row">
 										<select name="quantity">
 											<option>1</option>
@@ -117,8 +118,8 @@
 							<td><s:form action="DeleteCartAction">
 									<!--  --<input id="order" type="hidden" name="quantity"
 								value="<s:property value="quantity"/>">-->
-									<s:hidden name="user_id" value="%{user_id}" />
-									<s:hidden name="cart_id" value="%{cart_id}" />
+									<s:hidden name="userId" value="%{userId}" />
+									<s:hidden name="cartId" value="%{cartId}" />
 									<button type="submit" class="btn btn-default">
 										<s:text name="lang.cart.delete" />
 									</button>
@@ -131,11 +132,11 @@
 			</table>
 			<h2 class="text-danger text-right">
 				<s:text name="lang.cart.total" />
-				<fmt:formatNumber value="${total_price}" pattern="###,###,###" />
+				<fmt:formatNumber value="${totalPrice}" pattern="###,###,###" />
 				<s:text name="lang.cart.tax_include" />
 			</h2>
 
-			<s:form action="GoSettlementAction">
+			<s:form action="GoPaymentAction">
 				<!-- 購入ボタンフォーム -->
 				<button type="submit" class="btn btn-warning center-block">
 					<s:text name="lang.cart.payment" />
