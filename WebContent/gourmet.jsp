@@ -25,50 +25,50 @@
             <div class="sub">
                 <input type= "image" src = "img/namieyakizoba.jpg">
                 <div class="name">なみえ焼きそば<br>(東北/福島県)</div>
-                <div class="price">価格:1800円</div>
+                <div class="price">価格:<span class= "price_num">&yen;1800</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/zundamochi.jpg">
                 <div class="name">ずんだ餅<br>(東北/宮城県)</div>
-                <div class="price">価格:1145円</div>
+                <div class="price">価格:<span class= "price_num">&yen;1145</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/utunomiyagyouza.jpg">
                 <div class="name">宇都宮餃子<br>(関東/栃木県)</div>
-                <div class="price">価格:1481円</div>
+                <div class="price">価格:<span class= "price_num">&yen;1481</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/yokosukakaiguncurry.jpg">
                 <div class="name">よこすか海軍カレー<br>(関東/神奈川県)</div>
-                <div class="price">価格:464円</div>
+                <div class="price">価格:<span class= "price_num">&yen;464</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/osakanokusikatsu.jpg">
                 <div class="name">大阪の串かつ
                 <br>(関西/大阪府)</div>
-                <div class="price">価格:555円</div>
+                <div class="price">価格:<span class= "price_num">&yen;555</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/obanzai.jpg">
                 <div class="name">おばんざい<br>(関西/京都府)</div>
-                <div class="price">価格:441円</div>
+                <div class="price">価格:<span class= "price_num">&yen;441</span></div>
             </div>
 
             <div class="sub">
                  <input type= "image" src = "img/chickennanban.jpg">
                 <div class="name">チキン南蛮<br>(九州/宮崎県)</div>
-                <div class="price">価格:443円</div>
+                <div class="price">価格:<span class= "price_num">&yen;443</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/nagasakichanpon.jpg">
                 <div class="name">長崎ちゃんぽん<br>(九州/長崎県)</div>
-                <div class="price">価格:777円</div>
+                <div class="price">価格:<span class= "price_num">&yen;777</span></div>
             </div>
         </div>
 
