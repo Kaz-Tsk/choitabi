@@ -22,32 +22,40 @@
    		<th></th><th>変更前</th><th>変更後</th>
    </tr>
    <tr>
-   		<th>ツアー名</th><td><s:property value="currentTourName"/></td><td><input type="text" name="editTourName"/></td>
+   		<th>ツアー名</th><td><s:property value="currentTourName"/></td>
+   		<td><input type="text" name="editTourName" value=<s:property value="currentTourName"/>></input></td>
    </tr>
    <tr>
    		<th>ツアーID</th><td><s:property value="currentTourId"/></td><td>(変更不可です)</td>
    </tr>
 	<!-- 価格は現在非表示にしています -->
    <tr>
-   		<th>定員</th><td><s:property value="currentPersons"/>名</td><td><input type="text" size="5" name="editPersons"/>　名</td>
+   		<th>定員</th><td><s:property value="currentPersons"/>名</td>
+   		<td><input type="text" size="5" name="editPersons" value=<s:property value="currentPersons"/>></input>　名</td>
    </tr>
    <tr>
-   		<th>出発地</th><td><s:property value="currentDeparture"/></td><td><input type="text" name="editDeparture"/></td>
+   		<th>出発地</th><td><s:property value="currentDeparture"/></td>
+   		<td><input type="text" name="editDeparture" value=<s:property value = "currentDeparture"/>></input></td>
    </tr>
    <tr>
-   		<th>エリア</th><td><s:property value="currentRegion"/></td><td><input type="text" name="editRegion"/></td>
+   		<th>エリア</th><td><s:property value="currentRegion"/></td>
+   		<td><input type="text" name="editRegion" value=<s:property value="currentRegion"/>></input></td>
    </tr>
       <tr>
-   		<th>県</th><td><s:property value="currentPrefectures"/></td><td><input type="text" name="editPrefectures"/></td>
+   		<th>県</th><td><s:property value="currentPrefectures"/></td>
+   		<td><input type="text" name="editPrefectures" value=<s:property value="currentPrefectures"/>></input></td>
    </tr>
       <tr>
-   		<th>テーマ</th><td><s:property value="currentTheme"/></td><td><input type="text" name="editTheme"/></td>
+   		<th>テーマ</th><td><s:property value="currentTheme"/>
+   		</td><td><input type="text" name="editTheme" value = <s:property value= "currentTheme"/>></input></td>
    </tr>
       <tr>
-   		<th>コメント</th><td><s:property value="currentComment"/></td><td><input type="text" name="editComment"/></td>
+   		<th>コメント</th><td width="30px"><s:property value="currentComment"/></td>
+   		<td><textarea rows="10" cols="30"name="editComment"><s:property value = "currentComment"/></textarea></td>
    </tr>
       <tr>
-   		<th>画像URL</th><td><s:property value="currentImg"/></td><td><input type="text" name="editImg"/></td>
+   		<th>画像URL</th><td><s:property value="currentImg"/></td>
+   		<td><input type="file" name="editImg"><s:property value = "currentImg"/></td>
    </tr>
 </table>
 <hr>
