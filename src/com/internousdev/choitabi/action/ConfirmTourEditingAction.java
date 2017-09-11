@@ -79,7 +79,12 @@ public class ConfirmTourEditingAction extends ActionSupport{
 		try{
 			if(deleteCheck.equals("true")){
 				result = SUCCESS;
-			}else if(deleteCheck.equals("false") && (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") || editDeparture.equals(""))){
+
+			}else if(deleteCheck.equals("false") &&
+					 (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") ||
+					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme.equals("") ||
+					  editComment.equals("") )) {
+
 				errorMsg = "情報が完全に入力されていません";
 				System.out.println(errorMsg);
 			}else{
