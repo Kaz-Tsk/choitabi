@@ -1,8 +1,8 @@
 package com.internousdev.choitabi.dto;
 /**
  * ツアー情報を格納・取得するクラス
- * @author RYUTO TASHIRO
- * @since 2017/8/24
+ * @author kanako miyazono
+ * @since 2017/9/11
  * @version 1.1
  */
 public class KanriContactDTO {

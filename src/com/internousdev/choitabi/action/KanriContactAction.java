@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import com.internousdev.choitabi.dao.KanriContactDAO;
 import com.internousdev.choitabi.dto.KanriContactDTO;
 import com.internousdev.choitabi.util.KanriContactPagenation;
+import com.internousdev.choitabi.util.KanriContactPagenation2;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 商品の情報をセレクトするアクション
- * @author RYUTO TASHIRO
- * @since 2017/8/24
+ * @author kanako miyazono
+ * @since 2017/9/11
  * @version 1.1
  * @param <PageObjectContact>
  */
@@ -78,8 +79,8 @@ public class KanriContactAction extends ActionSupport {
 
     /**
      * 問い合わせ情報を取得するメソッド
-     * @author RYUTO TASHIRO
-     * @since 2017/07/11
+     * @author kanako miyazono
+     * @since 2017/09/11
      * @version 1.1
      */
     public String execute() {
@@ -101,7 +102,7 @@ public class KanriContactAction extends ActionSupport {
              * */
 
             /*用意しておいたdisplayListを置きます*/
-            displayList = cp.paginateContactList(contactList, pageNum);
+            displayList = cp.KanriContactPagenation(contactList, pageNum);
             /*cpさんに仕事をお願いする。
              * 「contactList(でかい巻物)と、今のページ番号を教えるから、表示する小さいリストを作って」*/
 
@@ -109,12 +110,12 @@ public class KanriContactAction extends ActionSupport {
 
 
 
+            if(displayList.size() >= 1){
 
 
 
-
-            ArrayList<KanriContactPages> kanriPages =new ArrayList<KanriContactPages>();
-            KanriContactPagenation kanrip = new KanriContactPagenation();
+            ArrayList<KanriContactPagenation2> kanriPages =new ArrayList<KanriContactPagenation2>();
+            KanriContactPagenation2 kanrip = new KanriContactPagenation2();
             kanriPages=kanrip.pagenateContactList(searchList, 10);
             maxPage = kanrip.getMaxPage(searchList,10);
 
@@ -124,7 +125,7 @@ public class KanriContactAction extends ActionSupport {
 
 
 
-            if(displayList.size() >= 1){
+
             	result = SUCCESS;
             }
 
