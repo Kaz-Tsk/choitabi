@@ -18,25 +18,25 @@ public class EditTourAction extends ActionSupport {
 
 
 	/*ツアーID*/
-	private int tourId;
+	private int currentTourId;
 	/*ツアー名*/
-	private String tourName;
+	private String currentTourName;
 	/*価格*/
-	private int price;
+	private int currentPrice;
 	/*定員*/
-	private int persons;
+	private int currentPersons;
 	/*出発地*/
-	private String departure;
+	private String currentDeparture;
 	/*エリア*/
-	private String region;
+	private String currentRegion;
 	/*県*/
-	private String prefectures;
+	private String currentPrefectures;
 	/*テーマ*/
-	private String theme;
+	private String currentTheme;
 	/*コメント*/
-	private String comment;
+	private String currentComment;
 	/*画像URL*/
-	private String img;
+	private String currentImg;
 
 	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
 	private String deleteCheck = "false";
@@ -45,22 +45,23 @@ public class EditTourAction extends ActionSupport {
 	/*executeメソッド-------------------------------------------------*/
 
 	public String execute(){
-		String result = ERROR;
+		String result = SUCCESS;
 
 		SelectOneTourDAO sotdao = new SelectOneTourDAO();
-		SelectTourDTO stdto =sotdao.selectOneTour(tourId);
+		SelectTourDTO stdto =sotdao.selectOneTour(currentTourId);
 
 		if(stdto != null){
-			this.tourId = stdto.getTourId();
-			this.tourName = stdto.getTourName();
-			this.price = stdto.getPrice();
-			this.persons = stdto.getPersons();
-			this.departure = stdto.getDeparture();
-			this.region = stdto.getRegion();
-			this.prefectures = stdto.getPrefectures();
-			this.theme = stdto.getTheme();
-			this.comment = stdto.getComment();
-			this.img = stdto.getImg();
+			this.currentTourId = stdto.getTourId();
+			this.currentTourName = stdto.getTourName();
+			this.currentPrice = stdto.getPrice();
+			this.currentPersons = stdto.getPersons();
+			this.currentDeparture = stdto.getDeparture();
+			this.currentRegion = stdto.getRegion();
+			this.currentPrefectures = stdto.getPrefectures();
+			/*動作確認*/System.out.println("editTourAction："+ stdto.getTheme());
+			this.currentTheme = stdto.getTheme();
+			this.currentComment = stdto.getComment();
+			this.currentImg = stdto.getImg();
 			result = SUCCESS;
 		}
 
@@ -73,103 +74,103 @@ public class EditTourAction extends ActionSupport {
 	/*以下、getter/setter---------------------------------------------*/
 
 	/*ツアーIDのgetter*/
-	public int getTourId(){
-		return tourId;
+	public int getCurrentTourId(){
+		return currentTourId;
 	}
 
 	/*ツアーIDのsetter*/
-	public void setTourId(int tourId){
-		this.tourId = tourId;
+	public void setCurrentTourId(int currentTourId){
+		this.currentTourId = currentTourId;
 	}
 
 	/*ツアー名のgetter*/
-	public String getTourName(){
-		return tourName;
+	public String getCurrentTourName(){
+		return currentTourName;
 	}
 
 	/*ツアー名のsetter*/
-	public void setTourName(String tourName){
-		this.tourName = tourName;
+	public void setCurrentTourName(String currentTourName){
+		this.currentTourName = currentTourName;
 	}
 
 	/*価格のgetter*/
-	public int getPrice(){
-		return price;
+	public int getCurrentPrice(){
+		return currentPrice;
 	}
 
 	/*価格のsetter*/
-	public void setPrice(int price){
-		this.price = price;
+	public void setCurrentPrice(int currentPrice){
+		this.currentPrice = currentPrice;
 	}
 
 	/*定員のgetter*/
-	public int getPersons(){
-		return persons;
+	public int getCurrentPersons(){
+		return currentPersons;
 	}
 
 	/*定員のsetter*/
-	public void setPersons(int persons){
-		this.persons = persons;
+	public void setCurrentPersons(int currentPersons){
+		this.currentPersons = currentPersons;
 	}
 
 	/*出発地のgetter*/
-	public String getDeparture(){
-		return departure;
+	public String getCurrentDeparture(){
+		return currentDeparture;
 	}
 
 	/*出発地のsetter*/
-	public void setDeparture(String departure){
-		this.departure = departure;
+	public void setCurrentDeparture(String currentDeparture){
+		this.currentDeparture = currentDeparture;
 	}
 
 	/*エリアのgetter*/
-	public String getRegion(){
-		return region;
+	public String getCurrentRegion(){
+		return currentRegion;
 	}
 
 	/*エリアのsetter*/
-	public void setRegion(String region){
-		this.region = region;
+	public void setCurrentRegion(String currentRegion){
+		this.currentRegion = currentRegion;
 	}
 
 	/*県のgetter*/
-	public String getPrefectures(){
-		return prefectures;
+	public String getCurrentPrefectures(){
+		return currentPrefectures;
 	}
 
 	/*県のsetter*/
-	public void setPrefectures(String prefectures){
-		this.prefectures = prefectures;
+	public void setCurrentPrefectures(String currentPrefectures){
+		this.currentPrefectures = currentPrefectures;
 	}
 
 	/*テーマのgetter*/
-	public String getTheme(){
-		return theme;
+	public String getCurrentTheme(){
+		return this.currentTheme;
 	}
 
 	/*テーマのsetter*/
-	public void setTheme(String theme){
-		this.theme = theme;
+	public void setCurrentTheme(String currentTheme){
+		this.currentTheme = currentTheme;
 	}
 
 	/*コメントのgetter*/
-	public String getComment(){
-		return comment;
+	public String getCurrentComment(){
+		return currentComment;
 	}
 
 	/*コメントのsetter*/
-	public void setComment(String comment){
-		this.comment = comment;
+	public void setCurrentComment(String currentComment){
+		this.currentComment = currentComment;
 	}
 
 	/*画像URLのgetter*/
-	public String getImg(){
-		return img;
+	public String getCurrentImg(){
+		return currentImg;
 	}
 
 	/*画像URLのsetter*/
-	public void setImg(String img){
-		this.img = img;
+	public void setCurrentImg(String currentImg){
+		this.currentImg = currentImg;
 	}
 
 	/*削除チェックボックス判定のgetter*/
