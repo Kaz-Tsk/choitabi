@@ -23,7 +23,7 @@
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
             <div class="sub">
-                <img class = "img" src = "img/aquamarine_hukusima.jpg">
+                <div class= "ing"><input type = "image" src = "img/aquamarine_hukusima.jpg"></div>
                 <div class="name">アクアマリンふくしま<br>(東北/福島県)</div>
                 <div class="price">価格:1800円</div>
             </div>
