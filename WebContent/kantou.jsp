@@ -26,37 +26,37 @@
         <div class="sub">
                 <input type= "image" src = "img/utunomiyagyouza.jpg">
                 <div class="name">宇都宮餃子<br>(関東/栃木県)</div>
-                <div class="price">価格:1481円</div>
+                <div class="price">価格:<span class= "price_num">&yen;1481</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/yokosukakaiguncurry.jpg">
                 <div class="name">よこすか海軍カレー<br>(関東/神奈川県)</div>
-                <div class="price">価格:464円</div>
+                <div class="price">価格:<span class= "price_num">&yen;464</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/hananukikeikoku.jpg">
                 <div class="name">花貫渓谷<br>(関東/茨城県)</div>
-                <div class="price">価格:1481円</div>
+                <div class="price">価格:<span class= "price_num">&yen;1481</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/irohazaka.jpg">
                 <div class="name">日光いろは坂<br>(関東/栃木県)</div>
-                <div class="price">価格:4649円</div>
+                <div class="price">価格:<span class= "price_num">&yen;4649</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/mobarashi_twin_circuit.jpg">
                 <div class="name">茂原ツインサーキット<br>(関東/千葉県)</div>
-                <div class="price">価格:2500円</div>
+                <div class="price">価格:<span class= "price_num">&yen;2500</span></div>
             </div>
 
             <div class="sub">
                 <input type= "image" src = "img/sarugakyou_bungee.jpg">
                 <div class="name">猿ヶ京バンジー<br>(関東/群馬県)</div>
-                <div class="price">価格:11000円</div>
+                <div class="price">価格:<span class= "price_num">&yen;11000</span></div>
             </div>
         </div>
 
