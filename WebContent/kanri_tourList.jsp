@@ -51,6 +51,7 @@
 	<s:if test="currentPage != 1">
 	    <a href='
 		    <s:url action="IndicateTourListAction">
+		    		<s:param name = "selectWord" value="selectWord"/>
 		    		<s:param name="currentPage" value="currentPage-1"/>
 		    </s:url>'>
 		    ＜＜
@@ -65,6 +66,7 @@
 	<s:if test="currentPage < maxPage">
 	    <a href='
 		    <s:url action="IndicateTourListAction">
+		    		<s:param name="selectWord" value="selectWord"/>
 		    		<s:param name="currentPage" value="currentPage+1"/>
 		    </s:url>'>
 		    ＞＞
