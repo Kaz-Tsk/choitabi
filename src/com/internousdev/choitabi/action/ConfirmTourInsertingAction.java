@@ -1,6 +1,8 @@
 package com.internousdev.choitabi.action;
 
-public class ConfirmTourInsertingAction {
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ConfirmTourInsertingAction extends ActionSupport{
 
 	/**@author YUKA MATSUMURA
 	 * @since 2017/09/08
@@ -27,7 +29,10 @@ public class ConfirmTourInsertingAction {
 	/**/
 
 
-
+public String execute(){
+	String result = SUCCESS;
+	return result;
+}
 
 
 
