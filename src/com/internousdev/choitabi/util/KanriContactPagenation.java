@@ -20,9 +20,9 @@ public class KanriContactPagenation {
 	private int maxPage = 1;
 
 
-	public ArrayList<KanriContactDTO> paginateContactList(ArrayList<KanriContactDTO> contactList,int pageNum){
+	public ArrayList<KanriContactPages> paginateContactList(ArrayList<KanriContactDTO> contactList,int pageNum){
 
-		ArrayList<KanriContactDTO> smallContactList = new ArrayList<KanriContactDTO>();
+		ArrayList<KanriContactPages> smallContactList = new ArrayList<KanriContactPages>();
 
 		/*動作確認*/System.out.println("ContactPagination - 現在のページ番号：" + pageNum );
 		/*動作確認*/System.out.println("ContactPagination - お問い合わせ総データ数：" + contactList.size());

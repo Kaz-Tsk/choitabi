@@ -110,14 +110,27 @@ public class KanriContactAction extends ActionSupport {
 
 
 
+
+
+
+            ArrayList<KanriContactPages> kanriPages =new ArrayList<KanriContactPages>();
+            KanriContactPagenation kanrip = new KanriContactPagenation();
+            kanriPages=kanrip.pagenateContactList(searchList, 10);
+            maxPage = kanrip.getMaxPage(searchList,10);
+
+            displayList = kanriPages.get(pageNum-1).pagenatedItemList();
+            for(int i=0; i<maxPage; i++){list.add(i);}
+
+
+
+
             if(displayList.size() >= 1){
             	result = SUCCESS;
             }
 
 
 
-
-            /*動作確認用*/System.out.println("KanriContactActin - 現在のresult：" + result);
+            /*動作確認用*/System.out.println("KanriContactAction - 現在のresult：" + result);
             return result;
 }
 
