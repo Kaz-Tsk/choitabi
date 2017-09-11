@@ -29,6 +29,7 @@
 		<form action="KanriContactAction" method="post">
 
 			 <input type="text" name="searchName" id="searchName" value="<s:property value="searchName"/>">
+			 <s:hidden name = "pageNum" value="1"/>
              <input type="submit" value="検索" >
 		</form>
 
@@ -43,7 +44,7 @@
 							<th>メールアドレス | </th>
 							<th>お問い合わせ内容 | </th>
 						</tr>
-						<s:iterator value="displayList">
+						<s:iterator value="searchList">
 						<tr>
 							<td class="text-center"><s:property value="contact_name" /></td>
 							<td class="text-center"><s:property value="contact_mailAddress" /></td>

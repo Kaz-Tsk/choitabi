@@ -37,6 +37,7 @@ public class KanriContactPagenation {
 
 
 		for(int i = 0; i < maxPages; i++) {
+			/*動作確認*/System.out.println("KanriContactPagenation-検索中のリスト№" + count);
 			PageContact page = new PageContact();
 
 			for(int j = index; j < itemCount; j++) {
@@ -51,7 +52,7 @@ public class KanriContactPagenation {
 			displayList.add(page);
 
 			index += count;
-			itemCount += count;
+			//itemCount += count;
 		}
 		return displayList;
 	}
