@@ -22,7 +22,7 @@ public class KanriContactPagenation2 {
 	/**
 	 * 当該1ページに掲載される商品のリスト
 	 */
-	private ArrayList<KanriContactDTO> paginatedItemList = new ArrayList<KanriContactDTO>();
+	public ArrayList<KanriContactDTO> paginatedItemList = new ArrayList<KanriContactDTO>();
 
 	/**
 	 * ページネートされた商品リストを取得するメソッド
@@ -87,4 +87,7 @@ public class KanriContactPagenation2 {
 	public void setPaginatedItemList(ArrayList<KanriContactDTO> paginatedItemList) {
 		this.paginatedItemList = paginatedItemList;
 	}
-}
+
+
+	}
+
