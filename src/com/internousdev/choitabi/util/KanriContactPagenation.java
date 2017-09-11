@@ -7,16 +7,16 @@ import com.internousdev.choitabi.dto.KanriContactDTO;
 
 /**
  * 渡されたリストに対してページネーションを行うクラス
- * @author RYUTO TASHIRO
- * @since 2017/08/22
+ * @author kanako miyazono
+ * @since 2017/09/11
  * @version 1.1
  */
 public class KanriContactPagenation {
 
 	/**
 	 * 渡されたリストを1ページにcount個までオブジェクトが掲載された本の形に変換して返す
-	 * @author RYUTO TASHIRO
-	 * @since 2017/08/22
+	 * @author kanako miyazono
+	 * @since 2017/09/11
 	 * @param list DTOが格納されたArrayList
 	 * @param count 1ページあたりに掲載されるオブジェクトの個数
 	 * @return displayList
@@ -58,8 +58,8 @@ public class KanriContactPagenation {
 
 	/**
 	 * 渡されたリスト数と1ページあたりに掲載するオブジェクト数から総ページ数を返す
-	 * @author RYUTO TASHIRO
-	 * @since 2017/08/22
+	 * @author kanako miyazono
+	 * @since 2017/09/11
 	 * @param list DTOが格納されたArrayList
 	 * @param count 1ページあたりに掲載されるオブジェクトの個数
 	 * @return maxPages
