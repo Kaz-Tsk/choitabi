@@ -48,15 +48,15 @@ public class SelectTourListDAO {
 				stdto.setTheme(rs.getString("theme"));
 				stdto.setComment(rs.getString("comment"));
 				stdto.setImg(rs.getString("img"));
-				/*動作確認*/System.out.println(stdto.getTourId());
-				/*動作確認*/System.out.println(stdto.getTourName());
-				/*動作確認*/System.out.println(stdto.getPrice());
-				/*動作確認*/System.out.println(stdto.getDeparture());
-				/*動作確認*/System.out.println(stdto.getRegion());
-				/*動作確認*/System.out.println(stdto.getPrefectures());
-				/*動作確認*/System.out.println(stdto.getTheme());
-				/*動作確認*/System.out.println(stdto.getComment());
-				/*動作確認*/System.out.println(stdto.getImg());
+//				/*動作確認*/System.out.println(stdto.getTourId());
+//				/*動作確認*/System.out.println(stdto.getTourName());
+//				/*動作確認*/System.out.println(stdto.getPrice());
+//				/*動作確認*/System.out.println(stdto.getDeparture());
+//				/*動作確認*/System.out.println(stdto.getRegion());
+//				/*動作確認*/System.out.println(stdto.getPrefectures());
+//				/*動作確認*/System.out.println(stdto.getTheme());
+//				/*動作確認*/System.out.println(stdto.getComment());
+//				/*動作確認*/System.out.println(stdto.getImg());
 
 
 				allTourList.add(stdto);

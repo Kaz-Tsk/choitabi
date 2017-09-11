@@ -87,6 +87,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
 				int editPrice_int = Integer.parseInt(editPrice);
 				int editPersons_int = Integer.parseInt(editPersons);
+				/*後消し*/System.out.println("ConfirmEditingAction - currentTourId : " + currentTourId);
 				/*後消し*/System.out.println("ConfirmEditingAction : " + editTourName);
 				/*後消し*/System.out.println("ConfirmEditingAction : " + editPrice_int);
 				/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons_int);

@@ -17,7 +17,7 @@
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
 <s:form action="ConfirmTourEditingAction">
-<table border = "1px" cellspacing = "0px" cellpadding = "10px">
+<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="640px">
    <tr>
    		<th></th><th>変更前</th><th>変更後</th>
    </tr>
@@ -53,7 +53,7 @@
    		</td><td><input type="text" name="editTheme" value = <s:property value= "currentTheme"/>></input></td>
    </tr>
       <tr>
-   		<th>コメント</th><td width="30px"><s:property value="currentComment"/></td>
+   		<th>コメント</th><td width="200px"><font size="2px"><s:property value="currentComment"/></font></td>
    		<td><textarea rows="10" cols="30"name="editComment"><s:property value = "currentComment"/></textarea></td>
    </tr>
       <tr>
@@ -65,8 +65,8 @@
 <input type="checkbox" name="deleteCheck" value="true"><font color = "red">このツアーを削除する</font>
 <hr>
 <br>
+	   	<s:hidden name= "currentTourId" property = "currentTourId"/>
 	   	<s:hidden name = "currentTourName" property="currentTourName" />
-	   	<s:hidden name = "currentTourId" property="currentTourId" />
 	   	<s:hidden name = "currentPrice" property="currentPrice" />
 	   	<s:hidden name = "currentPersons" property="currentPersons" />
 	   	<s:hidden name = "currentDeparture" property="currentDeparture" />

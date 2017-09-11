@@ -3,8 +3,6 @@ package com.internousdev.choitabi.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import com.internousdev.choitabi.util.DBConnector;
 
@@ -21,15 +19,22 @@ public class UpdateTourDAO {
 	 * @throws IllegalAccessException
 	 * */
 
-	public int updateTour(String editTourName, String editTourId, String editPrice, String editPersons, String editDeparture, String deleteCheck) throws IllegalAccessException, InstantiationException{
+	public int updateTour(String editTourId, String editTourName,String editPrice,
+	                           String editPersons, String editDeparture, String editRegion, String editPrefectures,
+	                           String editTheme, String editComment, String editImg,
+	                           String deleteCheck)throws IllegalAccessException, InstantiationException{
 		int count = 0;
 
-		Date today = new Date();
-		SimpleDateFormat sdf  = new SimpleDateFormat("yyyyMMdd");
-		String formatedToday = sdf.format(today);
-		/*後消し*/System.out.println("UpdateTourDAO - 現在の削除チェック：" + deleteCheck);
-
-
+		/*Date today = new Date();
+		*SimpleDateFormat sdf  = new SimpleDateFormat("yyyyMMdd");
+		*String formatedToday = sdf.format(today);
+		*
+		*※↑ 商品編集の「最終編集日」なんかでその日の日付をSQL文に入れるための文でした。
+		*取得した日付はものすごく長い（または別の形の）データになっているようで、そのままだとSQLが受け付けてくれません。
+		*フォーマットのAPIと文字列の関数を使って「20170101」のような形の文字列にすると、うまく実行してもらえるようです。
+		*
+		*/
+		System.out.println("UpdateTourDAO - 現在の削除チェック：" + deleteCheck);
 
 			/*削除チェックのボックスにチェックが入っていない＝ツアーデータ更新の場合*/
 			if(deleteCheck.equals("false")){
@@ -39,17 +44,37 @@ public class UpdateTourDAO {
 					DBConnector dbc = new DBConnector();
 					Connection con = dbc.createConnection();
 
-					String sql = "UPDATE tour SET tour_name =   ?, price = ?, persons = ?, date = ?, departure = ? WHERE tour_id = ?";/*Update/DELETE文、文法確認中*/
+
+					/*動作化確認*/
+					System.out.println("UpdateTourDAO : " + editTourId);
+					System.out.println("UpdateTourDAO : " + editPrice);
+					System.out.println("UpdateTourDAO : " + editPersons);
+
+					String sql = "UPDATE tour SET"
+							+ " tour_name = ?," //1
+							+ " price = ?,"//2
+							+ " persons = ?,"//3
+							+ " departure = ?,"//4
+							+ " region = ?,"//5
+							+ " prefectures = ?,"//6
+							+ " theme = ?,"//7
+							+ " comment = ?,"//8
+							+ " img = ?"//9
+							+ " WHERE tour_id = ?;";//10
 
 					PreparedStatement ps = con.prepareStatement(sql);
 					/*後消し*/System.out.println("UpdateTourDAO - 作成SQL文 : " + sql);
 					ps.setString(1, editTourName);
 					ps.setInt(2, Integer.parseInt(editPrice));
 					ps.setInt(3, Integer.parseInt(editPersons));
-					ps.setString(4, formatedToday);
-					/*後消し*/System.out.println("UpdateTourDAO - 更新後の日付データ：" + formatedToday);
-					ps.setString(5,editDeparture);
-					ps.setInt(6, Integer.parseInt(editTourId));
+					ps.setString(4, editDeparture);
+					ps.setString(5, editRegion);
+					ps.setString(6,  editPrefectures);
+					ps.setString(7, editTheme);
+					ps.setString(8, editComment);
+					ps.setString(9, editImg);
+					ps.setInt(10, Integer.parseInt(editTourId));
+					/*後消し*/System.out.println("UpdateTourDAO - 作成SQL文 : " + sql);
 
 					count = ps.executeUpdate();
 					/*後消し*/System.out.println("UpdateTourDAO - 取得データ数：" + count);

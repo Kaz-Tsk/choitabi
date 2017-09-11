@@ -134,7 +134,7 @@
 <br>
     <a href=
 	    '<s:url action="UpdateTourAction">
-		    <s:param name="editTourId" value="editTourId"/>
+		    <s:param name="editTourId" value="currentTourId"/>
 		    <s:param name="editTourName" value = "editTourName"/>
 		    <s:param name="editPrice" value = "editPrice"/>
 		    <s:param name="editPersons" value = "editPersons"/>
