@@ -56,7 +56,7 @@ public class ContactCompleteDAO {
 		// 利用するDB（コレクション）を取得
 
 		DB db = con.getConnection();
-		DBCollection coll = db.getCollection("contact");
+		DBCollection coll = db.getCollection("collection");
 
 		//mongoDBにドキュメント記載
 		BasicDBObject input = new BasicDBObject();

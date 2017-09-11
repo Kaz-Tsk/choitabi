@@ -21,12 +21,19 @@ public class KanriContactPagenation {
 	 * @param count 1ページあたりに掲載されるオブジェクトの個数
 	 * @return displayList
 	 */
-	public ArrayList<PageContact> paginate(ArrayList<KanriContactDTO> list, int count) {
 
-		ArrayList<PageContact> displayList =new ArrayList<PageContact>();
+
+
+
+
+
+	public ArrayList<KanriContactPagenation2> paginate(ArrayList<KanriContactDTO> list, int count) {
+
+		ArrayList<KanriContactPagenation2> displayList =new ArrayList<KanriContactPagenation2>();
 		int itemCount = count;
 		int index = 0;
 		int maxPages = 0;
+
 
 		if((list.size() % count) == 0) {
 			maxPages = list.size() / count;
@@ -38,7 +45,7 @@ public class KanriContactPagenation {
 
 		for(int i = 0; i < maxPages; i++) {
 			/*動作確認*/System.out.println("KanriContactPagenation-検索中のリスト№" + count);
-			PageContact page = new PageContact();
+			KanriContactPagenation2 page = new KanriContactPagenation2();
 
 			for(int j = index; j < itemCount; j++) {
 				if(list.size() == j) {
@@ -52,7 +59,7 @@ public class KanriContactPagenation {
 			displayList.add(page);
 
 			index += count;
-			//itemCount += count;
+			itemCount += count;
 		}
 		return displayList;
 	}

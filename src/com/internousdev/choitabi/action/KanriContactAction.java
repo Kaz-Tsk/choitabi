@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.internousdev.choitabi.dao.KanriContactDAO;
 import com.internousdev.choitabi.dto.KanriContactDTO;
 import com.internousdev.choitabi.util.KanriContactPagenation;
-import com.internousdev.choitabi.util.PageContact;
+import com.internousdev.choitabi.util.KanriContactPagenation2;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -72,9 +72,7 @@ public class KanriContactAction extends ActionSupport {
     private int maxPage;
     private int pageNum =0;//とりあえず0にしておきます。
     private int number;
-    public ArrayList<KanriContactDTO> displayList = new ArrayList<KanriContactDTO>();//ここが、画面に表示する小さいリスト
-	private ArrayList<Integer> list = new ArrayList<>();
-
+    public ArrayList<KanriContactDTO> displayList = new ArrayList<KanriContactDTO>();
 
 
 
@@ -111,9 +109,9 @@ public class KanriContactAction extends ActionSupport {
             		/*動作確認*/System.out.println("KAnriContactAction -現在のページ：" + pageNum);
 
 
-            	   ArrayList<PageContact> KanriPages = new ArrayList<PageContact>();
+            	   ArrayList<KanriContactPagenation2> KanriPages = new ArrayList<KanriContactPagenation2>();
                    KanriContactPagenation Kanrip = new KanriContactPagenation();
-                   KanriPages=Kanrip.paginate(searchList, number);
+                   KanriPages=Kanrip.paginate(searchList, 10);
                    maxPage = Kanrip.getMaxPage(searchList, 10);
 
                    displayList = KanriPages.get(pageNum-1).getPaginatedList();
