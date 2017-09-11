@@ -48,7 +48,7 @@
 
 <!-------------- ヘッダー -------------->
 <header>
-<jsp:include page="header.jsp" />
+  <jsp:include page="header.jsp" />
 </header>
 
 	<div id="contents" style="margin-bottom: 50px;">
@@ -56,7 +56,7 @@
 		<div class="col-sm-12 center">
 
 
-			<h1>
+			<h1 class="kago">
 				<s:text name="lang.cart.itscart" />
 			</h1>
 		</div>
@@ -154,14 +154,10 @@
 
 	</div>
 
-<div class = "footer">
+<footer>
+  <jsp:include page="footer.jsp" />
+</footer>
 
-    <div class = "ARRLogo">All Rights Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu"><a href="./company_overview">会社概要</a></div>
-        <div class = "footerMenu"><a href="">利用規約</a></div>
-    </div>
-    <div class = "clear"></div>
-    </div>
+
 </body>
 </html>
