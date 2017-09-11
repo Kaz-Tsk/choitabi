@@ -23,37 +23,37 @@
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
          <div class="sub">
-                 <input type= "image" src = "img/chickennanban.jpg">
+                 <a href="InsertCartAction"><img src= "img/chickennanban.jpg"></a>
                 <div class="name">チキン南蛮<br>(九州/宮崎県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;443</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/nagasakichanpon.jpg">
+                <a href="InsertCartAction"><img src= "img/nagasakichanpon.jpg"></a>
                 <div class="name">長崎ちゃんぽん<br>(九州/長崎県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;777</span></div>
               </div>
 
                 <div class="sub">
-                 <input type= "image" src = "img/kannontakikouen.jpg">
+                 <a href="InsertCartAction"><img src= "img/kannontakikouen.jpg"></a>
                 <div class="name">観音滝公園<br>(九州/鹿児島県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;4430</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/mihuneyamarakuen.jpg">
+                <a href="InsertCartAction"><img src= "img/mihuneyamarakuen.jpg"></a>
                 <div class="name">御船山楽園<br>(九州/佐賀県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;7777</span></div>
              </div>
 
                  <div class="sub">
-                 <input type= "image" src = "img/iruka_watching_tour.jpg">
+                 <a href="InsertCartAction"><img src= "img/iruka_watching_tour.jpg"></a>
                 <div class="name">イルカウォッチングツアー<br>(九州/熊本県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;2250</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/aroma_botanical_candle.jpg">
+                <a href="InsertCartAction"><img src= "img/aroma_botanical_candle.jpg"></a>
                 <div class="name">アロマ＆ボタニカルキャンドル<br>(九州/福岡県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;3500</span></div>
             </div>
