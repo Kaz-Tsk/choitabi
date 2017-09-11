@@ -2,6 +2,9 @@ package com.internousdev.choitabi.action;
 
 import java.util.ArrayList;
 
+import com.internousdev.choitabi.dao.KanriContactDAO;
+import com.internousdev.choitabi.dto.KanriContactDTO;
+import com.internousdev.choitabi.util.KanriContactPagenation;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -93,7 +96,7 @@ public class KanriContactAction extends ActionSupport {
             /*まずは、DBから条件に当てはまるすべてのデータを取得します(でっかい巻物を取ってくる）
              * */
 
-            ContactPagenation cp = new ContactPagenation();
+            KanriContactPagenation cp = new KanriContactPagenation();
             /*でかい巻物を小さく分けてくれるくらす(今回cpさん）を読んできます。
              * */
 
