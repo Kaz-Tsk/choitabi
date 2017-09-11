@@ -16,25 +16,25 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 
 	/**編集前の情報を保存する変数です。*/
-	private int tourId;
+	private int currentTourId;
 	/*ツアー名*/
-	private String tourName;
+	private String currentTourName;
 	/*価格*/
-	private int price;
+	private int currentPrice;
 	/*定員*/
-	private int persons;
+	private int currentPersons;
 	/*出発地*/
-	private String departure;
+	private String currentDeparture;
 	/*エリア*/
-	private String region;
+	private String currentRegion;
 	/*県*/
-	private String prefectures;
+	private String currentPrefectures;
 	/*テーマ*/
-	private String theme;
+	private String currentTheme;
 	/*コメント*/
-	private String comment;
+	private String currentComment;
 	/*画像URL*/
-	private String img;
+	private String currentImg;
 
 
 
@@ -80,8 +80,8 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			if(deleteCheck.equals("true")){
 				result = SUCCESS;
 			}else if(deleteCheck.equals("false") && (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") || editDeparture.equals(""))){
-				errorMsg = "入力が不完全です";
-				/*後消し*/System.out.println(errorMsg);
+				errorMsg = "情報が完全に入力されていません";
+				System.out.println(errorMsg);
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
@@ -100,6 +100,9 @@ public class ConfirmTourEditingAction extends ActionSupport{
 		}catch(NumberFormatException e){
 			errorMsg = "価格・人数の欄には数値を入力してください";
 			/*後消し*/System.out.println(errorMsg);
+		}catch(NullPointerException e){
+			System.out.println("いずれかの情報の受け渡しに失敗しました");
+			e.printStackTrace();
 		}
 
 		/*後消し*/System.out.println("ConfirmEditingAction - result : " + result);
@@ -112,103 +115,103 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	/*編集前の情報のgetter/setter---------------------------------------------*/
 
 	/*ツアーIDのgetter*/
-	public int getTourId(){
-		return tourId;
+	public int getCurrentTourId(){
+		return currentTourId;
 	}
 
 	/*ツアー名のsetter*/
-	public void setTourId(int tourId){
-		this.tourId = tourId;
+	public void setCurrentTourId(int currentTourId){
+		this.currentTourId = currentTourId;
 	}
 
 	/*ツアー名のgetter*/
-	public String getTourName(){
-		return tourName;
+	public String getCurrentTourName(){
+		return currentTourName;
 	}
 
 	/*ツアー名のsetter*/
-	public void setTourName(String tourName){
-		this.tourName = tourName;
+	public void setCurrentTourName(String currentTourName){
+		this.currentTourName = currentTourName;
 	}
 
 	/*価格のgetter*/
-	public int getPrice(){
-		return price;
+	public int getCurrentPrice(){
+		return currentPrice;
 	}
 
 	/*価格のsetter*/
-	public void setPrice(int price){
-		this.price = price;
+	public void setCurrentPrice(int currentPrice){
+		this.currentPrice = currentPrice;
 	}
 
 	/*定員のgetter*/
-	public int getPersons(){
-		return persons;
+	public int getCurrentPersons(){
+		return currentPersons;
 	}
 
 	/*定員のsetter*/
-	public void setPersons(int persons){
-		this.persons = persons;
+	public void setCurrentPersons(int currentPersons){
+		this.currentPersons = currentPersons;
 	}
 
 	/*出発地のgetter*/
-	public String getDeparture(){
-		return departure;
+	public String getCurrentDeparture(){
+		return currentDeparture;
 	}
 
 	/*出発地のsetter*/
-	public void setDeparture(String departure){
-		this.departure = departure;
+	public void setCurrentDeparture(String currentDeparture){
+		this.currentDeparture = currentDeparture;
 	}
 
 	/*エリアのgetter*/
-	public String getRegion(){
-		return region;
+	public String getCurrentRegion(){
+		return currentRegion;
 	}
 
 	/*エリアのsetter*/
-	public void setRegion(String region){
-		this.region = region;
+	public void setCurrentRegion(String currentRegion){
+		this.currentRegion = currentRegion;
 	}
 
 	/*県のgetter*/
-	public String getPrefectures(){
-		return prefectures;
+	public String getCurrentPrefectures(){
+		return currentPrefectures;
 	}
 
 	/*県のsetter*/
-	public void setPrefectures(String prefectures){
-		this.prefectures = prefectures;
+	public void setCurrentPrefectures(String currentPrefectures){
+		this.currentPrefectures = currentPrefectures;
 	}
 
 	/*テーマのgetter*/
-	public String getTheme(){
-		return theme;
+	public String getCurrentTheme(){
+		return currentTheme;
 	}
 
 	/*テーマのsetter*/
-	public void setTheme(String theme){
-		this.theme = theme;
+	public void setCurrentTheme(String currentTheme){
+		this.currentTheme = currentTheme;
 	}
 
 	/*コメントのgetter*/
-	public String getComment(){
-		return comment;
+	public String getCurrentComment(){
+		return currentComment;
 	}
 
 	/*コメントのsetter*/
-	public void setComment(String comment){
-		this.comment = comment;
+	public void setCurrentComment(String currentComment){
+		this.currentComment = currentComment;
 	}
 
 	/*画像URLのgetter*/
-	public String getImg(){
-		return img;
+	public String getCurrentImg(){
+		return currentImg;
 	}
 
 	/*画像URLのsetter*/
-	public void setImg(String img){
-		this.img = img;
+	public void setCurrentImg(String currentImg){
+		this.currentImg = currentImg;
 	}
 
 
@@ -258,7 +261,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	}
 
 	public String getEditRegion(){
-		return region;
+		return editRegion;
 	}
 
 	public void setEditRegion(String editRegion){

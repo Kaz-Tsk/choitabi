@@ -31,53 +31,98 @@
 	<table border = "1px" cellspacing = "0px" cellpadding = "10px">
 	    <tr>
 	        <tr>
-	        <th>ツアーID</th><td colspan="4"><s:property value ="tourId"/></td>
+	        <th>ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
 	    </tr>
 	    <tr>
 	        <th>ツアー名</th>
-	        <td><s:property value = "tourName"/></td>
+	        <td><s:property value = "currentTourName"/></td>
 	    </tr>
 	    <tr>
 	        <th>価格</th>
-	        <td><s:property value="price"/></td>
+	        <td><s:property value="currentPrice"/></td>
 	    </tr>
 	    <tr>
 	        <th>定員</th>
-	        <td><s:property value="persons"/></td>
+	        <td><s:property value="currentPersons"/></td>
 	    </tr>
 	    <tr>
 	        <th>出発地</th>
-	        <td><s:property value="departure"/></td>
+	        <td><s:property value="currentDeparture"/></td>
+	    </tr>
+	    <tr>
+	        <th>エリア</th>
+	        <td><s:property value="currentRegion"/></td>
+	    </tr>
+	    <tr>
+	        <th>都道府県</th>
+	        <td><s:property value="currentPrefectures"/></td>
+	    </tr>
+	    <tr>
+	        <th>テーマ</th>
+	        <td><s:property value="currentTheme"/></td>
+	    </tr>
+	    <tr>
+	        <th>コメント</th>
+	        <td width="30px"><s:property value="currentComment"/></td>
+	    </tr>
+	    <tr>
+	        <th>画像URL</th>
+	        <td><s:property value="currentImg"/></td>
 	    </tr>
 	</table>
 </s:if>
 
 <s:else>
 	変更後のツアー情報
-	<table border = "1px" cellspacing = "0px" cellpadding = "10px">
+	<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="680px">
 	    <tr>
 	        <tr>
-	        <th>ツアーID</th><td colspan="4"><s:property value ="tourId"/></td>
+	        <th>ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
 	    </tr>
 	    <tr>
 	        <th>ツアー名</th>
-	        <td>変更前</td><td><s:property value = "tourName"/></td>
+	        <td>変更前</td><td><s:property value = "currentTourName"/></td>
 	        <td>変更後</td><td><s:property value = "editTourName"/></td>
 	    </tr>
 	    <tr>
 	        <th>価格</th>
-	        <td>変更前</td><td><s:property value="price"/></td>
+	        <td>変更前</td><td><s:property value="currentPrice"/></td>
 	        <td>変更後</td><td><s:property value = "EditPrice"/></td>
 	    </tr>
 	    <tr>
 	        <th>定員</th>
-	        <td>変更前</td><td><s:property value="persons"/></td>
+	        <td>変更前</td><td><s:property value="currentPersons"/></td>
 	        <td>変更後</td><td><s:property value = "editPersons"/></td>
 	    </tr>
 	    <tr>
 	        <th>出発地</th>
-	        <td>変更前</td><td><s:property value="departure"/></td>
+	        <td>変更前</td><td><s:property value="currentDeparture"/></td>
 	        <td>変更後</td><td><s:property value = "editDeparture"/></td>
+	    </tr>
+	    <tr>
+	        <th>エリア</th>
+	        <td>変更前</td><td><s:property value="currentRegion"/></td>
+	        <td>変更後</td><td><s:property value = "editRegion"/></td>
+	    </tr>
+	    <tr>
+	        <th>都道府県</th>
+	        <td>変更前</td><td><s:property value="currentPrefectures"/></td>
+	        <td>変更後</td><td><s:property value = "editPrefectures"/></td>
+	    </tr>
+	    <tr>
+	        <th>テーマ</th>
+	        <td>変更前</td><td><s:property value="currentTheme"/></td>
+	        <td>変更後</td><td><s:property value = "editTheme"/></td>
+	    </tr>
+	    <tr>
+	        <th>コメント</th>
+	        <td>変更前</td><td><font size = "2px"><s:property value="currentComment"/></font></td>
+	        <td>変更後</td><td><font size = "2px"><s:property value="editComment"/></font></td>
+	    </tr>
+	    <tr>
+	        <th>画像URL</th>
+	        <td>変更前</td><td><s:property value="currentImg"/></td>
+	        <td>変更後</td><td><s:property value = "editImg"/></td>
 	    </tr>
 	</table>
 </s:else>
@@ -89,11 +134,16 @@
 <br>
     <a href=
 	    '<s:url action="UpdateTourAction">
-		    <s:param name="editTourId" value="tourId"/>
+		    <s:param name="editTourId" value="editTourId"/>
 		    <s:param name="editTourName" value = "editTourName"/>
 		    <s:param name="editPrice" value = "editPrice"/>
 		    <s:param name="editPersons" value = "editPersons"/>
 		    <s:param name="editDeparture" value = "editDeparture"/>
+		    <s:param name="editRegion" value = "editRegion"/>
+		    <s:param name="editPrefectures" value="editPrefectures"/>
+		    <s:param name="editTheme" value="editTheme"/>
+		    <s:param name="editComment" value="editComment"/>
+			<s:param name="editImg" value="editImg"/>
 		    <s:param name="deleteCheck" value="deleteCheck"/>
 	    </s:url>'>
     操作を完了する
