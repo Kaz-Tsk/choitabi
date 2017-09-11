@@ -29,31 +29,31 @@
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/zundamochi.jpg">
+                 <a href="InsertCartAction"><img src= "img/zundamochi.jpg"></a>
                 <div class="name">ずんだ餅<br>(東北/宮城県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;1145</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/aquamarine_hukusima.jpg">
+                 <a href="InsertCartAction"><img src= "img/aquamarine_hukusima.jpg"></a>
                 <div class="name">アクアマリンふくしま<br>(東北/福島県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;1800</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/oirasekeiryu.jpg">
+                 <a href="InsertCartAction"><img src= "img/oirasekeiryu.jpg"></a>
                 <div class="name">奥入瀬渓流<br>(東北/青森県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;1145</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/mogamigawarafting.jpg">
+                 <a href="InsertCartAction"><img src= "img/mogamigawarafting.jpg"></a>
                 <div class="name">最上川ラフティング半日コース<br>(東北/山形県県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;7000</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/paraglider_tandem_flight.jpg">
+                 <a href="InsertCartAction"><img src= "img/paraglider_tandem_flight.jpg"></a>
                 <div class="name">パラグライダータンデムフライト体験<br>(東北/宮城県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;7000</span></div>
             </div>
