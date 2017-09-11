@@ -46,6 +46,9 @@ input{
     text-align:center;
 }
 
+.price_num{
+      color:red;
+}
 /*フッター----------------*/
 footer{
 	margin-top:1400px;
