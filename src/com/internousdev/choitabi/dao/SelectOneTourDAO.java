@@ -42,7 +42,7 @@ public class SelectOneTourDAO {
 				dto.setTourId(rs.getInt("tour_id"));
 				dto.setPrice(rs.getInt("price"));
 				dto.setPersons(rs.getInt("persons"));
-				dto.setDate(rs.getString("date")); /*これString型で動くんだ……*/
+				//dto.setDate(rs.getString("date")); /*これString型で動くんだ……*/
 				dto.setDeparture(rs.getString("departure"));
 			}
 

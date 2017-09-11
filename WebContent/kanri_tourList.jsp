@@ -21,9 +21,8 @@
 		<th>ツアーID</th>
 		<th>ツアー名</th>
 		<th>価格</th>
-		<th>定員</th>
-		<th>最終編集日</th>
-		<th>出発地</th>
+		<th>エリア</th>
+		<th>テーマ</th>
 		<th>　　　</th>
 	</tr>
 
@@ -32,9 +31,8 @@
 		<td><s:property value="tourId"></s:property></td>
 		<td><s:property value="tourName"></s:property></td>
 		<td><s:property value="price"></s:property></td>
-		<td><s:property value="persons"></s:property></td>
-		<td><s:property value="date"></s:property></td>
-		<td><s:property value="departure"></s:property></td>
+		<td><s:property value="region"></s:property></td>
+		<td><s:property value="theme"/></td>
 		<td>
 			<a href='<s:url action="EditTourAction">
 	    	<s:param name="tourId" value = "tourId"/></s:url>'>
