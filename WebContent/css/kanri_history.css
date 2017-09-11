@@ -13,8 +13,8 @@ a:active { color : white;}
 /* --- コンテナ --- */
 #container {
 	width: 100%; /* ページの幅 */
-	background: url(sidebar_200.gif) repeat-y left; /* サイドバーの背景画像 */
-	background-color: #ffffff; /* メインカラムの背景色 */
+	background: url(sidebar_200.gif) repeat-y left; /* ã‚µã‚¤ãƒ‰ãƒãƒ¼ã®èƒŒæ™¯ç”»åƒ */
+	background-color: #ffffff; /* ãƒ¡ã‚¤ãƒ³ã‚«ãƒ©ãƒ ã®èƒŒæ™¯è‰² */
 }
 
 
@@ -31,9 +31,10 @@ height:1000px;
 
 .tourdisplay{
 	position:relative;
-	width:1500px;
-	margin-left:200px;
-	margin-top:100px;
+	width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:50px;
 }
 
 .center{
@@ -54,10 +55,9 @@ textarea {
 }
 
 table{
-	margin:10px 30px;
+	margin: auto;
 	text-align:center;
 	border:1px solid lightgrey;
-
 }
 
 th{
@@ -111,58 +111,10 @@ font-family: FontAwesome;
 }
 
 .notwide{
-	width:60px;
-
+	width: 90px;
 }
 
 /* --- グラフエリア --- */
-svg{
-	width:450px;
-	height:240px;
-	border:1px solid black;
-	float:left;
-
-}
-
-.bar{
-	fill:lightblue;
-}
-
-.barNum{
-	font-size:10pt;
-	text-anchor:middle;
-	color:white;
-}
-
-.axis text{
-	font-size:11px;
-}
-
-.axis path,
-.axis line{
-	fill:none;
-	stroke:black;
-}
-
-.barName{
-	font-size:9pt;
-	text-anchor:middle;
-}
-
-.display{
-	position:relative;
-	width:1500px;
-margin-left:200px;
-	margin-top:250px;
-}
-
-footer{
-	display:inline;
-}
-
-.invalid{
-	height:1000px;
-}
 
 span{
 	color:white;

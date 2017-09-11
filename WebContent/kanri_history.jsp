@@ -34,7 +34,7 @@
 		<div class="toursearch">
 			<s:form action="KanriHistoryAction" method="post">
 				<p>
-					<s:text name="kanri_history.tourName"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="tourName">
+					<s:text name="lang.kanri_history.tourName"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="tourName">
 					<input type="submit" id="submit" value="&#xf002; <s:text name="lang.kanri_history.search"/>">
 				</p>
 			</s:form>
@@ -47,7 +47,7 @@
 					<th><s:text name="lang.kanri_history.userName"/></th>
 					<th class="notwide"><s:text name="lang.kanri_history.tourID"/></th>
 					<th><s:text name="lang.kanri_history.tourName"/></th>
-					<th class="notwide"><s:text name="lang.kanri_hisrtory.quantity"/></th>
+					<th class="notwide"><s:text name="lang.kanri_history.quantity"/></th>
 					<th><s:text name="lang.kanri_history.totalPrice"/></th>
 					<th><s:text name="lang.kanri_history.registrationDate"/></th>
 				</tr>
