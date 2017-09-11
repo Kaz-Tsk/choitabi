@@ -1,5 +1,3 @@
-<!-- 終わる気がしない -->
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- と宣言することで、JSPファイルとして機能させることが出来る -->
@@ -48,7 +46,7 @@
 
 <!-------------- ヘッダー -------------->
 <header>
-  <jsp:include page="header.jsp" />
+  <s:include value="header.jsp" />
 </header>
 
 	<div id="contents" style="margin-bottom: 50px;">
@@ -63,7 +61,7 @@
 
 		<s:if test="%{cartList.size() > 0 && #session.userId != null}">
 			<table class="cartlist">
-				<thead>
+			    <thead>
 					<tr>
 					    <th><s:text name="lang.cart.imgAddress001" /></th>
 						<th><s:text name="lang.cart.tour_name" /></th>
@@ -75,6 +73,7 @@
 						<th><s:text name="lang.cart.delete" /></th>
 					</tr>
 				</thead>
+
 				<tbody>
 					<s:iterator value="cartList">
 						<tr>
@@ -124,11 +123,10 @@
 										<s:text name="lang.cart.delete" />
 									</button>
 
-
 								</s:form></td>
 						</tr>
 					</s:iterator>
-				</tbody>
+					</tbody>
 			</table>
 			<h2 class="text-danger text-right">
 				<s:text name="lang.cart.total" />
@@ -155,7 +153,7 @@
 	</div>
 
 <footer>
-  <jsp:include page="footer.jsp" />
+  <s:include value="footer.jsp" />
 </footer>
 
 
