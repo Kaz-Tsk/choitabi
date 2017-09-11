@@ -62,15 +62,9 @@ public class KanriContactDAO {
 
 ("contact_mailAddress"));
 		                        dto.setContact_contents((String) dbs.get("contact_contents"));
-		                        /*動作確認*/System.out.println("KanriContactDAO - 取得した名前デ
-
-ータ：" + dto.getContact_name());
-		                        /*動作確認*/System.out.println("KanriContactDAO - 取得したアドレ
-
-スデータ：" + dto.getContact_mailAddress());
-		                        /*動作確認*/System.out.println("KanriContactDAO - 取得した内容デ
-
-ータ：" + dto.getContact_contents());
+		                        /*動作確認*/System.out.println("KanriContactDAO - 取得した名前データ：" + dto.getContact_name());
+		                        /*動作確認*/System.out.println("KanriContactDAO - 取得したアドレスデータ：" + dto.getContact_mailAddress());
+		                        /*動作確認*/System.out.println("KanriContactDAO - 取得した内容データ：" + dto.getContact_contents());
 
 		                        searchList.add(dto);
 		                    }
@@ -78,9 +72,7 @@ public class KanriContactDAO {
 		                    cursor.close();
 		                }
 
-						/*動作確認用*/System.out.println("リストが完成しました。
-
-データ数：" + searchList.size());
+						/*動作確認用*/System.out.println("リストが完成しました。データ数：" + searchList.size());
 		                return searchList;
 		    }
 	}
