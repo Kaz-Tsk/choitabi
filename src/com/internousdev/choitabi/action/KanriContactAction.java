@@ -107,13 +107,13 @@ public class KanriContactAction extends ActionSupport {
 
 
 
-            if(number >= 1){
+            if(number > 0){
 
 
 
             	   ArrayList<PageContact> KanriPages = new ArrayList<PageContact>();
                    KanriContactPagenation Kanrip = new KanriContactPagenation();
-                   KanriPages=Kanrip.paginatedList(searchList, 10);
+                   KanriPages=Kanrip.paginate(searchList, 10);
                    maxPage = Kanrip.getMaxPage(searchList, 10);
 
                    displayList = KanriPages.get(pageNum-1).getPaginatedList();
