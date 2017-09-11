@@ -29,7 +29,7 @@ public class AllPagesC {
     public ArrayList<PageObjectHistory> paginate(ArrayList<CartDTO> list, int count) {
         ArrayList<PageObjectHistory> displayBook =new ArrayList<PageObjectHistory>();
 
-        int itemCount = count;
+        int tourCount = count;
         int index = 0;
         int maxPages = 0;
 
@@ -43,7 +43,7 @@ public class AllPagesC {
         for(int i = 0; i < maxPages; i++) {
             PageObjectHistory page = new PageObjectHistory();
 
-            for(int j = index; j < itemCount; j++) {
+            for(int j = index; j < tourCount; j++) {
                 if(list.size() == j) {
                     break;
                     }
@@ -54,7 +54,7 @@ public class AllPagesC {
             page.setPageId(i);
             displayBook.add(page);
             index += count;
-            itemCount += count;
+            tourCount += count;
             }
 
         return displayBook;
