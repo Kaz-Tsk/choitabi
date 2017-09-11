@@ -16,40 +16,60 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 
 	/**編集前の情報を保存する変数です。*/
+	private int currentTourId;
 	/*ツアー名*/
-	private String tourName;
-	/*ツアーID*/
-	private String tourId;
+	private String currentTourName;
 	/*価格*/
-	private int price;
+	private int currentPrice;
 	/*定員*/
-	private int persons;
+	private int currentPersons;
 	/*出発地*/
-	private String departure;
+	private String currentDeparture;
+	/*エリア*/
+	private String currentRegion;
+	/*県*/
+	private String currentPrefectures;
+	/*テーマ*/
+	private String currentTheme;
+	/*コメント*/
+	private String currentComment;
+	/*画像URL*/
+	private String currentImg;
 
 
-	/**編集後の情報＝入力されたデータを格納する変数です(すべて文字列として受け取るようにしています)*/
-	/*ツアー名*/
-	private String editTourName;
+
+	/**編集後の情報＝入力されたデータを格納する変数です(すべて文字列として受け取るようにしています)
+	 *  編集画面から、価格・人数を入れる欄に文字列を入力したところ、javaに渡される際に数値に変換できずStrutsエラーがでてしまいました。
+	 *  そのため、一度文字列として受け取らせ、javaのInteger.Parseint()関数を使って数値に変換するステップを踏んでいます。
+	 * */
+
 	/*ツアーID*/
 	private String editTourId;
+	/*ツアー名*/
+	private String editTourName;
 	/*価格*/
 	private String editPrice;
 	/*定員*/
 	private String editPersons;
 	/*出発地*/
 	private String editDeparture;
+	/*エリア*/
+	public String editRegion;
+	/*県*/
+	public String editPrefectures;
+	/*テーマ*/
+	public String editTheme;
+	/*コメント*/
+	public String editComment;
+	/*画像URL*/
+	public String editImg;
 
 	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
 	private String deleteCheck = "false";
 
-	/*エラーメッセージ（入力された情報が不完全だった場合に使われます）*/
+	/*エラーメッセージ（入力された情報に誤りだった場合などに使われます）*/
 	private String errorMsg = "";
 
-	/**editPriceとeditPersonsは「String型」になっています。
-	 * 編集画面から、価格・人数を入れる欄に文字列を入力したところ、javaに渡される際に数値に変換できずStrutsエラーがでてしまいました。
-	 * そのため、一度文字列として受け取らせ、javaのInteger.Parseint()関数を使って数値に変換するステップを踏んでいます。
-	 * **/
 
 
 	/*executeメソッド-------------------------------------------------*/
@@ -60,8 +80,8 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			if(deleteCheck.equals("true")){
 				result = SUCCESS;
 			}else if(deleteCheck.equals("false") && (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") || editDeparture.equals(""))){
-				errorMsg = "入力が不完全です";
-				/*後消し*/System.out.println(errorMsg);
+				errorMsg = "情報が完全に入力されていません";
+				System.out.println(errorMsg);
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
@@ -80,6 +100,9 @@ public class ConfirmTourEditingAction extends ActionSupport{
 		}catch(NumberFormatException e){
 			errorMsg = "価格・人数の欄には数値を入力してください";
 			/*後消し*/System.out.println(errorMsg);
+		}catch(NullPointerException e){
+			System.out.println("いずれかの情報の受け渡しに失敗しました");
+			e.printStackTrace();
 		}
 
 		/*後消し*/System.out.println("ConfirmEditingAction - result : " + result);
@@ -91,49 +114,119 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 	/*編集前の情報のgetter/setter---------------------------------------------*/
 
-	public String getTourName(){
-		return tourName;
+	/*ツアーIDのgetter*/
+	public int getCurrentTourId(){
+		return currentTourId;
 	}
 
-	public void setTourName(String tourName){
-		this.tourName = tourName;
+	/*ツアー名のsetter*/
+	public void setCurrentTourId(int currentTourId){
+		this.currentTourId = currentTourId;
 	}
 
-	public String getTourId(){
-		return tourId;
+	/*ツアー名のgetter*/
+	public String getCurrentTourName(){
+		return currentTourName;
 	}
 
-	public void setTourId(String tourId){
-		this.tourId = tourId;
+	/*ツアー名のsetter*/
+	public void setCurrentTourName(String currentTourName){
+		this.currentTourName = currentTourName;
 	}
 
-	public int getPrice(){
-		return price;
+	/*価格のgetter*/
+	public int getCurrentPrice(){
+		return currentPrice;
 	}
 
-	public void setPrice(int price){
-		this.price = price;
+	/*価格のsetter*/
+	public void setCurrentPrice(int currentPrice){
+		this.currentPrice = currentPrice;
 	}
 
-	public int getPersons(){
-		return persons;
+	/*定員のgetter*/
+	public int getCurrentPersons(){
+		return currentPersons;
 	}
 
-	public void setPersons(int persons){
-		this.persons = persons;
+	/*定員のsetter*/
+	public void setCurrentPersons(int currentPersons){
+		this.currentPersons = currentPersons;
 	}
 
-	public String getDeparture(){
-		return departure;
+	/*出発地のgetter*/
+	public String getCurrentDeparture(){
+		return currentDeparture;
 	}
 
-	public void setDeparture(String departure){
-		this.departure = departure;
+	/*出発地のsetter*/
+	public void setCurrentDeparture(String currentDeparture){
+		this.currentDeparture = currentDeparture;
+	}
+
+	/*エリアのgetter*/
+	public String getCurrentRegion(){
+		return currentRegion;
+	}
+
+	/*エリアのsetter*/
+	public void setCurrentRegion(String currentRegion){
+		this.currentRegion = currentRegion;
+	}
+
+	/*県のgetter*/
+	public String getCurrentPrefectures(){
+		return currentPrefectures;
+	}
+
+	/*県のsetter*/
+	public void setCurrentPrefectures(String currentPrefectures){
+		this.currentPrefectures = currentPrefectures;
+	}
+
+	/*テーマのgetter*/
+	public String getCurrentTheme(){
+		return currentTheme;
+	}
+
+	/*テーマのsetter*/
+	public void setCurrentTheme(String currentTheme){
+		this.currentTheme = currentTheme;
+	}
+
+	/*コメントのgetter*/
+	public String getCurrentComment(){
+		return currentComment;
+	}
+
+	/*コメントのsetter*/
+	public void setCurrentComment(String currentComment){
+		this.currentComment = currentComment;
+	}
+
+	/*画像URLのgetter*/
+	public String getCurrentImg(){
+		return currentImg;
+	}
+
+	/*画像URLのsetter*/
+	public void setCurrentImg(String currentImg){
+		this.currentImg = currentImg;
 	}
 
 
 
 	/*編集後の情報のgetter/setter---------------------------------------------*/
+
+
+
+	public String getEditTourId(){
+		return editTourId;
+	}
+
+	public void setEditTourId(String editTourId){
+		this.editTourId = editTourId;
+	}
 
 	public String getEditTourName(){
 		return editTourName;
@@ -141,14 +234,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 	public void setEditTourName(String editTourName){
 		this.editTourName = editTourName;
-	}
-
-	public String getEdittourId(){
-		return editTourId;
-	}
-
-	public void setEditTourId(String editTourId){
-		this.editTourId = editTourId;
 	}
 
 	public String getEditPrice(){
@@ -175,6 +260,54 @@ public class ConfirmTourEditingAction extends ActionSupport{
 		this.editDeparture = editDeparture;
 	}
 
+	public String getEditRegion(){
+		return editRegion;
+	}
+
+	public void setEditRegion(String editRegion){
+		this.editRegion = editRegion;
+	}
+
+	public String getEditPrefectures(){
+		return editPrefectures;
+	}
+
+	public void setEditPrefectures(String editPrefectures){
+		this.editPrefectures = editPrefectures;
+	}
+
+	public String getEditTheme(){
+		return editTheme;
+	}
+
+	public void setEditTheme(String editTheme){
+		this.editTheme = editTheme;
+	}
+
+	public String getEditComment(){
+		return editComment;
+	}
+
+	public void setEditComment(String editComment){
+		this.editComment = editComment;
+	}
+
+	public String getEditImg(){
+		return editImg;
+	}
+
+	public void setEditImg(String editImg){
+		this.editImg = editImg;
+	}
+
+
+
+
+
+
+
+
+	/*編集時のチェック項目（削除チェックボックス、エラーメッセージ）のgetter/setter--------------------*/
 	public String getDeleteCheck(){
 		return deleteCheck;
 	}

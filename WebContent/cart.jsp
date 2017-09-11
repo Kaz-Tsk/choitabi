@@ -1,5 +1,3 @@
-<!-- 終わる気がしない -->
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- と宣言することで、JSPファイルとして機能させることが出来る -->
@@ -11,7 +9,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -48,7 +46,7 @@
 
 <!-------------- ヘッダー -------------->
 <header>
-<jsp:include page="header.jsp" />
+  <s:include value="header.jsp" />
 </header>
 
 	<div id="contents" style="margin-bottom: 50px;">
@@ -56,15 +54,16 @@
 		<div class="col-sm-12 center">
 
 
-			<h1>
+			<h1 class="kago">
 				<s:text name="lang.cart.itscart" />
 			</h1>
 		</div>
 
-		<s:if test="%{cartList.size() > 0 && #session.user_id != null}">
+		<s:if test="%{cartList.size() > 0 && #session.userId != null}">
 			<table class="cartlist">
-				<thead>
+			    <thead>
 					<tr>
+					    <th><s:text name="lang.cart.imgAddress001" /></th>
 						<th><s:text name="lang.cart.tour_name" /></th>
 						<th><s:text name="lang.cart.price" /></th>
 						<th><s:text name="lang.cart.count" /></th>
@@ -74,12 +73,13 @@
 						<th><s:text name="lang.cart.delete" /></th>
 					</tr>
 				</thead>
+
 				<tbody>
 					<s:iterator value="cartList">
 						<tr>
 							<td><img src="<s:property value="imgAddress001"/>" alt=""
 								width="100" height="100"></td>
-							<td><s:property value="tour_name" /></td>
+							<td><s:property value="tourName" /></td>
 
 							<td><fmt:formatNumber value="${price}" pattern="###,###,###" />
 								<s:text name="lang.cart.yen" /></td>
@@ -92,8 +92,8 @@
 									pattern="###,###,###" /> <s:text name="lang.cart.yen" /></td>
 
 							<td><s:form action="UpdateCartAction">
-									<s:hidden name="cart_id" value="%{cart_id}" />
-									<s:hidden name="tour_id" value="%{tour_id}" />
+									<s:hidden name="cartId" value="%{cartId" />
+									<s:hidden name="tourId" value="%{tourId}" />
 									<div class="row">
 										<select name="quantity">
 											<option>1</option>
@@ -117,25 +117,24 @@
 							<td><s:form action="DeleteCartAction">
 									<!--  --<input id="order" type="hidden" name="quantity"
 								value="<s:property value="quantity"/>">-->
-									<s:hidden name="user_id" value="%{user_id}" />
-									<s:hidden name="cart_id" value="%{cart_id}" />
+									<s:hidden name="userId" value="%{userId}" />
+									<s:hidden name="cartId" value="%{cartId}" />
 									<button type="submit" class="btn btn-default">
 										<s:text name="lang.cart.delete" />
 									</button>
 
-
 								</s:form></td>
 						</tr>
 					</s:iterator>
-				</tbody>
+					</tbody>
 			</table>
 			<h2 class="text-danger text-right">
 				<s:text name="lang.cart.total" />
-				<fmt:formatNumber value="${total_price}" pattern="###,###,###" />
+				<fmt:formatNumber value="${totalPrice}" pattern="###,###,###" />
 				<s:text name="lang.cart.tax_include" />
 			</h2>
 
-			<s:form action="GoSettlementAction">
+			<s:form action="GoPaymentAction">
 				<!-- 購入ボタンフォーム -->
 				<button type="submit" class="btn btn-warning center-block">
 					<s:text name="lang.cart.payment" />
@@ -153,14 +152,10 @@
 
 	</div>
 
-<div class = "footer">
+<footer>
+  <s:include value="footer.jsp" />
+</footer>
 
-    <div class = "ARRLogo">All Rights Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu"><a href="./company_overview">会社概要</a></div>
-        <div class = "footerMenu"><a href="">利用規約</a></div>
-    </div>
-    <div class = "clear"></div>
-    </div>
+
 </body>
 </html>

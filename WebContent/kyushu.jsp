@@ -23,37 +23,37 @@
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
          <div class="sub">
-                 <img class = "img" src = "img/chickennanban.jpg">
+                 <input type= "image" src = "img/chickennanban.jpg">
                 <div class="name">チキン南蛮<br>(九州/宮崎県)</div>
-                <div class="price">価格:443円</div>
+                <div class="price">価格:<span class= "price">443円</span></div>
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/nagasakichanpon.jpg">
+                <input type= "image" src = "img/nagasakichanpon.jpg">
                 <div class="name">長崎ちゃんぽん<br>(九州/長崎県)</div>
                 <div class="price">価格:777円</div>
               </div>
 
                 <div class="sub">
-                 <img class = "img" src = "img/kannontakikouen.jpg">
+                 <input type= "image" src = "img/kannontakikouen.jpg">
                 <div class="name">観音滝公園<br>(九州/鹿児島県)</div>
                 <div class="price">価格:4430円</div>
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/mihuneyamarakuen.jpg">
+                <input type= "image" src = "img/mihuneyamarakuen.jpg">
                 <div class="name">御船山楽園<br>(九州/佐賀県)</div>
                 <div class="price">価格:7777円</div>
              </div>
 
                  <div class="sub">
-                 <img class = "img" src = "img/iruka_watching_tour.jpg">
+                 <input type= "image" src = "img/iruka_watching_tour.jpg">
                 <div class="name">イルカウォッチングツアー<br>(九州/熊本県)</div>
                 <div class="price">価格:2250円</div>
             </div>
 
             <div class="sub">
-                <img class = "img" src = "img/aroma_botanical_candle.jpg">
+                <input type= "image" src = "img/aroma_botanical_candle.jpg">
                 <div class="name">アロマ＆ボタニカルキャンドル<br>(九州/福岡県)</div>
                 <div class="price">価格:3500円</div>
             </div>

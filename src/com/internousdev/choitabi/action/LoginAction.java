@@ -28,41 +28,51 @@ import com.opensymphony.xwork2.ActionSupport;
 	 * 携帯メールアドレス
 	 */
 	private String mailAddress;
-	/**
-	 * ユーザーID
-	 */
-	private int userId;
-	/**
-	 * ユーザーフラグ
-	 */
-	private int userFlg;
 
 	/**
-	 * セッション情報
+	 * セッション情報(ユーザーID)
 	 */
 	private Map<String,Object>session;
+
 	/**
-	 *
+	 *管理者
+	 */
+	private boolean admin =true;
+
+	/**
+	 *ログインするための実行メソッド
 	 * @author KAZUYUKI TASAKI
 	 * @since 2017/9/1
 	 * @version 1.0
-	 * @return
+	 * @returnログイン成功:SUCCESS  失敗:ERROR  管理者:LOGIN
 	 */
 	public String execute(){
 		String result = ERROR;
 		LoginDAO dao = new LoginDAO();
 		UsersDTO dto = new UsersDTO();
 
-		dto = dao.select(mailAddress, password,userFlg);
+		dto = dao.select(mailAddress, password);
 
 		if(mailAddress.equals(dto.getMailAddress())){
 			if(password.equals(dto.getPassword())){
-				if(dto.getUserFlg()==3){
-				result = "ADMIN";
-				session.put("userFlg",dto.getUserFlg());
-				}else{
-				result =  SUCCESS;
-				session.put("userFlg",dto.getUserFlg());
+
+				if(dto.isLoginFlg()==false){
+					if(dao.update(dto.getMailAddress(),dto.getPassword()) > 0){
+
+						dto = dao.select(dto.getMailAddress(), dto.getPassword());
+
+						session.put("userId",dto.getUserId());
+						session.put("loginFlg", dto.isLoginFlg());
+
+						if(admin){
+							int userFlg = (int)dto.getUserFlg();
+							if(userFlg ==3){
+								result = "ADMIN";
+							}else{
+								result = SUCCESS;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -99,20 +109,6 @@ import com.opensymphony.xwork2.ActionSupport;
 	public void setPassword(String password){
 		this.password = password;
 	}
-	/**
-	 * ユーザーID取得メソッド
-	 * @return userId ユーザーID
-	 */
-	public int getUserId(){
-		return userId;
-	}
-	/**
-	 * ユーザーID格納メソッド
-	 * @param userId ユーザーID
-	 */
-	public void setUserId(int userId){
-		this.userId = userId;
-	}
 
 	/**
 	 * セッション取得メソッド
@@ -127,18 +123,6 @@ import com.opensymphony.xwork2.ActionSupport;
 	 */
 	public void setSession(Map<String,Object> session){
 		this.session = session;
-	}
-	/**
-	 * userFlg取得メソッド
-	 */
-	public int getUserFlg(){
-		return userFlg;
-	}
-	/**
-	 * userFlg格納メソッド
-	 */
-	public void setUserFlg(int userFlg){
-		this.userFlg = userFlg;
 	}
 }
 

@@ -13,8 +13,8 @@ a:active { color : white;}
 /* --- コンテナ --- */
 #container {
 	width: 100%; /* ページの幅 */
-	background: url(sidebar_200.gif) repeat-y left; /* ã‚µã‚¤ãƒ‰ãƒãƒ¼ã®èƒŒæ™¯ç”»åƒ */
-	background-color: #ffffff; /* ãƒ¡ã‚¤ãƒ³ã‚«ãƒ©ãƒ ã®èƒŒæ™¯è‰² */
+	background: url(sidebar_200.gif) repeat-y left;
+	background-color: #ffffff;
 }
 
 
@@ -31,10 +31,10 @@ height:1000px;
 
 .tourdisplay{
 	position:relative;
-	width: 1600px;
+	width: 1500px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top:50px;
+	margin-top:80px;
 }
 
 .center{
@@ -63,7 +63,7 @@ table{
 th{
 	border:1px solid lightgrey;
 	width:180px;
-	height:20px;
+	height:30px;
 	font-size:12px;
 	background-color:lightgrey;
 	text-align:center;
@@ -77,44 +77,9 @@ td{
 	text-align:center;
 }
 
-#submit {
-font-family: FontAwesome;
-}
-
-#cboxOverlay {
-    background: #000;
-}
-#cboxLoadedContent {
-    background: #fff;
-}
-#cboxLoadedContent {
-  padding: 0;
-  overflow: auto;
-    -moz-box-shadow: 0px 1px 10px #000000;
-    -webkit-box-shadow: 0px 1px 10px #000000;
-    box-shadow: 0px 1px 10px #000000;
-}
-#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose , #cboxTitle {
-  top: -30px;
-}
-#colorbox, #cboxOverlay, #cboxWrapper {
-  overflow: visible ;
-}
-#cboxTitle {
-  color: #fff;
-}
-#inline-content {/* インラインを使用する時のみ */
-    margin: 20px;
-}
-#ajax-wrap {/* ajaxを使用する時のみ */
-  margin: 20px;
-}
-
 .notwide{
 	width: 90px;
 }
-
-/* --- グラフエリア --- */
 
 span{
 	color:white;

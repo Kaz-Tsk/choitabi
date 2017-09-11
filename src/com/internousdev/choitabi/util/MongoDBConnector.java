@@ -34,7 +34,7 @@ public class MongoDBConnector {
 		/*
 		 * 接続するデータベース名
 		 */
-		DB db =client.getDB("test_choitabi");
+		DB db =client.getDB("choitabi");
 
 		return db;
 

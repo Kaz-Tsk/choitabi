@@ -1,65 +1,82 @@
 package com.internousdev.choitabi.util;
 
+
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.KanriContactDTO;
 
+/**
+ * 渡されたリストに対してページネーションを行うクラス
+ * @author RYUTO TASHIRO
+ * @since 2017/08/22
+ * @version 1.1
+ */
 public class KanriContactPagenation {
 
 	/**
-	 * 1ページに表示する件数
-	 * */
-    private int contactNumber=5; //とりあえず10件
+	 * 渡されたリストを1ページにcount個までオブジェクトが掲載された本の形に変換して返す
+	 * @author RYUTO TASHIRO
+	 * @since 2017/08/22
+	 * @param list DTOが格納されたArrayList
+	 * @param count 1ページあたりに掲載されるオブジェクトの個数
+	 * @return displayList
+	 */
+	public ArrayList<PageContact> paginate(ArrayList<KanriContactDTO> list, int count) {
 
-    /**最初に取得するアレイリストのインデックス番号（どこから）*/
-	private int firstIndex = 0;
+		ArrayList<PageContact> displayList =new ArrayList<PageContact>();
+		int itemCount = count;
+		int index = 0;
+		int maxPages = 0;
 
-	/**最後に取得するアレイリストのインデックス番号（どこまで）*/
-	private int lastIndex = 0;
-
-	private int maxPage = 1;
-
-
-	public ArrayList<KanriContactDTO> paginateContactList(ArrayList<KanriContactDTO> contactList,int pageNum){
-
-		ArrayList<KanriContactDTO> smallContactList = new ArrayList<KanriContactDTO>();
-
-		/*動作確認*/System.out.println("ContactPagination - 現在のページ番号：" + pageNum );
-		/*動作確認*/System.out.println("ContactPagination - お問い合わせ総データ数：" + contactList.size());
-
-		firstIndex = firstIndex + ( (pageNum - 1) * contactNumber );  //firstIndex = 0 + ( 1 - 1 ) * 10; →0番目
-		lastIndex = lastIndex + (pageNum * contactNumber); //lastIndex = 0 + ( 1 * 10 );→10番目
-
-		if(contactList.size() == 0){
-			return null;
+		if((list.size() % count) == 0) {
+			maxPages = list.size() / count;
+		} else {
+			maxPages = (list.size() / count) + 1;
 		}
 
-		for(int i = firstIndex; i < lastIndex; i++){
-			/*すべてのお問い合わせリスト、の、「0番目」のデータから順番にデータを取り出しなさい
-			 * インデック番号が「10番目」になる、1個手前で止めなさい*/
-			if(i >= contactList.size()){
-				break;
+
+
+		for(int i = 0; i < maxPages; i++) {
+			PageContact page = new PageContact();
+
+			for(int j = index; j < itemCount; j++) {
+				if(list.size() == j) {
+					break;
+				}
+				page.addPaginatedList(list,j);
 			}
 
-			smallContactList.add(contactList.get(i));//小さい方のリストに、大きいほうの「？」番目のデータを移しなさい
+
+			page.setPageId(i);
+			displayList.add(page);
+
+			index += count;
+			itemCount += count;
 		}
-
-		return smallContactList;
-
+		return displayList;
 	}
 
-	public int returnMaxPage(ArrayList<KanriContactDTO> contactList){
+	/**
+	 * 渡されたリスト数と1ページあたりに掲載するオブジェクト数から総ページ数を返す
+	 * @author RYUTO TASHIRO
+	 * @since 2017/08/22
+	 * @param list DTOが格納されたArrayList
+	 * @param count 1ページあたりに掲載されるオブジェクトの個数
+	 * @return maxPages
+	 */
+	public int getMaxPage(ArrayList<KanriContactDTO> list, int count) {
 
+		int maxPages = 0;
 
-		if(contactList.size() == 0){
-			maxPage = 1;
-		}else if(contactList.size() % contactNumber != 0){
-			maxPage = (contactList.size() / contactNumber) + 1;
-		}else{
-			maxPage = (contactList.size() / contactNumber);
+		if((list.size() % count) == 0) {
+			maxPages = list.size() / count;
+		} else {
+			maxPages = (list.size() / count) + 1;
 		}
-		/*動作確認*/System.out.println("ContactPagenation - 最大ページ：" + maxPage);
-		return maxPage;
+
+
+		return maxPages;
 	}
+
 
 }

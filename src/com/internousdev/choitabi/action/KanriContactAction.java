@@ -5,14 +5,15 @@ import java.util.ArrayList;
 import com.internousdev.choitabi.dao.KanriContactDAO;
 import com.internousdev.choitabi.dto.KanriContactDTO;
 import com.internousdev.choitabi.util.KanriContactPagenation;
+import com.internousdev.choitabi.util.PageContact;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 商品の情報をセレクトするアクション
- * @author RYUTO TASHIRO
- * @since 2017/8/24
+ * @author kanako miyazono
+ * @since 2017/9/11
  * @version 1.1
- * @param <PageObjectContact>
+ * @par
  */
 public class KanriContactAction extends ActionSupport {
 
@@ -68,8 +69,9 @@ public class KanriContactAction extends ActionSupport {
     /**
      * ページネーション
      */
-    private int maxPage = 1;//とりあえず1
+    private int maxPage;
     private int pageNum =0;//とりあえず0にしておきます。
+    private int number;
     public ArrayList<KanriContactDTO> displayList = new ArrayList<KanriContactDTO>();//ここが、画面に表示する小さいリスト
 	private ArrayList<Integer> list = new ArrayList<>();
 
@@ -78,48 +80,52 @@ public class KanriContactAction extends ActionSupport {
 
     /**
      * 問い合わせ情報を取得するメソッド
-     * @author RYUTO TASHIRO
-     * @since 2017/07/11
+     * @author kanako miyazono
+     * @since 2017/09/11
      * @version 1.1
      */
-    public String execute() {
-            String result=ERROR;
+	 public String execute() {
+         String result=ERROR;
+         KanriContactDAO dao =new KanriContactDAO();
+         if(searchName == null){
+	            searchName = "";
+	        }
+	        searchName = searchName.trim();
+         searchList = dao.display("searchName");
 
+         if(searchName == null || searchName.equals("")) {
+             searchList = dao.display("");
+             result=SUCCESS;
+             }
 
-            KanriContactDAO dao = new KanriContactDAO();
+         else if(searchName != null) {
+             searchList = dao.display(searchName);
+             result=SUCCESS;
+             }
 
-
-
-            /*動作確認*/System.out.println("KanriContactAction - ページ番号：" + pageNum);
-
-            contactList = dao.display("");
-            /*まずは、DBから条件に当てはまるすべてのデータを取得します(でっかい巻物を取ってくる）
-             * */
-
-            KanriContactPagenation cp = new KanriContactPagenation();
-            /*でかい巻物を小さく分けてくれるくらす(今回cpさん）を読んできます。
-             * */
-
-            /*用意しておいたdisplayListを置きます*/
-            displayList = cp.paginateContactList(contactList, pageNum);
-            /*cpさんに仕事をお願いする。
-             * 「contactList(でかい巻物)と、今のページ番号を教えるから、表示する小さいリストを作って」*/
-
-            maxPage = cp.returnMaxPage(contactList);
+         number=searchList.size();
 
 
 
-
-            if(displayList.size() >= 1){
-            	result = SUCCESS;
-            }
+            if(number > 0){
 
 
 
+            	   ArrayList<PageContact> KanriPages = new ArrayList<PageContact>();
+                   KanriContactPagenation Kanrip = new KanriContactPagenation();
+                   KanriPages=Kanrip.paginate(searchList, 10);
+                   maxPage = Kanrip.getMaxPage(searchList, 10);
 
-            /*動作確認用*/System.out.println("KanriContactActin - 現在のresult：" + result);
-            return result;
-}
+                   displayList = KanriPages.get(pageNum-1).getPaginatedList();
+                   for(int i=0; i<maxPage; i++ ) {
+   					list.add(i);
+   				}
+                   result = SUCCESS;
+               }
+
+               return result;
+   }
+
 
 
 

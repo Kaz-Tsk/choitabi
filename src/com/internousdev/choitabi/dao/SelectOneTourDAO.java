@@ -10,7 +10,7 @@ import com.internousdev.choitabi.util.DBConnector;
 public class SelectOneTourDAO {
 
 
-	/*@author YUKA MATSUMURA
+	/**@author YUKA MATSUMURA
 	 * @since 2017/09/06
 	 * @version 1.1
 	 *
@@ -21,7 +21,7 @@ public class SelectOneTourDAO {
 
 	public SelectTourDTO selectOneTour(int tourId){
 
-		SelectTourDTO dto = null;
+		SelectTourDTO stdto = null;
 		/*後消し*/System.out.println("SlectOneTour - tourId : " + tourId);
 
 		try{
@@ -36,14 +36,26 @@ public class SelectOneTourDAO {
 
 
 			if(rs.next()){
-				dto = new SelectTourDTO();
+				stdto = new SelectTourDTO();
 
-				dto.setTourName(rs.getString("tour_name"));
-				dto.setTourId(rs.getInt("tour_id"));
-				dto.setPrice(rs.getInt("price"));
-				dto.setPersons(rs.getInt("persons"));
-				//dto.setDate(rs.getString("date")); /*これString型で動くんだ……*/
-				dto.setDeparture(rs.getString("departure"));
+				stdto.setTourId(rs.getInt("tour_id"));
+				stdto.setTourName(rs.getString("tour_name"));
+				stdto.setPrice(rs.getInt("price"));
+				stdto.setDeparture(rs.getString("departure"));
+				stdto.setRegion(rs.getString("region"));
+				stdto.setPrefectures(rs.getString("prefectures"));
+				stdto.setTheme(rs.getString("theme"));
+				stdto.setComment(rs.getString("comment"));
+				stdto.setImg(rs.getString("img"));
+				/*動作確認*/System.out.println(stdto.getTourId());
+				/*動作確認*/System.out.println(stdto.getTourName());
+				/*動作確認*/System.out.println(stdto.getPrice());
+				/*動作確認*/System.out.println(stdto.getDeparture());
+				/*動作確認*/System.out.println(stdto.getRegion());
+				/*動作確認*/System.out.println(stdto.getPrefectures());
+				/*動作確認*/System.out.println(stdto.getTheme());
+				/*動作確認*/System.out.println(stdto.getComment());
+				/*動作確認*/System.out.println(stdto.getImg());
 			}
 
 			/*SQL接続の後片付けです*/
@@ -51,7 +63,7 @@ public class SelectOneTourDAO {
 			ps.close();
 			rs.close();
 
-			return dto;
+			return stdto;
 
 
 			/*以下はエラー時の処理です。
@@ -74,6 +86,7 @@ public class SelectOneTourDAO {
 
 			}catch(Exception e){
 				System.out.println("その他のエラーです");
+				e.printStackTrace();
 				return null;
 			}
 	}
