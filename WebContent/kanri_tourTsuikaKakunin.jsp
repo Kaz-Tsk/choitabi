@@ -15,7 +15,6 @@
 <hr>
 追加ツアー情報
 <br>
-削除するツアー
 	<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="360">
 	    <tr>
 	        <tr>

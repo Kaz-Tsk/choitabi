@@ -8,10 +8,12 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	 * @since 2017/09/08
 	 * @version 1.1
 	 *
-	 * 管理画面から、ツアーの新規登録時に使用するアクションです。
+	 *管理者トップ画面→GoTourInsertPageAction→入力画面→【このAction】→入力内容確認画面→InsertTourAction
+	 * 管理側で、ツアーの新規登録時に使用するアクションです。
 	 * フォームから入力されたデータに漏れや不適切な部分（価格に文字列が入っている場合など）がないかをチェックし、
 	 * OKならばSUCCESSを返します。
 	 *（※11日朝現在、未完成です）
+	 *
 	 * */
 
 	/*新規ツアーのID（自動で入るので0のままでOKです）*/
@@ -44,11 +46,56 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	/*入力された画像URL*/
 	private String newImg;
 
+	/*エラーメッセージ（入力された情報に誤りがあった場合などに使われます）*/
+	private String errorMsg="";
 
 
+
+	/*executeメソッド-------------------------------------------------*/
 	public String execute(){
-		String result = SUCCESS;
+		String result = ERROR;
+
+		try{
+			if (	newTourName.equals("")|| newPrice.equals("") || newPersons.equals("") ||
+				newDeparture.equals("") || newRegion.equals("") || newPrefectures.equals("") || newTheme.equals("") ||
+			    newComment.equals("") ) {
+
+				errorMsg = "情報が完全に入力されていません";
+				System.out.println(errorMsg);
+
+			}else if(newImg.indexOf(".png") == -1 && newImg.indexOf(".jpg") == -1){
+				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newImg.indexOf(".png"));
+				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newImg.indexOf(".jpg"));
+				errorMsg = "画像にはpngもしくはjpgを指定してください";
+				System.out.println(errorMsg);
+
+			}else{
+				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
+				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
+				int newPrice_int = Integer.parseInt(newPrice);
+				int newPersons_int = Integer.parseInt(newPersons);
+				/*後消し*/System.out.println("ConfirmnewingAction - newTourId(0ならOK) : " + newTourId);
+				/*後消し*/System.out.println("ConfirmnewingAction : " + newTourName);
+				/*後消し*/System.out.println("ConfirmnewingAction : " + newPrice_int);
+				/*後消し*/System.out.println("ConfirmnewingAction : " + newPersons_int);
+				/*後消し*/System.out.println("ConfirmnewingAction : " + newDeparture);
+			}
+
+		}catch(NumberFormatException e){
+			errorMsg = "価格・人数の欄には数値を入力してください";
+			/*後消し*/System.out.println(errorMsg);
+		}catch(NullPointerException e){
+			System.out.println("いずれかの情報の受け渡しに失敗しました");
+			e.printStackTrace();
+		}
+
+
+		if(errorMsg.equals("")){
+			result = SUCCESS;
+		}
+		/*後消し*/System.out.println("ConfirmnewingAction - result : " + result);
 		return result;
+
 	}
 
 	/*以下、変数のgetter/setter-----------------------------------------------------*/

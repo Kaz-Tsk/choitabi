@@ -74,15 +74,15 @@
 
 <s:else>
 	変更後のツアー情報
-	<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="680px">
+	<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="780px">
 	    <tr>
 	        <tr>
-	        <th>ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
+	        <th width="100px">ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
 	    </tr>
 	    <tr>
 	        <th>ツアー名</th>
-	        <td>変更前</td><td><s:property value = "currentTourName"/></td>
-	        <td>変更後</td><td><s:property value = "editTourName"/></td>
+	        <td width="60px">変更前</td><td><s:property value = "currentTourName"/></td>
+	        <td width="60px">変更後</td><td><s:property value = "editTourName"/></td>
 	    </tr>
 	    <tr>
 	        <th>価格</th>

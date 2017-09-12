@@ -14,7 +14,7 @@
     ツアー情報を入力してください
 <br>
 
-
+<!-- ↓ここ一文エラーメッセージです -->
 <font color="red"><s:property value="errorMsg"/></font>
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
@@ -58,7 +58,7 @@
    </tr>
       <tr>
    		<th>画像URL</th>
-   		<td><input type="file" name="newImg"></input></td>
+   		<td><input type="text" name="newImg"></input></td>
    </tr>
 </table>
 <hr>

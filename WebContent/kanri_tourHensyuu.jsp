@@ -58,7 +58,7 @@
    </tr>
       <tr>
    		<th>画像URL</th><td><s:property value="currentImg"/></td>
-   		<td><input type="file" name="editImg" value=<s:property value = "currentImg"/>></td>
+   		<td><input type="text" name="editImg" value=<s:property value = "currentImg"/>></td>
    </tr>
 </table>
 <hr>

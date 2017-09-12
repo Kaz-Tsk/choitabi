@@ -84,9 +84,15 @@ public class ConfirmTourEditingAction extends ActionSupport{
 					 (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") ||
 					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme.equals("") ||
 					  editComment.equals("") )) {
-
 				errorMsg = "情報が完全に入力されていません";
 				System.out.println(errorMsg);
+
+			}else if(editImg.indexOf(".png") == -1 && editImg.indexOf(".jpg") == -1){
+				/*後消し*/System.out.println(editImg.indexOf(".png"));
+				/*後消し*/System.out.println(editImg.indexOf(".jpg"));
+				errorMsg = "画像URLにはpngもしくはjpgを指定してください";
+				System.out.println(errorMsg);
+
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
@@ -98,9 +104,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 				/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons_int);
 				/*後消し*/System.out.println("ConfirmEditingAction : " + editDeparture);
 				/*後消し*/System.out.println("ConfirmEditingAction : " + deleteCheck);
-				if(errorMsg.equals("")){
-					result = SUCCESS;
-				}
 			}
 
 		}catch(NumberFormatException e){
@@ -111,6 +114,9 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			e.printStackTrace();
 		}
 
+		if(errorMsg.equals("")){
+			result = SUCCESS;
+		}
 		/*後消し*/System.out.println("ConfirmEditingAction - result : " + result);
 		return result;
 
