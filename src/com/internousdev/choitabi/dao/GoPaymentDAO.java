@@ -45,7 +45,7 @@ public class GoPaymentDAO {
                 CartDTO dto = new CartDTO();
                 dto.setUserId(rs.getInt("userId"));//ユーザーID
                 dto.setTourId(rs.getInt("TourId"));//ツアーID
-                dto.setQuantity(rs.getInt("Quantity"));//購入数
+                dto.setOrderCount(rs.getInt("Quantity"));//購入数
 
                 cartList.add(dto);
                 }

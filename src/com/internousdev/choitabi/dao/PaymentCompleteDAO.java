@@ -43,12 +43,12 @@ public class PaymentCompleteDAO {
             while (rs.next()) {
                 dto.setUserId(rs.getInt("userId"));
                 dto.setTourId(rs.getInt("TourId"));
-                dto.setQuantity(rs.getInt("Quantity"));
+                dto.setOrderCount(rs.getInt("Quantity"));
 
                 PreparedStatement ps2 = con.prepareStatement(insert);
                 ps2.setInt(1, userId);
                 ps2.setInt(2, dto.getTourId());
-                ps2.setInt(3, dto.getQuantity());
+                ps2.setInt(3, dto.getOrderCount());
 
                 ret += ps2.executeUpdate();
                 }
