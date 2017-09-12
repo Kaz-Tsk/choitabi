@@ -16,7 +16,7 @@
 
 	<!-- ログイン時ヘッダー -->
 	<header>
-         <s:if test="#session.userFlg1.">
+         <s:if test="#session.userFlg.1">
 				    <div class="logo"><a href="<s:url action="index.jsp"/>"><span
 					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 			<div class="navi">
