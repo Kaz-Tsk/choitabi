@@ -16,7 +16,7 @@
 
 	<!-- ログイン時ヘッダー -->
 	<header>
-         <s:if test="#session.userFlg.1">
+         <s:if test="#session.userFlg =1 || 2">
 				    <div class="logo"><a href="<s:url action="index.jsp"/>"><span
 					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 			<div class="navi">
@@ -28,7 +28,7 @@
 	</s:if>
 
 	<!-- 管理者ログイン時ヘッダー  -->
-		<s:elseif test="#session.userFlg.3">
+		<s:elseif test="#session.userFlg = 3">
 			    <div class="logo"><a href="<s:url action=""/>"><span
 					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 		<div class="navi">

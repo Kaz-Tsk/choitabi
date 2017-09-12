@@ -37,7 +37,7 @@ import com.opensymphony.xwork2.ActionSupport;
 	/**
 	 *管理者
 	 */
-	private boolean admin =true;
+	private boolean admin=true;
 
 	/**
 	 *ログインするための実行メソッド
