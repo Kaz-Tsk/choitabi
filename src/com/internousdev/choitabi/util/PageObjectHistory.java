@@ -46,7 +46,7 @@ public class PageObjectHistory {
 
 
 	/**
-	 * AllPagesクラスのpaginate()において使われる
+	 * AllPagesCクラスのpaginate()において使われる
 	 * これによってDTOのインスタンスが当該ページにひとつずつ格納されていく
 	 * @param list これからページネーション処理を行うリスト
 	 * @param j 繰り返し用変数

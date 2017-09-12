@@ -27,37 +27,37 @@ public class KanriHistoryAction extends ActionSupport {
 	/**
 	 * ユーザーID
 	 */
-	private int userId;
+	private int user_id;
 
 	/**
 	 * 姓
 	 */
-	private String familyNameKanji;
+	private String family_name_kanji;
 
 	/**
 	 * 名
 	 */
-	private String givenNameKanji;
+	private String given_name_kanji;
 
 	/**
 	 * ツアーID
 	 */
-	private int tourId;
+	private int tour_id;
 
 	/**
 	 * ツアー名
 	 */
-	private String tourName;
+	private String tour_name;
 
 	/**
-	 * 購入数
+	 * 予約人数
 	 */
-	private int quantity;
+	private int order_count;
 
 	/**
 	 * 合計金額
 	 */
-	private int totalPrice;;
+	private int total_price;;
 
 	/**
 	 * 検索ワード
@@ -88,8 +88,8 @@ public class KanriHistoryAction extends ActionSupport {
 
 	public String execute() {
 		String result = SUCCESS;
-		if(tourName == null || tourName.equals(null)) {
-			tourName = "";
+		if(tour_name == null || tour_name.equals(null)) {
+			tour_name = "";
 
 			ArrayList<CartDTO> allList = new ArrayList<CartDTO>();
 			KanriHistoryDAO dao = new KanriHistoryDAO();
@@ -118,7 +118,7 @@ public class KanriHistoryAction extends ActionSupport {
 				dto = allList.get(i);
 				String str = dto.getTourName();
 
-				if(str.startsWith(tourName)) {
+				if(str.startsWith(tour_name)) {
 					searchList.add(dto);
 				}
 			}
@@ -144,114 +144,114 @@ public class KanriHistoryAction extends ActionSupport {
 
 	/**
 	 * ユーザーIDを取得するメソッド
-	 * @return userId ユーザーID
+	 * @return user_id ユーザーID
 	 */
 	public int getUserId() {
-		return userId;
+		return user_id;
 	}
 
 	/**
 	 * ユーザーIDを格納するメソッド
-	 * @param userId ユーザーID
+	 * @param user_id ユーザーID
 	 */
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUserId(int user_id) {
+		this.user_id = user_id;
 	}
 
 	/**
 	 * ツアーIDを取得するメソッド
-	 * @return tourId ツアーID
+	 * @return tour_id ツアーID
 	 */
 	public int getTourId() {
-		return tourId;
+		return tour_id;
 	}
 
 	/**
 	 * ツアーIDを格納するメソッド
-	 * @param tourId ツアーID
+	 * @param tour_id ツアーID
 	 */
-	public void setTourId(int tourId) {
-		this.tourId = tourId;
+	public void setTourId(int tour_id) {
+		this.tour_id = tour_id;
 	}
 
 	/**
 	 * ツアー名を取得するメソッド
-	 * @return tourName ツアー名
+	 * @return tour_name ツアー名
 	 */
 	public String getTourName() {
-		return tourName;
+		return tour_name;
 	}
 
 	/**
 	 * ツアー名を格納するメソッド
-	 * @param tourName ツアー名
+	 * @param tour_name ツアー名
 	 */
-	public void setTourName(String tourName) {
-		this.tourName = tourName;
+	public void setTourName(String tour_name) {
+		this.tour_name = tour_name;
 	}
 
 	/**
-	 * 購入数を取得するメソッド
-	 * @return quantity 購入数
+	 * 予約人数を取得するメソッド
+	 * @return order_count 予約人数
 	 */
-	public int getQouantity() {
-		return quantity;
+	public int getOrderCount() {
+		return order_count;
 	}
 
 	/**
-	 * 購入数を格納するメソッド
-	 * @param quantity 購入数
+	 * 予約人数を格納するメソッド
+	 * @param order_count 予約人数
 	 */
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setOrderCount(int order_count) {
+		this.order_count = order_count;
 	}
 
 	/**
 	 * 合計金額を取得するメソッド
-	 * @return totalPrice 合計金額
+	 * @return total_price 合計金額
 	 */
 	public int getTotalPrice() {
-		return totalPrice;
+		return total_price;
 	}
 
 	/**
 	 * 合計金額を格納するメソッド
-	 * @param totalPrice 合計金額
+	 * @param total_price 合計金額
 	 */
-	public void setTotalPrice(int totalPrice) {
-		this.totalPrice = totalPrice;
+	public void setTotalPrice(int total_price) {
+		this.total_price = total_price;
 	}
 
 	/**
 	 * 名前(姓)を取得するメソッド
-	 * @return familyNameKanji 名前(姓)
+	 * @return family_name_kanji 名前(姓)
 	 */
 	public String getFamilyNameKanji() {
-		return familyNameKanji;
+		return family_name_kanji;
 	}
 
 	/**
 	 * 名前(姓)を格納するメソッド
-	 * @param familyNameKanji 名前(姓)
+	 * @param family_name_kanji 名前(姓)
 	 */
-	public void setFamilyNameKanji(String familyNameKanji) {
-		this.familyNameKanji = familyNameKanji;
+	public void setFamilyNameKanji(String family_name_kanji) {
+		this.family_name_kanji = family_name_kanji;
 	}
 
 	/**
 	 * 名前(名)を取得するメソッド
-	 * @return givenNameKanji 名前(名)
+	 * @return given_name_kanji 名前(名)
 	 */
 	public String getGivenNameKanji() {
-		return givenNameKanji;
+		return given_name_kanji;
 	}
 
 	/**
 	 * 名前(名)を格納するメソッド
-	 * @param givenNameKanji 名前(名)
+	 * @param given_name_kanji 名前(名)
 	 */
-	public void setGivennameKanji(String givenNameKanji) {
-		this.givenNameKanji = givenNameKanji;
+	public void setGivenNameKanji(String given_name_kanji) {
+		this.given_name_kanji = given_name_kanji;
 	}
 
 	/**
