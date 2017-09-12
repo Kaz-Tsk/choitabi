@@ -1,5 +1,8 @@
 package com.internousdev.choitabi.action;
 
+import java.sql.SQLException;
+
+import com.internousdev.choitabi.dao.InsertTourDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class InsertTourAction extends ActionSupport {
@@ -47,11 +50,19 @@ public class InsertTourAction extends ActionSupport {
 
 	/*executeメソッド---------------------------------------------------------------*/
 
-	public String execute(){
+	public String execute() throws IllegalAccessException, InstantiationException, SQLException{
 		String result = ERROR;
+		int count = 0;
 
-		/*まずDAOをつくろう*/
+		InsertTourDAO itdao = new InsertTourDAO();
+		count = itdao.insertTour(newTourName, newPrice,newPersons,
+	                            		 newDeparture, newRegion, newPrefectures, newTheme, newComment, newImg);/*←（）内は全部引数です*/
 
+		if(count > 0){
+			result = SUCCESS;
+		}
+
+		/*後消し*/System.out.println("UpdateTourAction - result :" + result );
 		return result;
 	}
 

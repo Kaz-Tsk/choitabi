@@ -20,8 +20,8 @@ public class InsertTourDAO {
 
 	public int insertTour(String newTourName,String newPrice,
             String newPersons, String newDeparture, String newRegion, String newPrefectures,
-            String newTheme, String newComment, String newImg,
-            String deleteCheck)throws IllegalAccessException, InstantiationException{
+            String newTheme, String newComment, String newImg)
+            		throws IllegalAccessException, InstantiationException{
 
 		int count = 0;
 
