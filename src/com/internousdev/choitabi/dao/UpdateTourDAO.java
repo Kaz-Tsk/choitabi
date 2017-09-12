@@ -8,7 +8,7 @@ import com.internousdev.choitabi.util.DBConnector;
 
 public class UpdateTourDAO {
 
-	/**author : YUKA MATSUMURA
+	/**@author : YUKA MATSUMURA
 	 * @since : 2017/09/08
 	 * @version : 1.1
 	 *
@@ -34,7 +34,8 @@ public class UpdateTourDAO {
 		*フォーマットのAPIと文字列の関数を使って「20170101」のような形の文字列にすると、うまく実行してもらえるようです。
 		*
 		*/
-		System.out.println("UpdateTourDAO - 現在の削除チェック：" + deleteCheck);
+
+		/*動作確認*/System.out.println("UpdateTourDAO - 現在の削除チェック：" + deleteCheck);
 
 			/*削除チェックのボックスにチェックが入っていない＝ツアーデータ更新の場合*/
 			if(deleteCheck.equals("false")){
@@ -45,7 +46,7 @@ public class UpdateTourDAO {
 					Connection con = dbc.createConnection();
 
 
-					/*動作化確認*/
+					/*動作確認*/
 					System.out.println("UpdateTourDAO : " + editTourId);
 					System.out.println("UpdateTourDAO : " + editPrice);
 					System.out.println("UpdateTourDAO : " + editPersons);
@@ -112,7 +113,7 @@ public class UpdateTourDAO {
 						return 0;
 					}
 
-			/*削除チェックのボック氏にチェックが入っていた＝ツアーデータ削除の場合*/
+			/*削除チェックのボックスにチェックが入っていた＝ツアーデータ削除の場合*/
 			}else if(deleteCheck.equals("true")){
 
 				try{
@@ -160,6 +161,7 @@ public class UpdateTourDAO {
 			/*万一、何らかのエラーによってチェックボックスの値がうまく渡ってこなかった場合*/
 			}else{
 				/*後消し*/System.out.println("UpdateTourDAO - エラー：チェックボックスの値が反映されていません");
+				return 0;
 			}
 
 

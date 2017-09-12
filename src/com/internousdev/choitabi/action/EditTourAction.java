@@ -45,7 +45,7 @@ public class EditTourAction extends ActionSupport {
 	/*executeメソッド-------------------------------------------------*/
 
 	public String execute(){
-		String result = SUCCESS;
+		String result = ERROR;
 
 		SelectOneTourDAO sotdao = new SelectOneTourDAO();
 		SelectTourDTO stdto =sotdao.selectOneTour(currentTourId);
