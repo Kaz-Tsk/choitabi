@@ -66,7 +66,7 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 				newDeparture.equals("") || newRegion.equals("") || newPrefectures.equals("") || newTheme.equals("") ||
 			    newComment.equals("") ) {
 
-				errorMsg = "情報が完全に入力されていません";
+				errorMsg = "未入力の情報があります";
 				System.out.println(errorMsg);
 
 			}else if(newImg.indexOf(".png") == -1 && newImg.indexOf(".jpg") == -1){
@@ -188,10 +188,14 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 		this.newImg = newImg;
 	}
 
+	/*エラーメッセージのgetter/setter------------------*/
+	public String getErrorMsg(){
+		return errorMsg;
+	}
 
-
-
-
+	public void setErrorMsg(String errorMsg){
+		this.errorMsg = errorMsg;
+	}
 
 
 
