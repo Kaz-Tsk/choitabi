@@ -76,7 +76,7 @@ public class PaymentCompleteAction extends ActionSupport implements SessionAware
     	projectName="choitabi";
         String result = LOGIN;
 
-        //セッション切れでないか？ＯＫなら次へ進む
+      //セッション切れでないか？ＯＫなら次へ進む
         userId=0;
 
         if (session.containsKey("userId")) {
@@ -92,7 +92,7 @@ public class PaymentCompleteAction extends ActionSupport implements SessionAware
                 SelectCartDAO dao2 = new SelectCartDAO();
                 cartList = dao2.selectCart(userId);
 
-                if dao.payment(userId); //購入情報をインサート
+                	dao.purchase(userId); //購入情報をインサート
                     dao.clean(userId); //カート情報を削除
 
                     for (int i = 0; i < cartList.size(); i++) {
@@ -101,10 +101,7 @@ public class PaymentCompleteAction extends ActionSupport implements SessionAware
 
                     result = SUCCESS;
 
-                }else if(dao.stockCheck(cartList)==3){
-                	this.setItemName(cartList.get(0).getTourName());
-//                    itemName = dao.stockCheck(cartList);
-//                    System.out.println(dao.stockCheck(cartList));
+
     				System.out.println(itemName);
                     result = ERROR;
                     }
@@ -112,15 +109,6 @@ public class PaymentCompleteAction extends ActionSupport implements SessionAware
 
             return result;
             }
-
-
-    /**
-     * ユーザー（お客様）IDを取得するメソッド
-     * @return userId ユーザー（お客様）ID
-     */
-    public int getUserId() {
-        return userId;
-        }
 
     /**
      * ユーザー（お客様）IDを格納するメソッド
