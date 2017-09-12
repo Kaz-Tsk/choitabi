@@ -29,19 +29,27 @@ public class InsertTourDAO {
 			/*SQLに接続し、コマンドを実行してもらいます*/
 			DBConnector dbc = new DBConnector();
 			Connection con = dbc.createConnection();
+			/*動作確認*/System.out.println("InsertTourDAO - 1 :" + newTourName);
+			/*動作確認*/System.out.println("InsertTourDAO - 2 :" + newPrice);
+			/*動作確認*/System.out.println("InsertTourDAO - 3 :" + newPersons);
+			/*動作確認*/System.out.println("InsertTourDAO - 4 :" + newDeparture);
+			/*動作確認*/System.out.println("InsertTourDAO - 5 :" + newRegion);
+			/*動作確認*/System.out.println("InsertTourDAO - 6 :" + newPrefectures);
+			/*動作確認*/System.out.println("InsertTourDAO - 7 :" + newTheme);
+			/*動作確認*/System.out.println("InsertTourDAO - 8 :" + newComment);
+			/*動作確認*/System.out.println("InsertTourDAO - 9 :" + newImg);
 
-			String sql = "INSERT INTO tour VALUES ("
-					+ " tour_id = 0," //←※これでオートインクリメントになります
-					+ " tour_name = ?," //1
-					+ " price = ?,"//2
-					+ " persons = ?,"//3
-					+ " departure = ?,"//4
-					+ " region = ?,"//5
-					+ " prefectures = ?,"//6
-					+ " theme = ?,"//7
-					+ " comment = ?,"//8
-					+ " img = ?"//9
-					+ " );";
+			String sql = "INSERT INTO tour VALUES(0," //←※これでオートインクリメントになります
+					+ " ?," //1
+					+ " ?,"//2
+					+ " ?,"//3
+					+ " ?,"//4
+					+ " ?,"//5
+					+ " ?,"//6
+					+ " ?,"//7
+					+ " ?,"//8
+					+ " ?"//9
+					+ ");";
 
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, newTourName);

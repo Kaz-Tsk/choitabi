@@ -60,18 +60,19 @@
 <br>
 <hr>
 <br>
+	    <!-- ↓…JSPを通して、別のアクションにある同名の変数に値を渡しています -->
    <a href=
 	    '<s:url action="InsertTourAction">
-		    <s:param name="editTourId" value="newTourId"/>
-		    <s:param name="editTourName" value = "newTourName"/>
-		    <s:param name="editPrice" value = "newPrice"/>
-		    <s:param name="editPersons" value = "newPersons"/>
-		    <s:param name="editDeparture" value = "newDeparture"/>
-		    <s:param name="editRegion" value = "newRegion"/>
-		    <s:param name="editPrefectures" value="newPrefectures"/>
-		    <s:param name="editTheme" value="newTheme"/>
-		    <s:param name="editComment" value="newComment"/>
-			<s:param name="editImg" value="newImg"/>
+		    <s:param name="newTourId" value="newTourId"/>
+		    <s:param name="newTourName" value = "newTourName"/>
+		    <s:param name="newPrice" value = "newPrice"/>
+		    <s:param name="newPersons" value = "newPersons"/>
+		    <s:param name="newDeparture" value = "newDeparture"/>
+		    <s:param name="newRegion" value = "newRegion"/>
+		    <s:param name="newPrefectures" value="newPrefectures"/>
+		    <s:param name="newTheme" value="newTheme"/>
+		    <s:param name="newComment" value="newComment"/>
+			<s:param name="newImg" value="newImg"/>
 	    </s:url>'>
     操作を完了する
     </a>
