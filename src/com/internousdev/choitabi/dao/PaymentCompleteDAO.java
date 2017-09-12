@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.internousdev.choitabi.dto.CartDTO;
-import com.internousdev.choitabi.util.DBConnector;
+import com.internousdev.choitabi.util.MySQLConnector;
 /**
  * 決済に関するDAO
  * @author SHUN NAGAO
@@ -27,10 +27,10 @@ public class PaymentCompleteDAO {
      */
     public int purchase(int userId) {
         int ret = 0;
-        DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/test_choitabi", "choitabi", "root", "mysql");
+        MySQLConnector db = new MySQLConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root", "mysql");
         Connection con = null;
 
-        con = db.createConnection();
+        con = db.getConnection();
         CartDTO dto = new CartDTO();
         String select = "select * from cart where userId = ?";
         String insert = "insert into payoff(userId, itemId, orderCount) values(?, ?, ?)";
@@ -77,8 +77,8 @@ public class PaymentCompleteDAO {
      */
     public int clean(int userId) {
         int ret = 0;
-        DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/test_choitabi", "choitabi", "root", "mysql");
-        Connection con = db.createConnection();
+        MySQLConnector db = new MySQLConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/choitabi", "choitabi", "root", "mysql");
+        Connection con = db.getConnection();
         String cleanCart = "delete from cart where userId = ?";
 
         try {
