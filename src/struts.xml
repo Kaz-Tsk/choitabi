@@ -46,7 +46,7 @@
 	</action>
 	<action name="ConfirmTourInsertingAction" class="com.internousdev.choitabi.action.ConfirmTourInsertingAction" method="execute">
 		<result name="success">kanri_tourTsuikaKakunin.jsp</result>
-		<result name="error">kanri_tourTsuikaKakunin.jsp</result>
+		<result name="error">kanri_tourTsuika.jsp</result>
 	</action>
 
 

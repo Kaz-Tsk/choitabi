@@ -80,11 +80,11 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
 				int newPrice_int = Integer.parseInt(newPrice);
 				int newPersons_int = Integer.parseInt(newPersons);
-				/*後消し*/System.out.println("ConfirmnewingAction - newTourId(0ならOK) : " + newTourId);
-				/*後消し*/System.out.println("ConfirmnewingAction : " + newTourName);
-				/*後消し*/System.out.println("ConfirmnewingAction : " + newPrice_int);
-				/*後消し*/System.out.println("ConfirmnewingAction : " + newPersons_int);
-				/*後消し*/System.out.println("ConfirmnewingAction : " + newDeparture);
+				/*後消し*/System.out.println("ConfirmTourInsertingAction - newTourId(0ならOK) : " + newTourId);
+				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newTourName);
+				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newPrice_int);
+				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newPersons_int);
+				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newDeparture);
 			}
 
 		}catch(NumberFormatException e){
