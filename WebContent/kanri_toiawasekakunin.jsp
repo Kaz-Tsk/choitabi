@@ -44,7 +44,7 @@
 							<th>メールアドレス | </th>
 							<th>お問い合わせ内容 | </th>
 						</tr>
-						<s:iterator value="searchList">
+						<s:iterator value="displayList">
 						<tr>
 							<td class="text-center"><s:property value="contact_name" /></td>
 							<td class="text-center"><s:property value="contact_mailAddress" /></td>

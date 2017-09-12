@@ -111,7 +111,7 @@ public class KanriContactAction extends ActionSupport {
 
             	   ArrayList<KanriContactPagenation2> KanriPages = new ArrayList<KanriContactPagenation2>();
                    KanriContactPagenation Kanrip = new KanriContactPagenation();
-                   KanriPages=Kanrip.paginate(searchList, 10);
+                   KanriPages=Kanrip.paginate(searchList, 10);//peginateメソッド呼び出し
                    maxPage = Kanrip.getMaxPage(searchList, 10);
 
                    displayList = KanriPages.get(pageNum-1).getPaginatedList();
