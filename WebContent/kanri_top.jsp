@@ -34,7 +34,7 @@
    <!-- お問い合わせ画面へ遷移 -->
 					<br><a href='<s:url action="KanriContactAction">
 					<s:param name="pageNum" value="1"/>
-					</s:url>'>お問い合わせ</a><br>
+					</s:url>'>■お問い合わせ</a><br>
 
 </font>
 
