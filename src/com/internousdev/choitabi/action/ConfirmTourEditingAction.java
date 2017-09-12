@@ -76,26 +76,33 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	public String execute(){
 		String result = ERROR;
 
+		/*もし、画像URLに何も書かれていなかったら、デフォルトの「NO IMAGE」画像のURLを入れておきます。*/
+		if(editImg.equals("")){
+			editImg = "img/no_image.jpg";
+		}
+
 		try{
 			if(deleteCheck.equals("true")){
 				result = SUCCESS;
-			}else if(deleteCheck.equals("false") && (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") || editDeparture.equals(""))){
+
+			}else if(deleteCheck.equals("false") &&
+					 (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") ||
+					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme.equals("") ||
+					  editComment.equals("") )) {
 				errorMsg = "情報が完全に入力されていません";
 				System.out.println(errorMsg);
+
+			}else if(editImg.indexOf(".png") == -1 && editImg.indexOf(".jpg") == -1){
+				/*後消し*/System.out.println(editImg.indexOf(".png"));
+				/*後消し*/System.out.println(editImg.indexOf(".jpg"));
+				errorMsg = "画像URLにはpngもしくはjpgを指定してください";
+				System.out.println(errorMsg);
+
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
-				int editPrice_int = Integer.parseInt(editPrice);
-				int editPersons_int = Integer.parseInt(editPersons);
-				/*後消し*/System.out.println("ConfirmEditingAction - currentTourId : " + currentTourId);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + editTourName);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + editPrice_int);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons_int);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + editDeparture);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + deleteCheck);
-				if(errorMsg.equals("")){
-					result = SUCCESS;
-				}
+				Integer.parseInt(editPrice);
+				Integer.parseInt(editPersons);
 			}
 
 		}catch(NumberFormatException e){
@@ -106,6 +113,16 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			e.printStackTrace();
 		}
 
+		/*後消し*/System.out.println("ConfirmEditingAction - currentTourId : " + currentTourId);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + editTourName);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + editPrice);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + editDeparture);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + deleteCheck);
+
+		if(errorMsg.equals("")){
+			result = SUCCESS;
+		}
 		/*後消し*/System.out.println("ConfirmEditingAction - result : " + result);
 		return result;
 
