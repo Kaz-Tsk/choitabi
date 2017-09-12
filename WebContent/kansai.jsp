@@ -23,38 +23,38 @@
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
         <div class="sub">
-                <input type = "image" src = "img/osakanokusikatsu.jpg">
+                <a href= "InsertCartAction"><img src="img/osakanokusikatsu.jpg"></a>
                 <div class="name">大阪の串かつ
                 <br>(関西/大阪府)</div>
                 <div class="price">価格:<span class= "price_num">&yen;555</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/obanzai.jpg">
+                <a href= "InsertCartAction"><img src="img/obanzai.jpg"></a>
                 <div class="name">おばんざい<br>(関西/京都府)</div>
                 <div class="price">価格:<span class= "price_num">&yen;441</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/nanbayasakazinja.jpg">
+                <a href= "InsertCartAction"><img src="img/nanbayasakazinja.jpg"></a>
                 <div class="name">難波八阪神社<br>(関西/大阪府)</div>
                 <div class="price">価格:<span class= "price_num">&yen;5555</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/ryouonzi.jpg">
+                <a href= "InsertCartAction"><img src="img/ryouonzi.jpg"></a>
                 <div class="name">龍穏寺<br>(関西/京都府)</div>
                 <div class="price">価格:<span class= "price_num">&yen;4419</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/awazisima-parasailing.jpg">
+                <a href= "InsertCartAction"><img src="img/awazisima-parasailing.jpg"></a>
                 <div class="name">淡路島パラセーリング<br>(関西/兵庫県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;6000</span></div>
             </div>
 
             <div class="sub">
-                <input type= "image" src = "img/hikoneshikouzinyama_hang_gliding.jpg">
+                <a href= "InsertCartAction"><img src="img/hikoneshikouzinyama_hang_gliding.jpg"></a>
                 <div class="name">彦根荒神山ハングライダー体験<br>(関西/滋賀県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;7000</span></div>
             </div>
