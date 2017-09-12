@@ -1,6 +1,8 @@
 package com.internousdev.choitabi.action;
 
-public class InsertTourAction {
+import com.opensymphony.xwork2.ActionSupport;
+
+public class InsertTourAction extends ActionSupport {
 
 
 
@@ -42,6 +44,16 @@ public class InsertTourAction {
 	private String newImg;
 
 
+
+	/*executeメソッド---------------------------------------------------------------*/
+
+	public String execute(){
+		String result = ERROR;
+
+		/*まずDAOをつくろう*/
+
+		return result;
+	}
 
 
 
