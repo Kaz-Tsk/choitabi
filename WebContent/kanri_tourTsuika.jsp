@@ -64,7 +64,6 @@
    </tr>
 </table>
 <hr>
-<hr>
 <br>
 <input type="submit" value="確認画面へ">
 </form>
