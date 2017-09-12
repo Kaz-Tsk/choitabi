@@ -19,11 +19,11 @@
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
 <s:form action="ConfirmTourInsertingAction">
-<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="420px">
+<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="480px">
 <!-- ↓まだ編集画面丸写し。変数名を変えていきます -->
    <tr>
    		<th>ツアー名</th>
-   		<td><input type="text" name="newTourName"></input></td>
+   		<td><input type="text" size="40" name="newTourName"></input></td>
    </tr>
    <tr>
    		<th>ツアーID</th><td>(自動で入ります)</td>
@@ -54,11 +54,11 @@
    </tr>
       <tr>
    		<th>コメント</th>
-   		<td><textarea rows="10" cols="30"name="newComment"></textarea></td>
+   		<td><textarea rows="10" cols="40"name="newComment"></textarea></td>
    </tr>
       <tr>
    		<th>画像URL</th>
-   		<td><input type="text" name="newImg"></input></td>
+   		<td><input type="text" size="40" name="newImg" placeholder="(※指定無しの場合は仮の画像が入ります)"></input></td>
    </tr>
 </table>
 <hr>

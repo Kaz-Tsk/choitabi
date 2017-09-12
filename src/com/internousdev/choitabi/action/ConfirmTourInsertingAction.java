@@ -55,6 +55,12 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	public String execute(){
 		String result = ERROR;
 
+
+		/*もし、画像に何も指定されていなかったら、デフォルトで「NO IMAGE」の画像を入れます。*/
+		if(newImg.equals("")){
+			newImg = "img/no_image.jpg";
+		}
+
 		try{
 			if (	newTourName.equals("")|| newPrice.equals("") || newPersons.equals("") ||
 				newDeparture.equals("") || newRegion.equals("") || newPrefectures.equals("") || newTheme.equals("") ||
@@ -88,6 +94,7 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 			System.out.println("いずれかの情報の受け渡しに失敗しました");
 			e.printStackTrace();
 		}
+
 
 
 		if(errorMsg.equals("")){

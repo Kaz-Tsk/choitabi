@@ -76,6 +76,11 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	public String execute(){
 		String result = ERROR;
 
+		/*もし、画像URLに何も書かれていなかったら、デフォルトの「NO IMAGE」画像のURLを入れておきます。*/
+		if(editImg.equals("")){
+			editImg = "img/no_image.jpg";
+		}
+
 		try{
 			if(deleteCheck.equals("true")){
 				result = SUCCESS;
