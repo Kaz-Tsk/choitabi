@@ -1,22 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ツアー情報一覧</title>
+<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
 </head>
 <body>
 <h1>ツアー情報一覧</h1>
     <hr>
     ツアー名検索<br>
-    <s:form action="IndicateTourListAction">
-		<s:textfield name="selectWord" property="selectWord"/>
+    <form action="IndicateTourListAction">
+		<input type="text" name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
-		<s:submit value="検索"/>
-	</s:form>
-<table border = "1px" cellspacing = "0px" cellpadding = "10px">
+		<input type="submit" value="検索"/>
+	</form>
+
+<table>
 	<tr>
 		<th>ツアーID</th>
 		<th>ツアー名</th>
@@ -25,12 +27,11 @@
 		<th>テーマ</th>
 		<th>　　　</th>
 	</tr>
-
 	<s:iterator value="currentTourList">
 	<tr>
 		<td><s:property value="tourId"></s:property></td>
 		<td><s:property value="tourName"></s:property></td>
-		<td><s:property value="price"></s:property></td>
+		<td><s:property value="price"></s:property> 円</td>
 		<td><s:property value="region"></s:property></td>
 		<td><s:property value="theme"/></td>
 		<td>
@@ -42,10 +43,7 @@
 	</tr>
 	</s:iterator>
 </table>
-    <br>
-    <a href='<s:url action="GoTourInsertPageAction"></s:url>'>
-    ツアーの新規登録を行う
-    </a><br>
+
     <br>
 <!-- ↓ページの「＜＜1/3＞＞」の部分です -->
 
@@ -78,7 +76,12 @@
     </s:else>
 
 <!-- ↑「＜＜1/3＞＞」部分ここまで -->
-
+    <br>
+    <br>
+    <br>
+    <a href='<s:url action="GoTourInsertPageAction"></s:url>'>
+    ツアーの新規登録を行う
+    </a><br>
     <br>
     <br>
     管理ページトップに戻る<br>
