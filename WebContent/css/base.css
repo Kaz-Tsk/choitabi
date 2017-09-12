@@ -24,7 +24,7 @@
 .sub{
     float:left;
     position:relative;
-    height:260px;
+    height:280px;
     width:200px;
     margin:6%;
     }
@@ -38,6 +38,7 @@ img{
     font-size:20px;
     font-weight:bold;
     text-align:center;
+    margin-top:10px;
 }
 
 .price{
