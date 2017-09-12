@@ -60,7 +60,21 @@
 <br>
 <hr>
 <br>
-    <font color = "black">完了(※ボタンにします)</font><br>
+   <a href=
+	    '<s:url action="InsertTourAction">
+		    <s:param name="editTourId" value="newTourId"/>
+		    <s:param name="editTourName" value = "newTourName"/>
+		    <s:param name="editPrice" value = "newPrice"/>
+		    <s:param name="editPersons" value = "newPersons"/>
+		    <s:param name="editDeparture" value = "newDeparture"/>
+		    <s:param name="editRegion" value = "newRegion"/>
+		    <s:param name="editPrefectures" value="newPrefectures"/>
+		    <s:param name="editTheme" value="newTheme"/>
+		    <s:param name="editComment" value="newComment"/>
+			<s:param name="editImg" value="newImg"/>
+	    </s:url>'>
+    操作を完了する
+    </a>
 <br>
 <hr>
 <br>

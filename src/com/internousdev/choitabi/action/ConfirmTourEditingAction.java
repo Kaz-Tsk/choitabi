@@ -101,14 +101,8 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
-				int editPrice_int = Integer.parseInt(editPrice);
-				int editPersons_int = Integer.parseInt(editPersons);
-				/*後消し*/System.out.println("ConfirmEditingAction - currentTourId : " + currentTourId);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + editTourName);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + editPrice_int);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons_int);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + editDeparture);
-				/*後消し*/System.out.println("ConfirmEditingAction : " + deleteCheck);
+				Integer.parseInt(editPrice);
+				Integer.parseInt(editPersons);
 			}
 
 		}catch(NumberFormatException e){
@@ -118,6 +112,13 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			System.out.println("いずれかの情報の受け渡しに失敗しました");
 			e.printStackTrace();
 		}
+
+		/*後消し*/System.out.println("ConfirmEditingAction - currentTourId : " + currentTourId);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + editTourName);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + editPrice);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + editDeparture);
+		/*後消し*/System.out.println("ConfirmEditingAction : " + deleteCheck);
 
 		if(errorMsg.equals("")){
 			result = SUCCESS;

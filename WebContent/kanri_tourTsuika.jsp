@@ -23,42 +23,43 @@
 <!-- ↓まだ編集画面丸写し。変数名を変えていきます -->
    <tr>
    		<th>ツアー名</th>
-   		<td><input type="text" size="40" name="newTourName"></input></td>
+   		<td><input type="text" size="40" name="newTourName" value=<s:property value="newTourName"/>></input></td>
    </tr>
    <tr>
    		<th>ツアーID</th><td>(自動で入ります)</td>
    </tr>
       <tr>
    		<th>価格</th>
-   		<td><input type="text" size="5" name="newPrice"></input>　円</td>
+   		<td><input type="text" size="5" name="newPrice" value=<s:property value="newPrice"/>></input>　円</td>
    </tr>
    <tr>
    		<th>定員</th>
-   		<td><input type="text" size="5" name="newPersons"></input>　名</td>
+   		<td><input type="text" size="5" name="newPersons" value=<s:property value="newPersons"/>></input>　名</td>
    </tr>
    <tr>
    		<th>出発地</th>
-   		<td><input type="text" name="newDeparture"></input></td>
+   		<td><input type="text" name="newDeparture" value=<s:property value="newDeparture"/>></input></td>
    </tr>
    <tr>
    		<th>エリア</th>
-   		<td><input type="text" name="newRegion"></input></td>
+   		<td><input type="text" name="newRegion" value=<s:property value="newRegion"/>></input></td>
    </tr>
       <tr>
    		<th>都道府県</th>
-   		<td><input type="text" name="newPrefectures"></input></td>
+   		<td><input type="text" name="newPrefectures" value=<s:property value="newPrefectures"/>></input></td>
    </tr>
       <tr>
    		<th>テーマ</th>
-   		<td><input type="text" name="newTheme"></input></td>
+   		<td><input type="text" name="newTheme" value=<s:property value="newTheme"/>></input></td>
    </tr>
       <tr>
    		<th>コメント</th>
-   		<td><textarea rows="10" cols="40"name="newComment"></textarea></td>
+   		<td><textarea rows="10" cols="45"name="newComment"><s:property value="newComment"/></textarea>></td>
    </tr>
       <tr>
    		<th>画像URL</th>
-   		<td><input type="text" size="40" name="newImg" placeholder="(※指定無しの場合は仮の画像が入ります)"></input></td>
+   		<td><input type="text" size="40" name="newImg"
+   		     value=<s:property value="newImg"/>></input><br><font size="2px">※指定なしの場合は仮の画像が入ります</font></td>
    </tr>
 </table>
 <hr>

@@ -16,8 +16,10 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	 *
 	 * */
 
-	/*新規ツアーのID（自動で入るので0のままでOKです）*/
-	private int newTourId = 0;
+	/*ツアーIDについて…ここでは宣言していません。
+	 *（DBのツアーテーブルに、新規登録の際自動でIDを割り振ってくれる（オートインクリメント）設定がついているため）
+	 *次のInsertTourActionで、SQLのINSERT文には「INSERT INTO tour VALUES（【tour_id=0】, ……」と入れて、オートインクリメントしています。
+	 *
 
 	/*入力されたツアー名*/
 	private String newTourName;
@@ -78,13 +80,8 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
-				int newPrice_int = Integer.parseInt(newPrice);
-				int newPersons_int = Integer.parseInt(newPersons);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction - newTourId(0ならOK) : " + newTourId);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newTourName);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newPrice_int);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newPersons_int);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newDeparture);
+				Integer.parseInt(newPrice);
+				Integer.parseInt(newPersons);
 			}
 
 		}catch(NumberFormatException e){
@@ -95,26 +92,21 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 			e.printStackTrace();
 		}
 
-
+		/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newTourName);
+		/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newPrice);
+		/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newPersons);
+		/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newDeparture);
 
 		if(errorMsg.equals("")){
 			result = SUCCESS;
 		}
-		/*後消し*/System.out.println("ConfirmnewingAction - result : " + result);
+		/*後消し*/System.out.println("ConfirmTourInsertingAction - result : " + result);
 		return result;
 
 	}
 
 	/*以下、変数のgetter/setter-----------------------------------------------------*/
 
-
-	public int getNewTourId(){
-		return newTourId;
-	}
-
-	public void setNewTourId(int newTourId){
-		this.newTourId = newTourId;
-	}
 
 	public String getNewTourName(){
 		return newTourName;
@@ -188,7 +180,14 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 		this.newImg = newImg;
 	}
 
+/*エラーメッセージのgetter/setter*/
+	public String getErrorMsg(){
+		return errorMsg;
+	}
 
+	public void setErrorMsg(String errorMsg){
+		this.errorMsg = errorMsg;
+	}
 
 
 
