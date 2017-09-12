@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ツアー編集内容確認</title>
+<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
 </head>
 <body>
 
@@ -28,7 +29,7 @@
 
 <s:if test="deleteCheck.equals('true')">
 削除するツアー
-	<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="360">
+	<table>
 	    <tr>
 	        <tr>
 	        <th>ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
@@ -74,7 +75,7 @@
 
 <s:else>
 	変更後のツアー情報
-	<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="680px">
+	<table>
 	    <tr>
 	        <tr>
 	        <th>ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
@@ -116,8 +117,8 @@
 	    </tr>
 	    <tr>
 	        <th>コメント</th>
-	        <td>変更前</td><td><font size = "2px"><s:property value="currentComment"/></font></td>
-	        <td>変更後</td><td><font size = "2px"><s:property value="editComment"/></font></td>
+	        <td>変更前</td><td width="200px"><font size = "2px"><s:property value="currentComment"/></font></td>
+	        <td>変更後</td><td width="200px"><font size = "2px"><s:property value="editComment"/></font></td>
 	    </tr>
 	    <tr>
 	        <th>画像URL</th>

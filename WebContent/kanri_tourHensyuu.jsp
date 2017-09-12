@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ツアー編集</title>
+<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
 </head>
 <body>
 
@@ -16,8 +17,8 @@
 <font color="red"><s:property value="errorMsg"/></font>
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
-<s:form action="ConfirmTourEditingAction">
-<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="640px">
+<form action="ConfirmTourEditingAction">
+<table>
    <tr>
    		<th></th><th>変更前</th><th>変更後</th>
    </tr>
@@ -77,7 +78,7 @@
 	    <s:hidden name = "currentComment" property="currentComent" />
 	    <s:hidden name = "currentImg" property="currentImg" />
 <input type="submit" value="確認画面へ">
-</s:form>
+</form>
 <!-- ここまで編集フォーム -->
 
     <br>

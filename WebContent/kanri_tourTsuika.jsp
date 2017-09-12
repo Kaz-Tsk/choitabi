@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ツアー追加</title>
+<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
 </head>
 <body>
 
@@ -18,8 +19,8 @@
 <font color="red"><s:property value="errorMsg"/></font>
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
-<s:form action="ConfirmTourInsertingAction">
-<table border = "1px" cellspacing = "0px" cellpadding = "10px" width="480px">
+<form action="ConfirmTourInsertingAction">
+<table>
 <!-- ↓まだ編集画面丸写し。変数名を変えていきます -->
    <tr>
    		<th>ツアー名</th>
@@ -66,7 +67,7 @@
 <hr>
 <br>
 <input type="submit" value="確認画面へ">
-</s:form>
+</form>
 <!-- ここまで編集フォーム -->
 <br>
 <hr>
