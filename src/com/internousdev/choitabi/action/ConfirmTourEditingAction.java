@@ -89,7 +89,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 					 (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") ||
 					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme.equals("") ||
 					  editComment.equals("") )) {
-				errorMsg = "情報が完全に入力されていません";
+				errorMsg = "未入力の情報があります";
 				System.out.println(errorMsg);
 
 			}else if(editImg.indexOf(".png") == -1 && editImg.indexOf(".jpg") == -1){
