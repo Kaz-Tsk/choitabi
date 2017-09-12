@@ -59,17 +59,16 @@
 			</h1>
 		</div>
 
-		<s:if test="%{cartList.size() > 0 && #session.userId != null}">
+		<s:if test="%{cartList.size() > 0 && #session.user_id != null}">
 			<table class="cartlist">
 			    <thead>
 					<tr>
-					    <th><s:text name="lang.cart.imgAddress001" /></th>
+					    <th><s:text name="lang.cart.img" /></th>
 						<th><s:text name="lang.cart.tour_name" /></th>
 						<th><s:text name="lang.cart.price" /></th>
-						<th><s:text name="lang.cart.count" /></th>
-						<th><s:text name="lang.cart.date" /></th>
-						<th><s:text name="lang.cart.price" /></th>
-						<th><s:text name="lang.cart.count" /></th>
+						<th><s:text name="lang.cart.order_count" /></th>
+						<th><s:text name="lang.cart.sub_total" /></th>
+						<th><s:text name="lang.cart.order_count" /></th>
 						<th><s:text name="lang.cart.delete" /></th>
 					</tr>
 				</thead>
@@ -77,25 +76,23 @@
 				<tbody>
 					<s:iterator value="cartList">
 						<tr>
-							<td><img src="<s:property value="imgAddress001"/>" alt=""
+							<td><img src="<s:property value="img"/>" alt=""
 								width="100" height="100"></td>
-							<td><s:property value="tourName" /></td>
+							<td><s:property value="tour_name" /></td>
 
 							<td><fmt:formatNumber value="${price}" pattern="###,###,###" />
 								<s:text name="lang.cart.yen" /></td>
 
-							<td><s:property value="quantity" /></td>
+							<td><s:property value="order_count" /></td>
 
-
-							<td><s:property value="date" /></td>
-							<td><fmt:formatNumber value="${subTotal}"
+							<td><fmt:formatNumber value="${sub_total}"
 									pattern="###,###,###" /> <s:text name="lang.cart.yen" /></td>
 
 							<td><s:form action="UpdateCartAction">
-									<s:hidden name="cartId" value="%{cartId" />
-									<s:hidden name="tourId" value="%{tourId}" />
+									<s:hidden name="cart_id" value="%{cart_id" />
+									<s:hidden name="tour_id" value="%{tour_id}" />
 									<div class="row">
-										<select name="quantity">
+										<select name="order_count">
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>
@@ -115,10 +112,10 @@
 									</div>
 								</s:form> <br> <br></td>
 							<td><s:form action="DeleteCartAction">
-									<!--  --<input id="order" type="hidden" name="quantity"
-								value="<s:property value="quantity"/>">-->
-									<s:hidden name="userId" value="%{userId}" />
-									<s:hidden name="cartId" value="%{cartId}" />
+									<!--  --<input id="order" type="hidden" name="order_count"
+								value="<s:property value="order_count"/>">-->
+									<s:hidden name="user_id" value="%{user_id}" />
+									<s:hidden name="cart_id" value="%{cart_id}" />
 									<button type="submit" class="btn btn-default">
 										<s:text name="lang.cart.delete" />
 									</button>
@@ -129,8 +126,8 @@
 					</tbody>
 			</table>
 			<h2 class="text-danger text-right">
-				<s:text name="lang.cart.total" />
-				<fmt:formatNumber value="${totalPrice}" pattern="###,###,###" />
+				<s:text name="lang.cart.total_price" />
+				<fmt:formatNumber value="${total_price}" pattern="###,###,###" />
 				<s:text name="lang.cart.tax_include" />
 			</h2>
 

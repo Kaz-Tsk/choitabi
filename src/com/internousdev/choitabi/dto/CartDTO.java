@@ -14,22 +14,22 @@ public class CartDTO {
     /**
      * カートID
      */
-    private int cartId;
+    private int cart_id;
 
     /**
      * ユーザーID
      */
-    private int userId;
+    private int user_id;
 
     /**
      * 姓
      */
-    private String familyNameKanji;
+    private String family_name_kanji;
 
     /**
      * 名
      */
-    private String givenNameKanji;
+    private String given_name_kanji;
 
     /**
      * 支払い方法
@@ -39,17 +39,17 @@ public class CartDTO {
     /**
      * ツアーID
      */
-    private int tourId;
+    private int tour_id;
 
     /**
      * ツアー名
      */
-    private String tourName;
+    private String tour_name;
 
     /**
-     * 購入数
+     * 予約人数
      */
-    private int quantity;
+    private int order_count;
 
     /**
      * 価格
@@ -59,7 +59,7 @@ public class CartDTO {
     /**
      * 合計金額
      */
-    private int totalPrice;
+    private int total_price;
 
     /**
      * 備考
@@ -69,17 +69,17 @@ public class CartDTO {
     /**
      * 画像パス
      */
-    private String imgAddress001;
+    private String img;
 
     /**
      * 登録日
      */
-    private String registrationDate;
+    private String registration_date;
 
     /**
      * 更新日
      */
-    private String updatedDate;
+    private String updated_date;
 
     /**
      * ツアーカテゴリー
@@ -89,72 +89,72 @@ public class CartDTO {
     /**
      * 小計
      */
-    private int subTotal;
+    private int sub_total;
 
 
 
     /**
      * カートIDを取得するメソッド
-     * @return cartId カートID
+     * @return cart_id カートID
      */
     public int getCartId() {
-        return cartId;
+        return cart_id;
         }
 
     /**
      * カートIDを格納するメソッド
-     * @param cartId カートID
+     * @param cart_id カートID
      */
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
+    public void setCartId(int cart_id) {
+        this.cart_id = cart_id;
         }
 
     /**
      * ユーザーIDを取得するメソッド
-     * @return userId ユーザーID
+     * @return user_id ユーザーID
      */
     public int getUserId() {
-        return userId;
+        return user_id;
         }
 
     /**
      * ユーザーIDを格納するメソッド
-     * @param userId ユーザーID
+     * @param user_id ユーザーID
      */
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserId(int user_id) {
+        this.user_id = user_id;
         }
 
     /**
      * 姓を取得するメソッド
-     * @return familyNameKanji 姓
+     * @return family_name_kanji 姓
      */
     public String getFamilyNameKanji() {
-    	return familyNameKanji;
+    	return family_name_kanji;
     }
 
     /**
      * 姓を格納するメソッド
-     * @parem familyNameKanji 姓
+     * @parem family_name_kanji 姓
      */
-    public void setFamilyNameKanji(String familyNameKanji) {
-    	this.familyNameKanji = familyNameKanji;
+    public void setFamilyNameKanji(String family_name_kanji) {
+    	this.family_name_kanji = family_name_kanji;
     }
 
     /**
      * 名を取得するメソッド
-     * @return givenNameKanji 名
+     * @return given_name_kanji 名
      */
     public String getGivenNameKanji() {
-    	return givenNameKanji;
+    	return given_name_kanji;
     }
 
     /**
      * 名を格納するメソッド
-     * @param givenNameKanji 名
+     * @param given_name_kanji 名
      */
-    public void setGivenNameKanji(String givenNameKanji) {
-    	this.givenNameKanji = givenNameKanji;
+    public void setGivenNameKanji(String given_name_kanji) {
+    	this.given_name_kanji = given_name_kanji;
     }
 
     /**
@@ -175,50 +175,50 @@ public class CartDTO {
 
     /**
      * ツアーIDを取得するメソッド
-     * @return tourId ツアーID
+     * @return tour_id ツアーID
      */
     public int getTourId() {
-        return tourId;
+        return tour_id;
         }
 
     /**
      * ツアーIDを格納するメソッド
-     * @param tourId ツアーID
+     * @param tour_id ツアーID
      */
-    public void setTourId(int tourId) {
-        this.tourId = tourId;
+    public void setTourId(int tour_id) {
+        this.tour_id = tour_id;
         }
 
     /**
      * ツアー名を取得するメソッド
-     * @return tourName ツアー名
+     * @return tour_name ツアー名
      */
     public String getTourName() {
-        return tourName;
+        return tour_name;
         }
 
     /**
      * ツアー名を格納するメソッド
-     * @param tourName ツアー名
+     * @param tour_name ツアー名
      */
-    public void setTourName(String tourName) {
-        this.tourName = tourName;
+    public void setTourName(String tour_name) {
+        this.tour_name = tour_name;
         }
 
     /**
-     * 購入数を取得するメソッド
-     * @return quantity 購入数
+     * 予約人数を取得するメソッド
+     * @return order_count 予約人数
      */
-    public int getQuantity() {
-        return quantity;
+    public int getOrderCount() {
+        return order_count;
         }
 
     /**
-     * 購入数を格納するメソッド
-     * @param quantity 購入数
+     * 予約人数を格納するメソッド
+     * @param order_count 予約人数
      */
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setOrderCount(int order_count) {
+        this.order_count = order_count;
         }
 
     /**
@@ -239,18 +239,18 @@ public class CartDTO {
 
     /**
      * 合計金額を取得するメソッド
-     * @return totalPrice 合計金額
+     * @return total_price 合計金額
      */
     public int getTotalPrice() {
-        return totalPrice;
+        return total_price;
         }
 
     /**
      * 合計金額を格納するメソッド
-     * @param totalPrice 合計金額
+     * @param total_price 合計金額
      */
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTotalPrice(int total_price) {
+        this.total_price = total_price;
         }
 
     /**
@@ -271,50 +271,50 @@ public class CartDTO {
 
    /**
     * 画像パスを取得するメソッド
-    * @return imgAddress001 画像パス
+    * @return img 画像パス
     */
-   public String getImgAddress001() {
-	   return imgAddress001;
+   public String getImg() {
+	   return img;
    }
 
    /**
     * 画像パスを格納するメソッド
-    * @param imgAdsetImgAddress001dress001 画像パス
+    * @param img 画像パス
     */
-   public void setImgAddress001(String imgAddress) {
-	   this.imgAddress001 = imgAddress;
+   public void setImg(String img) {
+	   this.img = img;
    }
 
     /**
      * 登録日を取得するメソッド
-     * @return registrationDate 登録日
+     * @return registration_date 登録日
      */
     public String getRegistrationDate() {
-        return registrationDate;
+        return registration_date;
         }
 
     /**
      * 登録日を格納するメソッド
      * @param registrationDate 登録日
      */
-    public void setRegistrationDate(String registrationDate) {
-        this.registrationDate = registrationDate;
+    public void setRegistrationDate(String registration_date) {
+        this.registration_date = registration_date;
         }
 
     /**
      * 更新日を取得するメソッド
-     * @return updatedDate 更新日
+     * @return updated_date 更新日
      */
     public String getUpdatedDate() {
-        return updatedDate;
+        return updated_date;
         }
 
     /**
      * 更新日を格納するメソッド
-     * @param updatedDate 更新日
+     * @param updated_date 更新日
      */
-    public void setUpdatedDate(String updatedDate) {
-        this.updatedDate = updatedDate;
+    public void setUpdatedDate(String updated_date) {
+        this.updated_date = updated_date;
         }
 
     /**
@@ -335,18 +335,18 @@ public class CartDTO {
 
     /**
      * 小計を取得するメソッド
-     * @return subTotal 小計
+     * @return sub_total 小計
      */
     public int getSubTotal() {
-        return subTotal;
+        return sub_total;
         }
 
     /**
      * 小計を格納するメソッド
-     * @param subTotal 小計
+     * @param sub_total 小計
      */
-    public void setSubTotal(int subTotal) {
-        this.subTotal = subTotal;
+    public void setSubTotal(int sub_total) {
+        this.sub_total = sub_total;
         }
 
 }
