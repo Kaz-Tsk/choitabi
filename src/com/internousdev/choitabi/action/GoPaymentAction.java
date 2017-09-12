@@ -86,7 +86,7 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
             cartList = dao.selected(userId);
 
             for(int i = 0; i < cartList.size(); i++ ){
-                amount += (cartList.get(i).getPrice())*(cartList.get(i).getOrderCount());
+                amount += (cartList.get(i).getPrice())*(cartList.get(i).getQuantity());
                 }
 
             result = SUCCESS;

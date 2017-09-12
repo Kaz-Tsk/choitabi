@@ -20,21 +20,21 @@ import com.internousdev.util.DBConnector;
  */
 
 public class InsertCartDAO {
-	public ArrayList<SelectCartDTO> tourStatus(int tour_id) {
+	public ArrayList<SelectCartDTO> tourStatus(int tourId) {
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<SelectCartDTO> tourStatus = new ArrayList<SelectCartDTO>();
 
-		String sql = "select * from tour where tour_id=?";
+		String sql = "select * from tours where tourId=?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, tour_id);
+			ps.setInt(1, tourId);
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()) {
 				SelectCartDTO scDto = new SelectCartDTO();
-				scDto.setTourName(rs.getString("tour_name"));
+				scDto.setTourName(rs.getString("tourName"));
 				scDto.setPrice(rs.getInt("price"));
 
 				tourStatus.add(scDto);
@@ -55,18 +55,18 @@ public class InsertCartDAO {
 		return tourStatus;
 	}
 
-	public int addToCart(int user_id, int tour_id, int order_count) {
+	public int addToCart(int userId, int tourId, int quantity) {
 		int addCount = 0;
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
-		String sql = "insert into cart (user_id, tour_id, order_count) values(?, ?, ?)";
+		String sql = "insert into cart (userId, tourId, quantity) values(?, ?, ?)";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, user_id);
-			ps.setInt(2, tour_id);
-			ps.setInt(3, order_count);
+			ps.setInt(1, userId);
+			ps.setInt(2, tourId);
+			ps.setInt(3, quantity);
 			addCount = ps.executeUpdate();
 
 		}catch(SQLException e) {
@@ -89,33 +89,33 @@ public class InsertCartDAO {
 
 
 	/**
-	 * ツアー詳細からカートに遷移
-	 * @param user_id ユーザーID
+	 * 商品詳細からカートに遷移
+	 * @param userId ユーザーID
 	 * @return cartList カート情報
 	 * @author HINAKO HAGIWARA
 	 * @since 2017/09/06
 	 * @version 1.0
 	 */
 
-	public ArrayList<CartDTO> selected(int user_id) {
+	public ArrayList<CartDTO> selected(int userId) {
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
-		String sql = "select * from cart where user_id=?";
-		String select2 = "SELECT * FROM tour WHERE tour_id=?";
+		String sql = "select * from cart where userId=?";
+		String select2 = "SELECT * FROM tours WHERE tourId=?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1,  user_id);
+			ps.setInt(1,  userId);
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()) {
 				CartDTO dto = new CartDTO();
-				dto.setUserId(rs.getInt("user_id"));
-				dto.setTourId(rs.getInt("tour_id"));
-				dto.setOrderCount(rs.getInt("order_count"));
-				dto.setCartId(rs.getInt("cart_id"));
+				dto.setUserId(rs.getInt("userId"));
+				dto.setTourId(rs.getInt("tourId"));
+				dto.setQuantity(rs.getInt("quantity"));
+				dto.setCartId(rs.getInt("cartId"));
 
 				cartList.add(dto);
 
@@ -124,9 +124,9 @@ public class InsertCartDAO {
 				ResultSet rs2 = ps2.executeQuery();
 
 				while(rs2.next()) {
-					dto.setTourName(rs2.getString("tour_name"));
+					dto.setTourName(rs2.getString("tourName"));
 					dto.setPrice(rs2.getInt("price"));
-					dto.setSubTotal(dto.getPrice() * dto.getOrderCount());
+					dto.setSubTotal(dto.getPrice() * dto.getQuantity());
 					}
 			}
 		}catch(SQLException e) {

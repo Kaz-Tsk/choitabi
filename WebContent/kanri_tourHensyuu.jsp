@@ -58,8 +58,7 @@
    </tr>
       <tr>
    		<th>画像URL</th><td><s:property value="currentImg"/></td>
-   		<td><input type="text" name="editImg" value=<s:property value = "currentImg"/>>
-   		    <br><font size="2px">※空欄にした場合は仮の画像が入ります</font></td>
+   		<td><input type="file" name="editImg" value = <s:property value = "currentImg"/>></input></td>
    </tr>
 </table>
 <hr>

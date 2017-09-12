@@ -34,7 +34,7 @@ public class LoginDAO {
 		Connection con = db.getConnection();
 		UsersDTO dto = new UsersDTO();
 		String sql = "SELECT phone_email,password,user_id,login_flg,user_flg"
-							+" FORM users WHERE phone_email = ? and password = ?";
+							+" FROM users WHERE phone_email = ? and password = ?";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);

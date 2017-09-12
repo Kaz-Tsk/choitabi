@@ -30,7 +30,7 @@
 			<input type="password"  name="password" required="required" placeholder="password">
 		</div>
 		<div class="submit">
-			<input type="submit"  value="login" >
+			<button type="submit" >LOGIN</button>
 		</div>
 		</s:form>
 	</div>

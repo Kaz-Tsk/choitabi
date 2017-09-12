@@ -25,10 +25,9 @@ public class MypageDAO {
 
 	/**
 	 *	@param userId
-	 *@return UserInfo
-	 *@throws SQLException 例外処理
+	 *@return UserList
 	 */
-	public List<MypageDTO> select(int userId) throws SQLException{
+	public ArrayList<MypageDTO> select(int userId) throws SQLException{
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection usercon = db.getConnection();
@@ -52,7 +51,7 @@ public class MypageDAO {
 	}catch(SQLException e){
 		e.printStackTrace();
 		}
-		return UserInfo;
+		return userList;
 	}
 	/**
 	 * 購入履歴リスト

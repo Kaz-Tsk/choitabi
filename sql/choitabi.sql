@@ -16,20 +16,6 @@ CREATE TABLE  tour  (
 	PRIMARY KEY (tour_id)
 );
 
-
-create table cart(
-cart_Id int not null primary key auto_increment,
-user_Id int not null,
-item_Id int not null,
-order_count int not null default 1,
-size varchar(50) not null default 'm',
-registration_date timestamp not null default current_timestamp,
-updated_date timestamp not null default current_timestamp,
-is_deleted boolean default false,/*商品選択削除*/
-foreign key(userId) references openconnect.users(user_id) on delete cascade
-);
-
-
 insert into tour(tour_id,tour_name,price,persons,departure,region,prefectures,theme,comment,img)
 VALUES
 (1,'なみえ焼きそば',1800,0,'福島駅','東北','福島県','グルメ','安い食材でおいしく、お腹いっぱいになれるようにと約５０年前に考えられた浪江町民のソウルフードです。','img/namieyakizoba.jpg'),

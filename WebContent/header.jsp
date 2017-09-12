@@ -29,7 +29,7 @@
 
 	<!-- 管理者ログイン時ヘッダー  -->
 		<s:elseif test="#session.userFlg.3">
-			    <div class="logo"><a href="<s:url action="index.jsp"/>"><span
+			    <div class="logo"><a href="<s:url action=""/>"><span
 					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 		<div class="navi">
 			<div class="navibox"><a href="kanri_tourList.jsp" class="underline">ツアー管理</a></div>
@@ -41,7 +41,7 @@
 
 	<!-- 未ログイン時ヘッダー -->
 	<s:else>
-	    <div class="logo"><a href="index.jsp"><span
+	    <div class="logo"><a href="<s:url action="index.jsp"/>"><span
 					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 		<div class="logout-name"></div>
 		<div class="navi">

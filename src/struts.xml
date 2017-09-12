@@ -46,12 +46,9 @@
 	</action>
 	<action name="ConfirmTourInsertingAction" class="com.internousdev.choitabi.action.ConfirmTourInsertingAction" method="execute">
 		<result name="success">kanri_tourTsuikaKakunin.jsp</result>
-		<result name="error">kanri_tourTsuika.jsp</result>
+		<result name="error">kanri_tourTsuikaKakunin.jsp</result>
 	</action>
-	<action name="InsertTourAction" class="com.internousdev.choitabi.action.InsertTourAction" method="execute">
-		<result name="success" type="chain">IndicateTourListAction</result>
-		<result name="error" type="chain">IndicateTourListAction</result>
-	</action>
+
 
 
 	<!-- 管理　受注情報を検索表示するアクション-->
@@ -71,7 +68,8 @@
 
 	<!-- ログアウト画面 -->
 	<action name="LogoutAction" class="com.internousdev.choitabi.action.LogoutAction" method="execute">
-	<result name="success" type="chain">MainTopAction</result>
+	<result name="success" >index.jsp</result>
+	<result name="error">login.jsp</result>
 	</action>
 
 <!-- マイページ遷移 -->

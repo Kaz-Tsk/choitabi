@@ -23,49 +23,49 @@
 <!-- 商品一覧-------------------------------------------------- -->
         <div class="main">
             <div class="sub">
-                <a href="InsertCartAction"><img src="img/mogamigawarafting.jpg"></a>
+                <input type= "image" src = "img/mogamigawarafting.jpg">
                 <div class="name">最上川ラフティング半日コース<br>(東北/山形県県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;7000</span></div>
             </div>
 
             <div class="sub">
-                <a href="InsertCartAction"><img src="img/paraglider_tandem_flight.jpg"></a>
+                <input type= "image" src = "img/paraglider_tandem_flight.jpg">
                 <div class="name">パラグライダータンデムフライト体験<br>(東北/宮城県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;7000</span></div>
             </div>
 
             <div class="sub">
-                <a href="InsertCartAction"><img src="img/mobarashi_twin_circuit.jpg"></a>
+                <input type= "image" src = "img/mobarashi_twin_circuit.jpg">
                 <div class="name">茂原ツインサーキット<br>(関東/千葉県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;2500</span></div>
             </div>
 
             <div class="sub">
-                <a href="InsertCartAction"><img src="img/sarugakyou_bungee.jpg"></a>
+                <input type= "image" src = "img/sarugakyou_bungee.jpg">
                 <div class="name">猿ヶ京バンジー<br>(関東/群馬県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;11000</span></div>
             </div>
 
             <div class="sub">
-                <a href="InsertCartAction"><img src="img/awazisima-parasailing.jpg"></a>
+                <input type= "image" src = "img/awazisima-parasailing.jpg">
                 <div class="name">淡路島パラセーリング<br>(関西/兵庫県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;6000</span></div>
             </div>
 
             <div class="sub">
-                <a href="InsertCartAction"><img src="img/hikoneshikouzinyama_hang_gliding.jpg"></a>
+                <input type= "image" src = "img/hikoneshikouzinyama_hang_gliding.jpg">
                 <div class="name">彦根荒神山ハングライダー体験<br>(関西/滋賀県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;7000</span></div>
             </div>
 
             <div class="sub">
-                 <a href="InsertCartAction"><img src="img/iruka_watching_tour.jpg"></a>
+                 <input type= "image" src = "img/iruka_watching_tour.jpg">
                 <div class="name">イルカウォッチングツアー<br>(九州/熊本県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;2250</span></div>
             </div>
 
             <div class="sub">
-                 <a href="InsertCartAction"><img src="img/aroma_botanical_candle.jpg"></a>
+                <input type= "image" src = "img/aroma_botanical_candle.jpg">
                 <div class="name">アロマ＆ボタニカルキャンドル<br>(九州/福岡県)</div>
                 <div class="price">価格:<span class= "price_num">&yen;3500</span></div>
             </div>

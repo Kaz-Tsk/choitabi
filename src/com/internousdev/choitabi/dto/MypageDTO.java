@@ -42,20 +42,6 @@ public class MypageDTO {
 	 */
 	private String mailAddress;
 
-	/**
-	 * ツアーID
-	 */
-	private int tourId;
-
-	/**
-	 * ツアー名
-	 */
-	private String  tourName;
-
-	/**
-	 *
-	 */
-
 
 	/**
 	 * userIdを取得するメソッド
@@ -165,37 +151,5 @@ public class MypageDTO {
 	 */
 	public void setMailAddress(String mailAddress){
 		this.mailAddress = mailAddress;
-	}
-
-	/**
-	 * ツアーIDを取得するメソッド
-	 * @return tourID
-	 */
-	public int getTourId(){
-		return tourId;
-	}
-
-	/**
-	 * ツアーIDを格納するメソッド
-	 * @param
-	 */
-	public void setTourId(int tourId){
-		this.tourId = tourId;
-	}
-
-	/**
-	 * ツアー名を取得するメソッド
-	 * @return tourName
-	 */
-	public String getTourName(){
-		return tourName;
-	}
-
-	/**
-	 * ツアー名を格納するメソッド
-	 * @param tourName
-	 */
-	public void setTourName(String tourName){
-		this.tourName = tourName;
 	}
 }

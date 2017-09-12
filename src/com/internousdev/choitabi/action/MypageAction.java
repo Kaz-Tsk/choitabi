@@ -1,8 +1,6 @@
 package com.internousdev.choitabi.action;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -21,19 +19,19 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MypageAction extends ActionSupport implements SessionAware {
 
 	/**
-	 *
+	 *シリアルバージョン
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * ユーザーリスト
+	 * session情報
 	 */
-	private List<MypageDTO> UserInfo = new ArrayList<MypageDTO>();
+	private Map<String,Object> session;
 
 	/**
-	 * 購入履歴リスト
+	 * ユーザーリスト
 	 */
-	private List<MypageDTO> PayOffHistoryList = new ArrayList<MypageDTO>();
+	private ArrayList<MypageDTO> User = new ArrayList<MypageDTO>();
 
 	/**
 	 * ユーザーID
@@ -41,149 +39,70 @@ public class MypageAction extends ActionSupport implements SessionAware {
 	private int userId;
 
 	/**
-	 * セッション情報
+	 * ユーザー情報を表示するための実行メソッド
+	 * @author KAZUYUKI TASAKI
+	 * @return ユーザー情報取得でSUCCESS 失敗でERROR
 	 */
-	private Map<String,Object> session;
+	public String execute(){
+		if(session.get("userId")==null){
+			return ERROR;
+		}
 
-	/**
-	 * ユーザー結果
-	 */
-	private String userResult;
-
-	/**
-	 * 購入結果
-	 */
-	private String payOffResult;
-
-	/**
-	 * 実行メソッド
-	 * DAOに入力された内容を渡して結果を返すためのメソッド
-	 * @return result 該当する情報があればSUCCESS なければERROR
-	 */
-	public String execute() throws SQLException{
-		String result = ERROR;
+		/**
+		 * sessionからユーザーIDを取得
+		 */
 		userId = (int)session.get("userId");
-		MypageDAO userdao = new MypageDAO();
-		UserInfo = userdao.select(userId);
+		MypageDAO mypagedao = new MypageDAO();
 
-		if(UserInfo.size()!=0){
-			userResult = "done";
+		User = mypagedao.select(userId);
+
+		if(User.size()==0){
+
+			return ERROR;
+		}else{
+			return SUCCESS;
 		}
-
-		MypageDAO payoffdao = new MypageDAO();
-		PayOffHistoryList = payoffdao.PayOffHistoryListselect(userId);
-
-		if(PayOffHistoryList.size()!=0){
-			payOffResult = "done";
-		}
-
-		if(userResult.equals("done") || payOffResult.equals("done")){
-			result = SUCCESS;
-		}
-		return result;
 	}
 
-		/**
-		 * ユーザーリストを取得するメソッド
-		 * @return UserInfo
-		 */
-		public List<MypageDTO>getUserInfo(){
-			return UserInfo;
-		}
+	/**
+	 * sessionを取得
+	 */
+	public Map<String,Object> getSession(){
+		return session;
+	}
 
-		/**
-		 * ユーザーリストを格納するメソッド
-		 * @param UserInfo
-		 */
-		public void setUserInfo(List<MypageDTO> userInfo){
-			UserInfo = userInfo;
-		}
+	/**
+	 * sessionを格納
+	 */
+	public void setSession(Map<String,Object> session){
+		this.session = session;
+	}
 
-		/**
-		 * 購入履歴リストを取得するメソッド
-		 * @return PayOffHistoryList
-		 */
-		public List<MypageDTO>getPayOffHistory(){
-			return PayOffHistoryList;
-		}
-		/**
-		 * 購入履歴リストを格納するメソッド
-		 * @param PayOffHistoryList
-		 */
-		public void setPayOffHistoryList(List<MypageDTO> payOffHistoryList){
-				PayOffHistoryList = payOffHistoryList;
-		}
+	/**
+	 * ユーザーリストを取得
+	 */
+	public ArrayList<MypageDTO>getUser(){
+		return User;
+	}
 
-		/**
-		 * ユーザーIDを取得するメソッド
-		 * @return userId
-		 */
-		 public int getUserId(){
-			 return userId;
-		 }
+	/**
+	 * ユーザーリストを格納
+	 */
+	public void setUserList(ArrayList<MypageDTO> userList){
+		User = userList;
+	}
 
-		 /**
-		  * ユーザーIDを格納するメソッド
-		  * @param userId
-		  */
-		 public void setUserId(int userId){
-			 this.userId = userId;
-		 }
+	/**
+	 * ユーザーIDを取得
+	 */
+	public int getUserId(){
+		return userId;
+	}
 
-		 /**
-		  * セッションを取得するメソッド
-		  * @return session
-		  */
-		 public Map<String,Object> getSession(){
-			 return session;
-		 }
-
-		 /**
-		  * セッションを格納するメソッド
-		  * @param session
-		  */
-		 public void SetSession(Map<String,Object> session){
-			 	this.session = session;
-		 }
-
-		 /**
-		  * ユーザー結果を取得するメソッド
-		  * @return userResult
-		  */
-		 public String getUserResult(){
-			 return userResult;
-		 }
-
-		 /**
-		  * ユーザー結果を格納するメソッド
-		  * @param userResult
-		  */
-		 public void setUserResult(String userResult){
-			 this.userResult = userResult;
-		 }
-
-		 /**
-		  * 購入結果を取得するメソッド
-		  * @return payOffResult
-		  */
-		 public String getPayOffResult(){
-			 return payOffResult;
-		 }
-		 /**
-		  * 購入結果を格納するメソッド
-		  * @return payOffResult
-		  */
-		 public void setPayOffResult(String payOffResult){
-			 this.payOffResult = payOffResult;
-		 }
-
-		@Override
-		public void setSession(Map<String, Object> arg0) {
-			// TODO 自動生成されたメソッド・スタブ
-
-		}
-
-
-
-
+	/**
+	 * ユーザーIDを格納
+	 */
+	public void setUserId(int userId){
+		this.userId = userId;
+	}
 }

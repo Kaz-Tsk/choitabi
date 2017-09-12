@@ -6,11 +6,11 @@ import com.internousdev.choitabi.dto.KanriContactDTO;
 
 /**
  * ページネーションが必要なリストのために、1ページごとの情報を保持するためのクラス
- * @author kanako miyazono
- * @since 2017/09/11
+ * @author RYUTO TASHIRO
+ * @since 2017/08/22
  * @version 1.1
  */
-public class KanriContactPagenation2 {
+public class PageContact {
 
 	/**
 	 * ページを識別するID
@@ -22,12 +22,12 @@ public class KanriContactPagenation2 {
 	/**
 	 * 当該1ページに掲載される商品のリスト
 	 */
-	public ArrayList<KanriContactDTO> paginatedItemList = new ArrayList<KanriContactDTO>();
+	private ArrayList<KanriContactDTO> paginatedItemList = new ArrayList<KanriContactDTO>();
 
 	/**
 	 * ページネートされた商品リストを取得するメソッド
-	 * @author kanako miyazono
-	 * @since 2017/09/11
+	 * @author RYUTO TASHIRO
+	 * @since 2017/08/22
 	 * @return paginatedItemList ページネートされた商品リスト
 	 */
 	public ArrayList<KanriContactDTO> getPaginatedList() {
@@ -54,8 +54,8 @@ public class KanriContactPagenation2 {
 
 	/**
 	 * ページIDを取得するメソッド
-	 * @author kanako miyazono
-	 * @since 2017/09/11
+	 * @author RYUTO TASHIRO
+	 * @since 2017/08/22
 	 * @return pageId ページID
 	 */
 	public int getPageId() {
@@ -72,8 +72,8 @@ public class KanriContactPagenation2 {
 
 	/**
 	 * ページネートされた商品リストを取得するメソッド
-	 * @author kanako miyazono
-	 * @since 2017/09/11
+	 * @author RYUTO TASHIRO
+	 * @since 2017/08/22
 	 * @return paginatedItemList ページネートされた商品リスト
 	 */
 	public ArrayList<KanriContactDTO> getPaginatedItemList() {
@@ -87,7 +87,4 @@ public class KanriContactPagenation2 {
 	public void setPaginatedItemList(ArrayList<KanriContactDTO> paginatedItemList) {
 		this.paginatedItemList = paginatedItemList;
 	}
-
-
-	}
-
+}

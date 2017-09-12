@@ -29,17 +29,17 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * ユーザーID
 	 */
-	private int user_id;
+	private int userId;
 
 	/**
 	 * ツアーID
 	 */
-	private int tour_id;
+	private int tourId;
 
 	/**
 	 * ツアー名
 	 */
-	private String tour_name;
+	private String tourName;
 
 	/**
 	 * 価格
@@ -47,14 +47,14 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	private int price;
 
 	/**
-	 * 予約人数
+	 * 購入数
 	 */
-	private int order_count;
+	private int quantity;
 
 	/**
 	 * 合計金額
 	 */
-	private int total_price;
+	private int totalPrice;
 
 	/**
 	 * カート情報
@@ -69,14 +69,14 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 小計
 	 */
-	private int sub_total;
+	private int subTotal;
 
 
 
 	/**
 	 * 実行メソッド
 	 * 1：セッション情報を持っているか判断
-	 * 2：session内のuser_idを使用し、カートへ登録された情報を取得
+	 * 2：session内のuserIdを使用し、カートへ登録された情報を取得
 	 * 3：カート内の情報を元に合計金額を算出
 	 *
 	 * @author HINAKO HAGIWARA
@@ -88,13 +88,13 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	public String execute() throws SQLException {
 		String result = ERROR;
 
-		if (session.containsKey("user_id")) {
-			user_id = (int)session.get("user_id");
+		if (session.containsKey("userId")) {
+			userId = (int)session.get("userId");
 			SelectCartDAO scDao = new SelectCartDAO();
-			cartList = scDao.selectCart(user_id);
+			cartList = scDao.selectCart(userId);
 
 			for(int i = 0; i <cartList.size(); i++) {
-				total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrderCount());
+				totalPrice += (cartList.get(i).getPrice()) * (cartList.get(i).getQuantity());
 			}
 
 			result = SUCCESS;
@@ -107,50 +107,50 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * ユーザーIDを取得するメソッド
-	 * @return user_id ユーザーID
+	 * @return userId ユーザーID
 	 */
 	public int getUserId() {
-		return user_id;
+		return userId;
 	}
 
 	/**
 	 * ユーザーIDを格納するメソッド
-	 * @param user_id   ユーザーID
+	 * @param userId   ユーザーID
 	 */
-	public void setUserId(int user_id) {
-		this.user_id = user_id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	/**
 	 * ツアーIDを取得するメソッド
-	 * @return tour_id ツアーID
+	 * @return tourId ツアーID
 	 */
 	public int getTourId() {
-		return tour_id;
+		return tourId;
 	}
 
 	/**
 	 * ツアーIDを格納するメソッド
-	 * @param tour_id ツアーID
+	 * @param tourId ツアーID
 	 */
-	public void setTourId(int tour_id) {
-		this.tour_id = tour_id;
+	public void setTourId(int tourId) {
+		this.tourId = tourId;
 	}
 
 	/**
 	 * ツアー名を取得するメソッド
-	 * @return tour_name ツアー名
+	 * @return tourName ツアー名
 	 */
 	public String getTourName() {
-		return tour_name;
+		return tourName;
 	}
 
 	/**
 	 * ツアー名を格納するメソッド
-	 * @param tour_name ツアー名
+	 * @param tourName ツアー名
 	 */
-	public void setTourName(String tour_name) {
-		this.tour_name = tour_name;
+	public void setTourName(String tourName) {
+		this.tourName = tourName;
 	}
 
 	/**
@@ -171,18 +171,18 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 合計金額を取得するメソッド
-	 * @return total_price 合計金額
+	 * @return totalPrice 合計金額
 	 */
 	public int getTotalPrice() {
-		return total_price;
+		return totalPrice;
 	}
 
 	/**
 	 * 合計金額を格納するメソッド
-	 * @oaram total_price 合計金額
+	 * @oaram totalPrice 合計金額
 	 */
-	public void setTotalPrice(int total_price) {
-		this.total_price = total_price;
+	public void setTotalPrice(int totalPrice) {
+		this.totalPrice = totalPrice;
 	}
 
 	/**
@@ -218,35 +218,35 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * 予約人数を取得するメソッド
-	 * @return order_count 予約人数
+	 * 購入数を取得するメソッド
+	 * @return quantity 購入数
 	 */
-	public int getOrderCount() {
-		return order_count;
+	public int getQuantity() {
+		return quantity;
 	}
 
 	/**
-	 * 予約人数を格納するメソッド
-	 * @param order_count 予約人数
+	 * 購入数を格納するメソッド
+	 * @param quantity 購入数
 	 */
-	public void setOrderCount(int order_count) {
-		this.order_count = order_count;
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	/**
 	 * 小計を取得するメソッド
-	 * @return sub_total 小計
+	 * @return subTotal 小計
 	 */
 	public int getSubTotal() {
-		return sub_total;
+		return subTotal;
 	}
 
 	/**
 	 * 小計を格納するメソッド
-	 * @param sub_total 小計
+	 * @param subTotal 小計
 	 */
-	public void setSubTotal(int sub_total) {
-		this.sub_total = sub_total;
+	public void setSubTotal(int subTotal) {
+		this.subTotal = subTotal;
 	}
 
 }

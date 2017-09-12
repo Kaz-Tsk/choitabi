@@ -12,14 +12,14 @@ package com.internousdev.choitabi.dto;
 public class SelectCartDTO {
 
 	    /**
-	     * ツアーID
+	     * 商品ID
 	     */
-	    private int tour_id;
+	    private int tourId;
 
 	    /**
-	     * ツアー名
+	     * 商品名
 	     */
-	    private String tour_name;
+	    private String tourName;
 
 	    /**
 	     * 価格
@@ -27,47 +27,47 @@ public class SelectCartDTO {
 	    private int price;
 
 	    /**
-	     * 予約人数
+	     * 注文数
 	     */
-	    private int order_count;
+	    private int quantity;
 
 	    /**
 	     * 画像パス
 	     */
-	    private String img;
+	    private String imgAddress001;
 
 
 
 	    /**
 	     * ツアーIDを取得するメソッド
-	     * @return tour_id ツアーID
+	     * @return tourId ツアーID
 	     */
 	    public int getTourId(){
-	        return tour_id;
+	        return tourId;
 	    }
 
 	    /**
 	     * ツアーIDを格納するメソッド
-	     * @param tour_id ツアーID
+	     * @param tourId ツアーID
 	     */
-	    public void setTourId(int tour_id){
-	        this.tour_id = tour_id;
+	    public void setTourId(int tourId){
+	        this.tourId = tourId;
 	    }
 
 	    /**
 	     * ツアー名を取得するメソッド
-	     * @return tour_name ツアー名
+	     * @return tourName ツアー名
 	     */
 	    public String getTourName(){
-	        return tour_name;
+	        return tourName;
 	    }
 
 	    /**
 	     * ツアー名を格納するメソッド
-	     * @param tour_name ツアー名
+	     * @param tourName ツアー名
 	     */
-	    public void setTourName(String tour_name){
-	        this.tour_name = tour_name;
+	    public void setTourName(String tourName){
+	        this.tourName = tourName;
 	    }
 
 	    /**
@@ -87,35 +87,35 @@ public class SelectCartDTO {
 	    }
 
 	    /**
-	     * 予約人数を取得するメソッド
-	     * @return order_count 予約人数
+	     * 購入数を取得するメソッド
+	     * @return quantity 購入数
 	     */
-	    public int getOrderCount() {
-	        return order_count;
+	    public int getQuantity() {
+	        return quantity;
 	    }
 
 	    /**
-	     * 予約人数を格納するメソッド
-	     * @param order_count 予約人数
+	     * 購入数を格納するメソッド
+	     * @param quantity 購入数
 	     */
-	    public void setOrdercount(int order_count) {
-	        this.order_count = order_count;
+	    public void setQuantity(int quantity) {
+	        this.quantity = quantity;
 	    }
 
 	    /**
-	     * 画像パスを取得するメソッド
-	     * @return img 画像パス
+	     * ツアーIDを取得するメソッド
+	     * @return tourId ツアーID
 	     */
-	    public String getImg(){
-	        return img;
+	    public String getImgAddress001(){
+	        return imgAddress001;
 	    }
 
 	    /**
-	     * 画像パスを格納するメソッド
-	     * @param img 画像パス
+	     * ツアーIDを格納するメソッド
+	     * @param tourId ツアーID
 	     */
-	    public void setImg(String img){
-	        this.img = img;
+	    public void setImgAddress001(String imgAddress001){
+	        this.imgAddress001 = imgAddress001;
 	    }
 
 	}

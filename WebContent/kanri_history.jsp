@@ -34,7 +34,7 @@
 		<div class="toursearch">
 			<s:form action="KanriHistoryAction" method="post">
 				<p>
-					<s:text name="lang.kanri_history.tour_name"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="tour_name">
+					<s:text name="lang.kanri_history.tourName"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="tourName">
 					<input type="submit" id="submit" value="&#xf002; <s:text name="lang.kanri_history.search"/>">
 				</p>
 			</s:form>
@@ -44,22 +44,22 @@
 			<table>
 				<tr>
 					<th class="notwide"><s:text name="lang.kanri_history.userID"/></th>
-					<th><s:text name="lang.kanri_history.user_name"/></th>
+					<th><s:text name="lang.kanri_history.userName"/></th>
 					<th class="notwide"><s:text name="lang.kanri_history.tourID"/></th>
-					<th><s:text name="lang.kanri_history.tour_name"/></th>
-					<th class="notwide"><s:text name="lang.kanri_history.order_count"/></th>
-					<th><s:text name="lang.kanri_history.total_price"/></th>
-					<th><s:text name="lang.kanri_history.registration_date"/></th>
+					<th><s:text name="lang.kanri_history.tourName"/></th>
+					<th class="notwide"><s:text name="lang.kanri_history.quantity"/></th>
+					<th><s:text name="lang.kanri_history.totalPrice"/></th>
+					<th><s:text name="lang.kanri_history.registrationDate"/></th>
 				</tr>
 				<s:iterator value="displayList">
 					<tr>
-						<td class="notwide"><s:property value="user_id"/></td>
-						<td><s:property value="family_name_kanji"/>&nbsp;<s:property value="given_name_kanji"/></td>
-						<td class="notwide"><s:property value="tour_id"/></td>
-						<td><s:property value="tour_name"/></td>
-						<td class="notwide"><s:property value="order_count"/></td>
-						<td><fmt:formatNumber value="${total_price}" pattern="###,###,###" /></td>
-						<td><fmt:formatDate value="${registration_date}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+						<td class="notwide"><s:property value="userId"/></td>
+						<td><s:property value="familyNameKanji"/>&nbsp;<s:property value="givenNameKanji"/></td>
+						<td class="notwide"><s:property value="tourId"/></td>
+						<td><s:property value="tourName"/></td>
+						<td class="notwide"><s:property value="quantity"/></td>
+						<td><fmt:formatNumber value="${totalPrice}" pattern="###,###,###" /></td>
+						<td><fmt:formatDate value="${registrationDate}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 					</tr>
 				</s:iterator>
 			</table>

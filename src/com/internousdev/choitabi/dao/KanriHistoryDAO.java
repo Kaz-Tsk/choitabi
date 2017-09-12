@@ -12,7 +12,7 @@ import com.internousdev.util.DBConnector;
 
 
 /**
- * 管理者画面で予約情報を取得するクラス
+ * 管理者画面で受注情報を取得するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/07
  * @version 1.1
@@ -20,16 +20,16 @@ import com.internousdev.util.DBConnector;
 
 public class KanriHistoryDAO {
 		/**
-	     * 予約情報をDBから検索するメソッド
-	     * @param user_id ユーザーID
-	     * @param family_name_kanji 姓
-	     * @param family_name_kanji 名
-	     * @param tour_id ツアーID
-	     * @param trou_name ツアー名
-	     * @param order_count 予約人数
-	     * @param total_price 合計金額
+	     * 受注情報をDBから検索するメソッド
+	     * @param userId ユーザーID
+	     * @param familyNameKanji 姓
+	     * @param familyNameKanji 名
+	     * @param tourId ツアーID
+	     * @param trouName ツアー名
+	     * @param quantity 販売数
+	     * @param totalPrice 合計金額
 	     * @param paymentMethod 支払い方法
-	     * @param registration_date 登録日
+	     * @param registrationDate 登録日
 	     */
 
 	    ArrayList<CartDTO> searchList=new ArrayList<CartDTO>();
@@ -38,14 +38,14 @@ public class KanriHistoryDAO {
 
 			DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 			Connection con = db.getConnection();
-	        String sql = "select openconnect.users.user_id, openconnect.users.family_name_kanji,"
-	        		+ "openconnect.users.given_name_kanji, choitabi.payoff.tour_id, choitabi.tour.tour_name,"
-	        		+ "choitabi.payoff.order_count, choitabi.tour.price, choitabi.payoff.registration_date"
-	        		+ " from (openconnect.users inner join choitabi.payoff on openconnect.users.user_id = choitabi.payoff.user_id) "
-	        		+ "inner join choitabi.tour on choitabi.payoff.tour_id = choitabi.tour.tour_id";
+	        String sql = "select openconnect.users.userId, openconnect.users.familyNameKanji,"
+	        		+ "openconnect.users.givenNameKanji, choitabi.payoff.tourId, choitabi.tours.tourName,"
+	        		+ "choitabi.payoff.quantity, choitabi.tours.price, choitabi.payoff.registrationDate"
+	        		+ " from (openconnect.users inner join choitabi.payoff on openconnect.users.userId = choitabi.payoff.userId) "
+	        		+ "inner join choitabi.tours on choitabi.payoff.tourId = choitabi.tours.tourId";
 
 	        if (!searchName.equals("")) {
-	            sql = sql + " " + "where choitabi.tour.tour_name like \"%" + searchName + "%\"";
+	            sql = sql + " " + "where choitabi.tours.tourName like \"%" + searchName + "%\"";
 	            }
 
 	        try{
@@ -54,14 +54,14 @@ public class KanriHistoryDAO {
 
 	            while (rs.next()) {
 	                CartDTO dto= new CartDTO();
-	                dto.setUserId(rs.getInt("user_id"));
-	                dto.setFamilyNameKanji(rs.getString("family_name_kanji"));
-	                dto.setGivenNameKanji(rs.getString("given_name_kanji"));
-	                dto.setTourId(rs.getInt("tour_id"));
-	                dto.setTourName(rs.getString("tour_name"));
-	                dto.setOrderCount(rs.getInt("order_count"));
-	                dto.setTotalPrice(rs.getInt("price")*rs.getInt("total_price"));
-	                dto.setRegistrationDate(rs.getString("registration_date"));
+	                dto.setUserId(rs.getInt("userId"));
+	                dto.setFamilyNameKanji(rs.getString("familyNameKanji"));
+	                dto.setGivenNameKanji(rs.getString("givenNameKanji"));
+	                dto.setTourId(rs.getInt("tourId"));
+	                dto.setTourName(rs.getString("tourName"));
+	                dto.setQuantity(rs.getInt("quantity"));
+	                dto.setTotalPrice(rs.getInt("price")*rs.getInt("totalPrice"));
+	                dto.setRegistrationDate(rs.getString("registrationDate"));
 	                searchList.add(dto);
 	                }
 
