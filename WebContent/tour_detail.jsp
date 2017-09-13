@@ -53,31 +53,75 @@
 
 <!-- ここまで -->
 
-<section class="contents">
+	<div class="contents">
 
-<s:iterator value="tourList">
-<section class="container">
-<div class="detail">
-	<div class="photoarea">
-		<div class="photo01" style="background-image:url(<s:property value='img' />);"></div>
+		<s:form action="InsertCartAction">
+			<s:iterator value="displayList">
+
+				<div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div id="left_content">
+						<p class="tour_name">
+							<s:property value="tour_name" />
+						</p>
+						<img src="<s:property value= "img"/>" class= "img-responsive center-block">
+
+						<p class="price">
+							￥
+							<fmt:formatNumber value="${price}" pattern="###,###,###" />
+							<span class="tax"><s:text name="lang.itemdetail.tax"></s:text></span>
+						</p>
+					</div>
+					</div>
+
+                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div id="right-content">
+
+						<div id="item_infomation">
+
+							<p class="item_detail">
+								<s:text name="lang.itemdetail.item_detail" />
+								<!--  国際化対応の”商品詳細”入れ込み -->
+							</p>
+							<div class="item_comment" >
+								<s:property escape="false" value="comment" />
+							</div>
+						</div>
+
+
+							<div class="shopping-cart">
+
+						<input type="hidden" name="tour_id"
+							value="<s:property value="tour_id"/>" />
+
+						<s:text name="lang.itemdetail.quantities" />
+						<select name="persons">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+						</select> <input type="submit" class="btn btn-warning"
+							value="<s:text name= "lang.itemdetail.gocart"/>" />
+
+					</div>
+
+
+               </div>
+	     </div>
 	</div>
 
-	<div class="textarea">
-		<h2><s:property value="tour_name" /></h2>
-		<div class="price">￥<script type="text/javascript">decimal_floor(<s:property value="price" />);</script></div>
-		<p>
-		<s:property value="comment" />
-		</p>
-		<br>
-		<span class="back"><a href="TourListAction" class="backlink"><s:text name="lang.itemdetail.backbutton"/></a></span>
-			<span class="cart">
-			<a href = "<s:url action='InsertCartAction'><s:param name='tour_id' value='%{tour_id}'/></s:url>" class="cartlink"><s:text name="lang.itemdetail.nextbutton"/></a>
-			</span>
-	</div>
-</div>
-</section>
-</s:iterator>
-</section>
+	</s:iterator>
+
+
+	</s:form>
+
+    </div>
 
 <!-- ------------------------------------- フッターここから -------------------------------------- -->
 

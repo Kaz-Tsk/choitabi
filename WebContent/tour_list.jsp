@@ -50,27 +50,31 @@
 </header>
 
 
-<section class = "contents">
-<section class="guide">
-	<h1><s:text name="lang.itemlist.title"/></h1>
-	<p><s:text name="lang.itemlist.toptext"/></p>
-</section>
-<section class="tourList">
+	<div id="contents">
 
-	<s:iterator value="tourList">
-		<div class='tourContents'>
-		<a href = "<s:url action='TourListAction'><s:param name='tour_id' value='%{tour_id}'/></s:url>">
-		<div class="photo" style="background-image:url(<s:property value="img"/>);"></div>
-		<div class="tourText">
-			<h2><s:property value="tour_name"/></h2>
-			<p><s:property value="comment"/></p>
-		<div class='priceText'>\<script type="text/javascript">decimal_floor(<s:property value="price"/>);</script></div>
-		</div>
-		</a>
-		</div>
 
-	</s:iterator>
-	</section>
+		<div class="subtitle"><s:text name="lang.itemView.subtitle" /></div>
+
+		<div class="display_list">
+			<s:iterator value="searchList">
+				<div class="template">
+					<div class="item_img">
+						<a
+							href="<s:url action="TourDetailAction"><s:param name="tour_id" value="%{tour_id}"/></s:url>"><img
+							class="tour_img" src="<s:property value="img"/>"
+							height="250px"> <s:hidden value="tour_id" /> </a>
+					</div>
+					<div class="item_name">
+						<s:property value="itemName" />
+					</div>
+					<div class="item_price">
+						￥
+						<fmt:formatNumber value="${price}" pattern="###,###,###" />
+					</div>
+				</div>
+			</s:iterator>
+		</div>
+	</div>
 
 <!-- ページネーションここから -->
 
