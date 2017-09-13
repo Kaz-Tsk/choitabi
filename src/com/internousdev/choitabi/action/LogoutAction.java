@@ -8,14 +8,12 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.util.login.LogoutDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 
 /**
  * ログアウトするためのクラス
- * @author MARI KAMBE
- * @author YUUKI ICHIJOU
+ * @author tasaki
  * @since 2017/8/02
  * @version 1.1
  */
@@ -25,7 +23,7 @@ public class LogoutAction extends ActionSupport implements SessionAware {
 	/**
 	 * シリアルID
 	 */
-	private static final long serialVersionUID = -3843749424542012923L;
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * セッション取得
@@ -53,8 +51,6 @@ public class LogoutAction extends ActionSupport implements SessionAware {
 		String result = ERROR;
 
 		if (session.get("userId") != null) {
-			LogoutDAO dao = new LogoutDAO();
-			dao.update((int) session.get("userId"), false);
 			session.clear();
 			if (session.isEmpty()) {
 				result = SUCCESS;
