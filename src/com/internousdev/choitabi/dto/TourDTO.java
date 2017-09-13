@@ -2,8 +2,9 @@ package com.internousdev.choitabi.dto;
 
 import java.math.BigDecimal;
 
-/**
- * ツアー情報に関するDTO
+
+
+/** ツアー情報に関するDTO
  * @author HINAKO HAGIWARA
  * @since 2017/09/13
  * @version 1.0
@@ -12,7 +13,7 @@ import java.math.BigDecimal;
 public class TourDTO {
 
 	/**
-	 * 商品ID
+	 * ツアーID
 	 */
 	private int tour_id;
 
@@ -60,6 +61,11 @@ public class TourDTO {
 	 * 画像パス
 	 */
 	private String img;
+
+    /**
+     * ツアーリストから値を取得するためのインデックス番号
+     */
+    private int index;
 
 
 
@@ -222,5 +228,21 @@ public class TourDTO {
 	public void setImg(String img) {
 		this.img = img;
 	}
+
+    /**
+     * ツアーリストから値を取得するためのインデックス番号を取得するメソッド
+     * @return index ツアーリストから値を取得するためのインデックス番号
+     */
+    public int getIndex() {
+        return index;
+    }
+
+    /**
+     * ツアーリストから値を取得するためのインデックス番号を格納するメソッド
+     * @param index ツアーリストから値を取得するためのインデックス番号
+     */
+    public void setIndex(int index) {
+        this.index = index;
+    }
 
 }
