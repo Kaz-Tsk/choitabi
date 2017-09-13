@@ -22,15 +22,13 @@
 <body>
 	<h1>ツアー情報一覧</h1>
     <hr>
-    <s:text name="lang.kanri_tourList.search_tour_by_name"/>
-    <br>
 
 <!-- ↓ツアー名検索の部分です -->
-
+    <s:text name="lang.kanri_tourList.search_tour_by_name"/>
     <form action="IndicateTourListAction">
 		<input type="text" name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
-		<input type="submit" value=<s:text name="lang.kanri_tourList.search"/>/>
+		<input type="submit" value=<s:text name="lang.kanri_tourList.search"/>>
 	</form>
 
 <!-- ツアーの情報が表示されるテーブルです -->
