@@ -34,7 +34,7 @@
 
 
 
-<form action="ComfirmContactAction" method="post" name="contact_nyuuryoku" onSubmit="return check();">
+<s:form action="ComfirmContactAction" method="post">
 
 
 
@@ -42,28 +42,31 @@
     <div class = "direction">以下のフォームに入力してください<br></div>
 
 
-    <tr>
-        <th>名前</th>
-           <td><input type = "text" name = "contact_name"required size = "12">    </td>
-    </tr>
 
+     <tr>
+        <th>名前</th>
+           <td>
+           <s:textfield name = "contact_name" size = "12"></s:textfield>    </td>
+
+    </tr>
     <tr>
         <th>メールアドレス</th><td colspan = "4">
-            <input type="text"  name="contact_mailAddress"required size = "12">
+            <s:textfield  name="contact_mailAddress" size = "12"></s:textfield>
 
         </td>
     </tr>
-
     <tr>
         <th>お問い合わせ内容</th><td colspan = "4">
-        <textarea name="contact_contents"required rows="10" cols="45"></textarea>
+        <s:textarea name="contact_contents" rows="10" cols="45"></s:textarea>
 
     </tr>
 
 
-   <input type="submit" value="確認画面へ" >
 
-</form>
+
+   <input type = "submit" value="確認画面へ" ></input>
+
+</s:form>
 
     2013-12-17
 

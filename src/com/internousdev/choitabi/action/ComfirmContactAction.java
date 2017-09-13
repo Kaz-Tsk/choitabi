@@ -31,16 +31,48 @@ public class ComfirmContactAction extends ActionSupport {
      */
     private String contact_contents;
 
+
+   private String errorMessage;
+
+
+
+
+
+
     /**
      * 問い合わせ画面の情報を取得して問い合わせ内容確認画面に表示するためのメソッド
      * @return SUCCESS 常にSUCCESSを返します。
      */
     public String execute() {
+
+    	if(contact_name.equals("")){
+            errorMessage="名前が入力されていません";
+    		return ERROR;}
+
+    	if(contact_mailAddress.equals("")){
+    			errorMessage="メールアドレスが入力されていません。";
+    		return ERROR;}
+
+    	if(contact_contents.equals("")){
+    			errorMessage="お問い合わせ内容が入力されていません";
+    			return ERROR;}
+
+
+
+
     	System.out.println("名前：" + contact_name);
     	System.out.println("メールアドレス：" + contact_mailAddress);
     	System.out.println("問い合わせ内容：" + contact_contents);
         return SUCCESS;
     }
+
+
+
+
+
+
+
+
 
     /**
      * 送信者名を取得するためのメソッド
@@ -94,5 +126,18 @@ public class ComfirmContactAction extends ActionSupport {
     public void setContact_contents(String contact_contents) {
         this.contact_contents= contact_contents;
     }
+
+    public String getErrorMessage() {
+    	return getErrorMessage();
+    }
+
+    public void setErrorMessage(String errorMessage) {
+    	this.errorMessage = errorMessage;
+
+    }
+
+
+
+
 
 }
