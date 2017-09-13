@@ -30,13 +30,11 @@ public class TourListDAO {
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()){
 				dto =new TourDTO();
-				dto.setItem_id(rs.getInt("item_id"));
-				dto.setItem_name(rs.getString("item_name"));
-				dto.setItem_stock(rs.getInt("item_stock"));
+				dto.setTourId(rs.getInt("tour_id"));
+				dto.setTourName(rs.getString("tour_name"));
 				dto.setPrice(rs.getBigDecimal("price"));
-				dto.setImg_path(rs.getString("img_path"));
-				dto.setItem_comment(rs.getString("item_comment"));
-				dto.setSales_perid(rs.getDate("sales_perid"));
+				dto.setImg(rs.getString("img"));
+				dto.setComment(rs.getString("comment"));
 				itemList.add(dto);
 			}
 		}catch(SQLException e){

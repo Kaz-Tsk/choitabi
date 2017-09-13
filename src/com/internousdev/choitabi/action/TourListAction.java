@@ -31,7 +31,7 @@ public class TourListAction extends ActionSupport implements SessionAware {
 	/**
 	 * データベースから取得した商品情報を表示するための情報リスト
 	 */
-	public ArrayList<TourDTO> itemList = new ArrayList<TourDTO>();
+	public ArrayList<TourDTO> TourList = new ArrayList<TourDTO>();
 	/**
 	 * セッション情報
 	 */
@@ -51,9 +51,9 @@ public class TourListAction extends ActionSupport implements SessionAware {
 
 	/**
 	 *  MySQLより商品情報を取得する為の実行メソッド
-	 * @author TETSUYA KANAZAWA
+	 * @author SHUN NAGAO
 	 * @version 1.0
-	 * @since 2017/08/02
+	 * @since 2017/09/13
 	 */
 	public String execute(){
 		String result = ERROR;
@@ -63,16 +63,6 @@ public class TourListAction extends ActionSupport implements SessionAware {
 		selectList = dao.select();
 
 
-		java.util.Date date = new java.util.Date();
-		java.sql.Date today = new java.sql.Date(date.getTime());
-
-		for(int i=0;i < selectList.size();i++){
-			if(today.compareTo(selectList.get(i).getSales_perid()) > 0 || selectList.get(i).getItem_stock() <= 0){
-					selectList.remove(i);
-					i--;
-			}
-		}
-
 		//ページネーション
 		number=selectList.size();
 		if(number>0){
@@ -80,7 +70,7 @@ public class TourListAction extends ActionSupport implements SessionAware {
 			AllPagesT allp = new AllPagesT();
 			allPages = allp.paginate(selectList, 12);
 			maxPage = allp.getMaxPage(selectList, 12);
-			itemList = allPages.get(pageNum-1).getPaginatedList();
+			TourList = allPages.get(pageNum-1).getPaginatedList();
 		}
 
 			result =SUCCESS;
@@ -139,16 +129,16 @@ public class TourListAction extends ActionSupport implements SessionAware {
 	 * 商品情報のリストを取得するメソッド
 	 * @return itemList
 	 */
-	public ArrayList<TourDTO> getItemList() {
-		return itemList;
+	public ArrayList<TourDTO> getTourList() {
+		return TourList;
 	}
 
 	/**
 	 * 商品情報のリストを格納するメソッド
 	 * @param itemList セットする itemList
 	 */
-	public void setItemList(ArrayList<TourDTO> itemList) {
-		this.itemList = itemList;
+	public void setTourList(ArrayList<TourDTO> itemList) {
+		this.TourList = itemList;
 	}
 
 	/**
