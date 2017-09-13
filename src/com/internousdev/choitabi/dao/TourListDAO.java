@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.TourDTO;
-import com.internousdev.choitabi.util.MySQLConnector;
+import com.internousdev.util.DBConnector;
 
 
 /**
@@ -19,7 +19,7 @@ import com.internousdev.choitabi.util.MySQLConnector;
 public class TourListDAO {
 
 	public ArrayList<TourDTO> select(){
-		MySQLConnector db = new MySQLConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root", "mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 		Connection con =db.getConnection();
 		ArrayList<TourDTO> itemList =new ArrayList<TourDTO>();
 		TourDTO dto = null;
