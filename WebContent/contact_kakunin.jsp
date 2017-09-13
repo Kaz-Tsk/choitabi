@@ -15,7 +15,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>お問合せ内容確認画面</title>
 <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
+<!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
+	<fmt:setLocale value="${pageContext.request.locale.language}"/>
+	<fmt:setBundle basename="com.internousdev.choitabi.property.contact_kakunin"
+ 		var="lang" />
+
 </head>
+
+
 
 <body>
 

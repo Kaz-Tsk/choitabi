@@ -107,6 +107,14 @@
 	        	<s:property value="newImg"/>
 	        </td>
 	    </tr>
+	    <tr>
+	        <th>
+	        	画像プレビュー
+	        </th>
+	        <td>
+	        	<img src=<s:property value="newImg"/>>
+	        </td>
+	    </tr>
 	</table>
 <br>
 <hr>
