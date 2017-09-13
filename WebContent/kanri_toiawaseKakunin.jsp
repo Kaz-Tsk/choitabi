@@ -5,10 +5,24 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!doctype html>
 <html lang="ja">
+
+
 <head>
-    <meta charset="UTF-8">
+
+
+  <meta charset="UTF-8">
   <link rel="stylesheet"type="text/css"href="./css/kanri_toiawasekakunin.css">
+
+
+<!-- 国際化：言語コード(ja/en)の取得とプロパティファイルの読み込み -->
+	<fmt:setLocale value="${pageContext.request.locale.language}"/>
+	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_toiawaseKakunin"
+ 		var="lang" />
+
+
 </head>
+
+
 <body>
 
 <h1>
@@ -22,7 +36,7 @@
 							<th style="width: 10px;"></th>
 							<th style="width: 10px;"></th>
 							<th style="width: 80px;"></th>
-            <!-- ここに国際化の記述 -->>
+
 
 						<!-- ここからイテレータ開始 -->
 
@@ -30,7 +44,8 @@
 
 			 <input type="text" name="searchName" id="searchName" value="<s:property value="searchName"/>">
 			 <s:hidden name = "pageNum" value="1"/>
-             <input type="submit" value="検索" >
+             <input type="submit" value=<s:text name = "lang.struts.search"/>>
+
 		</form>
 
 		</div>
@@ -40,9 +55,9 @@
 
 						<table>
 						<tr>
-							<th>お客様氏名 | </th>
-							<th>メールアドレス | </th>
-							<th>お問い合わせ内容 | </th>
+							<th><s:text name="lang.kanri_tourList.contact_name"/> | </th>
+							<th><s:text name="lang.kanri_tourList.contact_mailAddress"/> | </th>
+							<th><s:text name="lang.kanri_tourList.contact_contents"/> | </th>
 						</tr>
 						<s:iterator value="displayList">
 						<tr>
@@ -62,7 +77,7 @@
 <s:if test= "{ pageNum > 0 }">
 
 
-<!-- 次へを使うページ -->>
+<!-- 次へを使うページ -->
                     <s:if test = "pageNum == maxPage">
                     </s:if>
                     <s:else>
@@ -71,7 +86,7 @@
 					</s:url>'>次へ</a>
                     </s:else>
 
-<!-- 前へを使うページ -->>
+<!-- 前へを使うページ -->
 
 					<s:if test="pageNum == 1">
                     </s:if>
