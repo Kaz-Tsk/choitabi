@@ -18,23 +18,29 @@
  	<!-- CSSの読み込み -->
 	<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
 </head>
+
 <body>
-<h1>ツアー情報一覧</h1>
+	<h1>ツアー情報一覧</h1>
     <hr>
-    ツアー名検索<br>
+    <s:text name="lang.kanri_tourList.search_tour_by_name"/>
+    <br>
+
+<!-- ↓ツアー名検索の部分です -->
+
     <form action="IndicateTourListAction">
 		<input type="text" name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
-		<input type="submit" value="検索"/>
+		<input type="submit" value=<s:text name="lang.kanri_tourList.search"/>/>
 	</form>
 
+<!-- ツアーの情報が表示されるテーブルです -->
 	<table>
 		<tr>
-			<th>ツアーID</th>
-			<th>ツアー名</th>
-			<th>価格</th>
-			<th>エリア</th>
-			<th>テーマ</th>
+			<th><s:text name="lang.kanri_tourList.tour_id"/></th>
+			<th><s:text name="lang.kanri_tourList.tour_name"/></th>
+			<th><s:text name="lang.kanri_tourList.price"/></th>
+			<th><s:text name="lang.kanri_tourList.region"/></th>
+			<th><s:text name="lang.kanri_tourList.theme"/></th>
 			<th>　　　</th>
 		</tr>
 		<s:iterator value="currentTourList">
@@ -47,14 +53,14 @@
 			<td>
 				<a href='<s:url action="EditTourAction">
 				<s:param name="currentTourId" value = "tourId"/></s:url>'>
-				編集
+				<s:text name="lang.kanri_tourList.edit"/>
 				</a>
 			</td>
 		</tr>
 		</s:iterator>
 	</table>
-
     <br>
+
 <!-- ↓ページの「＜＜1/3＞＞」の部分です -->
 
 	<s:if test="currentPage != 1">
@@ -85,16 +91,16 @@
     	＞＞
     </s:else>
 
-<!-- ↑「＜＜1/3＞＞」部分ここまで -->
+<!-- ↓テーブル下の、ツアー新規登録やトップ画面に戻るといったメニューの部分です。 -->
     <br>
     <br>
     <br>
     <a href='<s:url action="GoTourInsertPageAction"></s:url>'>
-    ツアーの新規登録を行う
+    	<s:text name="lang.kanri_tourList.add_new_tour"/>
     </a><br>
     <br>
     <br>
-    管理ページトップに戻る<br>
+    <s:text name="lang.kanri_tourList.return_top"/><br>
     <br>
     <br>
     <br>
