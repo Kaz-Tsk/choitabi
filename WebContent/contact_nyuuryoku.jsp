@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ taglib prefix="html" uri="/struts-tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -23,20 +21,27 @@
 <!--
 
 function check () {
-var userName = document.loginForm.username.value;
-var passWord = document.loginForm.password,value;
+var contact_name = document.contact_nyuuryoku.contact_name.value;
+var contact_mailAddress = document.contact_nyuuryoku.contact_mailAddress,value;
+var contact_contents = document.contact_nyuuryoku.contact_contents,value;
 
-if ( userName == "" ) {
+if ( contact_name == "" ) {
 alert ( "ユーザ名を入力して下さい。" );
-document.loginForm.username.focus();
+document.contact_nyuuryoku.contact_name.focus();
 return false;
 }
 
-if ( passWord == "" ) {
+if ( contact_mailAddress == "" ) {
 alert ( "パスワードを入力して下さい。" );
-document.loginForm.password.focus();
+document.contact_nyuuryoku.contact_mailAddress.focus();
 return false;
 }
+
+if ( contact_contents == "" ) {
+	alert ( "パスワードを入力して下さい。" );
+	document.contact_nyuuryoku.contact_contents.focus();
+	return false;
+	}
 
 return true;
 }
@@ -57,7 +62,7 @@ return true;
 
 
 
-<s:form action="ComfirmContactAction" method="post">
+<s:form action="ComfirmContactAction" method="post" name="contact_nyuuryoku" onSubmit="return check();">
 
 
 
