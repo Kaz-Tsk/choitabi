@@ -31,8 +31,8 @@ public class TourListDAO {
 
             while (rs.next()) {
                 TourDTO dto= new TourDTO();
-                dto.setTourId(rs.getInt("tourId"));
-                dto.setTourName(rs.getString("tourName"));
+                dto.setTourId(rs.getInt("tour_id"));
+                dto.setTourName(rs.getString("tour_name"));
                 dto.setPrice(rs.getBigDecimal("price"));
                 dto.setImg(rs.getString("img"));
                 selectList.add(dto);
