@@ -9,7 +9,8 @@
 <!-- 国際化 -->
 <constant name="struts.custom.i18n.resources"
       value="com.internousdev.choitabi.property.cart
-             com.internousdev.choitabi.property.kanri_history"
+             com.internousdev.choitabi.property.kanri_history
+             com.internousdev.choitabi.property.kanri_top"
 
 
 
