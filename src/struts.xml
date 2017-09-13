@@ -42,7 +42,7 @@
 		<result name="error" type="chain">IndicateTourListAction</result>
 	</action>
     <action name="KanriContactAction" class="com.internousdev.choitabi.action.KanriContactAction" method="execute">
-		<result name="success">kanri_toiawasekakunin.jsp</result>
+		<result name="success">kanri_toiawaseKakunin.jsp</result>
 		<result name="error">kanri_top.jsp</result>
 	</action>
 	<action name="GoTourInsertPageAction" class="com.internousdev.choitabi.action.GoTourInsertPageAction" method="execute">
