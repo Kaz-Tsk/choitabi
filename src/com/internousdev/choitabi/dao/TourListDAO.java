@@ -20,10 +20,10 @@ public class TourListDAO {
 
     ArrayList<TourDTO> selectList=new ArrayList<TourDTO>();
 
-    public ArrayList<TourDTO> display(String itemCategory){
+    public ArrayList<TourDTO> display(String theme){
     	DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
         Connection con=db.getConnection();
-        String sql = "select itemId,itemName,price,imgAddress001 from items where itemCategory = '"+itemCategory+"'";
+        String sql = "select tour_id,tour_name,price,img from items where theme = '"+theme+"'";
 
         try{
             PreparedStatement ps= con.prepareStatement(sql);
