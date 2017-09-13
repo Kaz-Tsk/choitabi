@@ -3,26 +3,29 @@
  */
 package com.internousdev.choitabi.action;
 
-import java.sql.SQLException;
+
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.choitabi.dao.LogoutDAO;
+import com.internousdev.util.login.LogoutDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
+
 /**
- * @author KAZUYUKI TASAKI
- *@since 2017/9/4
- *@version 1.0
- *ログアウトする為のクラス
+ * ログアウトするためのクラス
+ * @author MARI KAMBE
+ * @author YUUKI ICHIJOU
+ * @since 2017/8/02
+ * @version 1.1
  */
 public class LogoutAction extends ActionSupport implements SessionAware {
 
+
 	/**
-	 * シリアルバージョン
+	 * シリアルID
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -3843749424542012923L;
 
 	/**
 	 * セッション取得
@@ -39,73 +42,69 @@ public class LogoutAction extends ActionSupport implements SessionAware {
 	 */
 	private boolean loginFlg;
 
-	/**
-	 * セッション取得メソッド
-	 * @return session
-	 */
-	public Map<String,Object> session(){
-		return session;
-	}
-	/**
-	 * セッション格納メソッド
-	 * @param session
-	 */
-	public void setSession(Map<String,Object> session){
-		this.session = session;
-	}
 
 	/**
-	 * 実行メソッド
-	 * ログインした際に取得したセッションの内容を削除
-	 * ログインフラグをfalseにするメソッド
-	 * @throws SQLException エラー処理
+	 * セッションをクリアするための実行メソッド
+	 * @author MARI KAMBE
+	 * @since 2017/8/02
+	 * @version 1.1
 	 */
-	public String execute()throws SQLException{
-		LogoutDAO dao = new LogoutDAO();
+	public String execute() {
 		String result = ERROR;
 
-		if(session.get("userId")==null){
-			return result;
-		}
-
-		userId = (int)session.get("userId");
-
-		int count = 0;
-		count = dao.update(userId,false);
-
-		if(count > 0){
+		if (session.get("userId") != null) {
+			LogoutDAO dao = new LogoutDAO();
+			dao.update((int) session.get("userId"), false);
 			session.clear();
-			result = SUCCESS;
+			if (session.isEmpty()) {
+				result = SUCCESS;
+			}
 		}
 		return result;
 	}
 
+
+	/**
+	 * セッション取得メソッド
+	 */
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	/**
+	 * セッション格納メソッド
+	 */
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
 	/**
 	 * ユーザーID取得メソッド
-	 * @return useId ユーザーID
 	 */
-	public int getUserId(){
+	public int getUserId() {
 		return userId;
 	}
+
 	/**
 	 * ユーザーID格納メソッド
-	 * @param userId
+	 *
 	 */
-	public void setUserId(int userId){
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
+
 	/**
 	 * ログインフラグ取得メソッド
-	 * @return  isloginFlg
 	 */
-	public boolean isLoginFlg(){
+	public boolean isLoginFlg() {
 		return loginFlg;
 	}
+
 	/**
 	 * ログインフラグ格納メソッド
-	 * @param loginFlg
 	 */
-	public void loginFlg(boolean loginFlg){
+	public void setLoginFlg(boolean loginFlg) {
 		this.loginFlg = loginFlg;
 	}
+
 }
