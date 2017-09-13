@@ -17,33 +17,32 @@ import com.internousdev.util.DBConnector;
 public class LogoutDAO {
 
 	/**
-	 * @param loginId
 	 * @param userId
-	 * @return ログインフラグを更新できた場合１、できなかった場合０を返す
+	 * @return
 	 */
-	public int update(int userId,boolean loginFlg){
+	public int update(int userId, boolean loginFlg){
 		int count = 0;
-
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 
-		String sql = "update users set login_flg = ? where user_id = ?";
-
+		String sql = "update users set login_flg=? where user_id=?";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 
-			ps.setBoolean(1,loginFlg);
-			ps.setInt(2,userId);
-
+			ps.setBoolean(1, loginFlg);
+			ps.setInt(2, userId);
 			count = ps.executeUpdate();
 			return count;
 		}catch(SQLException e){
 			e.printStackTrace();
-		}try{
+		}
+		try{
 			con.close();
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
-	 return count;
+ 		return count;
 	}
+
+
 }

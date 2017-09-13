@@ -58,8 +58,10 @@ import com.opensymphony.xwork2.ActionSupport;
 						if(admin){
 							int userFlg = (int)dto.getUserFlg();
 							if(userFlg ==3){
+								session.put("admin", dto.getUserFlg());
 								result = "admin";
 							}else{
+								session.put("user", dto.getUserFlg());
 								result = SUCCESS;
 							}
 						}
