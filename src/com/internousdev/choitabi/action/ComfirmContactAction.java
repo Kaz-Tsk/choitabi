@@ -45,6 +45,11 @@ public class ComfirmContactAction extends ActionSupport {
      */
     public String execute() {
 
+    	System.out.println("名前：" + contact_name);
+    	System.out.println("メールアドレス：" + contact_mailAddress);
+    	System.out.println("問い合わせ内容：" + contact_contents);
+
+
     	if(contact_name.equals("")){
             errorMessage="名前が入力されていません";
     		return ERROR;}
@@ -60,9 +65,6 @@ public class ComfirmContactAction extends ActionSupport {
 
 
 
-    	System.out.println("名前：" + contact_name);
-    	System.out.println("メールアドレス：" + contact_mailAddress);
-    	System.out.println("問い合わせ内容：" + contact_contents);
         return SUCCESS;
     }
 
@@ -128,7 +130,7 @@ public class ComfirmContactAction extends ActionSupport {
     }
 
     public String getErrorMessage() {
-    	return getErrorMessage();
+    	return errorMessage;
     }
 
     public void setErrorMessage(String errorMessage) {

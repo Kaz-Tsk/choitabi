@@ -42,6 +42,9 @@
     <div class = "direction">以下のフォームに入力してください<br></div>
 
 
+   <s:property value="errorMessage"/>
+
+
 
      <tr>
         <th>名前</th>
