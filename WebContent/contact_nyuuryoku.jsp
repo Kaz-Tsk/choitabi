@@ -13,17 +13,13 @@
 
 <head>
 
-
    <title>お問合せ内容入力画面</title>
    <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
 
-<script type="text/javascript">
-
-</script>
-
-
-
 </head>
+
+
+
 
 
 <body>
@@ -33,49 +29,55 @@
 
 
 
+<!-- ＊＊＊＊＊＊＊＊＊フォームに入力されたものをそのままアクションに渡す＊＊＊ ＊＊＊＊＊＊＊-->>
+
 
 <s:form action="ComfirmContactAction" method="post">
-
 
 
 <h1>お問合せ内容入力</h1>
     <div class = "direction">以下のフォームに入力してください<br></div>
 
 
-   <s:property value="errorMessage"/>
+<!-- comfirmContactActionから引っ張ってきたエラーメッセージを表示する文 -->
+   <tr><s:property value="errorMessage"/></tr>
 
+
+<!-- アクションでSUCCESSが出たら、s:textに入力されたものを、そのまま次のs:propertyで表示する -->
 
 
      <tr>
         <th>名前</th>
-           <td>
-           <s:textfield name = "contact_name" size = "12"></s:textfield>    </td>
+           <td><s:textfield name = "contact_name" size = "12"></s:textfield></td>
+     </tr>
 
-    </tr>
-    <tr>
-        <th>メールアドレス</th><td colspan = "4">
-            <s:textfield  name="contact_mailAddress" size = "12"></s:textfield>
+     <tr>
+        <th>メールアドレス</th>
+        <td colspan = "4"><s:textfield  name="contact_mailAddress" size = "12"></s:textfield></td>
+     </tr>
 
-        </td>
-    </tr>
-    <tr>
+     <tr>
         <th>お問い合わせ内容</th><td colspan = "4">
-        <s:textarea name="contact_contents" rows="10" cols="45"></s:textarea>
-
-    </tr>
-
+             <s:textarea name="contact_contents" rows="10" cols="45"></s:textarea>
+     </tr>
 
 
 
-   <input type = "submit" value="確認画面へ" ></input>
+
+   <center><input type = "submit" value="確認画面へ" ></input></center>
 
 </s:form>
 
-    2013-12-17
 
-<input type="button" value="トップ画面へ戻る" onClick="location.href='index.jsp'">
+<!-- ＊＊＊＊＊＊＊＊＊＊＊フォーム終わり＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->>
 
-<input type="button" value="入力ページに戻る" onClick="location.href='contact_nyuuryoku.jsp'">
+<br>
+<br>
+<br>
+
+
+ <center><a href="index.jsp">トップページに戻る</a>
+         <a href="./contact_nyuuryoku.jsp">入力ページに戻る</a></center>
 
 
 <br>
