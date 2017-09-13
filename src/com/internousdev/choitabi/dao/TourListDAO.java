@@ -9,43 +9,43 @@ import java.util.ArrayList;
 import com.internousdev.choitabi.dto.TourDTO;
 import com.internousdev.util.DBConnector;
 
-
 /**
- * 商品一覧を取得するメソッド
+ * 商品一覧画面遷移に関するメソッド
  * @author SHUN NAGAO
  * @since 2017/09/13
  * @version 1.1
  */
+
 public class TourListDAO {
 
-	public ArrayList<TourDTO> select(){
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
-		Connection con =db.getConnection();
-		ArrayList<TourDTO> itemList =new ArrayList<TourDTO>();
-		TourDTO dto = null;
-		String sql = "SELECT * FROM item";
+    ArrayList<TourDTO> selectList=new ArrayList<TourDTO>();
 
-		try{
-			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs = ps.executeQuery();
-			while(rs.next()){
-				dto =new TourDTO();
-				dto.setTourId(rs.getInt("tour_id"));
-				dto.setTourName(rs.getString("tour_name"));
-				dto.setPrice(rs.getBigDecimal("price"));
-				dto.setImg(rs.getString("img"));
-				dto.setComment(rs.getString("comment"));
-				itemList.add(dto);
-			}
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
-		try {
-			con.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+    public ArrayList<TourDTO> display(String itemCategory){
+    	DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+        Connection con=db.getConnection();
+        String sql = "select itemId,itemName,price,imgAddress001 from items where itemCategory = '"+itemCategory+"'";
 
-		return itemList;
-	}
+        try{
+            PreparedStatement ps= con.prepareStatement(sql);
+            ResultSet rs=ps.executeQuery();
+
+            while (rs.next()) {
+                TourDTO dto= new TourDTO();
+                dto.setTourId(rs.getInt("tourId"));
+                dto.setTourName(rs.getString("tourName"));
+                dto.setPrice(rs.getBigDecimal("price"));
+                dto.setImg(rs.getString("img"));
+                selectList.add(dto);
+                }
+
+            rs.close();
+            ps.close();
+            con.close();
+
+        }catch (SQLException e){
+            e.printStackTrace();
+            }
+        return selectList;
+        }
+
 }
