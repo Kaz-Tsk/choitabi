@@ -49,6 +49,22 @@
 	<s:include value="header.jsp"/>
 </header>
 
+			<div id="menubox">
+				<div id="toggle">
+					<a href="#">menu</a>
+				</div>
+				<ul id="menu" style="display: block;">
+					<li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'東北'}"/></s:url>'><s:text
+								name="lang.header.tohoku" /></a></li>
+					<li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'関東'}"/></s:url>'><s:text
+								name="lang.header.kanto" /></a></li>
+					<li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'関西'}"/></s:url>'><s:text
+								name="lang.header.kansai" /></a></li>
+					<li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'九州'}"/></s:url>'><s:text
+								name="lang.header.kyusyu" /></a></li>
+				</ul>
+			</div>
+
 
 	<div id="contents">
 
