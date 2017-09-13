@@ -110,11 +110,11 @@ public class TourListAction extends ActionSupport {
         }
 
     /**
-     * 商品カテゴリーを格納するメソッド
-     * @param itemCategory 商品カテゴリー
+     * テーマを格納するメソッド
+     * @param theme テーマ
      */
-    public void setItemCategory(String itemCategory) {
-        this.theme = itemCategory;
+    public void setTheme(String theme) {
+        this.theme = theme;
         }
 
     /**
@@ -135,7 +135,7 @@ public class TourListAction extends ActionSupport {
 
     /**
      * 画像パスを取得するメソッド
-     * @return imgAddress001 画像パス
+     * @return img 画像パス
      */
     public String getImg() {
         return img;
@@ -143,26 +143,26 @@ public class TourListAction extends ActionSupport {
 
     /**
      * 画像パスを格納するメソッド
-     * @param imgAddress001 画像パス
+     * @param img 画像パス
      */
     public void setImg(String img) {
         this.img = img;
         }
 
     /**
-     * サーチリストを取得するメソッド
-     * @return searchList サーチリスト
+     * セレクトリストを取得するメソッド
+     * @return selectList セレクトリスト
      */
     public ArrayList<TourDTO> getSelectList() {
         return selectList;
         }
 
     /**
-     * サーチリストを格納するメソッド
-     * @param searchList サーチリスト
+     * セレクトリストを格納するメソッド
+     * @param selectList セレクトリスト
      */
-    public void setSelectList(ArrayList<TourDTO> searchList) {
-        this.selectList = searchList;
+    public void setSelectList(ArrayList<TourDTO> selectList) {
+        this.selectList = selectList;
         }
 
 }
