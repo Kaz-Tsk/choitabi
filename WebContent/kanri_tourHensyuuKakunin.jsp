@@ -125,6 +125,11 @@
 	        <td>変更前</td><td><s:property value="currentImg"/></td>
 	        <td>変更後</td><td><s:property value = "editImg"/></td>
 	    </tr>
+	    <tr>
+	        <th>画像プレビュー</th>
+	        <td>変更前</td><td><img src=<s:property value="currentImg"/>></td>
+	        <td>変更後</td><td><img src=<s:property value = "editImg"/>></td>
+	    </tr>
 	</table>
 </s:else>
 <!-- テーブル部分ここまで--------------------------------------------------------- -->
