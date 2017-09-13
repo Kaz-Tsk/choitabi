@@ -19,6 +19,33 @@
    <title>お問合せ内容入力画面</title>
    <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
 
+<script type="text/javascript">
+<!--
+
+function check () {
+var userName = document.loginForm.username.value;
+var passWord = document.loginForm.password,value;
+
+if ( userName == "" ) {
+alert ( "ユーザ名を入力して下さい。" );
+document.loginForm.username.focus();
+return false;
+}
+
+if ( passWord == "" ) {
+alert ( "パスワードを入力して下さい。" );
+document.loginForm.password.focus();
+return false;
+}
+
+return true;
+}
+
+//-->
+</script>
+
+
+
 </head>
 
 
@@ -40,17 +67,17 @@
 
     <tr>
         <th>名前</th>
-           <td><s:textfield name = "contact_name" size = "12"></s:textfield>    </td>
+           <td><input type = "text" name = "contact_name" size = "12">    </td>
     </tr>
     <tr>
         <th>メールアドレス</th><td colspan = "4">
-            <s:textfield  name="contact_mailAddress" size = "12"></s:textfield>
+            <input type="text"  name="contact_mailAddress" size = "12">
 
         </td>
     </tr>
     <tr>
         <th>お問い合わせ内容</th><td colspan = "4">
-        <s:textarea name="contact_contents" rows="10" cols="45"></s:textarea>
+        <textarea name="contact_contents" rows="10" cols="45"></textarea>
 
     </tr>
 
