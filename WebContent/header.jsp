@@ -22,19 +22,17 @@
 			<div class="navi">
 				<div class="navibox"><a href="about.jsp" class="underline">choitabiについて</a></div>
 				<div class="navibox"><a href="Q&A.jsp" class="underline">お問い合わせ</a></div>
-				<div class="navibox"><a href="LoginAction" class="underline">ログイン</a></div>
 				<div class="navibox"><a href="LogoutAction" class="underline">ログアウト</a></div>
 			</div>
 	</s:if>
 
 	<!-- 管理者ログイン時ヘッダー  -->
 		<s:elseif test="#session.userFlg = 3">
-			    <div class="logo"><a href="<s:url action=""/>"><span
-					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
+			    <div class="logo"><a href="<s:url action="kanri_top.jsp"/>">choitabi(管理者画面)</a></div>
 		<div class="navi">
 			<div class="navibox"><a href="kanri_tourList.jsp" class="underline">ツアー管理</a></div>
 			<div class="navibox"><a href= "kanri_toiawasekakunin.jsp"class="underline">管理問い合わせ</a></div>
-		 <div class="naviboxright"><a href="LogoutAction"  class="underline">ログアウト</a></div>
+		 <div class="navibox"><a href="LogoutAction"  class="underline">ログアウト</a></div>
 		</div>
 		</s:elseif>
 
