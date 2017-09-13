@@ -18,35 +18,7 @@
    <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
 
 <script type="text/javascript">
-<!--
 
-function check () {
-var contact_name = document.contact_nyuuryoku.contact_name.value;
-var contact_mailAddress = document.contact_nyuuryoku.contact_mailAddress,value;
-var contact_contents = document.contact_nyuuryoku.contact_contents,value;
-
-if ( contact_name == "" ) {
-alert ( "ユーザ名を入力して下さい。" );
-document.contact_nyuuryoku.contact_name.focus();
-return false;
-}
-
-if ( contact_mailAddress == "" ) {
-alert ( "パスワードを入力して下さい。" );
-document.contact_nyuuryoku.contact_mailAddress.focus();
-return false;
-}
-
-if ( contact_contents == "" ) {
-	alert ( "パスワードを入力して下さい。" );
-	document.contact_nyuuryoku.contact_contents.focus();
-	return false;
-	}
-
-return true;
-}
-
-//-->
 </script>
 
 
@@ -62,7 +34,7 @@ return true;
 
 
 
-<s:form action="ComfirmContactAction" method="post" name="contact_nyuuryoku" onSubmit="return check();">
+<form action="ComfirmContactAction" method="post" name="contact_nyuuryoku" onSubmit="return check();">
 
 
 
@@ -72,24 +44,26 @@ return true;
 
     <tr>
         <th>名前</th>
-           <td><input type = "text" name = "contact_name" size = "12">    </td>
+           <td><input type = "text" name = "contact_name"required size = "12">    </td>
     </tr>
+
     <tr>
         <th>メールアドレス</th><td colspan = "4">
-            <input type="text"  name="contact_mailAddress" size = "12">
+            <input type="text"  name="contact_mailAddress"required size = "12">
 
         </td>
     </tr>
+
     <tr>
         <th>お問い合わせ内容</th><td colspan = "4">
-        <textarea name="contact_contents" rows="10" cols="45"></textarea>
+        <textarea name="contact_contents"required rows="10" cols="45"></textarea>
 
     </tr>
 
 
    <input type="submit" value="確認画面へ" >
 
-</s:form>
+</form>
 
     2013-12-17
 
