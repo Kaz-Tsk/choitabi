@@ -11,9 +11,14 @@
       value="com.internousdev.choitabi.property.cart
              com.internousdev.choitabi.property.kanri_history
              com.internousdev.choitabi.property.kanri_top
-             com.internousdev.choitabi.property.kanri_tourList"
-
-
+             com.internousdev.choitabi.property.kanri_tourList
+             com.internousdev.choitabi.property.kanri_tourTsuika
+             com.internousdev.choitabi.property.kanri_tourTsuikaKakunin
+             com.internousdev.choitabi.property.kanri_tourHensyuu
+             com.internousdev.choitabi.property.kanri_toiawasekakunin
+             com.internousdev.choitabi.property.contact_nyuuryoku
+             com.internousdev.choitabi.property.contact_kakunin
+             com.internousdev.choitabi.property.contact_send"
 
       />
 
@@ -39,7 +44,7 @@
 		<result name="error" type="chain">IndicateTourListAction</result>
 	</action>
     <action name="KanriContactAction" class="com.internousdev.choitabi.action.KanriContactAction" method="execute">
-		<result name="success">kanri_toiawasekakunin.jsp</result>
+		<result name="success">kanri_toiawaseKakunin.jsp</result>
 		<result name="error">kanri_top.jsp</result>
 	</action>
 	<action name="GoTourInsertPageAction" class="com.internousdev.choitabi.action.GoTourInsertPageAction" method="execute">
@@ -92,7 +97,7 @@
 		</action>
 
 <action name="CompleteContactAction" class="com.internousdev.choitabi.action.CompleteContactAction" method="execute">
-   <result name="success">contactsend.jsp</result>
+   <result name="success">contact_send.jsp</result>
 		<result name="error">contact_nyuuryoku.jsp</result>
 		</action>
 

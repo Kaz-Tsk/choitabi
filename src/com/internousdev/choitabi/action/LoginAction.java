@@ -44,7 +44,7 @@ import com.opensymphony.xwork2.ActionSupport;
 	 * @author KAZUYUKI TASAKI
 	 * @since 2017/9/1
 	 * @version 1.0
-	 * @returnログイン成功:SUCCESS  失敗:ERROR  管理者:LOGIN
+	 * @returnログイン成功:SUCCESS  失敗:ERROR  管理者:admin
 	 */
 	public String execute(){
 		String result = ERROR;
@@ -55,27 +55,18 @@ import com.opensymphony.xwork2.ActionSupport;
 
 		if(mailAddress.equals(dto.getMailAddress())){
 			if(password.equals(dto.getPassword())){
-
-				if(dto.isLoginFlg()==false){
-					if(dao.update(dto.getMailAddress(),dto.getPassword()) > 0){
-
-						dto = dao.select(dto.getMailAddress(), dto.getPassword());
-
-						session.put("userId",dto.getUserId());
-						session.put("loginFlg", dto.isLoginFlg());
-
 						if(admin){
 							int userFlg = (int)dto.getUserFlg();
 							if(userFlg ==3){
-								result = "ADMIN";
+								result = "admin";
 							}else{
 								result = SUCCESS;
 							}
 						}
 					}
 				}
-			}
-		}
+
+
 		return result;
 	}
 

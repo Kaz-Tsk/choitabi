@@ -1,184 +1,189 @@
 package com.internousdev.choitabi.action;
 
 import java.util.ArrayList;
-import java.util.Map;
-
-import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.choitabi.dao.TourListDAO;
 import com.internousdev.choitabi.dto.TourDTO;
-import com.internousdev.choitabi.util.AllPagesT;
-import com.internousdev.choitabi.util.PageObjectTour;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- *  商品一覧を表示するクラス
- *  @auter SHUN NAGAO
- *  @since 2017/09/13
- *  @version 1.0
+ * 商品一覧を表示するアクション
+ * @author SHUN NAGAO
+ * @since 2017/09/13
+ * @version 1.1
  */
 
-public class TourListAction extends ActionSupport implements SessionAware {
+public class TourListAction extends ActionSupport {
 
-	/**
-	 * シリアルIDの発行
-	 */
-	private static final long serialVersionUID = -2071088191134829678L;
-	/**
-	 * データベースから取得した商品情報リスト
-	 */
-	private ArrayList<TourDTO> selectList = new ArrayList<>();
-	/**
-	 * データベースから取得した商品情報を表示するための情報リスト
-	 */
-	public ArrayList<TourDTO> TourList = new ArrayList<TourDTO>();
-	/**
-	 * セッション情報
-	 */
-	private Map<String,Object> session;
-	/**
-	 * 総ページ数
-	 */
-	private int maxPage;
-	/**
-	 * 現在のページ
-	 */
-	private int pageNum=1;
-	/**
-	 * 総データ数
-	 */
-	private int number;
+    /**
+     * シリアルID
+     */
+    private static final long serialVersionUID = 8119766214351162676L;
 
-	/**
-	 *  MySQLより商品情報を取得する為の実行メソッド
-	 * @author SHUN NAGAO
-	 * @version 1.0
-	 * @since 2017/09/13
-	 */
-	public String execute(){
-		String result = ERROR;
+    /**
+     * ツアーID
+     */
+    private int tour_id;
 
-		//商品情報の取得
-		TourListDAO dao=new TourListDAO();
-		selectList = dao.select();
+    /**
+     * ツアー名
+     */
+    private String tour_name;
+
+    /**
+     * テーマ
+     */
+    private String theme;
+
+    /**
+     * 地方
+     */
+    private String region;
+
+    /**
+     * 価格
+     */
+    private int price;
+
+    /**
+     * 画像パス
+     */
+    private String img;
+
+    /**
+     * サーチリスト
+     */
+    public ArrayList<TourDTO> selectList=new ArrayList<TourDTO>();
 
 
-		//ページネーション
-		number=selectList.size();
-		if(number>0){
-			ArrayList<PageObjectTour> allPages = new ArrayList<PageObjectTour>();
-			AllPagesT allp = new AllPagesT();
-			allPages = allp.paginate(selectList, 12);
-			maxPage = allp.getMaxPage(selectList, 12);
-			TourList = allPages.get(pageNum-1).getPaginatedList();
-		}
+    /**
+     * 実行メソッド
+     * @return success or error
+     */
+    public String execute(){
+        String result=ERROR;
 
-			result =SUCCESS;
-			return result;
-	}
+        TourListDAO dao =new TourListDAO();
 
-	/**
-	 * 総ページ数を取得するメソッド
-	 * @return maxPage
-	 */
-	public int getMaxPage() {
-		return maxPage;
-	}
+        selectList=dao.display(theme,region);
 
-	/**
-	 * 総ページ数を格納するメソッド
-	 * @param maxPage セットする maxPage
-	 */
-	public void setMaxPage(int maxPage) {
-		this.maxPage = maxPage;
-	}
+        if(selectList.size()>0){
+            result=SUCCESS;
+            }
+        return result;
+        }
 
-	/**
-	 * 現在のページを取得するメソッド
-	 * @return pageNum
-	 */
-	public int getPageNum() {
-		return pageNum;
-	}
 
-	/**
-	 * 現在のページを格納するメソッド
-	 * @param pageNum セットする pageNum
-	 */
-	public void setPageNum(int pageNum) {
-		this.pageNum = pageNum;
-	}
+    /**
+     * ツアーIDを取得するメソッド
+     * @return item_id 商品ID
+     */
+    public int getTourId() {
+        return tour_id;
+        }
 
-	/**
-	 * 総データ数を取得するメソッド
-	 * @return number
-	 */
-	public int getNumber() {
-		return number;
-	}
+    /**
+     * ツアーIDを格納するメソッド
+     * @param tour_id ツアーID
+     */
+    public void setTourId(int tour_id) {
+        this.tour_id = tour_id;
+        }
 
-	/**
-	 * 総データ数を格納するメソッド
-	 * @param number セットする number
-	 */
-	public void setNumber(int number) {
-		this.number = number;
-	}
+    /**
+     * ツアー名を取得するメソッド
+     * @return tourName ツアー名
+     */
+    public String getTourName() {
+        return tour_name;
+        }
 
-	/**
-	 * 商品情報のリストを取得するメソッド
-	 * @return itemList
-	 */
-	public ArrayList<TourDTO> getTourList() {
-		return TourList;
-	}
+    /**
+     * ツアー名を格納するメソッド
+     * @param tourName ツアー名
+     */
+    public void setTourame(String tour_name) {
+        this.tour_name = tour_name;
+        }
 
-	/**
-	 * 商品情報のリストを格納するメソッド
-	 * @param itemList セットする itemList
-	 */
-	public void setTourList(ArrayList<TourDTO> itemList) {
-		this.TourList = itemList;
-	}
+    /**
+     * テーマを取得するメソッド
+     * @return thema テーマ
+     */
+    public String getTheme() {
+        return theme;
+        }
 
-	/**
-	 * 商品情報のリストを取得するメソッド
-	 * @return selectList
-	 */
-	public ArrayList<TourDTO> getSelectList() {
-		return selectList;
-	}
+    /**
+     * テーマを格納するメソッド
+     * @param theme テーマ
+     */
+    public void setTheme(String theme) {
+        this.theme = theme;
+        }
 
-	/**
-	 * 商品情報のリストを格納するメソッド
-	 * @param selectList セットする selectList
-	 */
-	public void setSelectList(ArrayList<TourDTO> selectList) {
-		this.selectList = selectList;
-	}
+    /**
+     * テーマを取得するメソッド
+     * @return thema テーマ
+     */
+    public String getRegion() {
+        return region;
+        }
 
-	/**
-	 * セッション情報を取得するメソッド
-	 * @return session
-	 */
-	public Map<String, Object> getSession() {
-		return session;
-	}
+    /**
+     * 地方を格納するメソッド
+     * @param region 地方
+     */
+    public void setRegion(String region) {
+        this.region = region;
+        }
 
-	/**
-	 * セッション情報を格納するメソッド
-	 * @param session セットする session
-	 */
-	public void setSession(Map<String, Object> session) {
-		this.session = session;
-	}
+    /**
+     * 地方を格納するメソッド
+     * @param region 地方
+     */
+    public int getPrice() {
+        return price;
+        }
 
-	/**
-	 * シリアルIDを取得するメソッド
-	 * @return serialversionuid
-	 */
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+    /**
+     * 価格を格納するメソッド
+     * @param price 価格
+     */
+    public void setPrice(int price) {
+        this.price = price;
+        }
+
+    /**
+     * 画像パスを取得するメソッド
+     * @return img 画像パス
+     */
+    public String getImg() {
+        return img;
+        }
+
+    /**
+     * 画像パスを格納するメソッド
+     * @param img 画像パス
+     */
+    public void setImg(String img) {
+        this.img = img;
+        }
+
+    /**
+     * セレクトリストを取得するメソッド
+     * @return selectList セレクトリスト
+     */
+    public ArrayList<TourDTO> getSelectList() {
+        return selectList;
+        }
+
+    /**
+     * セレクトリストを格納するメソッド
+     * @param selectList セレクトリスト
+     */
+    public void setSelectList(ArrayList<TourDTO> selectList) {
+        this.selectList = selectList;
+        }
 
 }

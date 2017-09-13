@@ -25,7 +25,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>ツアーリスト（仮）</title>
+<title>テスト</title>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -41,44 +41,27 @@
 </head>
 
 
+
 <body>
 
-<!-- ------------------------------------- ヘッダーここから -------------------------------------- -->
 
-<header>
-	<s:include value="header.jsp"/>
-</header>
-
-<s:include value="test_tour.jsp" />
-
-
-	<div id="contents">
-
-
-		<div class="subtitle"><s:text name="lang.itemView.subtitle" /></div>
-
-		<div class="display_list">
-			<s:iterator value="selectList">
-				<div class="template">
-					<div class="item_img">
-						<a
-							href="<s:url action="TourDetailAction"><s:param name="tour_id" value="%{tour_id}"/></s:url>"><img
-							class="tour_img" src="<s:property value="img"/>"
-							height="250px"> <s:hidden value="tour_id" /> </a>
-					</div>
-					<div class="tour_name">
-						<s:property value="tour_name" />
-					</div>
-					<div class="tour_price">
-						￥
-						<fmt:formatNumber value="${price}" pattern="###,###,###" />
-					</div>
+			<div id="menubox">
+				<div id="toggle">
+					<a href="#">menu</a>
 				</div>
-			</s:iterator>
-		</div>
-	</div>
+				<ul id="menu" style="display: block;">
+					<li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'>グルメ</a></li>
+					<li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'名所'}"/></s:url>'>名所</a></li>
+					<li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'アクティビティ'}"/></s:url>'>アクティビティ</a></li>
+					</ul>
 
+									<ul id="menu" style="display: block;">
+					<li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'東北'}"/></s:url>'>東北</a></li>
+					<li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'関東'}"/></s:url>'>関東</a></li>
+					<li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'関西'}"/></s:url>'>関西</a></li>
+					<li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'九州'}"/></s:url>'>九州</a></li>
+					</ul>
+			</div>
 
-<!-- ページネーションここまで -->
 </body>
 </html>
