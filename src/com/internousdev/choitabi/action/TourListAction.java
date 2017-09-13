@@ -36,6 +36,11 @@ public class TourListAction extends ActionSupport {
     private String theme;
 
     /**
+     * 地方
+     */
+    private String region;
+
+    /**
      * 価格
      */
     private int price;
@@ -60,7 +65,7 @@ public class TourListAction extends ActionSupport {
 
         TourListDAO dao =new TourListDAO();
 
-        selectList=dao.display(theme);
+        selectList=dao.display(theme,region);
 
         if(selectList.size()>0){
             result=SUCCESS;
@@ -71,7 +76,7 @@ public class TourListAction extends ActionSupport {
 
     /**
      * ツアーIDを取得するメソッド
-     * @return itemId 商品ID
+     * @return item_id 商品ID
      */
     public int getTourId() {
         return tour_id;
@@ -79,10 +84,10 @@ public class TourListAction extends ActionSupport {
 
     /**
      * ツアーIDを格納するメソッド
-     * @param tourId ツアーID
+     * @param tour_id ツアーID
      */
-    public void setTourId(int tourId) {
-        this.tour_id = tourId;
+    public void setTourId(int tour_id) {
+        this.tour_id = tour_id;
         }
 
     /**
@@ -97,8 +102,8 @@ public class TourListAction extends ActionSupport {
      * ツアー名を格納するメソッド
      * @param tourName ツアー名
      */
-    public void setTourName(String tourName) {
-        this.tour_name = tourName;
+    public void setTourame(String tour_name) {
+        this.tour_name = tour_name;
         }
 
     /**
@@ -118,8 +123,24 @@ public class TourListAction extends ActionSupport {
         }
 
     /**
-     * 価格を取得するメソッド
-     * @return price 価格
+     * テーマを取得するメソッド
+     * @return thema テーマ
+     */
+    public String getRegion() {
+        return region;
+        }
+
+    /**
+     * 地方を格納するメソッド
+     * @param region 地方
+     */
+    public void setRegion(String region) {
+        this.region = region;
+        }
+
+    /**
+     * 地方を格納するメソッド
+     * @param region 地方
      */
     public int getPrice() {
         return price;
