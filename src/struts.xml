@@ -11,8 +11,7 @@
       value="com.internousdev.choitabi.property.cart
              com.internousdev.choitabi.property.kanri_history
              com.internousdev.choitabi.property.kanri_top
-             com.internousdev.choitabi.property.kanri_tourList
-             com.internousdev.choitabi.property.kanri_tourTsuika"
+             com.internousdev.choitabi.property.kanri_tourList"
 
 
 
@@ -112,7 +111,18 @@
 			<result name="error">login.jsp</result>
 		</action>
 
+<!-- ツアーリストを表示 -->
+<action name="TourListAction" class="com.internousdev.choitabi.action.TourListAction" method="execute">
+<result name="success">tour_list.jsp</result>
+<result name="error">tour_list.jsp</result>
+</action>
 
+<!-- ツアー詳細を表示 -->
+<action name= "TourDetailAction" class="com.internousdev.choitabi.action.TourDetailAction"
+method= "execute">
+<result name= "success">tour_detail.jsp</result>
+<result name="error">tour_detail.jsp</result>
+</action>
 
 
 </package>
