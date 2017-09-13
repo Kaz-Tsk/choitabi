@@ -35,9 +35,10 @@ public class TourDetailDAO {
 				dto.setDeparture(rs.getString("departure"));
 				dto.setRegion(rs.getString("region"));
 				dto.setPrefectures(rs.getString("prefectures"));
-				dto.setThema(rs.getString("theme"));
+				dto.setTheme(rs.getString("theme"));
 				dto.setComment(rs.getString("comment"));
 				dto.setImg(rs.getString("img"));
+				dto.setPersons(rs.getInt("persons"));
 				tourList.add(dto);
 
 			}

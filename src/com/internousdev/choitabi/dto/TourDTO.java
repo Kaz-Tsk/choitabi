@@ -107,7 +107,7 @@ public class TourDTO {
 	 * 価格を格納するメソッド
 	 * @oaram price 価格
 	 */
-	public void getPrice(BigDecimal price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 
@@ -139,7 +139,7 @@ public class TourDTO {
 	 * 出発地を格納するメソッド
 	 * @param departure 出発地
 	 */
-	public void getDeparture(String departure) {
+	public void setDeparture(String departure) {
 		this.departure = departure;
 	}
 

@@ -2,9 +2,9 @@ package com.internousdev.choitabi.action;
 
 import java.util.ArrayList;
 
+import com.internousdev.choitabi.dao.TourDetailDAO;
 import com.internousdev.choitabi.dao.TourListDAO;
 import com.internousdev.choitabi.dto.TourDTO;
-import com.internousdev.choitabi.dao.TourDetailDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 
@@ -55,7 +55,7 @@ public class TourDetailAction extends ActionSupport {
 		selectList = tldao.select();
 
 		for(int i = 0; i < selectList.size(); i++) {
-			if(this.tour_id == selectList.get(i).getTourId() {
+			if(this.tour_id == selectList.get(i).getTourId()); {
 				count = 1;
 			}
 		}
