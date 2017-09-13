@@ -1,12 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<!-- ↓国際化 -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!-- ↑国際化 -->
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>ツアー追加</title>
+		<!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
+	<fmt:setLocale value="${pageContext.request.locale.language}"/>
+	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourTsuika"
+ 		var="lang" />
+	<!-- CSSの読み込み -->
 	<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
 </head>
 
