@@ -12,7 +12,7 @@
 }
 .login-box{
 	width:300px;
-	top:200px;
+	top:200;px
 	margin:0 auto;
 	border: 2px solid black;
 	text-align: center;
@@ -38,7 +38,7 @@ button{
     text-decoration: none;
     background: #fa8605;/*É{É^ÉìêF*/
     color: #ffffff;
-    border-bottom: solid 4px #627295;
+    border-bottom: solid 4px #c0c0c0;
     border-radius: 3px;
 
 }

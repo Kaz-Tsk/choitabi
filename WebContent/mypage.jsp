@@ -4,7 +4,8 @@
 <!DOCTYPE html >
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/mypage.css">
 <title>mypage</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
 			<div class="admin-param">
 				<s:action var="select" name="MypageAction"/>
 				<s:iterator value="#select.User">
-				<table border=1>
+				<table >
 					<tr>
 						<th>名前</th>
 						<td><s:property value="familyNameKanji"/><s:property value="givenNameKanji"/></td>
