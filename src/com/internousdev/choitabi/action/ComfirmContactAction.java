@@ -1,5 +1,9 @@
 package com.internousdev.choitabi.action;
 
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -9,7 +13,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * @version 1.0
  * @since 1.0
  */
-public class ComfirmContactAction extends ActionSupport {
+public class ComfirmContactAction extends ActionSupport implements SessionAware {
 
     /**
      * 生成されたシリアルナンバー
@@ -32,7 +36,14 @@ public class ComfirmContactAction extends ActionSupport {
     private String contact_contents;
 
 
+    /**
+     * エラーメッセージを
+     */
    private String errorMessage;
+
+
+
+   private Map<String, Object> session;
 
 
 
@@ -41,7 +52,7 @@ public class ComfirmContactAction extends ActionSupport {
 
     /**
      * 問い合わせ画面の情報を取得して問い合わせ内容確認画面に表示するためのメソッド
-     * @return SUCCESS 常にSUCCESSを返します。
+     * （入力されない箇所が一つでもあればERROR）
      */
     public String execute() {
 
@@ -69,7 +80,21 @@ public class ComfirmContactAction extends ActionSupport {
     }
 
 
+    /**
+     * 上記のexecuteでエラーが出た場合のエラーメッセージを取ってくるメソッド
+     */
+    public String getErrorMessage() {
+    	return errorMessage;
+    }
 
+    /**
+     * 上記のexexuteでエラーが出た場合のエラーメッセージを入れておく箱メソッド
+     * @param errorMessage
+     */
+    public void setErrorMessage(String errorMessage) {
+    	this.errorMessage = errorMessage;
+
+    }
 
 
 
@@ -129,15 +154,23 @@ public class ComfirmContactAction extends ActionSupport {
         this.contact_contents= contact_contents;
     }
 
-    public String getErrorMessage() {
-    	return errorMessage;
-    }
 
-    public void setErrorMessage(String errorMessage) {
-    	this.errorMessage = errorMessage;
 
-    }
+    /**
+	 * セッションを取得するメソッド
+	 * @return session セッション
+	 */
+	public Map<String, Object> getSession() {
+		return session;
+	}
 
+	/**
+	 * セッションを格納する
+	 * @param session  セッション
+	 */
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
 
 
 

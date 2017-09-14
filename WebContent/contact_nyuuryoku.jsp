@@ -34,7 +34,7 @@
 <div class ="header">お問合せ内容入力</div>
 
 
-<!-- ＊＊＊＊＊＊＊＊＊フォームに入力されたものをそのままアクションに渡す＊＊＊ ＊＊＊＊＊＊＊-->
+<!-- ＊＊＊＊＊＊＊＊＊フォームに入力されたものをSUBMITするとそのままアクションに渡す＊＊＊ ＊＊＊＊＊＊＊-->
 
 
 <s:form action="ComfirmContactAction" method="post">
