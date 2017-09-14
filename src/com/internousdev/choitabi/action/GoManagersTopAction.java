@@ -9,7 +9,7 @@ public class GoManagersTopAction extends ActionSupport{
 	 * @version 1.1
 	 *
 	 * 管理画面の各操作ページからトップページに戻るときに動くアクションです。
-	 * 現時点はSUCCESSを返すだけのアクションです。今後必要によっては処理が増えるかも…（セッション管理とか）
+	 * 現時点はSUCCESSを返すだけのアクションです。今後必要によって処理が増えるかも…（セッション管理とか）
 	 */
 
 	public String execute(){

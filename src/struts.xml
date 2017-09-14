@@ -28,6 +28,9 @@
 
 
 <!-- 管理画面関連 -->
+	<action name="GoManagersTopAction" class="com.internousdev.choitabi.action.GoManagersTopAction" method="execute">
+		<result name="success">kanri_top.jsp</result>
+	</action>
 	<action name="IndicateTourListAction" class="com.internousdev.choitabi.action.IndicateTourListAction" method="execute">
 		<result name="success">kanri_tourList.jsp</result>
 		<result name="error">kanri_tourList.jsp</result>

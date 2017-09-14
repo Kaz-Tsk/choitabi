@@ -88,13 +88,16 @@
     <br>
     <br>
     <br>
-    <a href='<s:url action="GoTourInsertPageAction"></s:url>'>
+    <a href='<s:url action="GoTourInsertPageAction"/>'>
     	<s:text name="lang.kanri_tourList.add_new_tour"/>
-    </a><br>
+    </a>
     <br>
     <br>
-    <s:text name="lang.kanri_tourList.return_top"/>
+    <br>
 
+	<a href='<s:url action="GoManagersTopAction"/>'>
+    <s:text name="lang.kanri_tourList.return_top"/>
+	</a>
 
 
 </body>
