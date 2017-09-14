@@ -20,6 +20,12 @@
 </head>
 
 <body>
+
+<!-- ヘッダー部分------------------------------->
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
 	<h1>管理者画面トップ</h1>
     <hr>
     <br>
