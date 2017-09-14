@@ -21,17 +21,14 @@
 
 </head>
 
+
+
 <body>
-<div class = "header">
-    <div class = "headerLogo">choitabi</div>
-    <div class = "headerMenuBox">
-        <div class = "headerMenu">
-	        choitabiについて　　
-	        Ｑ＆Ａ / お問い合わせ　　
-	        ログイン
-        </div>
-    </div>
-</div>
+
+
+<%@ include file="header.jsp"%>
+
+
 
     <div class="end">お問い合わせ送信完了</div>
     <div class="contact">
@@ -43,18 +40,11 @@
        <h2>ご利用ありがとうございました。</h2>
         </div>
 
-    <div class="top">
-        <a href="">トップに戻る</a>
-    </div>
 
-<div class = "footer">
+        <a href="index.jsp">トップに戻る</a>
 
-    <div class = "ARRLogo">All Rights Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu">会社概要</div>
-        <div class = "footerMenu">利用規約</div>
-    </div>
-    <div class = "clear"></div>
-    </div>
+
+<%@ include file="footer.jsp"%>
+
 </body>
 </html>

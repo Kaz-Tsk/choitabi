@@ -29,10 +29,14 @@
 
 <body>
 
+
+<%@ include file="header.jsp"%>
+
+
     <div class ="header"><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></div>
 
 
-<h1><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></h1>
+    <h1><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></h1>
     <div class = "direction"><s:text name = "lang.contact_kakunin.may_i_send_content"/></div>
 
 
@@ -70,8 +74,7 @@
      <a href="./contact_nyuuryoku.jsp"><s:text name = "lang.contact_kakunin.return_to_input"/></a>
  </center>
 
-
-
+<%@ include file="footer.jsp"%>
 </body>
 
 
