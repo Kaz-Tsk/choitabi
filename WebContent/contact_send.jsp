@@ -28,23 +28,24 @@
 
 <%@ include file="header.jsp"%>
 
+      <table>
+
+             <h1>お問い合わせ送信完了</h1>
+
+             <h2>お問い合わせの送信が完了いたしました。</h2>
+
+              <h2>お問い合わせいただいた内容につきましては、<br>
+                  3営業日以内にご返信させていただきます。</h2>
+
+              <h2>ご利用ありがとうございました。</h2>
+
+      </table>
 
 
-    <div class="end">お問い合わせ送信完了</div>
-    <div class="contact">
-       <h2>お問い合わせの送信が完了いたしました。</h2>
-
-    <div class="notice">お問い合わせいただいた内容につきましては、<br>
-        3営業日以内にご返信させていただきます。</div>
-
-       <h2>ご利用ありがとうございました。</h2>
-        </div>
+      <a href="index.jsp">トップに戻る</a>
 
 
-        <a href="index.jsp">トップに戻る</a>
 
-
-<%@ include file="footer.jsp"%>
 
 </body>
 </html>
