@@ -92,16 +92,20 @@
     <br>
     <br>
     <br>
+<!-- 「ツアーの新規登録」の項目の部分 -->
     <a href='<s:url action="GoTourInsertPageAction"/>'>
     	<s:text name="lang.kanri_tourList.add_new_tour"/>
     </a>
     <br>
     <br>
     <br>
-
+<!-- 「管理ページトップに戻る」の項目の部分 -->
 	<a href='<s:url action="GoManagersTopAction"/>'>
     <s:text name="lang.kanri_tourList.return_top"/>
 	</a>
+	<br>
+	<br>
+	<br>
 
 
 </body>

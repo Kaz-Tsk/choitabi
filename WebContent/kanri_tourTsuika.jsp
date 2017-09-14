@@ -126,8 +126,19 @@
 	<br>
 	<hr>
 	<br>
-		<s:text name="lang.kanri_tourTsuika.return_list"/><br>
+<!-- ↓「ツアー一覧に戻る」の項目 -->
+	<a href='<s:url action="IndicateTourListAction">
+		<s:param name="currentPage" value="1"/>
+		</s:url>'>
+		<s:text name="lang.kanri_tourTsuika.return_list"/>
+	</a>
+	<br>
+    <br>
+    <br>
+<!-- ↓「管理ページトップに戻る」の項目 -->
+	<a href='<s:url action="GoManagersTopAction"/>'>
 		<s:text name="lang.kanri_tourTsuika.return_top"/><br>
+	</a>
 	<br>
 	<br>
 	<br>
