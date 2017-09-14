@@ -59,8 +59,10 @@ public class TourListAction extends ActionSupport {
     /**
      * 実行メソッド
      * @return success or error
+     * @throws InstantiationException
+     * @throws IllegalAccessException
      */
-    public String execute(){
+    public String execute() throws IllegalAccessException, InstantiationException{
         String result=ERROR;
 
         TourListDAO dao =new TourListDAO();

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!-- ↓国際化 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -13,22 +13,20 @@
 	<title>ツアー情報一覧</title>
 	<!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
-	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourList"
- 		var="lang" />
+	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourList" var="lang"/>
  	<!-- CSSの読み込み -->
-	<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
+	<link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
 </head>
 
 <body>
 	<h1>ツアー情報一覧</h1>
-    <hr>
 
 <!-- ↓ツアー名検索の部分です -->
     <s:text name="lang.kanri_tourList.search_tour_by_name"/>
     <form action="IndicateTourListAction">
 		<input type="text" name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
-		<input type="submit" value=<s:text name="lang.kanri_tourList.search"/>>
+		<input type="submit" value="<s:text name='lang.kanri_tourList.search'/>">
 	</form>
 
 <!-- ツアーの情報が表示されるテーブルです -->
@@ -74,7 +72,7 @@
     	＜＜
     </s:else>
 
-    <s:property value="currentPage"></s:property> / <s:property value="maxPage"></s:property>
+    <s:property value="currentPage"/> / <s:property value="maxPage"/>
 
 	<s:if test="currentPage < maxPage">
 	    <a href='
@@ -98,7 +96,7 @@
     </a><br>
     <br>
     <br>
-    <s:text name="lang.kanri_tourList.return_top"/>
+    <s:text name="lang.kanri_tourList.return"/>
 
 
 
