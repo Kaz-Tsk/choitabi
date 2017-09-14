@@ -27,7 +27,7 @@
     <form action="IndicateTourListAction">
 		<input type="text" name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
-		<input type="submit" value="<s:text name='lang.kanri_tourList.search'/>">
+		<input type="submit" value='<s:text name="lang.kanri_tourList.search"/>'>
 	</form>
 
 <!-- ツアーの情報が表示されるテーブルです -->
@@ -58,7 +58,7 @@
 	</table>
     <br>
 
-<!-- ↓ページの「＜＜1/3＞＞」の部分です -->
+<!-- ↓ページの「＜＜2/3＞＞」の部分です -->
 
 	<s:if test="currentPage != 1">
 	    <a href='
@@ -70,7 +70,7 @@
 		</a>
     </s:if>
     <s:else>
-    	＜＜
+    	　　
     </s:else>
 
     <s:property value="currentPage"/> / <s:property value="maxPage"/>
@@ -85,7 +85,7 @@
 	    </a>
     </s:if>
     <s:else>
-    	＞＞
+    	　　
     </s:else>
 
 <!-- ↓テーブル下の、ツアー新規登録やトップ画面に戻るといったメニューの部分です。 -->

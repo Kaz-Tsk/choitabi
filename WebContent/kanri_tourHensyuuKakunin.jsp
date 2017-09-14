@@ -155,9 +155,9 @@
 	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_preview"/></th>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
-	        <td width="300px"><img src='<s:property value="currentImg"/>' height="20%"/></td>
+	        <td width="300px"><img src='<s:property value="currentImg"/>' height="20%" alt="現在の画像"/></td>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td width="300px"><img src='<s:property value = "editImg"/>' height="20%"/></td>
+	        <td width="300px"><img src='<s:property value = "editImg"/>' height="20%" alt="編集後の画像"/></td>
 	    </tr>
 	</table>
 </s:else>
