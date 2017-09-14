@@ -34,7 +34,7 @@
 <div class ="header">お問合せ内容入力</div>
 
 
-<!-- ＊＊＊＊＊＊＊＊＊フォームに入力されたものをSUBMITするとそのままアクションに渡す＊＊＊ ＊＊＊＊＊＊＊-->
+<!-- ＊＊＊＊＊＊＊ｓ：フォームに入力されたものをSUBMIT（送信）すると入力されたものまるごとアクションに渡せる＊＊＊＊＊＊-->
 
 
 <s:form action="ComfirmContactAction" method="post">
@@ -44,11 +44,11 @@
      <div class = "direction">以下のフォームに入力してください<br></div>
 
 
-     <!-- comfirmContactActionから引っ張ってきたエラーメッセージを表示する文 -->
+     <!-- 渡ったアクションでERRORがでたらアクションから引っ張ってきたエラーメッセージを表示する文 -->
      <tr><s:property value="errorMessage"/></tr>
 
 
-     <!-- アクションでSUCCESSが出たら、s:textfield/areaに入力されたものを、そのまま次のページのs:propertyで表示する -->
+     <!-- 渡ったアクションでSUCCESSが出たら、s:textfield/areaに入力されたものを、そのまま次のページのs:propertyで表示する -->
      <tr>
         <th><s:text name = "lang.contact_nyuuryoku.contact_name"/></th>
            <td><s:textfield name = "contact_name" size = "12"></s:textfield></td>
@@ -70,7 +70,7 @@
 </s:form>
 
 
-<!-- ＊＊＊＊＊＊＊＊＊＊＊フォーム終わり＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->>
+<!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊フォーム終わり＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
 
 <br>
 <br>

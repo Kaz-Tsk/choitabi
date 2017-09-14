@@ -39,11 +39,6 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 	private String contact_contents;
 
 	/**
-	 * 登録日
-	 */
-    /*private String registration_date;
-
-	/**
 	 * セッション
 	 */
 	private Map<String, Object> session;

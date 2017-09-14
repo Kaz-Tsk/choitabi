@@ -15,7 +15,7 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>お問合せ内容確認画面</title>
+ <title>お問合せ内容確認画面</title>
 <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
 
 <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
@@ -23,7 +23,6 @@
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
 	<fmt:setBundle basename="com.internousdev.choitabi.property.contact_kakunin"
  		var="lang" />
-
 </head>
 
 
@@ -37,7 +36,7 @@
     <div class = "direction">以下の内容で送信します。よろしいですか？<br>(※配色等は仮です)</div>
 
 
-
+<!-- 入力フォームで入力されたもの(s:textfield/area)を、s:propertyでそのまま表示（表示するだけ） -->
 						<table>
 
 							<tr>
@@ -55,7 +54,7 @@
 						</table>
 
 
-
+<!-- nyuuryoku.jspで入力されたもの(s:textfield/area使用)を、s:paramでデータもってきて、送信ボタンを押すとアクションに渡される -->>
 
  <a href='<s:url action="CompleteContactAction">
 
