@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 
 
@@ -17,7 +17,7 @@
 
 <!-- 国際化：言語コード(ja/en)の取得とプロパティファイルの読み込み -->
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
-	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_toiawaseKakunin"
+	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_toiawasekakunin"
  		var="lang" />
 
 
@@ -44,7 +44,7 @@
 
 			 <input type="text" name="searchName" id="searchName" value="<s:property value="searchName"/>">
 			 <s:hidden name = "pageNum" value="1"/>
-             <input type="submit" value=<s:text name = "lang.struts.search"/>>
+             <input type="submit" value=<s:text name = "lang.kanri_toiawaseKakunin.search"/>>
 
 		</form>
 
@@ -55,9 +55,9 @@
 
 						<table>
 						<tr>
-							<th><s:text name="lang.struts.contact_name"/> | </th>
-							<th><s:text name="lang.struts.contact_mailAddress"/> | </th>
-							<th><s:text name="lang.struts.contact_contents"/> | </th>
+							<th><s:text name="lang.kanri_toiawaseKakunin.contact_name"/> | </th>
+							<th><s:text name="lang.kanri_toiawaseKakunin.contact_mailaddress"/> | </th>
+							<th><s:text name="lang.kanri_toiawaseKakunin.contact_contents"/> | </th>
 						</tr>
 						<s:iterator value="displayList">
 						<tr>
@@ -83,7 +83,7 @@
                     <s:else>
                     <a href='<s:url action="KanriContactAction">
 					<s:param name="pageNum" value="pageNum+1"/>
-					</s:url>'><s:text name="lang.struts.next"/></a>
+					</s:url>'><s:text name="lang.kanri_toiawaseKakunin.next"/></a>
                     </s:else>
 
 <!-- 前へを使うページ -->
@@ -93,7 +93,7 @@
                     <s:else>
 					<a href='<s:url action="KanriContactAction">
 					<s:param name="pageNum" value="pageNum-1"/>
-					</s:url>'><s:text name="lang.struts.back"/></a>
+					</s:url>'><s:text name="lang.kanri_toiawaseKakunin.back"/></a>
 					</s:else>
 
 
