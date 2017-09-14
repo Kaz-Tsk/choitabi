@@ -122,13 +122,13 @@
 	    </tr>
 	    <tr>
 	        <th>画像URL</th>
-	        <td>変更前</td><td><s:property value="currentImg"/></td>
-	        <td>変更後</td><td><s:property value = "editImg"/></td>
+	        <td>変更前</td><td width="200px"><s:property value="currentImg"/></td>
+	        <td>変更後</td><td width="200px"><s:property value = "editImg"/></td>
 	    </tr>
 	    <tr>
 	        <th>画像プレビュー</th>
-	        <td>変更前</td><td><img src=<s:property value="currentImg"/>></td>
-	        <td>変更後</td><td><img src=<s:property value = "editImg"/>></td>
+	        <td>変更前</td><td width="300px"><img src=<s:property value="currentImg"/> height="20%"/></td>
+	        <td>変更後</td><td width="300px"><img src=<s:property value = "editImg"/> height="20%"/></td>
 	    </tr>
 	</table>
 </s:else>

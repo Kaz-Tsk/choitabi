@@ -112,7 +112,7 @@
 	        	画像プレビュー
 	        </th>
 	        <td>
-	        	<img src=<s:property value="newImg"/>>
+	        	<img src=<s:property value="newImg"/> height="20%"/>
 	        </td>
 	    </tr>
 	</table>
