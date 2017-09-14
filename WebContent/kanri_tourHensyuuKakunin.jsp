@@ -1,11 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<!-- ↓国際化 -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!-- ↑国際化 -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ツアー編集内容確認</title>
+	<!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
+	<fmt:setLocale value="${pageContext.request.locale.language}"/>
+	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourHensyuuKakunin"
+ 		var="lang" />
+ 	<!-- CSSの読み込み -->
 <link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
 </head>
 <body>
@@ -15,10 +24,10 @@
 
 <!-- 画面上部に表示するメッセージの部分------------------------------------------------ -->
 <s:if test="deleteCheck.equals('true')">
-   <font color = "red">ツアーの削除を行います。よろしいですか？</font>
+   <font color = "red"><s:text name="lang.kanri_tourHensyuuKakunin.direction_for_delete"/></font>
 </s:if>
 <s:else>
-    以下の内容でツアーを編集します。よろしいですか？
+    <s:text name="lang.kanri_tourHensyuuKakunin.direction_for_edit"/>
 </s:else>
     <br>
     <hr>
@@ -28,7 +37,6 @@
 <!-- 以下、画面真ん中に表示するテーブルの部分------------------------------------------ -->
 
 <s:if test="deleteCheck.equals('true')">
-削除するツアー
 	<table>
 	    <tr>
 	        <tr>
