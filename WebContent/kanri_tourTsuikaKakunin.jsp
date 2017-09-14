@@ -138,7 +138,8 @@
 <br>
 <hr>
 <br>
-<!-- ↓「編集画面に戻る」の項目 -->
+<!-- ↓「入力画面に戻る」の項目 ※別のアクションの同名の変数に値を移しています-->
+<!-- 入力済みの情報が残るように、GoTourInsertPageActionにも「new」変数を用意します。 -->
    <a href=
 	    '<s:url action="GoTourInsertPageAction">
 		    <s:param name="newTourId" value="newTourId"/>
@@ -157,7 +158,9 @@
 
 
 <!-- ↓「管理トップページに戻る」の項目 -->
-	<s:text name="lang.kanri_tourTsuikaKakunin.return_top"/><br>
+	<a href='<s:url action="GoManagersTopAction"/>'>
+	<s:text name="lang.kanri_tourTsuikaKakunin.return_top"/>
+	</a>
 <br>
 <br>
 <br>

@@ -189,8 +189,42 @@
 
 <hr>
 <br>
+<!-- ↓「入力画面に戻る」の項目部分 ※別のアクションの同名の変数に値を移しています-->
+<!-- 入力済みの情報が残るように、EditTourActionにも「edit」変数を用意します。 -->
+   <a href=
+	    '<s:url action="EditTourAction">
+
+	    	<s:param name="currentTourId" value="currentTourId"/>
+		    <s:param name="currentTourName" value = "currentTourName"/>
+		    <s:param name="currentPrice" value = "currentPrice"/>
+		    <s:param name="currentPersons" value = "currentPersons"/>
+		    <s:param name="currentDeparture" value = "currentDeparture"/>
+		    <s:param name="currentRegion" value = "currentRegion"/>
+		    <s:param name="currentPrefectures" value="currentPrefectures"/>
+		    <s:param name="currentTheme" value="currentTheme"/>
+		    <s:param name="currentComment" value="currentComment"/>
+			<s:param name="currentImg" value="currentImg"/>
+
+		    <s:param name="editTourId" value="editTourId"/>
+		    <s:param name="editTourName" value = "editTourName"/>
+		    <s:param name="editPrice" value = "editPrice"/>
+		    <s:param name="editPersons" value = "editPersons"/>
+		    <s:param name="editDeparture" value = "editDeparture"/>
+		    <s:param name="editRegion" value = "editRegion"/>
+		    <s:param name="editPrefectures" value="editPrefectures"/>
+		    <s:param name="editTheme" value="editTheme"/>
+		    <s:param name="editComment" value="editComment"/>
+			<s:param name="editImg" value="editImg"/>
+	    </s:url>'>
     <s:text name="lang.kanri_tourHensyuuKakunin.return_input_page"/><br>
+    </a>
+
+
+<!-- 「管理トップページに戻る」の項目部分 -->
+	<a href='<s:url action="GoManagersTopAction"/>'>
     <s:text name="lang.kanri_tourHensyuuKakunin.return_top"/><br>
+	</a>
+
 <br>
 <br>
 <br>
