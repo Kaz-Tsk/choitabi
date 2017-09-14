@@ -3,12 +3,13 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+
+
 <!doctype html>
 <html lang="ja">
 
-
 <head>
-
 
   <meta charset="UTF-8">
   <link rel="stylesheet"type="text/css"href="./css/kanri_toiawasekakunin.css">
@@ -25,8 +26,7 @@
 
 <body>
 
-<h1>
-    お問合せ確認</h1>
+<h1>お問合せ確認</h1>
 
 
 
@@ -48,16 +48,16 @@
 
 		</form>
 
-		</div>
+</div>
 
 
 
 
 						<table>
 						<tr>
-							<th><s:text name="lang.kanri_tourList.contact_name"/> | </th>
-							<th><s:text name="lang.kanri_tourList.contact_mailAddress"/> | </th>
-							<th><s:text name="lang.kanri_tourList.contact_contents"/> | </th>
+							<th><s:text name="lang.struts.contact_name"/> | </th>
+							<th><s:text name="lang.struts.contact_mailAddress"/> | </th>
+							<th><s:text name="lang.struts.contact_contents"/> | </th>
 						</tr>
 						<s:iterator value="displayList">
 						<tr>
@@ -83,7 +83,7 @@
                     <s:else>
                     <a href='<s:url action="KanriContactAction">
 					<s:param name="pageNum" value="pageNum+1"/>
-					</s:url>'>次へ</a>
+					</s:url>'><s:text name="lang.struts.next"/></a>
                     </s:else>
 
 <!-- 前へを使うページ -->
@@ -93,10 +93,8 @@
                     <s:else>
 					<a href='<s:url action="KanriContactAction">
 					<s:param name="pageNum" value="pageNum-1"/>
-					</s:url>'>前へ</a>
+					</s:url>'><s:text name="lang.struts.back"/></a>
 					</s:else>
-
-
 
 
 </s:if>
@@ -107,11 +105,6 @@
 
 
 
-</div>
-
-
-
-
-
 </body>
 </html>
+
