@@ -12,33 +12,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
-<head>
+       <head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></title>
-    <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
+             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+             <title><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></title>
+             <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
 
-    <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
+             <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
 
-	<fmt:setLocale value="${pageContext.request.locale.language}"/>
-	<fmt:setBundle basename="com.internousdev.choitabi.property.contact_kakunin"
- 		var="lang" />
-</head>
-
-
-
-    <body>
+	         <fmt:setLocale value="${pageContext.request.locale.language}"/>
+	         <fmt:setBundle basename="com.internousdev.choitabi.property.contact_kakunin"
+ 		      var="lang" />
+       </head>
 
 
-            <%@ include file="header.jsp"%>
+
+       <body>
 
 
-            <div class ="header"><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></div>
-            <h1><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></h1>
-            <div class = "direction"><s:text name = "lang.contact_kakunin.may_i_send_content"/></div>
+             <%@ include file="header.jsp"%>
+
+             <h1><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></h1>
+             <div class = "direction"><s:text name = "lang.contact_kakunin.may_i_send_content"/></div>
 
 
-<!-- 入力フォームで入力されたもの(s:textfield/area)を、s:propertyでそのまま表示（表示するだけ） -->
+             <!-- 入力フォームで入力されたもの(s:textfield/area)を、s:propertyでそのまま表示（表示するだけ） -->
 			        <table>
 
 							<tr>

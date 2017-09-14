@@ -10,9 +10,7 @@ pageEncoding="UTF-8"%>
        <head>
 
              <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-             <link rel="stylesheet" type="text/css" href="css/contactsend.css">
-             <!-- ページのタイトル↓↓ -->
-             <title><s:text name = "lang.contact_send.contact_transmission_completion"/></title>
+             <link href="css/contactsend.css" rel="stylesheet" type="text/css">
 
              <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
              <fmt:setLocale value="${pageContext.request.locale.language}"/>
@@ -25,8 +23,8 @@ pageEncoding="UTF-8"%>
 
        <body>
 
+               <%@ include file="header.jsp"%>
 
-              <%@ include file="header.jsp"%>
 
               <table>
                       <h1><s:text name = "lang.contact_send.contact_transmission_completion"/></h1>
