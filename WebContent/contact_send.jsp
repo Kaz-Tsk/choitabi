@@ -1,51 +1,44 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 
-<head>
+       <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>お問い合わせ送信完了</title>
- <link rel="stylesheet" type="text/css" href="css/contactsend.css">
+             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+             <link rel="stylesheet" type="text/css" href="css/contactsend.css">
+             <!-- ページのタイトル↓↓ -->
+             <title><s:text name = "lang.contact_send.contact_transmission_completion"/></title>
 
-<!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
+             <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
+             <fmt:setLocale value="${pageContext.request.locale.language}"/>
+             <fmt:setBundle basename="com.internousdev.choitabi.property.contact_send"
+             var="lang" />
 
-<fmt:setLocale value="${pageContext.request.locale.language}"/>
-<fmt:setBundle basename="com.internousdev.choitabi.property.contact_send"
- var="lang" />
-
-</head>
-
-
-
-<body>
-
-
-<%@ include file="header.jsp"%>
-
-      <table>
-
-             <h1>お問い合わせ送信完了</h1>
-
-             <h2>お問い合わせの送信が完了いたしました。</h2>
-
-              <h2>お問い合わせいただいた内容につきましては、<br>
-                  3営業日以内にご返信させていただきます。</h2>
-
-              <h2>ご利用ありがとうございました。</h2>
-
-      </table>
-
-
-      <a href="index.jsp">トップに戻る</a>
+       </head>
 
 
 
+       <body>
 
-</body>
+
+              <%@ include file="header.jsp"%>
+
+              <table>
+                      <h1><s:text name = "lang.contact_send.contact_transmission_completion"/></h1>
+                      <h2><s:text name = "lang.contact_send.contact_transmission_completion_simasita"/></h2>
+                      <h2>お問い合わせいただいた内容につきましては、<br>
+                          3営業日以内にご返信させていただきます。</h2>
+                      <h2><s:text name = "lang.contact_send.thankyou"/></h2>
+              </table>
+
+                       <a href="index.jsp"><s:text name = "lang.contact_send.return_to_top"/></a>
+
+
+       </body>
+
 </html>

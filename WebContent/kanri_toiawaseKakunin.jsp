@@ -11,13 +11,13 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <link rel="stylesheet"type="text/css"href="./css/kanri_toiawasekakunin.css">
+      <meta charset="UTF-8">
+      <link rel="stylesheet"type="text/css"href="./css/kanri_toiawasekakunin.css">
 
 
-<!-- 国際化：言語コード(ja/en)の取得とプロパティファイルの読み込み -->
-	<fmt:setLocale value="${pageContext.request.locale.language}"/>
-	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_toiawasekakunin"
+      <!-- 国際化：言語コード(ja/en)の取得とプロパティファイルの読み込み -->
+	  <fmt:setLocale value="${pageContext.request.locale.language}"/>
+	  <fmt:setBundle basename="com.internousdev.choitabi.property.kanri_toiawasekakunin"
  		var="lang" />
 
 
@@ -26,53 +26,48 @@
 
 <body>
 
-<h1>お問合せ確認</h1>
+       <h1>お問合せ確認</h1>
 
 
 
 
-			<!-- お問い合わせ内容を表示するテーブル -->
-<div class="itemdisplay">
-							<th style="width: 10px;"></th>
-							<th style="width: 10px;"></th>
-							<th style="width: 80px;"></th>
+	   <!-- ここからイテレータ開始(検索) -->
 
+		               <form action="KanriContactAction" method="post">
 
-						<!-- ここからイテレータ開始 -->
+			                <input type="text" name="searchName" id="searchName" value="<s:property value="searchName"/>">
+			                <s:hidden name = "pageNum" value="1"/><!-- 1ページ目だよって検索したあとのページに伝える -->
+                            <input type="submit" value=<s:text name = "lang.kanri_toiawaseKakunin.search"/>>
 
-		<form action="KanriContactAction" method="post">
-
-			 <input type="text" name="searchName" id="searchName" value="<s:property value="searchName"/>">
-			 <s:hidden name = "pageNum" value="1"/>
-             <input type="submit" value=<s:text name = "lang.kanri_toiawaseKakunin.search"/>>
-
-		</form>
-
-</div>
+		               </form>
 
 
 
+       <!-- 全データ表示、検索結果表示 するところ-->
 
 						<table>
-						<tr>
-							<th><s:text name="lang.kanri_toiawaseKakunin.contact_name"/> | </th>
-							<th><s:text name="lang.kanri_toiawaseKakunin.contact_mailaddress"/> | </th>
-							<th><s:text name="lang.kanri_toiawaseKakunin.contact_contents"/> | </th>
-						</tr>
-						<s:iterator value="displayList">
-						<tr>
-							<td class="text-center"><s:property value="contact_name" /></td>
-							<td class="text-center"><s:property value="contact_mailAddress" /></td>
-							<td class="text-center"><s:property value="contact_contents" /></td>
-						</tr>
-						</s:iterator>
+						       <tr>
+							       <th><s:text name="lang.kanri_toiawaseKakunin.contact_name"/> | </th>
+							       <th><s:text name="lang.kanri_toiawaseKakunin.contact_mailaddress"/> | </th>
+							       <th><s:text name="lang.kanri_toiawaseKakunin.contact_contents"/> | </th>
+						       </tr>
+
+						       <s:iterator value="displayList">
+						       <tr>
+							       <td class="text-center"><s:property value="contact_name" /></td>
+							       <td class="text-center"><s:property value="contact_mailAddress" /></td>
+							       <td class="text-center"><s:property value="contact_contents" /></td>
+						       </tr>
+						       </s:iterator>
 						</table>
-						現在のページ数…<s:property value="pageNum"/><br>
-						最大ページ数…<s:property value="maxPage"/>
+
+
+						       現在のページ数…<s:property value="pageNum"/><br>
+						       最大ページ数…<s:property value="maxPage"/>
 
 
 
-<!--＊＊＊ ページネーションの記述始まり＊＊＊ -->>
+<!--＊＊＊ ページネーションの記述始まり＊＊＊ -->
 
 <s:if test= "{ pageNum > 0 }">
 
