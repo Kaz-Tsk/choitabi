@@ -16,7 +16,7 @@
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_top"
  		var="lang" />
 	<!-- CSSの読み込み -->
-	<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
+	<link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
 </head>
 
 <body>

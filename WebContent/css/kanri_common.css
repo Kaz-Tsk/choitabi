@@ -33,7 +33,18 @@ td{
 	padding-bottom:8px;
 }
 
-a {
+
+a:link{
 	text-decoration : none;
-	color : dimgrey;
+	color:dimgrey;
+	font-weight:bold;
 }
+
+a:visited{
+	color:dimgrey;
+}
+
+a:hover{
+	color:orange;
+}
+
