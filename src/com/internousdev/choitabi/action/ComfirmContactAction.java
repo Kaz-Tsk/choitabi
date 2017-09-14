@@ -59,7 +59,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
 
     	if(contact_name.equals("")){
-            errorMessage="名前が入力されていません";
+            errorMessage="お名前が入力されていません";
     		return ERROR;}
 
     	if(contact_mailAddress.equals("")){

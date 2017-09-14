@@ -27,21 +27,19 @@
 
 
 
-<body>
+    <body>
 
 
-<%@ include file="header.jsp"%>
+            <%@ include file="header.jsp"%>
 
 
-    <div class ="header"><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></div>
-
-
-    <h1><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></h1>
-    <div class = "direction"><s:text name = "lang.contact_kakunin.may_i_send_content"/></div>
+            <div class ="header"><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></div>
+            <h1><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></h1>
+            <div class = "direction"><s:text name = "lang.contact_kakunin.may_i_send_content"/></div>
 
 
 <!-- 入力フォームで入力されたもの(s:textfield/area)を、s:propertyでそのまま表示（表示するだけ） -->
-						<table>
+			        <table>
 
 							<tr>
 								<td><s:property value="contact_name" /></td>
@@ -55,27 +53,26 @@
 								<td><s:property value="contact_contents" /></td>
                             </tr>
 
-						</table>
+					</table>
 
 
 <!-- nyuuryoku.jspで入力されたもの(s:textfield/area使用)を、s:paramでデータもってきて、送信ボタンを押すとアクションに渡される -->
 
-          <a href='<s:url action="CompleteContactAction">
+                    <a href='<s:url action="CompleteContactAction">
+                             <s:param name="contact_name" value="contact_name"/>
+   	                         <s:param name="contact_mailAddress" value="contact_mailAddress"/>
+                             <s:param name="contact_contents" value="contact_contents"/>
+                             </s:url>'>
+                             <s:text name = "lang.contact_kakunin.submit"/>
+                     </a>
 
-   	        <s:param name="contact_name" value="contact_name"/>
-   	        <s:param name="contact_mailAddress" value="contact_mailAddress"/>
-            <s:param name="contact_contents" value="contact_contents"/>
 
-          </s:url>'><s:text name = "lang.contact_kakunin.submit"/></a>
+                     <center>
+                             <a href="index.jsp"><s:text name = "lang.contact_kakunin.return_to_top"/></a>
+                             <a href="./contact_nyuuryoku.jsp"><s:text name = "lang.contact_kakunin.return_to_input"/></a>
+                     </center>
 
-
-<center>
-     <a href="index.jsp"><s:text name = "lang.contact_kakunin.return_to_top"/></a>
-     <a href="./contact_nyuuryoku.jsp"><s:text name = "lang.contact_kakunin.return_to_input"/></a>
- </center>
-
-<%@ include file="footer.jsp"%>
-</body>
+      </body>
 
 
 </html>

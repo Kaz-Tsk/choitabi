@@ -29,63 +29,63 @@
 
 
 
-<body>
+    <body>
 
-<%@ include file="header.jsp"%>
-
-      <div class ="header"><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></div>
+           <%@ include file="header.jsp"%>
 
 
 <!-- ＊＊＊＊＊＊＊ｓ：フォームに入力されたものをSUBMIT（送信）すると入力されたものまるごとアクションに渡せる＊＊＊＊＊＊-->
 
 
-   <s:form action="ComfirmContactAction" method="post">
+          <s:form action="ComfirmContactAction" method="post">
 
 
-           <h1><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></h1>
-           <div class = "direction"><s:text name = "lang.contact_nyuuryoku.please_input_contents"/><br></div>
+                   <h1><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></h1>
+                   <div class = "direction"><s:text name = "lang.contact_nyuuryoku.please_input_contents"/><br></div>
 
 
      <!-- 渡ったアクションでERRORがでたらアクションから引っ張ってきたエラーメッセージを表示する文 -->
-           <tr><s:property value="errorMessage"/></tr>
+                   <div class="error"><s:property value="errorMessage"/></div>
 
 
      <!-- 渡ったアクションでSUCCESSが出たら、s:textfield/areaに入力されたものを、そのまま次のページのs:propertyで表示する -->
-           <tr>
-               <th><s:text name = "lang.contact_nyuuryoku.contact_name"/></th>
-               <td><s:textfield name = "contact_name" size = "12"></s:textfield></td>
-           </tr>
+                   <tr>
+                       <th><s:text name = "lang.contact_nyuuryoku.contact_name"/></th>
+                       <td><s:textfield name = "contact_name" size = "12"></s:textfield></td>
+                   </tr>
 
-           <tr>
-               <th><s:text name = "lang.contact_nyuuryoku.contact_mailaddress"/></th>
-               <td colspan = "4"><s:textfield  name="contact_mailAddress" size = "12"></s:textfield></td>
-           </tr>
+                   <tr>
+                   <th><s:text name = "lang.contact_nyuuryoku.contact_mailaddress"/></th><td colspan = "4">
+                       <s:textfield  name="contact_mailAddress" size = "12"></s:textfield></td>
+                   </tr>
 
-            <tr>
-                <th><s:text name = "lang.contact_nyuuryoku.contact_contents"/></th><td colspan = "4">
-                <s:textarea name="contact_contents" rows="10" cols="45"></s:textarea>
-            </tr>
+                   <tr>
+                   <th><s:text name = "lang.contact_nyuuryoku.contact_contents"/></th><td colspan = "4">
+                       <s:textarea name="contact_contents" rows="10" cols="45"></s:textarea>
+                   </tr>
 
 
-     <center><input type = "submit" value="<s:text name = "lang.contact_nyuuryoku.next_to_confirmation"/>" ></input></center>
+                   <center>
+                           <input type = "submit" value="<s:text name = "lang.contact_nyuuryoku.next_to_confirmation"/>" ></input>
+                   </center>
 
-  </s:form>
+          </s:form>
 
 
 <!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊フォーム終わり＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
 
-<br>
-<br>
-<br>
+           <br>
+           <br>
+           <br>
 
 
- <center>
-     <a href="index.jsp"><s:text name = "lang.contact_nyuuryoku.return_to_top"/></a>
- </center>
+           <center>
+           <a href="index.jsp"><s:text name = "lang.contact_nyuuryoku.return_to_top"/></a>
+           </center>
 
-<%@ include file="footer.jsp"%>
 
-</body>
+
+    </body>
 
 
 </html>
