@@ -112,12 +112,18 @@
 
     <br>
     <br>
-    <s:text name="lang.kanri_tourHensyuu.return_list"/>
-    <br>
-    <s:text name="lang.kanri_tourHensyuu.return_top"/>
-    <br>
-    <br>
+    <a href='<s:url action="IndicateTourListAction">
+    	<s:param name="currentPage" value="1"/></s:url>'>
+    	<s:text name="lang.kanri_tourHensyuu.return_list"/>
+    </a>
 
+    <br>
+    <a href='<s:url action="GoManagersTopAction"/>'>
+    <s:text name="lang.kanri_tourHensyuu.return_top"/>
+    </a>
+    <br>
+    <br>
+	<br>
 
 
 
