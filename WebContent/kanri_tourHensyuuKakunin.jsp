@@ -40,103 +40,124 @@
 	<table>
 	    <tr>
 	        <tr>
-	        <th>ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.tour_id"/></th>
+	        <td colspan="4"><s:property value ="currentTourId"/></td>
 	    </tr>
 	    <tr>
-	        <th>ツアー名</th>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.tour_name"/></th>
 	        <td><s:property value = "currentTourName"/></td>
 	    </tr>
 	    <tr>
-	        <th>価格</th>
-	        <td><s:property value="currentPrice"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.price"/></th>
+	        <td><s:property value="currentPrice"/><s:text name="lang.kanri_tourHensyuuKakunin.yen"/></td>
 	    </tr>
 	    <tr>
-	        <th>定員</th>
-	        <td><s:property value="currentPersons"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.persons"/></th>
+	        <td><s:property value="currentPersons"/><s:text name="lang.kanri_tourHensyuuKakunin.persons_number"/></td>
 	    </tr>
 	    <tr>
-	        <th>出発地</th>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.departure"/></th>
 	        <td><s:property value="currentDeparture"/></td>
 	    </tr>
 	    <tr>
-	        <th>エリア</th>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.region"/></th>
 	        <td><s:property value="currentRegion"/></td>
 	    </tr>
 	    <tr>
-	        <th>都道府県</th>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.prefectures"/></th>
 	        <td><s:property value="currentPrefectures"/></td>
 	    </tr>
 	    <tr>
-	        <th>テーマ</th>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.theme"/></th>
 	        <td><s:property value="currentTheme"/></td>
 	    </tr>
 	    <tr>
-	        <th>コメント</th>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.comment"/></th>
 	        <td width="200px"><font size="2px"><s:property value="currentComment"/></font></td>
 	    </tr>
 	    <tr>
-	        <th>画像URL</th>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_url"/></th>
 	        <td><s:property value="currentImg"/></td>
 	    </tr>
 	</table>
 </s:if>
 
 <s:else>
-	変更後のツアー情報
 	<table>
 	    <tr>
 	        <tr>
-	        <th>ツアーID</th><td colspan="4"><s:property value ="currentTourId"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_url"/></th>
+	        <td colspan="4"><s:property value ="currentTourId"/></td>
 	    </tr>
 	    <tr>
-	        <th>ツアー名</th>
-	        <td>変更前</td><td><s:property value = "currentTourName"/></td>
-	        <td>変更後</td><td><s:property value = "editTourName"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.tour_name"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td><s:property value = "currentTourName"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td><s:property value = "editTourName"/></td>
 	    </tr>
 	    <tr>
-	        <th>価格</th>
-	        <td>変更前</td><td><s:property value="currentPrice"/></td>
-	        <td>変更後</td><td><s:property value = "EditPrice"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.price"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td><s:property value="currentPrice"/><s:text name="lang.kanri_tourHensyuuKakunin.yen"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td><s:property value = "EditPrice"/><s:text name="lang.kanri_tourHensyuuKakunin.yen"/></td>
 	    </tr>
 	    <tr>
-	        <th>定員</th>
-	        <td>変更前</td><td><s:property value="currentPersons"/></td>
-	        <td>変更後</td><td><s:property value = "editPersons"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.persons"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td><s:property value="currentPersons"/><s:text name="lang.kanri_tourHensyuuKakunin.persons_number"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td><s:property value = "editPersons"/><s:text name="lang.kanri_tourHensyuuKakunin.persons_number"/></td>
 	    </tr>
 	    <tr>
-	        <th>出発地</th>
-	        <td>変更前</td><td><s:property value="currentDeparture"/></td>
-	        <td>変更後</td><td><s:property value = "editDeparture"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.departure"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td><s:property value="currentDeparture"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td><s:property value = "editDeparture"/></td>
 	    </tr>
 	    <tr>
-	        <th>エリア</th>
-	        <td>変更前</td><td><s:property value="currentRegion"/></td>
-	        <td>変更後</td><td><s:property value = "editRegion"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.region"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td><s:property value="currentRegion"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td><s:property value = "editRegion"/></td>
 	    </tr>
 	    <tr>
-	        <th>都道府県</th>
-	        <td>変更前</td><td><s:property value="currentPrefectures"/></td>
-	        <td>変更後</td><td><s:property value = "editPrefectures"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.prefectures"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td><s:property value="currentPrefectures"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td><s:property value = "editPrefectures"/></td>
 	    </tr>
 	    <tr>
-	        <th>テーマ</th>
-	        <td>変更前</td><td><s:property value="currentTheme"/></td>
-	        <td>変更後</td><td><s:property value = "editTheme"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.theme"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td><s:property value="currentTheme"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td><s:property value = "editTheme"/></td>
 	    </tr>
 	    <tr>
-	        <th>コメント</th>
-	        <td>変更前</td><td width="200px"><font size = "2px"><s:property value="currentComment"/></font></td>
-	        <td>変更後</td><td width="200px"><font size = "2px"><s:property value="editComment"/></font></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.comment"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td width="200px"><font size = "2px"><s:property value="currentComment"/></font></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td width="200px"><font size = "2px"><s:property value="editComment"/></font></td>
 	    </tr>
 	    <tr>
-	        <th>画像URL</th>
-	        <td>変更前</td><td width="200px"><s:property value="currentImg"/></td>
-	        <td>変更後</td><td width="200px"><s:property value = "editImg"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_url"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td width="200px"><s:property value="currentImg"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td width="200px"><s:property value = "editImg"/></td>
 	    </tr>
 	    <tr>
-	        <th>画像プレビュー</th>
-	        <td>変更前</td><td width="300px"><img src=<s:property value="currentImg"/> height="20%"/></td>
-	        <td>変更後</td><td width="300px"><img src=<s:property value = "editImg"/> height="20%"/></td>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_preview"/></th>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
+	        <td width="300px"><img src=<s:property value="currentImg"/> height="20%"/></td>
+	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
+	        <td width="300px"><img src=<s:property value = "editImg"/> height="20%"/></td>
 	    </tr>
 	</table>
 </s:else>
@@ -160,7 +181,7 @@
 			<s:param name="editImg" value="editImg"/>
 		    <s:param name="deleteCheck" value="deleteCheck"/>
 	    </s:url>'>
-    操作を完了する
+    <s:text name="lang.kanri_tourHensyuuKakunin.complete" />
     </a>
 <br>
 
@@ -168,8 +189,8 @@
 
 <hr>
 <br>
-    編集画面に戻る<br>
-    取り扱いツアー一覧に戻る<br>
+    <s:text name="lang.kanri_tourHensyuuKakunin.return_input_page"/><br>
+    <s:text name="lang.kanri_tourHensyuuKakunin.return_top"/><br>
 <br>
 <br>
 <br>
