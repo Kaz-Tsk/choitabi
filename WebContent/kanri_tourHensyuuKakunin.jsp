@@ -155,9 +155,9 @@
 	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_preview"/></th>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
-	        <td width="300px"><img src=<s:property value="currentImg"/> height="20%"/></td>
+	        <td width="300px"><img src='<s:property value="currentImg"/>' height="20%"/></td>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td width="300px"><img src=<s:property value = "editImg"/> height="20%"/></td>
+	        <td width="300px"><img src='<s:property value = "editImg"/>' height="20%"/></td>
 	    </tr>
 	</table>
 </s:else>
@@ -167,6 +167,7 @@
 
 <!-- 画面下部のメニュー画面------------------------------------------------------- -->
 <br>
+<!-- 「完了」の項目 -->
     <a href=
 	    '<s:url action="UpdateTourAction">
 		    <s:param name="editTourId" value="currentTourId"/>
@@ -184,10 +185,11 @@
     <s:text name="lang.kanri_tourHensyuuKakunin.complete" />
     </a>
 <br>
-
-
+<br>
 
 <hr>
+
+
 <br>
 <!-- ↓「入力画面に戻る」の項目部分 ※別のアクションの同名の変数に値を移しています-->
 <!-- 入力済みの情報が残るように、EditTourActionにも「edit」変数を用意します。 -->
@@ -218,13 +220,14 @@
 	    </s:url>'>
     <s:text name="lang.kanri_tourHensyuuKakunin.return_input_page"/><br>
     </a>
-
+<br>
+<br>
+<br>
 
 <!-- 「管理トップページに戻る」の項目部分 -->
 	<a href='<s:url action="GoManagersTopAction"/>'>
     <s:text name="lang.kanri_tourHensyuuKakunin.return_top"/><br>
 	</a>
-
 <br>
 <br>
 <br>
