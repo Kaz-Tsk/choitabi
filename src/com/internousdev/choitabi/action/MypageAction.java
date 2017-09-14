@@ -24,83 +24,84 @@ public class MypageAction extends ActionSupport implements SessionAware {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * session情報
+	 * session
 	 */
-	private Map<String,Object> session;
+	private Map<String,Object>session;
 
 	/**
-	 * ユーザーリスト
+	 * 	ユーザーリスト
 	 */
 	private ArrayList<MypageDTO> User = new ArrayList<MypageDTO>();
 
 	/**
-	 * ユーザーID
+	 * userId
 	 */
 	private int userId;
 
 	/**
 	 * ユーザー情報を表示するための実行メソッド
-	 * @author KAZUYUKI TASAKI
-	 * @return ユーザー情報取得でSUCCESS 失敗でERROR
+	 * @return ユーザー情報取得でSUCCESS　失敗でERROR
 	 */
 	public String execute(){
 		if(session.get("userId")==null){
 			return ERROR;
 		}
-
-		/**
-		 * sessionからユーザーIDを取得
-		 */
 		userId = (int)session.get("userId");
-		MypageDAO mypagedao = new MypageDAO();
+		MypageDAO dao = new MypageDAO();
 
-		User = mypagedao.select(userId);
+		User = dao.select(userId);
 
 		if(User.size()==0){
-
 			return ERROR;
+
 		}else{
 			return SUCCESS;
 		}
 	}
 
 	/**
-	 * sessionを取得
+	 * session取得
+	 * @return session
 	 */
-	public Map<String,Object> getSession(){
+	public Map<String,Object>getSession(){
 		return session;
 	}
 
 	/**
-	 * sessionを格納
+	 * session格納
+	 * @param session
 	 */
-	public void setSession(Map<String,Object> session){
+	public void setSession(Map<String,Object>session){
 		this.session = session;
 	}
 
 	/**
-	 * ユーザーリストを取得
+	 * ユーザーリスト取得
+	 * @return User
 	 */
-	public ArrayList<MypageDTO>getUser(){
+	public ArrayList<MypageDTO> getUser(){
 		return User;
 	}
 
 	/**
-	 * ユーザーリストを格納
+	 * ユーザーリスト格納
+	 * @param User
 	 */
-	public void setUserList(ArrayList<MypageDTO> userList){
-		User = userList;
+	public void setUser(ArrayList<MypageDTO> userList){
+		User =userList;
 	}
 
 	/**
-	 * ユーザーIDを取得
+	 * userId取得
+	 * @return userId
 	 */
 	public int getUserId(){
 		return userId;
 	}
 
 	/**
-	 * ユーザーIDを格納
+	 * userId格納
+	 * @param userId
 	 */
 	public void setUserId(int userId){
 		this.userId = userId;

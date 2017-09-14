@@ -15,24 +15,27 @@
 	<div class="mypage-container">
 		<h2>登録者情報</h2>
 			<div class="admin-param">
+				<s:action var="select" name="MypageAction"/>
+				<s:iterator value="#select.User">
 				<table border=1>
 					<tr>
 						<th>名前</th>
-						<td>name</td>
+						<td><s:property value="familyNameKanji"/><s:property value="givenNameKanji"/></td>
 					</tr>
 					<tr>
 						<th>住所</th>
-						<td>address</td>
+						<td><s:property value="address"/></td>
 					</tr>
 					<tr>
 						<th>メールアドレス</th>
-						<td>mail address</td>
+						<td><s:property value="mailAddress"/></td>
 					</tr>
 					<tr>
 						<th>電話番号</th>
-						<td>tel number</td>
+						<td><s:property value="telNumber"/></td>
 					</tr>
 				</table>
+				</s:iterator>
 			</div>
 		<div class="purchase-history">
 	</div>

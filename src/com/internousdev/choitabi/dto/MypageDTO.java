@@ -3,7 +3,7 @@ package com.internousdev.choitabi.dto;
 /**
  * @author KAZUYUKI TASAKI
  *@since 2017/9/6
- *@version 1.0
+ *@version 1.1
  */
 public class MypageDTO {
 
@@ -35,7 +35,7 @@ public class MypageDTO {
 	/**
 	 * 電話番号
 	 */
-	private String phoneNumber;
+	private String telNumber;
 
 	/**
 	 * メールアドレス
@@ -123,18 +123,18 @@ public class MypageDTO {
 
 	/**
 	 * 電話番号を取得するメソッド
-	 * @return phoneNumber
+	 * @return telNumber
 	 */
-	public String getPhoneNumber(){
-		return phoneNumber;
+	public String getTelNumber(){
+		return telNumber;
 	}
 
 	/**
 	 * 電話番号を格納するメソッド
-	 * @param phoneNumber
+	 * @param telNumber
 	 */
-	public void setPhoneNumber(String phoneNumber){
-		this.phoneNumber = phoneNumber;
+	public void setTelNumber(String telNumber){
+		this.telNumber = telNumber;
 	}
 
 	/**
