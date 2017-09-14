@@ -98,10 +98,7 @@
     </a><br>
     <br>
     <br>
-    <s:text name="lang.kanri_tourList.return_top"/><br>
-    <br>
-    <br>
-    <br>
+    <s:text name="lang.kanri_tourList.return_top"/>
 
 
 
