@@ -1,10 +1,14 @@
+ body{
+        padding-top:0;
+ }
+
  /*Q&A部分----------------*/
  .main{
-    margin-top:90px;
-    margin-left:550px;
-    height:270px;
-    width:440px;
-
+    position:absolute;
+	text-align:center;
+	top:200px;
+    width:100%;
+    color:black;
 }
 
 h1{
@@ -15,5 +19,5 @@ h1{
 
 /*フッター部分-------------*/
 footer{
-	margin-top:290px;
+	margin-top:700px;
 }
