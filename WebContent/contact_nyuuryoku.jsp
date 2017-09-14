@@ -15,7 +15,7 @@
    <head>
 
      <title><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></title>
-     <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
+     <link href ="css/contact_nyuuryoku.css"  rel = "stylesheet" type = "text/css">
 
      <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
 
