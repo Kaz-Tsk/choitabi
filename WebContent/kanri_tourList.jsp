@@ -11,9 +11,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>ツアー情報一覧</title>
-	<!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
-	<fmt:setLocale value="${pageContext.request.locale.language}"/>
-	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourList" var="lang"/>
  	<!-- CSSの読み込み -->
 	<link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
 </head>
