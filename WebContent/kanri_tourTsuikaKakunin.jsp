@@ -109,7 +109,7 @@
 	    </tr>
 	    <tr>
 	        <th>
-	        	画像プレビュー
+	        	<s:text name="lang.kanri_tourTsuikaKakunin.image_preview" />
 	        </th>
 	        <td>
 	        	<img src=<s:property value="newImg"/> height="20%"/>
