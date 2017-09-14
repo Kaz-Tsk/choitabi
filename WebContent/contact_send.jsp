@@ -14,9 +14,10 @@
  <link rel="stylesheet" type="text/css" href="css/contactsend.css">
 
 <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
-	<fmt:setLocale value="${pageContext.request.locale.language}"/>
-	<fmt:setBundle basename="com.internousdev.choitabi.property.contact_send"
- 		var="lang" />
+
+<fmt:setLocale value="${pageContext.request.locale.language}"/>
+<fmt:setBundle basename="com.internousdev.choitabi.property.contact_send"
+ var="lang" />
 
 </head>
 

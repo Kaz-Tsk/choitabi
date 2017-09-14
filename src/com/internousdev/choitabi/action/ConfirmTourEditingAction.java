@@ -92,11 +92,12 @@ public class ConfirmTourEditingAction extends ActionSupport{
 				errorMsg = "未入力の情報があります";
 				System.out.println(errorMsg);
 
-			}else if(editImg.indexOf(".png") == -1 && editImg.indexOf(".jpg") == -1){
-				/*後消し*/System.out.println(editImg.indexOf(".png"));
-				/*後消し*/System.out.println(editImg.indexOf(".jpg"));
-				errorMsg = "画像URLにはpngもしくはjpgを指定してください";
-				System.out.println(errorMsg);
+				/*↓画像URLチェック用で作りました。が、現在は画像のプレビューを出すようにしたので不要としています。今後もしかしたら復活するかも…*/
+//			}else if(editImg.indexOf(".png") == -1 && editImg.indexOf(".jpg") == -1){
+//				/*後消し*/System.out.println(editImg.indexOf(".png"));
+//				/*後消し*/System.out.println(editImg.indexOf(".jpg"));
+//				errorMsg = "画像URLにはpngもしくはjpgを指定してください";
+//				System.out.println(errorMsg);
 
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。

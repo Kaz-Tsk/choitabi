@@ -28,7 +28,7 @@
 
 <body>
 
-<div class ="header"><b>お問合せ内容入力</b>_内容確認_送信完了</div>
+<div class ="header">お問合せ内容入力</div>
 
 
 
@@ -47,9 +47,7 @@
    <tr><s:property value="errorMessage"/></tr>
 
 
-<!-- アクションでSUCCESSが出たら、s:textに入力されたものを、そのまま次のs:propertyで表示する -->
-
-
+<!-- アクションでSUCCESSが出たら、s:text～に入力されたものを、そのまま次のページのs:propertyで表示する -->
      <tr>
         <th>名前</th>
            <td><s:textfield name = "contact_name" size = "12"></s:textfield></td>

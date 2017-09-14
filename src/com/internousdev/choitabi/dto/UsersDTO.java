@@ -8,6 +8,7 @@ public class UsersDTO {
 	private String mailAddress;
 	private int userId;
 	private int userFlg;
+	private boolean loginFlg;
 
 
 
@@ -63,5 +64,19 @@ public class UsersDTO {
 	 */
 	public void setUserFlg(int userFlg){
 		this.userFlg = userFlg;
+	}
+
+	/**
+	 * @return loginFlg
+	 */
+	public boolean isLoginFlg(){
+		return loginFlg;
+	}
+
+	/**
+	 * @param loginFlg
+	 */
+	public void setLoginFlg(boolean loginFlg){
+		this.loginFlg = loginFlg;
 	}
 }

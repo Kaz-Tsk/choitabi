@@ -34,7 +34,7 @@ public class LoginDAO {
 		Connection con = db.getConnection();
 		UsersDTO dto = new UsersDTO();
 
-		String sql = "select phone_email, password, user_id, user_flg"
+		String sql = "select phone_email, password, user_id, user_flg,login_flg"
 				+" from users where phone_email=? and password=?";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -47,6 +47,7 @@ public class LoginDAO {
 				dto.setMailAddress(rs.getString("phone_email"));
 				dto.setPassword(rs.getString("password"));
 				dto.setUserId(rs.getInt("user_id"));
+				dto.setLoginFlg(rs.getBoolean("login_flg"));
 				dto.setUserFlg(rs.getInt("user_flg"));
 			}
 		}catch(SQLException e){

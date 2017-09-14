@@ -10,15 +10,17 @@ import java.sql.SQLException;
 import com.internousdev.util.DBConnector;
 
 /**
+ * ログアウトに関するクラス
  * @author KAZUYUKI TASAKI
- *@since 2017/9/4
- *@version 1.0
+ *@since 2017/9/14
+ *@version 1.1
  */
 public class LogoutDAO {
 
 	/**
 	 * @param userId
-	 * @return
+	 * @param loginFlg
+	 * @return count 正しく動作すれば行数、ERRORで０を返す。
 	 */
 	public int update(int userId, boolean loginFlg){
 		int count = 0;
