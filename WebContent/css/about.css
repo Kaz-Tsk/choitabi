@@ -2,7 +2,7 @@
 
 
 .body{
-	 
+padding-top:0;
 }
 /*choitabiについて---------------*/
 h1{
@@ -13,13 +13,14 @@ h1{
 
 /*div_class="main"部分-----------*/
 .main{
-	margin-top:90px;
-	margin-left:600px;
+	position:absolute;
+	text-align:center;
+	top:200px;
     width:100%;
     color:black;
 }
 
 /*フッター部分-----------------------*/
 footer{
-	margin-top:90px;
+	margin-top:700px;
 }
