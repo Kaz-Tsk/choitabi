@@ -14,11 +14,11 @@
 
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <title>お問合せ内容確認画面</title>
-<link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></title>
+    <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
 
-<!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
+    <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
 
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
 	<fmt:setBundle basename="com.internousdev.choitabi.property.contact_kakunin"
@@ -29,11 +29,11 @@
 
 <body>
 
-    <div class ="header">お問合せ内容確認</div>
+    <div class ="header"><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></div>
 
 
-<h1>お問合せ内容確認</h1>
-    <div class = "direction">以下の内容で送信します。よろしいですか？<br>(※配色等は仮です)</div>
+<h1><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></h1>
+    <div class = "direction"><s:text name = "lang.contact_kakunin.may_i_send_content"/></div>
 
 
 <!-- 入力フォームで入力されたもの(s:textfield/area)を、s:propertyでそのまま表示（表示するだけ） -->
@@ -54,20 +54,21 @@
 						</table>
 
 
-<!-- nyuuryoku.jspで入力されたもの(s:textfield/area使用)を、s:paramでデータもってきて、送信ボタンを押すとアクションに渡される -->>
+<!-- nyuuryoku.jspで入力されたもの(s:textfield/area使用)を、s:paramでデータもってきて、送信ボタンを押すとアクションに渡される -->
 
- <a href='<s:url action="CompleteContactAction">
+          <a href='<s:url action="CompleteContactAction">
 
    	        <s:param name="contact_name" value="contact_name"/>
    	        <s:param name="contact_mailAddress" value="contact_mailAddress"/>
             <s:param name="contact_contents" value="contact_contents"/>
 
-          </s:url>'>送信</a>
+          </s:url>'><s:text name = "lang.contact_kakunin.submit"/></a>
 
 
-<input type="button" value="トップ画面へ戻る" onClick="location.href='index.jsp'">
-
-<input type="button" value="入力ページに戻る" onClick="location.href='contact_nyuuryoku.jsp'">
+<center>
+     <a href="index.jsp"><s:text name = "lang.contact_kakunin.return_to_top"/></a>
+     <a href="./contact_nyuuryoku.jsp"><s:text name = "lang.contact_kakunin.return_to_input"/></a>
+ </center>
 
 
 

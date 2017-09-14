@@ -14,7 +14,7 @@
 
    <head>
 
-     <title>お問合せ内容入力画面</title>
+     <title><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></title>
      <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
 
      <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
@@ -31,7 +31,7 @@
 
 <body>
 
-<div class ="header">お問合せ内容入力</div>
+<div class ="header"><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></div>
 
 
 <!-- ＊＊＊＊＊＊＊ｓ：フォームに入力されたものをSUBMIT（送信）すると入力されたものまるごとアクションに渡せる＊＊＊＊＊＊-->
@@ -40,8 +40,8 @@
 <s:form action="ComfirmContactAction" method="post">
 
 
-    <h1>お問合せ内容入力</h1>
-     <div class = "direction">以下のフォームに入力してください<br></div>
+    <h1><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></h1>
+     <div class = "direction"><s:text name = "lang.contact_nyuuryoku.please_input_contents"/><br></div>
 
 
      <!-- 渡ったアクションでERRORがでたらアクションから引っ張ってきたエラーメッセージを表示する文 -->
@@ -79,7 +79,6 @@
 
  <center>
      <a href="index.jsp"><s:text name = "lang.contact_nyuuryoku.return_to_top"/></a>
-     <a href="./contact_nyuuryoku.jsp"><s:text name = "lang.contact_nyuuryoku.return_to_input"/></a>
  </center>
 
 
