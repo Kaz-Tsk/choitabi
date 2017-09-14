@@ -38,11 +38,12 @@
 				</s:iterator>
 			</div>
 		<div class="purchase-history">
+		<button>購入履歴</button>
 	</div>
 	</div>
 
 	<!-- footer include -->
-	<footer>
+	<footer style= margin-top:350px>
 		<s:include value="footer.jsp"></s:include>
 	</footer>
 </body>
