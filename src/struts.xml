@@ -94,7 +94,7 @@
 
 
 <action name="FirstContactAction" class="com.internousdev.choitabi.action.FirstContactAction" method="execute">
-   <result name="success">contact_kakunin.jsp</result>
+   <result name="success">contact_nyuuryoku.jsp</result>
 </action>
 
 
