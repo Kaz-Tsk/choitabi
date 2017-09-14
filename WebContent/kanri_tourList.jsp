@@ -93,7 +93,7 @@
     </a><br>
     <br>
     <br>
-    <s:text name="lang.kanri_tourList.return"/>
+    <s:text name="lang.kanri_tourList.return_top"/>
 
 
 
