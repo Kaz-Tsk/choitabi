@@ -90,12 +90,14 @@
    </tr>
 </table>
 <hr>
+<!-- 「このツアーを削除する」のチェックボックス部分 -->
 <label>
 	<input type="checkbox" name="deleteCheck" value="true">
 		<font color = "red"><s:text name="lang.kanri_tourHensyuu.delete"/></font>
 </label>
 <hr>
 <br>
+<!-- ↓編集前の情報を、次のアクションにある同名の変数に、一緒に持っていきます -->
 	   	<s:hidden name= "currentTourId" property = "currentTourId"/>
 	   	<s:hidden name = "currentTourName" property="currentTourName" />
 	   	<s:hidden name = "currentPrice" property="currentPrice" />

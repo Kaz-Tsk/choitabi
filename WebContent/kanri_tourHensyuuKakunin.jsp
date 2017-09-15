@@ -167,7 +167,7 @@
 
 <!-- 画面下部のメニュー画面------------------------------------------------------- -->
 <br>
-<!-- 「完了」の項目 -->
+<!-- 「完了」の項目 ※次のアクション位にある同名の変数に値を渡します。(ツアーIDだけはcurrentId＝「現在のID」そのままです）-->
     <a href=
 	    '<s:url action="UpdateTourAction">
 		    <s:param name="editTourId" value="currentTourId"/>
@@ -207,7 +207,7 @@
 		    <s:param name="currentComment" value="currentComment"/>
 			<s:param name="currentImg" value="currentImg"/>
 
-		    <s:param name="TourId" value="editTourId"/>
+		    <s:param name="TourId" value="currentTourId"/>
 		    <s:param name="inputedTourName" value = "editTourName"/>
 		    <s:param name="inputedPrice" value = "editPrice"/>
 		    <s:param name="inputedPersons" value = "editPersons"/>

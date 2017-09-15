@@ -16,7 +16,9 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 
 	/**編集前の情報を保存する変数です。*/
+	/*ツアーID*/
 	private int currentTourId;
+
 	/*ツアー名*/
 	private String currentTourName;
 	/*価格*/
@@ -42,9 +44,10 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	 *  編集画面から、価格・人数を入れる欄に文字列を入力したところ、javaに渡される際に数値に変換できずStrutsエラーがでてしまいました。
 	 *  そのため、一度文字列として受け取らせ、javaのInteger.Parseint()関数を使って数値に変換するステップを踏んでいます。
 	 * */
+	/*こっちには、ツアーIDはありません。
+	 * （IDは変わらない＝現在のデータだけを保持すればOKなので）
+	 * 「UodateTourAction」まで、↑で用意したcurrentTourIdを持っていきます。*/
 
-	/*ツアーID*/
-	private String editTourId;
 	/*ツアー名*/
 	private String editTourName;
 	/*価格*/
@@ -237,15 +240,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 	/*編集後の情報のgetter/setter---------------------------------------------*/
 
-
-
-	public String getEditTourId(){
-		return editTourId;
-	}
-
-	public void setEditTourId(String editTourId){
-		this.editTourId = editTourId;
-	}
 
 	public String getEditTourName(){
 		return editTourName;

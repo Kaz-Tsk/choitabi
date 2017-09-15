@@ -49,6 +49,12 @@ public class GoTourEditPageAction extends ActionSupport {
 	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
 	private String deleteCheck = "false";
 
+	/*ツアー一覧から入力画面に来たか、入力内容確認画面から来たかを保持するための変数
+	 * （これによって、入力フォームにデフォルトで表示する内容を変えます）
+	 * ツアー一覧からアクセスされたら「tourList」が入り、変更前の情報がフォームに表示されます
+	 * 入力内容確認画面から戻ってきたら「confirm」が入り、編集していた内容が残ります*/
+	private String WhereFrom;
+
 
 	/*executeメソッド-------------------------------------------------*/
 
@@ -66,7 +72,6 @@ public class GoTourEditPageAction extends ActionSupport {
 			this.currentDeparture = stdto.getDeparture();
 			this.currentRegion = stdto.getRegion();
 			this.currentPrefectures = stdto.getPrefectures();
-			/*動作確認*/System.out.println("editTourAction："+ stdto.getTheme());
 			this.currentTheme = stdto.getTheme();
 			this.currentComment = stdto.getComment();
 			this.currentImg = stdto.getImg();
