@@ -8,12 +8,18 @@
 <link rel = "stylesheet" type= "text/css" href = "css/imagehover.css">
 <title>ちょいたび</title>
 </head>
+
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
 <body>
     <div class= "img_main">
     <img src="img/mihuneyamarakuen.jpg"  height= "280" width="378p">
     <img src="img/zundamochi.jpg" height= "280" width="378p">
     <img src="img/sarugakyou_bungee.jpg" height= "280" width="378p">
     <img src="img/nanbayasakazinja.jpg" height= "280" width="378p">
+    <h1>ちょいたびで、ちょいといい旅。</h1>
     </div>
 
     <div class= "theme_box">
@@ -22,7 +28,7 @@
     <figure class="imghvr-hinge-left" >
   <img src="img/gourmet_pict.png"  height= "150" width="150">
   <figcaption>
-    グルメ
+    <b>グルメ</b>
   </figcaption>
 </figure>
 </div>
@@ -31,7 +37,7 @@
 <figure class="imghvr-hinge-left" >
   <img src="img/place_pict.png" height= "150" width="150">
   <figcaption>
-    名所
+    <b>名所</b>
   </figcaption>
 </figure>
 </div>
@@ -40,7 +46,7 @@
 <figure class="imghvr-hinge-left" >
   <img src="img/activity_pict.png" height= "150" width="150">
   <figcaption>
-    アクティビティ
+    <b>アクティビティ</b>
   </figcaption>
 </figure>
 </div>
@@ -52,7 +58,7 @@
     <figure class="imghvr-hinge-left" >
   <img src="img/touhoku_pict.jpg" height= "150" width="150">
   <figcaption>
-    東北
+    <b>東北</b>
   </figcaption>
 </figure>
 </div>
@@ -61,7 +67,7 @@
 <figure class="imghvr-hinge-left" >
   <img src="img/kantou_pict.jpg" height= "150" width="150">
   <figcaption>
-    関東
+    <b>関東</b>
   </figcaption>
 </figure>
 </div>
@@ -70,7 +76,7 @@
 <figure class="imghvr-hinge-left"  >
   <img src="img/kansai_pict.jpg" height= "150" width="150">
   <figcaption>
-    関西
+    <b>関西</b>
   </figcaption>
 </figure>
 </div>
@@ -79,10 +85,14 @@
 <figure class="imghvr-hinge-left" >
   <img src="img/kyushu_pict.jpg" height= "150" width="150">
   <figcaption>
-    九州
+    <b>九州</b>
   </figcaption>
 </figure>
 </div>
     </div>
 </body>
+
+<footer>
+          <jsp:include page="footer.jsp"/>
+</footer>
 </html>
