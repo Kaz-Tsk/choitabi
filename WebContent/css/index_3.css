@@ -5,19 +5,30 @@
 	border-bottom: solid 5px orange;
 }
 
-img{
-	height:280px;
-	width:378px;
-}
-
 .theme_box{
-
+	height:350px;
+	width:1530px;
 }
-.sub{
+
+area_box{
+	height:350px;
+	width:1530px;
+}
+
+.theme_sub{
 	float:left;
-	height:300px;
-	width:200px;
-	border:solid 5px orange;
+	height:150px;
+	width:150px;
+	border:solid 5px  orange;
+	border-radius:6px;
 	margin-left:300px;
 }
 
+.area_sub{
+	float:left;
+	height:150px;
+	width:150px;
+	border:solid 5px orange;
+	border-radius:6px;
+	margin-left:200px;
+}

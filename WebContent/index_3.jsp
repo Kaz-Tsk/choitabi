@@ -9,37 +9,36 @@
 <title>ちょいたび</title>
 </head>
 <body>
-    <h1>ちょいたびで、ちょっといいたび</h1>
     <div class= "img_main">
-    <img src="img/mihuneyamarakuen.jpg">
-    <img src="img/zundamochi.jpg">
-    <img src="img/sarugakyou_bungee.jpg">
-    <img src="img/nanbayasakazinja.jpg">
+    <img src="img/mihuneyamarakuen.jpg"  height= "280" width="378p">
+    <img src="img/zundamochi.jpg" height= "280" width="378p">
+    <img src="img/sarugakyou_bungee.jpg" height= "280" width="378p">
+    <img src="img/nanbayasakazinja.jpg" height= "280" width="378p">
     </div>
 
     <div class= "theme_box">
     <h2>テーマで探す</h2>
-    <div class="sub">
+    <div class="theme_sub">
     <figure class="imghvr-hinge-left" >
-  <img src="img/gourmet_pict.png">
+  <img src="img/gourmet_pict.png"  height= "150" width="150">
   <figcaption>
     グルメ
   </figcaption>
 </figure>
 </div>
 
- <div class="sub">
+ <div class="theme_sub">
 <figure class="imghvr-hinge-left" >
-  <img src="img/place_pict.png">
+  <img src="img/place_pict.png" height= "150" width="150">
   <figcaption>
     名所
   </figcaption>
 </figure>
 </div>
 
- <div class="sub">
+ <div class="theme_sub">
 <figure class="imghvr-hinge-left" >
-  <img src="img/activity_pict.png">
+  <img src="img/activity_pict.png" height= "150" width="150">
   <figcaption>
     アクティビティ
   </figcaption>
@@ -49,36 +48,36 @@
 
      <div class= "area_box">
     <h2>エリアで探す</h2>
-    <div class="sub">
+    <div class="area_sub">
     <figure class="imghvr-hinge-left" >
-  <img src="img/touhoku_pict.jpg">
+  <img src="img/touhoku_pict.jpg" height= "150" width="150">
   <figcaption>
     東北
   </figcaption>
 </figure>
 </div>
 
- <div class="sub">
+ <div class="area_sub">
 <figure class="imghvr-hinge-left" >
-  <img src="img/kantou_pict.jpg">
+  <img src="img/kantou_pict.jpg" height= "150" width="150">
   <figcaption>
     関東
   </figcaption>
 </figure>
 </div>
 
- <div class="sub">
-<figure class="imghvr-hinge-left" >
-  <img src="img/kansai_pict.jpg">
+ <div class="area_sub">
+<figure class="imghvr-hinge-left"  >
+  <img src="img/kansai_pict.jpg" height= "150" width="150">
   <figcaption>
     関西
   </figcaption>
 </figure>
 </div>
 
-<div class="sub">
-<figure class="mghvr-hinge-left" >
-  <img src="img/kansai_pict.jpg">
+<div class="area_sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/kyushu_pict.jpg" height= "150" width="150">
   <figcaption>
     九州
   </figcaption>
