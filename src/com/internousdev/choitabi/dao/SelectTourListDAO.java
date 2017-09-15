@@ -12,9 +12,12 @@ import com.internousdev.choitabi.util.DBConnector;
 public class SelectTourListDAO {
 
 
-	/* @author:YUKA MATSUMURA
+	/** @author:YUKA MATSUMURA
 	 * @since:2017/09/05
 	 * @version:1.1
+	 *
+	 * 管理側で、ツアーの一覧を表示するときに使うDAO。
+	 * 「IndicateTourListAction」はこれを使って表示するデータを用意しています。
 	 * */
 
 

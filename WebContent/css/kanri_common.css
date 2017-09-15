@@ -1,3 +1,9 @@
+/**author YUKA MATSUMURA
+*管理画面で広く使えそうなものを、思って作りました。
+ツアー一覧と、ツアーの編集・追加画面で使っています。
+*/
+
+
 body{
     margin-right:auto;
     margin-left:auto;
@@ -46,5 +52,9 @@ a:visited{
 
 a:hover{
 	color:orange;
+}
+
+input#submit_button{
+	color:yellow;
 }
 

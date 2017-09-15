@@ -3,7 +3,7 @@ package com.internousdev.choitabi.dto;
 public class SelectTourDTO {
 
 
-	/*@author:YUKA MATSUMURA
+	/**@author:YUKA MATSUMURA
 	 *@since:2017/09/05
 	 *@version:1.1
 	 *

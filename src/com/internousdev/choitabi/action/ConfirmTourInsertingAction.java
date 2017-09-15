@@ -12,7 +12,6 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	 * 管理側で、ツアーの新規登録時に使用するアクションです。
 	 * フォームから入力されたデータに漏れや不適切な部分（価格に文字列が入っている場合など）がないかをチェックし、
 	 * OKならばSUCCESSを返します。
-	 *（※11日朝現在、未完成です）
 	 *
 	 * */
 
