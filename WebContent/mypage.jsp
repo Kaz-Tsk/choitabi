@@ -39,8 +39,9 @@
 				</s:iterator>
 			</div>
 		<div class="purchase-history">
-		<button>購入履歴</button>
-	</div>
+		<s:form action = "PurchaseHistoryAction">
+			<button type= "submit" >購入履歴</button>
+		</s:form>
 	</div>
 
 	<!-- footer include -->

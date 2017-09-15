@@ -95,6 +95,8 @@
 <result name="error">index.jsp</result>
 </action>
 
+<!--  購入履歴画面に遷移 -->
+
 <!-- お問い合わせ画面関連 -->
 
 
