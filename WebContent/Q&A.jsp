@@ -28,7 +28,7 @@
             <br>
             <h4>その他お問い合わせは以下のページにお進みください</h4>
             </h3>
-            <br><h5><a href="./contact_nyuuryoku.jsp">お問い合わせページへ</a></h5>
+            <br><h5><a href="FirstContactAction">お問い合わせページへ</a></h5>
         </div>
     </div>
 

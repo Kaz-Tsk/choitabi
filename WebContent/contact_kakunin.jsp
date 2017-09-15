@@ -36,7 +36,7 @@
              <div class = "direction"><s:text name = "lang.contact_kakunin.may_i_send_content"/></div>
 
 
-             <!-- 入力フォームで入力されたもの(s:textfield/area)を、s:propertyでそのまま表示（表示するだけ） -->
+             <!-- 【表示】入力フォームで入力されたもの(s:textfield/area)を、s:propertyでそのまま表示（表示するだけ） -->
 			        <table>
 
 							<tr>
@@ -58,7 +58,7 @@
                     <br>
 
 
-<!-- nyuuryoku.jspで入力されたもの(s:textfield/area使用)を、s:paramでデータもってきて、送信ボタンを押すとアクションに渡される -->
+<!-- 【隠し】入力jspで入力されたもの(s:textfield/area使用)を、s:paramでデータもってきて、送信ボタンを押すとアクションに渡される -->
 
                     <center>
                     <a href='<s:url action="CompleteContactAction">
@@ -70,10 +70,20 @@
                      </a>
                      </center>
 
+<!--【隠し】s:paramで持ってきた、入力jspで入力されたもの(s:textfield/area使用)を、戻るボタンで戻った時にそのまま表示する(情報保持) -->
+                     <center>
+                     <a href='<s:url action="FirstContactAction">
+                              <s:param name="contact_name" value="contact_name"/>
+   	                          <s:param name="contact_mailAddress" value="contact_mailAddress"/>
+                              <s:param name="contact_contents" value="contact_contents"/>
+                              </s:url>'>
+                              <s:text name = "lang.contact_kakunin.return_to_input"/>
+                              </a>
+                     </center>
+
 
                      <center>
-                             <a href="index.jsp"><s:text name = "lang.contact_kakunin.return_to_top"/></a>
-                             <a href="./contact_nyuuryoku.jsp"><s:text name = "lang.contact_kakunin.return_to_input"/></a>
+                             <a href="MainTopAction"><s:text name = "lang.contact_kakunin.return_to_top"/></a>
                      </center>
 
       </body>

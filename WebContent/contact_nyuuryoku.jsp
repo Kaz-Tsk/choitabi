@@ -54,17 +54,17 @@
 
                            <tr>
                                <th><s:text name = "lang.contact_nyuuryoku.contact_name"/></th>
-                               <td><s:textfield name = "contact_name" size = "12" ><s:property value="contact_name" /></s:textfield></td>
+                               <td><s:textfield name = "contact_name" size = "12"/></td>
                            </tr>
 
                            <tr>
                                <th><s:text name = "lang.contact_nyuuryoku.contact_mailaddress"/></th><td colspan = "4">
-                               <s:textfield  name="contact_mailAddress" size = "12" ><s:property value="contact_mailAddress" /></s:textfield></td>
+                               <s:textfield  name="contact_mailAddress" size = "12"/></td>
                            </tr>
 
                            <tr>
                            <th><s:text name = "lang.contact_nyuuryoku.contact_contents"/></th><td colspan = "4">
-                           <s:textarea name="contact_contents" rows="10" cols="45"><s:property value="contact_contents" /></s:textarea>
+                           <s:textarea name="contact_contents" rows="10" cols="45"/>
                            </tr>
 
                            <br>
