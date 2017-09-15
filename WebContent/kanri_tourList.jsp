@@ -48,7 +48,7 @@
 			<td><s:property value="region"></s:property></td>
 			<td><s:property value="theme"/></td>
 			<td>
-				<a href='<s:url action="EditTourAction">
+				<a href='<s:url action="GoTourEditPageAction">
 				<s:param name="currentTourId" value = "tourId"/></s:url>'>
 				<s:text name="lang.kanri_tourList.edit"/>
 				</a>

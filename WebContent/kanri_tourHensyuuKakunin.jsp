@@ -192,9 +192,9 @@
 
 <br>
 <!-- ↓「入力画面に戻る」の項目部分 ※別のアクションの同名の変数に値を移しています-->
-<!-- 入力済みの情報が残るように、EditTourActionにも「edit」変数を用意します。 -->
+<!-- 入力済みの情報が残るように、EditTourActionにも入力内容を保持する変数を用意します。 -->
    <a href=
-	    '<s:url action="EditTourAction">
+	    '<s:url action="GoTourEditPageAction">
 
 	    	<s:param name="currentTourId" value="currentTourId"/>
 		    <s:param name="currentTourName" value = "currentTourName"/>
@@ -207,16 +207,16 @@
 		    <s:param name="currentComment" value="currentComment"/>
 			<s:param name="currentImg" value="currentImg"/>
 
-		    <s:param name="editTourId" value="editTourId"/>
-		    <s:param name="editTourName" value = "editTourName"/>
-		    <s:param name="editPrice" value = "editPrice"/>
-		    <s:param name="editPersons" value = "editPersons"/>
-		    <s:param name="editDeparture" value = "editDeparture"/>
-		    <s:param name="editRegion" value = "editRegion"/>
-		    <s:param name="editPrefectures" value="editPrefectures"/>
-		    <s:param name="editTheme" value="editTheme"/>
-		    <s:param name="editComment" value="editComment"/>
-			<s:param name="editImg" value="editImg"/>
+		    <s:param name="TourId" value="editTourId"/>
+		    <s:param name="inputedTourName" value = "editTourName"/>
+		    <s:param name="inputedPrice" value = "editPrice"/>
+		    <s:param name="inputedPersons" value = "editPersons"/>
+		    <s:param name="inputedDeparture" value = "editDeparture"/>
+		    <s:param name="inputedRegion" value = "editRegion"/>
+		    <s:param name="inputedPrefectures" value="editPrefectures"/>
+		    <s:param name="inputedTheme" value="editTheme"/>
+		    <s:param name="inputedComment" value="editComment"/>
+			<s:param name="inputedImg" value="editImg"/>
 	    </s:url>'>
     <s:text name="lang.kanri_tourHensyuuKakunin.return_input_page"/><br>
     </a>

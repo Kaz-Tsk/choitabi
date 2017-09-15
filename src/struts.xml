@@ -35,7 +35,7 @@
 		<result name="success">kanri_tourList.jsp</result>
 		<result name="error">kanri_tourList.jsp</result>
 	</action>
-	<action name="EditTourAction" class="com.internousdev.choitabi.action.EditTourAction" method="execute">
+	<action name="GoTourEditPageAction" class="com.internousdev.choitabi.action.GoTourEditPageAction" method="execute">
 		<result name="success">kanri_tourHensyuu.jsp</result>
 		<result name="error">kanri_tourList.jsp</result>
 	</action>

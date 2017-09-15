@@ -4,7 +4,7 @@ import com.internousdev.choitabi.dao.SelectOneTourDAO;
 import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class EditTourAction extends ActionSupport {
+public class GoTourEditPageAction extends ActionSupport {
 
 	/**@author YUKA MATSUMURA
 	 * since 2017/0906
@@ -16,7 +16,7 @@ public class EditTourAction extends ActionSupport {
 	 *
 	 * **/
 
-
+	/*編集前の情報を保管するための変数*/
 	/*ツアーID*/
 	private int currentTourId;
 	/*ツアー名*/
@@ -37,6 +37,14 @@ public class EditTourAction extends ActionSupport {
 	private String currentComment;
 	/*画像URL*/
 	private String currentImg;
+
+	/*入力内容確認ページに戻ったときに、入力情報を残すための変数*/
+
+
+
+
+
+
 
 	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
 	private String deleteCheck = "false";
