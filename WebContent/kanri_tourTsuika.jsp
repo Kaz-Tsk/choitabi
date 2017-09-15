@@ -16,12 +16,12 @@
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourTsuika"
  		var="lang" />
 	<!-- CSSの読み込み -->
-	<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
+	<link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
 </head>
 
 <body>
 
-	<h1>ツアー追加　情報登録画面</h1>
+	<h1>新規ツアー登録　情報入力画面</h1>
 	<hr>
     	<s:text name="lang.kanri_tourTsuika.direction"/>
 	<br>
@@ -118,7 +118,7 @@
 	</table>
 	<hr>
 	<br>
-	<input id="submit_button" type="submit" value='<s:text name="lang.kanri_tourTsuika.confirm"/>'/>
+	<input type="submit" value='<s:text name="lang.kanri_tourTsuika.confirm"/>' class="submit_button"/>
 	</form>
 
 <!-- ここまで編集フォーム -->

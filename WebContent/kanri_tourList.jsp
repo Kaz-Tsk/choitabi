@@ -91,7 +91,7 @@
     	　　
     </s:else>
 
-<!-- ↓テーブル下の、ツアー新規登録やトップ画面に戻るといったメニューの部分です。 -->
+<!-- ここから、テーブル下の、ツアー新規登録やトップ画面に戻るといったメニューの部分です。 -->
     <br>
     <br>
     <br>
@@ -104,7 +104,7 @@
     <br>
 <!-- 「管理ページトップに戻る」の項目の部分 -->
 	<a href='<s:url action="GoManagersTopAction"/>'>
-    <s:text name="lang.kanri_tourList.return_top"/>
+		<s:text name="lang.kanri_tourList.return_top"/>
 	</a>
 	<br>
 	<br>

@@ -54,7 +54,13 @@ a:hover{
 	color:orange;
 }
 
-input#submit_button{
-	color:yellow;
+input.submit_button{
+	width:120px;
+	height:40px;
+	font-family:ƒƒCƒŠƒI;
+	font-size:18px;
+	color :dimgrey;
+	border:3px solid dimgrey;
+	background-color:lightyellow;
 }
 

@@ -15,7 +15,7 @@
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourHensyuu"
  		var="lang" />
-	<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
+	<link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
 </head>
 
 <body>
@@ -108,7 +108,7 @@
 	    <s:hidden name = "currentTheme" property="currentTheme" />
 	    <s:hidden name = "currentComment" property="currentComent" />
 	    <s:hidden name = "currentImg" property="currentImg" />
-<input type="submit" value=<s:text name="lang.kanri_tourHensyuu.confirm"/>>
+<input type="submit" value=<s:text name="lang.kanri_tourHensyuu.confirm"/> class="submit_button">
 </form>
 <!-- ここまで編集フォーム -->
 
@@ -118,7 +118,8 @@
     	<s:param name="currentPage" value="1"/></s:url>'>
     	<s:text name="lang.kanri_tourHensyuu.return_list"/>
     </a>
-
+	<br>
+	<br>
     <br>
     <a href='<s:url action="GoManagersTopAction"/>'>
     <s:text name="lang.kanri_tourHensyuu.return_top"/>
