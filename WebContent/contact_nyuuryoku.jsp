@@ -15,7 +15,7 @@
    <head>
 
      <title><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></title>
-     <link href ="css/contact_nyuuryoku.css"  rel = "stylesheet" type = "text/css">
+
 
      <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
 
@@ -51,7 +51,7 @@
      <!-- 渡ったアクションでSUCCESSが出たら、s:textfield/areaに入力されたものを、そのまま次のページのs:propertyで表示する -->
 
 
-                   
+
                            <tr>
                                <th><s:text name = "lang.contact_nyuuryoku.contact_name"/></th>
                                <td><s:textfield name = "contact_name" size = "12"/></td>
