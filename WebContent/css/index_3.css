@@ -1,1 +1,11 @@
 @CHARSET "UTF-8";
+.img_main{
+	height:350px;
+	width:1530px;
+	border-bottom: solid 5px orange;
+}
+
+img{
+	height:280px;
+	width:378px;
+}
