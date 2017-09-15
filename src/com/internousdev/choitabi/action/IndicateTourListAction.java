@@ -52,12 +52,13 @@ public class IndicateTourListAction extends ActionSupport{
 		/*「＜＜」「＞＞」の移動で現在ページがマイナスになったり、
 		 * 最大ページ数を超えたりしないようにするための処理です。
 		 * ※後ほどこの処理はJSP上で行うようにします。（URLで0ページ目と4ページ目ができてしまうのでなんだか気持ち悪い）*/
-		if(currentPage >= maxPage){
-			currentPage = maxPage;
-		}else if(currentPage <= 1){
-			currentPage = 1;
-		}
+//		if(currentPage >= maxPage){
+//			currentPage = maxPage;
+//		}else if(currentPage <= 1){
+//			currentPage = 1;
+//		}
 
+		 /*すべてのデータのうち、現在のページに表示するデータをもう一度リストにして渡しなさい、という処理です。*/
 		 currentTourList = tlp.paginateTourList(allTourList, currentPage);
 
 
