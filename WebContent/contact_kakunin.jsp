@@ -16,7 +16,7 @@
 
              <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
              <title><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></title>
-             <link rel = "stylesheet" type = "text/css" href = "css/contact_nyuuryoku.css">
+             <link rel ="stylesheet" type ="text/css" href ="css/contact_kakunin.css">
 
              <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
 
@@ -37,7 +37,7 @@
 
 
              <!-- 【表示】入力フォームで入力されたもの(s:textfield/area)を、s:propertyでそのまま表示（表示するだけ） -->
-			        <table>
+			        <table id="box">
 
 							<tr>
 							    <th><s:text name = "lang.contact_kakunin.contact_name"/></th>

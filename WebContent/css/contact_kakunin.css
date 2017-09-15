@@ -1,18 +1,20 @@
+@CHARSET "UTF-8";
+
+
+.error{
+	color:red;
+	text-align:center;
+}
+
+.header{
+	width:100%;
+}
+
 body{
     color:dimgrey;
     font-family:メイリオ;
     color:dimgray;
 }
-
-.header{
-    text-align:right;
-    margin-top:20px;
-    margin-right:40px;
-}
-
-
-
-
 
 
 h1{
@@ -24,12 +26,18 @@ h1{
     margin-top:20px;
 }
 
+#box th {
+position:relative;
+text-align:center; }
+
+
+
 table{
     margin-top:20px;
     margin-right:auto;
     margin-left:auto;
     border:2px solid grey;
-    width:520px;
+    width:550px;
     height:320px;
     border-spacing:0px;
     font-size:14px;
@@ -37,16 +45,19 @@ table{
 }
 
 th{
-    width:auto;
+    width:250px;
     border:1px solid grey;
-    padding-left:5px;
-    padding-right:5px;
+    margin: 0px auto;
+    text-align:center;
 }
 
 td{
     border:1px solid grey;
     padding-left:10px;
     padding-right:10px;
+    width:300px;
+    text-align:center;
+    margin: 0px auto;
 }
 
 .button1{
@@ -69,9 +80,3 @@ td{
     border:2px solid dimgrey;
         background-color:gainsboro;
 }
-
-
-
-
-
-
