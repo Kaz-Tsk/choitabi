@@ -1,21 +1,28 @@
 @CHARSET "UTF-8";
 
-body{
-	margin:0;
-	padding:0;
+/*サイドバー--------------------------*/
+.sidebar{
+    float:left;
+    margin-top:30px;
+	margin-right:40px;
+    padding-top:20px;
+    padding-left:30px;
+    height:400px;
+    width:200px;
 }
 
 .center {
-	width: 1400px;
+	width: 1500px;
 	margin: 0 auto;
 	text-align: center;
 }
 
 #contents{
-	position: absolute;
-	margin:0;
-	padding-left:10%;
-	padding-right:10%;
+    position:absolute;
+    left:20%;
+    margin-top:5%;
+    height:100%;
+    width:1170px;
 }
 
 div {
@@ -52,7 +59,7 @@ div {
 	float: left;
 	width: 350px;
 	height: 400px;
-	margin: 20px 5px 30px 0;
+	margin: 20px 5px 10px 0;
 	background-color: #fff;
 	text-align: center;
 	border: 1px solid orange;
@@ -67,10 +74,12 @@ div {
 .tour_name {
 	color: #ff8040;
 	font-weight: bold;
+	padding-top: 15px;
+	font-size: 20px;
 }
 
 .tour_price {
 	color: red;
-	margin-left: 10px;
-	font-size: 15px;
+	font-size: 17px;
+	font-align: center;
 }

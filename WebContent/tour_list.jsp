@@ -49,7 +49,7 @@
 </header>
 
 <div class="center">
-<div id = "side">
+<div class = "sidebar">
 <s:include value="test_tour.jsp" />
 </div>
 
