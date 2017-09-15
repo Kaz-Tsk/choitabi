@@ -29,11 +29,11 @@
 
 	<!-- 管理者ログイン時ヘッダー  -->
 		<s:elseif test="#session.userFlg==3 ">
-			  <div class="logo"><a href="MainTopAction">choitabi(管理者画面)</a></div>
-		<div class="navi">
-			<div class="navibox"><a href="kanri_tourList.jsp" class="underline">ツアー管理</a></div>
-			<div class="navibox"><a href= "kanri_toiawasekakunin.jsp"class="underline">管理問い合わせ</a></div>
-		 <div class="navibox"><a href="LogoutAction"  class="underline">ログアウト</a></div>
+			  <div class="logo2">管理者画面</div>
+		<div class="navi2">
+			<div class="navibox2"><a href="kanri_tourList.jsp" class="underline">ツアー管理</a></div>
+			<div class="navibox2"><a href= "kanri_toiawasekakunin.jsp"class="underline">管理問い合わせ</a></div>
+		 <div class="navibox2"><a href="LogoutAction"  class="underline">ログアウト</a></div>
 		</div>
 		</s:elseif>
 

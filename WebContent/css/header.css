@@ -5,7 +5,6 @@
 	text-align:left;
 	width:100%;
 }
-
 .navi{
 top:0px;
 height:80px;
@@ -21,6 +20,43 @@ background-color:orange;
 	font-size:22px;
 }
 
+
+
+.logo2{
+	position:absolute;
+    font-color:brack;
+    font-size:50px;
+    margin-top:14px;
+    margin-left:10px;
+}
+.navi2{
+top:0px;
+height:80px;
+width:100%;
+}
+
+.navibox2{
+	position:relative;
+	float:right;
+	margin-right:30px;
+	margin-top:40px;
+	width:180px;
+	font-size:25px;
+}
+
+
+.navibox2 a:link{
+	              color:black;
+}
+.navibox2 a:visited{
+	              color:black;
+}
+.navibox2 a:hover{
+	              color:black;
+}
+.navibox2 a:active{
+	              color:black;
+}
 
 header a:link{
 	              color:#ffffff;
