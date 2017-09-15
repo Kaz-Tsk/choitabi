@@ -40,38 +40,24 @@ td{
 }
 
 
-a:link{
-	text-decoration : none;
+a{
 	color:dimgrey;
+	font-size:18px;
+	text-decoration:none;
 	font-weight:bold;
+	align:center;
 }
 
-a:visited{
-	color:dimgrey;
-}
 
-a:hover{
-	color:orange;
-}
 
 input.submit_button{
-	width:120px;
-	height:40px;
 	font-family:メイリオ;
 	font-size:18px;
-	color :dimgrey;
-	border:3px solid dimgrey;
-	background-color:lightyellow;
+	color:dimgrey;
+	border:0px;
+	font-weight:bold;
+	cursor:pointer;
+	background-color:white;
 }
 
-.linkBox{
-    margin-right:auto;
-    margin-left:auto;
-	width:120px;
-	height:30px;
-	font-family:メイリオ;
-	font-size:18px;
-	color :dimgrey;
-	border:3px solid dimgrey;
-	background-color:lightyellow;
-}
+

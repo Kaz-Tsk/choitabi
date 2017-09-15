@@ -120,7 +120,6 @@
 <hr>
 <br>
 <!-- ↓「完了」の項目…JSPを通して、別のアクションにある同名の変数に値を渡しています -->
-<div class="linkBox">
    <a href=
 	    '<s:url action="InsertTourAction">
 		    <s:param name="newTourId" value="newTourId"/>
@@ -134,9 +133,8 @@
 		    <s:param name="newComment" value="newComment"/>
 			<s:param name="newImg" value="newImg"/>
 	    </s:url>'>
-    <s:text name="lang.kanri_tourTsuikaKakunin.complete"/>
+	<s:text name="lang.kanri_tourTsuikaKakunin.complete"/>
     </a>
-</div>
 <br>
 <hr>
 <br>
@@ -157,7 +155,7 @@
 	    </s:url>'>
     <s:text name="lang.kanri_tourTsuikaKakunin.return_input_page"/><br>
     </a>
-
+<br>
 
 <!-- ↓「管理トップページに戻る」の項目 -->
 	<a href='<s:url action="GoManagersTopAction"/>'>
