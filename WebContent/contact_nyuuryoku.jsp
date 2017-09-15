@@ -58,13 +58,13 @@
                            </tr>
 
                            <tr>
-                               <th><s:text name = "lang.contact_nyuuryoku.contact_mailaddress"/></th><td colspan = "4">
-                               <s:textfield  name="contact_mailAddress" size = "12"/></td>
+                               <th><s:text name = "lang.contact_nyuuryoku.contact_mailaddress"/></th>
+                               <td colspan = "4"><s:textfield  name="contact_mailAddress" size = "12"/></td>
                            </tr>
 
                            <tr>
-                           <th><s:text name = "lang.contact_nyuuryoku.contact_contents"/></th><td colspan = "4">
-                           <s:textarea name="contact_contents" rows="10" cols="45"/>
+                           <th><s:text name = "lang.contact_nyuuryoku.contact_contents"/></th>
+                           <td colspan = "4"><s:textarea name="contact_contents" rows="10" cols="45"/></td>
                            </tr>
 
                            <br>

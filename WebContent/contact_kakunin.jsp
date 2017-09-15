@@ -40,14 +40,17 @@
 			        <table>
 
 							<tr>
+							    <th><s:text name = "lang.contact_kakunin.contact_name"/></th>
 								<td><s:property value="contact_name" /></td>
                             </tr>
 
 							<tr>
+							    <th><s:text name = "lang.contact_kakunin.contact_mailAddress"/></th>
 								<td><s:property value="contact_mailAddress" /></td>
 							</tr>
 
 							<tr>
+							    <th><s:text name = "lang.contact_kakunin.contact_contents"/></th>
 								<td><s:property value="contact_contents" /></td>
                             </tr>
 
@@ -61,29 +64,30 @@
 <!-- 【隠し】入力jspで入力されたもの(s:textfield/area使用)を、s:paramでデータもってきて、送信ボタンを押すとアクションに渡される -->
 
                     <center>
-                    <a href='<s:url action="CompleteContactAction">
-                             <s:param name="contact_name" value="contact_name"/>
-   	                         <s:param name="contact_mailAddress" value="contact_mailAddress"/>
-                             <s:param name="contact_contents" value="contact_contents"/>
-                             </s:url>'>
-                             <s:text name = "lang.contact_kakunin.submit"/>
-                     </a>
-                     </center>
+                            <a href='<s:url action="CompleteContactAction">
+                                     <s:param name="contact_name" value="contact_name"/>
+   	                                 <s:param name="contact_mailAddress" value="contact_mailAddress"/>
+                                     <s:param name="contact_contents" value="contact_contents"/>
+                                     </s:url>'>
+                                     <s:text name = "lang.contact_kakunin.submit"/>
+                            </a>
+                    </center>
 
 <!--【隠し】s:paramで持ってきた、入力jspで入力されたもの(s:textfield/area使用)を、戻るボタンで戻った時にそのまま表示する(情報保持) -->
+
                      <center>
-                     <a href='<s:url action="FirstContactAction">
-                              <s:param name="contact_name" value="contact_name"/>
-   	                          <s:param name="contact_mailAddress" value="contact_mailAddress"/>
-                              <s:param name="contact_contents" value="contact_contents"/>
-                              </s:url>'>
-                              <s:text name = "lang.contact_kakunin.return_to_input"/>
-                              </a>
+                             <a href='<s:url action="FirstContactAction">
+                                      <s:param name="contact_name" value="contact_name"/>
+   	                                  <s:param name="contact_mailAddress" value="contact_mailAddress"/>
+                                      <s:param name="contact_contents" value="contact_contents"/>
+                                      </s:url>'>
+                                      <s:text name = "lang.contact_kakunin.return_to_input"/>
+                             </a>
                      </center>
 
 
                      <center>
-                             <a href="MainTopAction"><s:text name = "lang.contact_kakunin.return_to_top"/></a>
+                              <a href="MainTopAction"><s:text name = "lang.contact_kakunin.return_to_top"/></a>
                      </center>
 
       </body>
