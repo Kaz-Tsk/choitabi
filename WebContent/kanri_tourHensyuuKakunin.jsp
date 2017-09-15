@@ -196,7 +196,7 @@
    <a href=
 	    '<s:url action="GoTourEditPageAction">
 
-	    	<s:param name="from" value="confirmingPage"/>
+	    	<s:param name="from" value="'confirmingPage'"/>
 
 	    	<s:param name="currentTourId" value="currentTourId"/>
 		    <s:param name="currentTourName" value = "currentTourName"/>
@@ -209,15 +209,15 @@
 		    <s:param name="currentComment" value="currentComment"/>
 			<s:param name="currentImg" value="currentImg"/>
 
-		    <s:param name="defaultTourName" value = "editTourName"/>
-		    <s:param name="defaultPrice" value = "editPrice"/>
-		    <s:param name="defaultPersons" value = "editPersons"/>
-		    <s:param name="defaultDeparture" value = "editDeparture"/>
-		    <s:param name="defaultRegion" value = "editRegion"/>
-		    <s:param name="defaultPrefectures" value="editPrefectures"/>
-		    <s:param name="defaultTheme" value="editTheme"/>
-		    <s:param name="defaultComment" value="editComment"/>
-			<s:param name="defaultImg" value="editImg"/>
+		    <s:param name="editTourName" value = "editTourName"/>
+		    <s:param name="editPrice" value = "editPrice"/>
+		    <s:param name="editPersons" value = "editPersons"/>
+		    <s:param name="editDeparture" value = "editDeparture"/>
+		    <s:param name="editRegion" value = "editRegion"/>
+		    <s:param name="editPrefectures" value="editPrefectures"/>
+		    <s:param name="editTheme" value="editTheme"/>
+		    <s:param name="editComment" value="editComment"/>
+			<s:param name="editImg" value="editImg"/>
 	    </s:url>'>
     <s:text name="lang.kanri_tourHensyuuKakunin.return_input_page"/><br>
     </a>

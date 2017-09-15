@@ -42,50 +42,50 @@
    <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.tour_name"/></th>
    		<td><s:property value="currentTourName"/></td>
-   		<td><input type="text" name="editTourName" value=<s:property value="currentTourName"/>></input></td>
+   		<td><input type="text" name="editTourName" value='<s:property value="defaultTourName"/>'></input></td>
    </tr>
 
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.price"/></th>
    		<td><s:property value="currentPrice"/><s:text name="lang.kanri_tourHensyuu.yen"/></td>
-   		<td><input type="text" size="5" name="editPrice" value=<s:property value="currentPrice"/>></input>
+   		<td><input type="text" size="5" name="editPrice" value='<s:property value="defaultPrice"/>'></input>
    			<s:text name="lang.kanri_tourHensyuu.yen"/></td>
    </tr>
    <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.persons"/></th>
    		<td><s:property value="currentPersons"/><s:text name="lang.kanri_tourHensyuu.persons_number"/></td>
-   		<td><input type="text" size="5" name="editPersons" value=<s:property value="currentPersons"/>></input>
+   		<td><input type="text" size="5" name="editPersons" value='<s:property value="defaultPersons"/>'></input>
    			<s:text name="lang.kanri_tourHensyuu.persons_number"/></td>
    </tr>
    <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.departure"/></th><td>
    		<s:property value="currentDeparture"/></td>
-   		<td><input type="text" name="editDeparture" value=<s:property value = "currentDeparture"/>></input></td>
+   		<td><input type="text" name="editDeparture" value='<s:property value = "defaultDeparture"/>'></input></td>
    </tr>
    <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.departure"/></th>
    		<td><s:property value="currentRegion"/></td>
-   		<td><input type="text" name="editRegion" value=<s:property value="currentRegion"/>></input></td>
+   		<td><input type="text" name="editRegion" value='<s:property value="defaultRegion"/>'></input></td>
    </tr>
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.prefectures"/></th>
    		<td><s:property value="currentPrefectures"/></td>
-   		<td><input type="text" name="editPrefectures" value=<s:property value="currentPrefectures"/>></input></td>
+   		<td><input type="text" name="editPrefectures" value='<s:property value="defaultPrefectures"/>'></input></td>
    </tr>
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.theme"/></th>
    		<td><s:property value="currentTheme"/>
-   		</td><td><input type="text" name="editTheme" value = <s:property value= "currentTheme"/>></input></td>
+   		</td><td><input type="text" name="editTheme" value='<s:property value= "defaultTheme"/>'></input></td>
    </tr>
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.comment"/></th>
    		<td width="200px"><font size="2px"><s:property value="currentComment"/></font></td>
-   		<td><textarea rows="10" cols="30"name="editComment"><s:property value = "currentComment"/></textarea></td>
+   		<td><textarea rows="10" cols="30"name="editComment"><s:property value = "defaultComment"/></textarea></td>
    </tr>
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.image_url"/></th>
    		<td><s:property value="currentImg"/></td>
-   		<td><input type="text" name="editImg" value=<s:property value = "currentImg"/>>
+   		<td><input type="text" name="editImg" value='<s:property value = "defaultImg"/>'>
    		    <br><font size="2px"><s:text name="lang.kanri_tourHensyuu.direction_for_image_url"/></font></td>
    </tr>
 </table>
