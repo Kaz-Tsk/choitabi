@@ -12,7 +12,7 @@
 <head>
 
       <meta charset="UTF-8">
-      <link rel="stylesheet"type="text/css"href="./css/kanri_toiawasekakunin.css">
+      <link href="./css/kanri_toiawasekakunin.css"rel="stylesheet"type="text/css">
 
 
       <!-- 国際化：言語コード(ja/en)の取得とプロパティファイルの読み込み -->
@@ -36,7 +36,7 @@
 		               <form action="KanriContactAction" method="post">
 
 			                <input type="text" name="searchName" id="searchName" value="<s:property value="searchName"/>">
-			                <s:hidden name = "pageNum" value="1"/><!-- 1ページ目だよって検索したあとのページに伝える -->
+			                <s:hidden name = "pageNum" value="1"/><!-- 改めて1ページ目だよって検索したあとのページに伝える -->
                             <input type="submit" value=<s:text name = "lang.kanri_toiawaseKakunin.search"/>>
 
 		               </form>
@@ -62,8 +62,18 @@
 						</table>
 
 
-						       現在のページ数…<s:property value="pageNum"/><br>
+						       現在のページ数…<s:property value="pageNum"/>
+						       <br>
+						       <br>
 						       最大ページ数…<s:property value="maxPage"/>
+
+
+
+       <!-- ちなみにs:textname→国際化/s:property→前のページのものを表示/div class→cssでレイアウトを整えるためのクラス -->
+
+
+
+
 
 
 
