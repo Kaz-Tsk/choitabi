@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>choitabi トップ</title>
-<link rel = "stylesheet" type = "text/css" href = "css/index.css">
+<!--  <link rel = "stylesheet" type = "text/css" href = "css/index.css">-->
 <!-- jqueryの宣言 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/jquery.bxslider/jquery.bxslider.js"></script>
@@ -19,21 +19,27 @@
 
 
 <style>
+
+
 /*=============*/
 /*もみじ落ちてくる-----*/
 /*=============*/
 /*----------------------------------*/
 p.momiji01 img{
+width:0px;
 position: absolute;
-animation: moveM  3s infinite normal linear;
+animation: moveM  3s  normal linear;
 -webkit-border-radius: 200px;
 }
 @keyframes moveM {
-0% {top:0%;left:0%;opacity:1;}
-90% {opacity:1;}
-100% {top:80%;left:50%;opacity:0;}
+0% {top:0%;left:0%;opacity:1;width:100px;}
+90% {opacity:1;width:100px;}
+100% {top:80%;left:50%;opacity:0;width:100px;}
 }
 /*----------------------------------*/
+
+
+
 </style>
 
 
@@ -49,13 +55,7 @@ animation: moveM  3s infinite normal linear;
 
 
 
-<!--もみじ落ちてくる--------------------->
-<p class="momiji01">
-    <a href = "">
-        <img src = "img/momiji.png" width="100px" height="100px">
-    </a>
-</p>
-<!----------------------------------------->
+
 
 
 
@@ -169,6 +169,14 @@ animation: moveM  3s infinite normal linear;
 </div>
 
 
+
+<!--もみじ落ちてくる--------------------->
+<p class="momiji01">
+    <a href = "">
+        <img src = "img/momiji.png" width="100px" height="100px">
+    </a>
+</p>
+<!----------------------------------------->
 
 
 
