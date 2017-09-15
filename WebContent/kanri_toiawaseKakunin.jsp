@@ -36,7 +36,6 @@
 
 
 
-
 	   <!-- ここからイテレータ開始(検索) -->
 
 		               <form action="KanriContactAction" method="post">
@@ -73,7 +72,7 @@
 
                                <br>
                                <br>
-						       現在のページ数…<s:property value="pageNum"/>最大ページ数…<s:property value="maxPage"/>
+						       現在のページ数…<s:property value="pageNum"/>&nbsp;最大ページ数…<s:property value="maxPage"/>
                                <br>
                                <br>
 
