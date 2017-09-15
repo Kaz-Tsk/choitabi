@@ -54,8 +54,13 @@
 					</table>
 
 
+                    <br>
+                    <br>
+
+
 <!-- nyuuryoku.jspで入力されたもの(s:textfield/area使用)を、s:paramでデータもってきて、送信ボタンを押すとアクションに渡される -->
 
+                    <center>
                     <a href='<s:url action="CompleteContactAction">
                              <s:param name="contact_name" value="contact_name"/>
    	                         <s:param name="contact_mailAddress" value="contact_mailAddress"/>
@@ -63,6 +68,7 @@
                              </s:url>'>
                              <s:text name = "lang.contact_kakunin.submit"/>
                      </a>
+                     </center>
 
 
                      <center>

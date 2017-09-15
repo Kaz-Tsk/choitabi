@@ -9,13 +9,13 @@ pageEncoding="UTF-8"%>
 
        <head>
 
-             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-             <link href="css/contactsend.css" rel="stylesheet" type="text/css">
+                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                    <link href="css/contactsend.css" rel="stylesheet" type="text/css">
 
-             <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
-             <fmt:setLocale value="${pageContext.request.locale.language}"/>
-             <fmt:setBundle basename="com.internousdev.choitabi.property.contact_send"
-             var="lang" />
+                    <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
+                    <fmt:setLocale value="${pageContext.request.locale.language}"/>
+                    <fmt:setBundle basename="com.internousdev.choitabi.property.contact_send"
+                     var="lang" />
 
        </head>
 
@@ -23,7 +23,7 @@ pageEncoding="UTF-8"%>
 
        <body>
 
-               <%@ include file="header.jsp"%>
+              <%@ include file="header.jsp"%>
 
 
               <table>
@@ -38,5 +38,6 @@ pageEncoding="UTF-8"%>
 
 
        </body>
+
 
 </html>
