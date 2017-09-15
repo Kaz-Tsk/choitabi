@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type= "text/css" href = "css/index_3.css">
+<link rel = "stylesheet" type= "text/css" href = "css/imagehover.css">
 <title>ちょいたび</title>
 </head>
 <body>
@@ -18,7 +19,71 @@
 
     <div class= "theme_box">
     <h2>テーマで探す</h2>
+    <div class="sub">
+    <figure class="imghvr-hinge-left" >
+  <img src="img/gourmet_pict.png">
+  <figcaption>
+    グルメ
+  </figcaption>
+</figure>
+</div>
 
+ <div class="sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/place_pict.png">
+  <figcaption>
+    名所
+  </figcaption>
+</figure>
+</div>
+
+ <div class="sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/activity_pict.png">
+  <figcaption>
+    アクティビティ
+  </figcaption>
+</figure>
+</div>
+    </div>
+
+     <div class= "area_box">
+    <h2>エリアで探す</h2>
+    <div class="sub">
+    <figure class="imghvr-hinge-left" >
+  <img src="img/touhoku_pict.jpg">
+  <figcaption>
+    東北
+  </figcaption>
+</figure>
+</div>
+
+ <div class="sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/kantou_pict.jpg">
+  <figcaption>
+    関東
+  </figcaption>
+</figure>
+</div>
+
+ <div class="sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/kansai_pict.jpg">
+  <figcaption>
+    関西
+  </figcaption>
+</figure>
+</div>
+
+<div class="sub">
+<figure class="mghvr-hinge-left" >
+  <img src="img/kansai_pict.jpg">
+  <figcaption>
+    九州
+  </figcaption>
+</figure>
+</div>
     </div>
 </body>
 </html>
