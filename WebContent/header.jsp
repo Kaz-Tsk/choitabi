@@ -16,8 +16,8 @@
 
 	<!-- ログイン時ヘッダー -->
 	<header>
-         <s:if test="#session.userFlg==1||2">
-				   1 <div class="logo"><a href="<s:url action="MainTopAction"/>"><span
+         <s:if test="#session.userFlg==1||#session.userFlg==2">
+				    <div class="logo"><a href="<s:url action="MainTopAction"/>"><span
 					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 			<div class="navi">
 				<div class="navibox"><a href="about.jsp" class="underline">choitabiについて</a></div>
@@ -29,7 +29,7 @@
 
 	<!-- 管理者ログイン時ヘッダー  -->
 		<s:elseif test="#session.userFlg==3 ">
-			  2<div class="logo"><a href="MainTopAction">choitabi(管理者画面)</a></div>
+			  <div class="logo"><a href="MainTopAction">choitabi(管理者画面)</a></div>
 		<div class="navi">
 			<div class="navibox"><a href="kanri_tourList.jsp" class="underline">ツアー管理</a></div>
 			<div class="navibox"><a href= "kanri_toiawasekakunin.jsp"class="underline">管理問い合わせ</a></div>
@@ -40,7 +40,7 @@
 
 	<!-- 未ログイン時ヘッダー -->
 	<s:else>
-	   3<div class="logo"><a href="index.jsp"><span
+	   <div class="logo"><a href="index.jsp"><span
 					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 		<div class="logout-name"></div>
 		<div class="navi">
