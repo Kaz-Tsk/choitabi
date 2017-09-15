@@ -45,7 +45,7 @@
 				<s:text name="lang.kanri_tourTsuika.tour_name"/>
 			</th>
 			<td>
-				<input type="text" size="40" name="newTourName" value=<s:property value="newTourName"/>></input>
+				<input type="text" size="40" name="newTourName" value='<s:property value="newTourName"/>'></input>
 			</td>
 		</tr>
 		<tr>
@@ -53,7 +53,7 @@
 				<s:text name="lang.kanri_tourTsuika.price"/>
 			</th>
 			<td>
-				<input type="text" size="5" name="newPrice" value=<s:property value="newPrice"/>></input>
+				<input type="text" size="5" name="newPrice" value='<s:property value="newPrice"/>'></input>
 				<s:text name="lang.kanri_tourTsuika.yen"/>
 			</td>
 		</tr>
@@ -62,7 +62,7 @@
 				<s:text name="lang.kanri_tourTsuika.persons"/>
 			</th>
 			<td>
-				<input type="text" size="5" name="newPersons" value=<s:property value="newPersons"/>></input>
+				<input type="text" size="5" name="newPersons" value='<s:property value="newPersons"/>'></input>
 				<s:text name="lang.kanri_tourTsuika.persons_number"/>
 			</td>
 		</tr>
@@ -71,7 +71,7 @@
 				<s:text name="lang.kanri_tourTsuika.departure"/>
 			</th>
 			<td>
-				<input type="text" name="newDeparture" value=<s:property value="newDeparture"/>></input>
+				<input type="text" name="newDeparture" value='<s:property value="newDeparture"/>'></input>
 			</td>
 		</tr>
 		<tr>
@@ -79,7 +79,7 @@
 				<s:text name="lang.kanri_tourTsuika.region"/>
 			</th>
 			<td>
-				<input type="text" name="newRegion" value=<s:property value="newRegion"/>></input>
+				<input type="text" name="newRegion" value='<s:property value="newRegion"/>'></input>
 			</td>
 		</tr>
 		<tr>
@@ -87,7 +87,7 @@
 				<s:text name="lang.kanri_tourTsuika.prefectures"/>
 			</th>
 			<td>
-				<input type="text" name="newPrefectures" value=<s:property value="newPrefectures"/>></input>
+				<input type="text" name="newPrefectures" value='<s:property value="newPrefectures"/>'></input>
 			</td>
 		</tr>
 		<tr>
@@ -95,7 +95,7 @@
 				<s:text name="lang.kanri_tourTsuika.theme"/>
 			</th>
 			<td>
-				<input type="text" name="newTheme" value=<s:property value="newTheme"/>></input>
+				<input type="text" name="newTheme" value='<s:property value="newTheme"/>'></input>
 			</td>
 		</tr>
 		<tr>
@@ -110,8 +110,8 @@
 			<th>
 				<s:text name="lang.kanri_tourTsuika.image_url"/>
 			</th>
-			<td><input type="text" size="40" name="newImg"
-				value=<s:property value="newImg"/>></input><br>
+			<td><input type="text" size="40" name="newImg" value='<s:property value="newImg"/>'></input>
+				<br>
 				<font size="2px"><s:text name="lang.kanri_tourTsuika.direction_for_image_url"/></font>
 			</td>
 		</tr>
