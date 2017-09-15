@@ -27,6 +27,17 @@
 
 			</div>
 	</s:if>
+	         <s:if test="#session.userFlg==3">
+				    <div class="logo"><a href="<s:url action="MainTopAction"/>"><span
+					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
+			<div class="navi">
+				<div class="navibox"><a href="about.jsp" class="underline">choitabiについて</a></div>
+				<div class="navibox"><a href="Q&A.jsp" class="underline">お問い合わせ</a></div>
+				<div class="navibox"><a href="LogoutAction" class="underline">ログアウト</a></div>
+				<div class="navibox"><a href="MypageAction" class="underline">マイページ</a></div>
+
+			</div>
+	</s:if>
 
 	<!-- 管理者ログイン時ヘッダー  -->
 		<s:elseif test="#session.userFlg==3 ">
