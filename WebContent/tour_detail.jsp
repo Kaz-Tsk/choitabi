@@ -36,7 +36,7 @@
 	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 <!-- cart.css -->
-<link rel="stylesheet" type="text/css" href="css/cart.css">
+<link rel="stylesheet" type="text/css" href="css/tour_detail.css">
 
 </head>
 
@@ -47,36 +47,47 @@
 <!-- ヘッダーここから -->
 
 	<header>
-		<s:include value="header.jsp"></s:include>
-
+		<s:include value="header.jsp" />
 	</header>
 
-	<s:include value="test_tour.jsp"></s:include>
+<div class="center">
+<div class="sidebar">
+	<s:include value="test_tour.jsp" />
+</div>
 
 <!-- ここまで -->
 
 	<div class="contents">
 
+		<div class="subtitle"><s:text name="lang.tour_detail.subtitle" /></div>
+
 		<s:form action="InsertCartAction">
 			<s:iterator value="displayList">
 
-				<div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div id="left_content">
 						<p class="tour_name">
 							<s:property value="tour_name" />
 						</p>
-						<img src="<s:property value= "img"/>" class= "img-responsive center-block">
+						<img src="<s:property value= "img"/>" class= "img">
 
-						<p class="price">
-							￥
-							<fmt:formatNumber value="${price}" pattern="###,###,###" />
-							<span class="tax"><s:text name="lang.tour_detail.tax"></s:text></span>
-						</p>
-					</div>
-					</div>
+<table>
+  <tr>
+    <th>価格</th>
+    <td class="tour_price">￥<fmt:formatNumber value="${price}" pattern="###,###,###" />
+	<span class="tax"><s:text name="lang.tour_detail.tax"></s:text></span></td>
+</tr>
+<tr>
+<th>出発駅</th>
+<td></td>
+</tr>
+<tr>
+<th>場所</th>
+<td></td>
+</tr>
+<tr>
+<th><s:text name="lang.tour_detail.comment" /></th>
+<td><s:property escape="false" value="comment" /></td></tr>
+</table>
 
-                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div id="right-content">
 
 						<div id="item_infomation">
@@ -116,15 +127,14 @@
 					</div>
 
 
-               </div>
-	     </div>
-	</div>
+</div>
 
 	</s:iterator>
 
 
 	</s:form>
 
+    </div>
     </div>
 
 
