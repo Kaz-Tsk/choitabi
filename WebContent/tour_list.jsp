@@ -17,7 +17,7 @@
 <!-- 国際化 ※ここでは国を判別しています。
     言語コード( ja,en など)を示すロケールID を取得します。-->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
-<fmt:setBundle basename="com.internousdev.choitabi.property.cart"
+<fmt:setBundle basename="com.internousdev.choitabi.property.tour_list"
 	var="lang" />
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,7 +55,7 @@
 	<div id="contents">
 
 
-		<div class="subtitle"><s:text name="lang.itemView.subtitle" /></div>
+		<div class="subtitle"><s:text name="lang.tour_list.subtitle" /></div>
 
 		<div class="display_list">
 			<s:iterator value="selectList">

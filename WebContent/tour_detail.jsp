@@ -17,7 +17,7 @@
 <!-- 国際化 ※ここでは国を判別しています。
     言語コード( ja,en など)を示すロケールID を取得します。-->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
-<fmt:setBundle basename="com.internousdev.choitabi.property.cart"
+<fmt:setBundle basename="com.internousdev.choitabi.property.tour_detail"
 	var="lang" />
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +69,7 @@
 						<p class="price">
 							￥
 							<fmt:formatNumber value="${price}" pattern="###,###,###" />
-							<span class="tax"><s:text name="lang.itemdetail.tax"></s:text></span>
+							<span class="tax"><s:text name="lang.tour_detail.tax"></s:text></span>
 						</p>
 					</div>
 					</div>
@@ -80,7 +80,7 @@
 						<div id="item_infomation">
 
 							<p class="item_detail">
-								<s:text name="lang.itemdetail.item_detail" />
+								<s:text name="lang.tour_detail.comment" />
 								<!--  国際化対応の”商品詳細”入れ込み -->
 							</p>
 							<div class="item_comment" >
@@ -94,7 +94,7 @@
 						<input type="hidden" name="tour_id"
 							value="<s:property value="tour_id"/>" />
 
-						<s:text name="lang.itemdetail.quantities" />
+						<s:text name="lang.tour_detail.persons" />
 						<select name="persons">
 							<option>1</option>
 							<option>2</option>
@@ -107,7 +107,7 @@
 							<option>9</option>
 							<option>10</option>
 						</select> <input type="submit" class="btn btn-warning"
-							value="<s:text name= "lang.itemdetail.gocart"/>" />
+							value="<s:text name= "lang.tour_detail.cart"/>" />
 
 					</div>
 
