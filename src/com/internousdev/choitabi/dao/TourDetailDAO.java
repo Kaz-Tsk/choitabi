@@ -34,7 +34,7 @@ public class TourDetailDAO {
 
 			while(rs.next()) {
 				dto.setTour_id(rs.getInt("tour_id"));
-				dto.setTourName(rs.getString("tour_name"));
+				dto.setTour_name(rs.getString("tour_name"));
 				dto.setPrice(rs.getBigDecimal("price"));
 				dto.setDeparture(rs.getString("departure"));
 				dto.setRegion(rs.getString("region"));

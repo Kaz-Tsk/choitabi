@@ -58,10 +58,10 @@ public class TourListDAO {
             while (rs.next()) {
                 TourDTO dto= new TourDTO();
                 dto.setTour_id(rs.getInt("tour_id"));
-                dto.setTourName(rs.getString("tour_name"));
+                dto.setTour_name(rs.getString("tour_name"));
                 dto.setPrice(rs.getBigDecimal("price"));
                 dto.setImg(rs.getString("img"));
-                /*動作確認*/System.out.println("TourListDAO-取得ツアー名：" + dto.getTourName());
+                /*動作確認*/System.out.println("TourListDAO-取得ツアー名：" + dto.getTour_name());
                 selectList.add(dto);
                 }
 

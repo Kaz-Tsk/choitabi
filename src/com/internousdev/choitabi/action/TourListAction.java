@@ -96,15 +96,15 @@ public class TourListAction extends ActionSupport {
      * ツアー名を取得するメソッド
      * @return tourName ツアー名
      */
-    public String getTourName() {
+    public String getTour_name() {
         return tour_name;
         }
 
     /**
      * ツアー名を格納するメソッド
-     * @param tourName ツアー名
+     * @param tour_name ツアー名
      */
-    public void setTourame(String tour_name) {
+    public void setTour_name(String tour_name) {
         this.tour_name = tour_name;
         }
 

@@ -89,7 +89,7 @@ public class TourDTO {
 	 * ツアー名を取得するメソッド
 	 * @return tour_name ツアー名
 	 */
-	public String getTourName() {
+	public String getTour_name() {
 		return tour_name;
 	}
 
@@ -97,7 +97,7 @@ public class TourDTO {
 	 * ツアー名を格納するメソッド
 	 * @param tour_name ツアー名
 	 */
-	public void setTourName(String tour_name) {
+	public void setTour_name(String tour_name) {
 		this.tour_name = tour_name;
 	}
 

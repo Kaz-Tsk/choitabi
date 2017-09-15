@@ -25,7 +25,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>chitabi-カート画面</title>
+<title>chitabi-ツアー詳細</title>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -50,6 +50,8 @@
 		<s:include value="header.jsp"></s:include>
 
 	</header>
+
+	<s:include value="test_tour.jsp"></s:include>
 
 <!-- ここまで -->
 
@@ -79,11 +81,11 @@
 
 						<div id="item_infomation">
 
-							<p class="item_detail">
+							<p class="tour_detail">
 								<s:text name="lang.tour_detail.comment" />
 								<!--  国際化対応の”商品詳細”入れ込み -->
 							</p>
-							<div class="item_comment" >
+							<div class="tour_comment" >
 								<s:property escape="false" value="comment" />
 							</div>
 						</div>
@@ -94,6 +96,8 @@
 						<input type="hidden" name="tour_id"
 							value="<s:property value="tour_id"/>" />
 
+
+                      <!-- 参加人数 必要か不必要か -->
 						<s:text name="lang.tour_detail.persons" />
 						<select name="persons">
 							<option>1</option>
@@ -123,13 +127,12 @@
 
     </div>
 
-<!-- ------------------------------------- フッターここから -------------------------------------- -->
 
 
 <footer>
 	<s:include value="footerload.jsp" />
 </footer>
-<!-- ------------------------------------- ヘッダーここまで -------------------------------------- -->
+
 
 
 </body>

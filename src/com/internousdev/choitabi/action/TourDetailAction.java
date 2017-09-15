@@ -104,7 +104,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 
 		if(displayList.size() != 0) {
 			/*テスト中*/
-			this.tour_name = displayList.get(0).getTourName();
+			this.tour_name = displayList.get(0).getTour_name();
 			this.img = displayList.get(0).getImg();
 			/**/
 			result = SUCCESS;
@@ -136,7 +136,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 * ツアー名を取得するメソッド
 	 * @return tour_name ツアー名
 	 */
-	public String getTour_Name() {
+	public String getTour_name() {
 		return tour_name;
 	}
 
@@ -144,7 +144,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 * ツアー名を格納するメソッド
 	 * @param tour_name ツアー名
 	 */
-	public void setTour_Name(String tour_name) {
+	public void setTour_name(String tour_name) {
 		this.tour_name = tour_name;
 	}
 

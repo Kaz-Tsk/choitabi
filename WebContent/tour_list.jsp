@@ -36,7 +36,7 @@
 	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 <!-- cart.css -->
-<link rel="stylesheet" type="text/css" href="css/cart.css">
+<link rel="stylesheet" type="text/css" href="css/tour_list.css">
 
 </head>
 
@@ -44,13 +44,14 @@
 
 <body>
 
-<!-- ------------------------------------- ヘッダーここから -------------------------------------- -->
-
 <header>
 	<s:include value="header.jsp"/>
 </header>
 
+<div class="center">
+<div id = "side">
 <s:include value="test_tour.jsp" />
+</div>
 
 
 	<div id="contents">
@@ -61,7 +62,7 @@
 		<div class="display_list">
 			<s:iterator value="selectList">
 				<div class="template">
-					<div class="item_img">
+					<div class="tour_img">
 						<a
 							href="<s:url action="TourDetailAction"><s:param name="tour_id" value="%{tour_id}"/></s:url>"><img
 							class="tour_img" src="<s:property value="img"/>"
@@ -77,6 +78,8 @@
 				</div>
 			</s:iterator>
 		</div>
+	</div>
+
 	</div>
 
 
