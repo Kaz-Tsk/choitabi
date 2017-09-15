@@ -13,7 +13,31 @@
 <link href="js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
 
 <link rel="shortcut icon" href="img/favicon.ico">
+
 </head>
+
+
+
+<style>
+/*=============*/
+/*もみじ落ちてくる-----*/
+/*=============*/
+/*----------------------------------*/
+p.momiji01 img{
+position: absolute;
+animation: moveM  3s infinite normal linear;
+-webkit-border-radius: 200px;
+}
+@keyframes moveM {
+0% {top:0%;left:0%;opacity:1;}
+90% {opacity:1;}
+100% {top:80%;left:50%;opacity:0;}
+}
+/*----------------------------------*/
+</style>
+
+
+
 <body>
 
 <!--ヘッダー部分----------------------------------------------->
