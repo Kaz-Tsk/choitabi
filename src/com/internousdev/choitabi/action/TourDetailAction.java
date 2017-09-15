@@ -97,14 +97,20 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 */
 
 	public String execute() throws SQLException {
+		/*動作確認*/System.out.println("TourDetailAction - JSPから取得したID：" + tour_id);
 		String result = ERROR;
 		TourDetailDAO dao = new TourDetailDAO();
 		displayList = dao.select(tour_id);
 
 		if(displayList.size() != 0) {
+			/*テスト中*/
+			this.tour_name = displayList.get(0).getTourName();
+			this.img = displayList.get(0).getImg();
+			/**/
 			result = SUCCESS;
 		}
 
+		/*動作確認*/System.out.println("TourDetailAction - result:" + result);
 		return result;
 	}
 
@@ -114,7 +120,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 * ツアーIDを取得するメソッド
 	 * @return tour_id ツアーID
 	 */
-	public int getTourId() {
+	public int getTour_id() {
 		return tour_id;
 	}
 
@@ -122,7 +128,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 * ツアーIDを格納するメソッド
 	 * @param tour_id ツアーID
 	 */
-	public void setTourId(int tour_id) {
+	public void setTour_id(int tour_id) {
 		this.tour_id = tour_id;
 	}
 
@@ -130,7 +136,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 * ツアー名を取得するメソッド
 	 * @return tour_name ツアー名
 	 */
-	public String getTourName() {
+	public String getTour_Name() {
 		return tour_name;
 	}
 
@@ -138,7 +144,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 * ツアー名を格納するメソッド
 	 * @param tour_name ツアー名
 	 */
-	public void setTourName(String tour_name) {
+	public void setTour_Name(String tour_name) {
 		this.tour_name = tour_name;
 	}
 
@@ -303,3 +309,4 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
         }
 
 }
+

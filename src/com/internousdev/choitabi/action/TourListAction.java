@@ -80,7 +80,7 @@ public class TourListAction extends ActionSupport {
      * ツアーIDを取得するメソッド
      * @return item_id 商品ID
      */
-    public int getTourId() {
+    public int getTour_id() {
         return tour_id;
         }
 
@@ -88,7 +88,7 @@ public class TourListAction extends ActionSupport {
      * ツアーIDを格納するメソッド
      * @param tour_id ツアーID
      */
-    public void setTourId(int tour_id) {
+    public void setTour_id(int tour_id) {
         this.tour_id = tour_id;
         }
 

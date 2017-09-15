@@ -73,7 +73,7 @@ public class TourDTO {
 	 * ツアーIDを取得するメソッド
 	 * @return tour_id ツアーID
 	 */
-	public int getTourId() {
+	public int getTour_id() {
 		return tour_id;
 	}
 
@@ -81,7 +81,7 @@ public class TourDTO {
 	 * ツアーIDを格納するメソッド
 	 * @param tour_id ツアーID
 	 */
-	public void setTourId(int tour_id) {
+	public void setTour_id(int tour_id) {
 		this.tour_id = tour_id;
 	}
 
