@@ -64,3 +64,14 @@ input.submit_button{
 	background-color:lightyellow;
 }
 
+.linkBox{
+    margin-right:auto;
+    margin-left:auto;
+	width:120px;
+	height:30px;
+	font-family:ƒƒCƒŠƒI;
+	font-size:18px;
+	color :dimgrey;
+	border:3px solid dimgrey;
+	background-color:lightyellow;
+}
