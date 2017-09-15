@@ -62,7 +62,8 @@
 	<s:param name="pageNum" value="1"/></s:url>'>
 	■<s:text name="lang.kanri_top.contact_list"/>■
 	</a><br>
-
+※ちょい旅チームの皆さんへ・お問い合わせに関しては<br>
+各々でmongoDBを起動しないとお問い合わせ送れない＆DB情報みれないですー！（宮園）
 
 </body>
 </html>
