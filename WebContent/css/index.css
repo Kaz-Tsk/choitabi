@@ -225,13 +225,12 @@ img{
 /*----------------------------------*/
 p.momiji01 img{
 position: absolute;
-animation: moveY 2s infinite alternate linear;
+animation: moveM  3s infinite normal linear;
 -webkit-border-radius: 200px;
-border: solid 15px #fff;
 }
-@keyframes moveY {
-0% {top:0%;left:0%}
-50% {top:45%;left:30%}
-100% {top:90%;left:10%}
+@keyframes moveM {
+0% {top:0%;left:0%;opacity:1;}
+90% {opacity:1;}
+100% {top:80%;left:50%;opacity:0;}
 }
 /*----------------------------------*/
