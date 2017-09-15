@@ -139,7 +139,10 @@ method= "execute">
 <result name= "success">tour_detail.jsp</result>
 <result name="error">tour_detail.jsp</result>
 </action>
-
-
+<!-- top画面に遷移する -->
+<action name= "MainTopAction" class="com.internousdev.choitabi.action.MainTopAction"
+method= "execute">
+<result name= "success">index.jsp</result>
+</action>
 </package>
 </struts>

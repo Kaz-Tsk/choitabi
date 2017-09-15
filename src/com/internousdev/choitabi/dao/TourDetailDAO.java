@@ -20,7 +20,8 @@ import com.internousdev.util.DBConnector;
 public class TourDetailDAO {
 
 	public ArrayList<TourDTO> select(int tour_id) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+		/*動作化確認*/System.out.println("TourDetailDAO - 取得ID：" + tour_id);
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
 		Connection con = db.getConnection();
 		TourDTO dto = new TourDTO();
 		ArrayList<TourDTO> tourList = new ArrayList<TourDTO>();
@@ -32,7 +33,7 @@ public class TourDetailDAO {
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()) {
-				dto.setTourId(rs.getInt("tour_id"));
+				dto.setTour_id(rs.getInt("tour_id"));
 				dto.setTourName(rs.getString("tour_name"));
 				dto.setPrice(rs.getBigDecimal("price"));
 				dto.setDeparture(rs.getString("departure"));
