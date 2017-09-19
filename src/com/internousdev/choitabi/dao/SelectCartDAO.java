@@ -17,6 +17,7 @@ import com.internousdev.util.DBConnector;
  * @since 2017/09/05
  * @version 1.0
  */
+
 public class SelectCartDAO {
 	public ArrayList<CartDTO> selectCart(int user_id) {
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/?useSSL=true&requireSSL=true","choitabi","root","mysql");
@@ -30,6 +31,7 @@ public class SelectCartDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, user_id);
 			ResultSet rs = ps.executeQuery();
+			/*動作確認*/System.out.println("SelectCartDAO - rs：" + rs);
 
 			while(rs.next()) {
 				CartDTO dto = new CartDTO();
@@ -37,6 +39,7 @@ public class SelectCartDAO {
 				dto.setCart_id(rs.getInt("cart_id"));
 				dto.setTour_id(rs.getInt("tour_id"));
 				dto.setOrder_count(rs.getInt("order_count"));
+
 				cartList.add(dto);
 
 				PreparedStatement ps2 = con.prepareStatement(select2);
@@ -46,7 +49,7 @@ public class SelectCartDAO {
 				while(rs2.next()) {
 					dto.setTour_name(rs2.getString("tour_name"));
 					dto.setPrice(rs.getInt("price"));
-					dto.setSub_total(dto.getPrice()*dto.getOrder_count());
+					dto.setSub_total(dto.getPrice() * dto.getOrder_count());
 				}
 			}
 
@@ -59,8 +62,10 @@ public class SelectCartDAO {
 
 		}catch(Exception e) {
 			e.printStackTrace();
-			}
-			}
+		}
+		}
+
+		/*動作確認*/System.out.println("SelectCartDAO：確認" + cartList);
 		return cartList;
 	}
 
