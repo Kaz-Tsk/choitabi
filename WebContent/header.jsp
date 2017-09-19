@@ -7,6 +7,18 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- 国際化 ※ここでは国を判別しています。
+    言語コード( ja,en など)を示すロケールID を取得します。-->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<fmt:setBundle basename="com.internousdev.choitabi.property.header"
+	var="lang" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>choitabi</title>
      <link rel="stylesheet" type="text/css"  href="css/header.css">
@@ -44,9 +56,9 @@
 					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 		<div class="logout-name"></div>
 		<div class="navi">
-       <div class="navibox"><a href="about.jsp" class="underline">lang.header.about</a></div>
-		<div class="navibox"><a href="Q&A.jsp"  class="underline">lang.header.Q&A</a></div>
-		<div class="navibox"><a href="login.jsp"  class="underline">lang.header.login</a></div>
+       <div class="navibox"><a href="about.jsp" class="underline"><s:text name="lang.header.about"/></a></div>
+		<div class="navibox"><a href="Q&A.jsp"  class="underline"><s:text name="lang.header.Q&A"/></a></div>
+		<div class="navibox"><a href="login.jsp"  class="underline"><s:text name="lang.header.login"/></a></div>
 		</div>
 	</s:else>
 </header>
