@@ -89,7 +89,7 @@
 									pattern="###,###,###" /> <s:text name="lang.cart.yen" /></td>
 
 							<td><s:form action="UpdateCartAction">
-									<s:hidden name="cart_id" value="%{cart_id" />
+									<s:hidden name="cart_id" value="%{cart_id}" />
 									<s:hidden name="tour_id" value="%{tour_id}" />
 									<div class="row">
 										<select name="order_count">
