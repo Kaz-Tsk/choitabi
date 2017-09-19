@@ -33,7 +33,7 @@ public class PaymentCompleteDAO {
         con = db.getConnection();
         CartDTO dto = new CartDTO();
         String select = "select * from cart where userId = ?";
-        String insert = "insert into payoff(userId, itemId, orderCount) values(?, ?, ?)";
+        String insert = "insert into purchases(user_id, tour_id, order_count, resistlation_date) values(?, ?, ?, ?)";
 
         try {
             PreparedStatement ps1 = con.prepareStatement(select);
