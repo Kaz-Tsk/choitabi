@@ -27,7 +27,7 @@
 
 <body>
 
-<header>choitabi</header>
+<%@ include file="header.jsp"%>
 
 	<div id="contents">
 		<h3><s:text name="lang.kanri_history.orderSearch"/></h3>

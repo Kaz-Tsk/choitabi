@@ -42,8 +42,17 @@
                   <s:form action="ComfirmContactAction" method="post">
 
 
-                           <h1><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></h1>
-                           <h2><s:text name = "lang.contact_nyuuryoku.please_input_contents"/></h2>
+                           <h1>
+                           <span class="under">
+                           <s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/>
+                           </span>
+                           </h1>
+
+                           <br>
+                           <br>
+
+                           <h3><s:text name = "lang.contact_nyuuryoku.please_input_contents"/></h3>
+
                            <br>
 
 
