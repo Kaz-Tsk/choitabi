@@ -54,14 +54,14 @@ public class KanriHistoryDAO {
 
 	            while (rs.next()) {
 	                CartDTO dto= new CartDTO();
-	                dto.setUserId(rs.getInt("user_id"));
-	                dto.setFamilyNameKanji(rs.getString("family_name_kanji"));
-	                dto.setGivenNameKanji(rs.getString("given_name_kanji"));
-	                dto.setTourId(rs.getInt("tour_id"));
-	                dto.setTourName(rs.getString("tour_name"));
-	                dto.setOrderCount(rs.getInt("order_count"));
-	                dto.setTotalPrice(rs.getInt("price")*rs.getInt("total_price"));
-	                dto.setRegistrationDate(rs.getString("registration_date"));
+	                dto.setUser_id(rs.getInt("user_id"));
+	                dto.setFamily_name_kanji(rs.getString("family_name_kanji"));
+	                dto.setGiven_name_kanji(rs.getString("given_name_kanji"));
+	                dto.setTour_id(rs.getInt("tour_id"));
+	                dto.setTour_name(rs.getString("tour_name"));
+	                dto.setOrder_count(rs.getInt("order_count"));
+	                dto.setTotal_price(rs.getInt("price")*rs.getInt("total_price"));
+	                dto.setRegistration_date(rs.getString("registration_date"));
 	                searchList.add(dto);
 	                }
 
