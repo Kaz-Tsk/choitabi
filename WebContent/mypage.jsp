@@ -50,6 +50,7 @@
 			<button type= "submit" ><s:text name="lang.mypage.purchasehistory"/></button>
 		</s:form>
 	</div>
+</div>
 
 	<!-- footer include -->
 	<footer style= margin-top:350px>
