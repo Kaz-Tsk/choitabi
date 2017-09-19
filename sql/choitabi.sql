@@ -35,9 +35,9 @@ user_id int not null,
 tour_id int not null,
 order_count int not null default 1,
 registration_date timestamp not null default current_timestamp,
-updated_date timestamp not null default cureent_timestamp,
-foreign key(user_id) references openconnect.users(user_id) on delete cascade,
-foreign key(tour_id) references choitabi.tour(tour_id)
+updated_date timestamp not null default current_timestamp,
+foreign key(tour_id) references tour(tour_id),
+foreign key(user_id) references openconnect.users(user_id) on delete cascade
 );
 
 insert into tour(tour_id,tour_name,price,persons,departure,region,prefectures,theme,comment,img)

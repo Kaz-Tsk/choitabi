@@ -14,11 +14,11 @@
 
 <!-- body部分 -->
 <div class = "container">
-	<h1>購入履歴</h1>
+	<h2>購入履歴</h2>
 	<table class = "history-table">
 
-
-
+<s:if test= "%{!UserPurchaseHistoryList.isEmpty()}">
+	    	<s:iterator value="UserPurchaseHistoryList">
 				<tr>
 			<th>
 				ツアー名
@@ -43,16 +43,16 @@
 	    			<td><s:property value="Math.floor(subtotal)"/></td>
 	    			<td><s:property value="registrationAt"/></td>
 	    		</tr>
+	    	</s:iterator>
+	    </s:if>
 
-
-
+	    <s:else>
 	    	<div class="error-message">
 	    	<h1>購入履歴はありません</h1>
 	    	</div>
-
+	    </s:else>
      </table>
 </div>
-
 
 
 
