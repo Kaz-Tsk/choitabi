@@ -33,7 +33,7 @@
     <figure class="imghvr-hinge-left" >
   <img src="img/gourmet_pict.png"  height= "150" width="150">
   <figcaption>
-    <b><s:text name="lang.index.gourmet"/></b>
+    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><b><s:text name="lang.index.gourmet"/></b></a>
   </figcaption>
 </figure>
 </div>
@@ -42,7 +42,7 @@
 <figure class="imghvr-hinge-left" >
   <img src="img/place_pict.png" height= "150" width="150">
   <figcaption>
-    <b><s:text name="lang.index.spot"/></b>
+    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'名所'}"/></s:url>'><b><s:text name="lang.index.spot"/></b></a>
   </figcaption>
 </figure>
 </div>
@@ -51,7 +51,7 @@
 <figure class="imghvr-hinge-left" >
   <img src="img/activity_pict.png" height= "150" width="150">
   <figcaption>
-    <b><s:text name="lang.index.activity"/></b>
+    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'アクティビティ'}"/></s:url>'><b><s:text name="lang.index.activity"/></b></a>
   </figcaption>
 </figure>
 </div>
@@ -63,7 +63,7 @@
     <figure class="imghvr-hinge-left" >
   <img src="img/touhoku_pict.jpg" height= "150" width="150">
   <figcaption>
-    <b><s:text name="lang.index.TOHOKU"/></b>
+   <a href='<s:url action="TourListAction"><s:param name="region" value="%{'東北'}"/></s:url>'> <b><s:text name="lang.index.TOHOKU"/></b></a>
   </figcaption>
 </figure>
 </div>
@@ -72,7 +72,7 @@
 <figure class="imghvr-hinge-left" >
   <img src="img/kantou_pict.jpg" height= "150" width="150">
   <figcaption>
-    <b><s:text name="lang.index.KANTO"/></b>
+    <a href='<s:url action="TourListAction"><s:param name="region" value="%{'関東'}"/></s:url>'><b><s:text name="lang.index.KANTO"/></b></a>
   </figcaption>
 </figure>
 </div>
@@ -81,7 +81,7 @@
 <figure class="imghvr-hinge-left"  >
   <img src="img/kansai_pict.jpg" height= "150" width="150">
   <figcaption>
-    <b><s:text name="lang.index.KANSAI"/></b>
+    <a href='<s:url action="TourListAction"><s:param name="region" value="%{'関西'}"/></s:url>'><b><s:text name="lang.index.KANSAI"/></b></a>
   </figcaption>
 </figure>
 </div>
@@ -90,7 +90,7 @@
 <figure class="imghvr-hinge-left" >
   <img src="img/kyushu_pict.jpg" height= "150" width="150">
   <figcaption>
-    <b><s:text name="lang.index.KYUSYU"/></b>
+    <a href='<s:url action="TourListAction"><s:param name="region" value="%{'九州'}"/></s:url>'><b><s:text name="lang.index.KYUSYU"/></b></a>
   </figcaption>
 </figure>
 </div>
