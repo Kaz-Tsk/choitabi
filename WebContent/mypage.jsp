@@ -47,9 +47,10 @@
 			</div>
 		<div class="purchase-history">
 		<s:form action = "UserPurchaseHistoryAction">
-			<button type= "submit" ><s:text name="lang.mypage.purchase history"/></button>
+			<button type= "submit" ><s:text name="lang.mypage.purchasehistory"/></button>
 		</s:form>
 	</div>
+</div>
 
 	<!-- footer include -->
 	<footer style= margin-top:350px>
