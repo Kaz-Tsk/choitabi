@@ -83,3 +83,7 @@ div {
 table {
 	border-line: 1px;
 }
+
+footer {
+	margin-bottom:0;
+}
