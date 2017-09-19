@@ -38,6 +38,7 @@
 <!-- cart.css -->
 <link rel="stylesheet" type="text/css" href="css/tour_list.css">
 
+<link rel = "stylesheet" type= "text/css" href = "css/imagehover.css">
 </head>
 
 
@@ -62,12 +63,14 @@
 		<div class="display_list">
 			<s:iterator value="selectList">
 				<div class="template">
+				<figure class="imghvr-hinge-left" >
 					<div class="tour_img">
 						<a
 							href="<s:url action="TourDetailAction"><s:param name="tour_id" value="%{tour_id}"/></s:url>"><img
 							class="tour_img" src="<s:property value="img"/>"
 							height="250px"> <s:hidden value="tour_id" /> </a>
 					</div>
+					</figure>
 					<div class="tour_name">
 						<s:property value="tour_name" />
 					</div>
