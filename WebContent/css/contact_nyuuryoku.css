@@ -1,8 +1,24 @@
-body{
-	position:relative;
-	width: 1500px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top:80px;
+@charset "UTF-8";
 
+
+
+.error{
+	color:red;
+}
+
+
+ #submit{
+width: 20%;
+margin-top: 50px;
+margin-left:120px;
+
+}
+
+td{
+	text-align:left;
+	padding-top: 80px;
+
+}
+th{
+	text-align:center;
 }

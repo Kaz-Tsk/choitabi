@@ -15,6 +15,7 @@
    <head>
 
      <title><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></title>
+     <link rel ="stylesheet" type ="text/css" href ="css/contact_nyuuryoku.css">
 
 
      <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->
@@ -37,7 +38,8 @@
 
 <!-- ＊＊＊＊＊＊＊ｓ：フォームに入力されたものをSUBMIT（送信）すると入力されたものまるごとアクションに渡せる＊＊＊＊＊＊-->
 
-                  <center><s:form action="ComfirmContactAction" method="post"></center>
+                  <center>
+                  <s:form action="ComfirmContactAction" method="post">
 
 
                            <h1><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></h1>
@@ -63,19 +65,27 @@
                            </tr>
 
                            <tr>
-                           <th><s:text name = "lang.contact_nyuuryoku.contact_contents"/></th>
-                           <td colspan = "4"><s:textarea name="contact_contents" rows="10" cols="45"/></td>
+                               <th><s:text name = "lang.contact_nyuuryoku.contact_contents"/></th>
+                               <td colspan = "4"><s:textarea name="contact_contents" rows="10" cols="45"/></td>
                            </tr>
 
                            <br>
                            <br>
 
+                           <tr>
+                              <td>
+                              <div id="submit">
+                              <input type = "submit" name="submit"
+                                     value="<s:text name = "lang.contact_nyuuryoku.next_to_confirmation"/>"></input>
+                              </div>
+                              </td>
+                           </tr>
 
-                           <center>
-                                   <input type = "submit" value="<s:text name = "lang.contact_nyuuryoku.next_to_confirmation"/>" ></input>
-                           </center>
+
 
                    </s:form>
+                   </center>
+
 
 
 <!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊フォーム終わり＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
@@ -85,9 +95,9 @@
                              <br>
 
 
-                            <center>
+                            <div class="link">
                                     <a href="index.jsp"><s:text name = "lang.contact_nyuuryoku.return_to_top"/></a>
-                            </center>
+                            </div>
 
 
     </body>
