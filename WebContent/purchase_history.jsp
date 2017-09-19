@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset=UTF-8>
+<link rel ="stylesheet"  type="text/css" href="css/purchase_history.css">
 <title>購入履歴</title>
 </head>
 <body>
@@ -15,7 +16,10 @@
 <div class = "container">
 	<h1>購入履歴</h1>
 	<table class = "history-table">
-		<tr>
+
+
+
+				<tr>
 			<th>
 				ツアー名
 			</th>
@@ -32,10 +36,6 @@
 		    	 購入日
 		    </th>
 	    </tr>
-
-	    <s:if test= "#session.userFlg==1 || #session.userFlg == 2">
-	    	<s:iterator value="UserPurchaseHistoryList">
-
 	    		<tr>
 	    			<td><s:property value="tourName"/></td>
 	    			<td><s:property value="Math.floor(price)"/></td>
@@ -43,14 +43,13 @@
 	    			<td><s:property value="Math.floor(subtotal)"/></td>
 	    			<td><s:property value="registrationAt"/></td>
 	    		</tr>
-	    	</s:iterator>
-	    </s:if>
 
-	    <s:else>
+
+
 	    	<div class="error-message">
 	    	<h1>購入履歴はありません</h1>
 	    	</div>
-	    </s:else>
+
      </table>
 </div>
 

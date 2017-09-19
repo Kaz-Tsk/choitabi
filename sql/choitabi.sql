@@ -29,6 +29,16 @@ is_deleted boolean default false,/*商品選択削除*/
 foreign key(user_id) references openconnect.users(user_id) on delete cascade
 );
 
+create table purchases(
+purchase_id int primary key auto_increment,
+user_id int not null,
+tour_id int not null,
+order_count int not null default 1,
+registration_date timestamp not null default current_timestamp,
+updated_date timestamp not null default cureent_timestamp,
+foreign key(user_id) references openconnect.users(user_id) on delete cascade,
+foreign key(tour_id) references choitabi.tour(tour_id)
+);
 
 insert into tour(tour_id,tour_name,price,persons,departure,region,prefectures,theme,comment,img)
 VALUES

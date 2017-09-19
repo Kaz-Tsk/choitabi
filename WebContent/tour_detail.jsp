@@ -108,20 +108,7 @@
 							value="<s:property value="tour_id"/>" />
 
 
-                      <!-- 参加人数 必要か不必要か -->
-						<s:text name="lang.tour_detail.persons" />
-						<select name="persons">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-						</select> <input type="submit" class="btn btn-warning"
+                      <!-- 参加人数 必要か不必要か --><input type="submit" class="btn btn-warning"
 							value="<s:text name= "lang.tour_detail.cart"/>" />
 
 					</div>

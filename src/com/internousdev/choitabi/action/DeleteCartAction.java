@@ -88,7 +88,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 
                 if(cartList.size() > 0){
                     for(int i = 0; i < cartList.size(); i++ ){
-                        total_price += (cartList.get(i).getPrice())*(cartList.get(i).getOrderCount());
+                        total_price += (cartList.get(i).getPrice())*(cartList.get(i).getOrder_count());
                         }
 
                     result =SUCCESS;
@@ -105,7 +105,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * ユーザーIDを取得するためのメソッド
      * @return user_id ユーザーID
      */
-    public int getUserId() {
+    public int getUser_id() {
         return user_id;
         }
 
@@ -113,7 +113,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * ユーザーIDを格納するためのメソッド
      * @param user_id ユーザーID
      */
-    public void setUserId(int user_id) {
+    public void setUser_id(int user_id) {
         this.user_id = user_id;
         }
 
@@ -153,7 +153,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * 合計金額を取得するメソッド
      * @return total_price 合計金額
      */
-    public int getTotalPrice() {
+    public int getTotal_price() {
         return total_price;
         }
 
@@ -161,7 +161,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * 合計金額を格納するメソッド
      * @param total_price 合計金額
      */
-    public void setTotalPrice(int total_price) {
+    public void setTotal_price(int total_price) {
         this.total_price = total_price;
         }
 
@@ -169,7 +169,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * カート内の予約人数を取得するメソッド
      * @return order_count 予約人数
      */
-    public int getOrderCount() {
+    public int getOrder_count() {
         return order_count;
         }
 
@@ -177,7 +177,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * カート内の予約人数を格納するメソッド
      * @param order_count 予約人数
      */
-    public void setOrderCount(int order_count) {
+    public void setOrder_count(int order_count) {
         this.order_count = order_count;
         }
 
@@ -201,7 +201,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * カートIDを取得するメソッド
      * @return cart_id カートID
      */
-    public int getCartId() {
+    public int getCart_id() {
         return cart_id;
         }
 
@@ -209,7 +209,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * カートIDを格納するメソッド
      * @param cart_id カートID
      */
-    public void setCartId(int cart_id) {
+    public void setCart_id(int cart_id) {
         this.cart_id = cart_id;
         }
 
