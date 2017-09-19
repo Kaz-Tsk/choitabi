@@ -107,7 +107,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
 
         if (cartList.size() > 0) {
         	for(int i = 0; i < cartList.size(); i++) {
-        		total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrderCount());
+        		total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count());
         	}
 
         	result = SUCCESS;
@@ -124,7 +124,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * カートIDを取得するメソッド
      * @return cart_id カートID
      */
-    public int getCartId() {
+    public int getCart_id() {
         return cart_id;
         }
 
@@ -132,7 +132,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * カートIDを格納するメソッド
      * @param cart_id カートID
      */
-    public void setCartId(int cart_id) {
+    public void setCart_id(int cart_id) {
         this.cart_id = cart_id;
         }
 
@@ -140,7 +140,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * ユーザーIDを取得するメソッド
      * @return user_id ユーザーID
      */
-    public int getUserId() {
+    public int getUser_id() {
     	return user_id;
     }
 
@@ -148,7 +148,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * ユーザーIDを格納メソッド
      * @oaram user_id ユーザーID
      */
-    public void setUserId(int user_id) {
+    public void setUser_id(int user_id) {
     	this.user_id = user_id;
     }
 
@@ -156,7 +156,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * ツアーIDを取得するメソッド
      * @return tour_id ツアーID
      */
-    public int getTourId() {
+    public int getTour_id() {
     	return tour_id;
     }
 
@@ -164,7 +164,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * ツアーIDを格納するメソッド
      * @param tour_id ツアーID
      */
-    public void setTourId(int tour_id) {
+    public void setTour_id(int tour_id) {
     	this.tour_id = tour_id;
     }
 
@@ -172,7 +172,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * ツアー名を取得するメソッド
      * @return tour_name ツアー名
      */
-    public String getTourName() {
+    public String getTour_name() {
     	return tour_name;
     }
 
@@ -180,7 +180,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * ツアー名を格納するメソッド
      * @param tour_name ツアー名
      */
-    public void setTourName(String tour_name) {
+    public void setTour_name(String tour_name) {
     	this.tour_name = tour_name;
     }
 
@@ -204,7 +204,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 予約人数を取得するメソッド
      * @return order_count 予約人数
      */
-    public int getOrderCount() {
+    public int getOrder_count() {
         return order_count;
         }
 
@@ -212,7 +212,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 予約人数を格納するメソッド
      * @param order_count 予約人数
      */
-    public void setOrderCount(int order_count) {
+    public void setOrder_count(int order_count) {
         this.order_count = order_count;
         }
 
@@ -220,15 +220,15 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 合計金額を取得するメソッド
      * @return total_price 合計金額
      */
-    public int getTotalPrice() {
+    public int getTotal_price() {
     	return total_price;
     }
 
     /**
      * 合計金額を格納するメソッド
-     * @param totalPrice 合計金額
+     * @param total_price 合計金額
      */
-    public void setTotalPrice(int total_price) {
+    public void setTotal_price(int total_price) {
     	this.total_price = total_price;
     }
 
@@ -236,7 +236,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 更新処理をした件数を取得するメソッド
      * @return updateCount 更新処理をした件数
      */
-    public int getUpdateCount() {
+    public int getUpdate_count() {
     	return updateCount;
     }
 
@@ -244,7 +244,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 更新処理をした件数を格納するメソッド
      * @param updateCount 更新処理をした件数
      */
-    public void setUpdateCount(int updateCount) {
+    public void setUpdate_count(int updateCount) {
     	this.updateCount = updateCount;
     }
 

@@ -94,7 +94,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 			cartList = scDao.selectCart(user_id);
 
 			for(int i = 0; i <cartList.size(); i++) {
-				total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrderCount());
+				total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count());
 			}
 
 			result = SUCCESS;
@@ -109,7 +109,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * ユーザーIDを取得するメソッド
 	 * @return user_id ユーザーID
 	 */
-	public int getUserId() {
+	public int getUser_id() {
 		return user_id;
 	}
 
@@ -117,7 +117,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * ユーザーIDを格納するメソッド
 	 * @param user_id   ユーザーID
 	 */
-	public void setUserId(int user_id) {
+	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
 
@@ -125,7 +125,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * ツアーIDを取得するメソッド
 	 * @return tour_id ツアーID
 	 */
-	public int getTourId() {
+	public int getTour_id() {
 		return tour_id;
 	}
 
@@ -133,7 +133,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * ツアーIDを格納するメソッド
 	 * @param tour_id ツアーID
 	 */
-	public void setTourId(int tour_id) {
+	public void setTour_id(int tour_id) {
 		this.tour_id = tour_id;
 	}
 
@@ -141,7 +141,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * ツアー名を取得するメソッド
 	 * @return tour_name ツアー名
 	 */
-	public String getTourName() {
+	public String getTour_name() {
 		return tour_name;
 	}
 
@@ -149,7 +149,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * ツアー名を格納するメソッド
 	 * @param tour_name ツアー名
 	 */
-	public void setTourName(String tour_name) {
+	public void setTour_name(String tour_name) {
 		this.tour_name = tour_name;
 	}
 
@@ -173,7 +173,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 合計金額を取得するメソッド
 	 * @return total_price 合計金額
 	 */
-	public int getTotalPrice() {
+	public int getTotal_price() {
 		return total_price;
 	}
 
@@ -181,7 +181,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 合計金額を格納するメソッド
 	 * @oaram total_price 合計金額
 	 */
-	public void setTotalPrice(int total_price) {
+	public void setTotal_price(int total_price) {
 		this.total_price = total_price;
 	}
 
@@ -221,7 +221,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 予約人数を取得するメソッド
 	 * @return order_count 予約人数
 	 */
-	public int getOrderCount() {
+	public int getOrder_count() {
 		return order_count;
 	}
 
@@ -229,7 +229,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 予約人数を格納するメソッド
 	 * @param order_count 予約人数
 	 */
-	public void setOrderCount(int order_count) {
+	public void setOrder_count(int order_count) {
 		this.order_count = order_count;
 	}
 
@@ -237,7 +237,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 小計を取得するメソッド
 	 * @return sub_total 小計
 	 */
-	public int getSubTotal() {
+	public int getSub_total() {
 		return sub_total;
 	}
 
@@ -245,7 +245,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 小計を格納するメソッド
 	 * @param sub_total 小計
 	 */
-	public void setSubTotal(int sub_total) {
+	public void setSub_total(int sub_total) {
 		this.sub_total = sub_total;
 	}
 

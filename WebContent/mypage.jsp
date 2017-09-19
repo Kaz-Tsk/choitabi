@@ -39,7 +39,7 @@
 				</s:iterator>
 			</div>
 		<div class="purchase-history">
-		<s:form action = "PurchaseHistoryAction">
+		<s:form action = "UserPurchaseHistoryAction">
 			<button type= "submit" >購入履歴</button>
 		</s:form>
 	</div>

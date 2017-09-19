@@ -97,7 +97,10 @@
 </action>
 
 <!--  購入履歴画面に遷移 -->
-
+<action name="UserPurchaseHistoryAction" class="com.internousdev.choitabi.action.UserPurchaseHistoryAction" method="execute">
+<result name="success">purchase_history.jsp</result>
+<result name="error">purchase_history.jsp</result>
+</action>
 <!-- お問い合わせ画面関連 -->
 
 

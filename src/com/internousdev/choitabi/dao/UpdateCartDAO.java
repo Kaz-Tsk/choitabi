@@ -18,7 +18,7 @@ import com.internousdev.util.DBConnector;
 public class UpdateCartDAO {
     public int updateCart(int cart_id, int user_id, int order_count) {
         int count = 0;
-        DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+        DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
         Connection con = db.getConnection();
         String sql ="update cart set order_count=? where user_id=?, and cart_id=?";
 
