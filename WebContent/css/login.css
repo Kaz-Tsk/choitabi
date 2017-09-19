@@ -1,37 +1,38 @@
+body{
+	position:relative;
+	width:100%;
+	height:100vh;
+}
 
 .main{
-	width:100%
-}
-.login-text{
-	text-align:center;
-	margin:30px auto;
-}
-.login-text h1{
-	border-bottom: 1px solid black;
-	display:inline;
-}
-.login-box{
-	width:300px;
-	top:200;px
-	margin:0 auto;
-	border: 2px solid black;
-	text-align: center;
-	position:relative;
+	position:absolute;
+	width:100%;
+	height:100vh;
 }
 
-.login-form input{
-	width:250px;
-	height:50px;
-	margin:0px auto;
-	font-size:20px
+header{
+	position:fixed;
+	width:100%;
 }
-.login-form h2{
-	font-size:20px;
-	margin 0;
+
+.login-box{
+	border:2px solid black;
+	width:300px;
+	height:350px;
+	margin:auto;
+	text-align:center;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+
+
 }
 .submit{
-	margin:20px auto;
+	margin-top:30px;
 }
+
 button{
 	display: inline-block;
     padding: 0.5em 1em;
@@ -41,4 +42,11 @@ button{
     border-bottom: solid 4px #c0c0c0;
     border-radius: 3px;
 
+
+}
+
+footer{
+	position:fixed;
+	bottom:0;
+	width:100%;
 }

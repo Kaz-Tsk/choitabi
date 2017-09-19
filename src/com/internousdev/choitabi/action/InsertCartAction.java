@@ -100,7 +100,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 
 	public String execute() throws SQLException {
 		String result = ERROR;
-		/*動作確認*/System.out.println("test" + session.containsKey("userId"));
+		/*動作確認*/System.out.println("test：" + session.containsKey("userId"));
 		if(session.containsKey("userId")) {
 			user_id = (int) session.get("userId");
 			InsertCartDAO icDao = new InsertCartDAO();
@@ -115,7 +115,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 
 				result = SUCCESS;
 
-				/*動作確認*/System.out.println("InsertCartAction - 動作：" + result);
+				/*動作確認*/System.out.println("InsertCartAction - 結果：" + result);
 				/*動作確認*/System.out.println("取得ユーザーID：" + user_id);
 			}
 		}

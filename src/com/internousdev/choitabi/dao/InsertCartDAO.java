@@ -109,7 +109,7 @@ public class InsertCartDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1,  user_id);
 			ResultSet rs = ps.executeQuery();
-			/*動作確認*/System.out.println("InsertCartDAO：rs" + rs);
+			/*動作確認*/System.out.println("InsertCartDAO - rs：" + rs);
 
 			while(rs.next()) {
 				CartDTO dto = new CartDTO();

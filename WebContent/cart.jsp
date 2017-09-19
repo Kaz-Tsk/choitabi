@@ -59,7 +59,7 @@
 			</h1>
 		</div>
 
-		<s:if test="%{cartList.size() > 0 && #session.user_id != null}">
+		<s:if test="%{cartList.size() > 0 && #session.userId != null}">
 			<table class="cartlist">
 			    <thead>
 					<tr>
