@@ -37,11 +37,11 @@
 
 <!-- ＊＊＊＊＊＊＊ｓ：フォームに入力されたものをSUBMIT（送信）すると入力されたものまるごとアクションに渡せる＊＊＊＊＊＊-->
 
-                   <s:form action="ComfirmContactAction" method="post">
+                  <center><s:form action="ComfirmContactAction" method="post"></center>
 
 
                            <h1><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></h1>
-                           <div class = "direction"><s:text name = "lang.contact_nyuuryoku.please_input_contents"/><br></div>
+                           <s:text name = "lang.contact_nyuuryoku.please_input_contents"/><br>
 
 
      <!-- 渡ったアクションでERRORがでたらアクションから引っ張ってきたエラーメッセージを表示する文 -->
