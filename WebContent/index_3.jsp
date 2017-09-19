@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type= "text/css" href = "css/index_3.css">
 <link rel = "stylesheet" type= "text/css" href = "css/imagehover.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jquery.js"></script>
 <title>ちょいたび</title>
 </head>
 
@@ -14,13 +16,8 @@
 </header>
 
 <body>
-    <div class= "img_main">
-    <img src="img/mihuneyamarakuen.jpg"  height= "280" width="378p">
-    <img src="img/zundamochi.jpg" height= "280" width="378p">
-    <img src="img/sarugakyou_bungee.jpg" height= "280" width="378p">
-    <img src="img/nanbayasakazinja.jpg" height= "280" width="378p">
-    <h1>ちょいたびで、ちょいといい旅。</h1>
-    </div>
+
+
 
     <div class= "theme_box">
     <h2>テーマで探す</h2>

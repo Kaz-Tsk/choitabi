@@ -1,10 +1,16 @@
 @CHARSET "UTF-8";
 
-.img_main{
+.glide{
 	height:350px;
 	width:1530px;
 	margin-top:20px;
+	text-align: center;
 	border-bottom: solid 5px orange;
+}
+
+li{
+	height:280px;
+	width:378px
 }
 
 h1{
