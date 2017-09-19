@@ -87,9 +87,10 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 
 	public String execute() throws SQLException {
 		String result = ERROR;
+		/*動作確認*/System.out.println("SelectCartAction：" + result);
 
-		if (session.containsKey("user_id")) {
-			user_id = (int)session.get("user_id");
+		if (session.containsKey("userId")) {
+			user_id = (int)session.get("userId");
 			SelectCartDAO scDao = new SelectCartDAO();
 			cartList = scDao.selectCart(user_id);
 

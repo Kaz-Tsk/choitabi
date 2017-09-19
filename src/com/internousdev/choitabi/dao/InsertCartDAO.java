@@ -98,7 +98,7 @@ public class InsertCartDAO {
 	 */
 
 	public ArrayList<CartDTO> selected(int user_id) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/?useSSL=true&requireSSL=true","choitabi","root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
@@ -109,6 +109,7 @@ public class InsertCartDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1,  user_id);
 			ResultSet rs = ps.executeQuery();
+			/*動作確認*/System.out.println("InsertCartDAO：rs" + rs);
 
 			while(rs.next()) {
 				CartDTO dto = new CartDTO();
@@ -140,6 +141,8 @@ public class InsertCartDAO {
 				e.printStackTrace();
 				}
 		}
+
+		/*動作確認*/System.out.println("InsertCartDAO：確認" + cartList);
 		return cartList;
 
 	}
