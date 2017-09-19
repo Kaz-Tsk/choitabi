@@ -1,6 +1,6 @@
 package com.internousdev.choitabi.dto;
 
-
+import java.math.BigDecimal;
 
 /**
  * カート情報を格納・取得するクラス
@@ -24,7 +24,7 @@ public class SelectCartDTO {
 	    /**
 	     * 価格
 	     */
-	    private int price;
+	    private BigDecimal price;
 
 	    /**
 	     * 予約人数
@@ -74,7 +74,7 @@ public class SelectCartDTO {
 	     * 価格を取得するメソッド
 	     * @return price 価格
 	     */
-	    public int getPrice(){
+	    public BigDecimal getPrice(){
 	        return price;
 	    }
 
@@ -82,7 +82,7 @@ public class SelectCartDTO {
 	     * 価格を格納するメソッド
 	     * @param price 価格
 	     */
-	    public void setPrice(int price){
+	    public void setPrice(BigDecimal price){
 	        this.price = price;
 	    }
 
