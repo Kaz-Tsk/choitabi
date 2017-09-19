@@ -42,7 +42,7 @@ public class SelectCartDTO {
 	     * ツアーIDを取得するメソッド
 	     * @return tour_id ツアーID
 	     */
-	    public int getTourId(){
+	    public int getTour_id(){
 	        return tour_id;
 	    }
 
@@ -50,7 +50,7 @@ public class SelectCartDTO {
 	     * ツアーIDを格納するメソッド
 	     * @param tour_id ツアーID
 	     */
-	    public void setTourId(int tour_id){
+	    public void setTour_id(int tour_id){
 	        this.tour_id = tour_id;
 	    }
 
@@ -58,7 +58,7 @@ public class SelectCartDTO {
 	     * ツアー名を取得するメソッド
 	     * @return tour_name ツアー名
 	     */
-	    public String getTourName(){
+	    public String getTour_name(){
 	        return tour_name;
 	    }
 
@@ -66,7 +66,7 @@ public class SelectCartDTO {
 	     * ツアー名を格納するメソッド
 	     * @param tour_name ツアー名
 	     */
-	    public void setTourName(String tour_name){
+	    public void setTour_name(String tour_name){
 	        this.tour_name = tour_name;
 	    }
 
@@ -90,7 +90,7 @@ public class SelectCartDTO {
 	     * 予約人数を取得するメソッド
 	     * @return order_count 予約人数
 	     */
-	    public int getOrderCount() {
+	    public int getOrder_count() {
 	        return order_count;
 	    }
 
@@ -98,7 +98,7 @@ public class SelectCartDTO {
 	     * 予約人数を格納するメソッド
 	     * @param order_count 予約人数
 	     */
-	    public void setOrdercount(int order_count) {
+	    public void setOrder_count(int order_count) {
 	        this.order_count = order_count;
 	    }
 
