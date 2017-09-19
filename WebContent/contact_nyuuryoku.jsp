@@ -38,12 +38,13 @@
 
 <!-- ＊＊＊＊＊＊＊ｓ：フォームに入力されたものをSUBMIT（送信）すると入力されたものまるごとアクションに渡せる＊＊＊＊＊＊-->
 
-                  <center>
+
                   <s:form action="ComfirmContactAction" method="post">
 
 
                            <h1><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></h1>
-                           <s:text name = "lang.contact_nyuuryoku.please_input_contents"/><br>
+                           <h2><s:text name = "lang.contact_nyuuryoku.please_input_contents"/></h2>
+                           <br>
 
 
      <!-- 渡ったアクションでERRORがでたらアクションから引っ張ってきたエラーメッセージを表示する文 -->
@@ -74,17 +75,16 @@
 
                            <tr>
                               <td>
-                              <div id="submit">
                               <input type = "submit" name="submit"
                                      value="<s:text name = "lang.contact_nyuuryoku.next_to_confirmation"/>"></input>
-                              </div>
-                              </td>
+                               </td>
+
                            </tr>
 
 
 
                    </s:form>
-                   </center>
+
 
 
 

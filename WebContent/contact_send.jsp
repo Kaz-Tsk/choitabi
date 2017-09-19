@@ -23,16 +23,27 @@ pageEncoding="UTF-8"%>
 
        <body>
 
-              <%@ include file="header.jsp"%>
 
+             <%@ include file="header.jsp"%>
 
-              <table>
-                      <h1><s:text name = "lang.contact_send.contact_transmission_completion"/></h1>
-                      <h2><s:text name = "lang.contact_send.contact_transmission_completion_simasita"/></h2>
-                      <h2>お問い合わせいただいた内容につきましては、<br>
-                          3営業日以内にご返信させていただきます。</h2>
+              <div class ="tbl">
+
+                      <h1>
+                      <b><s:text name = "lang.contact_send.contact_transmission_completion"/></b>
+                      <br>
+                      <br>
+                      <br>
+                      <small><s:text name = "lang.contact_send.contact_transmission_completion_simasita"/>
+                          <br>
+                          <br>
+                          お問い合わせいただいた内容につきましては、
+                          <br>
+                          <br>
+                          3営業日以内にご返信させていただきます。
+                      </small>
+                      </h1>
                       <h2><s:text name = "lang.contact_send.thankyou"/></h2>
-              </table>
+              </div>
 
                        <a href="index.jsp"><s:text name = "lang.contact_send.return_to_top"/></a>
 

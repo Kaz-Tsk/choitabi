@@ -7,18 +7,26 @@
 }
 
 
- #submit{
-width: 20%;
-margin-top: 50px;
-margin-left:120px;
 
-}
 
 td{
 	text-align:left;
-	padding-top: 80px;
 
 }
 th{
 	text-align:center;
+}
+
+.link{
+	margin-top:20px;
+	margin-left:800px;
+}
+
+form{
+	margin-left:550px;
+}
+
+h1{
+position: relative;
+
 }

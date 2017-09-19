@@ -116,7 +116,7 @@ public class KanriHistoryAction extends ActionSupport {
 			for(int i = 0; i < all; i++) {
 				CartDTO dto = new CartDTO();
 				dto = allList.get(i);
-				String str = dto.getTourName();
+				String str = dto.getTour_name();
 
 				if(str.startsWith(tour_name)) {
 					searchList.add(dto);
