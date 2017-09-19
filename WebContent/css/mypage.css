@@ -1,9 +1,11 @@
-table,th,td{
+table td,th{
 	border: 2px solid black;
 	margin: 0 auto;
 	text-align:center;
 	font-size:20px;
 }
+
+
 table{
 	width:600px;
 	height:250px;
