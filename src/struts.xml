@@ -22,7 +22,10 @@
              com.internousdev.choitabi.property.contact_send
              com.internousdev.choitabi.property.tour_list
              com.internousdev.choitabi.property.tour_detail
-             com.internousdev.choitabi.property.header"
+             com.internousdev.choitabi.property.header
+             com.internousdev.choitabi.property.footer
+             com.internousdev.choitabi.property.mypage
+             com.internousdev.choitabi.property.test_tour"
 
       />
 
