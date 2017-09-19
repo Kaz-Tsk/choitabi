@@ -1,9 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="s" uri="/struts-tags"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html >
 <html>
 <head>
+<!-- 国際化 ※ここでは国を判別しています。
+    言語コード( ja,en など)を示すロケールID を取得します。-->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<fmt:setBundle basename="com.internousdev.choitabi.property.mypage"
+	var="lang" />
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/mypage.css">
 <title>mypage</title>
@@ -14,25 +21,25 @@
 
 	<!-- main部分 -->
 	<div class="mypage-container">
-		<h2>登録者情報</h2>
+		<h2><s:text name="lang.mypage.userdata"/></h2>
 			<div class="admin-param">
 				<s:action var="select" name="MypageAction"/>
 				<s:iterator value="#select.User">
 				<table >
 					<tr>
-						<th>名前</th>
+						<th><s:text name="lang.mypage.name"/></th>
 						<td><s:property value="familyNameKanji"/><s:property value="givenNameKanji"/></td>
 					</tr>
 					<tr>
-						<th>住所</th>
+						<th><s:text name="lang.mypage.address"/></th>
 						<td><s:property value="address"/></td>
 					</tr>
 					<tr>
-						<th>メールアドレス</th>
+						<th><s:text name="lang.mypage.mailaddress"/></th>
 						<td><s:property value="mailAddress"/></td>
 					</tr>
 					<tr>
-						<th>電話番号</th>
+						<th><s:text name="lang.mypage.telnumber"/></th>
 						<td><s:property value="telNumber"/></td>
 					</tr>
 				</table>
@@ -40,7 +47,7 @@
 			</div>
 		<div class="purchase-history">
 		<s:form action = "UserPurchaseHistoryAction">
-			<button type= "submit" >購入履歴</button>
+			<button type= "submit" ><s:text name="lang.mypage.purchase history"/></button>
 		</s:form>
 	</div>
 
