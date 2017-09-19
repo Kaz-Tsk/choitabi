@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset=UTF-8>
+<link rel ="stylesheet"  type="text/css" href="css/purchase_history.css">
 <title>購入履歴</title>
 </head>
 <body>
