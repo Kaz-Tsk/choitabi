@@ -96,17 +96,18 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
     public String execute() throws SQLException{
         String result = LOGIN;
 
-        if(session.containsKey("user_id")) {
-        	user_id = (int) session.get("user_id");
+        if(session.containsKey("userId")) {
+        	user_id = (int) session.get("userId");
         	UpdateCartDAO ucDao = new UpdateCartDAO();
 
         	SelectCartDAO scDao = new SelectCartDAO();
 
-        	updateCount = ucDao.updateCart(cart_id, user_id, order_count);
+        	updateCount = ucDao.updateCart(cart_id, user_id, order_count, price);
         	cartList = scDao.selectCart(user_id);
 
         if (cartList.size() > 0) {
         	for(int i = 0; i < cartList.size(); i++) {
+        		/*動作確認*/System.out.println("UpdateCartAction-取得価格：" + (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count()));
         		total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count());
         	}
 

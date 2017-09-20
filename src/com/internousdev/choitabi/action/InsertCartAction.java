@@ -105,7 +105,8 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 			user_id = (int) session.get("userId");
 			InsertCartDAO icDao = new InsertCartDAO();
 			tourStatus = icDao.tourStatus(tour_id);
-			addCount = icDao.addToCart(user_id, tour_id, order_count);
+			this.price = tourStatus.get(0).getPrice();
+			addCount = icDao.addToCart(user_id, tour_id, order_count, price);
 			cartList = icDao.selected(user_id);
 
 			if(cartList.size() > 0) {

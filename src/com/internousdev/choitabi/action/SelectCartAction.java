@@ -95,6 +95,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 
 			if(cartList.size()>0){
 				for(int i = 0; i <cartList.size(); i++) {
+					/*動作確認*/System.out.println("SelectCartAciton-price:"+ (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count( )));
 					total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count());
 				}
 

@@ -75,8 +75,8 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
     public String execute() throws SQLException{
         String result =ERROR;
 
-        if(session.get("user_id") != null){
-            int user_id = (int) session.get("user_id");
+        if(session.get("userId") != null){
+            int user_id = (int) session.get("userId");
 
             DeleteCartDAO dao = new DeleteCartDAO();
             SelectCartDAO dao2 =new SelectCartDAO();

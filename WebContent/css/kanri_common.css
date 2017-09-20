@@ -48,8 +48,16 @@ a{
 	align:center;
 }
 
+a:click{
+	border:2pc solid blue;
+	color:dimgrey;
+	font-size:18px;
+	text-decoration:none;
+	font-weight:bold;
+	align:center;
+}
 
-
+/*
 input.submit_button{
 	font-family:ƒƒCƒŠƒI;
 	font-size:18px;
@@ -59,5 +67,5 @@ input.submit_button{
 	cursor:pointer;
 	background-color:white;
 }
-
+*/
 

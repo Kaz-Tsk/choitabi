@@ -108,7 +108,7 @@
 	    <s:hidden name = "currentTheme" property="currentTheme" />
 	    <s:hidden name = "currentComment" property="currentComent" />
 	    <s:hidden name = "currentImg" property="currentImg" />
-<input type="submit" value=<s:text name="lang.kanri_tourHensyuu.confirm"/> class="submit_button">
+<input type="submit" value=<s:text name="lang.kanri_tourHensyuu.confirm"/>>
 </form>
 <!-- ここまで編集フォーム -->
 

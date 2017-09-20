@@ -55,18 +55,19 @@ public class InsertCartDAO {
 		return tourStatus;
 	}
 
-	public int addToCart(int user_id, int tour_id, int order_count) {
+	public int addToCart(int user_id, int tour_id, int order_count, int price) {
 		int addCount = 0;
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
 		Connection con = db.getConnection();
-		String sql = "insert into cart (user_id, tour_id, order_count) values(?, ?, ?)";
+		String sql = "insert into cart (user_id, tour_id, order_count, price) values(?, ?, ?, ?)";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, user_id);
 			ps.setInt(2, tour_id);
 			ps.setInt(3, order_count);
+			ps.setInt(4, price);
 			addCount = ps.executeUpdate();
 
 		}catch(SQLException e) {

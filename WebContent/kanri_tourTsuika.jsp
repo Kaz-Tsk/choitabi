@@ -118,7 +118,7 @@
 	</table>
 	<hr>
 	<br>
-	<input type="submit" value='<s:text name="lang.kanri_tourTsuika.confirm"/>' class="submit_button"/>
+	<input type="submit" value='<s:text name="lang.kanri_tourTsuika.confirm"/>'/>
 	</form>
 
 <!-- ここまで編集フォーム -->
