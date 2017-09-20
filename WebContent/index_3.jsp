@@ -44,7 +44,7 @@
      <div class= "img"><img src="img/iruka_watching_tour.jpg" height= "280" width="378"></div>
      <div class= "img"><img src="img/mihuneyamarakuen.jpg" height= "280" width="378"></div>
      <div class= "img"><img src="img/oirasekeiryu.jpg" height= "280" width="378"></div>
-     <div class= "img"><img src="img/mihuneyamarakuen.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/nanbayasakazinja.jpg" height= "280" width="378"></div>
      <div class= "img"><img src="img/sarugakyou_bungee.jpg" height= "280" width="378"></div>
      <div class= "img"><img src="img/zundamochi.jpg" height= "280" width="378"></div>
 </div>
