@@ -29,7 +29,7 @@ public class Test_GoTourDetailDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<Test_TourDTO> select(int sortId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root","mysql");
+		ChoitabiDBConnector db = new ChoitabiDBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root","mysql");
 		Connection con = db.getConnection();
 		String sql;
 		 sql = "select * from items where sort_id=? and del_key =false";
@@ -71,7 +71,7 @@ public class Test_GoTourDetailDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<Test_TourDTO> selectbyTour(int tourId) {
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root","mysql");
+		ChoitabiDBConnector db = new ChoitabiDBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root","mysql");
 		Connection con = db.getConnection();
 		Test_TourDTO dto = new Test_TourDTO();
 		ArrayList<Test_TourDTO> tourList = new ArrayList<Test_TourDTO>();

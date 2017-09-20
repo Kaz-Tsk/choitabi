@@ -1,6 +1,5 @@
 package com.internousdev.choitabi.dao;
 
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -49,9 +48,8 @@ public class SelectCartDAO {
 
 				while(rs2.next()) {
 					dto.setTour_name(rs2.getString("tour_name"));
-					dto.setPrice(rs.getBigDecimal("price"));
-					dto.setSub_total(dto.getPrice().multiply(BigDecimal.valueOf(dto.getOrder_count())));
-					/*total_price = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));*/
+					dto.setPrice(rs.getInt("price"));
+					dto.setSub_total(dto.getPrice() * dto.getOrder_count());
 				}
 			}
 

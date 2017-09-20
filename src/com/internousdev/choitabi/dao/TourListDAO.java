@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.TourDTO;
-import com.internousdev.choitabi.util.DBConnector;
+import com.internousdev.choitabi.util.ChoitabiDBConnector;
 
 /**
  * 商品一覧画面遷移に関するメソッド
@@ -36,7 +36,7 @@ public class TourListDAO {
         try{
 
         	/*↓SQLへの接続を行っています*/
-        	DBConnector db = new DBConnector();
+        	ChoitabiDBConnector db = new ChoitabiDBConnector();
             Connection con=db.createConnection();
 
             /*実行してもらうSQL分の、すでに決まっている部分を先に書いておきます*/

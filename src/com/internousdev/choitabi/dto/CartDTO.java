@@ -1,14 +1,12 @@
 package com.internousdev.choitabi.dto;
 
-import java.math.BigDecimal;
-
 
 
 /**
  * カート情報に関するDTOクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.1
+ * @version 1.0
  */
 
 public class CartDTO {
@@ -56,12 +54,12 @@ public class CartDTO {
     /**
      * 価格
      */
-    private BigDecimal price;
+    private int price;
 
     /**
      * 合計金額
      */
-    private BigDecimal total_price;
+    private int total_price;
 
     /**
      * 備考
@@ -91,7 +89,7 @@ public class CartDTO {
     /**
      * 小計
      */
-    private BigDecimal sub_total;
+    private int sub_total;
 
 
 
@@ -227,7 +225,7 @@ public class CartDTO {
      * 価格を取得するメソッド
      * @return price 価格
      */
-    public BigDecimal getPrice() {
+    public int getPrice() {
         return price;
         }
 
@@ -235,7 +233,7 @@ public class CartDTO {
      * 価格を格納するメソッド
      * @param price 価格
      */
-    public void setPrice(BigDecimal price) {
+    public void setPrice(int price) {
         this.price = price;
         }
 
@@ -243,7 +241,7 @@ public class CartDTO {
      * 合計金額を取得するメソッド
      * @return total_price 合計金額
      */
-    public BigDecimal getTotal_price() {
+    public int getTotal_price() {
         return total_price;
         }
 
@@ -251,7 +249,7 @@ public class CartDTO {
      * 合計金額を格納するメソッド
      * @param total_price 合計金額
      */
-    public void setTotal_price(BigDecimal total_price) {
+    public void setTotal_price(int total_price) {
         this.total_price = total_price;
         }
 
@@ -339,7 +337,7 @@ public class CartDTO {
      * 小計を取得するメソッド
      * @return sub_total 小計
      */
-    public BigDecimal getSub_total() {
+    public int getSub_total() {
         return sub_total;
         }
 
@@ -347,7 +345,7 @@ public class CartDTO {
      * 小計を格納するメソッド
      * @param sub_total 小計
      */
-    public void setSub_total(BigDecimal sub_total) {
+    public void setSub_total(int sub_total) {
         this.sub_total = sub_total;
         }
 

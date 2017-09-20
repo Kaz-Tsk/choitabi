@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.choitabi.util.DBConnector;
+import com.internousdev.choitabi.util.ChoitabiDBConnector;
 
 public class InsertTourDAO {
 
@@ -27,7 +27,7 @@ public class InsertTourDAO {
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			DBConnector dbc = new DBConnector();
+			ChoitabiDBConnector dbc = new ChoitabiDBConnector();
 			Connection con = dbc.createConnection();
 			/*動作確認*/System.out.println("InsertTourDAO - 1 :" + newTourName);
 			/*動作確認*/System.out.println("InsertTourDAO - 2 :" + newPrice);
