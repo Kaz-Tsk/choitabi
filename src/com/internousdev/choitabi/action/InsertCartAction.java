@@ -66,7 +66,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 合計金額
 	 */
-	private BigDecimal total_price;
+	private BigDecimal total_price = BigDecimal.ZERO;
 
 	/**
 	 * カート情報
@@ -112,9 +112,14 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 			addCount = icDao.addToCart(user_id, tour_id, order_count, price);
 			cartList = icDao.selected(user_id);
 
+			System.out.println("ICAction:" + total_price);
+
 			if(cartList.size() > 0) {
 				for(int i = 0; i < cartList.size(); i++) {
-					total_price = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));
+
+					total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
+
+					/*動作確認*/System.out.println(("InsertCartAction - 合計金額：" + total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))))));
 
 				}
 

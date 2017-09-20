@@ -19,16 +19,16 @@ import com.internousdev.util.DBConnector;
 public class UpdateCartDAO {
     public int updateCart(int cart_id, int user_id, int order_count, BigDecimal price) {
         int count = 0;
-        DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
+        DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/localhost/?useSSL=true&requireSSL=true","choitabi","root","mysql");
         Connection con = db.getConnection();
-        String sql ="update cart set order_count=?, price = ? where user_id=?, and cart_id=?";
+        String sql ="update cart set order_count=?, price = ? where user_id=? and cart_id=?";
 
         try{
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, order_count);
             ps.setBigDecimal(2, price);
-            ps.setInt(2, user_id);
-            ps.setInt(3, cart_id);
+            ps.setInt(3, user_id);
+            ps.setInt(4, cart_id);
             count = ps.executeUpdate();
 
         }catch(SQLException e){

@@ -45,7 +45,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 価格
 	 */
-	private BigDecimal price;
+	private BigDecimal price = BigDecimal.ZERO;
 
 	/**
 	 * 予約人数
@@ -55,7 +55,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 合計金額
 	 */
-	private BigDecimal total_price;
+	private BigDecimal total_price = BigDecimal.ZERO;
 
 	/**
 	 * カート情報
@@ -70,7 +70,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 小計
 	 */
-	private BigDecimal sub_total;
+	private BigDecimal sub_total = BigDecimal.ZERO;
 
 
 
@@ -99,7 +99,10 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 
 					/*動作確認*/System.out.println("SelectCartAciton-price:"+ (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
 
-					total_price = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));
+					/*BigDecimal型の計算方法
+					 * + * - / などは使えず、加法はadd、減法はsubtract、乗法はmultiply、除法はdivideを使用する
+					 * BigDecimalと他の型の計算は出来ないので、int型などはvalueOfでBigDecimalに変換してあげる*/
+					total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
 
 				}
 

@@ -91,6 +91,7 @@
 							<td><s:form action="UpdateCartAction">
 									<s:hidden name="cart_id" value="%{cart_id}" />
 									<s:hidden name="tour_id" value="%{tour_id}" />
+									<s:hidden name="price" value="%{price}" />
 									<div class="row">
 										<select name="order_count">
 											<option>1</option>

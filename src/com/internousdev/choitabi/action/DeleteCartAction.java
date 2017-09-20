@@ -32,7 +32,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 	/**
      * 合計金額
      */
-    private BigDecimal total_price;
+    private BigDecimal total_price = BigDecimal.ZERO;
 
     /**
      * 予約人数
@@ -76,6 +76,8 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
     public String execute() throws SQLException{
         String result =ERROR;
 
+        /*動作確認*/System.out.println("DeleteCartAction - session：" + session);
+
         if(session.get("userId") != null){
             int user_id = (int) session.get("userId");
 
@@ -89,10 +91,13 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 
                 if(cartList.size() > 0){
                     for(int i = 0; i < cartList.size(); i++ ){
-                        total_price = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));
+                    	total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
                         }
 
                     result =SUCCESS;
+
+                    /*動作確認*/System.out.println("DeleteCartAction - 結果：" + result);
+                    /*動作確認*/System.out.println("DeleteCartAction - 取得ユーザーID：" + user_id);
                     }
                 }
             }
