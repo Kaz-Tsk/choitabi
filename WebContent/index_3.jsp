@@ -63,7 +63,7 @@ $('.main_img').slick({
 });
 </script>
 
-<div class= "phrase"><h1>ちょいたびで、ちょいといい旅。</h1></div>
+<div class= "phrase"><h1><s:text name="lang.index.catch"/></h1></div>
 
 <!-- 検索アイコン↓ -->
     <div class= "theme_box">
