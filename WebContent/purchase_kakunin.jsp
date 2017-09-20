@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!-- と宣言することで、JSPファイルとして機能させることが出来る -->
-<!-- (<%%>を使うとJSPファイルの中でJava言語を使ってプログラムを書くことが出来る) -->
+
 
 <!-- 国際化 -->
 <%@ taglib uri="/struts-tags" prefix="s"%>
@@ -49,17 +48,12 @@
 						<td><fmt:formatNumber value="${price}" pattern="###,###,###" />
 							<s:text name="lang.cart.yen" /></td>
 
-						<td><s:property value="orderCount" /></td>
+						<td><s:property value="order_count" /></td>
 
 
 						<td><s:property value="size" /></td>
 
-
-
-
-
-
-					</tr>
+                    </tr>
 				</s:iterator>
 			</tbody>
 		</table>
@@ -69,10 +63,16 @@
 			<s:text name="lang.cart.tax_include" />
 		</h2>
 
+
+
+
+
+
 		<s:form action="PurchaseCompleteAction" class="center">
-			<!-- 購入ボタンフォーム -->
+
 			<input type="hidden" name="creditNumber"
 				value="<s:property value="creditNumber"/>">
+
 			<input type="hidden" name="creditId"
 				value="<s:property value="creditId"/>">
 			<input type="hidden" name="amount"
@@ -148,9 +148,7 @@
 
 
 
-	<footer>
-		<c:import url="http://localhost:8080/openconnect/footer.jsp" />
-	</footer>
+
 
 </body>
 </html>

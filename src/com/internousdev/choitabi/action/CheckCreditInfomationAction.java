@@ -75,6 +75,9 @@ public class CheckCreditInfomationAction extends ActionSupport implements Sessio
      * @return ERROR or SUCCESS
      */
     public String execute() {
+    	String result = ERROR;
+    	/*動作確認*/System.out.println("CCAction-取得credit番号：" + creditNumber);
+
         if(creditNumber.startsWith("4")){
             creditId = 1;
 
@@ -86,9 +89,12 @@ public class CheckCreditInfomationAction extends ActionSupport implements Sessio
 
         }else{
             errmsg2="*入力された情報に間違いがあります。";
+System.out.println("ccaction:" + result);
 
-            return ERROR;
+            result =  ERROR;
+            return result;
             }
+
 
         if(creditId == 1){
             creditBrand = "Visa";
@@ -108,18 +114,21 @@ public class CheckCreditInfomationAction extends ActionSupport implements Sessio
         if(util.brandCheck()){
             //クレジットカード番号16ケタ、セキュリティコード、有効期限、名義人の照合
             if(util.creditCheck(securityCode, expirationYear, expirationMonth, nameE)){
-                return SUCCESS;
+                result =  SUCCESS;
+                return result;
 
             }else{
                 errmsg2="*入力された情報に間違いがあります。";
 
-                return ERROR;
+                result = ERROR;
+                return result;
             }
 
         }else{
             errmsg2="*入力された情報に間違いがあります。";
 
-            return ERROR;
+            result = ERROR;
+            return result;
             }
         }
 
