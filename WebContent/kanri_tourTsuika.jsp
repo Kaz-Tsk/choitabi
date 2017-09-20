@@ -95,7 +95,9 @@
 				<s:text name="lang.kanri_tourTsuika.theme"/>
 			</th>
 			<td>
-				<input type="text" name="newTheme" value='<s:property value="newTheme"/>'></input>
+				<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
+				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
+				<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
 			</td>
 		</tr>
 		<tr>

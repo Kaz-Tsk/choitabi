@@ -75,7 +75,25 @@
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.theme"/></th>
    		<td><s:property value="currentTheme"/>
-   		</td><td><input type="text" name="editTheme" value='<s:property value= "defaultTheme"/>'></input></td>
+   		</td>
+   		<td>
+			<s:if test='defaultTheme.equals("グルメ")'>
+				<label><input type="radio" name="editTheme" value="グルメ" checked/>グルメ</label>
+				<label><input type="radio" name="editTheme" value="名所"/>名所</label>
+				<label><input type="radio" name="editTheme" value="アクティビティ"/>アクティビティ</label>
+   			</s:if>
+			<s:if test='defaultTheme.equals("名所")'>
+				<label><input type="radio" name="editTheme" value="グルメ"/>グルメ</label>
+				<label><input type="radio" name="editTheme" value="名所" checked/>名所</label>
+				<label><input type="radio" name="editTheme" value="アクティビティ"/>アクティビティ</label>
+			</s:if>
+			<s:if test='defaultTheme.equals("アクティビティ")'>
+				<label><input type="radio" name="editTheme" value="グルメ"/>グルメ</label>
+				<label><input type="radio" name="editTheme" value="名所"/>名所</label>
+				<label><input type="radio" name="editTheme" value="アクティビティ" checked/>アクティビティ</label>
+   			</s:if>
+
+   		</td>
    </tr>
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.comment"/></th>

@@ -62,7 +62,7 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 
 		try{
 			if (	newTourName.equals("")|| newPrice.equals("") || newPersons.equals("") ||
-				newDeparture.equals("") || newRegion.equals("") || newPrefectures.equals("") || newTheme.equals("") ||
+				newDeparture.equals("") || newRegion.equals("") || newPrefectures.equals("") || newTheme == null ||
 			    newComment.equals("") ) {
 
 				errorMsg = "未入力の情報があります";

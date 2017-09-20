@@ -90,7 +90,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 			}else if(deleteCheck.equals("false") &&
 					 (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") ||
-					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme.equals("") ||
+					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme == null ||
 					  editComment.equals("") )) {
 				errorMsg = "未入力の情報があります";
 				System.out.println(errorMsg);
