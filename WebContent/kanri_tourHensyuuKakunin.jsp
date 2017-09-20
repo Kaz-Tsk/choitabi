@@ -168,7 +168,8 @@
 <!-- 画面下部のメニュー画面------------------------------------------------------- -->
 <br>
 <!-- 「完了」の項目 ※次のアクション位にある同名の変数に値を渡します。(ツアーIDだけはcurrentId＝「現在のID」そのままです）-->
-    <a href=
+
+	<a href=
 	    '<s:url action="UpdateTourAction">
 		    <s:param name="editTourId" value="currentTourId"/>
 		    <s:param name="editTourName" value = "editTourName"/>
@@ -182,7 +183,7 @@
 			<s:param name="editImg" value="editImg"/>
 		    <s:param name="deleteCheck" value="deleteCheck"/>
 	    </s:url>'>
-    <s:text name="lang.kanri_tourHensyuuKakunin.complete" />
+	    <input type="submit" value='<s:text name="lang.kanri_tourHensyuuKakunin.complete"/>'>
     </a>
 <br>
 <br>

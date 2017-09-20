@@ -53,7 +53,7 @@
 						<s:param name="currentTourId" value ="tourId"/>
 						<s:param name="from" value="'tourListPage'"/>
 					</s:url>'>
-				<s:text name="lang.kanri_tourList.edit"/>
+					<input type="submit" value='<s:text name="lang.kanri_tourList.edit"/>'>
 				</a>
 			</td>
 		</tr>
