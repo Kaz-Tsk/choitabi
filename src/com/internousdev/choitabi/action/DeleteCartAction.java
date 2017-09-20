@@ -1,5 +1,6 @@
 package com.internousdev.choitabi.action;
 
+import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 	/**
      * 合計金額
      */
-    private int total_price;
+    private BigDecimal total_price = BigDecimal.ZERO;
 
     /**
      * 予約人数
@@ -75,8 +76,8 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
     public String execute() throws SQLException{
         String result =ERROR;
 
-        if(session.get("user_id") != null){
-            int user_id = (int) session.get("user_id");
+        if(session.get("userId") != null){
+            int user_id = (int) session.get("userId");
 
             DeleteCartDAO dao = new DeleteCartDAO();
             SelectCartDAO dao2 =new SelectCartDAO();
@@ -88,7 +89,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 
                 if(cartList.size() > 0){
                     for(int i = 0; i < cartList.size(); i++ ){
-                        total_price += (cartList.get(i).getPrice())*(cartList.get(i).getOrder_count());
+                    	total_price = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));
                         }
 
                     result =SUCCESS;
@@ -153,7 +154,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * 合計金額を取得するメソッド
      * @return total_price 合計金額
      */
-    public int getTotal_price() {
+    public BigDecimal getTotal_price() {
         return total_price;
         }
 
@@ -161,7 +162,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * 合計金額を格納するメソッド
      * @param total_price 合計金額
      */
-    public void setTotal_price(int total_price) {
+    public void setTotal_price(BigDecimal total_price) {
         this.total_price = total_price;
         }
 

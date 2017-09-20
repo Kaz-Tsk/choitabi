@@ -77,8 +77,8 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
      * 3：カート内の情報を元に合計金額を算出
      */
     public String execute() throws SQLException{
-        String result=ERROR;
-
+       // String result=ERROR;
+    	String result="success";
         if (session.containsKey("userId")) {
             userId = (int)session.get("userId");
 
@@ -86,11 +86,13 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
             cartList = dao.selected(userId);
 
             for(int i = 0; i < cartList.size(); i++ ){
-                amount += (cartList.get(i).getPrice())*(cartList.get(i).getOrderCount());
+                amount += (cartList.get(i).getPrice())*(cartList.get(i).getOrder_count());
                 }
 
             result = SUCCESS;
-            }
+        }
+
+
 
         return result;
         }

@@ -47,20 +47,20 @@
 
 <ul class = "outline">
             <li>
-                <div class = "category">テーマで探す</div>
+                <div class = "category"><s:text name="lang.test_tour.SearchT"/></div>
                 <ul class = "menu">
-                    <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'>グルメ</a></li>
-                    <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'名所'}"/></s:url>'>名所</a></li>
-                    <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'アクティビティ'}"/></s:url>'>アクティビティ</a></li>
+                    <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><s:text name="lang.test_tour.goumet"/></a></li>
+                    <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'名所'}"/></s:url>'><s:text name="lang.test_tour.spot"/></a></li>
+                    <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'アクティビティ'}"/></s:url>'><s:text name="lang.test_tour.activity"/></a></li>
                 </ul>
             </li>
             <li>
-                <div class = "category">エリアで探す</div>
+                <div class = "category"><s:text name="lang.test_tour.SearchA"/></div>
                 <ul class = "menu">
-                    <li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'東北'}"/></s:url>'>東北</a></li>
-                    <li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'関東'}"/></s:url>'>関東</a></li>
-                    <li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'関西'}"/></s:url>'>関西</a></li>
-                    <li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'九州'}"/></s:url>'>九州</a></li>
+                    <li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'東北'}"/></s:url>'><s:text name="lang.test_tour.TOHOKU"/></a></li>
+                    <li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'関東'}"/></s:url>'><s:text name="lang.test_tour.KANTO"/></a></li>
+                    <li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'関西'}"/></s:url>'><s:text name="lang.test_tour.KANSAI"/></a></li>
+                    <li><a href='<s:url action="TourListAction"><s:param name="region" value="%{'九州'}"/></s:url>'><s:text name="lang.test_tour.KYUSYU"/></a></li>
                 </ul>
             </li>
         </ul>
