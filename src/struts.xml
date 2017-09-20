@@ -157,6 +157,13 @@ method= "execute">
 <result name= "success">index_3.jsp</result>
 </action>
 
+<!--  -->
+<action name= "CheckCreditInfomationAction" class="com.internousdev.choitabi.action.CheckCreditInfomationAction"
+method= "execute">
+<result name= "success">yayaku_kakunin.jsp</result>
+<result name= "error">yayaku_nyuuryoku.jsp</result>
+</action>
+
 
 
 
