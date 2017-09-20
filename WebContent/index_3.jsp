@@ -14,8 +14,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type= "text/css" href = "css/index_3.css">
 <link rel = "stylesheet" type= "text/css" href = "css/imagehover.css">
+<link rel = "stylesheet" type= "text/css" href = "css/slick-theme.css">
+<link rel = "stylesheet" type= "text/css" href = "css/slick.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/jquery.js"></script>
+<script src="js/slick.min.js"></script>
+
 <title>ちょいたび</title>
 </head>
 
@@ -25,7 +29,22 @@
 
 <body>
 
+<ul class="sample">
+<li><img src="img/mihuneyamarakuen.jpg"></li>
+<li><img src="img/mihuneyamarakuen.jpg"></li>
+<li><img src="img/mihuneyamarakuen.jpg"></li>
+</ul>
 
+<script>
+$(function(){
+$('.sample').slick({
+	slidesToShow: 2,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
+	});
+});
+</script>
 
     <div class= "theme_box">
     <h2><s:text name="lang.index.searchT"/></h2>
@@ -95,6 +114,7 @@
 </figure>
 </div>
     </div>
+    <script type="text/javascript" src="js/slick.min.js"></script>
 </body>
 
 <footer>
