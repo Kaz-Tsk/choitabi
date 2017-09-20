@@ -27,17 +27,17 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
     /**
      * ユーザーID
      */
-    private int userId;
+    private int user_id;
 
     /**
-     * 商品ID
+     * ツアーID
      */
-    private int itemId;
+    private int tour_id;
 
     /**
-     * 商品名
+     * ツアー名
      */
-    private String itemName;
+    private String tour_name;
 
     /**
      * 単価
@@ -47,17 +47,17 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
     /**
      * 注文数
      */
-    private int orderCount;
+    private int order_count;
 
     /**
-     * イメージパスファイル
+     * 画像パスファイル
      */
-    private String imgAddress001;
+    private String img;
 
     /**
      * 合計金額
      */
-    private int amount;
+    private int total_price;
 
     /**
      * カート内の商品情報を入れるリスト
@@ -79,14 +79,14 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
     public String execute() throws SQLException{
        // String result=ERROR;
     	String result="success";
-        if (session.containsKey("userId")) {
-            userId = (int)session.get("userId");
+        if (session.containsKey("user_id")) {
+            user_id = (int)session.get("user_id");
 
             InsertCartDAO dao = new InsertCartDAO();
-            cartList = dao.selected(userId);
+            cartList = dao.selected(user_id);
 
             for(int i = 0; i < cartList.size(); i++ ){
-                amount += (cartList.get(i).getPrice())*(cartList.get(i).getOrder_count());
+            	total_price += (cartList.get(i).getPrice())*(cartList.get(i).getOrder_count());
                 }
 
             result = SUCCESS;
@@ -100,50 +100,50 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
 
     /**
      * ユーザーIDを取得するメソッド
-     * @return userId ユーザーID
+     * @return user_id ユーザーID
      */
-    public int getUserId() {
-        return userId;
+    public int getUser_id() {
+        return user_id;
         }
 
     /**
      * ユーザーIDを格納するメソッド
-     * @param userId セットする ユーザーID
+     * @param user_id セットする ユーザーID
      */
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
         }
 
     /**
-     * 商品IDを取得するメソッド
-     * @return itemId 商品ID
+     * ツアーIDを取得するメソッド
+     * @return tour_id ツアーID
      */
-    public int getItemId() {
-        return itemId;
+    public int gettour_id() {
+        return tour_id;
         }
 
     /**
-     * 商品IDを格納するメソッド
-     * @param itemId セットする 商品ID
+     * ツアーIDを格納するメソッド
+     * @param tour_id セットする ツアーID
      */
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
+    public void settour_id(int tour_id) {
+        this.tour_id = tour_id;
         }
 
     /**
-     * 商品名を取得するメソッド
-     * @return itemName 商品名
+     * ツアー名を取得するメソッド
+     * @return tour_name ツアー名
      */
-    public String getItemName() {
-        return itemName;
+    public String gettour_name() {
+        return tour_name;
         }
 
     /**
-     * 商品名を格納するメソッド
-     * @param itemName セットする 商品名
+     * ツアー名を格納するメソッド
+     * @param tour_name セットする ツアー名
      */
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public void settour_name(String tour_name) {
+        this.tour_name = tour_name;
         }
 
     /**
@@ -164,31 +164,31 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
 
     /**
      * 合計金額を取得するメソッド
-     * @return amountAll 合計金額
+     * @return total_price 合計金額
      */
-    public int getAmount() {
-        return amount;
+    public int gettotal_price() {
+        return total_price;
         }
 
     /**
      * 合計金額を格納するメソッド
-     * @param amount セットする 合計金額
+     * @param total_price セットする 合計金額
      */
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setAmount(int total_price) {
+        this.total_price = total_price;
         }
 
     /**
-     * カート内の商品情報を入れるリストを取得するメソッド
-     * @return cartList カート内の商品情報を入れるリスト
+     * カート内のツアー情報を入れるリストを取得するメソッド
+     * @return cartList カート内のツアー情報を入れるリスト
      */
     public ArrayList<CartDTO> getCartList() {
         return cartList;
         }
 
     /**
-     * カート内の商品情報を入れるリストを格納するメソッド
-     * @param cartList セットする カート内の商品情報を入れるリスト
+     * カート内のツアー情報を入れるリストを格納するメソッド
+     * @param cartList セットする カート内のツアー情報を入れるリスト
      */
     public void setCartList(ArrayList<CartDTO> cartList) {
         this.cartList = cartList;
@@ -212,34 +212,34 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
 
     /**
      * 注文数を取得するメソッド
-     * @return orderCount 注文数
+     * @return order_count 注文数
      */
-    public int getOrderCount() {
-        return orderCount;
+    public int getorder_count() {
+        return order_count;
         }
 
     /**
      * 注文数を格納するメソッド
-     * @param orderCount セットする 注文数
+     * @param order_count セットする 注文数
      */
-    public void setOrderCount(int orderCount) {
-        this.orderCount = orderCount;
+    public void setorder_count(int order_count) {
+        this.order_count = order_count;
         }
 
     /**
      * 画像パスファイルを取得するメソッド
-     * @return imgPath 画像パス
+     * @return img 画像パス
      */
-    public String getImgAddress001() {
-        return imgAddress001;
+    public String getImg() {
+        return img;
         }
 
     /**
      * 画像パスファイルを格納するメソッド
-     * @param imgAddress001 セットする 画像パス
+     * @param img セットする 画像パス
      */
-    public void setImgAddress001(String imgAddress001) {
-        this.imgAddress001 = imgAddress001;
+    public void setImg(String img) {
+        this.img = img;
         }
 
 }
