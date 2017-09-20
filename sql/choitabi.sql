@@ -17,7 +17,7 @@ CREATE TABLE  tour  (
 );
 
 
-create table cart(
+create table purchases(
 cart_id int not null primary key auto_increment,
 user_id int not null,
 tour_id int not null,
@@ -26,17 +26,6 @@ price decimal(10,0) null default null,
 registration_date timestamp not null default current_timestamp,
 updated_date timestamp not null default current_timestamp,
 is_deleted boolean default false,/*商品選択削除*/
-foreign key(user_id) references openconnect.users(user_id) on delete cascade
-);
-
-create table purchases(
-purchase_id int primary key auto_increment,
-user_id int not null,
-tour_id int not null,
-order_count int not null default 1,
-registration_date timestamp not null default current_timestamp,
-updated_date timestamp not null default current_timestamp,
-foreign key(tour_id) references tour(tour_id),
 foreign key(user_id) references openconnect.users(user_id) on delete cascade
 );
 

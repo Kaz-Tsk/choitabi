@@ -67,7 +67,6 @@ import com.opensymphony.xwork2.ActionSupport;
 								session.put("userFlg", dto.getUserFlg());
 								session.put("userId", dto.getUserId());
 								session.put("loginFlg", dto.isLoginFlg());
-								System.out.println(session);
 								result = SUCCESS;
 							}
 						}
