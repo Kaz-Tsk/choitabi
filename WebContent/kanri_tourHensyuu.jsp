@@ -63,7 +63,7 @@
    		<td><input type="text" name="editDeparture" value='<s:property value = "defaultDeparture"/>'></input></td>
    </tr>
    <tr>
-   		<th><s:text name="lang.kanri_tourHensyuu.departure"/></th>
+   		<th><s:text name="lang.kanri_tourHensyuu.region"/></th>
    		<td><s:property value="currentRegion"/></td>
    		<td><input type="text" name="editRegion" value='<s:property value="defaultRegion"/>'></input></td>
    </tr>
