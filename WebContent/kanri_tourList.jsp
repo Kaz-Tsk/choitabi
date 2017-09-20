@@ -53,10 +53,10 @@
 	<table>
 		<tr>
 			<th><s:text name="lang.kanri_tourList.tour_id"/></th>
-			<th><s:text name="lang.kanri_tourList.tour_name"/></th>
-			<th><s:text name="lang.kanri_tourList.price"/></th>
+			<th width="320px"><s:text name="lang.kanri_tourList.tour_name"/></th>
+			<th width="80px"><s:text name="lang.kanri_tourList.price"/></th>
 			<th><s:text name="lang.kanri_tourList.region"/></th>
-			<th><s:text name="lang.kanri_tourList.theme"/></th>
+			<th width="140px"><s:text name="lang.kanri_tourList.theme"/></th>
 			<th>　　　</th>
 		</tr>
 		<s:iterator value="currentTourList">
