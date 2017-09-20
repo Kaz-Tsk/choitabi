@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.internousdev.choitabi.dto.SelectTourDTO;
-import com.internousdev.choitabi.util.DBConnector;
+import com.internousdev.choitabi.util.ChoitabiDBConnector;
 public class SelectOneTourDAO {
 
 
@@ -26,7 +26,7 @@ public class SelectOneTourDAO {
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			DBConnector tdc = new DBConnector();
+			ChoitabiDBConnector tdc = new ChoitabiDBConnector();
 			Connection con = tdc.createConnection();
 			String sql = "SELECT * FROM tour WHERE tour_id =  ?";
 			PreparedStatement ps = con.prepareStatement(sql);

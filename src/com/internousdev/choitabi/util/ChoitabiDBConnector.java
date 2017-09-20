@@ -4,23 +4,22 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/*@author:YUKA MATSUMURA
+/**@author:YUKA MATSUMURA
  *@since:2017/09/05
  *@version:1.1
+ *
+ *choitabiのデータベースへの接続を作るところまでしてくれる部品です。
+ *インスタンスを作って、
+ *Connection con = インスタンス名.createConnection();
+ *とすればつなげてくれると思います。
+ *
+ *
  * */
 
-public class DBConnector {
-
-//※↓単体で動きをチェックするためのメインメソッドです。プロジェクト起動時に勝手に動いてしまうと大変なので、普段はコメントにしてあります。
-//	public static void main(String[] args)throws IllegalAccessException, InstantiationException{
-//		Test_DBConnecter tdbc = new Test_DBConnecter();
-//		tdbc.createConnection();
-//	}
-
-	//ここから本文----------------------------------------------------------------------
+public class ChoitabiDBConnector {
 
 	private String className = "com.mysql.jdbc.Driver";			//←ロードするドライバー名
-	private String connectUrl = "jdbc:mysql://localhost/choitabi";  //←接続先のデータベース
+	private String connectUrl = "jdbc:mysql://localhost/choitabi";  //←接続先のデータベース（choitabiになっています）
 	private String connectUser = "root";								//←接続するユーザー
 	private String connectPassword = "mysql";						//←接続するときのパスワード
 

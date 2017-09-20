@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.choitabi.util.DBConnector;
+import com.internousdev.choitabi.util.ChoitabiDBConnector;
 
 public class UpdateTourDAO {
 
@@ -42,7 +42,7 @@ public class UpdateTourDAO {
 
 				try{
 					/*SQLに接続し、コマンドを実行してもらいます*/
-					DBConnector dbc = new DBConnector();
+					ChoitabiDBConnector dbc = new ChoitabiDBConnector();
 					Connection con = dbc.createConnection();
 
 
@@ -119,7 +119,7 @@ public class UpdateTourDAO {
 				try{
 
 				/*SQLに接続し、コマンドを実行してもらいます*/
-				DBConnector dbc = new DBConnector();
+				ChoitabiDBConnector dbc = new ChoitabiDBConnector();
 				Connection con = dbc.createConnection();
 
 				String sql = "DELETE FROM tour WHERE tour_id =  ?";/*Update/DELETE文、文法確認中*/

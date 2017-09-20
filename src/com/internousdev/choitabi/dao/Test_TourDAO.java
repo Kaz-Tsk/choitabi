@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.Test_TourDTO;
-import com.internousdev.choitabi.util.DBConnector;
+import com.internousdev.choitabi.util.ChoitabiDBConnector;
 
 /**
  * ツアー一覧画面遷移に関するクラス
@@ -30,7 +30,7 @@ public class Test_TourDAO {
 	 * @throws IllegalAccessException
 	 */
         public ArrayList<Test_TourDTO> select() throws IllegalAccessException, InstantiationException{
-        	DBConnector db = new DBConnector();
+        	ChoitabiDBConnector db = new ChoitabiDBConnector();
         	Connection con = db.createConnection();
         	ArrayList<Test_TourDTO> Tour = new ArrayList<Test_TourDTO>();
         	String sql ="select * from sorts";
