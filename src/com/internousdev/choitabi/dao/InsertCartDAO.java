@@ -100,17 +100,23 @@ public class InsertCartDAO {
 	 */
 
 	public ArrayList<CartDTO> selected(int user_id) {
+
+		/*MySQLでSSL接続するには、jdbc:mysql://localhost/の後に、?useSSL=true&requireSSL=true を書く
+		 * コンソールで 『Establishing SSL connection without server's identity verification is not recommended.』と出てきたら
+		 * 上記を付与してあげる*/
+
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/?useSSL=true&requireSSL=true","choitabi","root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
-		String sql = "select * from cart where user_id=?";
-		String select2 = "SELECT * FROM tour WHERE tour_id=?";
+		String sql = "select * from cart where user_id = ?";
+		String select2 = "SELECT * FROM tour WHERE tour_id = ?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1,  user_id);
 			ResultSet rs = ps.executeQuery();
+
 			/*動作確認*/System.out.println("InsertCartDAO - rs：" + rs);
 
 			while(rs.next()) {
@@ -152,6 +158,7 @@ public class InsertCartDAO {
 		}
 
 		/*動作確認*/System.out.println("InsertCartDAO：確認" + cartList);
+
 		return cartList;
 
 	}
