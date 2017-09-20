@@ -57,15 +57,11 @@ h2{
 	margin-bottom:100px;
 }
 
-figcaption{
-	 text-align: center;
-	 font-size:20px;
-}
-
 /*---リンク先の設定---------*/
-.theme_title{
+b{
 	height:160px;
 	width:150px;
+	font-size:20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

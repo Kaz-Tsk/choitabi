@@ -72,7 +72,7 @@ $('.main_img').slick({
     <figure class="imghvr-hinge-left" >
   <img src="img/gourmet_pict.png"  height= "150" width="150">
   <figcaption>
-    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><s:text name="lang.index.gourmet" /></a>
+    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><b><s:text name="lang.index.gourmet"  /></b></a>
   </figcaption>
 </figure>
 </div>
