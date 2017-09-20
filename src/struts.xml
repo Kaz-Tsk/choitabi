@@ -157,11 +157,11 @@ method= "execute">
 <result name= "success">index_3.jsp</result>
 </action>
 
-<!--  -->
+<!-- 決済確認画面へ遷移する -->
 <action name= "CheckCreditInfomationAction" class="com.internousdev.choitabi.action.CheckCreditInfomationAction"
 method= "execute">
-<result name= "success">yayaku_kakunin.jsp</result>
-<result name= "error">yayaku_nyuuryoku.jsp</result>
+<result name= "success">purchase_kakunin.jsp</result>
+<result name= "error">purchase_nyuuryoku.jsp</result>
 </action>
 
 
