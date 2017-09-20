@@ -1,5 +1,5 @@
 /**author YUKA MATSUMURA
-*管理画面で広く使えそうなものを、思って作りました。
+*管理画面ように作ったシンプルな見た目のCSSです。
 ツアー一覧と、ツアーの編集・追加画面で使っています。
 */
 
@@ -45,16 +45,6 @@ a{
 	font-size:10px;
 	font-weight:bold;
 	align:center;
-}
-
-input.submit_button{
-	font-family:メイリオ;
-	font-size:14px;
-	color:dimgrey;
-	border:0px;
-	font-weight:bold;
-	cursor:pointer;
-	background-color:white;
 }
 
 
