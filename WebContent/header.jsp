@@ -30,7 +30,7 @@
 	<header>
          <s:if test="#session.userFlg==1||#session.userFlg==2">
 				    <div class="logo"><a href="<s:url action="MainTopAction"/>"><span
-					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
+					class="glyphicon glyphicon-wrench"></span>choitabi</a></div>
 			<div class="navi">
 				<div class="navibox"><a href="about.jsp" class="underline"><s:text name="lang.header.about"/></a></div>
 				<div class="navibox"><a href="Q&A.jsp" class="underline"><s:text name="lang.header.Q&A"/></a></div>
@@ -41,12 +41,27 @@
 
 	<!-- 管理者ログイン時ヘッダー  -->
 		<s:elseif test="#session.userFlg==3 ">
-			  <div class="logo2"><s:text name="lang.header.Management page"/></div>
-		<div class="navi2">
-			<div class="navibox2"><a href="kanri_tourList.jsp" class="underline"><s:text name="lang.header.tourlist"/></a></div>
-			<div class="navibox2"><a href= "kanri_toiawasekakunin.jsp"class="underline"><s:text name="lang.header.kanritoiawase"/></a></div>
-		 <div class="navibox2"><a href="LogoutAction"  class="underline"><s:text name="lang.header.logout"/></a></div>
-		</div>
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="logo2"><s:text name="lang.header.kaniripage"/></div>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="kanri_tourList.jsp"><s:text name="lang.header.tourlist"/></a></li>
+        <li><a href="kanri_toiawasekakunin.jsp"><s:text name="lang.header.kanritoiawase"/></a></li>
+        <li><a href="LogoutAction"><s:text name="lang.header.logout"/></a></li>
+          </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
 		</s:elseif>
 
 

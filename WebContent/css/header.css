@@ -23,11 +23,8 @@ background-color:orange;
 
 
 .logo2{
-	position:absolute;
-    font-color:brack;
-    font-size:50px;
-    margin-top:14px;
-    margin-left:10px;
+    font-size:30px;
+    margin-right:80px;
 }
 .navi2{
 top:0px;
@@ -36,7 +33,6 @@ width:100%;
 }
 
 .navibox2{
-	position:relative;
 	float:right;
 	margin-right:30px;
 	margin-top:40px;
