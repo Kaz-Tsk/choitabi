@@ -95,9 +95,27 @@
 				<s:text name="lang.kanri_tourTsuika.theme"/>
 			</th>
 			<td>
+				<s:if test='newTheme.equals("グルメ")'>
+				<label><input type="radio" name="newTheme" value="グルメ" checked/>グルメ</label>
+				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
+				<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
+				</s:if>
+				<s:if test='newTheme.equals("名所")'>
+				<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
+				<label><input type="radio" name="newTheme" value="名所" checked/>名所</label>
+				<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
+				</s:if>
+				<s:if test='newTheme.equals("アクティビティ")'>
+				<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
+				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
+				<label><input type="radio" name="newTheme" value="アクティビティ" checked/>アクティビティ</label>
+				</s:if>
+				<s:else>
 				<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
 				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
 				<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
+				</s:else>
+
 			</td>
 		</tr>
 		<tr>
