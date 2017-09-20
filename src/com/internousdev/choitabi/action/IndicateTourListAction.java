@@ -24,6 +24,12 @@ public class IndicateTourListAction extends ActionSupport{
 	/*検索ワード（初期状態はnullになってしまうので、""=空白を入れておきます*/
 	private String selectWord = "";
 
+	/*検索エリア(※これから作成)*/
+	private String selectRegion = "";
+
+	/*検索テーマ*/
+	private String selectTheme = "";
+
 	/*取得されたすべてのツアー情報*/
 	private ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
 
@@ -47,7 +53,7 @@ public class IndicateTourListAction extends ActionSupport{
 
 		/*DAOでツアーの一覧を持ってくる*/
 		SelectTourListDAO stldao = new SelectTourListDAO();
-		allTourList = stldao.selectTourList(selectWord);
+		allTourList = stldao.selectTourList(selectWord, selectTheme);
 
 		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/
 		TourListPagination tlp = new TourListPagination();
@@ -82,6 +88,27 @@ public class IndicateTourListAction extends ActionSupport{
 	public void setSelectWord(String selectWord){
 		this.selectWord = selectWord;
 	}
+
+	/*検索エリアのgetter*/
+	public String getSelectRegion(){
+		return selectRegion;
+	}
+
+	/*検索エリアのsetter*/
+	public void setSelectRegion(String selectRegion){
+		this.selectRegion = selectRegion;
+	}
+
+	/*検索テーマのgetter*/
+	public String getSelectTheme(){
+		return selectTheme;
+	}
+
+	/*検索テーマのsetter*/
+	public void setSelectTheme(String selectTheme){
+		this.selectTheme = selectTheme;
+	}
+
 
 	/*ツアーリスト（すべて）のgetter*/
 	public ArrayList<SelectTourDTO> getAllTourList(){

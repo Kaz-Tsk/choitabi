@@ -21,7 +21,7 @@ public class SelectTourListDAO {
 	 * */
 
 
-	public ArrayList<SelectTourDTO> selectTourList(String selectWord){
+	public ArrayList<SelectTourDTO> selectTourList(String selectWord, String selectTheme){
 
 		/*呼び出し元に返すツアー情報のリストを作ります*/
 			ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
@@ -30,10 +30,12 @@ public class SelectTourListDAO {
 			/*SQLに接続し、コマンドを実行してもらいます*/
 			ChoitabiDBConnector tdc = new ChoitabiDBConnector();
 			Connection con = tdc.createConnection();
-			String sql = "SELECT * FROM tour WHERE tour_name LIKE ?";
+			/*動作確認*/System.out.println("SelectTourListDAO-selectTheme:" + selectTheme);
+			String sql = "SELECT * FROM tour WHERE tour_name LIKE ? AND theme LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			/*後消し*/System.out.println("SelectTourListDAO : " + sql);
 			ps.setString(1, "%" + selectWord + "%");
+			ps.setString(2, "%" + selectTheme + "%");
 			ResultSet rs = ps.executeQuery();
 
 
