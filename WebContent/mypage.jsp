@@ -27,19 +27,19 @@
 				<s:iterator value="#select.User">
 				<table >
 					<tr>
-						<th><s:text name="lang.mypage.name"/></th>
+						<td><s:text name="lang.mypage.name"/></td>
 						<td><s:property value="familyNameKanji"/><s:property value="givenNameKanji"/></td>
 					</tr>
 					<tr>
-						<th><s:text name="lang.mypage.address"/></th>
+						<td><s:text name="lang.mypage.address"/></td>
 						<td><s:property value="address"/></td>
 					</tr>
 					<tr>
-						<th><s:text name="lang.mypage.mailaddress"/></th>
+						<td><s:text name="lang.mypage.mailaddress"/></td>
 						<td><s:property value="mailAddress"/></td>
 					</tr>
 					<tr>
-						<th><s:text name="lang.mypage.telnumber"/></th>
+						<td ><s:text name="lang.mypage.telnumber"/></td>
 						<td><s:property value="telNumber"/></td>
 					</tr>
 				</table>
