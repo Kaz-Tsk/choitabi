@@ -27,17 +27,17 @@ public class PurchaseSecondAction extends ActionSupport implements SessionAware{
     /**
      * ユーザーID
      */
-    private int userId;
+    private int user_id;
 
     /**
      * 商品ID
      */
-    private int itemId;
+    private int item_id;
 
     /**
      * 商品名
      */
-    private String itemName;
+    private String item_name;
 
     /**
      * 単価
@@ -47,7 +47,7 @@ public class PurchaseSecondAction extends ActionSupport implements SessionAware{
     /**
      * 注文数
      */
-    private int orderCount;
+    private int order_count;
 
     /**
      * イメージパスファイル
@@ -80,13 +80,13 @@ public class PurchaseSecondAction extends ActionSupport implements SessionAware{
         String result=ERROR;
 
         if (session.containsKey("userId")) {
-            userId = (int)session.get("userId");
+            user_id = (int)session.get("userId");
 
             SelectCartDAO dao = new SelectCartDAO();
-            cartList = dao.selectCart(userId);
+            cartList = dao.selectCart(user_id);
 
             for(int i = 0; i < cartList.size(); i++ ){
-                amount += (cartList.get(i).getPrice())*(cartList.get(i).getOrderCount());
+                amount += (cartList.get(i).getPrice())*(cartList.get(i).getOrder_count());
                 }
 
             result = SUCCESS;
@@ -101,7 +101,7 @@ public class PurchaseSecondAction extends ActionSupport implements SessionAware{
      * @return userId ユーザーID
      */
     public int getUserId() {
-        return userId;
+        return user_id;
         }
 
     /**
@@ -109,23 +109,23 @@ public class PurchaseSecondAction extends ActionSupport implements SessionAware{
      * @param userId セットする ユーザーID
      */
     public void setUserId(int userId) {
-        this.userId = userId;
+        this.user_id = userId;
         }
 
     /**
      * 商品IDを取得するメソッド
      * @return itemId 商品ID
      */
-    public int getItemId() {
-        return itemId;
+    public int getItem_id() {
+        return item_id;
         }
 
     /**
      * 商品IDを格納するメソッド
      * @param itemId セットする 商品ID
      */
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
+    public void setItem_id(int itemId) {
+        this.item_id = itemId;
         }
 
     /**
@@ -133,7 +133,7 @@ public class PurchaseSecondAction extends ActionSupport implements SessionAware{
      * @return itemName 商品名
      */
     public String getItemName() {
-        return itemName;
+        return item_name;
         }
 
     /**
@@ -141,7 +141,7 @@ public class PurchaseSecondAction extends ActionSupport implements SessionAware{
      * @param itemName セットする 商品名
      */
     public void setItemName(String itemName) {
-        this.itemName = itemName;
+        this.item_name = itemName;
         }
 
     /**
@@ -213,15 +213,15 @@ public class PurchaseSecondAction extends ActionSupport implements SessionAware{
      * @return orderCount 注文数
      */
     public int getOrderCount() {
-        return orderCount;
+        return order_count;
         }
 
     /**
      * 注文数を格納するメソッド
      * @param orderCount セットする 注文数
      */
-    public void setOrderCount(int orderCount) {
-        this.orderCount = orderCount;
+    public void setOrder_count(int orderCount) {
+        this.order_count = orderCount;
         }
 
     /**
