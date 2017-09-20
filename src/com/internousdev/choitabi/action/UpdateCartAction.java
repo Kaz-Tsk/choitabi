@@ -1,5 +1,6 @@
 package com.internousdev.choitabi.action;
 
+import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
@@ -51,7 +52,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
     /**
      * 価格
      */
-    private int price;
+    private BigDecimal price;
 
     /**
      * 予約人数
@@ -61,7 +62,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
     /**
      * 合計金額
      */
-    private int total_price;
+    private BigDecimal total_price;
 
     /**
      * 更新処理をした件数
@@ -98,8 +99,8 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
 
         if(session.containsKey("userId")) {
         	user_id = (int) session.get("userId");
-        	UpdateCartDAO ucDao = new UpdateCartDAO();
 
+        	UpdateCartDAO ucDao = new UpdateCartDAO();
         	SelectCartDAO scDao = new SelectCartDAO();
 
         	updateCount = ucDao.updateCart(cart_id, user_id, order_count, price);
@@ -107,8 +108,11 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
 
         if (cartList.size() > 0) {
         	for(int i = 0; i < cartList.size(); i++) {
-        		/*動作確認*/System.out.println("UpdateCartAction-取得価格：" + (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count()));
-        		total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count());
+
+        		/*動作確認*/System.out.println("UpdateCartAction-取得価格：" + (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
+
+        		total_price = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));
+
         	}
 
         	result = SUCCESS;
@@ -189,7 +193,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 価格を取得するメソッド
      * @return price 価格
      */
-    public int getPrice() {
+    public BigDecimal getPrice() {
     	return price;
     }
 
@@ -197,7 +201,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 価格を格納するメソッド
      * @param price 価格
      */
-    public void setPrice(int price) {
+    public void setPrice(BigDecimal price) {
     	this.price = price;
     }
 
@@ -221,7 +225,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 合計金額を取得するメソッド
      * @return total_price 合計金額
      */
-    public int getTotal_price() {
+    public BigDecimal getTotal_price() {
     	return total_price;
     }
 
@@ -229,7 +233,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      * 合計金額を格納するメソッド
      * @param total_price 合計金額
      */
-    public void setTotal_price(int total_price) {
+    public void setTotal_price(BigDecimal total_price) {
     	this.total_price = total_price;
     }
 

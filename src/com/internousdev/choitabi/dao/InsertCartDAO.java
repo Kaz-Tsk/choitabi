@@ -1,5 +1,6 @@
 package com.internousdev.choitabi.dao;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,7 +36,7 @@ public class InsertCartDAO {
 			while(rs.next()) {
 				SelectCartDTO scDto = new SelectCartDTO();
 				scDto.setTour_name(rs.getString("tour_name"));
-				scDto.setPrice(rs.getInt("price"));
+				scDto.setPrice(rs.getBigDecimal("price"));
 
 				tourStatus.add(scDto);
 				}
@@ -55,7 +56,7 @@ public class InsertCartDAO {
 		return tourStatus;
 	}
 
-	public int addToCart(int user_id, int tour_id, int order_count, int price) {
+	public int addToCart(int user_id, int tour_id, int order_count, BigDecimal price) {
 		int addCount = 0;
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
@@ -67,7 +68,7 @@ public class InsertCartDAO {
 			ps.setInt(1, user_id);
 			ps.setInt(2, tour_id);
 			ps.setInt(3, order_count);
-			ps.setInt(4, price);
+			ps.setBigDecimal(4, price);
 			addCount = ps.executeUpdate();
 
 		}catch(SQLException e) {
@@ -127,8 +128,15 @@ public class InsertCartDAO {
 
 				while(rs2.next()) {
 					dto.setTour_name(rs2.getString("tour_name"));
-					dto.setPrice(rs2.getInt("price"));
-					dto.setSub_total(dto.getPrice() * dto.getOrder_count());
+					dto.setPrice(rs2.getBigDecimal("price"));
+					dto.setSub_total(dto.getPrice().multiply(BigDecimal.valueOf(dto.getOrder_count())));
+
+					/*私的メモ
+					 * subtotal.add((cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
+					 * cartList.get(i).setSubtotal(subtotal);
+					 * subtotal = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));
+					 * cartList.get(i).setSubtotal(subtotal);*/
+
 					}
 			}
 		}catch(SQLException e) {

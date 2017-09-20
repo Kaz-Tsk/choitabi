@@ -1,5 +1,6 @@
 package com.internousdev.choitabi.dao;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -16,7 +17,7 @@ import com.internousdev.util.DBConnector;
  */
 
 public class UpdateCartDAO {
-    public int updateCart(int cart_id, int user_id, int order_count, int price) {
+    public int updateCart(int cart_id, int user_id, int order_count, BigDecimal price) {
         int count = 0;
         DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
         Connection con = db.getConnection();
@@ -25,7 +26,7 @@ public class UpdateCartDAO {
         try{
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, order_count);
-            ps.setInt(2, price);
+            ps.setBigDecimal(2, price);
             ps.setInt(2, user_id);
             ps.setInt(3, cart_id);
             count = ps.executeUpdate();
