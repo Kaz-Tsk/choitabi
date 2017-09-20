@@ -30,7 +30,7 @@
 	<header>
          <s:if test="#session.userFlg==1||#session.userFlg==2">
 				    <div class="logo"><a href="<s:url action="MainTopAction"/>"><span
-					class="glyphicon glyphicon-wrench"></span>choitabi</a></div>
+					class="glyphicon glyphicon-globe"></span>choitabi</a></div>
 			<div class="navi">
 				<div class="navibox"><a href="about.jsp" class="underline"><s:text name="lang.header.about"/></a></div>
 				<div class="navibox"><a href="Q&A.jsp" class="underline"><s:text name="lang.header.Q&A"/></a></div>
@@ -51,7 +51,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="logo2"><s:text name="lang.header.kaniripage"/></div>
+      <div class="logo2"><span
+					class="glyphicon glyphicon-wrench"></span><s:text name="lang.header.kaniripage"/></div>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
