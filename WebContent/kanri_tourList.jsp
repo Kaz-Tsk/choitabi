@@ -23,14 +23,13 @@
 	<h1>ツアー情報一覧</h1>
 
 <!-- ↓ツアー名検索の部分です -->
-    ----------<s:text name="lang.kanri_tourList.search_tour_by_name"/>----------
+    ---------------<s:text name="lang.kanri_tourList.search_tour_by_name"/>---------------
     <form action="IndicateTourListAction">
 		<input type="text" name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
 		<input type="submit" value='<s:text name="lang.kanri_tourList.search"/>'>
 	</form>
-	<br>
-	----------テーマで検索----------<br>
+	---------------テーマで検索---------------<br>
 	<!-- ↑↓ここ、あとでプロパティファイルに追記 -->
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>

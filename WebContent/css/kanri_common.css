@@ -42,8 +42,7 @@ td{
 
 a{
 	color:dimgrey;
-	font-size:14px;
-	text-decoration:none;
+	font-size:10px;
 	font-weight:bold;
 	align:center;
 }
@@ -57,5 +56,5 @@ input.submit_button{
 	cursor:pointer;
 	background-color:white;
 }
-*/
+
 
