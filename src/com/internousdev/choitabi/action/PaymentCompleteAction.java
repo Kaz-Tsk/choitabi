@@ -96,7 +96,7 @@ public class PaymentCompleteAction extends ActionSupport implements SessionAware
                     dao.clean(userId); //カート情報を削除
 
                     for (int i = 0; i < cartList.size(); i++) {
-                        amount += (cartList.get(i).getPrice()) * (cartList.get(i).getOrderCount());
+                        amount += (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count());
                         }
 
                     result = SUCCESS;
