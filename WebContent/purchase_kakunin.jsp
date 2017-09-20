@@ -30,7 +30,7 @@
 		<table class="cartlist">
 			<thead>
 				<tr>
-					<th><s:text name="lang.cart.itemimage" /></th>
+					<th><s:text name="lang.cart.img" /></th>
 					<th><s:text name="lang.cart.itemname" /></th>
 					<th><s:text name="lang.cart.price" /></th>
 					<th><s:text name="lang.cart.count" /></th>
@@ -57,6 +57,9 @@
 				</s:iterator>
 			</tbody>
 		</table>
+
+
+
 		<h2 class="text-danger text-right">
 			<s:text name="lang.cart.total" />
 			<fmt:formatNumber value="${amount}" pattern="###,###,###" />
@@ -71,32 +74,25 @@
 		<s:form action="PurchaseCompleteAction" class="center">
 
 			<input type="hidden" name="creditNumber"
-				value="<s:property value="creditNumber"/>">
+				   value="<s:property value="creditNumber"/>">
 
 			<input type="hidden" name="creditId"
-				value="<s:property value="creditId"/>">
+				   value="<s:property value="creditId"/>">
 			<input type="hidden" name="amount"
-				value="<s:property value="amount" />">
+				   value="<s:property value="amount" />">
 
 			<input type="submit"
-				value="<s:text name="%{getText('lang.cart.confirm')}"/>"
-				class="btn btn-warning " />
+				   value="<s:text name="%{getText('lang.cart.confirm')}"/>"
+				   class="btn btn-warning " />
 		</s:form>
 
 
 
-	<div class="col-sm-12">
+
 		<h1 style="text-align: center">
 			<s:text name="lang.payment_confirm.settlementinfo" />
 		</h1>
-	</div>
 
-
-	<div class="col-sm-12 grey-background">
-
-		<div class="col-sm-10 col-sm-offset-1 height-adjust white-background">
-
-			<div class="col-sm-4 col-sm-offset-4">
 
 
 
@@ -139,12 +135,6 @@
 				<s:set var="four">****</s:set>
 				${code.length()==3?three:four} <br>
 
-			</div>
-		</div>
-	</div>
-
-
-	</div>
 
 
 
