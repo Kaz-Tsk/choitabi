@@ -1,6 +1,5 @@
 package com.internousdev.choitabi.action;
 
-import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
@@ -45,7 +44,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 価格
 	 */
-	private BigDecimal price = BigDecimal.ZERO;
+	private int price;
 
 	/**
 	 * 予約人数
@@ -55,7 +54,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 合計金額
 	 */
-	private BigDecimal total_price = BigDecimal.ZERO;
+	private int total_price;
 
 	/**
 	 * カート情報
@@ -70,14 +69,14 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 小計
 	 */
-	private BigDecimal sub_total = BigDecimal.ZERO;
+	private int sub_total;
 
 
 
 	/**
 	 * 実行メソッド
 	 * 1：セッション情報を持っているか判断
-	 * 2：session内のuserIdを使用し、カートへ登録された情報を取得
+	 * 2：session内のuser_idを使用し、カートへ登録された情報を取得
 	 * 3：カート内の情報を元に合計金額を算出
 	 *
 	 * @author HINAKO HAGIWARA
@@ -91,12 +90,12 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 
 		if (session.containsKey("userId")) {
 			user_id = (int) session.get("userId");
-			SelectCartDAO dao = new SelectCartDAO();
-			cartList = dao.selectCart(user_id);
+			SelectCartDAO scDao = new SelectCartDAO();
+			cartList = scDao.selectCart(user_id);
 
 			if(cartList.size()>0){
-				for(int i = 0; i < cartList.size(); i++) {
-					total_price = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));
+				for(int i = 0; i <cartList.size(); i++) {
+					total_price += (cartList.get(i).getPrice()) * (cartList.get(i).getOrder_count());
 				}
 
 			result = SUCCESS;
@@ -164,7 +163,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 価格を取得するメソッド
 	 * @return price 価格
 	 */
-	public BigDecimal getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
@@ -172,7 +171,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 価格を格納するメソッド
 	 * @oaram price 価格
 	 */
-	public void setPrice(BigDecimal price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 
@@ -180,7 +179,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 合計金額を取得するメソッド
 	 * @return total_price 合計金額
 	 */
-	public BigDecimal getTotal_price() {
+	public int getTotal_price() {
 		return total_price;
 	}
 
@@ -188,7 +187,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 合計金額を格納するメソッド
 	 * @oaram total_price 合計金額
 	 */
-	public void setTotal_price(BigDecimal total_price) {
+	public void setTotal_price(int total_price) {
 		this.total_price = total_price;
 	}
 
@@ -244,7 +243,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 小計を取得するメソッド
 	 * @return sub_total 小計
 	 */
-	public BigDecimal getSub_total() {
+	public int getSub_total() {
 		return sub_total;
 	}
 
@@ -252,7 +251,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 * 小計を格納するメソッド
 	 * @param sub_total 小計
 	 */
-	public void setSub_total(BigDecimal sub_total) {
+	public void setSub_total(int sub_total) {
 		this.sub_total = sub_total;
 	}
 

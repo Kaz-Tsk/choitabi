@@ -10,14 +10,18 @@ import com.opensymphony.xwork2.ActionSupport;
 public class IndicateTourListAction extends ActionSupport{
 
 
-	/*@author YUKA MATSUMURA
+	/**@author YUKA MATSUMURA
 	 * @since 2017/09/05
 	 * @virsion 1.1
 	 * 管理画面のツアー情報の管理で使用するアクションです。
-	 * DBからツアーのデータを取得し、リストにしてJSPに渡して、表示させます。	 *
+	 * DBからツアーのデータを取得し、アレイリストにしてJSPに渡して、表示させます。
+	 * 使っているアレイリストは2種類で、
+	 * DBから取得したすべてのデータを入れた「allTourList」と、そこから
+	 * 現在のページに表示するものだけを切り出した「currentTourList」です。
+	 * JSPに渡しているのは「currentTourList」の方です。
 	 * */
 
-	/*検索ワード（初期状態はnullなので、ifで例外回避を）*/
+	/*検索ワード（初期状態はnullになってしまうので、""=空白を入れておきます*/
 	private String selectWord = "";
 
 	/*取得されたすべてのツアー情報*/
@@ -30,39 +34,27 @@ public class IndicateTourListAction extends ActionSupport{
 	private int maxPage;
 
 	/*ツアー情報の現在のページ番号*/
-	private int currentPage;/*ここは、JSPから持ってくる*/
+	private int currentPage = 1;/*nullPointerが起きないように、最初に1を入れておきます。*/
 
 
 
 
 	/*アクションクラスの「execute」メソッド。
 	 * DAOクラスを呼び出してツアーの情報をリストとして取得。
-	 * うまく取得できたら、Strutsに「SUCCESS」を、リストが種t句できなかったら「ERROR」を返すこと。*/
+	 * うまく取得できたら、Strutsに「SUCCESS」を、そうでなかったら「ERROR」を返します。*/
 	public String execute(){
 		String result = ERROR;
 
 		/*DAOでツアーの一覧を持ってくる*/
-		SelectTourListDAO tstl = new SelectTourListDAO();
-		allTourList = tstl.selectTourList(selectWord);
+		SelectTourListDAO stldao = new SelectTourListDAO();
+		allTourList = stldao.selectTourList(selectWord);
 
 		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/
 		TourListPagination tlp = new TourListPagination();
-		 maxPage = tlp.rerturnMaxPage(allTourList);/*ついでに最大ページ数も持ってきます。*/
+		 maxPage = tlp.rerturnMaxPage(allTourList);/*ついでに最大ページ数がいくつになるかも計算させます。*/
 
-		/*「＜＜」「＞＞」の移動で現在ページがマイナスになったり、
-		 * 最大ページ数を超えたりしないようにするための処理です。
-		 * ※後ほどこの処理はJSP上で行うようにします。（URLで0ページ目と4ページ目ができてしまうのでなんだか気持ち悪い）*/
-//		if(currentPage >= maxPage){
-//			currentPage = maxPage;
-//		}else if(currentPage <= 1){
-//			currentPage = 1;
-//		}
-
-		 /*すべてのデータのうち、現在のページに表示するデータをもう一度リストにして渡しなさい、という処理です。*/
+		 /*すべてのデータのうち、現在のページに表示するデータだけを切り抜いて、もう一度リストにして渡しなさい、という処理です。*/
 		 currentTourList = tlp.paginateTourList(allTourList, currentPage);
-
-
-
 
 		 /*リストがうまく作れたらSUCCESS、そうでなかったらERRORを返します*/
 		if(currentTourList != null){
