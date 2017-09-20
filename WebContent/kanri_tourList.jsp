@@ -52,7 +52,7 @@
 	<table>
 		<tr>
 			<th><s:text name="lang.kanri_tourList.tour_id"/></th>
-			<th width="320px"><s:text name="lang.kanri_tourList.tour_name"/></th>
+			<th width="300px"><s:text name="lang.kanri_tourList.tour_name"/></th>
 			<th width="80px"><s:text name="lang.kanri_tourList.price"/></th>
 			<th><s:text name="lang.kanri_tourList.region"/></th>
 			<th width="140px"><s:text name="lang.kanri_tourList.theme"/></th>
@@ -77,7 +77,6 @@
 		</tr>
 		</s:iterator>
 	</table>
-    <br>
 
 <!-- ↓ページの「＜＜2/3＞＞」の部分です -->
 
