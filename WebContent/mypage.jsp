@@ -20,40 +20,46 @@
 	<s:include value="header.jsp"></s:include>
 
 	<!-- main部分 -->
-	<div class="mypage-container">
-		<h2><s:text name="lang.mypage.userdata"/></h2>
-			<div class="admin-param">
-				<s:action var="select" name="MypageAction"/>
-				<s:iterator value="#select.User">
-				<table >
-					<tr>
-						<td><s:text name="lang.mypage.name"/></td>
-						<td><s:property value="familyNameKanji"/><s:property value="givenNameKanji"/></td>
-					</tr>
-					<tr>
-						<td><s:text name="lang.mypage.address"/></td>
-						<td><s:property value="address"/></td>
-					</tr>
-					<tr>
-						<td><s:text name="lang.mypage.mailaddress"/></td>
-						<td><s:property value="mailAddress"/></td>
-					</tr>
-					<tr>
-						<td ><s:text name="lang.mypage.telnumber"/></td>
-						<td><s:property value="telNumber"/></td>
-					</tr>
-				</table>
+	<div class="main">
+		<div class="mypage-container">
+
+				<div class="admin-param">
+					<s:action var="select" name="MypageAction"/>
+					<s:iterator value="#select.User">
+					<div class = "param-box">
+					<h2><s:text name="lang.mypage.userdata"/></h2>
+					<table >
+						<tr>
+							<td><s:text name="lang.mypage.name"/></td>
+							<td><s:property value="familyNameKanji"/><s:property value="givenNameKanji"/></td>
+						</tr>
+						<tr>
+							<td><s:text name="lang.mypage.address"/></td>
+							<td><s:property value="address"/></td>
+						</tr>
+						<tr>
+							<td><s:text name="lang.mypage.mailaddress"/></td>
+							<td><s:property value="mailAddress"/></td>
+						</tr>
+						<tr>
+							<td ><s:text name="lang.mypage.telnumber"/></td>
+							<td><s:property value="telNumber"/></td>
+						</tr>
+					</table>
+					<br>
+					<s:form action = "UserPurchaseHistoryAction">
+						<button type= "submit" ><s:text name="lang.mypage.purchasehistory"/></button>
+					</s:form>
+				</div>
+
+
+
 				</s:iterator>
 			</div>
-		<div class="purchase-history">
-		<s:form action = "UserPurchaseHistoryAction">
-			<button type= "submit" ><s:text name="lang.mypage.purchasehistory"/></button>
-		</s:form>
+		</div>
 	</div>
-</div>
-
 	<!-- footer include -->
-	<footer style= margin-top:350px>
+	<footer>
 		<s:include value="footer.jsp"></s:include>
 	</footer>
 </body>
