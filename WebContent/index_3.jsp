@@ -65,14 +65,14 @@ $('.main_img').slick({
 
 <div class= "phrase"><h1>ちょいたびで、ちょいといい旅。</h1></div>
 
-<!-- 検索アイコン↓ ------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- 検索アイコン↓ -->
     <div class= "theme_box">
     <h2><s:text name="lang.index.searchT"/></h2>
     <div class="theme_sub">
     <figure class="imghvr-hinge-left" >
   <img src="img/gourmet_pict.png"  height= "150" width="150">
   <figcaption>
-    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><b><s:text name="lang.index.gourmet"/></b></a>
+    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><s:text name="lang.index.gourmet" /></a>
   </figcaption>
 </figure>
 </div>
