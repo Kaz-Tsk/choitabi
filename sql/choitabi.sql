@@ -22,7 +22,7 @@ cart_id int not null primary key auto_increment,
 user_id int not null,
 tour_id int not null,
 order_count int not null default 1,
-size varchar(50) not null default 'm',
+price decimal(10,0) null default null,
 registration_date timestamp not null default current_timestamp,
 updated_date timestamp not null default current_timestamp,
 is_deleted boolean default false,/*商品選択削除*/
