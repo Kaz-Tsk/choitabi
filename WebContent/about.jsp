@@ -1,9 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <!-- 国際化 -->
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
     <!DOCTYPE html >
 
 <html>
 <head>
+<!-- 国際化 ※ここでは国を判別しています。
+    言語コード( ja,en など)を示すロケールID を取得します。-->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<fmt:setBundle basename="com.internousdev.choitabi.property.cart"
+	var="lang" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet"type="text/css"href="./css/about.css">
     <title>about</title>
@@ -22,21 +32,21 @@
 <!-- about部分---------------------------------------------------------->
 <div class="main">
    <div class="midasi">
-        <h1>choitabiについて</h1>
+        <h1><s:text name="lang.about.midasi1" /></h1>
    </div>
        <div class="midasi2">
-        <h2>忙しい仕事の合間に”ちょいと旅したい”<br>
-            そんなあなたを応援するスーパーバケーションサイトです。</h2>
+        <h2><s:text name="lang.about.midasi2" /><br>
+           <s:text name="lang.about.midasi2`" /> </h2>
 
-        <h3>魅力あふれる豊富なツアープラン！！<br>
-            24時間すぐに申し込みができる簡単受付！！<br>
-            スムーズなクレジット決済対応！！
+        <h3><s:text name="lang.about.midasi3" /><br>
+            <s:text name="lang.about.midasi3`" /><br>
+            <s:text name="lang.about.midasi3``" />
         </h3>
 
 
         <br>
 
-        <p>『choitabi』で素敵な旅をお楽しみください。</p>
+        <p><s:text name="lang.about.hitokoto" /></p>
 </div>
 
 </div>
