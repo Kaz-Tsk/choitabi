@@ -29,22 +29,31 @@
 
 <body>
 
-<ul class="sample">
-<li><img src="img/mihuneyamarakuen.jpg"></li>
-<li><img src="img/mihuneyamarakuen.jpg"></li>
-<li><img src="img/mihuneyamarakuen.jpg"></li>
-</ul>
+<div class="main_img">
+     <div class= "img"><img src="img/aquamarine_hukusima.jpg"  height= "280" width="378"></div>
+     <div class= "img"><img src="img/hananukikeikoku.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/iruka_watching_tour.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/mihuneyamarakuen.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/oirasekeiryu.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/mihuneyamarakuen.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/sarugakyou_bungee.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/zundamochi.jpg" height= "280" width="378"></div>
+</div>
 
 <script>
 $(function(){
-$('.sample').slick({
-	slidesToShow: 2,
+$('.main_img').slick({
+	slidesToShow: 4,
 	  slidesToScroll: 1,
 	  autoplay: true,
 	  autoplaySpeed: 2000,
+	  arrows:true,
+	  dots:true,
 	});
 });
 </script>
+
+<div class= "phrase"><h1>ちょいたびで、ちょいといい旅。</h1></div>
 
     <div class= "theme_box">
     <h2><s:text name="lang.index.searchT"/></h2>
