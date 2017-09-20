@@ -86,7 +86,7 @@
 	<table>
 	    <tr>
 	        <tr>
-	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_url"/></th>
+	        <th><s:text name="lang.kanri_tourHensyuuKakunin.tour_id"/></th>
 	        <td colspan="4"><s:property value ="currentTourId"/></td>
 	    </tr>
 	    <tr>
