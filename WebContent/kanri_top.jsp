@@ -16,6 +16,16 @@
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_top"
  		var="lang" />
 	<!-- CSSの読み込み -->
+	<style type="text/css">
+
+
+.main{
+	        position:absolute;
+            top:25%;
+            left:25%;
+            text-align:center;
+}
+	</style>
 </head>
 
 <body>
@@ -24,7 +34,7 @@
 <header>
         <jsp:include page="header.jsp"/>
 </header>
-
+<div class="main">
 	<h1>管理者画面トップ</h1>
     <hr>
     <br>
@@ -63,6 +73,6 @@
 	</a><br>
 ※ちょい旅チームの皆さんへ・お問い合わせに関しては<br>
 各々でmongoDBを起動しないとお問い合わせ送れない＆DB情報みれないですー！（宮園）
-
+</div>
 </body>
 </html>
