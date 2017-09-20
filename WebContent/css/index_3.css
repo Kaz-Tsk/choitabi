@@ -1,24 +1,13 @@
 @CHARSET "UTF-8";
-
+/*--カルーセルスライドの位置や大きさ--*/
 .main_img{
 	height:280px;
 	width:1400px;
 	margin-top:30px;
 	margin-left:90px;
 }
-.arrows{
-	height:300px;
-	width:1300px;
-}
 
-.glide{
-	height:350px;
-	width:1530px;
-	margin-top:20px;
-	text-align: center;
-	border-bottom: solid 5px orange;
-}
-
+/*--キャッチフレーズの設定-------------*/
 .phrase{
 	margin-top:80px;
 }
@@ -28,6 +17,7 @@ h1{
 	border-bottom: solid 3px orange;
 }
 
+/*--検索アイコンの設定-------------------*/
 h2{
 	border-bottom: solid 2px orange;
 	width:170px;
@@ -72,8 +62,11 @@ figcaption{
 	 font-size:20px;
 }
 
-b{
-
+/*---リンク先の設定-*/
+a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 body a:link{

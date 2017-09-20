@@ -13,22 +13,31 @@
 	var="lang" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type= "text/css" href = "css/index_3.css">
+
+<!--マウスオーバー時のcssホバー  -------------------------------------------->
 <link rel = "stylesheet" type= "text/css" href = "css/imagehover.css">
+
+<!-- カルーセルスライドのcss -------------------------------------------------->
 <link rel = "stylesheet" type= "text/css" href = "css/slick-theme.css">
 <link rel = "stylesheet" type= "text/css" href = "css/slick.css">
+
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!--jqueryとslick(カルーセルスライド)のスクリプト  -------------------------------------------->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/jquery.js"></script>
 <script src="js/slick.min.js"></script>
 
 <title>ちょいたび</title>
 </head>
 
+<!-- ヘッダー ------------------------------>
 <header>
         <jsp:include page="header.jsp"/>
 </header>
 
 <body>
 
+<!-- カルーセルスライドしている画像 --------------------------------------------------------------------------->
 <div class="main_img">
      <div class= "img"><img src="img/aquamarine_hukusima.jpg"  height= "280" width="378"></div>
      <div class= "img"><img src="img/hananukikeikoku.jpg" height= "280" width="378"></div>
@@ -40,6 +49,7 @@
      <div class= "img"><img src="img/zundamochi.jpg" height= "280" width="378"></div>
 </div>
 
+<!-- カルーセルスライドのオプション ----->
 <script>
 $(function(){
 $('.main_img').slick({
@@ -55,6 +65,7 @@ $('.main_img').slick({
 
 <div class= "phrase"><h1>ちょいたびで、ちょいといい旅。</h1></div>
 
+<!-- 検索アイコン↓ ------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <div class= "theme_box">
     <h2><s:text name="lang.index.searchT"/></h2>
     <div class="theme_sub">
