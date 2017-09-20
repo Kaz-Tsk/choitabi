@@ -30,12 +30,11 @@
 <title>ちょいたび</title>
 </head>
 
+<body>
 <!-- ヘッダー ------------------------------>
 <header>
         <jsp:include page="header.jsp"/>
 </header>
-
-<body>
 
 <!-- カルーセルスライドしている画像 --------------------------------------------------------------------------->
 <div class="main_img">
@@ -135,9 +134,10 @@ $('.main_img').slick({
 </div>
     </div>
     <script type="text/javascript" src="js/slick.min.js"></script>
-</body>
 
-<footer>
+    <!-- フッター -->
+    <footer>
           <jsp:include page="footer.jsp"/>
 </footer>
+</body>
 </html>
