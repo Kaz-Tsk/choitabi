@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.util.db.mysql.MySqlConnector;
+import com.internousdev.util.DBConnector;
 
 public class InsertTourDAO {
 
@@ -27,8 +27,8 @@ public class InsertTourDAO {
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			MySqlConnector msc = new MySqlConnector("choitabi");
-			Connection con = msc.getConnection();
+			DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost", "choitabi", "root", "mysql");
+			Connection con = dbc.getConnection();
 
 
 			String sql = "INSERT INTO tour VALUES(0," //←※これでオートインクリメントになります
