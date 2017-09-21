@@ -61,11 +61,11 @@ public class SelectCartTestDTO extends TestCase {
 
 	public void testGetTour_id5() throws Exception {
 		SelectCartDTO test= new SelectCartDTO();
-	    try{
+	    try {
 	    	int postalMin = Integer.parseInt("-2147483649");
 	    	test.setTour_id(postalMin);
 
-	    }catch (RuntimeException e) {
+	    } catch (RuntimeException e) {
 	    	assertThat(e.getMessage(), "For input string: \"-2147483649\"");
 	    }
 	}
