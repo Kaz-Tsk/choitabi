@@ -30,12 +30,10 @@ public class TourListPagination {
 
 		/*呼び出し元に返すツアーのリスト*/
 		ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
-		/*後消し*/System.out.println("TourListPagination.java - 表示中ページ数 : " + currentPage);
 
 		firstIndex = firstIndex + ( (currentPage - 1)  * tourNumber );
 		lastIndex = lastIndex + (currentPage * tourNumber);
 
-		/*後消し*/System.out.println("paginateTourList - allTourList " + allTourList.size() );
 
 		if(allTourList.size() == 0){
 			return null;
@@ -46,9 +44,6 @@ public class TourListPagination {
 				break;
 			}
 			currentTourList.add(allTourList.get(i));
-//			System.out.println("firstIndex : " + firstIndex);
-//			System.out.println("lastIndex : " + lastIndex);
-//			System.out.println("paginate : " + currentTourList.size());
 		}
 
 		return currentTourList;
