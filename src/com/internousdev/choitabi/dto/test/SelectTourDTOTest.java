@@ -13,20 +13,26 @@ public class SelectTourDTOTest {
 	 * 変数は「expected」「actual」の2つを用意。答えの予想値として設定した値と、実際の戻り値を表す。
 	 * 「expected」をsetterでセットし、「actual」をgetterで取得する。
 	 * 両者が同じであれば試験は成功と判断される。
-	 * 判断するためのメソッドが「assertEquals（expected, actual）」引数として渡した値が同値であればOKと判断するもの
-	 * private int tourId;
-	 * private String tourName;
-	 * private int price;
-	 * private int persons;
-	 * private String departure;
-	 * private String region;
-	 * private String prefectures;
-	 * private String theme;
-	 * private String comment;
-	 * private String img;
+	 * 判断するためのメソッドが「assertEquals（expected, actual）」引数として渡した値が同値であればOKと判断するもの。
+	 *
+	 * intで範囲外の数値を入れる場合…最大値は「2147483647」、最小値は「-2147483648」
+	 * これより大きい/小さい数値を入れて例外を起こさせ、例外処理の中でテストが成功したかどうかの判断を行う。
+	 * 旅癒さんのテストケースでは、範囲外の数値は最初、文字列として入れ、「Integer.oarseInt()」で数値に変換させている。
+	 * （数値を直接入れようとすると「その数値は範囲外です」とコンパイルエラーになりました。おそらくこのため）
+	 *
+	 * private int tourId;     getter/ setter
+	 * private String tourName;     getter/ setter
+	 * private int price;     getter/ setter
+	 * private int persons;     getter/ setter
+	 * private String departure;     getter/ setter
+	 * private String region;     getter/ setter
+	 * private String prefectures;     getter/ setter
+	 * private String theme;     getter/ setter
+	 * private String comment;     getter/ setter
+	 * private String img;     getter/ setter
 	 */
 
-	@Test
+	@Test //0
 	public void testGetTourId1() {
 		SelectTourDTO dto = new SelectTourDTO();
 		int expected = 0;
@@ -37,18 +43,37 @@ public class SelectTourDTOTest {
 		assertEquals(expected, actual);
 	}
 
+	@Test //Integer.MAX_VALUE
 	public void testGetTourId2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto  = new SelectTourDTO();
+		int expected = Integer.MAX_VALUE;
+
+		dto.setTourId(expected);
+		int actual = dto.getTourId();
+
+		/*動作確認*/System.out.println("testGetTourId expected:" + expected + "/ actual:" + actual );
+		assertEquals(expected, actual);
 	}
+
+	@Test //Integer.MIN_VALUE
 	public void testGetTourId3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = Integer.MIN_VALUE;
+
+		dto.setTourId(expected);
+		int actual = dto.getTourId();
+
+		/*動作確認*/System.out.println("testGetTourId expected:" + expected + "/ actual:" + actual );
+		assertEquals(expected, actual);
 	}
+
+	@Test //レンジ範囲外（Exceptionを起こす）
 	public void testGetTourId4() {
-		fail("まだ実装されていません");
+
 	}
 
 
-	//------------------------------------------------
+	//↓TourIdセッターのテストメソッド------------------------------------------------
 
 
 	@Test
