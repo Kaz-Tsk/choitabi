@@ -3,7 +3,7 @@
     <%@ taglib prefix="s" uri="/struts-tags"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 <head>
 <!-- 国際化 ※ここでは国を判別しています。
