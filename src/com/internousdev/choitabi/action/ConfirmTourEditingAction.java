@@ -111,23 +111,14 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 		}catch(NumberFormatException e){
 			errorMsg = "価格・人数の欄には数値を入力してください";
-			/*後消し*/System.out.println(errorMsg);
 		}catch(NullPointerException e){
-			System.out.println("いずれかの情報の受け渡しに失敗しました");
 			e.printStackTrace();
 		}
 
-		/*後消し*/System.out.println("ConfirmEditingAction - currentTourId : " + currentTourId);
-		/*後消し*/System.out.println("ConfirmEditingAction : " + editTourName);
-		/*後消し*/System.out.println("ConfirmEditingAction : " + editPrice);
-		/*後消し*/System.out.println("ConfirmEditingAction : " + editPersons);
-		/*後消し*/System.out.println("ConfirmEditingAction : " + editDeparture);
-		/*後消し*/System.out.println("ConfirmEditingAction : " + deleteCheck);
-
+		/*エラーメッセージが空白だったら、OKとしてSUCCESSを返します*/
 		if(errorMsg.equals("")){
 			result = SUCCESS;
 		}
-		/*後消し*/System.out.println("ConfirmEditingAction - result : " + result);
 		return result;
 
 	}

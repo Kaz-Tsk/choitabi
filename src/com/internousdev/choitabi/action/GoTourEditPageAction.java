@@ -39,7 +39,7 @@ public class GoTourEditPageAction extends ActionSupport {
 	private String currentImg;
 
 
-	/*編集後の情報を保管するための変数（編集内容確認ページから戻ってきたときに、編集内容を一緒に来れるように作っています）---------------------------------------------------------------------*/
+	/*編集後の情報を保管するための変数（編集内容確認ページから戻ってきたときに、編集内容を一緒に持って来れるように作っています）-----------------------------*/
 
 	/*ツアー名*/
 	private String editTourName;
@@ -61,7 +61,7 @@ public class GoTourEditPageAction extends ActionSupport {
 	private String editImg;
 
 
-	/*↓入力画面で、フォームに最初から入っている情報。最初は「編集前」と同じものが、客員画面から戻ったときは編集した内容が入ってきます。--------------------------------------------*/
+	/*↓入力画面で、フォームに最初から入っている情報。最初は「編集前」と同じものが、確認画面から戻ったときは編集した内容が入ってきます。--------------------------------------------*/
 
 	private int defaultTourId;
 	/*ツアー名*/
@@ -103,7 +103,6 @@ public class GoTourEditPageAction extends ActionSupport {
 
 		SelectOneTourDAO sotdao = new SelectOneTourDAO();
 		SelectTourDTO stdto =sotdao.selectOneTour(currentTourId);
-		/*動作確認*/System.out.println("GoTourEditPageAction - 遷移元ページ：" + from);
 
 		if(stdto != null){
 			/*「編集前」の項目には、DBから持ってきたもともとの情報が入ります*/

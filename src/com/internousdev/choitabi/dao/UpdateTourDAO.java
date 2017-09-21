@@ -15,14 +15,12 @@ public class UpdateTourDAO {
 	 * 管理画面で、編集画面から入力したツアーの編集情報を、実際にSQLのDBに書き込むクラスです。（削除操作も含みます）
 	 * 呼び出しているクラス…UpdateTourAction.java
 	 * @return
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
 	 * */
 
 	public int updateTour(String editTourId, String editTourName,String editPrice,
 	                           String editPersons, String editDeparture, String editRegion, String editPrefectures,
 	                           String editTheme, String editComment, String editImg,
-	                           String deleteCheck)throws IllegalAccessException, InstantiationException{
+	                           String deleteCheck){
 		int count = 0;
 
 			/*削除チェックのボックスにチェックが入っていない＝ツアーデータ更新の場合*/

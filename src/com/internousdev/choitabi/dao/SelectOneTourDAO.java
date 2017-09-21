@@ -31,7 +31,6 @@ public class SelectOneTourDAO {
 			Connection con = dbc.getConnection();
 			String sql = "SELECT * FROM tour WHERE tour_id =  ?";
 			PreparedStatement ps = con.prepareStatement(sql);
-			/*後消し*/System.out.println("DAO : " + sql);
 			ps.setInt(1, tourId);
 			ResultSet rs = ps.executeQuery();
 

@@ -78,20 +78,13 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
-				int newPrice_int = Integer.parseInt(newPrice);
-				int newPersons_int = Integer.parseInt(newPersons);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction - newTourId(0ならOK) : " + newTourId);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newTourName);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newPrice_int);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newPersons_int);
-				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newDeparture);
+				Integer.parseInt(newPrice);
+				Integer.parseInt(newPersons);
 			}
 
 		}catch(NumberFormatException e){
 			errorMsg = "価格・人数の欄には数値を入力してください";
-			/*後消し*/System.out.println(errorMsg);
 		}catch(NullPointerException e){
-			System.out.println("いずれかの情報の受け渡しに失敗しました");
 			e.printStackTrace();
 		}
 

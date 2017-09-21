@@ -30,10 +30,8 @@ public class SelectTourListDAO {
 			/*SQLに接続し、コマンドを実行してもらいます*/
 			MySqlConnector msc = new MySqlConnector("choitabi");
 			Connection con = msc.getConnection();
-			/*動作確認*/System.out.println("SelectTourListDAO-selectTheme:" + selectTheme);
 			String sql = "SELECT * FROM tour WHERE tour_name LIKE ? AND theme LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);
-			/*後消し*/System.out.println("SelectTourListDAO : " + sql);
 			ps.setString(1, "%" + selectWord + "%");
 			ps.setString(2, "%" + selectTheme + "%");
 			ResultSet rs = ps.executeQuery();
@@ -63,7 +61,6 @@ public class SelectTourListDAO {
 			rs.close();
 
 			/*作ったリストを、呼び出し元に返します*/
-			/*後消し*/System.out.println("SelectTourDAO - 該当データ数 : " + allTourList.size());
 			return allTourList;
 
 
@@ -71,12 +68,11 @@ public class SelectTourListDAO {
 			 * エラーが出たら、返すリストをnull=「リスト作れなかったよ」と合図させ、SUCCESSとERRORを見分けます。
 			 * */
 			}catch(SQLException e){
-				System.out.println("SQL上でエラーが発生しました");
 				e.printStackTrace();
 				return null;
 
 			}catch(Exception e){
-				System.out.println("その他のエラーです");
+				e.printStackTrace();
 				return null;
 			}
 
