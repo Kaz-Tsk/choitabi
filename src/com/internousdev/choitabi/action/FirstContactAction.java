@@ -47,25 +47,21 @@ public class FirstContactAction extends ActionSupport implements SessionAware {
 	 /**
      * 送信者名を取得するためのメソッド
      */
-    public String getContact_name
-() {
-        return contact_name
-;
+    public String getContact_name() {
+        return contact_name;
     }
 
     /**
      * 送信者名を格納するためのメソッド
      */
-    public void setContact_name(String contact_name
-) {
+    public void setContact_name(String contact_name) {
         this.contact_name =contact_name;
     }
 
     /**
      * 送信者メールアドレスを取得するためのメソッド
      */
-    public String getContact_mailAddress
-() {
+    public String getContact_mailAddress() {
         return contact_mailAddress;
     }
 
@@ -106,8 +102,6 @@ public class FirstContactAction extends ActionSupport implements SessionAware {
 	 */
 	public String execute() {
 		String rtn = SUCCESS;
-		;
-
 		return rtn;
 	}
 
