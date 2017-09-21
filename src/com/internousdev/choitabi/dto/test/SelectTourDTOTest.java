@@ -25,15 +25,15 @@ public class SelectTourDTOTest {
 	 * int 5、  String 8種類でテスト
 	 *
 	 * private int tourId;     getter-OK/ setter-OK
-	 * private String tourName;     getter/ setter
+	 * private String tourName;     getter-OK/ setter
 	 * private int price;     getter/ setter
 	 * private int persons;     getter/ setter
-	 * private String departure;     getter/ setter
-	 * private String region;     getter/ setter
-	 * private String prefectures;     getter/ setter
-	 * private String theme;     getter/ setter
-	 * private String comment;     getter/ setter
-	 * private String img;     getter/ setter
+	 * private String departure;     getter-OK/ setter
+	 * private String region;     gette-OK/ setter
+	 * private String prefectures;     getter-OK/ setter
+	 * private String theme;     getter-OK/ setter
+	 * private String comment;     getter-OK/ setter
+	 * private String img;     getter-OK/ setter
 	 */
 
 	//TourIDゲッターのテストメソッド-----------------------------------------------------------------------------
@@ -156,42 +156,90 @@ public class SelectTourDTOTest {
 	//↓ツアー名ゲッターのテストメソッド----------------------------------
 	@Test //null
 	public void testGetTourName1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=null;//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testGetTourName2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testGetTourName3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=" ";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testGetTourName4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="　";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testGetTourName5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testGetTourName6() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testGetTourName7() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testGetTourName8() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３漢字";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 
@@ -238,53 +286,53 @@ public class SelectTourDTOTest {
 	}
 
 	//価格ゲッターのテストメソッド------------------------------------------
-	@Test
+	@Test //0
 	public void testGetPrice1() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //MAX_VALUE
 	public void testGetPrice2() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //MIN_VALUE
 	public void testGetPrice3() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //範囲外-最大値＋1
 	public void testGetPrice4() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //範囲外-最小値-1
 	public void testGetPrice5() {
 		fail("まだ実装されていません");
 	}
 
 	//価格セッターのテストメソッド------------------------------------------
-	@Test
+	@Test //0
 	public void testSetPrice1() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //MAX_VALUE
 	public void testSetPrice2() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //MIN_VALUE
 	public void testSetPrice3() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //範囲外-最大値＋1
 	public void testSetPrice4() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //範囲外-最小値-1
 	public void testSetPrice5() {
 		fail("まだ実装されていません");
 	}
@@ -292,53 +340,53 @@ public class SelectTourDTOTest {
 
 
 	//人数ゲッターのテストメソッド--------------------------------------------
-	@Test
+	@Test //0
 	public void testGetPersons1() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //MAX_VALUE
 	public void testGetPersons2() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //MIN__VALUE
 	public void testGetPersons3() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //範囲外-最大値+1
 	public void testGetPersons4() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //範囲外-最小値-1
 	public void testGetPersons5() {
 		fail("まだ実装されていません");
 	}
 
 	//人数セッターのテストメソッド--------------------------------------------
-	@Test
+	@Test //0
 	public void testSetPersons1() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //MAX_VALUE
 	public void testSetPersons2() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //MIN_VALUE
 	public void testSetPersons3() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //範囲外-最大値＋1
 	public void testSetPersons4() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
+	@Test //範囲外-最小値-1
 	public void testSetPersons5() {
 		fail("まだ実装されていません");
 
@@ -348,42 +396,90 @@ public class SelectTourDTOTest {
 	//出発地ゲッターのテストメソッド-------------------------------------------
 	@Test //null
 	public void testGetDeparture1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected = null;//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testGetDeparture2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected = "";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testGetDeparture3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected = " ";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testGetDeparture4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected = "　";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testGetDeparture5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected = "abc123";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testGetDeparture6() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected = "あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testGetDeparture7() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected = "abc123あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testGetDeparture8() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected = "abc123あいう１２３漢字";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 
@@ -429,45 +525,95 @@ public class SelectTourDTOTest {
 		fail("まだ実装されていません");
 	}
 
+
+
 	//エリアゲッターのテストメソッド----------------------------------------------
 	@Test //null
 	public void testGetRegion1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=null;//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testGetRegion2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testGetRegion3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=" ";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testGetRegion4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="　";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testGetRegion5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testGetRegion6() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testGetRegion7() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testGetRegion8() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３漢字";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 
@@ -522,49 +668,92 @@ public class SelectTourDTOTest {
 
 
 	//都道府県ゲッターのテストメソッド----------------------------------------------
-	@Test
-	public void testGetPrefectures() {
-		fail("まだ実装されていません");
-	}
-
 	@Test //null
 	public void testGetPrefectures1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=null;//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testGetPrefectures2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testGetPrefectures3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=" ";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testGetPrefectures4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="　";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testGetPrefectures5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testGetPrefectures6() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testGetPrefectures7() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testGetPrefectures8() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３漢字";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 
@@ -618,42 +807,90 @@ public class SelectTourDTOTest {
 	//テーマゲッターのテストメソッド---------------------------------------------
 	@Test //null
 	public void testGetTheme1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=null;//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testGetTheme2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testGetTheme3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=" ";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testGetTheme4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="　";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testGetTheme5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testGetTheme6() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testGetTheme7() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testGetTheme8() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３漢字";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	//テーマセッターのテストメソッド------------------------------------------------
@@ -701,42 +938,90 @@ public class SelectTourDTOTest {
 	//コメントゲッターのテストメソッド-----------------------------------------------------
 	@Test //null
 	public void testGetComment1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=null;//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testGetComment2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testGetComment3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=" ";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testGetComment4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="　";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testGetComment5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testGetComment6() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testGetComment7() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testGetComment8() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３漢字";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 
@@ -788,42 +1073,90 @@ public class SelectTourDTOTest {
 	//画像URLゲッターのテストメソッド---------------------------------------------
 	@Test //null
 	public void testGetImg1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=null;//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testGetImg2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testGetImg3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected=" ";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);;
 	}
 
 	@Test //"　"全角スペース
 	public void testGetImg4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="　";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testGetImg5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testGetImg6() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testGetImg7() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testGetImg8() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		String expected="abc123あいう１２３漢字";//代入
+
+		dto.setTourName(expected);
+		String actual=dto.getTourName();
+
+		assertEquals(expected,actual);
 	}
 
 
