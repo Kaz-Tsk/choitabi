@@ -132,7 +132,8 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 		}
 
 		return result;
-		}
+
+	}
 
 
 

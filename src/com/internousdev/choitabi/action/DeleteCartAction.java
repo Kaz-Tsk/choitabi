@@ -32,7 +32,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 	/**
      * 合計金額
      */
-    private BigDecimal total_price = BigDecimal.ZERO;
+    private BigDecimal total_price = BigDecimal.ZERO;//定数を使用して初期化
 
     /**
      * 予約人数
@@ -73,26 +73,26 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * @version 1.0
      */
 
-    public String execute() throws SQLException{
+    public String execute() throws SQLException {
         String result =ERROR;
 
         /*動作確認*/System.out.println("DeleteCartAction - session：" + session);
 
-        if(session.get("userId") != null){
-            int user_id = (int) session.get("userId");
+        if(session.get("userId") != null) {
+            int user_id = (int) session.get("userId");//session内ではuserId
 
-            DeleteCartDAO dao = new DeleteCartDAO();
-            SelectCartDAO dao2 =new SelectCartDAO();
+            DeleteCartDAO dcDao = new DeleteCartDAO();
+            SelectCartDAO scDao =new SelectCartDAO();
 
-            delCount= dao.delete(user_id, cart_id);
+            delCount= dcDao.delete(user_id, cart_id);
 
-            if(delCount>0){
-                cartList =dao2.selectCart(user_id);
+            if(delCount > 0) {
+                cartList =scDao.selectCart(user_id);
 
-                if(cartList.size() > 0){
-                    for(int i = 0; i < cartList.size(); i++ ){
+                if(cartList.size() > 0) {
+                    for(int i = 0; i < cartList.size(); i++ ) {
                     	total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
-                        }
+                    }
 
                     result =SUCCESS;
 
