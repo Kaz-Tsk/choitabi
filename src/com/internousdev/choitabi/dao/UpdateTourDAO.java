@@ -29,7 +29,7 @@ public class UpdateTourDAO {
 
 				try{
 					/*SQLに接続し、コマンドを実行してもらいます*/
-					DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost", "choitabi", "root", "mysql");
+					DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root", "mysql");
 					Connection con = dbc.getConnection();
 
 					String sql = "UPDATE tour SET"

@@ -28,7 +28,7 @@ public class SelectTourListDAO {
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost", "choitabi", "root", "mysql");
+			DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root", "mysql");
 			Connection con = dbc.getConnection();
 			String sql = "SELECT * FROM tour WHERE tour_name LIKE ? AND theme LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);

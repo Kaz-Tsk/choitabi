@@ -36,7 +36,7 @@ public class TourListDAO {
         try{
 
         	/*↓SQLへの接続を行っています*/
-        	DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost", "choitabi", "root", "mysql");
+        	DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root", "mysql");
             Connection con = dbc.getConnection();
 
             /*実行してもらうSQL分の、すでに決まっている部分を先に書いておきます*/
