@@ -49,8 +49,9 @@ public class SelectCartDAO {
 
 				while(rs2.next()) {
 					dto.setTour_name(rs2.getString("tour_name"));
-					dto.setPrice(rs.getBigDecimal("price"));
+					dto.setPrice(rs2.getBigDecimal("price"));
 					dto.setSub_total(dto.getPrice().multiply(BigDecimal.valueOf(dto.getOrder_count())));
+					dto.setImg(rs2.getString("img"));
 
 					/*subtotal.add((cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
 					cartList.get(i).setSubtotal(subtotal);*/

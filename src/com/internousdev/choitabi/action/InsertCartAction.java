@@ -88,6 +88,11 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	 */
 	private BigDecimal sub_total;
 
+	/**
+	 * 画像パス
+	 */
+	private String img;
+
 
 
 	/**
@@ -327,6 +332,22 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
      */
     public void setSub_total(BigDecimal sub_total) {
     	this.sub_total = sub_total;
+    }
+
+    /**
+     * 画像パスを取得するメソッド
+     * @return img 画像パス
+     */
+    public String getImg() {
+    	return img;
+    }
+
+    /**
+     * 画像パスを格納するメソッド
+     * @param img 画像パス
+     */
+    public void setImg(String img) {
+    	this.img = img;
     }
 
 }
