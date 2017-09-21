@@ -8,6 +8,94 @@ import com.internousdev.choitabi.dto.ContactConpleteDTO;
 
 public class ContactConpleteDTOTest {
 
+
+	@Test
+	public void testSetContact_name() {
+		ContactConpleteDTO test = new ContactConpleteDTO();
+		String expected = null;
+
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void testSetContact_name2() {
+		ContactConpleteDTO test = new ContactConpleteDTO();
+		String expected = "";
+
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void testSetContact_name3() {
+		ContactConpleteDTO test = new ContactConpleteDTO();
+		String expected = " ";
+
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void testSetContact_name4() {
+		ContactConpleteDTO test = new ContactConpleteDTO();
+		String expected = "　";
+
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void testSetContact_name5() {
+		ContactConpleteDTO test = new ContactConpleteDTO();
+		String expected = "abc123";
+
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void testSetContact_name6() {
+		ContactConpleteDTO test = new ContactConpleteDTO();
+		String expected = "あいう１２３";
+
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void testSetContact_name7() {
+		ContactConpleteDTO test = new ContactConpleteDTO();
+		String expected = "abc123あいう１２３";
+
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void testSetContact_name8() {
+		ContactConpleteDTO test = new ContactConpleteDTO();
+		String expected = "abc123あいう１２３漢字";
+
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
+
+		assertEquals(expected,actual);
+	}
 	@Test
 	public void testGetContact_name() {
 		ContactConpleteDTO test = new ContactConpleteDTO();
@@ -20,92 +108,83 @@ public class ContactConpleteDTOTest {
 	}
 
 	@Test
-	public void testSetForm_name_a1() {
+	public void testGetContact_name2() {
 		ContactConpleteDTO test = new ContactConpleteDTO();
-		String expected = null;
+		String expected = "";
 
-		test.setForm_name_a(expected);
-		String actual = test.getForm_name_a();
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
 
 		assertEquals(expected,actual);
 	}
 
 	@Test
-	public void testSetForm_name_a2() {
+	public void testGetContact_name3() {
 		ContactConpleteDTO test = new ContactConpleteDTO();
-		String expected = null;
+		String expected = " ";
 
-		test.setForm_name_a(expected);
-		String actual = test.getForm_name_a();
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
 
 		assertEquals(expected,actual);
 	}
 
 	@Test
-	public void testSetForm_name_a3() {
+	public void testGetContact_name4() {
 		ContactConpleteDTO test = new ContactConpleteDTO();
-		String expected = null;
+		String expected = "　";
 
-		test.setForm_name_a(expected);
-		String actual = test.getForm_name_a();
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
 
 		assertEquals(expected,actual);
 	}
 
 	@Test
-	public void testSetForm_name_a4() {
+	public void testGetContact_name5() {
 		ContactConpleteDTO test = new ContactConpleteDTO();
-		String expected = null;
+		String expected = "abc123";
 
-		test.setForm_name_a(expected);
-		String actual = test.getForm_name_a();
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
 
 		assertEquals(expected,actual);
 	}
 
 	@Test
-	public void testSetForm_name_a5() {
+	public void testGetContact_name6() {
 		ContactConpleteDTO test = new ContactConpleteDTO();
-		String expected = null;
+		String expected = "あいう１２３";
 
-		test.setForm_name_a(expected);
-		String actual = test.getForm_name_a();
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
 
 		assertEquals(expected,actual);
 	}
 
 	@Test
-	public void testSetForm_name_a6() {
+	public void testGetContact_name7() {
 		ContactConpleteDTO test = new ContactConpleteDTO();
-		String expected = null;
+		String expected = "abc123あいう１２３";
 
-		test.setForm_name_a(expected);
-		String actual = test.getForm_name_a();
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
 
 		assertEquals(expected,actual);
 	}
 
 	@Test
-	public void testSetForm_name_a7() {
+	public void testGetContact_name8() {
 		ContactConpleteDTO test = new ContactConpleteDTO();
-		String expected = null;
+		String expected = "abc123あいう１２３漢字";
 
-		test.setForm_name_a(expected);
-		String actual = test.getForm_name_a();
+		test.setContact_name(expected);
+		String actual = test.getContact_name();
 
 		assertEquals(expected,actual);
 	}
 
-	@Test
-	public void testSetForm_name_a8() {
-		ContactConpleteDTO test = new ContactConpleteDTO();
-		String expected = null;
 
-		test.setForm_name_a(expected);
-		String actual = test.getForm_name_a();
-
-		assertEquals(expected,actual);
-	}
 
 	@Test
 	public void testGetContact_mailAddress1() {
@@ -123,8 +202,8 @@ public class ContactConpleteDTOTest {
 		ContactConpleteDTO test = new ContactConpleteDTO();
 		String expected = "";
 
-		test.setContact_contents(expected);
-		String actual = test.getContact_contents();
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
 
 		assertEquals(expected,actual);
 	}
@@ -134,8 +213,8 @@ public class ContactConpleteDTOTest {
 		ContactConpleteDTO test = new ContactConpleteDTO();
 		String expected = " ";
 
-		test.setContact_contents(expected);
-		String actual = test.getContact_contents();
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
 
 		assertEquals(expected,actual);
 	}
@@ -145,8 +224,8 @@ public class ContactConpleteDTOTest {
 		ContactConpleteDTO test = new ContactConpleteDTO();
 		String expected = "　";
 
-		test.setContact_contents(expected);
-		String actual = test.getContact_contents();
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
 
 		assertEquals(expected,actual);
 	}
@@ -156,8 +235,8 @@ public class ContactConpleteDTOTest {
 		ContactConpleteDTO test = new ContactConpleteDTO();
 		String expected = "abc123";
 
-		test.setContact_contents(expected);
-		String actual = test.getContact_contents();
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
 
 		assertEquals(expected,actual);
 	}
@@ -167,8 +246,8 @@ public class ContactConpleteDTOTest {
 		ContactConpleteDTO test = new ContactConpleteDTO();
 		String expected = "あいう１２３";
 
-		test.setContact_contents(expected);
-		String actual = test.getContact_contents();
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
 
 		assertEquals(expected,actual);
 	}
@@ -178,8 +257,8 @@ public class ContactConpleteDTOTest {
 		ContactConpleteDTO test = new ContactConpleteDTO();
 		String expected = "abc123あいう１２３";
 
-		test.setContact_contents(expected);
-		String actual = test.getContact_contents();
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
 
 		assertEquals(expected,actual);
 	}
@@ -189,8 +268,8 @@ public class ContactConpleteDTOTest {
 		ContactConpleteDTO test = new ContactConpleteDTO();
 		String expected = "abc123あいう１２３漢字";
 
-		test.setContact_contents(expected);
-		String actual = test.getContact_contents();
+		test.setContact_mailAddress(expected);
+		String actual = test.getContact_mailAddress();
 
 		assertEquals(expected,actual);
 	}

@@ -47,7 +47,7 @@ public class ContactConpleteDTO {
 	 * 名前を格納するメソッド
 	 * @param formName 名前
 	 */
-	public void setForm_name_a(String contact_name) {
+	public void setContact_name(String contact_name) {
 		this.contact_name = contact_name;
 	}
 
