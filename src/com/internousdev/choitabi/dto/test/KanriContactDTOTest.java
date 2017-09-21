@@ -20,7 +20,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_name1() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "";
@@ -32,7 +32,7 @@ public class KanriContactDTOTest {
  	}
 
 
-
+	@Test
 	public void testGetContact_name2() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = " ";
@@ -44,7 +44,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_name3() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "　";
@@ -56,7 +56,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_name4() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "abc123";
@@ -67,7 +67,7 @@ public class KanriContactDTOTest {
 	     assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetContact_name5() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "あいう１２３";
@@ -80,7 +80,7 @@ public class KanriContactDTOTest {
 
 
 
-
+	@Test
 	public void testGetContact_name6() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "abc123あいう１２３";
@@ -93,7 +93,7 @@ public class KanriContactDTOTest {
 
 
 
-
+	@Test
 	public void testGetContact_name7() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "abc123あいう１２３漢字";
@@ -118,7 +118,7 @@ public class KanriContactDTOTest {
 	 	}
 
 
-
+	@Test
 	public void testSetContact_name1() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "";
@@ -131,7 +131,7 @@ public class KanriContactDTOTest {
 
 
 
-
+	@Test
 	public void testSetContact_name2() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = " ";
@@ -145,7 +145,7 @@ public class KanriContactDTOTest {
 
 
 
-
+	@Test
 	public void testSetContact_name3() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "　";
@@ -157,7 +157,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testSetContact_name4() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "abc123";
@@ -169,7 +169,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testSetContact_name5() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "あいう１２３";
@@ -182,7 +182,7 @@ public class KanriContactDTOTest {
 
 
 
-
+	@Test
 	public void testSetContact_name6() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "abc123あいう１２３";
@@ -195,7 +195,7 @@ public class KanriContactDTOTest {
 
 
 
-
+	@Test
 	public void testSetContact_name7() {
 	     KanriContactDTO test = new KanriContactDTO();
 	     String expected = "abc123あいう１２３漢字";
@@ -220,7 +220,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_mailAddress1() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected ="" ;
@@ -231,7 +231,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetContact_mailAddress3() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected =" " ;
@@ -242,7 +242,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetContact_mailAddress4() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected ="　" ;
@@ -253,7 +253,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetContact_mailAddress5() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "abc123";
@@ -265,7 +265,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_mailAddress6() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "あいう１２３";
@@ -276,7 +276,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetContact_mailAddress7() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "abc123あいう１２3";
@@ -288,7 +288,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_mailAddress8() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "abc123あいう１２３漢字";
@@ -310,7 +310,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testSetContact_mailAddress1() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "";
@@ -321,7 +321,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testSetContact_mailAddress2() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = " ";
@@ -332,7 +332,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testSetContact_mailAddress3() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "　";
@@ -343,7 +343,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testSetContact_mailAddress4() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "abc123";
@@ -354,7 +354,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testSetContact_mailAddress5() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "あいう１２３";
@@ -365,7 +365,7 @@ public class KanriContactDTOTest {
 		assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testSetContact_mailAddress6() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "abc123あいう１２３";
@@ -375,7 +375,7 @@ public class KanriContactDTOTest {
 
 		assertEquals(expected,actual);
 	}
-
+	@Test
 	public void testSetContact_mailAddress7() {
 		KanriContactDTO test = new KanriContactDTO();
 		String expected = "abc123あいう１２３漢字";
@@ -397,7 +397,7 @@ public class KanriContactDTOTest {
         assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetContact_contents1() {
         KanriContactDTO test =new KanriContactDTO();
         String expected = "";
@@ -409,8 +409,8 @@ public class KanriContactDTOTest {
 	}
 
 
-
-	public void testGetContact_content2s() {
+	@Test
+	public void testGetContact_contents2() {
         KanriContactDTO test =new KanriContactDTO();
         String expected = " ";
 
@@ -421,7 +421,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_contents3() {
         KanriContactDTO test =new KanriContactDTO();
         String expected = "　";
@@ -433,7 +433,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_contents4() {
         KanriContactDTO test =new KanriContactDTO();
         String expected = "abc123";
@@ -445,7 +445,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_contents5() {
         KanriContactDTO test =new KanriContactDTO();
         String expected = "あいう１２３";
@@ -456,7 +456,7 @@ public class KanriContactDTOTest {
         assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetContact_contents6() {
         KanriContactDTO test =new KanriContactDTO();
         String expected = "abc123あいう１２３";
@@ -468,7 +468,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetContact_contents7() {
         KanriContactDTO test =new KanriContactDTO();
         String expected = "abc123あいう１２３漢字";
@@ -493,7 +493,7 @@ public class KanriContactDTOTest {
 
 	}
 
-
+	@Test
 	public void testSetContact_contents1() {
 		 KanriContactDTO test =new KanriContactDTO();
 	        String expected ="";
@@ -505,7 +505,7 @@ public class KanriContactDTOTest {
 
 	}
 
-
+	@Test
 	public void testSetContact_contents2() {
 		 KanriContactDTO test =new KanriContactDTO();
 	        String expected =" ";
@@ -517,7 +517,7 @@ public class KanriContactDTOTest {
 
 	}
 
-
+	@Test
 	public void testSetContact_contents3() {
 		 KanriContactDTO test =new KanriContactDTO();
 	        String expected ="　";
@@ -530,7 +530,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testSetContact_contents4() {
 		 KanriContactDTO test =new KanriContactDTO();
 	        String expected ="abc123";
@@ -542,7 +542,7 @@ public class KanriContactDTOTest {
 
 	}
 
-
+	@Test
 	public void testSetContact_contents5() {
 		 KanriContactDTO test =new KanriContactDTO();
 	        String expected ="あいう１２３";
@@ -554,7 +554,7 @@ public class KanriContactDTOTest {
 
 	}
 
-
+	@Test
 	public void testSetContact_contents6() {
 		 KanriContactDTO test =new KanriContactDTO();
 	        String expected ="abc123あいう１２３";
@@ -566,7 +566,7 @@ public class KanriContactDTOTest {
 
 	}
 
-
+	@Test
 	public void testSetContact_contents7() {
 		 KanriContactDTO test =new KanriContactDTO();
 	        String expected ="abc123あいう１２３漢字";
@@ -588,7 +588,7 @@ public class KanriContactDTOTest {
         assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetRegistrationDate1() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="";
@@ -599,7 +599,7 @@ public class KanriContactDTOTest {
         assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetRegistrationDate2() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected =" ";
@@ -611,7 +611,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetRegistrationDate3() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="　";
@@ -623,7 +623,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetRegistrationDate4() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="abc123";
@@ -635,7 +635,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testGetRegistrationDate5() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="あいう１２３";
@@ -646,7 +646,7 @@ public class KanriContactDTOTest {
         assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetRegistrationDate6() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="abc123あいう１２３";
@@ -657,7 +657,7 @@ public class KanriContactDTOTest {
         assertEquals(expected,actual);
 	}
 
-
+	@Test
 	public void testGetRegistrationDate7() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="abc123あいう１２３漢字";
@@ -682,7 +682,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testSetRegistrationDate2() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected =" ";
@@ -694,7 +694,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testSetRegistrationDate3() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="　";
@@ -706,7 +706,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testSetRegistrationDate4() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="abc123";
@@ -718,7 +718,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testSetRegistrationDate5() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="あいう１２３";
@@ -730,7 +730,7 @@ public class KanriContactDTOTest {
 	}
 
 
-
+	@Test
 	public void testSetRegistrationDate6() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="abc123 あいう１２３";
@@ -743,7 +743,7 @@ public class KanriContactDTOTest {
 
 
 
-
+	@Test
 	public void testSetRegistrationDate7() {
 		KanriContactDTO test =new KanriContactDTO();
         String expected ="abc123 あいう１２３漢字";
