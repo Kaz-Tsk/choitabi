@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.internousdev.choitabi.dto.SelectTourDTO;
-import com.internousdev.choitabi.util.ChoitabiDBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 public class SelectOneTourDAO {
 
 
@@ -26,8 +26,9 @@ public class SelectOneTourDAO {
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			ChoitabiDBConnector tdc = new ChoitabiDBConnector();
-			Connection con = tdc.createConnection();
+			//ChoitabiDBConnector tdc = new ChoitabiDBConnector();
+			MySqlConnector dbc = new MySqlConnector("choitabi");
+			Connection con = dbc.getConnection();
 			String sql = "SELECT * FROM tour WHERE tour_id =  ?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			/*後消し*/System.out.println("DAO : " + sql);
@@ -47,15 +48,7 @@ public class SelectOneTourDAO {
 				stdto.setTheme(rs.getString("theme"));
 				stdto.setComment(rs.getString("comment"));
 				stdto.setImg(rs.getString("img"));
-				/*動作確認*/System.out.println(stdto.getTourId());
-				/*動作確認*/System.out.println(stdto.getTourName());
-				/*動作確認*/System.out.println(stdto.getPrice());
-				/*動作確認*/System.out.println(stdto.getDeparture());
-				/*動作確認*/System.out.println(stdto.getRegion());
-				/*動作確認*/System.out.println(stdto.getPrefectures());
-				/*動作確認*/System.out.println(stdto.getTheme());
-				/*動作確認*/System.out.println(stdto.getComment());
-				/*動作確認*/System.out.println(stdto.getImg());
+
 			}
 
 			/*SQL接続の後片付けです*/
@@ -71,16 +64,6 @@ public class SelectOneTourDAO {
 			 * */
 			}catch(SQLException e){
 				System.out.println("SQL上でエラーが発生しました");
-				e.printStackTrace();
-				return null;
-
-			} catch (IllegalAccessException e) {
-				System.out.println("アクセスエラーです");
-				e.printStackTrace();
-				return null;
-
-			} catch (InstantiationException e) {
-				System.out.println("ドライバのロードに失敗しました");
 				e.printStackTrace();
 				return null;
 

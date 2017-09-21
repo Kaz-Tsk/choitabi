@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.choitabi.util.ChoitabiDBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 public class UpdateTourDAO {
 
@@ -25,31 +25,13 @@ public class UpdateTourDAO {
 	                           String deleteCheck)throws IllegalAccessException, InstantiationException{
 		int count = 0;
 
-		/*Date today = new Date();
-		*SimpleDateFormat sdf  = new SimpleDateFormat("yyyyMMdd");
-		*String formatedToday = sdf.format(today);
-		*
-		*※↑ 商品編集の「最終編集日」なんかでその日の日付をSQL文に入れるための文でした。
-		*取得した日付はものすごく長い（または別の形の）データになっているようで、そのままだとSQLが受け付けてくれません。
-		*フォーマットのAPIと文字列の関数を使って「20170101」のような形の文字列にすると、うまく実行してもらえるようです。
-		*
-		*/
-
-		/*動作確認*/System.out.println("UpdateTourDAO - 現在の削除チェック：" + deleteCheck);
-
 			/*削除チェックのボックスにチェックが入っていない＝ツアーデータ更新の場合*/
 			if(deleteCheck.equals("false")){
 
 				try{
 					/*SQLに接続し、コマンドを実行してもらいます*/
-					ChoitabiDBConnector dbc = new ChoitabiDBConnector();
-					Connection con = dbc.createConnection();
-
-
-					/*動作確認*/
-					System.out.println("UpdateTourDAO : " + editTourId);
-					System.out.println("UpdateTourDAO : " + editPrice);
-					System.out.println("UpdateTourDAO : " + editPersons);
+					MySqlConnector msc = new MySqlConnector("choitabi");
+					Connection con = msc.getConnection();
 
 					String sql = "UPDATE tour SET"
 							+ " tour_name = ?," //1
@@ -64,7 +46,7 @@ public class UpdateTourDAO {
 							+ " WHERE tour_id = ?;";//10
 
 					PreparedStatement ps = con.prepareStatement(sql);
-					/*後消し*/System.out.println("UpdateTourDAO - 作成SQL文 : " + sql);
+
 					ps.setString(1, editTourName);
 					ps.setInt(2, Integer.parseInt(editPrice));
 					ps.setInt(3, Integer.parseInt(editPersons));
@@ -75,40 +57,24 @@ public class UpdateTourDAO {
 					ps.setString(8, editComment);
 					ps.setString(9, editImg);
 					ps.setInt(10, Integer.parseInt(editTourId));
-					/*後消し*/System.out.println("UpdateTourDAO - 作成SQL文 : " + sql);
 
 					count = ps.executeUpdate();
-					/*後消し*/System.out.println("UpdateTourDAO - 取得データ数：" + count);
+
 					/*SQL接続の後片付けです*/
 					con.close();
 					ps.close();
 
 
-					/*以下はエラー時の処理です。
-					 * エラーが出たら、返すリストをnull=「リスト作れなかったよ」と合図させ、SUCCESSとERRORを見分けます。
-					 * */
+					/*エラー時の処理です。*/
 					}catch(SQLException e){
-						System.out.println("SQL上でエラーが発生しました");
-						e.printStackTrace();
-						return 0;
-
-					} catch (IllegalAccessException e) {
-						System.out.println("アクセスエラーです");
-						e.printStackTrace();
-						return 0;
-
-					} catch (InstantiationException e) {
-						System.out.println("ドライバのロードに失敗しました");
 						e.printStackTrace();
 						return 0;
 
 					}catch(ClassCastException e){
-						System.out.println("変換できないデータがありました");
 						e.printStackTrace();
 						return 0;
 
 					}catch(Exception e){
-						System.out.println("その他のエラーです");
 						e.printStackTrace();
 						return 0;
 					}
@@ -119,48 +85,34 @@ public class UpdateTourDAO {
 				try{
 
 				/*SQLに接続し、コマンドを実行してもらいます*/
-				ChoitabiDBConnector dbc = new ChoitabiDBConnector();
-				Connection con = dbc.createConnection();
+				MySqlConnector msc = new MySqlConnector("choitabi");
+				Connection con = msc.getConnection();
 
-				String sql = "DELETE FROM tour WHERE tour_id =  ?";/*Update/DELETE文、文法確認中*/
+				String sql = "DELETE FROM tour WHERE tour_id =  ?";
 				PreparedStatement ps = con.prepareStatement(sql);
-				/*後消し*/System.out.println("UpdateTourDAO - 作成SQL文 : " + sql);
 				ps.setInt(1, Integer.parseInt(editTourId));
 				count = ps.executeUpdate();
-				/*後消し*/System.out.println("UpdateTourDAO - 取得データ数：" + count);
+
 				/*SQL接続の後片付けです*/
 				con.close();
 				ps.close();
 
+				/*エラー時の処理です*/
 				}catch(SQLException e){
-					System.out.println("SQL上でエラーが発生しました");
-					e.printStackTrace();
-					return 0;
-
-				} catch (IllegalAccessException e) {
-					System.out.println("アクセスエラーです");
-					e.printStackTrace();
-					return 0;
-
-				} catch (InstantiationException e) {
-					System.out.println("ドライバのロードに失敗しました");
 					e.printStackTrace();
 					return 0;
 
 				}catch(ClassCastException e){
-					System.out.println("変換できないデータがありました");
 					e.printStackTrace();
 					return 0;
 
 				}catch(Exception e){
-					System.out.println("その他のエラーです");
 					e.printStackTrace();
 					return 0;
 				}
 
 			/*万一、何らかのエラーによってチェックボックスの値がうまく渡ってこなかった場合*/
 			}else{
-				/*後消し*/System.out.println("UpdateTourDAO - エラー：チェックボックスの値が反映されていません");
 				return 0;
 			}
 

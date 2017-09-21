@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.internousdev.choitabi.util.ChoitabiDBConnector;
+import com.internousdev.util.db.mysql.MySqlConnector;
 
 public class InsertTourDAO {
 
@@ -27,17 +27,9 @@ public class InsertTourDAO {
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			ChoitabiDBConnector dbc = new ChoitabiDBConnector();
-			Connection con = dbc.createConnection();
-			/*動作確認*/System.out.println("InsertTourDAO - 1 :" + newTourName);
-			/*動作確認*/System.out.println("InsertTourDAO - 2 :" + newPrice);
-			/*動作確認*/System.out.println("InsertTourDAO - 3 :" + newPersons);
-			/*動作確認*/System.out.println("InsertTourDAO - 4 :" + newDeparture);
-			/*動作確認*/System.out.println("InsertTourDAO - 5 :" + newRegion);
-			/*動作確認*/System.out.println("InsertTourDAO - 6 :" + newPrefectures);
-			/*動作確認*/System.out.println("InsertTourDAO - 7 :" + newTheme);
-			/*動作確認*/System.out.println("InsertTourDAO - 8 :" + newComment);
-			/*動作確認*/System.out.println("InsertTourDAO - 9 :" + newImg);
+			MySqlConnector msc = new MySqlConnector("choitabi");
+			Connection con = msc.getConnection();
+
 
 			String sql = "INSERT INTO tour VALUES(0," //←※これでオートインクリメントになります
 					+ " ?," //1
@@ -61,7 +53,6 @@ public class InsertTourDAO {
 			ps.setString(7, newTheme);
 			ps.setString(8, newComment);
 			ps.setString(9, newImg);
-			/*後消し*/System.out.println("InsertTourDAO - 作成SQL文 : " + sql);
 
 			count = ps.executeUpdate();
 			/*後消し*/System.out.println("InsertTourDAO - 取得データ数：" + count);
@@ -74,27 +65,14 @@ public class InsertTourDAO {
 			 * エラーが出たら、返すリストをnull=「リスト作れなかったよ」と合図させ、SUCCESSとERRORを見分けます。
 			 * */
 			}catch(SQLException e){
-				System.out.println("SQL上でエラーが発生しました");
-				e.printStackTrace();
-				return 0;
-
-			} catch (IllegalAccessException e) {
-				System.out.println("アクセスエラーです");
-				e.printStackTrace();
-				return 0;
-
-			} catch (InstantiationException e) {
-				System.out.println("ドライバのロードに失敗しました");
 				e.printStackTrace();
 				return 0;
 
 			}catch(ClassCastException e){
-				System.out.println("変換できないデータがありました");
 				e.printStackTrace();
 				return 0;
 
 			}catch(Exception e){
-				System.out.println("その他のエラーです");
 				e.printStackTrace();
 				return 0;
 			}
