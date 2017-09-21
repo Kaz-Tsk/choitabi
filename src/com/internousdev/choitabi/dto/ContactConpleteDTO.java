@@ -60,8 +60,7 @@ public class ContactConpleteDTO {
 	 * メールアドレスを取得するメソッド
 	 * @return formAddress メールアドレス
 	 */
-	public String getContact_mailAddress
-() {
+	public String getContact_mailAddress() {
 		return contact_mailAddress;
 	}
 
@@ -77,8 +76,7 @@ public class ContactConpleteDTO {
 	 * 書き込み内容を取得するメソッド
 	 * @return formContents 書き込み内容
 	 */
-	public String getContact_contents
-() {
+	public String getContact_contents() {
 		return contact_contents;
 	}
 
