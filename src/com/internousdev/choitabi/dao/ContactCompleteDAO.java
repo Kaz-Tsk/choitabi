@@ -32,8 +32,7 @@ public class ContactCompleteDAO {
 	 * @return
 	 * @throws UnknownHostException 相手のパソコンのIPアドレスが認識できなかった時に呼び出し元に投げます。
 	 */
-	public boolean dbInsert(String contact_name, String contact_mailAddress, String contact_contents
-) throws UnknownHostException {
+	public boolean dbInsert(String contact_name, String contact_mailAddress, String contact_contents) throws UnknownHostException {
 
 		boolean result = false;
 /*
