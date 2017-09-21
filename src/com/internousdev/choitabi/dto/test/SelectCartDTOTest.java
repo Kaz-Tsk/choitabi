@@ -2,14 +2,13 @@ package com.internousdev.choitabi.dto.test;
 
 import java.math.BigDecimal;
 
-import com.internousdev.choitabi.dto.CartDTO;
 import com.internousdev.choitabi.dto.SelectCartDTO;
 
 import junit.framework.TestCase;
 
 
 
-public class SelectCartTestDTO extends TestCase {
+public class SelectCartDTOTest extends TestCase {
 
 
     /**
@@ -344,7 +343,7 @@ public class SelectCartTestDTO extends TestCase {
 	}
 
 	public void testGetPrice5() throws Exception {
-		CartDTO dto = new CartDTO();
+		SelectCartDTO dto = new SelectCartDTO();
 		try{
 		    BigDecimal postalMin = BigDecimal.valueOf(-10000000.00);
 		    	dto.setPrice(postalMin);
