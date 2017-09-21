@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- 国際化 ※ここでは国を判別しています。
     言語コード( ja,en など)を示すロケールID を取得します。-->
@@ -76,7 +76,7 @@
 				<tbody>
 					<s:iterator value="cartList">
 						<tr>
-							<td><img src="<s:property value="img"/>" alt=""
+							<td><img src="<s:property value="img" />" alt=""
 								width="100" height="100"></td>
 							<td><s:property value="tour_name" /></td>
 
