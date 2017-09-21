@@ -9,7 +9,7 @@
 <html>
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
 	<title>管理ページトップ</title>
 	<!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
