@@ -23,17 +23,7 @@ public class SelectTourDTOTest {
 	 * （数値を直接入れようとすると「その数値は範囲外です」とコンパイルエラーになりました。おそらくこのため）
 	 *
 	 * int 5、  String 8種類でテスト
-	 *
-	 * private int tourId;     getter-OK/ setter-OK
-	 * private String tourName;     getter-OK/ setter
-	 * private int price;     getter/ setter
-	 * private int persons;     getter/ setter
-	 * private String departure;     getter-OK/ setter
-	 * private String region;     gette-OK/ setter
-	 * private String prefectures;     getter-OK/ setter
-	 * private String theme;     getter-OK/ setter
-	 * private String comment;     getter-OK/ setter
-	 * private String img;     getter-OK/ setter
+
 	 */
 
 	//TourIDゲッターのテストメソッド-----------------------------------------------------------------------------
@@ -42,7 +32,6 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto = new SelectTourDTO();
 		int expected = 0;  //予想値を代入
 		dto.setTourId(expected); //予想値をセット
-		/*動作確認*/System.out.println("tourId getter:" + expected);
 		assertEquals(expected, dto.getTourId()); //予想値とゲッターの戻り値が同じならば成功
 	}
 
@@ -51,7 +40,6 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto = new SelectTourDTO();
 		int expected = Integer.MAX_VALUE;  //予想値を代入
 		dto.setTourId(expected); //予想値をセット
-		/*動作確認*/System.out.println("tourId getter:" + expected);
 		assertEquals(expected, dto.getTourId()); //予想値とゲッターの戻り値が同じならば成功
 	}
 
@@ -60,7 +48,6 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto = new SelectTourDTO();
 		int expected = Integer.MIN_VALUE;  //予想値を代入
 		dto.setTourId(expected); //予想値をセット
-		/*動作確認*/System.out.println("tourId getter:" + expected);
 		assertEquals(expected, dto.getTourId()); //予想値とゲッターの戻り値が同じならば成功
 	}
 
@@ -110,8 +97,6 @@ public class SelectTourDTOTest {
 
 		dto.setTourId(expected);
 		int actual = dto.getTourId();
-
-		/*動作確認*/System.out.println("testGetTourId expected:" + expected + "/ actual:" + actual );
 		assertEquals(expected, actual);
 	}
 
@@ -122,8 +107,6 @@ public class SelectTourDTOTest {
 
 		dto.setTourId(expected);
 		int actual = dto.getTourId();
-
-		/*動作確認*/System.out.println("testGetTourId expected:" + expected + "/ actual:" + actual );
 		assertEquals(expected, actual);
 	}
 
@@ -247,94 +230,194 @@ public class SelectTourDTOTest {
 	//↓ツアー名セッターのテストメソッド-----------------------------------
 	@Test //null
 	public void testSetTourName1() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = null;
+
+    	dto.setTourName(expected);
+    	String actual= dto.getTourName();
+
+    	assertEquals(expected, actual);
 	}
 
 	@Test //""空文字
 	public void testSetTourName2() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected ="";
+
+    	dto.setTourName(expected);
+    	String actual= dto.getTourName();
+
+    	assertEquals(expected, actual);
 	}
 
 	@Test //" "半角スペース
 	public void testSetTourName3() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected =" ";
+
+    	dto.setTourName(expected);
+    	String actual= dto.getTourName();
+
+    	assertEquals(expected, actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testSetTourName4() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected ="　";
+
+    	dto.setTourName(expected);
+    	String actual= dto.getTourName();
+
+    	assertEquals(expected, actual);
 	}
 
 	@Test //abc123
 	public void testSetTourName5() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected ="abc123";
+
+    	dto.setTourName(expected);
+    	String actual= dto.getTourName();
+
+    	assertEquals(expected, actual);
 	}
 
 	@Test //あいう１２３
 	public void testSetTourName6() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected ="あいう１２３";
+
+    	dto.setTourName(expected);
+    	String actual= dto.getTourName();
+
+    	assertEquals(expected, actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testSetTourName7() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected ="abc123あいう１２３漢字";
+
+    	dto.setTourName(expected);
+    	String actual= dto.getTourName();
+
+    	assertEquals(expected, actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testSetTourName8() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected ="abc123あいう１２３漢字";
+
+    	dto.setTourName(expected);
+    	String actual= dto.getTourName();
+
+    	assertEquals(expected, actual);
 	}
 
 	//価格ゲッターのテストメソッド------------------------------------------
 	@Test //0
 	public void testGetPrice1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto=new SelectTourDTO();
+		int expected = 0;
+		dto.setPrice(expected);
+		assertEquals(expected,dto.getPrice());
 	}
 
 	@Test //MAX_VALUE
 	public void testGetPrice2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto=new SelectTourDTO();
+		int expected = Integer.MAX_VALUE;
+		dto.setPrice(expected);
+		assertEquals(expected,dto.getPrice());
 	}
 
 	@Test //MIN_VALUE
 	public void testGetPrice3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto=new SelectTourDTO();
+		int expected = Integer.MIN_VALUE;
+		dto.setPrice(expected);
+		assertEquals(expected,dto.getPrice());
 	}
 
 	@Test //範囲外-最大値＋1
-	public void testGetPrice4() {
-		fail("まだ実装されていません");
+	public void testGetPrice4() throws Exception {
+		SelectTourDTO dto=new SelectTourDTO();
+
+		try{
+			int expected = Integer.parseInt("2147483648");
+			dto.setPrice(expected);
+		}catch(RuntimeException e){
+			assertThat(e.getMessage(),"For input string: \"2147483648\"");
+		}
 	}
 
 	@Test //範囲外-最小値-1
 	public void testGetPrice5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto=new SelectTourDTO();
+
+		try{
+			int expected = Integer.parseInt("-2147483649");
+			dto.setPrice(expected);
+		}catch(RuntimeException e){
+			assertThat(e.getMessage(),"For input string: \"-2147483649\"");
+		}
 	}
 
 	//価格セッターのテストメソッド------------------------------------------
 	@Test //0
 	public void testSetPrice1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = 0;
+		dto.setPrice(expected);
+		int actual= dto.getPrice();
+
+		assertEquals(expected, actual);
 	}
 
 	@Test //MAX_VALUE
 	public void testSetPrice2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = Integer.MAX_VALUE;;
+		dto.setPrice(expected);
+		int actual= dto.getPrice();
+
+		assertEquals(expected, actual);
 	}
 
 	@Test //MIN_VALUE
 	public void testSetPrice3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = Integer.MIN_VALUE;;
+		dto.setPrice(expected);
+		int actual= dto.getPrice();
+
+		assertEquals(expected, actual);
 	}
 
 	@Test //範囲外-最大値＋1
 	public void testSetPrice4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+	    try{
+	    	int postalMax= Integer.parseInt("2147483648");
+	    	dto.setPrice(postalMax);
+
+	    }catch (RuntimeException e) {
+	    	assertThat(e.getMessage(),"For input string: \"2147483648\"");
+	    }
 	}
 
 	@Test //範囲外-最小値-1
 	public void testSetPrice5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		try {
+			int postalMin= Integer.parseInt("-2147483649");
+			dto.setPrice(postalMin);
+
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(),"For input string: \"-2147483649\"");
+		}
 	}
 
 
@@ -342,53 +425,105 @@ public class SelectTourDTOTest {
 	//人数ゲッターのテストメソッド--------------------------------------------
 	@Test //0
 	public void testGetPersons1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto=new SelectTourDTO();
+		int expected = 0;
+		dto.setPersons(expected);
+		assertEquals(expected,dto.getPersons());
 	}
 
 	@Test //MAX_VALUE
 	public void testGetPersons2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto=new SelectTourDTO();
+		int expected = 0;
+		dto.setPersons(expected);
+		assertEquals(expected,dto.getPersons());
 	}
 
 	@Test //MIN__VALUE
 	public void testGetPersons3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto=new SelectTourDTO();
+		int expected = 0;
+		dto.setPersons(expected);
+		assertEquals(expected,dto.getPersons());
 	}
 
 	@Test //範囲外-最大値+1
 	public void testGetPersons4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+	    try{
+	    	int postalMax= Integer.parseInt("2147483648");
+	    	dto.setPersons(postalMax);
+
+	    }catch (RuntimeException e) {
+	    	assertThat(e.getMessage(),"For input string: \"2147483648\"");
+	    }
 	}
 
 	@Test //範囲外-最小値-1
 	public void testGetPersons5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		try {
+		     int postalMin =Integer.parseInt("-2147483649");
+		     dto.setPersons(postalMin);
+
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(),"For input string: \"-2147483649\"");
+		}
 	}
 
 	//人数セッターのテストメソッド--------------------------------------------
 	@Test //0
 	public void testSetPersons1() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = 0;
+		dto.setPersons(expected);
+		int actual= dto.getPersons();
+
+		assertEquals(expected, actual);
 	}
 
 	@Test //MAX_VALUE
 	public void testSetPersons2() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = 0;
+		dto.setPersons(expected);
+		int actual= dto.getPersons();
+
+		assertEquals(expected, actual);
 	}
 
 	@Test //MIN_VALUE
 	public void testSetPersons3() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = 0;
+		dto.setPersons(expected);
+		int actual= dto.getPersons();
+
+		assertEquals(expected, actual);
 	}
 
 	@Test //範囲外-最大値＋1
 	public void testSetPersons4() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+	    try{
+	    	int postalMax= Integer.parseInt("2147483648");
+	    	dto.setPersons(postalMax);
+
+	    }catch (RuntimeException e) {
+	    	assertThat(e.getMessage(),"For input string: \"2147483648\"");
+	    }
 	}
 
 	@Test //範囲外-最小値-1
 	public void testSetPersons5() {
-		fail("まだ実装されていません");
+		SelectTourDTO dto= new SelectTourDTO();
+		try {
+			int postalMin= Integer.parseInt("-2147483649");
+			dto.setPersons(postalMin);
+
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(),"For input string: \"-2147483649\"");
+		}
 
 	}
 
@@ -399,8 +534,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected = null;//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setDeparture(expected);
+		String actual=dto.getDeparture();
 
 		assertEquals(expected,actual);
 	}
@@ -410,8 +545,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected = "";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setDeparture(expected);
+		String actual=dto.getDeparture();
 
 		assertEquals(expected,actual);
 	}
@@ -421,8 +556,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected = " ";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setDeparture(expected);
+		String actual=dto.getDeparture();
 
 		assertEquals(expected,actual);
 	}
@@ -432,8 +567,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected = "　";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setDeparture(expected);
+		String actual=dto.getDeparture();
 
 		assertEquals(expected,actual);
 	}
@@ -443,8 +578,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected = "abc123";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setDeparture(expected);
+		String actual=dto.getDeparture();
 
 		assertEquals(expected,actual);
 	}
@@ -454,8 +589,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected = "あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setDeparture(expected);
+		String actual=dto.getDeparture();
 
 		assertEquals(expected,actual);
 	}
@@ -465,8 +600,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected = "abc123あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setDeparture(expected);
+		String actual=dto.getDeparture();
 
 		assertEquals(expected,actual);
 	}
@@ -476,8 +611,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected = "abc123あいう１２３漢字";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setDeparture(expected);
+		String actual=dto.getDeparture();
 
 		assertEquals(expected,actual);
 	}
@@ -487,42 +622,90 @@ public class SelectTourDTOTest {
 	//出発地セッターのテストメソッド--------------------------------------------
 	@Test //null
 	public void testSetDeparture1() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = null;
+
+    	dto.setDeparture(expected);
+    	String actual = dto.getDeparture();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testSetDeparture2() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "";
+
+    	dto.setDeparture(expected);
+    	String actual= dto.getDeparture();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testSetDeparture3() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = " ";
+
+    	dto.setDeparture(expected);
+    	String actual= dto.getDeparture();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testSetDeparture4() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "　";
+
+    	dto.setDeparture(expected);
+    	String actual= dto.getDeparture();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testSetDeparture5() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "abc123";
+
+    	dto.setDeparture(expected);
+    	String actual= dto.getDeparture();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testSetDeparture6() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setDeparture(expected);
+    	String actual= dto.getDeparture();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testSetDeparture7() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setDeparture(expected);
+    	String actual= dto.getDeparture();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testSetDeparture8() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "abc123あいう１２３漢字";
+
+    	dto.setDeparture(expected);
+    	String actual= dto.getDeparture();
+
+    	assertEquals(expected,actual);
 	}
 
 
@@ -533,8 +716,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=null;//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setRegion(expected);
+		String actual=dto.getRegion();
 
 		assertEquals(expected,actual);
 	}
@@ -544,8 +727,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setRegion(expected);
+		String actual=dto.getRegion();
 
 		assertEquals(expected,actual);
 	}
@@ -555,8 +738,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=" ";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setRegion(expected);
+		String actual=dto.getRegion();
 
 		assertEquals(expected,actual);
 	}
@@ -566,8 +749,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="　";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setRegion(expected);
+		String actual=dto.getRegion();
 
 		assertEquals(expected,actual);
 	}
@@ -577,8 +760,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setRegion(expected);
+		String actual=dto.getRegion();
 
 		assertEquals(expected,actual);
 	}
@@ -588,8 +771,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setRegion(expected);
+		String actual=dto.getRegion();
 
 		assertEquals(expected,actual);
 	}
@@ -599,8 +782,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setRegion(expected);
+		String actual=dto.getRegion();
 
 		assertEquals(expected,actual);
 	}
@@ -610,8 +793,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３漢字";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setRegion(expected);
+		String actual=dto.getRegion();
 
 		assertEquals(expected,actual);
 	}
@@ -619,49 +802,93 @@ public class SelectTourDTOTest {
 
 
 	//エリアセッターのテストメソッド-----------------------------------------------
-	@Test
-	public void testSetRegion() {
-		fail("まだ実装されていません");
-	}
 
 	@Test //null
 	public void testSetRegion1() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = null;
+
+    	dto.setRegion(expected);
+    	String actual= dto.getRegion();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testSetRegion2() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "";
+
+    	dto.setRegion(expected);
+    	String actual= dto.getRegion();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testSetRegion3() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = " ";
+
+    	dto.setRegion(expected);
+    	String actual= dto.getRegion();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testSetRegion4() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "　";
+
+    	dto.setRegion(expected);
+    	String actual= dto.getRegion();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testSetRegion5() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "abc123";
+
+    	dto.setRegion(expected);
+    	String actual= dto.getRegion();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testSetRegion6() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setRegion(expected);
+    	String actual= dto.getRegion();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testSetRegion7() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setRegion(expected);
+    	String actual= dto.getRegion();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testSetRegion8() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected = "abc123あいう１２３漢字";
+
+    	dto.setRegion(expected);
+    	String actual= dto.getRegion();
+
+    	assertEquals(expected,actual);
 	}
 
 
@@ -673,8 +900,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=null;//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setPrefectures(expected);
+		String actual=dto.getPrefectures();
 
 		assertEquals(expected,actual);
 	}
@@ -684,8 +911,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setPrefectures(expected);
+		String actual=dto.getPrefectures();
 
 		assertEquals(expected,actual);
 	}
@@ -695,8 +922,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=" ";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setPrefectures(expected);
+		String actual=dto.getPrefectures();
 
 		assertEquals(expected,actual);
 	}
@@ -706,8 +933,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="　";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setPrefectures(expected);
+		String actual=dto.getPrefectures();
 
 		assertEquals(expected,actual);
 	}
@@ -717,8 +944,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setPrefectures(expected);
+		String actual=dto.getPrefectures();
 
 		assertEquals(expected,actual);
 	}
@@ -728,8 +955,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setPrefectures(expected);
+		String actual=dto.getPrefectures();
 
 		assertEquals(expected,actual);
 	}
@@ -739,8 +966,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setPrefectures(expected);
+		String actual=dto.getPrefectures();
 
 		assertEquals(expected,actual);
 	}
@@ -750,8 +977,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３漢字";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setPrefectures(expected);
+		String actual=dto.getPrefectures();
 
 		assertEquals(expected,actual);
 	}
@@ -763,42 +990,90 @@ public class SelectTourDTOTest {
 	//都道府県セッターのテストメソッド------------------------------------------------
 	@Test //null
 	public void testSetPrefectures1() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = null;
+
+    	dto.setPrefectures(expected);
+    	String actual= dto.getPrefectures();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testSetPrefectures2() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "";
+
+    	dto.setPrefectures(expected);
+    	String actual= dto.getPrefectures();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testSetPrefectures3() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = " ";
+
+    	dto.setPrefectures(expected);
+    	String actual= dto.getPrefectures();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testSetPrefectures4() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "　";
+
+    	dto.setPrefectures(expected);
+    	String actual= dto.getPrefectures();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testSetPrefectures5() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123";
+
+    	dto.setPrefectures(expected);
+    	String actual= dto.getPrefectures();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testSetPrefectures6() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setPrefectures(expected);
+    	String actual= dto.getPrefectures();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testSetPrefectures7() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setPrefectures(expected);
+    	String actual= dto.getPrefectures();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testSetPrefectures8() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123あいう１２３漢字";
+
+    	dto.setPrefectures(expected);
+    	String actual= dto.getPrefectures();
+
+    	assertEquals(expected,actual);
 	}
 
 
@@ -810,8 +1085,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=null;//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setTheme(expected);
+		String actual=dto.getTheme();
 
 		assertEquals(expected,actual);
 	}
@@ -821,8 +1096,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setTheme(expected);
+		String actual=dto.getTheme();
 
 		assertEquals(expected,actual);
 	}
@@ -832,8 +1107,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=" ";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setTheme(expected);
+		String actual=dto.getTheme();
 
 		assertEquals(expected,actual);
 	}
@@ -843,8 +1118,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="　";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setTheme(expected);
+		String actual=dto.getTheme();
 
 		assertEquals(expected,actual);
 	}
@@ -854,8 +1129,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setTheme(expected);
+		String actual=dto.getTheme();
 
 		assertEquals(expected,actual);
 	}
@@ -865,8 +1140,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setTheme(expected);
+		String actual=dto.getTheme();
 
 		assertEquals(expected,actual);
 	}
@@ -876,8 +1151,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setTheme(expected);
+		String actual=dto.getTheme();
 
 		assertEquals(expected,actual);
 	}
@@ -887,8 +1162,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３漢字";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setTheme(expected);
+		String actual=dto.getTheme();
 
 		assertEquals(expected,actual);
 	}
@@ -896,42 +1171,90 @@ public class SelectTourDTOTest {
 	//テーマセッターのテストメソッド------------------------------------------------
 	@Test //null
 	public void testSetTheme1() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = null;
+
+    	dto.setTheme(expected);
+    	String actual = dto.getTheme();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testSetTheme2() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "";
+
+    	dto.setTheme(expected);
+    	String actual = dto.getTheme();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testSetTheme3() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = " ";
+
+    	dto.setTheme(expected);
+    	String actual = dto.getTheme();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testSetTheme4() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "　";
+
+    	dto.setTheme(expected);
+    	String actual = dto.getTheme();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testSetTheme5() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123";
+
+    	dto.setTheme(expected);
+    	String actual = dto.getTheme();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testSetTheme6() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setTheme(expected);
+    	String actual = dto.getTheme();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testSetTheme7() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setTheme(expected);
+    	String actual = dto.getTheme();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testSetTheme8() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setTheme(expected);
+    	String actual = dto.getTheme();
+
+    	assertEquals(expected,actual);
 	}
 
 
@@ -941,8 +1264,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=null;//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setComment(expected);
+		String actual=dto.getComment();
 
 		assertEquals(expected,actual);
 	}
@@ -952,8 +1275,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setComment(expected);
+		String actual=dto.getComment();
 
 		assertEquals(expected,actual);
 	}
@@ -963,8 +1286,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=" ";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setComment(expected);
+		String actual=dto.getComment();
 
 		assertEquals(expected,actual);
 	}
@@ -974,8 +1297,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="　";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setComment(expected);
+		String actual=dto.getComment();
 
 		assertEquals(expected,actual);
 	}
@@ -985,8 +1308,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setComment(expected);
+		String actual=dto.getComment();
 
 		assertEquals(expected,actual);
 	}
@@ -996,8 +1319,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setComment(expected);
+		String actual=dto.getComment();
 
 		assertEquals(expected,actual);
 	}
@@ -1007,8 +1330,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setComment(expected);
+		String actual=dto.getComment();
 
 		assertEquals(expected,actual);
 	}
@@ -1018,56 +1341,100 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３漢字";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setComment(expected);
+		String actual=dto.getComment();
 
 		assertEquals(expected,actual);
 	}
 
 
 	//コメントセッターのテストメソッド------------------------------------------------------
-	@Test
-	public void testSetComment() {
-		fail("まだ実装されていません");
-	}
 	@Test //null
 	public void testSetComment1() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = null;
+
+    	dto.setComment(expected);
+    	String actual = dto.getComment();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testSetComment2() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "";
+
+    	dto.setComment(expected);
+    	String actual = dto.getComment();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testSetComment3() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = " ";
+
+    	dto.setComment(expected);
+    	String actual = dto.getComment();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testSetComment4() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "　";
+
+    	dto.setComment(expected);
+    	String actual = dto.getComment();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testSetComment5() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123";
+
+    	dto.setComment(expected);
+    	String actual = dto.getComment();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testSetComment6() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setComment(expected);
+    	String actual = dto.getComment();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testSetComment7() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setComment(expected);
+    	String actual = dto.getComment();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testSetComment8() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto = new SelectTourDTO();
+    	String expected = "abc123あいう１２３漢字";
+
+    	dto.setComment(expected);
+    	String actual = dto.getComment();
+
+    	assertEquals(expected,actual);
 	}
 
 	//画像URLゲッターのテストメソッド---------------------------------------------
@@ -1076,8 +1443,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=null;//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setImg(expected);
+		String actual=dto.getImg();
 
 		assertEquals(expected,actual);
 	}
@@ -1087,8 +1454,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setImg(expected);
+		String actual=dto.getImg();
 
 		assertEquals(expected,actual);
 	}
@@ -1098,8 +1465,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected=" ";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setImg(expected);
+		String actual=dto.getImg();
 
 		assertEquals(expected,actual);;
 	}
@@ -1109,8 +1476,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="　";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setImg(expected);
+		String actual=dto.getImg();
 
 		assertEquals(expected,actual);
 	}
@@ -1120,8 +1487,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setImg(expected);
+		String actual=dto.getImg();
 
 		assertEquals(expected,actual);
 	}
@@ -1131,8 +1498,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setImg(expected);
+		String actual=dto.getImg();
 
 		assertEquals(expected,actual);
 	}
@@ -1142,8 +1509,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setImg(expected);
+		String actual=dto.getImg();
 
 		assertEquals(expected,actual);
 	}
@@ -1153,8 +1520,8 @@ public class SelectTourDTOTest {
 		SelectTourDTO dto= new SelectTourDTO();
 		String expected="abc123あいう１２３漢字";//代入
 
-		dto.setTourName(expected);
-		String actual=dto.getTourName();
+		dto.setImg(expected);
+		String actual=dto.getImg();
 
 		assertEquals(expected,actual);
 	}
@@ -1164,42 +1531,90 @@ public class SelectTourDTOTest {
 	//画像URLセッターのテストメソッド------------------------------------------------
 	@Test //null
 	public void testSetImg1() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected=null;
+
+    	dto.setImg(expected);
+    	String actual= dto.getImg();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //""空文字
 	public void testSetImg2() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected="";
+
+    	dto.setImg(expected);
+    	String actual= dto.getImg();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //" "半角スペース
 	public void testSetImg3() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected=" ";
+
+    	dto.setImg(expected);
+    	String actual= dto.getImg();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //"　"全角スペース
 	public void testSetImg4() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected="　";
+
+    	dto.setImg(expected);
+    	String actual= dto.getImg();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123
 	public void testSetImg5() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected="abc123";
+
+    	dto.setImg(expected);
+    	String actual= dto.getImg();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //あいう１２３
 	public void testSetImg6() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected="あいう１２３";
+
+    	dto.setImg(expected);
+    	String actual= dto.getImg();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３
 	public void testSetImg7() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected="abc123あいう１２３";
+
+    	dto.setImg(expected);
+    	String actual= dto.getImg();
+
+    	assertEquals(expected,actual);
 	}
 
 	@Test //abc123あいう１２３漢字
 	public void testSetImg8() {
-		fail("まだ実装されていません");
+    	SelectTourDTO dto= new SelectTourDTO();
+    	String expected="abc123あいう１２３漢字";
+
+    	dto.setImg(expected);
+    	String actual= dto.getImg();
+
+    	assertEquals(expected,actual);
 	}
 
 
