@@ -1,13 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 <html>
 <head>
+<!-- 国際化 ※ここでは国を判別しています。
+    言語コード( ja,en など)を示すロケールID を取得します。-->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<fmt:setBundle basename="com.internousdev.choitabi.property.Q&A"
+	var="lang" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel = "stylesheet" type= "text/css" href = "css/Q&A.css">
 <title>Q&A</title>
 </head>
-<!-- ヘッダー部分---------------------- -->
+<!-- ヘッダー部分------------------------>
 <header>
         <jsp:include page="header.jsp"/>
 </header>
@@ -19,16 +27,16 @@
         <h1>Q&A</h1>
         <br>
         <div class="Q%A">
-            <h2>Q.キャンセルはできますか？</h2>
+            <h2><s:text name="lang.Q&A.Q"/></h2>
             <br>
-            <h3>A.可能です。ただし、ツアー当日三日前からのキャンセルは
-            <br>キャンセル料金が発生いたします。
+            <h3><s:text name="lang.Q&A.A"/>
+            <br><s:text name="lang.Q&A.A2"/>
             <br>--------------------------------------------------------------
             <br>
             <br>
-            <h4>その他お問い合わせは以下のページにお進みください</h4>
+            <h4><s:text name="lang.Q&A.hoka"/></h4>
             </h3>
-            <br><h5><a href="FirstContactAction">お問い合わせページへ</a></h5>
+            <br><h5><a href="FirstContactAction"><s:text name="lang.Q&A.toiawase"/></a></h5>
         </div>
     </div>
 
