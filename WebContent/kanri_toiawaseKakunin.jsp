@@ -32,7 +32,7 @@
 
        <div id ="contents">
 
-       <h1>お問合せ確認</h1>
+       <h1><s:text name="lang.kanri_toiawaseKakunin.confirmation"/></h1>
 
 
 
@@ -41,7 +41,7 @@
 		               <form action="KanriContactAction" method="post">
 
 			                <input type="text" name="searchName" id="searchName"
-			                       value="<s:property value="searchName"/>" placeholder="お客様名を入れてね">
+			                       value="<s:property value="searchName"/>" placeholder="<s:text name="lang.kanri_toiawaseKakunin.name"/>">
 			                <s:hidden name = "pageNum" value="1"/><!-- 改めて1ページ目だよって検索したあとのページに伝える -->
                             <input type="submit" value=<s:text name = "lang.kanri_toiawaseKakunin.search"/>>
 
