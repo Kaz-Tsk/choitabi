@@ -105,18 +105,15 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
      * 送信者名を取得するためのメソッド
      * @return postingName 送信者名
      */
-    public String getContact_name
-() {
-        return contact_name
-;
+    public String getContact_name() {
+        return contact_name;
     }
 
     /**
      * 送信者名を格納するためのメソッド
      * @param postingName 送信者名
      */
-    public void setContact_name(String contact_name
-) {
+    public void setContact_name(String contact_name) {
         this.contact_name =contact_name;
     }
 
@@ -124,8 +121,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
      * 送信者メールアドレスを取得するためのメソッド
      * @return postingEmail 送信者メールアドレス
      */
-    public String getContact_mailAddress
-() {
+    public String getContact_mailAddress() {
         return contact_mailAddress;
     }
 
