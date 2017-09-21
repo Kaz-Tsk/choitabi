@@ -7,47 +7,53 @@ import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.internousdev.choitabi.util.TourListPagination;
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * 管理画面で、ツアー情報の一覧を表示する際使用しているアクションクラスです。
+ *
+ * @author YUKA MATSUMURA
+ * @since 2017/09/05
+ * @virsion 1.1
+ * */
+
 public class IndicateTourListAction extends ActionSupport{
 
-
-	/**@author YUKA MATSUMURA
-	 * @since 2017/09/05
-	 * @virsion 1.1
-	 * 管理画面のツアー情報の管理で使用するアクションです。
-	 * DBからツアーのデータを取得し、アレイリストにしてJSPに渡して、表示させます。
-	 * 使っているアレイリストは2種類で、
-	 * DBから取得したすべてのデータを入れた「allTourList」と、そこから
-	 * 現在のページに表示するものだけを切り出した「currentTourList」です。
-	 * JSPに渡しているのは「currentTourList」の方です。
+	/**
+	 * 検索ワード
 	 * */
-
-	/*検索ワード（初期状態はnullになってしまうので、""=空白を入れておきます*/
 	private String selectWord = "";
 
-	/*検索エリア(※これから作成)*/
-	private String selectRegion = "";
-
-	/*検索テーマ*/
+	/**
+	 * 検索テーマ
+	 * */
 	private String selectTheme = "";
 
-	/*取得されたすべてのツアー情報*/
+	/**
+	 * DBから取得した全ツアー情報のリスト
+	 * */
 	private ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
 
-	/*現在表示している＝１ページに表示するツアー情報（ページネート）*/
+	/**
+	 * ページネートした1ページ分のリスト
+	 * */
 	private ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
-	/*ツアー情報の最大ページ数*/
+	/**
+	 * ツアー情報一覧の最大ページ数
+	 * */
 	private int maxPage;
 
-	/*ツアー情報の現在のページ番号*/
+	/**
+	 * 現在表示しているページ番号
+	 * */
 	private int currentPage = 1;/*nullPointerが起きないように、最初に1を入れておきます。*/
 
 
 
 
-	/*アクションクラスの「execute」メソッド。
-	 * DAOクラスを呼び出してツアーの情報をリストとして取得。
-	 * うまく取得できたら、Strutsに「SUCCESS」を、そうでなかったら「ERROR」を返します。*/
+	/**executeメソッド
+	 * DAOクラスを呼び出し、ツアーの情報をリストとして取得する。
+	 * @return result (SUCCESS/ERROR)
+	 * */
 	public String execute(){
 		String result = ERROR;
 
@@ -87,16 +93,6 @@ public class IndicateTourListAction extends ActionSupport{
 	/*検索ワードのsetter*/
 	public void setSelectWord(String selectWord){
 		this.selectWord = selectWord;
-	}
-
-	/*検索エリアのgetter*/
-	public String getSelectRegion(){
-		return selectRegion;
-	}
-
-	/*検索エリアのsetter*/
-	public void setSelectRegion(String selectRegion){
-		this.selectRegion = selectRegion;
 	}
 
 	/*検索テーマのgetter*/
