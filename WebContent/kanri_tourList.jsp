@@ -36,11 +36,13 @@
     <s:param name="selectTheme" value="'グルメ'"/></s:url>'>
     【グルメ】
     </a>
+    ・
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'名所'"/></s:url>'>
     【名所】
     </a>
+    ・
     <a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'アクティビティ'"/></s:url>'>

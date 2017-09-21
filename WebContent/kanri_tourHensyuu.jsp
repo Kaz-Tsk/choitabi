@@ -132,6 +132,7 @@
 
     <br>
     <br>
+    <!-- 「ツアー一覧に戻る」の部分 -->
     <a href='<s:url action="IndicateTourListAction">
     	<s:param name="currentPage" value="1"/></s:url>'>
     	<s:text name="lang.kanri_tourHensyuu.return_list"/>
@@ -139,6 +140,7 @@
 	<br>
 	<br>
     <br>
+    <!-- 「管理トップページに戻る」の部分 -->
     <a href='<s:url action="GoManagersTopAction"/>'>
     <s:text name="lang.kanri_tourHensyuu.return_top"/>
     </a>
