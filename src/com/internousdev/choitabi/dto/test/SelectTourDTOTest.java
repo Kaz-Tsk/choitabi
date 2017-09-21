@@ -22,7 +22,9 @@ public class SelectTourDTOTest {
 	 * 旅癒さんのテストケースでは、範囲外の数値は最初、文字列として入れ、「Integer.parseInt()」で数値に変換させている。
 	 * （数値を直接入れようとすると「その数値は範囲外です」とコンパイルエラーになりました。おそらくこのため）
 	 *
-	 * private int tourId;     getter/ setter
+	 * int 5、  String 8種類でテスト
+	 *
+	 * private int tourId;     getter-OK/ setter-OK
 	 * private String tourName;     getter/ setter
 	 * private int price;     getter/ setter
 	 * private int persons;     getter/ setter
@@ -38,6 +40,61 @@ public class SelectTourDTOTest {
 	@Test //0
 	public void testGetTourId1() {
 		SelectTourDTO dto = new SelectTourDTO();
+		int expected = 0;  //予想値を代入
+		dto.setTourId(expected); //予想値をセット
+		/*動作確認*/System.out.println("tourId getter:" + expected);
+		assertEquals(expected, dto.getTourId()); //予想値とゲッターの戻り値が同じならば成功
+	}
+
+	@Test //Integer.MAX_VALUE
+	public void testGetTourId2() {
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = Integer.MAX_VALUE;  //予想値を代入
+		dto.setTourId(expected); //予想値をセット
+		/*動作確認*/System.out.println("tourId getter:" + expected);
+		assertEquals(expected, dto.getTourId()); //予想値とゲッターの戻り値が同じならば成功
+	}
+
+	@Test //Integer.MIN_VALUE
+	public void testGetTourId3() {
+		SelectTourDTO dto = new SelectTourDTO();
+		int expected = Integer.MIN_VALUE;  //予想値を代入
+		dto.setTourId(expected); //予想値をセット
+		/*動作確認*/System.out.println("tourId getter:" + expected);
+		assertEquals(expected, dto.getTourId()); //予想値とゲッターの戻り値が同じならば成功
+	}
+
+	@Test //レンジ範囲外（Exceptionを起こす）：最大値2147483647 + 1
+	public void testGetTourId4() throws Exception{
+		SelectTourDTO dto = new SelectTourDTO();
+	    try{
+	    	int postalMax= Integer.parseInt("2147483648");//最大値＋1を代入
+	    	dto.setTourId(postalMax);
+
+	    }catch (RuntimeException e) {//例外処理
+	    	assertThat(e.getMessage(),"For input string: \"2147483648\"");//エラーメッセージが左のようになればテスト成功
+	    }
+	}
+
+	@Test //レンジ範囲外（Exceptionを起こす）：最小値-2147483648 - 1
+	public void testGetTourId5() {
+		SelectTourDTO dto = new SelectTourDTO();
+		try {
+		     int postalMin =Integer.parseInt("-2147483649");//最小値-1を代入
+		     dto.setTourId(postalMin);
+
+		} catch (RuntimeException e) {//例外処理
+			assertThat(e.getMessage(),"For input string: \"-2147483649\"");//エラーメッセージが左のようになればテスト成功
+		}
+	}
+
+
+	//↓TourIdセッターのテストメソッド-------------------------------------------------------------------------
+
+
+	@Test //0
+	public void testSetTourId1(){
+		SelectTourDTO dto = new SelectTourDTO();
 		int expected = 0;
 
 		dto.setTourId(expected);
@@ -46,8 +103,8 @@ public class SelectTourDTOTest {
 		assertEquals(expected, actual);
 	}
 
-	@Test //Integer.MAX_VALUE
-	public void testGetTourId2() {
+	@Test //MAX_VALUE
+	public void testSetTourId2() {
 		SelectTourDTO dto  = new SelectTourDTO();
 		int expected = Integer.MAX_VALUE;
 
@@ -58,8 +115,8 @@ public class SelectTourDTOTest {
 		assertEquals(expected, actual);
 	}
 
-	@Test //Integer.MIN_VALUE
-	public void testGetTourId3() {
+	@Test //MIN_VALUE
+	public void testSetTourId3() {
 		SelectTourDTO dto = new SelectTourDTO();
 		int expected = Integer.MIN_VALUE;
 
@@ -70,8 +127,8 @@ public class SelectTourDTOTest {
 		assertEquals(expected, actual);
 	}
 
-	@Test //レンジ範囲外（Exceptionを起こす）：最大値2147483647 + 1
-	public void testGetTourId4() {
+	@Test //最大値＋1
+	public void testSetTourId4() {
 		SelectTourDTO dto = new SelectTourDTO();
 		try {
 			int postalMax= Integer.parseInt("2147483648");
@@ -82,8 +139,8 @@ public class SelectTourDTOTest {
 		}
 	}
 
-	@Test //レンジ範囲外（Exceptionを起こす）：最小値-2147483648 - 1
-	public void testGetTourId5() {
+	@Test //最小値＋1
+	public void testSetTourId5() {
 		SelectTourDTO dto = new SelectTourDTO();
 		try {
 			int postalMin = Integer.parseInt("-2147483649");
@@ -95,103 +152,723 @@ public class SelectTourDTOTest {
 	}
 
 
-	//↓TourIdセッターのテストメソッド-------------------------------------------------------------------------
+
+	//↓ツアー名ゲッターのテストメソッド----------------------------------
+	@Test //null
+	public void testGetTourName1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testGetTourName2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testGetTourName3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testGetTourName4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testGetTourName5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testGetTourName6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testGetTourName7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testGetTourName8() {
+		fail("まだ実装されていません");
+	}
 
 
+
+	//↓ツアー名セッターのテストメソッド-----------------------------------
+	@Test //null
+	public void testSetTourName1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testSetTourName2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testSetTourName3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testSetTourName4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testSetTourName5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testSetTourName6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testSetTourName7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testSetTourName8() {
+		fail("まだ実装されていません");
+	}
+
+	//価格ゲッターのテストメソッド------------------------------------------
 	@Test
-	public void testSetTourId() {
+	public void testGetPrice1() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testGetTourName() {
+	public void testGetPrice2() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testSetTourName() {
+	public void testGetPrice3() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testGetPrice() {
+	public void testGetPrice4() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testSetPrice() {
+	public void testGetPrice5() {
+		fail("まだ実装されていません");
+	}
+
+	//価格セッターのテストメソッド------------------------------------------
+	@Test
+	public void testSetPrice1() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testGetPersons() {
+	public void testSetPrice2() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testSetPersons() {
+	public void testSetPrice3() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testGetDeparture() {
+	public void testSetPrice4() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testSetDeparture() {
+	public void testSetPrice5() {
+		fail("まだ実装されていません");
+	}
+
+
+
+	//人数ゲッターのテストメソッド--------------------------------------------
+	@Test
+	public void testGetPersons1() {
 		fail("まだ実装されていません");
 	}
 
 	@Test
-	public void testGetRegion() {
+	public void testGetPersons2() {
 		fail("まだ実装されていません");
 	}
 
+	@Test
+	public void testGetPersons3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test
+	public void testGetPersons4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test
+	public void testGetPersons5() {
+		fail("まだ実装されていません");
+	}
+
+	//人数セッターのテストメソッド--------------------------------------------
+	@Test
+	public void testSetPersons1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test
+	public void testSetPersons2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test
+	public void testSetPersons3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test
+	public void testSetPersons4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test
+	public void testSetPersons5() {
+		fail("まだ実装されていません");
+
+	}
+
+
+	//出発地ゲッターのテストメソッド-------------------------------------------
+	@Test //null
+	public void testGetDeparture1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testGetDeparture2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testGetDeparture3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testGetDeparture4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testGetDeparture5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testGetDeparture6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testGetDeparture7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testGetDeparture8() {
+		fail("まだ実装されていません");
+	}
+
+
+
+	//出発地セッターのテストメソッド--------------------------------------------
+	@Test //null
+	public void testSetDeparture1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testSetDeparture2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testSetDeparture3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testSetDeparture4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testSetDeparture5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testSetDeparture6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testSetDeparture7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testSetDeparture8() {
+		fail("まだ実装されていません");
+	}
+
+	//エリアゲッターのテストメソッド----------------------------------------------
+	@Test //null
+	public void testGetRegion1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testGetRegion2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testGetRegion3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testGetRegion4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testGetRegion5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testGetRegion6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testGetRegion7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testGetRegion8() {
+		fail("まだ実装されていません");
+	}
+
+
+
+	//エリアセッターのテストメソッド-----------------------------------------------
 	@Test
 	public void testSetRegion() {
 		fail("まだ実装されていません");
 	}
 
+	@Test //null
+	public void testSetRegion1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testSetRegion2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testSetRegion3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testSetRegion4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testSetRegion5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testSetRegion6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testSetRegion7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testSetRegion8() {
+		fail("まだ実装されていません");
+	}
+
+
+
+
+	//都道府県ゲッターのテストメソッド----------------------------------------------
 	@Test
 	public void testGetPrefectures() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
-	public void testSetPrefectures() {
+	@Test //null
+	public void testGetPrefectures1() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
-	public void testGetTheme() {
+	@Test //""空文字
+	public void testGetPrefectures2() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
-	public void testSetTheme() {
+	@Test //" "半角スペース
+	public void testGetPrefectures3() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
-	public void testGetComment() {
+	@Test //"　"全角スペース
+	public void testGetPrefectures4() {
 		fail("まだ実装されていません");
 	}
 
+	@Test //abc123
+	public void testGetPrefectures5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testGetPrefectures6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testGetPrefectures7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testGetPrefectures8() {
+		fail("まだ実装されていません");
+	}
+
+
+
+
+
+	//都道府県セッターのテストメソッド------------------------------------------------
+	@Test //null
+	public void testSetPrefectures1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testSetPrefectures2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testSetPrefectures3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testSetPrefectures4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testSetPrefectures5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testSetPrefectures6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testSetPrefectures7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testSetPrefectures8() {
+		fail("まだ実装されていません");
+	}
+
+
+
+
+	//テーマゲッターのテストメソッド---------------------------------------------
+	@Test //null
+	public void testGetTheme1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testGetTheme2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testGetTheme3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testGetTheme4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testGetTheme5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testGetTheme6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testGetTheme7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testGetTheme8() {
+		fail("まだ実装されていません");
+	}
+
+	//テーマセッターのテストメソッド------------------------------------------------
+	@Test //null
+	public void testSetTheme1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testSetTheme2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testSetTheme3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testSetTheme4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testSetTheme5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testSetTheme6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testSetTheme7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testSetTheme8() {
+		fail("まだ実装されていません");
+	}
+
+
+	//コメントゲッターのテストメソッド-----------------------------------------------------
+	@Test //null
+	public void testGetComment1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testGetComment2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testGetComment3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testGetComment4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testGetComment5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testGetComment6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testGetComment7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testGetComment8() {
+		fail("まだ実装されていません");
+	}
+
+
+	//コメントセッターのテストメソッド------------------------------------------------------
 	@Test
 	public void testSetComment() {
 		fail("まだ実装されていません");
 	}
-
-	@Test
-	public void testGetImg() {
+	@Test //null
+	public void testSetComment1() {
 		fail("まだ実装されていません");
 	}
 
-	@Test
-	public void testSetImg() {
+	@Test //""空文字
+	public void testSetComment2() {
 		fail("まだ実装されていません");
 	}
+
+	@Test //" "半角スペース
+	public void testSetComment3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testSetComment4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testSetComment5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testSetComment6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testSetComment7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testSetComment8() {
+		fail("まだ実装されていません");
+	}
+
+	//画像URLゲッターのテストメソッド---------------------------------------------
+	@Test //null
+	public void testGetImg1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testGetImg2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testGetImg3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testGetImg4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testGetImg5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testGetImg6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testGetImg7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testGetImg8() {
+		fail("まだ実装されていません");
+	}
+
+
+
+	//画像URLセッターのテストメソッド------------------------------------------------
+	@Test //null
+	public void testSetImg1() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //""空文字
+	public void testSetImg2() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //" "半角スペース
+	public void testSetImg3() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //"　"全角スペース
+	public void testSetImg4() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123
+	public void testSetImg5() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //あいう１２３
+	public void testSetImg6() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３
+	public void testSetImg7() {
+		fail("まだ実装されていません");
+	}
+
+	@Test //abc123あいう１２３漢字
+	public void testSetImg8() {
+		fail("まだ実装されていません");
+	}
+
 
 
 	//例外処理で使うassertThatメソッド------------------------------------------
