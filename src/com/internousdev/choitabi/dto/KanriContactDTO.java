@@ -9,20 +9,17 @@ public class KanriContactDTO {
 	/**
      * 問い合わせ者名
      */
-    private String contact_name
-;
+    private String contact_name;
 
     /**
      * メールアドレス
      */
-    private String contact_mailAddress
-;
+    private String contact_mailAddress;
 
     /**
      * 問い合わせ内容
      */
-    private String contact_contents
-;
+    private String contact_contents;
 
     /**
      * 登録日
@@ -36,54 +33,40 @@ public class KanriContactDTO {
 	*	問い合わせ者名を取得するメソッド
 	*	@return contactName 問い合わせ者名
 	*/
-	public String getContact_name
-() {
-		return contact_name
-;
+	public String getContact_name() {
+		return contact_name;
 	}
 
 	/**
 	*	問い合わせ者名を格納する
 	*	@param contactName 問い合わせ者名
 	*/
-	public void setContact_name
-(String contact_name
-) {
-		this.contact_name
- = contact_name
-;
+	public void setContact_name(String contact_name) {
+		this.contact_name = contact_name;
 	}
 
 	/**
 	*	メールアドレスを取得するメソッド
 	*	@return email メールアドレス
 	*/
-	public String getContact_mailAddress
-() {
-		return contact_mailAddress
-;
+	public String getContact_mailAddress() {
+		return contact_mailAddress;
 	}
 
 	/**
 	*	メールアドレスを格納する
 	*	@param email メールアドレス
 	*/
-	public void setContact_mailAddress
-(String contact_mailAddress
-) {
-		this.contact_mailAddress
- = contact_mailAddress
-;
+	public void setContact_mailAddress(String contact_mailAddress) {
+		this.contact_mailAddress = contact_mailAddress;
 	}
 
 	/**
 	*	問い合わせ内容を取得するメソッド
 	*	@return comment 問い合わせ内容
 	*/
-	public String getContact_contents
-() {
-		return contact_contents
-;
+	public String getContact_contents() {
+		return contact_contents;
 	}
 
 	/**

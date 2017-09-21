@@ -48,7 +48,6 @@ public class KanriContactDAO {
 		        }
 
 		        ArrayList<KanriContactDTO> searchList = new ArrayList<KanriContactDTO>();
-		        /*動作確認用*/System.out.println("KanrContactDAO - 検索を開始します");
 
 				try {
 					while (cursor.hasNext()) {
@@ -57,17 +56,13 @@ public class KanriContactDAO {
 		                dto.setContact_name((String) dbs.get("contact_name"));
 		                dto.setContact_mailAddress((String) dbs.get("contact_mailAddress"));
 		                dto.setContact_contents((String) dbs.get("contact_contents"));
-		                        /*動作確認*/System.out.println("KanriContactDAO - 取得した名前データ：" + dto.getContact_name());
-		                        /*動作確認*/System.out.println("KanriContactDAO - 取得したアドレスデータ：" + dto.getContact_mailAddress());
-		                        /*動作確認*/System.out.println("KanriContactDAO - 取得した内容データ：" + dto.getContact_contents());
 
 		               searchList.add(dto);
 					}
 				} finally {
-		                    cursor.close();
+		               cursor.close();
 		       }
 
-						/*動作確認用*/System.out.println("リストが完成しました。データ数：" + searchList.size());
-		                return searchList;
+		         return searchList;
 		    }
 	}
