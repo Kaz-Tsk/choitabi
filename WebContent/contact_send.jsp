@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%>
 
        <head>
 
-                    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                    <meta charset="UTF-8">
                     <link href="css/contactsend.css" rel="stylesheet" type="text/css">
 
                     <!-- 国際化：言語コード（ja/en）の取得とプロパティファイルの読み込み -->

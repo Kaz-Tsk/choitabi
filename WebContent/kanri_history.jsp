@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta charset="UTF-8">
 <!-- ここから国際化 -->
 <fmt:setLocale value="${pageContext.request.locale.language}"/>
 <fmt:setBundle basename="com.internousdev.choitabi.property.kanri_history" var="lang"/>

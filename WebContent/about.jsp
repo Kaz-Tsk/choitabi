@@ -9,12 +9,12 @@
 
 <html>
 <head>
+<meta charset="UTF-8">
 <!-- 国際化 ※ここでは国を判別しています。
     言語コード( ja,en など)を示すロケールID を取得します。-->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <fmt:setBundle basename="com.internousdev.choitabi.property.cart"
 	var="lang" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet"type="text/css"href="./css/about.css">
     <title>about</title>
 </head>

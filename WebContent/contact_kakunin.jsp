@@ -14,7 +14,7 @@
 
        <head>
 
-             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+             <meta charset="UTF-8">
              <title><s:text name = "lang.contact_kakunin.inquiry_confirmation"/></title>
              <link rel ="stylesheet" type ="text/css" href ="css/contact_kakunin.css">
 

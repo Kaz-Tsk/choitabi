@@ -11,7 +11,7 @@
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <fmt:setBundle basename="com.internousdev.choitabi.property.index"
 	var="lang" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <link rel = "stylesheet" type= "text/css" href = "css/index_3.css">
 
 <!--マウスオーバー時のcssホバー  -------------------------------------------->

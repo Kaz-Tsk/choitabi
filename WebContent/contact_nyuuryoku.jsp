@@ -13,7 +13,7 @@
 
 
    <head>
-
+	 <meta charset="UTF-8">
      <title><s:text name = "lang.contact_nyuuryoku.Content_of_inquiry_input"/></title>
      <link rel ="stylesheet" type ="text/css" href ="css/contact_nyuuryoku.css">
 
