@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.Test_TourDTO;
+import com.internousdev.util.DBConnector;
 
 /**
  * ツアー詳細表示に関するクラス
@@ -29,8 +30,8 @@ public class Test_GoTourDetailDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<Test_TourDTO> select(int sortId) {
-		ChoitabiDBConnector db = new ChoitabiDBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root","mysql");
-		Connection con = db.getConnection();
+		DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root","mysql");
+		Connection con = dbc.getConnection();
 		String sql;
 		 sql = "select * from items where sort_id=? and del_key =false";
 		try{
@@ -71,8 +72,8 @@ public class Test_GoTourDetailDAO {
 	 * @version 1.0
 	 */
 	public ArrayList<Test_TourDTO> selectbyTour(int tourId) {
-		ChoitabiDBConnector db = new ChoitabiDBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root","mysql");
-		Connection con = db.getConnection();
+		DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/","choitabi", "root","mysql");
+		Connection con = dbc.getConnection();
 		Test_TourDTO dto = new Test_TourDTO();
 		ArrayList<Test_TourDTO> tourList = new ArrayList<Test_TourDTO>();
 		String sql;

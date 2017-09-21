@@ -12,6 +12,120 @@ public class CartDTOTest extends TestCase {
 
 
 	/**
+	 * カートIDを取得するメソッド
+	 * @return cart_id カートID
+	 */
+
+	public void testGetCart_id1() {
+		CartDTO dto = new CartDTO();
+		int expected = 0;
+
+		dto.setCart_id(expected);
+
+		assertEquals(expected, dto.getCart_id());
+
+	}
+
+	public void testGetCart_id2() {
+		CartDTO dto = new CartDTO();
+		int expected = 2147483647;
+
+		dto.setCart_id(expected);
+
+		assertEquals(expected, dto.getCart_id());
+	}
+
+	public void testGetCart_id3() {
+		CartDTO dto = new CartDTO();
+		int expected = -2147483647;
+
+		dto.setCart_id(expected);
+
+		assertEquals(expected, dto.getCart_id());
+	}
+
+	public void testGetCart_id4() throws Exception {
+		CartDTO dto = new CartDTO();
+	    try{
+	    	int postalMax = Integer.parseInt("2147483648");
+	    	dto.setCart_id(postalMax);
+
+	    } catch (RuntimeException e) {
+	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    }
+	}
+
+	public void testGetCart_id5() throws Exception {
+		CartDTO dto = new CartDTO();
+		try {
+		     int postalMin = Integer.parseInt("-2147483649");
+		     dto.setCart_id(postalMin);
+
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
+		}
+	}
+
+
+	/**
+	 * カートIDを格納するメソッド
+	 * @param cart_id カートID
+	 */
+
+	public void testSetCart_id1() {
+		CartDTO dto = new CartDTO();
+		int expected = 0;
+
+		dto.setCart_id(expected);
+		int actual = dto.getCart_id();
+
+		assertEquals(expected, actual);
+	}
+
+	public void testSetCart_id2() {
+		CartDTO dto = new CartDTO();
+		int expected = 2147483647;
+
+		dto.setCart_id(expected);
+		int actual = dto.getCart_id();
+
+		assertEquals(expected, actual);
+	}
+
+	public void testSetCart_id3() {
+		CartDTO dto = new CartDTO();
+		int expected = -2147483647;
+
+		dto.setCart_id(expected);
+		int actual = dto.getCart_id();
+
+		assertEquals(expected, actual);
+	}
+
+	public void testSetCart_id4() throws Exception {
+		CartDTO dto = new CartDTO();
+	    try {
+	    	int postalMax = Integer.parseInt("2147483648");
+	    	dto.setCart_id(postalMax);
+
+	    } catch (RuntimeException e) {
+	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    }
+	}
+
+	public void testSetCart_id5()throws Exception {
+		CartDTO dto = new CartDTO();
+		try {
+			int postalMin = Integer.parseInt("-2147483649");
+			dto.setCart_id(postalMin);
+
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
+		}
+	}
+
+
+	/**
 	 * ユーザーIDを取得するメソッド
 	 * @return user_id ユーザーID
 	 */
@@ -48,6 +162,17 @@ public class CartDTOTest extends TestCase {
 	}
 
 	public void testGetUser_id4() throws Exception {
+		CartDTO dto= new CartDTO();
+	    try {
+	    	int postalMax = Integer.parseInt("2147483648");
+	    	dto.setUser_id(postalMax);
+
+	    } catch (RuntimeException e) {
+	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    }
+	}
+
+	public void testGetUser_id5() throws Exception {
 		CartDTO dto = new CartDTO();
 		try {
 		     int postalMin = Integer.parseInt("-2147483649");
@@ -56,18 +181,6 @@ public class CartDTOTest extends TestCase {
 		} catch (RuntimeException e) {
 			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
 		}
-	}
-
-	public void testGetUser_id5() throws Exception {
-		CartDTO dto= new CartDTO();
-	    try{
-	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setUser_id(postalMax);
-
-	    }catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
-	    }
-
 	}
 
 
@@ -110,7 +223,18 @@ public class CartDTOTest extends TestCase {
 		assertEquals(expected, actual);
 	}
 
-	public void testSetUser_id4()throws Exception {
+	public void testSetUser_id4() throws Exception {
+		CartDTO dto = new CartDTO();
+	    try{
+	    	int postalMax = Integer.parseInt("2147483648");
+	    	dto.setUser_id(postalMax);
+
+	    }catch (RuntimeException e) {
+	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    }
+	}
+
+	public void testSetUser_id5()throws Exception {
 		CartDTO dto = new CartDTO();
 		try {
 			int postalMin = Integer.parseInt("-2147483649");
@@ -121,15 +245,461 @@ public class CartDTOTest extends TestCase {
 		}
 	}
 
-	public void testSetUser_id5() throws Exception {
-		CartDTO dto= new CartDTO();
+
+	/**
+	 * 姓を取得するメソッド
+	 * @return family _name_kanji 姓
+	 */
+
+	public void testGetFamily_name_kanji1() {
+		CartDTO dto = new CartDTO();
+		String expected = null;
+
+		dto.setFamily_name_kanji(expected);
+		String actual = dto.getFamily_name_kanji();
+
+		assertEquals(expected, actual);
+	}
+
+	public void testGetFamily_name_kanji2() {
+		CartDTO dto = new CartDTO();
+		String expected = "";
+
+		dto.setFamily_name_kanji(expected);
+		String actual = dto.getFamily_name_kanji();
+
+		assertEquals(expected, actual);
+	}
+
+    public void testGetFamily_name_kanji3() {
+    	CartDTO dto = new CartDTO();
+    	String expected = " ";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetFamily_name_kanji4() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "　";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetFamily_name_kanji5() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetFamily_name_kanji6() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetFamily_name_kanji7() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetFamily_name_kanji8() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123あいう１２３漢字";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+
+    /**
+     * 姓を格納するメソッド
+     * @param family_name_kanji 姓
+     */
+
+    public void testSetFamily_name_kanji() {
+    	CartDTO dto = new CartDTO();
+    	String expected = null;
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetFamily_name_kanji2() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetFamily_name_kanji3() {
+    	CartDTO dto = new CartDTO();
+    	String expected = " ";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetFamily_name_kanji4() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "　";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetFamily_name_kanji5() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetFamily_name_kanji6() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetFamily_name_kanji7() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetFamily_name_kanji8() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123あいう１２３漢字";
+
+    	dto.setFamily_name_kanji(expected);
+    	String actual = dto.getFamily_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+
+    /**
+     * 名を取得するメソッド
+     * @param given_name_kanji 名
+     */
+
+	public void testGetGiven_name_kanji1() {
+		CartDTO dto = new CartDTO();
+		String expected = null;
+
+		dto.setGiven_name_kanji(expected);
+		String actual = dto.getGiven_name_kanji();
+
+		assertEquals(expected, actual);
+	}
+
+	public void testGetGiven_name_kanji2() {
+		CartDTO dto = new CartDTO();
+		String expected = "";
+
+		dto.setGiven_name_kanji(expected);
+		String actual = dto.getGiven_name_kanji();
+
+		assertEquals(expected, actual);
+	}
+
+    public void testGetGiven_name_kanji3() {
+    	CartDTO dto = new CartDTO();
+    	String expected =" ";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetGiven_name_kanji4() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "　";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetGiven_name_kanji5() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetGiven_name_kanji6() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetGiven_name_kanji7() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testGetGiven_name_kanji8() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123あいう１２３漢字";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+
+    /**
+     * 名を格納するメソッド
+     * @param given_name_kanji 名
+     */
+
+    public void testSetGiven_name_kanji1() {
+    	CartDTO dto = new CartDTO();
+    	String expected = null;
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetGiven_name_kanji2() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetGiven_name_kanji3() {
+    	CartDTO dto = new CartDTO();
+    	String expected = " ";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetGiven_name_kanji4() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "　";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetGiven_name_kanji5() {
+    	CartDTO dto = new CartDTO();
+    	String expected ="abc123";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetGiven_name_kanji6(){
+    	CartDTO dto = new CartDTO();
+    	String expected = "あいう１２３";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetGiven_name_kanji7() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123あいう１２３";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+    public void testSetGiven_name_kanji8() {
+    	CartDTO dto = new CartDTO();
+    	String expected = "abc123あいう１２３漢字";
+
+    	dto.setGiven_name_kanji(expected);
+    	String actual = dto.getGiven_name_kanji();
+
+    	assertEquals(expected, actual);
+    }
+
+
+    /**
+     * 支払い方法を取得するメソッド
+     * @return payment_method 支払い方法
+     */
+
+	public void testGetPayment_method1() {
+		CartDTO dto = new CartDTO();
+		int expected = 0;
+
+		dto.setPayment_method(expected);
+
+		assertEquals(expected, dto.getPayment_method());
+	}
+
+	public void testGetPayment_method2() {
+		CartDTO dto = new CartDTO();
+		int expected = 2147483647;
+
+		dto.setPayment_method(expected);
+
+		assertEquals(expected, dto.getPayment_method());
+	}
+
+	public void testGetPayment_method3() {
+		CartDTO dto = new CartDTO();
+		int expected = -2147483647;
+
+		dto.setPayment_method(expected);
+
+		assertEquals(expected, dto.getPayment_method());
+	}
+
+	public void testGetPaymentMethod4() throws Exception {
+		CartDTO dto = new CartDTO();
 	    try{
 	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setUser_id(postalMax);
+	    	dto.setPayment_method(postalMax);
+
+	    } catch (RuntimeException e) {
+	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    }
+	}
+
+	public void testGetPaymentMethod5() throws Exception {
+		CartDTO dto = new CartDTO();
+		try {
+		     int postalMin =Integer.parseInt("-2147483649");
+		     dto.setPayment_method(postalMin);
+
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
+		}
+	}
+
+
+	/**
+	 * 支払い方法を格納するメソッド
+	 * @param payment_method 支払い方法
+	 */
+
+	public void testSetPayment_method1() {
+		CartDTO test = new CartDTO();
+		int expected = 0;
+
+		test.setPayment_method(expected);
+		int actual = test.getPayment_method();
+
+		assertEquals(expected, actual);
+	}
+
+	public void testSetPayment_method2() {
+		CartDTO dto = new CartDTO();
+		int expected = 2147483647;
+
+		dto.setPayment_method(expected);
+		int actual = dto.getPayment_method();
+
+		assertEquals(expected, actual);
+	}
+
+	public void testSetPayment_method3() {
+		CartDTO dto = new CartDTO();
+		int expected = -2147483647;
+
+		dto.setPayment_method(expected);
+		int actual = dto.getPayment_method();
+
+		assertEquals(expected, actual);
+	}
+
+	public void testSetPayment_method4() throws Exception {
+		CartDTO dto = new CartDTO();
+	    try{
+	    	int postalMax = Integer.parseInt("2147483648");
+	    	dto.setPayment_method(postalMax);
 
 	    }catch (RuntimeException e) {
 	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
 	    }
+	}
+
+	public void testSetPayment_method5() throws Exception {
+		CartDTO dto = new CartDTO();
+		try {
+			int postalMin = Integer.parseInt("-2147483649");
+			dto.setPayment_method(postalMin);
+
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
+		}
 	}
 
 
@@ -167,6 +737,17 @@ public class CartDTOTest extends TestCase {
 
 	public void testGetTour_id4() throws Exception {
 		CartDTO dto = new CartDTO();
+	    try {
+	    	int postalMax = Integer.parseInt("2147483648");
+	    	dto.setTour_id(postalMax);
+
+	    } catch (RuntimeException e) {
+	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    }
+	}
+
+	public void testGetTour_id5() throws Exception {
+		CartDTO dto = new CartDTO();
 		try {
 		     int postalMin = Integer.parseInt("-2147483649");
 		     dto.setTour_id(postalMin);
@@ -174,17 +755,6 @@ public class CartDTOTest extends TestCase {
 		} catch (RuntimeException e) {
 			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
 		}
-	}
-
-	public void testGetTour_id5() throws Exception {
-		CartDTO dto = new CartDTO();
-	    try {
-	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setTour_id(postalMax);
-
-	    }catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
-	    }
 	}
 
 
@@ -225,6 +795,17 @@ public class CartDTOTest extends TestCase {
 
 	public void testSetTour_id4() throws Exception {
 		CartDTO dto = new CartDTO();
+	    try{
+	    	int postalMax = Integer.parseInt("2147483648");
+	    	dto.setTour_id(postalMax);
+
+	    } catch (RuntimeException e) {
+	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    }
+	}
+
+	public void testSetTour_id5() throws Exception {
+		CartDTO dto = new CartDTO();
 		try {
 			int postalMin = Integer.parseInt("-2147483649");
 			dto.setTour_id(postalMin);
@@ -232,17 +813,6 @@ public class CartDTOTest extends TestCase {
 		} catch (RuntimeException e) {
 			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
 		}
-	}
-
-	public void testSetTour_id5() throws Exception {
-		CartDTO dto = new CartDTO();
-	    try{
-	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setTour_id(postalMax);
-
-	    }catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
-	    }
 	}
 
 
@@ -452,17 +1022,6 @@ public class CartDTOTest extends TestCase {
 
 	public void testGetOrder_count4() throws Exception {
 		CartDTO dto = new CartDTO();
-		try {
-		     int postalMin = Integer.parseInt("-2147483649");
-		     dto.setOrder_count(postalMin);
-
-		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-	}
-
-	public void testGetOrder_count5() throws Exception {
-		CartDTO dto = new CartDTO();
 	    try{
 	    	int postalMax = Integer.parseInt("2147483648");
 	    	dto.setOrder_count(postalMax);
@@ -470,6 +1029,17 @@ public class CartDTOTest extends TestCase {
 	    } catch (RuntimeException e) {
 	    	assertEquals(e.getMessage(), "For input string: \"2147483648\"");
 	    }
+	}
+
+	public void testGetOrder_count5() throws Exception {
+		CartDTO dto = new CartDTO();
+		try {
+		     int postalMin = Integer.parseInt("-2147483649");
+		     dto.setOrder_count(postalMin);
+
+		} catch (RuntimeException e) {
+			assertEquals(e.getMessage(), "For input string: \"-2147483649\"");
+		}
 	}
 
 
@@ -510,6 +1080,17 @@ public class CartDTOTest extends TestCase {
 
 	public void testSetOrder_count4() throws Exception {
 		CartDTO dto = new CartDTO();
+	    try {
+	    	int postalMax = Integer.parseInt("2147483648");
+	    	dto.setOrder_count(postalMax);
+
+	    } catch (RuntimeException e) {
+	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    }
+	}
+
+	public void testSetOrder_count5() throws Exception {
+		CartDTO dto = new CartDTO();
 		try {
 			int postalMin = Integer.parseInt("-2147483649");
 			dto.setOrder_count(postalMin);
@@ -517,17 +1098,6 @@ public class CartDTOTest extends TestCase {
 		} catch (RuntimeException e) {
 			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
 		}
-	}
-
-	public void testSetOrder_count5() throws Exception {
-		CartDTO dto = new CartDTO();
-	    try{
-	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setOrder_count(postalMax);
-
-	    }catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
-	    }
 	}
 
 
@@ -566,8 +1136,8 @@ public class CartDTOTest extends TestCase {
 	public void testGetPrice4() throws Exception {
 		CartDTO dto = new CartDTO();
 		try {
-		     BigDecimal postalMin = BigDecimal.valueOf(10000000.00);
-		     dto.setPrice(postalMin);
+		     BigDecimal postalMax = BigDecimal.valueOf(10000000.00);
+		     dto.setPrice(postalMax);
 
 		} catch (RuntimeException e) {
 			assertThat(e.getMessage(), "For input string: \"10000000.00\"");
@@ -577,8 +1147,8 @@ public class CartDTOTest extends TestCase {
 	public void testGetPrice5() throws Exception {
 		CartDTO dto = new CartDTO();
 	    try{
-	    	BigDecimal postalMax = BigDecimal.valueOf(-10000000.00);
-	    	dto.setPrice(postalMax);
+	    	BigDecimal postalMin = BigDecimal.valueOf(-10000000.00);
+	    	dto.setPrice(postalMin);
 
 	    }catch (RuntimeException e) {
 	    	assertThat(e.getMessage(), "For input string: \"-10000000.00\"");
@@ -680,7 +1250,7 @@ public class CartDTOTest extends TestCase {
 		     dto.setTotal_price(postalMax);
 
 		} catch (RuntimeException e) {
-			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
+			assertThat(e.getMessage(), "For input string: \"10000000.00\"");
 		}
 	}
 
@@ -691,7 +1261,7 @@ public class CartDTOTest extends TestCase {
 	    	dto.setTotal_price(postalMin);
 
 	    }catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
+	    	assertThat(e.getMessage(), "For input string: \"-10000000.00\"");
 	    }
 	}
 
@@ -1725,574 +2295,4 @@ public class CartDTOTest extends TestCase {
 	    }
 	}
 
-
-	/**
-	 * カートIDを取得するメソッド
-	 * @return cart_id カートID
-	 */
-
-	public void testGetCart_id1() {
-		CartDTO dto = new CartDTO();
-		int expected = 0;
-
-		dto.setCart_id(expected);
-
-		assertEquals(expected, dto.getCart_id());
-
-	}
-
-	public void testGetCart_id2() {
-		CartDTO dto = new CartDTO();
-		int expected = 2147483647;
-
-		dto.setCart_id(expected);
-
-		assertEquals(expected, dto.getCart_id());
-	}
-
-	public void testGetCart_id3() {
-		CartDTO dto = new CartDTO();
-		int expected = -2147483647;
-
-		dto.setCart_id(expected);
-
-		assertEquals(expected, dto.getCart_id());
-	}
-
-	public void testGetCart_id4() throws Exception {
-		CartDTO dto = new CartDTO();
-		try {
-		     int postalMin = Integer.parseInt("-2147483649");
-		     dto.setCart_id(postalMin);
-
-		} catch (RuntimeException e) {
-			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-	}
-
-	public void testGetCart_id5() throws Exception {
-		CartDTO dto = new CartDTO();
-	    try{
-	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setCart_id(postalMax);
-
-	    } catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
-	    }
-	}
-
-
-	/**
-	 * カートIDを格納するメソッド
-	 * @param cart_id カートID
-	 */
-
-	public void testSetCart_id1() {
-		CartDTO dto = new CartDTO();
-		int expected = 0;
-
-		dto.setCart_id(expected);
-		int actual = dto.getCart_id();
-
-		assertEquals(expected, actual);
-	}
-
-	public void testSetCart_id2() {
-		CartDTO dto = new CartDTO();
-		int expected = 2147483647;
-
-		dto.setCart_id(expected);
-		int actual = dto.getCart_id();
-
-		assertEquals(expected, actual);
-	}
-
-	public void testSetCart_id3() {
-		CartDTO dto = new CartDTO();
-		int expected = -2147483647;
-
-		dto.setCart_id(expected);
-		int actual = dto.getCart_id();
-
-		assertEquals(expected, actual);
-	}
-
-	public void testSetCart_id4()throws Exception {
-		CartDTO dto = new CartDTO();
-		try {
-			int postalMin = Integer.parseInt("-2147483649");
-			dto.setCart_id(postalMin);
-
-		} catch (RuntimeException e) {
-			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-	}
-
-	public void testSetCart_id5() throws Exception {
-		CartDTO dto = new CartDTO();
-	    try {
-	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setCart_id(postalMax);
-
-	    } catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
-	    }
-	}
-
-
-	/**
-	 * 姓を取得するメソッド
-	 * @return family _name_kanji 姓
-	 */
-
-	public void testGetFamily_name_kanji1() {
-		CartDTO dto = new CartDTO();
-		String expected = null;
-
-		dto.setFamily_name_kanji(expected);
-		String actual = dto.getFamily_name_kanji();
-
-		assertEquals(expected, actual);
-	}
-
-	public void testGetFamily_name_kanji2() {
-		CartDTO dto = new CartDTO();
-		String expected = "";
-
-		dto.setFamily_name_kanji(expected);
-		String actual = dto.getFamily_name_kanji();
-
-		assertEquals(expected, actual);
-	}
-
-    public void testGetFamily_name_kanji3() {
-    	CartDTO dto = new CartDTO();
-    	String expected = " ";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetFamily_name_kanji4() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "　";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetFamily_name_kanji5() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetFamily_name_kanji6() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "あいう１２３";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetFamily_name_kanji7() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123あいう１２３";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetFamily_name_kanji8() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123あいう１２３漢字";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-
-    /**
-     * 姓を格納するメソッド
-     * @param family_name_kanji 姓
-     */
-
-    public void testSetFamily_name_kanji() {
-    	CartDTO dto = new CartDTO();
-    	String expected = null;
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetFamily_name_kanji2() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetFamily_name_kanji3() {
-    	CartDTO dto = new CartDTO();
-    	String expected = " ";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetFamily_name_kanji4() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "　";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetFamily_name_kanji5() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetFamily_name_kanji6() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "あいう１２３";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetFamily_name_kanji7() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123あいう１２３";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetFamily_name_kanji8() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123あいう１２３漢字";
-
-    	dto.setFamily_name_kanji(expected);
-    	String actual = dto.getFamily_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-
-    /**
-     * 名を取得するメソッド
-     * @param given_name_kanji 名
-     */
-
-	public void testGetGiven_name_kanji1() {
-		CartDTO dto = new CartDTO();
-		String expected = null;
-
-		dto.setGiven_name_kanji(expected);
-		String actual = dto.getGiven_name_kanji();
-
-		assertEquals(expected, actual);
-	}
-
-	public void testGetGiven_name_kanji2() {
-		CartDTO dto = new CartDTO();
-		String expected = "";
-
-		dto.setGiven_name_kanji(expected);
-		String actual = dto.getGiven_name_kanji();
-
-		assertEquals(expected, actual);
-	}
-
-    public void testGetGiven_name_kanji3() {
-    	CartDTO dto = new CartDTO();
-    	String expected =" ";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetGiven_name_kanji4() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "　";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetGiven_name_kanji5() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetGiven_name_kanji6() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "あいう１２３";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetGiven_name_kanji7() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123あいう１２３";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testGetGiven_name_kanji8() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123あいう１２３漢字";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-
-    /**
-     * 名を格納するメソッド
-     * @param given_name_kanji 名
-     */
-
-    public void testSetGiven_name_kanji1() {
-    	CartDTO dto = new CartDTO();
-    	String expected = null;
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetGiven_name_kanji2() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetGiven_name_kanji3() {
-    	CartDTO dto = new CartDTO();
-    	String expected = " ";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetGiven_name_kanji4() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "　";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetGiven_name_kanji5() {
-    	CartDTO dto = new CartDTO();
-    	String expected ="abc123";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetGiven_name_kanji6(){
-    	CartDTO dto = new CartDTO();
-    	String expected = "あいう１２３";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetGiven_name_kanji7() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123あいう１２３";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-    public void testSetGiven_name_kanji8() {
-    	CartDTO dto = new CartDTO();
-    	String expected = "abc123あいう１２３漢字";
-
-    	dto.setGiven_name_kanji(expected);
-    	String actual = dto.getGiven_name_kanji();
-
-    	assertEquals(expected, actual);
-    }
-
-
-    /**]
-     * 支払い方法を取得するメソッド
-     * @return payment_method 支払い方法
-     */
-
-	public void testGetPayment_method1() {
-		CartDTO dto = new CartDTO();
-		int expected = 0;
-
-		dto.setPayment_method(expected);
-
-		assertEquals(expected, dto.getPayment_method());
-	}
-
-	public void testGetPayment_method2() {
-		CartDTO dto = new CartDTO();
-		int expected = 2147483647;
-
-		dto.setPayment_method(expected);
-
-		assertEquals(expected, dto.getPayment_method());
-	}
-
-	public void testGetPayment_method3() {
-		CartDTO dto = new CartDTO();
-		int expected = -2147483647;
-
-		dto.setPayment_method(expected);
-
-		assertEquals(expected, dto.getPayment_method());
-	}
-
-	public void testGetPaymentMethod4() throws Exception {
-		CartDTO dto = new CartDTO();
-		try {
-		     int postalMin =Integer.parseInt("-2147483649");
-		     dto.setPayment_method(postalMin);
-
-		} catch (RuntimeException e) {
-			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-	}
-
-	public void testGetPaymentMethod5() throws Exception {
-		CartDTO dto = new CartDTO();
-	    try{
-	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setPayment_method(postalMax);
-
-	    } catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
-	    }
-	}
-
-
-	/**
-	 * 支払い方法を格納するメソッド
-	 * @param payment_method 支払い方法
-	 */
-
-	public void testSetPayment_method1() {
-		CartDTO test = new CartDTO();
-		int expected = 0;
-
-		test.setPayment_method(expected);
-		int actual = test.getPayment_method();
-
-		assertEquals(expected, actual);
-	}
-
-	public void testSetPayment_method2() {
-		CartDTO dto = new CartDTO();
-		int expected = 2147483647;
-
-		dto.setPayment_method(expected);
-		int actual = dto.getPayment_method();
-
-		assertEquals(expected, actual);
-	}
-
-	public void testSetPayment_method3() {
-		CartDTO dto = new CartDTO();
-		int expected = -2147483647;
-
-		dto.setPayment_method(expected);
-		int actual = dto.getPayment_method();
-
-		assertEquals(expected, actual);
-	}
-
-	public void testSetPayment_method4() throws Exception {
-		CartDTO dto = new CartDTO();
-		try {
-			int postalMin = Integer.parseInt("-2147483649");
-			dto.setPayment_method(postalMin);
-
-		} catch (RuntimeException e) {
-			assertThat(e.getMessage(), "For input string: \"-2147483649\"");
-		}
-	}
-
-	public void testSetPayment_method5() throws Exception {
-		CartDTO dto = new CartDTO();
-	    try{
-	    	int postalMax = Integer.parseInt("2147483648");
-	    	dto.setPayment_method(postalMax);
-
-	    }catch (RuntimeException e) {
-	    	assertThat(e.getMessage(), "For input string: \"2147483648\"");
-	    }
-	}
 }

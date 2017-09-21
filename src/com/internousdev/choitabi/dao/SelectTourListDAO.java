@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.SelectTourDTO;
-import com.internousdev.util.db.mysql.MySqlConnector;
+import com.internousdev.util.DBConnector;
 
 public class SelectTourListDAO {
 
@@ -28,8 +28,8 @@ public class SelectTourListDAO {
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			MySqlConnector msc = new MySqlConnector("choitabi");
-			Connection con = msc.getConnection();
+			DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root", "mysql");
+			Connection con = dbc.getConnection();
 			String sql = "SELECT * FROM tour WHERE tour_name LIKE ? AND theme LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, "%" + selectWord + "%");

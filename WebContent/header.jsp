@@ -57,7 +57,7 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="kanri_tourList.jsp"><s:text name="lang.header.tourlist"/></a></li>
-        <li><a href="kanri_toiawasekakunin.jsp"><s:text name="kanri_toiawaseKakunin"/></a></li>
+        <li><a href="kanri_toiawaseKakunin.jsp"><s:text name="kanri_toiawaseKakunin"/></a></li>
         <li><a href="LogoutAction"><s:text name="lang.header.logout"/></a></li>
           </ul>
     </div><!--/.nav-collapse -->

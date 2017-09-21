@@ -1,185 +1,143 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 <html>
 <head>
+<!-- 国際化 ※ここでは国を判別しています。
+    言語コード( ja,en など)を示すロケールID を取得します。-->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<fmt:setBundle basename="com.internousdev.choitabi.property.index"
+	var="lang" />
 <meta charset="UTF-8">
-<title>choitabi トップ</title>
-<!--  <link rel = "stylesheet" type = "text/css" href = "css/index.css">-->
-<!-- jqueryの宣言 -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js/jquery.bxslider/jquery.bxslider.js"></script>
-<link href="js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
+<link rel = "stylesheet" type= "text/css" href = "css/index.css">
+
+<!--マウスオーバー時のcssホバー  -------------------------------------------->
+<link rel = "stylesheet" type= "text/css" href = "css/imagehover.css">
+
+<!-- カルーセルスライドのcss -------------------------------------------------->
+<link rel = "stylesheet" type= "text/css" href = "css/slick-theme.css">
+<link rel = "stylesheet" type= "text/css" href = "css/slick.css">
 
 <link rel="shortcut icon" href="img/favicon.ico">
 
+<!--jqueryとslick(カルーセルスライド)のスクリプト  -------------------------------------------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+
+<title>ちょいたび</title>
 </head>
 
-
-
-<style>
-
-
-/*=============*/
-/*もみじ落ちてくる-----*/
-/*=============*/
-/*----------------------------------*/
-p.momiji01 img{
-width:0px;
-position: absolute;
-animation: moveM  3s  normal linear;
--webkit-border-radius: 200px;
-}
-@keyframes moveM {
-0% {top:0%;left:0%;opacity:1;width:100px;}
-90% {opacity:1;width:100px;}
-100% {top:80%;left:50%;opacity:0;width:100px;}
-}
-/*----------------------------------*/
-
-
-
-</style>
-
-
-
 <body>
-
-<!--ヘッダー部分----------------------------------------------->
+<!-- ヘッダー ------------------------------>
 <header>
-	<jsp:include page="header.jsp"/>
+        <jsp:include page="header.jsp"/>
 </header>
 
-
-
-
-
-
-
-
-
-
-<!--↓キャッチフレーズとスクロール画面の部分------------------------->
-
-
-<div class = "catchPhrase">【ちょいたびで、ちょいといい旅。】</div>
-
-<div class="flame">
-            <ul class="bxslider">
-            	<li><img src="img/kannontakikouen.jpg"></li>
-                <li><img src="img/chickennanban.jpg"></li>
-                <li><img src="img/hananukikeikoku.jpg"></li>
-                <li><img src="img/iruka_watching_tour.jpg"></li>
-                <li><img src="img/sarugakyou_bungee.jpg"></li>
-                <li><img src="img/yokosukakaiguncurry.jpg"></li>
-                <li><img src="img/paraglider_tandem_flight.jpg"></li>
-                <li><img src="img/obanzai.jpg"></li>
-            </ul>
-    <script type="text/javascript" src ="js/index.js"></script>
+<!-- カルーセルスライドしている画像 --------------------------------------------------------------------------->
+<div class="main_img">
+     <div class= "img"><img src="img/aquamarine_hukusima.jpg"  height= "280" width="378"></div>
+     <div class= "img"><img src="img/hananukikeikoku.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/iruka_watching_tour.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/mihuneyamarakuen.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/oirasekeiryu.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/nanbayasakazinja.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/sarugakyou_bungee.jpg" height= "280" width="378"></div>
+     <div class= "img"><img src="img/zundamochi.jpg" height= "280" width="378"></div>
 </div>
 
-<!--↓ここからメイン画面------------------------------------------>
+<!-- カルーセルスライドのオプション ----->
+<script>
+$(function(){
+$('.main_img').slick({
+	slidesToShow: 4,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
+	  arrows:true,
+	  dots:true,
+	});
+});
+</script>
 
+<div class= "phrase"><h1><s:text name="lang.index.catch"/></h1></div>
 
-    <!--↓検索メニューの部分-->
+<!-- 検索アイコン↓ -->
+    <div class= "theme_box">
+    <h2><s:text name="lang.index.searchT"/></h2>
+    <div class="theme_sub">
+    <figure class="imghvr-hinge-left" >
+  <img src="img/gourmet_pict.png"  height= "150" width="150">
+  <figcaption>
+    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><b><s:text name="lang.index.gourmet"  /></b></a>
+  </figcaption>
+</figure>
+</div>
 
-    <!-- ここからサイドバー -->
-    <div class = "sidebar">
-       <ul class = "outline">
-            <li>
-                <div class = "category">テーマで探す</div>
-                <ul class = "menu">
-                    <li><a href = "./gourmet.jsp">グルメ</a></li>
-                    <li><a href = "./place.jsp">名所</a></li>
-                    <li><a href = "./activity.jsp">アクティビティ</a></li>
-                </ul>
-            </li>
-            <li>
-                <div class = "category">エリアで探す</div>
-                <ul class = "menu">
-                    <li><a href = "./touhoku.jsp">東北</a></li>
-                    <li><a href = "#">関東</a></li>
-                    <li><a href = "#">関西</a></li>
-                    <li><a href = "#">九州</a></li>
-                </ul>
-            </li>
-        </ul>
-    <script type = "text/javascript" src = "script.js"></script>
+ <div class="theme_sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/place_pict.png" height= "150" width="150">
+  <figcaption>
+    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'名所'}"/></s:url>'><b><s:text name="lang.index.spot"/></b></a>
+  </figcaption>
+</figure>
+</div>
+
+ <div class="theme_sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/activity_pict.png" height= "150" width="150">
+  <figcaption>
+    <a href='<s:url action="TourListAction"><s:param name="theme" value="%{'アクティビティ'}"/></s:url>'><b><s:text name="lang.index.activity"/></b></a>
+  </figcaption>
+</figure>
+</div>
     </div>
-		<!-- ここまでサイドバー -->
 
- <!--↓ツアーの一覧を表示する部分---------------------------------->
-<div class = "mainArea">
-    <div class = "TourList">
-        <div class = "post">
-            <h2><a href="touhoku.jsp">東北ツアー</a></h2>
-            <p><a href="touhoku.jsp">そうだ、東北に</a></p>
-                <div class="img">
-                    <img class="Tohoku" src="img/touhokutop.jpg">
-                </div>
-        </div>
+     <div class= "area_box">
+    <h2><s:text name="lang.index.searchA"/></h2>
+    <div class="area_sub">
+    <figure class="imghvr-hinge-left" >
+  <img src="img/touhoku_pict.jpg" height= "150" width="150">
+  <figcaption>
+   <a href='<s:url action="TourListAction"><s:param name="region" value="%{'東北'}"/></s:url>'> <b><s:text name="lang.index.TOHOKU"/></b></a>
+  </figcaption>
+</figure>
+</div>
 
-        <div class = "post">
-            <h2><a href="activity.jsp">アクティビティツアー</a></h2>
-            <p><a href="activity.jsp">本格的な秋が始まる１０月は色々なアクティビティが目白押し！！</a></p>
-            <img class="raft" src="img/raft.jpg">
-        </div>
+ <div class="area_sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/kantou_pict.jpg" height= "150" width="150">
+  <figcaption>
+    <a href='<s:url action="TourListAction"><s:param name="region" value="%{'関東'}"/></s:url>'><b><s:text name="lang.index.KANTO"/></b></a>
+  </figcaption>
+</figure>
+</div>
+
+ <div class="area_sub">
+<figure class="imghvr-hinge-left"  >
+  <img src="img/kansai_pict.jpg" height= "150" width="150">
+  <figcaption>
+    <a href='<s:url action="TourListAction"><s:param name="region" value="%{'関西'}"/></s:url>'><b><s:text name="lang.index.KANSAI"/></b></a>
+  </figcaption>
+</figure>
+</div>
+
+<div class="area_sub">
+<figure class="imghvr-hinge-left" >
+  <img src="img/kyushu_pict.jpg" height= "150" width="150">
+  <figcaption>
+    <a href='<s:url action="TourListAction"><s:param name="region" value="%{'九州'}"/></s:url>'><b><s:text name="lang.index.KYUSYU"/></b></a>
+  </figcaption>
+</figure>
+</div>
     </div>
-</div>
+    <script type="text/javascript" src="js/slick.min.js"></script>
 
-<div class = "clear"></div>
-<div class = "tourgallery">
-	<div class="content">
-		<img class="sea" src="img/sea.jpg">
-
-	</div>
-	<h1></h1>
-</div>
-
-<!--↓ここから------------------------------------------>
-
-<article>
-	<ul>
-		<li>
-			<figure class="">
-				<img src="img/sea.jpg"  width="400" height="300">
-				<figcaption>
-					<h2>海</h2>
-					<p>海岸線を走る</p>
-				</figcaption>
-				<a rel="leanModal" href=""></a>
-		</li>
-	</ul>
-</article>
-
-<!--↑ここまで------------------------------------------>
-
-
-<!--↓ここからフッター------------------------------------------>
-<div class = "footer">
-
-    <div class = "ARRLogo">All Rights Reserved.</div>
-    <div class = "footerMenuBox">
-        <div class = "footerMenu"><div class = "divlink1"><a href = "./companys outline.jsp">会社概要</a></div></div>
-        <div class = "footerMenu"><div class = "divlink1"><a href = "./kiyaku.jsp">利用規約</a></div></div>
-    </div>
-    <div class = "clear"></div>
-
-</div>
-
-
-
-<!--もみじ落ちてくる--------------------->
-<p class="momiji01">
-    <a href = "">
-        <img src = "img/momiji.png" width="100px" height="100px">
-    </a>
-</p>
-<!----------------------------------------->
-
-
-
-
+    <!-- フッター -->
+    <footer>
+          <jsp:include page="footer.jsp"/>
+</footer>
 </body>
 </html>
