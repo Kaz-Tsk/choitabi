@@ -1,5 +1,6 @@
 
 body{
+	padding-top:16%;
     margin-right:auto;
     margin-left:auto;
     text-align:center;
@@ -15,7 +16,7 @@ h1{
 
 .display{
 	position:relative;
-	width: 1500px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top:80px;
