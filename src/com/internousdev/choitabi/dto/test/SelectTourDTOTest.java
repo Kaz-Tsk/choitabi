@@ -10,6 +10,8 @@ public class SelectTourDTOTest {
 
 	/*個人的メモ
 	 * 旅癒さん参考
+	 *
+	 * 【セッターのテストのコード】
 	 * 変数は「expected」「actual」の2つを用意。答えの予想値として設定した値と、実際の戻り値を表す。
 	 * 「expected」をsetterでセットし、「actual」をgetterで取得する。
 	 * 両者が同じであれば試験は成功と判断される。
@@ -17,7 +19,7 @@ public class SelectTourDTOTest {
 	 *
 	 * intで範囲外の数値を入れる場合…最大値は「2147483647」、最小値は「-2147483648」
 	 * これより大きい/小さい数値を入れて例外を起こさせ、例外処理の中でテストが成功したかどうかの判断を行う。
-	 * 旅癒さんのテストケースでは、範囲外の数値は最初、文字列として入れ、「Integer.oarseInt()」で数値に変換させている。
+	 * 旅癒さんのテストケースでは、範囲外の数値は最初、文字列として入れ、「Integer.parseInt()」で数値に変換させている。
 	 * （数値を直接入れようとすると「その数値は範囲外です」とコンパイルエラーになりました。おそらくこのため）
 	 *
 	 * private int tourId;     getter/ setter
@@ -32,6 +34,7 @@ public class SelectTourDTOTest {
 	 * private String img;     getter/ setter
 	 */
 
+	//TourIDゲッターのテストメソッド-----------------------------------------------------------------------------
 	@Test //0
 	public void testGetTourId1() {
 		SelectTourDTO dto = new SelectTourDTO();
@@ -67,13 +70,32 @@ public class SelectTourDTOTest {
 		assertEquals(expected, actual);
 	}
 
-	@Test //レンジ範囲外（Exceptionを起こす）
+	@Test //レンジ範囲外（Exceptionを起こす）：最大値2147483647 + 1
 	public void testGetTourId4() {
+		SelectTourDTO dto = new SelectTourDTO();
+		try {
+			int postalMax= Integer.parseInt("2147483648");
+			dto.setTourId(postalMax);
 
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(),"For input string: \"2147483648\"");
+		}
+	}
+
+	@Test //レンジ範囲外（Exceptionを起こす）：最小値-2147483648 - 1
+	public void testGetTourId5() {
+		SelectTourDTO dto = new SelectTourDTO();
+		try {
+			int postalMin = Integer.parseInt("-2147483649");
+			dto.setTourId(postalMin);
+
+		} catch (RuntimeException e) {
+			assertThat(e.getMessage(),"For input string: \"-2147483649\"");
+		}
 	}
 
 
-	//↓TourIdセッターのテストメソッド------------------------------------------------
+	//↓TourIdセッターのテストメソッド-------------------------------------------------------------------------
 
 
 	@Test
@@ -169,6 +191,13 @@ public class SelectTourDTOTest {
 	@Test
 	public void testSetImg() {
 		fail("まだ実装されていません");
+	}
+
+
+	//例外処理で使うassertThatメソッド------------------------------------------
+
+	public void assertThat(String message, String string){
+		assertEquals(message, string);
 	}
 
 }
