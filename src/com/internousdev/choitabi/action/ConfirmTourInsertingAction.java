@@ -88,12 +88,9 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 			e.printStackTrace();
 		}
 
-
-
 		if(errorMsg.equals("")){
 			result = SUCCESS;
 		}
-		/*後消し*/System.out.println("ConfirmnewingAction - result : " + result);
 		return result;
 
 	}

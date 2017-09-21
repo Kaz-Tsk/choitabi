@@ -87,19 +87,20 @@ public class KanriContactAction extends ActionSupport {
          KanriContactDAO dao =new KanriContactDAO();
          if(searchName == null){
 	            searchName = "";
-	        }
-	        searchName = searchName.trim();
+	     }
+	     
+         searchName = searchName.trim();
          searchList = dao.display("searchName");//この名前で検索したデータすべてをsearchListに入れる
 
          if(searchName == null || searchName.equals("")) {
              searchList = dao.display("");
              result=SUCCESS;
-             }
+         }
 
          else if(searchName != null) {
              searchList = dao.display(searchName);
              result=SUCCESS;
-             }
+         }
 
          number=searchList.size();//searchListに入ったデータの個数をnumberに記録する
 

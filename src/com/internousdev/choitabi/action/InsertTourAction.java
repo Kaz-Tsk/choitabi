@@ -53,18 +53,7 @@ public class InsertTourAction extends ActionSupport {
 	public String execute() throws IllegalAccessException, InstantiationException, SQLException{
 		String result = ERROR;
 		int count = 0;
-
 		InsertTourDAO itdao = new InsertTourDAO();
-//		/*動作確認*/System.out.println("InsertTourAction - 1 :" + newTourName);
-//		/*動作確認*/System.out.println("InsertTourAction - 2 :" + newPrice);
-//		/*動作確認*/System.out.println("InsertTourAction - 3 :" + newPersons);
-//		/*動作確認*/System.out.println("InsertTourAction - 4 :" + newDeparture);
-//		/*動作確認*/System.out.println("InsertTourAction - 5 :" + newRegion);
-//		/*動作確認*/System.out.println("InsertTourAction - 6 :" + newPrefectures);
-//		/*動作確認*/System.out.println("InsertTourAction - 7 :" + newTheme);
-//		/*動作確認*/System.out.println("InsertTourAction - 8 :" + newComment);
-//		/*動作確認*/System.out.println("InsertTourAction - 9 :" + newImg);
-
 
 		count = itdao.insertTour(newTourName, newPrice,newPersons,
 	                            		 newDeparture, newRegion, newPrefectures, newTheme, newComment, newImg);/*←（）内は全部引数です*/
@@ -73,7 +62,6 @@ public class InsertTourAction extends ActionSupport {
 			result = SUCCESS;
 		}
 
-		/*後消し*/System.out.println("UpdateTourAction - result :" + result );
 		return result;
 	}
 
