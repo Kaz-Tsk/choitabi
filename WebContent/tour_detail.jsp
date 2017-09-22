@@ -25,7 +25,9 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
+
 <title>chitabi-ツアー詳細</title>
+
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -50,91 +52,78 @@
 		<s:include value="header.jsp" />
 	</header>
 
+<!-- ヘッダーここまで -->
+
+
 <div class="center">
+
 <div class="sidebar">
 	<s:include value="test_tour.jsp" />
 </div>
 
-<!-- ここまで -->
 
 	<div class="contents">
 
-		<div class="subtitle"><s:text name="lang.tour_detail.subtitle" /></div>
+		<div class="subtitle">
+		    <s:text name="lang.tour_detail.subtitle" />
+		</div>
 
 		<s:form action="InsertCartAction">
 			<s:iterator value="displayList">
 
-						<p class="tour_name">
-							<s:property value="tour_name" />
-						</p>
-						<img src="<s:property value= "img"/>" class= "img">
-
-<table>
-  <tr>
-    <th>価格</th>
-    <td class="tour_price">￥<fmt:formatNumber value="${price}" pattern="###,###,###" />
-	<span class="tax"><s:text name="lang.tour_detail.tax"></s:text></span></td>
-</tr>
-<tr>
-<th>出発駅</th>
-<td></td>
-</tr>
-<tr>
-<th>場所</th>
-<td></td>
-</tr>
-<tr>
-<th><s:text name="lang.tour_detail.comment" /></th>
-<td><s:property escape="false" value="comment" /></td></tr>
-</table>
-
-					<div id="right-content">
-
-						<div id="item_infomation">
-
-							<p class="tour_detail">
-								<s:text name="lang.tour_detail.comment" />
-								<!--  国際化対応の”商品詳細”入れ込み -->
-							</p>
-							<div class="tour_comment" >
-								<s:property escape="false" value="comment" />
-							</div>
-						</div>
+				<p class="tour_name">
+						<s:property value="tour_name" />
+				</p>
 
 
-							<div class="shopping-cart">
-
-						<input type="hidden" name="tour_id"
-							value="<s:property value="tour_id"/>" />
+				<img src="<s:property value= "img"/>" class= "img">
 
 
-                      <!-- 参加人数 必要か不必要か -->
-						<s:text name="lang.tour_detail.persons" />
-						<select name="order_count">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-						</select> <input type="submit" class="btn btn-warning"
-							value="<s:text name= "lang.tour_detail.cart"/>" />
+				<table style="border:solid 1px white">
+				    <tr>
+				        <th><s:text name="lang.tour_detail.comment" /></th>
+				        <td><s:property escape="false" value="comment" /></td>
+				    </tr>
+				    <tr>
+				        <th class="priceth">価格</th>
+				        <td><div class="pricetd">￥<fmt:formatNumber value="${price}" pattern="###,###,###" />
+				        <span class="tax">
+				            <s:text name="lang.tour_detail.tax" />
+				        </span>
+				        </div>
+				        </td>
+				    </tr>
+				</table>
+
+		<div class="shoppingcart">
+
+			<input type="hidden" name="tour_id"
+				   value="<s:property value="tour_id"/>" />
+
+
+            <!-- 参加人数 必要か不必要か -->
+				<s:text name="lang.tour_detail.persons" />
+					<select name="order_count">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+					</select> <input type="submit" class="btn btn-warning"
+			         	      		 value="<s:text name= "lang.tour_detail.cart"/>" />
 
 					</div>
 
-
-</div>
-
 	</s:iterator>
-
 
 	</s:form>
 
-    </div>
+	</div>
     </div>
 
 

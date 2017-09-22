@@ -6,7 +6,7 @@
     margin-top:30px;
 	margin-right:40px;
     padding-top:20px;
-    padding-left:30px;
+    padding-left:22px;
     height:400px;
     width:200px;
 }
@@ -14,32 +14,13 @@
 .center {
 	width: 1500px;
 	margin: 0 auto;
-	text-align: center;
 }
 
 .contents{
     position:absolute;
-    left:20%;
-    margin-top:5%;
-    height:100%;
+    left:317px;
+    margin-top:79px;
     width:1170px;
-}
-
-div {
-	text-align: center;
-	vertical-align: center;
-}
-
-.display_list {
-	position: relative;
-	text-align: center;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	background-color: #fff;
-	padding-bottom: 10px;
-	margin-bottom:100px;
-	float: left;
 }
 
 .subtitle {
@@ -55,17 +36,17 @@ div {
 	min-width:285px;
 }
 
-.tour_img {
+.img {
+	float: right;
+	padding-right: 100px;
 	height:300px;
-	width: 300px;
-	padding-top: 50px;
+	width: 400px;
 }
 
 .tour_name {
 	color: #ff8040;
 	font-weight: bold;
-	padding-top: 50px;
-	padding-left: 20px;
+	padding-left: 50px;
 	font-size: 40px;
 	float: left;
 }
@@ -76,14 +57,41 @@ div {
 	font-size: 17px;
 }
 
-.tour_comment {
-
-}
 
 table {
-	border-line: 1px;
+	margin-top: 50px;
+	margin-bottom: 90px;
+	border-color: white;
+	margin-left: 50px;
+	font-size:18px;
 }
 
 footer {
-	margin-bottom:0;
+	margin-top:634px;
+}
+
+th {
+	width: 50px;
+	vertical-align: top;
+}
+
+td {
+	width: 450px;
+	text-align: left;
+}
+
+.priceth {
+	height: 100px;
+	vertical-align: middle;
+}
+
+.pricetd {
+	float: left;
+	color: red;
+	font-weight: bold;
+}
+
+.shoppingcart {
+	float: right;
+	padding-right: 100px;
 }
