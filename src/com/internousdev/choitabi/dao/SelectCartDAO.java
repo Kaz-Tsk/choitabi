@@ -25,14 +25,13 @@ public class SelectCartDAO {
 		Connection con = db.getConnection();
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
-		String sql = "select * from cart where user_id=?";
+		String sql = "select * from purchases where user_id=?";
 		String select2 = "SELECT * FROM tour WHERE tour_id=?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, user_id);
 			ResultSet rs = ps.executeQuery();
-			/*動作確認*/System.out.println("SelectCartDAO - rs：" + rs);
 
 			while(rs.next()) {
 				CartDTO dto = new CartDTO();
@@ -53,24 +52,22 @@ public class SelectCartDAO {
 					dto.setSub_total(dto.getPrice().multiply(BigDecimal.valueOf(dto.getOrder_count())));
 					dto.setImg(rs2.getString("img"));
 
-					/*subtotal.add((cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
-					cartList.get(i).setSubtotal(subtotal);*/
 				}
+
 			}
 
-		}catch(SQLException e) {
+		} catch(SQLException e) {
 			e.printStackTrace();
 
-		}finally {
+		} finally {
 			try {
 				con.close();
 
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+		    }catch(Exception e) {
+		    	e.printStackTrace();
+		    }
 		}
 
-		/*動作確認*/System.out.println("SelectCartDAO：確認" + cartList);
 		return cartList;
 	}
 

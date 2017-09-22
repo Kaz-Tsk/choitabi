@@ -96,7 +96,6 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
 
     public String execute() throws SQLException{
         String result = ERROR;
-        /*動作確認*/System.out.println("UpdateCartAction - 予約人数：" + order_count);
 
         if(session.containsKey("userId")) {
         	user_id = (int) session.get("userId");
@@ -106,24 +105,21 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
 
         	updateCount = ucDao.updateCart(cart_id, user_id, order_count, price);
         	cartList = scDao.selectCart(user_id);
-        	/*動作確認*/System.out.println("UCAction-更新データ数：" + updateCount);
 
 	        if (cartList.size() > 0) {
 	        	for(int i = 0; i < cartList.size(); i++) {
 
-	        		///*動作確認*/System.out.println("UpdateCartAction-取得価格：" + total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())))));
-
 	        		total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
-	            	/*動作確認*/System.out.println("UCAction - 更新後合計金額：" + total_price);
+
 	        		result = SUCCESS;
 	        	}
 
+            }
+
         }
 
-
-        /*動作確認*/System.out.println("UpdateCartAction - 結果：" + result);
-        }
         return result;
+
     }
 
 

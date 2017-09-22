@@ -12,6 +12,7 @@ import com.internousdev.util.DBConnector;
 
 
 /**
+ * ツアー詳細を表示するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/13
  * @version 1.0
@@ -20,7 +21,6 @@ import com.internousdev.util.DBConnector;
 public class TourDetailDAO {
 
 	public ArrayList<TourDTO> select(int tour_id) {
-		/*動作化確認*/System.out.println("TourDetailDAO - 取得ID：" + tour_id);
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
 		Connection con = db.getConnection();
 		TourDTO dto = new TourDTO();
@@ -47,16 +47,14 @@ public class TourDetailDAO {
 
 			}
 
-		}
-		catch(SQLException e) {
+		} catch(SQLException e) {
 			e.printStackTrace();
-		}
 
-		finally {
+		} finally {
 			try {
 				con.close();
 
-			}catch(SQLException e) {
+			} catch(SQLException e) {
 				e.printStackTrace();
 			}
 		}

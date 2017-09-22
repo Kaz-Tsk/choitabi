@@ -63,21 +63,21 @@
 			<table class="cartlist">
 			    <thead>
 					<tr>
-					    <th><s:text name="lang.cart.img" /></th>
+					    <th class="img"><s:text name="lang.cart.img" /></th>
 						<th><s:text name="lang.cart.tour_name" /></th>
-						<th><s:text name="lang.cart.price" /></th>
-						<th><s:text name="lang.cart.order_count" /></th>
-						<th><s:text name="lang.cart.sub_total" /></th>
-						<th><s:text name="lang.cart.order_count" /></th>
-						<th><s:text name="lang.cart.delete" /></th>
+						<th class="okisa"><s:text name="lang.cart.price" /></th>
+						<th class="okisa"><s:text name="lang.cart.order_count" /></th>
+						<th class="okisa"><s:text name="lang.cart.sub_total" /></th>
+						<th class="okisa"><s:text name="lang.cart.order_count" /></th>
+						<th class="okisa"><s:text name="lang.cart.delete" /></th>
 					</tr>
 				</thead>
 
 				<tbody>
 					<s:iterator value="cartList">
 						<tr>
-							<td><img src="<s:property value="img" />" alt=""
-								width="100" height="100"></td>
+							<td class="img2"><img src="<s:property value="img" />" alt=""
+								width="130" height="100"></td>
 							<td><s:property value="tour_name" /></td>
 
 							<td><fmt:formatNumber value="${price}" pattern="###,###,###" />
@@ -126,7 +126,7 @@
 					</s:iterator>
 					</tbody>
 			</table>
-			<h2 class="text-danger text-right">
+			<h2 class="total">
 				<s:text name="lang.cart.total_price" />
 				<fmt:formatNumber value="${total_price}" pattern="###,###,###" />
 				<s:text name="lang.cart.tax_include" />

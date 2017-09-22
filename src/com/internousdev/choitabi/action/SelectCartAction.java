@@ -82,7 +82,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * 実行メソッド
 	 * 1：セッション情報を持っているか判断
-	 * 2：session内のuser_idを使用し、カートへ登録された情報を取得
+	 * 2：session内のuserIdを使用し、カートへ登録された情報を取得
 	 * 3：カート内の情報を元に合計金額を算出
 	 *
 	 * @author HINAKO HAGIWARA
@@ -96,31 +96,26 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 
 		if (session.containsKey("userId")) {
 			user_id = (int) session.get("userId");
-			SelectCartDAO scDao = new SelectCartDAO();
-			cartList = scDao.selectCart(user_id);
+
+			SelectCartDAO dao = new SelectCartDAO();
+			cartList = dao.selectCart(user_id);
 
 			if(cartList.size()>0){
 				for(int i = 0; i <cartList.size(); i++) {
 
-					/*動作確認*/System.out.println("SelectCartAciton-price:"+ (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
-
-					/*BigDecimal型の計算方法
-					 * + * - / などは使えず、加法はadd、減法はsubtract、乗法はmultiply、除法はdivideを使用する
-					 * BigDecimalと他の型の計算は出来ないので、int型などはvalueOfでBigDecimalに変換してあげる*/
 					total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
 
 				}
 
 			result = SUCCESS;
 
-			/*動作確認*/System.out.println("SelectCartAction - 結果：" + result);
-			/*動作確認*/System.out.println("SelectCartAction - ユーザーID：" + user_id);
-
 			}
+
 		}
 
 		return result;
-		}
+
+	}
 
 
 

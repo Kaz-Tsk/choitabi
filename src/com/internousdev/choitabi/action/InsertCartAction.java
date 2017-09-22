@@ -107,31 +107,24 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	public String execute() throws SQLException {
 		String result = ERROR;
 
-		/*動作確認*/System.out.println("InsertCartAction - session：" + session.containsKey("userId"));
-
 		if(session.containsKey("userId")) {
 			user_id = (int) session.get("userId");
-			InsertCartDAO icDao = new InsertCartDAO();
-			tourStatus = icDao.tourStatus(tour_id);
-			this.price = tourStatus.get(0).getPrice();
-			addCount = icDao.addToCart(user_id, tour_id, order_count, price);
-			cartList = icDao.selected(user_id);
 
-			System.out.println("ICAction:" + total_price);
+			InsertCartDAO dao = new InsertCartDAO();
+
+			tourStatus = dao.tourStatus(tour_id);
+			this.price = tourStatus.get(0).getPrice();
+			addCount = dao.addToCart(user_id, tour_id, order_count, price);
+			cartList = dao.selected(user_id);
 
 			if(cartList.size() > 0) {
 				for(int i = 0; i < cartList.size(); i++) {
 
 					total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
 
-					/*動作確認*/System.out.println(("InsertCartAction - 合計金額：" + total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))))));
-
 				}
 
 				result = SUCCESS;
-
-				/*動作確認*/System.out.println("InsertCartAction - 結果：" + result);
-				/*動作確認*/System.out.println("取得ユーザーID：" + user_id);
 
 			}
 		}

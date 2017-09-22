@@ -2,6 +2,8 @@ package com.internousdev.choitabi.dto;
 
 import java.math.BigDecimal;
 
+
+
 /**
  * カート情報に関するDTOクラス
  * @author HINAKO HAGIWARA
@@ -99,7 +101,7 @@ public class CartDTO {
      */
     public int getCart_id() {
         return cart_id;
-        }
+    }
 
     /**
      * カートIDを格納するメソッド
@@ -107,7 +109,7 @@ public class CartDTO {
      */
     public void setCart_id(int cart_id) {
         this.cart_id = cart_id;
-        }
+    }
 
     /**
      * ユーザーIDを取得するメソッド
@@ -115,7 +117,7 @@ public class CartDTO {
      */
     public int getUser_id() {
         return user_id;
-        }
+    }
 
     /**
      * ユーザーIDを格納するメソッド
@@ -123,7 +125,7 @@ public class CartDTO {
      */
     public void setUser_id(int user_id) {
         this.user_id = user_id;
-        }
+    }
 
     /**
      * 姓を取得するメソッド
@@ -179,7 +181,7 @@ public class CartDTO {
      */
     public int getTour_id() {
         return tour_id;
-        }
+    }
 
     /**
      * ツアーIDを格納するメソッド
@@ -187,7 +189,7 @@ public class CartDTO {
      */
     public void setTour_id(int tour_id) {
         this.tour_id = tour_id;
-        }
+    }
 
     /**
      * ツアー名を取得するメソッド
@@ -195,7 +197,7 @@ public class CartDTO {
      */
     public String getTour_name() {
         return tour_name;
-        }
+    }
 
     /**
      * ツアー名を格納するメソッド
@@ -203,7 +205,7 @@ public class CartDTO {
      */
     public void setTour_name(String tour_name) {
         this.tour_name = tour_name;
-        }
+    }
 
     /**
      * 予約人数を取得するメソッド
@@ -211,7 +213,7 @@ public class CartDTO {
      */
     public int getOrder_count() {
         return order_count;
-        }
+    }
 
     /**
      * 予約人数を格納するメソッド
@@ -219,7 +221,7 @@ public class CartDTO {
      */
     public void setOrder_count(int order_count) {
         this.order_count = order_count;
-        }
+    }
 
     /**
      * 価格を取得するメソッド
@@ -227,7 +229,7 @@ public class CartDTO {
      */
     public BigDecimal getPrice() {
         return price;
-        }
+    }
 
     /**
      * 価格を格納するメソッド
@@ -235,7 +237,7 @@ public class CartDTO {
      */
     public void setPrice(BigDecimal price) {
         this.price = price;
-        }
+    }
 
     /**
      * 合計金額を取得するメソッド
@@ -243,7 +245,7 @@ public class CartDTO {
      */
     public BigDecimal getTotal_price() {
         return total_price;
-        }
+    }
 
     /**
      * 合計金額を格納するメソッド
@@ -251,7 +253,7 @@ public class CartDTO {
      */
     public void setTotal_price(BigDecimal total_price) {
         this.total_price = total_price;
-        }
+    }
 
     /**
     * 備考を取得するメソッド
@@ -291,7 +293,7 @@ public class CartDTO {
      */
     public String getRegistration_date() {
         return registration_date;
-        }
+    }
 
     /**
      * 登録日を格納するメソッド
@@ -299,7 +301,7 @@ public class CartDTO {
      */
     public void setRegistration_date(String registration_date) {
         this.registration_date = registration_date;
-        }
+    }
 
     /**
      * 更新日を取得するメソッド
@@ -307,7 +309,7 @@ public class CartDTO {
      */
     public String getUpdated_date() {
         return updated_date;
-        }
+    }
 
     /**
      * 更新日を格納するメソッド
@@ -315,7 +317,7 @@ public class CartDTO {
      */
     public void setUpdated_date(String updated_date) {
         this.updated_date = updated_date;
-        }
+    }
 
     /**
      * ツアーカテゴリーを取得するメソッド
@@ -323,7 +325,7 @@ public class CartDTO {
      */
     public String getTour_category() {
     	return tour_category;
-    	}
+    }
 
     /**
      * ツアーカテゴリーを格納するメソッド
@@ -339,7 +341,7 @@ public class CartDTO {
      */
     public BigDecimal getSub_total() {
         return sub_total;
-        }
+    }
 
     /**
      * 小計を格納するメソッド
@@ -347,6 +349,6 @@ public class CartDTO {
      */
     public void setSub_total(BigDecimal sub_total) {
         this.sub_total = sub_total;
-        }
+    }
 
 }

@@ -97,21 +97,20 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 */
 
 	public String execute() throws SQLException {
-		/*動作確認*/System.out.println("TourDetailAction - JSPから取得したID：" + tour_id);
 		String result = ERROR;
+
 		TourDetailDAO dao = new TourDetailDAO();
 		displayList = dao.select(tour_id);
 
 		if(displayList.size() != 0) {
-			/*テスト中*/
 			this.tour_name = displayList.get(0).getTour_name();
 			this.img = displayList.get(0).getImg();
-			/**/
+
 			result = SUCCESS;
 		}
 
-		/*動作確認*/System.out.println("TourDetailAction - result:" + result);
 		return result;
+
 	}
 
 
@@ -309,4 +308,3 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
         }
 
 }
-

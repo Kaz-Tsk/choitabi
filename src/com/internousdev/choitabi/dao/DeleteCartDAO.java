@@ -30,23 +30,23 @@ public class DeleteCartDAO {
 		int delete = 0;
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/?useSSL=true&requireSSL=true","choitabi","root","mysql");
 		Connection con = db.getConnection();
-		String sql = "delete from cart where user_id=? and cart_id=?";
+		String sql = "delete from purchases where user_id=? and cart_id=?";
 
-		try{
+		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, user_id);
 			ps.setInt(2, cart_id);
 
 			delete = ps.executeUpdate();
 
-		}catch(SQLException e) {
+		} catch(SQLException e) {
 			e.printStackTrace();
 
-		}finally {
+		} finally {
 			try {
 				con.close();
 
-			}catch(SQLException e) {
+			} catch(SQLException e) {
 				e.printStackTrace();
 			}
 		}

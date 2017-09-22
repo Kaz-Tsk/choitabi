@@ -40,29 +40,32 @@ public class InsertCartDAO {
 				scDto.setImg(rs.getString("img"));
 
 				tourStatus.add(scDto);
-				}
+			}
 
-		}catch(SQLException e) {
+		} catch(SQLException e) {
 			e.printStackTrace();
 
-		}finally {
+		} finally {
 			try {
 				con.close();
 
-			}catch(SQLException e) {
+			} catch(SQLException e) {
 				e.printStackTrace();
 			}
 		}
 
 		return tourStatus;
+
 	}
+
+
 
 	public int addToCart(int user_id, int tour_id, int order_count, BigDecimal price) {
 		int addCount = 0;
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
 		Connection con = db.getConnection();
-		String sql = "insert into cart (user_id, tour_id, order_count, price) values(?, ?, ?, ?)";
+		String sql = "insert into purchases (user_id, tour_id, order_count, price) values(?, ?, ?, ?)";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -72,22 +75,23 @@ public class InsertCartDAO {
 			ps.setBigDecimal(4, price);
 			addCount = ps.executeUpdate();
 
-		}catch(SQLException e) {
+		} catch(SQLException e) {
 			e.printStackTrace();
 
-		}finally {
+		} finally {
 			if(con != null) {
 				try {
 					con.close();
 
-				}catch(SQLException e) {
+				} catch(SQLException e) {
 					e.printStackTrace();
 				}
 			}
 		}
 
 		return addCount;
-		}
+
+	}
 
 
 
@@ -102,23 +106,17 @@ public class InsertCartDAO {
 
 	public ArrayList<CartDTO> selected(int user_id) {
 
-		/*MySQLでSSL接続するには、jdbc:mysql://localhost/の後に、?useSSL=true&requireSSL=true を書く
-		 * コンソールで 『Establishing SSL connection without server's identity verification is not recommended.』と出てきたら
-		 * 上記を付与してあげる*/
-
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/?useSSL=true&requireSSL=true","choitabi","root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
-		String sql = "select * from cart where user_id = ?";
+		String sql = "select * from purchases where user_id = ?";
 		String select2 = "SELECT * FROM tour WHERE tour_id = ?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1,  user_id);
 			ResultSet rs = ps.executeQuery();
-
-			/*動作確認*/System.out.println("InsertCartDAO - rs：" + rs);
 
 			while(rs.next()) {
 				CartDTO dto = new CartDTO();
@@ -139,27 +137,21 @@ public class InsertCartDAO {
 					dto.setSub_total(dto.getPrice().multiply(BigDecimal.valueOf(dto.getOrder_count())));
 					dto.setImg(rs.getString("img"));
 
-					/*私的メモ
-					 * subtotal.add((cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
-					 * cartList.get(i).setSubtotal(subtotal);
-					 * subtotal = (cartList.get(i).getPrice()).multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()));
-					 * cartList.get(i).setSubtotal(subtotal);*/
+				}
 
-					}
 			}
-		}catch(SQLException e) {
+
+		} catch(SQLException e) {
 			e.printStackTrace();
 
-		}finally {
+		} finally {
 			try {
 				con.close();
 
-			}catch(Exception e) {
+			} catch(Exception e) {
 				e.printStackTrace();
-				}
+			}
 		}
-
-		/*動作確認*/System.out.println("InsertCartDAO：確認" + cartList);
 
 		return cartList;
 
