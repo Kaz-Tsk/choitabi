@@ -77,6 +77,8 @@ public class ContactConpleteDTO {
 	}
 
 	/**
+	 *
+	 *
 	 * 書き込み内容を格納するメソッド
 	 * @param contact_contents 書き込み内容
 	 */
