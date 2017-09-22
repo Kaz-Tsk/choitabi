@@ -115,11 +115,11 @@
 				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
 				<label><input type="radio" name="newTheme" value="アクティビティ" checked/>アクティビティ</label>
 				</s:if>
-				<s:else>
+				<s:if test='newTheme == null'>
 				<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
 				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
 				<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
-				</s:else>
+				</s:if>
 
 			</td>
 		</tr>
