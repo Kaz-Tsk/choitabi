@@ -41,28 +41,13 @@
 
 	<!-- 管理者ログイン時ヘッダー  -->
 		<s:elseif test="#session.userFlg==3 ">
-
-		<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="logo2"><span
+<div class="logo2"><span
 					class="glyphicon glyphicon-wrench"></span><s:text name="lang.header.kaniripage"/></div>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="kanri_tourList.jsp"><s:text name="lang.header.tourlist"/></a></li>
-        <li><a href="kanri_toiawaseKakunin.jsp"><s:text name="kanri_toiawaseKakunin"/></a></li>
-        <li><a href="LogoutAction"><s:text name="lang.header.logout"/></a></li>
-          </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
+   <div class=navi2>
+        <div class="navibox2"><a href="kanri_tourList.jsp"><s:text name="lang.header.tourlist"/></a></div>
+        <div class="navibox2"><a href="kanri_toiawaseKakunin.jsp"><s:text name="kanri_toiawaseKakunin"/></a></div>
+       <div class="navibox2"><a href="LogoutAction"><s:text name="lang.header.logout"/></a></div>
+	 </div>
 		</s:elseif>
 
 
