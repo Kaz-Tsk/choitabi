@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>決済ページ</title>
 </head>
 <body>
@@ -38,12 +38,10 @@
 
 						<br> <small><s:text name="lang.payment.cardHankaku" /></small>
 						<input type="hidden" name="creditNumber" id="creditNumber" /> <br>
-						<input type="text" id="num1" pattern="[0-9]{4}" required
-							maxlength="4" size="4">- <input type="text" id="num2"
-							pattern="[0-9]{4}" required maxlength="4" size="4">- <input
-							type="text" id="num3" pattern="[0-9]{4}" required maxlength="4"
-							size="4">- <input type="text" id="num4"
-							pattern="[0-9]{3,4}" maxlength="4" size="4"> <br> <br>
+						<input type="text" id="num1" name="num1" pattern="[0-9]{4}" required maxlength="4" size="4">-
+						<input type="text" id="num2" name="num2" pattern="[0-9]{4}" required maxlength="4" size="4">-
+						<input type="text" id="num3" name="num3" pattern="[0-9]{4}" required maxlength="4" size="4">-
+						<input type="text" id="num4" name="num4" pattern="[0-9]{3,4}" maxlength="4" size="4"> <br> <br>
 
 						<h4 style="color: white;">
 							<s:text name="lang.payment.limit" />
@@ -66,6 +64,15 @@
 
 
 						<select id="expirationYear" name="expirationYear">
+							<option>17</option>
+							<option>18</option>
+							<option>19</option>
+							<option>20</option>
+							<option>21</option>
+							<option>22</option>
+							<option>23</option>
+							<option>24</option>
+							<option>25</option>
 
 						</select>
 						<s:text name="lang.payment.year" />

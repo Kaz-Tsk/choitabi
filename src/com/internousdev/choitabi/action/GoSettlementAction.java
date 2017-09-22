@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.choitabi.dao.PaymentCompleteDAO;
 import com.internousdev.choitabi.dao.SelectCartDAO;
 import com.internousdev.choitabi.dto.CartDTO;
 import com.internousdev.choitabi.dto.TourDTO;
@@ -75,31 +76,31 @@ public class GoSettlementAction extends ActionSupport implements SessionAware {
 
 		user_id=0;
 
-		 PurchaseCompleteDAO purchaseCompleteDAO = new PurchaseCompleteDAO();
+		 PaymentCompleteDAO paymentCompleteDAO = new PaymentCompleteDAO();
 
-		if (session.containsKey("user_id")) {
-			user_id = (int) session.get("user_id");
+		 if (session.containsKey("user_id")) {
+			 user_id = (int) session.get("user_id");
 
 
 
-			SelectCartDAO dao = new SelectCartDAO();
-			cartList = dao.selectCart(user_id);
+			 SelectCartDAO dao = new SelectCartDAO();
+			 cartList = dao.selectCart(user_id);
 
-			if (purchaseCompleteDAO.stockCheck(cartList) == 1) {
+			 if (paymentCompleteDAO.stockCheck(cartList) == 1) {
 
-				// 在庫切れでないか？ＯＫなら次へ進む
+				 // 在庫切れでないか？ＯＫなら次へ進む
 
-				result = SUCCESS;
+				 result = SUCCESS;
 
-			} else {
+			 } else {
 
-				list = purchaseCompleteDAO.getStockList();
-				this.setList(list);
-				result = ERROR;
+				 list = paymentCompleteDAO.getStockList();
+				 this.setList(list);
+				 result = ERROR;
 
-			}
-			return result;
-		}
+			 }
+			 return result;
+		 }
 
 		return result;
 	}

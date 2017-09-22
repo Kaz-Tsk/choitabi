@@ -112,8 +112,6 @@
 				<s:set var="number">
 					<s:property value="creditNumber" />
 				</s:set>
-				**** **** ****
-				${number.length()==16?number.substring(12,16):number.substring(11,15)}
 				<br>
 				<!-- 					期限　年 -->
 				<s:text name="lang.payment_confirm.limit" />
@@ -131,9 +129,6 @@
 				<s:set var="code">
 					<s:property value="securityCode" />
 				</s:set>
-				<s:set var="three">***</s:set>
-				<s:set var="four">****</s:set>
-				${code.length()==3?three:four} <br>
 
 
 

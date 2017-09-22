@@ -45,7 +45,7 @@ public class GoPaymentAction  extends ActionSupport implements SessionAware{
     private int price;
 
     /**
-     * 注文数
+     * 予約人数
      */
     private int order_count;
 
