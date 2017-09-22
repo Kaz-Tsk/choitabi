@@ -39,10 +39,10 @@ public class KanriHistoryDAO {
 			DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
 			Connection con = db.getConnection();
 	        String sql = "select openconnect.users.user_id, openconnect.users.family_name_kanji,"
-	        		+ "openconnect.users.given_name_kanji, choitabi.payoff.tour_id, choitabi.tour.tour_name,"
-	        		+ "choitabi.payoff.order_count, choitabi.tour.price, choitabi.payoff.registration_date"
+	        		+ "openconnect.users.given_name_kanji, choitabi.purchases.tour_id, choitabi.tour.tour_name,"
+	        		+ "choitabi.purchases.order_count, choitabi.tour.price, choitabi.purchases.registration_date"
 	        		+ " from (openconnect.users inner join choitabi.payoff on openconnect.users.user_id = choitabi.payoff.user_id) "
-	        		+ "inner join choitabi.tour on choitabi.payoff.tour_id = choitabi.tour.tour_id";
+	        		+ "inner join choitabi.tour on choitabi.purchases.tour_id = choitabi.tour.tour_id";
 
 	        if (!searchName.equals("")) {
 	            sql = sql + " " + "where choitabi.tour.tour_name like \"%" + searchName + "%\"";

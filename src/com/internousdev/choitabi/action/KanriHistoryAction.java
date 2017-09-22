@@ -1,5 +1,6 @@
 package com.internousdev.choitabi.action;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import com.internousdev.choitabi.dao.KanriHistoryDAO;
@@ -57,12 +58,12 @@ public class KanriHistoryAction extends ActionSupport {
 	/**
 	 * 合計金額
 	 */
-	private int total_price;;
+	private BigDecimal total_price;;
 
 	/**
 	 * 検索ワード
 	 */
-	private String searchName;
+	private String search_name;
 
 	/**
 	 * 検索結果リスト
@@ -109,7 +110,7 @@ public class KanriHistoryAction extends ActionSupport {
 			ArrayList<CartDTO> allList = new ArrayList<CartDTO>();
 			KanriHistoryDAO dao = new KanriHistoryDAO();
 
-			allList = dao.display(this.getTourName());
+			allList = dao.display(this.getTour_name());
 
 			int all = 0;
 			all = allList.size();
@@ -146,7 +147,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * ユーザーIDを取得するメソッド
 	 * @return user_id ユーザーID
 	 */
-	public int getUserId() {
+	public int getUser_id() {
 		return user_id;
 	}
 
@@ -154,7 +155,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * ユーザーIDを格納するメソッド
 	 * @param user_id ユーザーID
 	 */
-	public void setUserId(int user_id) {
+	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
 
@@ -162,7 +163,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * ツアーIDを取得するメソッド
 	 * @return tour_id ツアーID
 	 */
-	public int getTourId() {
+	public int getTour_id() {
 		return tour_id;
 	}
 
@@ -170,7 +171,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * ツアーIDを格納するメソッド
 	 * @param tour_id ツアーID
 	 */
-	public void setTourId(int tour_id) {
+	public void setTour_id(int tour_id) {
 		this.tour_id = tour_id;
 	}
 
@@ -178,7 +179,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * ツアー名を取得するメソッド
 	 * @return tour_name ツアー名
 	 */
-	public String getTourName() {
+	public String getTour_name() {
 		return tour_name;
 	}
 
@@ -186,7 +187,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * ツアー名を格納するメソッド
 	 * @param tour_name ツアー名
 	 */
-	public void setTourName(String tour_name) {
+	public void setTour_name(String tour_name) {
 		this.tour_name = tour_name;
 	}
 
@@ -194,7 +195,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 予約人数を取得するメソッド
 	 * @return order_count 予約人数
 	 */
-	public int getOrderCount() {
+	public int getOrder_count() {
 		return order_count;
 	}
 
@@ -202,7 +203,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 予約人数を格納するメソッド
 	 * @param order_count 予約人数
 	 */
-	public void setOrderCount(int order_count) {
+	public void setOrder_count(int order_count) {
 		this.order_count = order_count;
 	}
 
@@ -210,7 +211,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 合計金額を取得するメソッド
 	 * @return total_price 合計金額
 	 */
-	public int getTotalPrice() {
+	public BigDecimal getTotal_price() {
 		return total_price;
 	}
 
@@ -218,7 +219,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 合計金額を格納するメソッド
 	 * @param total_price 合計金額
 	 */
-	public void setTotalPrice(int total_price) {
+	public void setTotal_price(BigDecimal total_price) {
 		this.total_price = total_price;
 	}
 
@@ -226,7 +227,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 名前(姓)を取得するメソッド
 	 * @return family_name_kanji 名前(姓)
 	 */
-	public String getFamilyNameKanji() {
+	public String getFamily_name_kanji() {
 		return family_name_kanji;
 	}
 
@@ -234,7 +235,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 名前(姓)を格納するメソッド
 	 * @param family_name_kanji 名前(姓)
 	 */
-	public void setFamilyNameKanji(String family_name_kanji) {
+	public void setFamily_name_Kanji(String family_name_kanji) {
 		this.family_name_kanji = family_name_kanji;
 	}
 
@@ -242,7 +243,7 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 名前(名)を取得するメソッド
 	 * @return given_name_kanji 名前(名)
 	 */
-	public String getGivenNameKanji() {
+	public String getGiven_name_kanji() {
 		return given_name_kanji;
 	}
 
@@ -250,24 +251,24 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 名前(名)を格納するメソッド
 	 * @param given_name_kanji 名前(名)
 	 */
-	public void setGivenNameKanji(String given_name_kanji) {
+	public void setGiven_name_kanji(String given_name_kanji) {
 		this.given_name_kanji = given_name_kanji;
 	}
 
 	/**
 	 * 検索ワードを取得するメソッド
-	 * @return searchName 検索ワード
+	 * @return search_name 検索ワード
 	 */
-	public String getSearchName() {
-		return searchName;
+	public String getSearch_name() {
+		return search_name;
 	}
 
 	/**
 	 * 検索ワードを格納するメソッド
-	 * @param searchName 検索ワード
+	 * @param search_name 検索ワード
 	 */
-	public void setSearchName(String searchName) {
-		this.searchName = searchName;
+	public void setSearch_name(String search_name) {
+		this.search_name = search_name;
 	}
 
 	/**
