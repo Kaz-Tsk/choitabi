@@ -81,7 +81,7 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	public String execute(){
 		String result = ERROR;
 
-
+		/*動作確認*/System.out.println("CTIAction:" + newImg);
 		/*もし、画像に何も指定されていなかったら、デフォルトで「NO IMAGE」の画像を入れます。*/
 		if(newImg.equals("")){
 			newImg = "img/no_image.jpg";
@@ -254,6 +254,14 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	 * */
 	public String getNewImg(){
 		return newImg;
+	}
+
+	/**
+	 *新規ツアーの画像URLを格納するメソッド
+	 *@param newImg 新規ツアーの画像URL
+	 * */
+	public void setNewImg(String newImg){
+		this.newImg = newImg;
 	}
 
 	/*エラーメッセージのgetter/setter------------------*/
