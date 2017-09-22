@@ -8,8 +8,7 @@ import com.internousdev.choitabi.util.TourListPagination;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * 管理画面で、ツアー情報の一覧を表示する際使用するアクションクラス。
- *
+ * ツアー情報の一覧を表示するアクション（管理画面用）
  * @author YUKA MATSUMURA
  * @since 2017/09/05
  * @virsion 1.1
@@ -38,45 +37,46 @@ public class IndicateTourListAction extends ActionSupport{
 	private String selectTheme = "";
 
 	/**
-	 * DBから取得した全ツアー情報のリスト
+	 * 全件分のツアーリスト
 	 * */
 	private ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
 
 	/**
-	 * ページネートした1ページ分のリスト
+	 * 1ページ分のツアーリスト
 	 * */
 	private ArrayList<SelectTourDTO> currentTourList = new ArrayList<SelectTourDTO>();
 
 	/**
-	 * ツアー情報一覧の最大ページ数
+	 * 最大ページ数
 	 * */
 	private int maxPage;
 
 	/**
-	 * 現在表示しているページ番号
+	 * 現在のページ番号
 	 * */
 	private int currentPage = 1;/*nullPointerが起きないように、最初に1を入れておきます。*/
 
 
 
 
-	/**executeメソッド
-	 * DAOクラスを呼び出し、ツアーの情報をリストとして取得する。
+	/**
+	 * DBからツアー情報の一覧を検索・取得するメソッド
 	 * @return result (SUCCESS/ERROR)
 	 * */
 	public String execute(){
 		String result = ERROR;
 
-		/*DAOでツアーの一覧を持ってくる*/
+		/*DAOでツアーの一覧を持ってきます*/
 		SelectTourListDAO stldao = new SelectTourListDAO();
 		allTourList = stldao.selectTourList(selectWord, selectTheme);
 
-		/*持ってきた全ツアーを、ページネートで分割されたリストにします*/
+		/*ここからページネート処理*/
 		TourListPagination tlp = new TourListPagination();
-		 maxPage = tlp.rerturnMaxPage(allTourList);/*ついでに最大ページ数がいくつになるかも計算させます。*/
 
 		 /*すべてのデータのうち、現在のページに表示するデータだけを切り抜いて、もう一度リストにして渡しなさい、という処理です。*/
 		 currentTourList = tlp.paginateTourList(allTourList, currentPage);
+		 /*ついでに最大ページ数がいくつになるかも計算させます。*/
+		 maxPage = tlp.rerturnMaxPage(allTourList);
 
 		 /*リストがうまく作れたらSUCCESS、そうでなかったらERRORを返します*/
 		if(currentTourList != null){
@@ -85,74 +85,106 @@ public class IndicateTourListAction extends ActionSupport{
 			result = ERROR;
 		}
 
-		/*後消し*/System.out.println(result);
-
 		return result;
 	}
 
 
-	/*以下、各変数、リストのgetter/setter----------------------------------------------------------------------
+	/*以下、各変数、リストのgetter/setter---------------------- */
+
+
+	/**
+	 * 検索ワードを取得するメソッド
+	 * @returnr selectWord 検索ワード
 	 * */
-
-
-	/*検索ワードのgetter*/
 	public String getSelectWord(){
 		return selectWord;
 	}
 
-	/*検索ワードのsetter*/
+	/**
+	 * 検索ワードを格納するメソッド
+	 * @param selectWord 検索ワード
+	 * */
 	public void setSelectWord(String selectWord){
 		this.selectWord = selectWord;
 	}
 
-	/*検索テーマのgetter*/
+	/**
+	 * 検索テーマを取得するメソッド
+	 * @return selectTheme 検索テーマ
+	 * */
 	public String getSelectTheme(){
 		return selectTheme;
 	}
 
-	/*検索テーマのsetter*/
+	/**
+	 * 検索テーマを格納するメソッド
+	 * @param selectTheme 検索テーマ
+	 * */
 	public void setSelectTheme(String selectTheme){
 		this.selectTheme = selectTheme;
 	}
 
-
-	/*ツアーリスト（すべて）のgetter*/
+	/**
+	 * 全件分のツアーリストを取得するメソッド
+	 * @return allTourList ツアー全件分のリスト
+	 * */
 	public ArrayList<SelectTourDTO> getAllTourList(){
 		return allTourList;
 	}
 
-	/*ツアーリスト（すべて）のsetter*/
+	/**
+	 * 全件分のツアーリストを格納するメソッド
+	 * @param allTourList ツアー全件分のリスト
+	 * */
 	public void setAllTourList(ArrayList<SelectTourDTO> allTourList){
 		this.allTourList = allTourList;
 	}
 
-	/*表示中ツアーリストのgetter*/
+	/**
+	 * 1ページ分のツアーリストを取得するメソッド
+	 * @return currentTourList 1ページ分のツアーリスト
+	 * */
 	public ArrayList<SelectTourDTO> getCurrentTourList(){
 		return currentTourList;
 	}
 
-	/*表示中ツアーリストのsetter*/
+	/**
+	 * 1ページ分のツアーリストを格納するメソッド
+	 * @param currentTourList 1ページ分のツアーリスト
+	 * */
 	public void setCurrentTourList(ArrayList<SelectTourDTO> currentTourList){
 		this.currentTourList = currentTourList;
 	}
 
 
-	/*ツアー情報総ページ数のgetter*/
+	/**
+	 * 最大ページ数を取得するメソッド
+	 * @return maxPage
+	 * */
 	public int getMaxPage(){
 		return maxPage;
 	}
 
-	/*ツアー情報総ページ数のsetter*/
+	/**
+	 * 最大ページ数を格納するメソッド
+	 * @param maxPage
+	 * */
 	public void setMaxPage(int allPages){
 		this.maxPage = allPages;
 	}
 
-	/*ツアー情報の現在のページ番号のgetter*/
+	/**
+	 * 現在のページ番号を取得するメソッド
+	 * @return currentPage 現在のページ番号
+	 * */
 	public int getCurrentPage(){
 		return currentPage;
 	}
 
-	/*ツアー情報の現在のページ番号のsetter*/
+	/**
+	 * 現在のページ番号を格納するメソッド
+	 * @param currentPage 現在のページ番号
+	 * */
 	public void setCurrentPage(int currentPage){
 
 		this.currentPage = currentPage;

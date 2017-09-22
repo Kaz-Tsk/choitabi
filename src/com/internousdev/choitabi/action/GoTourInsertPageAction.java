@@ -2,136 +2,225 @@ package com.internousdev.choitabi.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * 新規ツアーの登録画面に遷移するアクション
+ * @author : YUKA MATSUMURA
+ * @since : 2017/09/08
+ * @version : 1.1
+ * */
 public class GoTourInsertPageAction extends ActionSupport{
 
 
 	/**
-	 *
+	 *シリアルID
 	 */
 	private static final long serialVersionUID = 103477118082355207L;
 
-	/**@author : YUKA MATSUMURA
-	 * @since : 2017/09/08
-	 * @version : 1.1
+	/*※以下、入力された情報を保管するための変数
+	 *   確認画面から戻って再編集をするときに、すでに入力されていた内容がフォームに残るようにしたくて作りました。
 	 *
-	 *ツアー一覧画面→【このアクション】→入力画面→ConfirmTourInsertingAction→入力内容確認画面→InsertTourAction
-	 * 管理画面で、ツアーの一覧から「新規ツアーを登録する」をクリックすると、Strutsに送られるアクションです。
+	 *※ツアーIDを入れる変数は作っていません（DBでオートインクリメントの設定がついているため）*/
 
+	/**
+	 * 新規ツアー名
 	 * */
-
-	/*以下、入力された情報を保管するための変数
-	 * ※このアクションは、次の「入力内容確認画面」から「入力画面に戻る」が選択されたときにも動きます。
-	 *   そして、入力画面をもう一度表示（するための信号を出）してくれます。
-	 *   そのときに、すでに入力された情報を入力フォームに残せるように用意したのが、ここの「new」とついた変数です。
-	 * */
-
-	/*ツアーIDを入れる変数は作っていません（DBでオートインクリメントの設定がついているため）*/
-
 	private String newTourName;
+
+	/**
+	 * 新規ツアーの価格
+	 * */
 	private String newPrice;
+
+	/**
+	 * 新規ツアーの定員
+	 * */
 	private String newPersons;
+
+	/**
+	 * 新規ツアーの出発地
+	 * */
 	private String newDeparture;
+
+	/**
+	 * 新規ツアーのエリア
+	 * */
 	private String newRegion;
+
+	/**
+	 * 新規ツアーの都道府県
+	 * */
 	private String newPrefectures;
+
+	/**
+	 * 新規ツアーのテーマ
+	 * */
 	private String newTheme;
+
+	/**
+	 * 新規ツアーのコメント
+	 * */
 	private String newComment;
+
+	/**
+	 * 新規ツアーの画像URL
+	 * */
 	private String newImg;
 
-
-
-	/*executeメソッド*/
+	/**
+	 * 新規ツアーの登録画面に遷移するメソッド
+	 * @return result(SUCCESS / ERROR)
+	 * */
 	public String execute(){
 		String result = SUCCESS;
 		return result;
 	}
 
 
-	/*変数のgetter/setter*/
+	/*変数のgetter/setter-----------------------------------*/
 
-	/*ツアー名*/
+	/**
+	 * 新規ツアー名を取得するメソッド
+	 * @return newTourName 新規ツアー名
+	 * */
 	public String getNewTourName(){
 		return newTourName;
 	}
 
+	/**
+	 * 新規ツアー名を格納するメソッド
+	 * @param newTourName 新規ツアー名
+	 * */
 	public void setNewTourName(String newTourName){
 		this.newTourName = newTourName;
 	}
 
-	/*価格*/
+	/**
+	 * 新規ツアーの価格を取得するメソッド
+	 * @return newPrice 新規ツアーの価格
+	 * */
 	public String getNewPrice(){
 		return newPrice;
 	}
 
+	/**
+	 * 新規ツアーの価格を格納するメソッド
+	 * @param newPrice 新規ツアーの価格
+	 * */
 	public void setNewPrice(String newPrice){
 		this.newPrice = newPrice;
 	}
 
-	/*定員*/
+	/**
+	 * 新規ツアーの定員を取得するメソッド
+	 * @return newPersons 新規ツアーの定員
+	 * */
 	public String getNewPersons(){
 		return newPersons;
 	}
 
+	/**
+	 * 新規ツアーの定員を格納するメソッド
+	 * @param newPersons 新規ツアーの定員
+	 * */
 	public void setNewPersons(String newPersons){
 		this.newPersons = newPersons;
 	}
 
-	/*出発地*/
+	/**
+	 * 新規ツアーの出発地を取得するメソッド
+	 * @return newDeparture 新規ツアーの出発地
+	 * */
 	public String getNewDeparture(){
 		return newDeparture;
 	}
 
+	/**
+	 * 新規ツアーの出発地を格納するメソッド
+	 * @param newDeparture 新規ツアーの出発地
+	 * */
 	public void setNewDeparture(String newDeparture){
 		this.newDeparture = newDeparture;
 	}
 
-	/*エリア*/
+	/**
+	 * 新規ツアーのエリアを取得するメソッド
+	 * @return newRegion 新規ツアーのエリア
+	 * */
 	public String getNewRegion(){
 		return newRegion;
 	}
 
+	/**
+	 * 新規ツアーのエリアを格納するメソッド
+	 * @param newRegion 新規ツアーのエリア
+	 * */
 	public void setNewRegion(String newRegion){
 		this.newRegion = newRegion;
 	}
 
-	/*都道府県*/
+	/**
+	 * 新規ツアーの都道府県を取得するメソッド
+	 * @return newPrefectures 新規ツアーの都道府県
+	 * */
 	public String getNewPrefectures(){
 		return newPrefectures;
 	}
 
+	/**
+	 * 新規ツアーの都道府県を格納するメソッド
+	 * @param newPrefectures 新規ツアーの都道府県
+	 * */
 	public void setNewPrefectures(String newPrefectures){
 		this.newPrefectures = newPrefectures;
 	}
 
-	/*テーマ*/
+	/**
+	 * 新規ツアーのテーマを取得するメソッド
+	 * @return newTheme 新規ツアーのテーマ
+	 * */
 	public String getNewTheme(){
 		return newTheme;
 	}
 
+	/**
+	 * 新規ツアーのテーマを格納するメソッド
+	 * @param newTheme 新規ツアーのテーマ
+	 * */
 	public void setNewTheme(String newTheme){
 		this.newTheme = newTheme;
 	}
 
-	/*コメント*/
+	/**
+	 *新規ツアーのコメントを取得するメソッド
+	 *@return newComment 新規ツアーのコメント
+	 * */
 	public String getNewComment(){
 		return newComment;
 	}
 
+	/**
+	 *新規ツアーのコメントを格納するメソッド
+	 *@param newComment 新規ツアーのコメント
+	 * */
 	public void setNewComment(String newComment){
 		this.newComment = newComment;
 	}
 
-	/*画像URL*/
+	/**
+	 *新規ツアーの画像URLを取得するメソッド
+	 *@return newImg 新規ツアーの画像URL
+	 * */
 	public String getNewImg(){
 		return newImg;
 	}
 
+	/**
+	 *新規ツアーの画像URLを格納するメソッド
+	 *@param newImg 新規ツアーの画像URL
+	 * */
 	public void setNewImg(String newImg){
 		this.newImg = newImg;
 	}
-
-
-
-
 
 
 
