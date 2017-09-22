@@ -31,7 +31,7 @@ public class TourListPagination {
 
 
 	/**
-	 * 渡されたツアー情報のリストをページネートするメソッド
+	 * ツアー情報の一覧をページネートするメソッド
 	 * @author:YUKA MATSUMURA
 	 * @since:2017/09/05
 	 * @version:1.1

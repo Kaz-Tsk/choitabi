@@ -6,22 +6,32 @@ import java.sql.SQLException;
 
 import com.internousdev.util.DBConnector;
 
+/**
+ * DBに新規ツアーを登録するDAOクラス
+ * @author YUKA MATSUMURA
+ * @sinse 2017/09/12
+ * @version 1.1
+ * */
 public class InsertTourDAO {
 
-
-	/** @author YUKA MATSUMURA
-	 * @sinse 2017/09/12
-	 * @version 1.1
-	 *
-	 * 管理側でツアーの新規登録をする際、実際にDBにデータを書き込むためのDAOです。
-	 * InsertTourActionが呼び出しています。
-	 * */
-
-
-	public int insertTour(String newTourName,String newPrice,
-            String newPersons, String newDeparture, String newRegion, String newPrefectures,
-            String newTheme, String newComment, String newImg)
-            		throws IllegalAccessException, InstantiationException{
+/**
+ *DBに新規ツアーを登録するメソッド
+ * @author YUKA MATSUMURA
+ * @sinse 2017/09/12
+ * @version 1.1
+ * @param newTourName 新規ツアー名
+ * @param newPrice 新規ツアーの価格
+ * @param newPersons 新規ツアーの定員
+ * @param newDepartre 新規ツアーの出発地
+ * @param newRegion 新規ツアーのエリア
+ * @param newPrefectures 新規ツアーの都道府県
+ * @param newTheme 新規ツアーのテーマ
+ * @param newComment 新規ツアーのコメント
+ * @param newImg 新規ツアーの画像URL
+ * @return count 変更の完了したデータ数
+ * */
+	public int insertTour(String newTourName,String newPrice,String newPersons,String newDeparture,
+								String newRegion, String newPrefectures,String newTheme, String newComment, String newImg){
 
 		int count = 0;
 
@@ -55,7 +65,7 @@ public class InsertTourDAO {
 			ps.setString(9, newImg);
 
 			count = ps.executeUpdate();
-			/*後消し*/System.out.println("InsertTourDAO - 取得データ数：" + count);
+
 			/*SQL接続の後片付けです*/
 			con.close();
 			ps.close();
