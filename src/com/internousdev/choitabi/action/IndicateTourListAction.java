@@ -8,7 +8,7 @@ import com.internousdev.choitabi.util.TourListPagination;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * 管理画面で、ツアー情報の一覧を表示する際使用しているアクションクラスです。
+ * 管理画面で、ツアー情報の一覧を表示する際使用するアクションクラス。
  *
  * @author YUKA MATSUMURA
  * @since 2017/09/05
@@ -16,6 +16,11 @@ import com.opensymphony.xwork2.ActionSupport;
  * */
 
 public class IndicateTourListAction extends ActionSupport{
+
+	/**
+	 * シリアルID
+	 */
+	private static final long serialVersionUID = 2211634393797926367L;
 
 	/**
 	 * 検索ワード

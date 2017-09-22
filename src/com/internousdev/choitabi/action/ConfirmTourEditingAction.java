@@ -15,6 +15,12 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	 * */
 
 
+	/**
+	 * シリアルID
+	 */
+	private static final long serialVersionUID = -1258679400956968932L;
+
+
 	/**編集前の情報を保存する変数です。*/
 	/*ツアーID*/
 	private int currentTourId;
