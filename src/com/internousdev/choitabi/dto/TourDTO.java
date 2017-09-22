@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 /** ツアー情報に関するDTO
  * @author HINAKO HAGIWARA
  * @since 2017/09/13
- * @version 1.0
+ * @version 1.1
  */
 
 public class TourDTO {

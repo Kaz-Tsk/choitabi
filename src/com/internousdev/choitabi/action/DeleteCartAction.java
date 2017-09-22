@@ -19,7 +19,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * カートの中身を削除するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.0
+ * @version 1.1
  */
 
 public class DeleteCartAction extends ActionSupport implements SessionAware {
@@ -34,7 +34,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 	/**
      * 合計金額
      */
-    private BigDecimal total_price = BigDecimal.ZERO;//定数を使用して初期化
+    private BigDecimal total_price = BigDecimal.ZERO;
 
     /**
      * 予約人数
@@ -72,7 +72,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
      * カートの商品を削除処理をする実行メソッド
      * @author HINAKO HAGIWARA
      * @since 2017/09/05
-     * @version 1.0
+     * @version 1.1
      */
 
     public String execute() throws SQLException {
@@ -91,7 +91,9 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
 
                 if(cartList.size() > 0) {
                     for(int i = 0; i < cartList.size(); i++ ) {
+
                     	total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
+
                     }
 
                     result = SUCCESS;

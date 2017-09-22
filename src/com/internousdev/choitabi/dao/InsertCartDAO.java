@@ -17,7 +17,7 @@ import com.internousdev.util.DBConnector;
  * 商品詳細からカートに遷移
  * @author HINAKO HAGIWARA
  * @since 2017/09/06
- * @version 1.0
+ * @version 1.1
  */
 
 public class InsertCartDAO {
@@ -85,8 +85,11 @@ public class InsertCartDAO {
 
 				} catch(SQLException e) {
 					e.printStackTrace();
+
 				}
+
 			}
+
 		}
 
 		return addCount;
@@ -101,7 +104,7 @@ public class InsertCartDAO {
 	 * @return cartList カート情報
 	 * @author HINAKO HAGIWARA
 	 * @since 2017/09/06
-	 * @version 1.0
+	 * @version 1.1
 	 */
 
 	public ArrayList<CartDTO> selected(int user_id) {

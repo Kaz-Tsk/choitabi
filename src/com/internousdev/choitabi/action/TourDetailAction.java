@@ -17,7 +17,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * ツアー詳細を表示するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/13
- * @since 1.0
+ * @since 1.1
  */
 
 public class TourDetailAction extends ActionSupport implements SessionAware {
@@ -93,7 +93,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	 * ツアー詳細を表示する実行メソッド
 	 * @author HINAKO HAGIWARA
 	 * @since 2017/09/13
-	 * @version 1.0
+	 * @version 1.1
 	 */
 
 	public String execute() throws SQLException {

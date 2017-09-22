@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * カート情報を格納・取得するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.0
+ * @version 1.1
  */
 
 public class SelectCartDTO {

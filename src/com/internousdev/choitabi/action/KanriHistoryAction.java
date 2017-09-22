@@ -19,7 +19,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class KanriHistoryAction extends ActionSupport {
 
-
 	/**
 	 * シリアルID
 	 */
@@ -105,7 +104,7 @@ public class KanriHistoryAction extends ActionSupport {
 				searchList.add(dto);
 			}
 
-		}else {
+		} else {
 
 			ArrayList<CartDTO> allList = new ArrayList<CartDTO>();
 			KanriHistoryDAO dao = new KanriHistoryDAO();

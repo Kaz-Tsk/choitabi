@@ -18,7 +18,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * ツアー詳細からカートに遷移するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/06
- *@version 1.0
+ *@version 1.1
  */
 
 public class InsertCartAction extends ActionSupport implements SessionAware {
@@ -101,7 +101,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	 * @return success or error
 	 * @author HINAKO HAGIWARA
 	 * @since 2017/09/06
-	 * @version 1.0
+	 * @version 1.1
 	 */
 
 	public String execute() throws SQLException {
@@ -127,6 +127,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 				result = SUCCESS;
 
 			}
+
 		}
 
 		return result;

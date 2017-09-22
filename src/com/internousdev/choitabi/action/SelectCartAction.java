@@ -17,7 +17,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * カート情報を取得するアクション
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.0
+ * @version 1.1
  */
 
 public class SelectCartAction extends ActionSupport implements SessionAware {
@@ -87,7 +87,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	 *
 	 * @author HINAKO HAGIWARA
 	 * @since 2017/09/05
-	 * @version 1.0
+	 * @version 1.1
 	 * @return SUCCESS
 	 */
 

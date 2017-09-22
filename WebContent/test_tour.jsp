@@ -49,7 +49,7 @@
             <li>
                 <div class = "category"><s:text name="lang.test_tour.SearchT"/></div>
                 <ul class = "menu">
-                    <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><s:text name="lang.test_tour.goumet"/></a></li>
+                    <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'グルメ'}"/></s:url>'><s:text name="lang.test_tour.gourmet"/></a></li>
                     <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'名所'}"/></s:url>'><s:text name="lang.test_tour.spot"/></a></li>
                     <li><a href='<s:url action="TourListAction"><s:param name="theme" value="%{'アクティビティ'}"/></s:url>'><s:text name="lang.test_tour.activity"/></a></li>
                 </ul>

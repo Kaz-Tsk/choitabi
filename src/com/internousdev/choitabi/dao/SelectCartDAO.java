@@ -16,7 +16,7 @@ import com.internousdev.util.DBConnector;
  * カート情報を取得するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.0
+ * @version 1.1
  */
 
 public class SelectCartDAO {

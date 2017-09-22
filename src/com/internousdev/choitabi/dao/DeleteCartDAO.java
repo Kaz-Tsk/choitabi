@@ -12,7 +12,7 @@ import com.internousdev.util.DBConnector;
  * カートテーブル内情報の削除に関するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/05
- * @version 1.0
+ * @version 1.1
  */
 
 public class DeleteCartDAO {
@@ -21,7 +21,7 @@ public class DeleteCartDAO {
 	 * カートにあるツアーを削除するためのメソッド
 	 * @author HINAKO HAGIWARA
 	 * @since 2017/09/05
-	 * @version 1.0
+	 * @version 1.1
 	 * @param cart_id カートID
 	 * @return delete 削除できたら1、できなかったら0を繰り返す
 	 */
@@ -48,7 +48,9 @@ public class DeleteCartDAO {
 
 			} catch(SQLException e) {
 				e.printStackTrace();
+
 			}
+
 		}
 
 		return delete;
