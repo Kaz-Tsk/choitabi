@@ -85,7 +85,7 @@
 				        <td><s:property escape="false" value="comment" /></td>
 				    </tr>
 				    <tr>
-				        <th class="priceth">価格</th>
+				        <th class="priceth"><s:text name="lang.tour_detail.price" /></th>
 				        <td><div class="pricetd">￥<fmt:formatNumber value="${price}" pattern="###,###,###" />
 				        <span class="tax">
 				            <s:text name="lang.tour_detail.tax" />

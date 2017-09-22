@@ -71,7 +71,7 @@ footer {
 }
 
 th {
-	width: 50px;
+	width: 120px;
 	vertical-align: top;
 }
 
@@ -93,5 +93,5 @@ td {
 
 .shoppingcart {
 	float: right;
-	padding-right: 100px;
+	padding-right: 130px;
 }
