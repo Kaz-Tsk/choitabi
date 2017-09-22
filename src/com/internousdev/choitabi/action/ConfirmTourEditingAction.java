@@ -3,8 +3,7 @@ package com.internousdev.choitabi.action;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * 管理側で使用。
- * ツアー編集画面で入力された内容に不備（入力漏れ等）がないかを確認するアクション。
+ * ツアー編集画面で入力された内容を確認するアクション。
  * @author YUKA MATSUMURA
  * @since 2017/09/07
  * @version 1.1
@@ -18,8 +17,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 
 	/**
-	 * 編集前のツアーID
-	 * （※IDはの変わらないため、「編集後のツアーID」を格納する変数は設けていない）
+	 * 編集前（選択した）のツアーID
 	 * */
 	private int currentTourId;
 
@@ -169,7 +167,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
-				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
+				 * 変換できればOK。変換できない＝例外が起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
 				Integer.parseInt(editPrice);
 				Integer.parseInt(editPersons);
 			}
@@ -356,75 +354,146 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 	/*編集後の情報のgetter/setter---------------------------------------------*/
 
-
+	/**
+	 *編集後のツアー名を取得するメソッド
+	 *@return editTourName 編集後のツアー名
+	 * */
 	public String getEditTourName(){
 		return editTourName;
 	}
 
+	/**
+	 *編集後のツアー名を格納するメソッド
+	 *@param editTourName 編集後のツアー名
+	 * */
 	public void setEditTourName(String editTourName){
 		this.editTourName = editTourName;
 	}
 
+	/**
+	 *編集後の価格を取得するメソッド
+	 *@return editPrice 編集後の価格
+	 * */
 	public String getEditPrice(){
 		return editPrice;
 	}
 
+	/**
+	 *編集後の価格を格納するメソッド
+	 *@parama editPrice 編集後の価格
+	 * */
 	public void setEditPrice(String editPrice){
 			this.editPrice = editPrice;
 	}
 
+	/**
+	 *編集後の定員を取得するメソッド
+	 *@rturn editPersons 編集後の定員
+	 * */
 	public String getEditPersons(){
 		return editPersons;
 	}
 
+	/**
+	 *編集後の定員を格納するメソッド
+	 *@param editPersons 編集後の定員
+	 * */
 	public void setEditPersons(String editPersons){
 		this.editPersons = editPersons;
 	}
 
+	/**
+	 *編集後の出発地を取得するメソッド
+	 *@return editDeparture 編集後の出発地
+	 * */
 	public String getEditDeparture(){
 		return editDeparture;
 	}
 
+	/**
+	 *編集後の出発地を格納するメソッド
+	 *@param editDeparture 編集後の出発地
+	 * */
 	public void setEditDeparture(String editDeparture){
 		this.editDeparture = editDeparture;
 	}
 
+	/**
+	 *編集後のエリアを取得するメソッド
+	 *@return editRegion 編集後のエリア
+	 * */
 	public String getEditRegion(){
 		return editRegion;
 	}
 
+	/**
+	 *編集後のエリアを格納するメソッド
+	 *@param editRegion 編集後のエリア
+	 * */
 	public void setEditRegion(String editRegion){
 		this.editRegion = editRegion;
 	}
 
+	/**
+	 *編集後の都道府県を取得するメソッド
+	 *@return editPrefrectures 編集後の都道府県
+	 * */
 	public String getEditPrefectures(){
 		return editPrefectures;
 	}
 
+	/**
+	 *編集後の都道府県を格納するメソッド
+	 *@param editPrefectures 編集後の都道府県
+	 * */
 	public void setEditPrefectures(String editPrefectures){
 		this.editPrefectures = editPrefectures;
 	}
 
+	/**
+	 *編集後のテーマを取得するメソッド
+	 *@return editTheme 編集後のテーマ
+	 * */
 	public String getEditTheme(){
 		return editTheme;
 	}
 
+	/**
+	 *編集後のテーマを格納するメソッド
+	 *@param editTheme 編集後のテーマ
+	 * */
 	public void setEditTheme(String editTheme){
 		this.editTheme = editTheme;
 	}
 
+	/**
+	 *編集後のコメントを取得するメソッド
+	 *@return editComment 編集後のコメント
+	 * */
 	public String getEditComment(){
 		return editComment;
 	}
 
+	/**
+	 *編集後のコメントを格納するメソッド
+	 *@param editComment 編集後のコメント
+	 * */
 	public void setEditComment(String editComment){
 		this.editComment = editComment;
 	}
 
+	/**
+	 *編集後の画像URLを取得するメソッド
+	 *@return editImg 編集後の画像URL
+	 * */
 	public String getEditImg(){
 		return editImg;
 	}
 
+	/**
+	 *編集後の画像URLを格納するメソッド
+	 *@param editImg 編集後の画像URL
+	 * */
 	public void setEditImg(String editImg){
 		this.editImg = editImg;
 	}
@@ -437,18 +506,35 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 
 	/*編集時のチェック項目（削除チェックボックス、エラーメッセージ）のgetter/setter--------------------*/
+
+	/**
+	 *削除用チェックボックスの状態を取得するメソッド
+	 *@return deleteCheck 削除用チェックボックスの状態
+	 * */
 	public String getDeleteCheck(){
 		return deleteCheck;
 	}
 
+	/**
+	 *削除用チェックボックスの状態を格納するメソッド
+	 *@param deleteCheck 削除用チェックボックスの状態
+	 * */
 	public void setDeleteCheck(String deleteCheck){
 		this.deleteCheck = deleteCheck;
 	}
 
+	/**
+	 *エラーメッセージを取得するメソッド
+	 *@return errorMsg エラーメッセージ
+	 * */
 	public String getErrorMsg(){
 		return errorMsg;
 	}
 
+	/**
+	 *エラーメッセージを格納するメソッド
+	 *@param errorMsg
+	 * */
 	public void setErrorMsg(String errorMsg){
 		this.errorMsg = errorMsg;
 	}

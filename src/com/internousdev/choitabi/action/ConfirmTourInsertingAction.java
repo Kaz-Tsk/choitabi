@@ -2,23 +2,25 @@ package com.internousdev.choitabi.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+
+/**
+ *  入力された新規ツアーの情報を確認するアクション
+ * @author YUKA MATSUMURA
+ * @since 2017/09/08
+ * @version 1.1
+ * */
 public class ConfirmTourInsertingAction extends ActionSupport{
 
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 6481205050973520069L;
-
-	/**@author YUKA MATSUMURA
-	 * @since 2017/09/08
-	 * @version 1.1
-	 *
-	 *管理者トップ画面→GoTourInsertPageAction→入力画面→【このAction】→入力内容確認画面→InsertTourAction
-	 * 管理側で、ツアーの新規登録時に使用するアクションです。
+	/*
+	 * 管理者トップ画面→GoTourInsertPageAction→入力画面→【このAction】→入力内容確認画面→InsertTourAction
 	 * フォームから入力されたデータに漏れや不適切な部分（価格に文字列が入っている場合など）がないかをチェックし、
 	 * OKならばSUCCESSを返します。
-	 *
 	 * */
+
+	/**
+	 *シリアルID
+	 */
+	private static final long serialVersionUID = 6481205050973520069L;
 
 	/*新規ツアーのID（自動で入るので0のままでOKです）*/
 	private int newTourId = 0;
@@ -75,10 +77,7 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 
 				/*↓画像URLチェック用で作りました。が、現在は画像のプレビューを出すようにしたので不要としています。今後もしかしたら復活するかも…*/
 //			}else if(newImg.indexOf(".png") == -1 && newImg.indexOf(".jpg") == -1){
-//				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newImg.indexOf(".png"));
-//				/*後消し*/System.out.println("ConfirmTourInsertingAction : " + newImg.indexOf(".jpg"));
 //				errorMsg = "画像にはpngもしくはjpgを指定してください";
-//				System.out.println(errorMsg);
 
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
