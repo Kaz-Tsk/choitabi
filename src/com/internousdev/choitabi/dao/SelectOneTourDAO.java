@@ -7,26 +7,29 @@ import java.sql.SQLException;
 
 import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.internousdev.util.DBConnector;
+
+/**
+ * DBから1件分のツアー情報を検索・取得するDAOクラス
+ * @author YUKA MATSUMURA
+ * @since 2017/09/06
+ * @version 1.1
+ * */
 public class SelectOneTourDAO {
 
-
-	/**@author YUKA MATSUMURA
+	/**
+	 * ツアー1件分の情報を検索・取得するメソッド
+	 * @author YUKA MATSUMURA
 	 * @since 2017/09/06
 	 * @version 1.1
-	 *
-	 *DBからツアー1件分の情報を検索するためのクラスです。管理者画面のツアー編集・削除操作で使います。
+	 * @param toutId ツアーID
+	 * @return SelectTourDTO ツアー1件分の情報を格納したDTOクラスのインスタンス
 	 * */
-
-
-
 	public SelectTourDTO selectOneTour(int tourId){
 
 		SelectTourDTO stdto = null;
-		/*後消し*/System.out.println("SlectOneTour - tourId : " + tourId);
 
 		try{
 			/*SQLに接続し、コマンドを実行してもらいます*/
-			//ChoitabiDBConnector tdc = new ChoitabiDBConnector();
 			DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root", "mysql");
 			Connection con = dbc.getConnection();
 			String sql = "SELECT * FROM tour WHERE tour_id =  ?";
@@ -57,17 +60,15 @@ public class SelectOneTourDAO {
 
 			return stdto;
 
-
 			/*以下はエラー時の処理です。
-			 * エラーが出たら、返すリストをnull=「リスト作れなかったよ」と合図させ、SUCCESSとERRORを見分けます。
+			 * エラーが出たら、返すDTOをnull=ツアー無しと合図させ、
+			 * アクションクラスにSUCCESSとERRORを見分けさせます。
 			 * */
 			}catch(SQLException e){
-				System.out.println("SQL上でエラーが発生しました");
 				e.printStackTrace();
 				return null;
 
 			}catch(Exception e){
-				System.out.println("その他のエラーです");
 				e.printStackTrace();
 				return null;
 			}
