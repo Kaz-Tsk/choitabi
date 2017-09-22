@@ -515,46 +515,94 @@ public class UsersDTOTest {
 		assertEquals(expected,actual);
 	}
 
+
+
+
 	@Test
-	public void testIsLoginFlg1() {
+	public void testGetLoginFlg1() {
 		UsersDTO test = new UsersDTO();
-		Boolean expected = true;
+		int expected = 0;
 
 		test.setLoginFlg(expected);
-		Boolean actual = test.isLoginFlg();
+		int actual = test.getLoginFlg();
 
 		assertEquals(expected,actual);
 	}
 
 	@Test
-	public void testIsLoginFlg2() {
+	public void testGetLoginFlg2() {
 		UsersDTO test = new UsersDTO();
-		Boolean expected = false;
+		int expected = MAX_VALUE;
 
 		test.setLoginFlg(expected);
-		Boolean actual = test.isLoginFlg();
+		int actual = test.getLoginFlg();
 
 		assertEquals(expected,actual);
 	}
+	@Test
+	public void testGetLoginFlg3() {
+		UsersDTO test = new UsersDTO();
+		int expected = MIN_VALUE;
+
+		test.setLoginFlg(expected);
+		int actual = test.getLoginFlg();
+
+		assertEquals(expected,actual);
+	}
+	@Test
+	public void testGetLoginFlg4() {
+		UsersDTO test = new UsersDTO();
+		int expected = Exception;
+
+		test.setLoginFlg(expected);
+		int actual = test.getLoginFlg();
+
+		assertEquals(expected,actual);
+	}
+
+
+
+
 	@Test
 	public void testSetLoginFlg1() {
 		UsersDTO test = new UsersDTO();
-		Boolean expected = true;
+		int expected = 0;
 
 		test.setLoginFlg(expected);
-		Boolean actual = test.isLoginFlg();
+		int actual = test.getLoginFlg();
 
 		assertEquals(expected,actual);
-
 	}
 
 	@Test
 	public void testSetLoginFlg2() {
 		UsersDTO test = new UsersDTO();
-		Boolean expected = true;
+		int expected = MAX_VALUE;
 
 		test.setLoginFlg(expected);
-		Boolean actual = test.isLoginFlg();
+		int actual = test.getLoginFlg();
+
+		assertEquals(expected,actual);
+	}
+	@Test
+	public void testSetLoginFlg3() {
+		UsersDTO test = new UsersDTO();
+		int expected = MIN_VALUE;
+
+		test.setLoginFlg(expected);
+		int actual = test.getLoginFlg();
+
+		assertEquals(expected,actual);
+
+	}
+
+	@Test
+	public void testSetLoginFlg4() {
+		UsersDTO test = new UsersDTO();
+		int expected = Exception;
+
+		test.setLoginFlg(expected);
+		int actual = test.getLoginFlg();
 
 		assertEquals(expected,actual);
 

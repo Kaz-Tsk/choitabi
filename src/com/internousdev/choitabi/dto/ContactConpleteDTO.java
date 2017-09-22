@@ -21,8 +21,7 @@ public class ContactConpleteDTO {
 	/**
 	 * メールアドレス
 	 */
-	private String contact_mailAddress
-;
+	private String contact_mailAddress;
 
 	/**
 	 * 書き込み内容
