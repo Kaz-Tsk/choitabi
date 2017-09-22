@@ -48,6 +48,11 @@ pageEncoding="UTF-8"%>
                        <a href="index.jsp"><s:text name = "lang.contact_send.return_to_top"/></a>
 
 
+                      <footer>
+		              <c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	                  </footer>
+
+
        </body>
 
 

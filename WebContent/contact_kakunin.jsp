@@ -90,6 +90,12 @@
                               <a href="MainTopAction"><s:text name = "lang.contact_kakunin.return_to_top"/></a>
                      </center>
 
+
+                <footer>
+		                <c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	            </footer>
+
+
       </body>
 
 
