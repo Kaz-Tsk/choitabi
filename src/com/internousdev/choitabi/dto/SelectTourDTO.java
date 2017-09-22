@@ -1,138 +1,224 @@
 package com.internousdev.choitabi.dto;
 
+/**
+ * ツアー情報を取得・格納するDTOクラス。
+ * @author:YUKA MATSUMURA
+ *@since:2017/09/05
+ *@version:1.1
+ * */
 public class SelectTourDTO {
 
 
-	/**@author:YUKA MATSUMURA
-	 *@since:2017/09/05
-	 *@version:1.1
-	 *
-	 *DBから、ツアー1件分の情報を入れるためのDTOです。
-	 *ツアーの検索と、編集・削除操作の両方で使います。
+	/**
+	 *ツアーID
 	 * */
-
-
-	/*ツアーID*/
 	private int tourId;
-	/*ツアー名*/
+
+	/**
+	 *ツアー名
+	 * */
 	private String tourName;
-	/*価格*/
+
+	/**
+	 *価格
+	 * */
 	private int price;
-	/*定員*/
+
+	/**
+	 *定員
+	 * */
 	private int persons;
-	/*出発地*/
+
+	/**
+	 *出発地
+	 * */
 	private String departure;
-	/*エリア*/
+
+	/**
+	 *エリア
+	 * */
 	private String region;
-	/*県*/
+
+	/**
+	 *都道府県
+	 * */
 	private String prefectures;
-	/*テーマ*/
+
+	/**
+	 *テーマ
+	 * */
 	private String theme;
-	/*コメント*/
+
+	/**
+	 *コメント
+	 * */
 	private String comment;
-	/*画像URL*/
+
+	/**
+	 *画像URL
+	 * */
 	private String img;
 
 
 	/*以下、各変数のgetter/setter----------------------------*/
 
 
-	/*ツアーIDのgetter*/
+	/**
+	 *ツアーIDを取得するメソッド
+	 *@return tourId ツアーID
+	 * */
 	public int getTourId(){
 		return tourId;
 	}
 
-	/*ツアー名のsetter*/
+	/**
+	 *ツアーIDを格納するメソッド
+	 *@param tourId ツアーID
+	 * */
 	public void setTourId(int tourId){
 		this.tourId = tourId;
 	}
 
-	/*ツアー名のgetter*/
+	/**
+	 *ツアー名を取得するメソッド
+	 *@return tourName ツアー名
+	 * */
 	public String getTourName(){
 		return tourName;
 	}
 
-	/*ツアー名のsetter*/
+	/**
+	 *ツアー名を格納するメソッド
+	 *@param tourName ツアー名
+	 * */
 	public void setTourName(String tourName){
 		this.tourName = tourName;
 	}
 
-	/*価格のgetter*/
+	/**
+	 *価格を取得するするメソッド
+	 *@return price 価格
+	 * */
 	public int getPrice(){
 		return price;
 	}
 
-	/*価格のsetter*/
+	/**
+	 *価格を格納するメソッド
+	 *@param price 価格
+	 * */
 	public void setPrice(int price){
 		this.price = price;
 	}
 
-	/*定員のgetter*/
+	/**
+	 *定員を取得するメソッド
+	 *@return persons 定員
+	 * */
 	public int getPersons(){
 		return persons;
 	}
 
-	/*定員のsetter*/
+	/**
+	 *定員を格納するメソッド
+	 *@param persond 定員
+	 * */
 	public void setPersons(int persons){
 		this.persons = persons;
 	}
 
-	/*出発地のgetter*/
+	/**
+	 *出発地を取得するメソッド
+	 *@return departure 出発地
+	 * */
 	public String getDeparture(){
 		return departure;
 	}
 
-	/*出発地のsetter*/
+	/**
+	 *出発地を格納するメソッド
+	 *@param departure 出発地
+	 * */
 	public void setDeparture(String departure){
 		this.departure = departure;
 	}
 
-	/*エリアのgetter*/
+	/**
+	 *エリアを取得するメソッド
+	 *@return region エリア
+	 * */
 	public String getRegion(){
 		return region;
 	}
 
-	/*エリアのsetter*/
+	/**
+	 *エリアを格納するメソッド
+	 *@param region エリア
+	 * */
 	public void setRegion(String region){
 		this.region = region;
 	}
 
-	/*県のgetter*/
+	/**
+	 *都道府県を取得するメソッド
+	 *@return prefectures 都道府県
+	 * */
 	public String getPrefectures(){
 		return prefectures;
 	}
 
-	/*県のsetter*/
+	/**
+	 *都道府県を格納するメソッド
+	 *@param prefectures 都道府県
+	 * */
 	public void setPrefectures(String prefectures){
 		this.prefectures = prefectures;
 	}
 
-	/*テーマのgetter*/
+	/**
+	 *テーマを取得するメソッド
+	 *@return theme テーマ
+	 * */
 	public String getTheme(){
 		return theme;
 	}
 
-	/*テーマのsetter*/
+	/**
+	 *テーマを格納するメソッド
+	 *@param theme テーマ
+	 * */
 	public void setTheme(String theme){
 		this.theme = theme;
 	}
 
-	/*コメントのgetter*/
+	/**
+	 *コメントを取得するメソッド
+	 *@return comment
+	 * */
 	public String getComment(){
 		return comment;
 	}
 
-	/*コメントのsetter*/
+	/**
+	 *コメントを格納するメソッド
+	 *@param comment コメント
+	 * */
 	public void setComment(String comment){
 		this.comment = comment;
 	}
 
-	/*画像URLのgetter*/
+	/**
+	 *画像URLを取得するメソッド
+	 *@return img 画像URL
+	 * */
 	public String getImg(){
 		return img;
 	}
 
-	/*画像URLのsetter*/
+	/**
+	 *画像URLを格納するメソッド
+	 *@param img 画像URL
+	 * */
 	public void setImg(String img){
 		this.img = img;
 	}
