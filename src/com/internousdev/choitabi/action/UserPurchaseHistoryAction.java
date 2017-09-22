@@ -20,9 +20,9 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UserPurchaseHistoryAction extends ActionSupport implements SessionAware{
 
 	/**
-	 * シリアルバージョン
+	 *シリアルバージョン
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 8895639892537692245L;
 
 	/**
 	 * userId

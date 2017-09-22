@@ -18,11 +18,14 @@ import com.opensymphony.xwork2.ActionSupport;
 public class KanriContactAction extends ActionSupport {
 
     /**
-     * serialVersionUID
-     */
-    private static final long serialVersionUID = -3027910285198171063L;
+	 * シリアルナンバーの生成
+	 */
+private static final long serialVersionUID = 1713916660493018447L;
 
-    /**
+
+
+
+
 
  /**
      * 検索された単語
@@ -34,14 +37,12 @@ public class KanriContactAction extends ActionSupport {
     /**
      * ユーザー名
      */
-    private String contact_name
-;
+    private String contact_name;
 
     /**
      * メールアドレス
      */
-    private String contact_mailAddress
-;
+    private String contact_mailAddress;
 
     /**
      * 問い合わせ内容
@@ -88,7 +89,7 @@ public class KanriContactAction extends ActionSupport {
          if(searchName == null){
 	            searchName = "";
 	     }
-	     
+
          searchName = searchName.trim();
          searchList = dao.display("searchName");//この名前で検索したデータすべてをsearchListに入れる
 
@@ -156,8 +157,7 @@ public class KanriContactAction extends ActionSupport {
      */
     public String getContact_mailAddress
 () {
-        return contact_mailAddress
-;
+        return contact_mailAddress;
     }
 
     /**
@@ -165,11 +165,8 @@ public class KanriContactAction extends ActionSupport {
      * @param email セット メールアドレス
      */
     public void setContact_mailAddress
-(String contact_mailAddress
-) {
-        this.contact_mailAddress
- = contact_mailAddress
-;
+(String contact_mailAddress) {
+        this.contact_mailAddress= contact_mailAddress;
     }
 
     /**

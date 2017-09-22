@@ -19,9 +19,9 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MypageAction extends ActionSupport implements SessionAware {
 
 	/**
-	 *シリアルバージョン
+	 * シリアルバージョン
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 8087800859437095577L;
 
 	/**
 	 * session

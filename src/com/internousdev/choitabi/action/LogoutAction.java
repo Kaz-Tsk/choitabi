@@ -21,7 +21,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	/**
 	 * シリアルバージョン
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -2136617804303987697L;
 
 	/**
 	 * session情報
