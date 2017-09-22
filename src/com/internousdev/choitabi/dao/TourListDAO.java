@@ -43,7 +43,6 @@ public class TourListDAO {
             /*テーマとエリアの部分だけは、お客さんが何を選ぶかによって変わるので、もう少しあとで決まります。*/
             /*（？の部分は、空欄、とイメージしてもらえるとわかりやすいかも）*/
             String sql = "select tour_id,tour_name,price,img from tour where theme like ? and region like ?";
-            /*動作確認*/System.out.println("TourListDAO - 作成sql文 : " + sql);
 
             /*↓psさんに、上で書いたSQL文をあげておつかいを頼むイメージです*/
             PreparedStatement ps= con.prepareStatement(sql);
@@ -61,7 +60,7 @@ public class TourListDAO {
                 dto.setTour_name(rs.getString("tour_name"));
                 dto.setPrice(rs.getBigDecimal("price"));
                 dto.setImg(rs.getString("img"));
-                /*動作確認*/System.out.println("TourListDAO-取得ツアー名：" + dto.getTour_name());
+
                 selectList.add(dto);
                 }
 
@@ -72,12 +71,10 @@ public class TourListDAO {
 
             /*↓ここから下の「catch」の部分は、（）の中に指定した例外（エラー）が出たときに、どのような対処を行わせるかが書かれています*/
         	}catch (SQLException e){
-        	/*動作確認*/System.out.println("TourListDAO : SQL上でエラーが発生しました");
             e.printStackTrace();//←コンソールに並ぶ赤い文字のあれです
             }
 
 
-        /*動作確認*/System.out.println("TourListDAO : 取得データ数 : " + selectList.size());
         return selectList;
         }
 
