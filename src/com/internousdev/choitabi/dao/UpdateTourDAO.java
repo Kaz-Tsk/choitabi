@@ -7,21 +7,37 @@ import java.sql.SQLException;
 import com.internousdev.util.DBConnector;
 import com.internousdev.util.db.mysql.MySqlConnector;
 
+/**
+ * DBに登録されているツアーに対し、編集・削除の操作を行うDAOクラス
+ * @author : YUKA MATSUMURA
+ * @since : 2017/09/08
+ * @version : 1.1
+ * */
+
 public class UpdateTourDAO {
 
-	/**@author : YUKA MATSUMURA
+
+	/**
+	 * DBに登録されているツアーを操作するメソッド
+	 * @author : YUKA MATSUMURA
 	 * @since : 2017/09/08
 	 * @version : 1.1
-	 *
-	 * 管理画面で、編集画面から入力したツアーの編集情報を、実際にSQLのDBに書き込むクラスです。（削除操作も含みます）
-	 * 呼び出しているクラス…UpdateTourAction.java
-	 * @return
+	 * @param editTourID 編集するツアーのID
+	 * @param editTourName 編集後のツアー名
+	 * @param editPrice 編集後の価格
+	 * @param editPersons 編集後の定員
+	 * @param editDeparture 編集後の出発地
+	 * @param editRegion 編集後のエリア
+	 * @param editPrefectures 編集後の都道府県
+	 * @param editTheme 編集後のテーマ
+	 * @param editComment 編集後のコメント
+	 * @param editImg 編集後の画像URL
+	 * @param deleteCheck 削除用チェックボックスの状態
+	 * @return count(int) 操作の完了したデータ数
 	 * */
-
-	public int updateTour(String editTourId, String editTourName,String editPrice,
-	                           String editPersons, String editDeparture, String editRegion, String editPrefectures,
-	                           String editTheme, String editComment, String editImg,
-	                           String deleteCheck){
+	public int updateTour(String editTourId, String editTourName,String editPrice, String editPersons, String editDeparture,
+								String editRegion, String editPrefectures,String editTheme, String editComment, String editImg,
+								String deleteCheck){
 		int count = 0;
 
 			/*削除チェックのボックスにチェックが入っていない＝ツアーデータ更新の場合*/
