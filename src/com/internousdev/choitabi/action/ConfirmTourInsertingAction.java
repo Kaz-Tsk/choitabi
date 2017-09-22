@@ -81,7 +81,6 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	public String execute(){
 		String result = ERROR;
 
-		/*動作確認*/System.out.println("CTIAction:" + newImg);
 		/*もし、画像に何も指定されていなかったら、デフォルトで「NO IMAGE」の画像を入れます。*/
 		if(newImg.equals("")){
 			newImg = "img/no_image.jpg";
@@ -92,7 +91,6 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 				newRegion.equals("") || newPrefectures.equals("") || newTheme == null || newComment.equals("") ) {
 
 				errorMsg = "未入力の情報があります";
-				System.out.println(errorMsg);
 
 				/*↓画像URLチェック用で作りました。が、現在は画像のプレビューを出すようにしたので不要としています。今後もしかしたら復活するかも…*/
 //			}else if(newImg.indexOf(".png") == -1 && newImg.indexOf(".jpg") == -1){
