@@ -24,8 +24,6 @@ public class ContactCompleteDAO {
 
 
 	/**
-	 *
-	 *
 	 * @param contact_name
 	 * @param contact_mailAddress
 	 * @param contact_contents
