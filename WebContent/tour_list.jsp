@@ -40,6 +40,7 @@
 
 <!-- 画像を浮かせるcss -->
 <link rel="stylesheet" type="text/css" href="css/hover.css" />
+
 </head>
 
 

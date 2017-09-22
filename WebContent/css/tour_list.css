@@ -84,11 +84,6 @@ div {
 	font-align: center;
 }
 
-footer {
-	bottom: 0;
-    text-align: center;
-    width: 100%;
-    background-color:orange;
-    height: 1em;
-    margin-top: 1000px;
+.footer {
+
 }
