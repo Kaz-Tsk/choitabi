@@ -21,10 +21,6 @@ public class KanriContactDTO {
      */
     private String contact_contents;
 
-    /**
-     * 登録日
-     */
-    private String registrationDate;
 
 
 
@@ -79,21 +75,7 @@ public class KanriContactDTO {
 		this.contact_contents = contact_contents;
 	}
 
-	/**
-	*	登録日を取得するメソッド
-	*	@return registrationDate 登録日
-	*/
-	public String getRegistrationDate() {
-		return registrationDate;
-	}
 
-	/**
-	*	登録日を格納する
-	*	@param registrationDate 登録日
-	*/
-	public void setRegistrationDate(String registrationDate) {
-		this.registrationDate = registrationDate;
-	}
 
 
 

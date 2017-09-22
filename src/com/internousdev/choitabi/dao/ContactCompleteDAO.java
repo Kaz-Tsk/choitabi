@@ -35,18 +35,6 @@ public class ContactCompleteDAO {
 	public boolean dbInsert(String contact_name, String contact_mailAddress, String contact_contents) throws UnknownHostException {
 
 		boolean result = false;
-/*
- *
- * // あとで付け足すところ
- *
- *    日本のタイムゾーンで現在の日付を取得
-		Calendar cal = Calendar.getInstance();
-		TimeZone tz = TimeZone.getTimeZone("Asia/Tokyo");
-		cal.setTimeZone(tz);
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm");
-		String dt = sdf.format(cal.getTime());
- *
- */
 
 
 		// mongoDBサーバーに接続
@@ -63,12 +51,7 @@ public class ContactCompleteDAO {
 		input.put("contact_name", contact_name);
 		input.put("contact_mailAddress", contact_mailAddress);
 		input.put("contact_contents",contact_contents);
-/*
- *
- * あとで付け足すところ
- *
- * input.put("registrationDate", dt);
- */
+
 		coll.insert(input);
 
 		result = true;

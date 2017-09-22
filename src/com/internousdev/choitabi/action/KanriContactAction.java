@@ -50,10 +50,6 @@ private static final long serialVersionUID = 1713916660493018447L;
     private String contact_contents;
 
 
-    /**
-     * 更新日
-     */
-    private String registrationDate;
 
     /**
      * 検索結果リスト
@@ -198,21 +194,7 @@ private static final long serialVersionUID = 1713916660493018447L;
     	this.contactList = contactList;
     }
 
-    /**
-     * 登録日を取得するメソッド
-     * @return registrationDate 登録日
-     */
-    public String getRegistrationDate() {
-        return registrationDate;
-    }
 
-    /**
-     * 登録日を格納するメソッド
-     * @param registrationDate セット 登録日
-     */
-    public void setRegistrationDate(String registrationDate) {
-        this.registrationDate = registrationDate;
-    }
 
     /**
      * 検索結果を取得するメソッド
