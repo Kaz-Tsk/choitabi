@@ -18,8 +18,7 @@ import com.opensymphony.xwork2.ActionSupport;
 	/**
 	 * シリアルID
 	 */
-	private static  final long serialVersionUID =1L;
-
+	private static final long serialVersionUID = 8445527315894179667L;
 	/**
 	 * パスワード
 	 */
