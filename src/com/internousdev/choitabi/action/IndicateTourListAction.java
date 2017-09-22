@@ -18,9 +18,14 @@ import com.opensymphony.xwork2.ActionSupport;
 public class IndicateTourListAction extends ActionSupport{
 
 	/**
-	 * シリアルID
+	 *
 	 */
 	private static final long serialVersionUID = 2211634393797926367L;
+
+	/**
+	 * シリアルID
+	 */
+
 
 	/**
 	 * 検索ワード

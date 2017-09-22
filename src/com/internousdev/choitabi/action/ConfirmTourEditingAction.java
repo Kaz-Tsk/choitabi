@@ -2,18 +2,14 @@ package com.internousdev.choitabi.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * 管理側で使用。
+ * ツアー編集画面で入力された内容に不備（入力漏れ等）がないかを確認するアクション。
+ * @author YUKA MATSUMURA
+ * @since 2017/09/07
+ * @version 1.1
+ * */
 public class ConfirmTourEditingAction extends ActionSupport{
-
-	/**
-	 * @author YUKA MATSUMURA
-	 * @since 2017/09/07
-	 * @version 1.1
-	 *
-	 * 管理-ツアー編集で使うクラスです。
-	 * 入力画面→編集完了画面までの橋渡しを行います。
-	 * 入力された情報に漏れが無いか、などのチェックもここで行います。
-	 * */
-
 
 	/**
 	 * シリアルID
@@ -21,67 +17,130 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	private static final long serialVersionUID = -1258679400956968932L;
 
 
-	/**編集前の情報を保存する変数です。*/
-	/*ツアーID*/
+	/**
+	 * 編集前のツアーID
+	 * （※IDはの変わらないため、「編集後のツアーID」を格納する変数は設けていない）
+	 * */
 	private int currentTourId;
 
-	/*ツアー名*/
+	/**
+	 * 編集前のツアー名
+	 * */
 	private String currentTourName;
-	/*価格*/
+
+	/**
+	 * 編集前の価格
+	 * */
 	private int currentPrice;
-	/*定員*/
+
+	/**
+	 * 編集前の定員
+	 * */
 	private int currentPersons;
-	/*出発地*/
+
+	/**
+	 * 編集前の出発地
+	 * */
 	private String currentDeparture;
-	/*エリア*/
+
+	/**
+	 * 編集前のエリア
+	 * */
 	private String currentRegion;
-	/*県*/
+
+	/**
+	 * 編集前の都道府県
+	 * */
 	private String currentPrefectures;
-	/*テーマ*/
+
+	/**
+	 * 編集前のテーマ
+	 * */
 	private String currentTheme;
-	/*コメント*/
+
+	/**
+	 * 編集前のコメント
+	 * */
 	private String currentComment;
-	/*画像URL*/
+
+	/**
+	 *編集前の画像URL
+	 * */
 	private String currentImg;
 
 
 
-	/**編集後の情報＝入力されたデータを格納する変数です(すべて文字列として受け取るようにしています)
-	 *  編集画面から、価格・人数を入れる欄に文字列を入力したところ、javaに渡される際に数値に変換できずStrutsエラーがでてしまいました。
-	 *  そのため、一度文字列として受け取らせ、javaのInteger.Parseint()関数を使って数値に変換するステップを踏んでいます。
-	 * */
-	/*こっちには、ツアーIDはありません。
+	/*編集後の情報＝入力されたデータを格納する変数です(すべて文字列として受け取るようにしています)
+	 * 編集画面から、価格・人数を入れる欄に文字列を入力したところ、javaに渡される際に数値に変換できずStrutsエラーがでてしまいました。
+	 * そのため、一度文字列として受け取らせ、javaのInteger.Parseint()関数を使って数値に変換するステップを踏んでいます。
+	 *
+	 *こっちには、ツアーIDはありません。
 	 * （IDは変わらない＝現在のデータだけを保持すればOKなので）
 	 * 「UodateTourAction」まで、↑で用意したcurrentTourIdを持っていきます。*/
 
-	/*ツアー名*/
+	/**
+	 *編集後のツアー名
+	 * */
 	private String editTourName;
-	/*価格*/
+
+	/**
+	 *編集後の価格
+	 * */
 	private String editPrice;
-	/*定員*/
+
+	/**
+	 *編集後の定員
+	 * */
 	private String editPersons;
-	/*出発地*/
+
+	/**
+	 *編集後の出発地
+	 * */
 	private String editDeparture;
-	/*エリア*/
+
+	/**
+	 *編集後のエリア
+	 * */
 	public String editRegion;
-	/*県*/
+
+	/**
+	 *編集後の都道府県
+	 * */
 	public String editPrefectures;
-	/*テーマ*/
+
+	/**
+	 *編集後のテーマ
+	 * */
 	public String editTheme;
-	/*コメント*/
+
+	/**
+	 *編集後のコメント
+	 * */
 	public String editComment;
-	/*画像URL*/
+
+	/**
+	 *編集後の画像URL
+	 * */
 	public String editImg;
 
-	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
+	/**
+	 * 削除用チェックボックスの状態
+	 * */
 	private String deleteCheck = "false";
 
-	/*エラーメッセージ（入力された情報に誤りだった場合などに使われます）*/
+	/**
+	 * エラーメッセージ
+	 * */
 	private String errorMsg = "";
 
 
 
-	/*executeメソッド-------------------------------------------------*/
+	/**
+	 *入力内容を確認するメソッド。
+	 * *@author YUKA MATSUMURA
+	 * @since 2017/09/07
+	 * @return result (SUCCESS/ERROR)
+	 * */
 	public String execute(){
 		String result = ERROR;
 
@@ -133,102 +192,141 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 	/*編集前の情報のgetter/setter---------------------------------------------*/
 
-	/*ツアーIDのgetter*/
+	/**
+	 * */
 	public int getCurrentTourId(){
 		return currentTourId;
 	}
 
-	/*ツアー名のsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentTourId(int currentTourId){
 		this.currentTourId = currentTourId;
 	}
 
-	/*ツアー名のgetter*/
+	/**
+	 *
+	 * */
 	public String getCurrentTourName(){
 		return currentTourName;
 	}
 
-	/*ツアー名のsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentTourName(String currentTourName){
 		this.currentTourName = currentTourName;
 	}
 
-	/*価格のgetter*/
+	/**
+	 *
+	 * */
 	public int getCurrentPrice(){
 		return currentPrice;
 	}
 
-	/*価格のsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentPrice(int currentPrice){
 		this.currentPrice = currentPrice;
 	}
 
-	/*定員のgetter*/
+	/**
+	 *
+	 * */
 	public int getCurrentPersons(){
 		return currentPersons;
 	}
 
-	/*定員のsetter*/
+	/***
+	 *
+	 * */
 	public void setCurrentPersons(int currentPersons){
 		this.currentPersons = currentPersons;
 	}
 
-	/*出発地のgetter*/
+	/**
+	 *
+	 * */
 	public String getCurrentDeparture(){
 		return currentDeparture;
 	}
 
-	/*出発地のsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentDeparture(String currentDeparture){
 		this.currentDeparture = currentDeparture;
 	}
 
-	/*エリアのgetter*/
+	/**
+	 *
+	 * */
 	public String getCurrentRegion(){
 		return currentRegion;
 	}
 
-	/*エリアのsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentRegion(String currentRegion){
 		this.currentRegion = currentRegion;
 	}
 
-	/*県のgetter*/
+	/**
+	 *
+	 * */
 	public String getCurrentPrefectures(){
 		return currentPrefectures;
 	}
 
-	/*県のsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentPrefectures(String currentPrefectures){
 		this.currentPrefectures = currentPrefectures;
 	}
 
-	/*テーマのgetter*/
+	/**
+	 *
+	 * */
 	public String getCurrentTheme(){
 		return currentTheme;
 	}
 
-	/*テーマのsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentTheme(String currentTheme){
 		this.currentTheme = currentTheme;
 	}
 
-	/*コメントのgetter*/
+	/**
+	 *
+	 * */
 	public String getCurrentComment(){
 		return currentComment;
 	}
 
-	/*コメントのsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentComment(String currentComment){
 		this.currentComment = currentComment;
 	}
 
-	/*画像URLのgetter*/
+	/**
+	 *
+	 * r*/
 	public String getCurrentImg(){
 		return currentImg;
 	}
 
-	/*画像URLのsetter*/
+	/**
+	 *
+	 * */
 	public void setCurrentImg(String currentImg){
 		this.currentImg = currentImg;
 	}
