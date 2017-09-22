@@ -92,10 +92,6 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 
 				errorMsg = "未入力の情報があります";
 
-				/*↓画像URLチェック用で作りました。が、現在は画像のプレビューを出すようにしたので不要としています。今後もしかしたら復活するかも…*/
-//			}else if(newImg.indexOf(".png") == -1 && newImg.indexOf(".jpg") == -1){
-//				errorMsg = "画像にはpngもしくはjpgを指定してください";
-
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝例外が起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
