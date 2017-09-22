@@ -151,9 +151,9 @@
 	</div>
 
 
-<footer>
-  <s:include value="footer.jsp" />
-</footer>
+	<footer>
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	</footer>
 
 
 </body>

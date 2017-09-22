@@ -82,11 +82,20 @@
 				</div>
 			</s:iterator>
 		</div>
-	</div>
 
 	</div>
 
+<div class="footer">
+	<footer>
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	</footer>
+</div>
+
+	</div>
 
 <!-- ページネーションここまで -->
+
+
+
 </body>
 </html>

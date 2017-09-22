@@ -68,6 +68,26 @@ table {
 
 footer {
 	margin-top:634px;
+    text-align:center;
+    height: 80px;
+    clear:left;
+    width:100%;
+    background-color:orange;
+}
+
+.link a:link{
+	color:#ffffff;
+}
+.link a:visited{
+	color:#ffffff;
+}
+
+.link a:hover{
+	color:#ffffff;
+}
+
+.link a:active{
+	color:#ffffff;
 }
 
 th {
