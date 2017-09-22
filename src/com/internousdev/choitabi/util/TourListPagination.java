@@ -4,28 +4,40 @@ import java.util.ArrayList;
 
 import com.internousdev.choitabi.dto.SelectTourDTO;
 
-/*@author:YUKA MATSUMURA
- *@since:2017/09/05
- *@version:1.1
+/**
+ * ツアー情報一覧のページネーションを行うクラス
+ * @author:YUKA MATSUMURA
+ * @since:2017/09/05
+ * @version:1.1
  * */
-
-
-
 public class TourListPagination {
 
-	/*表示するリストの最初のインデックス番号*/
+	/**
+	 * 表示するリストの最初のインデックス番号
+	 * */
 	private int firstIndex = 0;
 
-	/*表示するリストの最後のインデックス番号*/
+	/**
+	 * 表示するリストの最後のインデックス番号
+	 * */
 	private int lastIndex = 0;
 
-	/*一度に表示するツアーの件数（可変になったときのために、ここにまとめておく）*/
+	/**
+	 * 1ページに表示する件数
+	 * */
 	private int tourNumber = 10;
 
 
 
 
-
+	/**
+	 * 渡されたツアー情報のリストをページネートするメソッド
+	 * @author:YUKA MATSUMURA
+	 * @since:2017/09/05
+	 * @version:1.1
+	 * @param allTourList ツアー全件を格納したアレイリスト
+	 * @param currentPage 現在のページ数
+	 * */
 	public ArrayList<SelectTourDTO> paginateTourList(ArrayList<SelectTourDTO> allTourList, int currentPage){
 
 		/*呼び出し元に返すツアーのリスト*/
@@ -50,7 +62,14 @@ public class TourListPagination {
 
 	}
 
-
+	/**
+	 * 渡されたツアーのリストから最大ページ数を求めるメソッド
+	 * @author:YUKA MATSUMURA
+	 * @since:2017/09/05
+	 * @version:1.1
+	 * @param allTourList ツアー全件を格納したアレイリスト
+	 * @return maxPage 最大ページ数
+	 * */
 	public int rerturnMaxPage(ArrayList<SelectTourDTO> allTourList){
 		int maxPage;
 
