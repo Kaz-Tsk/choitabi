@@ -18,9 +18,13 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
     /**
      * 生成されたシリアルナンバー
      */
-    private static final long serialVersionUID = 7193520504007481422L;
 
-    /**
+
+
+	private static final long serialVersionUID = -8033110141537302788L;
+
+
+	/**
      * 送信者名
      */
     private String contact_name;

@@ -18,8 +18,13 @@ import com.opensymphony.xwork2.ActionSupport;
 public class CompleteContactAction extends ActionSupport implements SessionAware {
 
 
-   private static final long serialVersionUID = 7193520504007481422L;
 
+
+
+	/**
+	 *シリアルナンバー
+	 */
+	private static final long serialVersionUID = -4648324782464935857L;
 
 
 	/**

@@ -15,9 +15,13 @@ import com.opensymphony.xwork2.ActionSupport;
 public class FirstContactAction extends ActionSupport implements SessionAware {
 
 	/**
-	 * シリアルバージョンID
+	 * シリアルナンバー
 	 */
-	private static final long serialVersionUID = -8491587999319615832L;
+	private static final long serialVersionUID = 7206773230457585751L;
+
+
+
+
 
 
 	 /**
@@ -96,7 +100,7 @@ public class FirstContactAction extends ActionSupport implements SessionAware {
 	/**
 	 * お問い合わせ画面へ遷移するためのメソッド
 	 * @author kanako miyazono
-	 * @since 2017/8/22
+	 * @since 2017/9/14
 	 * @version 1.1
 	 * @return SUCCESS
 	 */
