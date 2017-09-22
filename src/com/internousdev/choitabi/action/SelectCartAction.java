@@ -25,7 +25,7 @@ public class SelectCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * シリアルID
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -2072179091622423816L;
 
 	/**
 	 * ユーザーID

@@ -25,11 +25,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UpdateCartAction extends ActionSupport implements SessionAware{
 
     /**
-     * シリアルID
-     */
-    private static final long serialVersionUID = 1L;
+	 * シリアルID
+	 */
+	private static final long serialVersionUID = -6292697385237827990L;
 
-   /**
+    /**
      * カートID
      */
     private int cart_id;
@@ -130,7 +130,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      */
     public int getCart_id() {
         return cart_id;
-        }
+    }
 
     /**
      * カートIDを格納するメソッド
@@ -138,7 +138,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      */
     public void setCart_id(int cart_id) {
         this.cart_id = cart_id;
-        }
+    }
 
     /**
      * ユーザーIDを取得するメソッド
@@ -210,7 +210,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      */
     public int getOrder_count() {
         return order_count;
-        }
+    }
 
     /**
      * 予約人数を格納するメソッド
@@ -218,7 +218,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      */
     public void setOrder_count(int order_count) {
         this.order_count = order_count;
-        }
+    }
 
     /**
      * 合計金額を取得するメソッド
@@ -290,7 +290,7 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      */
     public Map<String, Object> getSession() {
         return session;
-        }
+    }
 
     /**
      * セッション情報を格納するメソッド
@@ -298,6 +298,14 @@ public class UpdateCartAction extends ActionSupport implements SessionAware{
      */
     public void setSession(Map<String, Object> session) {
         this.session = session;
-        }
+    }
+
+    /**
+     * シリアルIDを取得するメソッド
+     * @return serialversionuid シリアルID
+     */
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
 }

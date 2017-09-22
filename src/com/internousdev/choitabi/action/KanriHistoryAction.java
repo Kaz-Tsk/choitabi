@@ -19,10 +19,11 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class KanriHistoryAction extends ActionSupport {
 
+
 	/**
 	 * シリアルID
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -4207399845924861834L;
 
 	/**
 	 * ユーザーID
@@ -333,5 +334,13 @@ public class KanriHistoryAction extends ActionSupport {
 	public void setDisplayList(ArrayList<CartDTO> displayList) {
 		this.displayList = displayList;
 	}
+
+    /**
+     * シリアルIDを取得するメソッド
+     * @return serialversionuid シリアルID
+     */
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
 }

@@ -25,7 +25,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * シリアルID
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1521502778776531460L;
 
 	/**
 	 * ツアーID
@@ -281,7 +281,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
      */
     public ArrayList<TourDTO> getDisplayList() {
         return displayList;
-        }
+    }
 
     /**
      * 商品一覧表示用リストを格納するメソッド
@@ -289,7 +289,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
      */
     public void setDisplayList(ArrayList<TourDTO> displayList) {
         this.displayList = displayList;
-        }
+    }
 
     /**
      * セッションを取得するメソッド
@@ -297,7 +297,7 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
      */
     public Map<String, Object> getSession() {
         return session;
-        }
+    }
 
     /**
      * セッションを格納するメソッド
@@ -305,6 +305,14 @@ public class TourDetailAction extends ActionSupport implements SessionAware {
      */
     public void setSession(Map<String, Object> session) {
         this.session = session;
-        }
+    }
+
+    /**
+     * シリアルIDを取得するメソッド
+     * @return serialversionuid シリアルID
+     */
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
 }

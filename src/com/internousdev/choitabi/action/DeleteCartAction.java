@@ -24,10 +24,12 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class DeleteCartAction extends ActionSupport implements SessionAware {
 
+
+
 	/**
 	 * シリアルID
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 7227851562138529020L;
 
 	/**
      * 合計金額

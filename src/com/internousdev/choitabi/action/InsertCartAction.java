@@ -26,7 +26,7 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
 	/**
 	 * シリアルID
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -8676237918801761004L;
 
 	/**
 	 * カートID
@@ -341,6 +341,14 @@ public class InsertCartAction extends ActionSupport implements SessionAware {
      */
     public void setImg(String img) {
     	this.img = img;
+    }
+
+    /**
+     * シリアルIDを取得するメソッド
+     * @return serialversionuid シリアルID
+     */
+    public static long getSerialversionuid() {
+        return serialVersionUID;
     }
 
 }
