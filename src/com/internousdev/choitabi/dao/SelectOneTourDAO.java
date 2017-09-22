@@ -22,7 +22,7 @@ public class SelectOneTourDAO {
 	 * @since 2017/09/06
 	 * @version 1.1
 	 * @param toutId ツアーID
-	 * @return SelectTourDTO ツアー1件分の情報を格納したDTOクラスのインスタンス
+	 * @return stdto ツアー1件分の情報を格納したSelectTourDTOクラスのインスタンス
 	 * */
 	public SelectTourDTO selectOneTour(int tourId){
 

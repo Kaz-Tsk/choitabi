@@ -23,12 +23,12 @@ public class SelectTourListDAO {
 
 /**
  * ツアー情報の一覧を検索・取得するメソッド
- * @author:YUKA MATSUMURA
- * @since:2017/09/05
- * @version:1.1
+ * @author YUKA MATSUMURA
+ * @since 2017/09/05
+ * @version 1.1
  * @param selectWord 検索ワード
  * @param selectTheme 検索テーマ
- * @return allTourList(ArrayList) 条件に該当するすべてのツアー情報を格納したDTOのアレイリスト
+ * @return allTourLis 条件に該当するすべてのツアー情報を格納したDTOのアレイリスト
  *
  * */
 	public ArrayList<SelectTourDTO> selectTourList(String selectWord, String selectTheme){

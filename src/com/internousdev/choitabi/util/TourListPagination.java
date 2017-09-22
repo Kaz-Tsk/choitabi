@@ -32,11 +32,12 @@ public class TourListPagination {
 
 	/**
 	 * ツアー情報の一覧をページネートするメソッド
-	 * @author:YUKA MATSUMURA
-	 * @since:2017/09/05
-	 * @version:1.1
+	 * @author YUKA MATSUMURA
+	 * @since 2017/09/05
+	 * @version 1.1
 	 * @param allTourList ツアー全件を格納したアレイリスト
 	 * @param currentPage 現在のページ数
+	 * @return currentTourList ページネートされたツアー一覧のリスト
 	 * */
 	public ArrayList<SelectTourDTO> paginateTourList(ArrayList<SelectTourDTO> allTourList, int currentPage){
 
@@ -68,7 +69,7 @@ public class TourListPagination {
 	 * @since:2017/09/05
 	 * @version:1.1
 	 * @param allTourList ツアー全件を格納したアレイリスト
-	 * @return maxPage 最大ページ数
+	 * @return maxPage(int) 最大ページ数
 	 * */
 	public int rerturnMaxPage(ArrayList<SelectTourDTO> allTourList){
 		int maxPage;

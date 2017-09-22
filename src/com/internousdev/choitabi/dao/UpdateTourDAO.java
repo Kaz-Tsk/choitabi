@@ -19,9 +19,9 @@ public class UpdateTourDAO {
 
 	/**
 	 * DBに登録されているツアーを操作するメソッド
-	 * @author : YUKA MATSUMURA
-	 * @since : 2017/09/08
-	 * @version : 1.1
+	 * @author YUKA MATSUMURA
+	 * @since 2017/09/08
+	 * @version 1.1
 	 * @param editTourID 編集するツアーのID
 	 * @param editTourName 編集後のツアー名
 	 * @param editPrice 編集後の価格
@@ -33,7 +33,7 @@ public class UpdateTourDAO {
 	 * @param editComment 編集後のコメント
 	 * @param editImg 編集後の画像URL
 	 * @param deleteCheck 削除用チェックボックスの状態
-	 * @return count(int) 操作の完了したデータ数
+	 * @return count 操作の完了したデータ数
 	 * */
 	public int updateTour(String editTourId, String editTourName,String editPrice, String editPersons, String editDeparture,
 								String editRegion, String editPrefectures,String editTheme, String editComment, String editImg,

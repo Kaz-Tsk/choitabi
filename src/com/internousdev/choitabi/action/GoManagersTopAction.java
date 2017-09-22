@@ -9,14 +9,18 @@ public class GoManagersTopAction extends ActionSupport{
 	 */
 	private static final long serialVersionUID = 5593838660842244496L;
 
-	/**@author YUKA MATSUMURA
+	/**
+	 * 管理画面のトップに遷移するアクション
+	 * @author YUKA MATSUMURA
 	 * @since 2017/09/14
 	 * @version 1.1
-	 *
-	 * 管理画面の各操作ページからトップページに戻るときに動くアクションです。
-	 * 現時点はSUCCESSを返すだけのアクションです。今後必要によって処理が増えるかも…（セッション管理とか）
 	 */
 
+
+	/**
+	 * 管理画面のトップに遷移するメソッド
+	 * @return result(SUCCESS)
+	 * */
 	public String execute(){
 		String result = SUCCESS;
 

@@ -28,7 +28,7 @@ public class InsertTourDAO {
  * @param newTheme 新規ツアーのテーマ
  * @param newComment 新規ツアーのコメント
  * @param newImg 新規ツアーの画像URL
- * @return count(int) 変更の完了したデータ数
+ * @return count 変更の完了したデータ数
  * */
 	public int insertTour(String newTourName,String newPrice,String newPersons,String newDeparture,
 								String newRegion, String newPrefectures,String newTheme, String newComment, String newImg){
