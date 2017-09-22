@@ -60,7 +60,7 @@ public class KanriHistoryDAO {
 	                dto.setTour_id(rs.getInt("tour_id"));
 	                dto.setTour_name(rs.getString("tour_name"));
 	                dto.setOrder_count(rs.getInt("order_count"));
-	                dto.setTotal_price(rs.getInt("price")*rs.getInt("total_price"));
+	                dto.setTotal_price(rs.getBigDecimal("price").multiply(rs.getBigDecimal("total_price")));
 	                dto.setRegistration_date(rs.getString("registration_date"));
 	                searchList.add(dto);
 	                }
