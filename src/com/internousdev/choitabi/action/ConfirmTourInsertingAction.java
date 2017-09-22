@@ -22,42 +22,62 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	 */
 	private static final long serialVersionUID = 6481205050973520069L;
 
-	/*新規ツアーのID（自動で入るので0のままでOKです）*/
-	private int newTourId = 0;
-
-	/*入力されたツアー名*/
+	/**
+	 * 新規ツアー名
+	 * */
 	private String newTourName;
 
-	/*入力された価格*/
+	/**
+	 * 新規ツアーの価格
+	 * */
 	private String newPrice;
 
-	/*入力された定員*/
+	/**
+	 * 新規ツアーの定員
+	 * */
 	private String newPersons;
 
-	/*入力された出発地*/
+	/**
+	 * 新規ツアーの出発地
+	 * */
 	private String newDeparture;
 
-	/*入力されたエリア*/
+	/**
+	 * 新規ツアーのエリア
+	 * */
 	private String newRegion;
 
-	/*入力された都道府県*/
+	/**
+	 * 新規ツアーの都道府県
+	 * */
 	private String newPrefectures;
 
-	/*入力されたテーマ*/
+	/**
+	 * 新規ツアーのテーマ
+	 * */
 	private String newTheme;
 
-	/*入力されたコメント*/
+	/**
+	 * 新規ツアーのコメント
+	 * */
 	private String newComment;
 
-	/*入力された画像URL*/
+	/**
+	 * 新規ツアーの画像URL
+	 * */
 	private String newImg;
 
-	/*エラーメッセージ（入力された情報に誤りがあった場合などに使われます）*/
+	/**
+	 * エラーメッセージ
+	 * */
 	private String errorMsg="";
 
 
 
-	/*executeメソッド-------------------------------------------------*/
+	/**
+	 * 入力された新規ツアーの情報を確認するメソッド
+	 * @return result(SUCCESS / ERROR)
+	 * */
 	public String execute(){
 		String result = ERROR;
 
@@ -68,9 +88,8 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 		}
 
 		try{
-			if (	newTourName.equals("")|| newPrice.equals("") || newPersons.equals("") ||
-				newDeparture.equals("") || newRegion.equals("") || newPrefectures.equals("") || newTheme == null ||
-			    newComment.equals("") ) {
+			if (	newTourName.equals("") || newPrice.equals("") || newPersons.equals("") || newDeparture.equals("") ||
+				newRegion.equals("") || newPrefectures.equals("") || newTheme == null || newComment.equals("") ) {
 
 				errorMsg = "未入力の情報があります";
 				System.out.println(errorMsg);
@@ -81,13 +100,13 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
-				 * 変換できればOK。変換できない＝エラーが起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
+				 * 変換できればOK。変換できない＝例外が起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
 				Integer.parseInt(newPrice);
 				Integer.parseInt(newPersons);
 			}
 
 		}catch(NumberFormatException e){
-			errorMsg = "価格・人数の欄には数値を入力してください";
+			errorMsg = "価格・定員の欄には数値を入力してください";
 		}catch(NullPointerException e){
 			e.printStackTrace();
 		}
@@ -101,92 +120,157 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 
 	/*以下、変数のgetter/setter-----------------------------------------------------*/
 
-
-	public int getNewTourId(){
-		return newTourId;
-	}
-
-	public void setNewTourId(int newTourId){
-		this.newTourId = newTourId;
-	}
-
+	/**
+	 * 新規ツアー名を取得するメソッド
+	 * @return newTourName 新規ツアー名
+	 * */
 	public String getNewTourName(){
 		return newTourName;
 	}
 
+	/**
+	 * 新規ツアー名を格納するメソッド
+	 * @param newTourName 新規ツアー名
+	 * */
 	public void setNewTourName(String newTourName){
 		this.newTourName = newTourName;
 	}
 
+	/**
+	 * 新規ツアーの価格を取得するメソッド
+	 * @return newPrice 新規ツアーの価格
+	 * */
 	public String getNewPrice(){
 		return newPrice;
 	}
 
+	/**
+	 * 新規ツアーの価格を格納するメソッド
+	 * @param newPrice 新規ツアーの価格
+	 * */
 	public void setNewPrice(String newPrice){
 		this.newPrice = newPrice;
 	}
 
+	/**
+	 * 新規ツアーの定員を取得するメソッド
+	 * @return newPersons 新規ツアーの定員
+	 * */
 	public String getNewPersons(){
 		return newPersons;
 	}
 
+	/**
+	 * 新規ツアーの定員を格納するメソッド
+	 * @param newPersons 新規ツアーの定員
+	 * */
 	public void setNewPersons(String newPersons){
 		this.newPersons = newPersons;
 	}
 
+	/**
+	 * 新規ツアーの出発地を取得するメソッド
+	 * @return newDeparture 新規ツアーの出発地
+	 * */
 	public String getNewDeparture(){
 		return newDeparture;
 	}
 
+	/**
+	 * 新規ツアーの出発地を格納するメソッド
+	 * @param newDeparture 新規ツアーの出発地
+	 * */
 	public void setNewDeparture(String newDeparture){
 		this.newDeparture = newDeparture;
 	}
 
+	/**
+	 * 新規ツアーのエリアを取得するメソッド
+	 * @return newRegion 新規ツアーのエリア
+	 * */
 	public String getNewRegion(){
 		return newRegion;
 	}
 
+	/**
+	 * 新規ツアーのエリアを格納するメソッド
+	 * @param newRegion 新規ツアーのエリア
+	 * */
 	public void setNewRegion(String newRegion){
 		this.newRegion = newRegion;
 	}
 
+	/**
+	 * 新規ツアーの都道府県を取得するメソッド
+	 * @return newPrefectures 新規ツアーの都道府県
+	 * */
 	public String getNewPrefectures(){
 		return newPrefectures;
 	}
 
+	/**
+	 * 新規ツアーの都道府県を格納するメソッド
+	 * @param newPrefectures 新規ツアーの都道府県
+	 * */
 	public void setNewPrefectures(String newPrefectures){
 		this.newPrefectures = newPrefectures;
 	}
 
+	/**
+	 * 新規ツアーのテーマを取得するメソッド
+	 * @return newTheme 新規ツアーのテーマ
+	 * */
 	public String getNewTheme(){
 		return newTheme;
 	}
 
+	/**
+	 * 新規ツアーのテーマを格納するメソッド
+	 * @param newTheme 新規ツアーのテーマ
+	 * */
 	public void setNewTheme(String newTheme){
 		this.newTheme = newTheme;
 	}
 
+	/**
+	 *新規ツアーのコメントを取得するメソッド
+	 *@return newComment 新規ツアーのコメント
+	 * */
 	public String getNewComment(){
 		return newComment;
 	}
 
+	/**
+	 *新規ツアーのコメントを格納するメソッド
+	 *@param newComment 新規ツアーのコメント
+	 * */
 	public void setNewComment(String newComment){
 		this.newComment = newComment;
 	}
 
+	/**
+	 *新規ツアーの画像URLを取得するメソッド
+	 *@return newImg 新規ツアーの画像URL
+	 * */
 	public String getNewImg(){
 		return newImg;
 	}
 
-	public void setNewImg(String newImg){
-		this.newImg = newImg;
-	}
-
 	/*エラーメッセージのgetter/setter------------------*/
+
+
+	/**
+	 * エラーメッセージを取得するメソッド
+	 * @return errorMsg エラーメッセージ
+	 * */
 	public String getErrorMsg(){
 		return errorMsg;
 	}
 
+	/**
+	 * エラーメッセージを格納するメソッド
+	 * @param errorMsg エラーメッセージ
+	 * */
 	public void setErrorMsg(String errorMsg){
 		this.errorMsg = errorMsg;
 	}

@@ -173,7 +173,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			}
 
 		}catch(NumberFormatException e){
-			errorMsg = "価格・人数の欄には数値を入力してください";
+			errorMsg = "価格・定員の欄には数値を入力してください";
 		}catch(NullPointerException e){
 			e.printStackTrace();
 		}
