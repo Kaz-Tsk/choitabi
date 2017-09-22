@@ -19,6 +19,11 @@
 	<link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
 </head>
 
+<!-- ヘッダー部分------------------------------->
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
 <body>
 
 	<h1>新規ツアー登録　情報入力画面</h1>
