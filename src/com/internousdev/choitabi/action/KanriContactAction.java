@@ -78,6 +78,7 @@ private static final long serialVersionUID = 1713916660493018447L;
      * @author kanako miyazono
      * @since 2017/09/11
      * @version 1.1
+     * @return ERROR、SUCCESS
      */
 	 public String execute() {
          String result=ERROR;
@@ -129,45 +130,39 @@ private static final long serialVersionUID = 1713916660493018447L;
 
     /**
      * ユーザー名を取得するメソッド
-     * @return contactName ユーザー名
+     * @return contact_name ユーザー名
      */
     public String getContact_name() {
-        return contact_name
-;
+        return contact_name;
     }
 
     /**
      * ユーザー名を格納するメソッド
-     * @param contactName ユーザー名
+     * @param contact_nameユーザー名
      */
-    public void setContact_name(String contact_name
-) {
-        this.contact_name
- = contact_name
-;
+    public void setContact_name(String contact_name) {
+        this.contact_name = contact_name;
     }
 
     /**
      * メールアドレスを取得するメソッド
-     * @return email メールアドレス
+     * @return contact_mailAddress メールアドレス
      */
-    public String getContact_mailAddress
-() {
+    public String getContact_mailAddress() {
         return contact_mailAddress;
     }
 
     /**
      * メールアドレスを格納するメソッド
-     * @param email セット メールアドレス
+     * @param contact_mailAddress セット メールアドレス
      */
-    public void setContact_mailAddress
-(String contact_mailAddress) {
+    public void setContact_mailAddress(String contact_mailAddress) {
         this.contact_mailAddress= contact_mailAddress;
     }
 
     /**
      * 問い合わせ内容を取得するメソッド
-     * @return comment 問い合わせ内容
+     * @return contact_contents 問い合わせ内容
      */
     public String getContact_contents() {
         return contact_contents;
@@ -175,7 +170,7 @@ private static final long serialVersionUID = 1713916660493018447L;
 
     /**
      * 問い合わせ内容を格納するメソッド
-     * @param comment セット 問い合わせ内容
+     * @param contact_contents セット 問い合わせ内容
      */
     public void setContact_contents(String contact_contents) {
         this.contact_contents = contact_contents;
@@ -183,13 +178,17 @@ private static final long serialVersionUID = 1713916660493018447L;
 
     /**
      * お問い合わせリストを取得するメソッド
+     * @return contactList 問い合わせリスト
      * */
     public ArrayList<KanriContactDTO> getContactList(){
     	return contactList;
     }
 
     /**
-     * お問い合わせリストを格納するメソッド*/
+     * お問い合わせリストを格納するメソッド
+     *  @param contactList 問い合わせリスト
+     * */
+
     public void setContactList(ArrayList<KanriContactDTO> contactList){
     	this.contactList = contactList;
     }

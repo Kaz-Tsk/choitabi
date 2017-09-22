@@ -53,6 +53,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 	 * @author kanako miyazono
 	 * @since 2017/9/5
 	 * @version 1.1
+	 * @return ERROR、SUCCESS
 	 */
 	public String execute() {
 		String result = ERROR;
@@ -74,7 +75,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * お問い合わせ者の名前を取得するメソッド
-	 * @return contactName お問い合わせ者の名前
+	 * @return contact_name お問い合わせ者の名前
 	 */
 	public String getContact_name() {
 		return contact_name;
@@ -82,7 +83,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * お問い合わせ者の名前を格納する
-	 * @param contactName  お問い合わせ者の名前
+	 * @param contact_name お問い合わせ者の名前
 	 */
 	public void setContact_name(String contact_name) {
 		this.contact_name = contact_name;
@@ -90,7 +91,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * メールアドレスを取得するメソッド
-	 * @return email メールアドレス
+	 * @return contact_mailAddress メールアドレス
 	 */
 	public String getContact_mailAddress() {
 		return contact_mailAddress;
@@ -98,7 +99,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * メールアドレスを格納する
-	 * @param email メールアドレス
+	 * @param contact_mailAddress メールアドレス
 	 */
 	public void setContact_mailAddress(String contact_mailAddress) {
 		this.contact_mailAddress= contact_mailAddress;
@@ -106,7 +107,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * お問い合わせ本文を取得するメソッド
-	 * @return comment お問い合わせ本文
+	 * @return contact_contents お問い合わせ本文
 	 */
 	public String getContact_contents() {
 		return contact_contents;
@@ -114,7 +115,7 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * お問い合わせ本文を格納する
-	 * @param comment お問い合わせ本文
+	 * @param contact_contents お問い合わせ本文
 	 */
 	public void setContact_contents(String contact_contents) {
 		this.contact_contents = contact_contents;

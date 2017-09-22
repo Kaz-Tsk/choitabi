@@ -41,11 +41,14 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
 
     /**
-     * エラーメッセージを
+     * エラーメッセージ
      */
    private String errorMessage;
 
 
+   /**
+    *　セッション
+    */
 
    private Map<String, Object> session;
 
@@ -57,6 +60,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
     /**
      * 問い合わせ画面の情報を取得して問い合わせ内容確認画面に表示するためのメソッド
      * （入力されない箇所が一つでもあればERROR）
+     * @return ERROR、SUCCESS
      */
     public String execute() {
 
@@ -86,6 +90,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
     /**
      * 上記のexecuteでエラーが出た場合のエラーメッセージを取ってくるメソッド
+     * @return errorMessage
      */
     public String getErrorMessage() {
     	return errorMessage;
@@ -107,7 +112,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
     /**
      * 送信者名を取得するためのメソッド
-     * @return postingName 送信者名
+     * @return contact_name 送信者名
      */
     public String getContact_name() {
         return contact_name;
@@ -115,7 +120,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
     /**
      * 送信者名を格納するためのメソッド
-     * @param postingName 送信者名
+     * @param contact_name 送信者名
      */
     public void setContact_name(String contact_name) {
         this.contact_name =contact_name;
@@ -123,7 +128,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
     /**
      * 送信者メールアドレスを取得するためのメソッド
-     * @return postingEmail 送信者メールアドレス
+     * @return contact_mailAddress 送信者メールアドレス
      */
     public String getContact_mailAddress() {
         return contact_mailAddress;
@@ -131,8 +136,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
     /**
      * 送信者メールアドレスを格納ためのメソッド
-     * @param postingEmail
-     *            送信者メールアドレス
+     * @param contact_mailAddress 送信者メールアドレス
      */
     public void setContact_mailAddress(String contact_mailAddress) {
         this.contact_mailAddress = contact_mailAddress;
@@ -140,7 +144,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
     /**
      * 問い合わせ内容を取得するためのメソッド
-     * @return postingText 問い合わせ内容
+     * @return contact_contents 問い合わせ内容
      */
     public String getContact_contents() {
         return contact_contents;
@@ -148,7 +152,7 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
 
     /**
      * 問い合わせ内容を格納するためのメソッド
-     * @param postingText 問い合わせ内容
+     * @param contact_contents 問い合わせ内容
      */
     public void setContact_contents(String contact_contents) {
         this.contact_contents= contact_contents;
