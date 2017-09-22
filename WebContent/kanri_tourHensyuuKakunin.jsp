@@ -17,6 +17,11 @@
  	<!-- CSSの読み込み -->
 <link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
 </head>
+
+<header>
+        <jsp:include page="header.jsp"/>
+</header>
+
 <body>
 
 <h1>ツアー情報編集 内容確認</h1>
