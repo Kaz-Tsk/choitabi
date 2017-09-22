@@ -8,7 +8,7 @@ import com.mongodb.DBCollection;
 
 /**
  * お問い合わせフォームに関するDAOクラス
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @since 2017/9/5
  * @version 1.1
  */
@@ -17,7 +17,7 @@ public class ContactCompleteDAO {
 
 	/**
 	 * MongoDBにデータを追加するメソッド
-	 * @author kanako miyazono
+	 * @author KANAKO MIYAZONO
 	 * @since 2017/9/5
 	 *@version 1.1
 	 */

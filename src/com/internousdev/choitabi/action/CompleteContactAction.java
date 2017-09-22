@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 問い合わせフォームからの情報をMongoDBにインサートするアクション
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @since 2017/9/5
  * @version 1.1
  *
@@ -50,24 +50,19 @@ public class CompleteContactAction extends ActionSupport implements SessionAware
 
 	/**
 	 * 説明 お問い合わせ情報をデータベースに登録できたらSUCCESSを返すメソッド
-	 * @author kanako miyazono
+	 * @author KANAKO MIYAZONO
 	 * @since 2017/9/5
 	 * @version 1.1
 	 * @return ERROR、SUCCESS
 	 */
-	public String execute() {
+	public String execute() throws UnknownHostException {
 		String result = ERROR;
 		ContactCompleteDAO dao = new ContactCompleteDAO ();
 
-		try {
-			if (dao.dbInsert(contact_name,contact_mailAddress,contact_contents)) {
-				result = SUCCESS;
+		if (dao.dbInsert(contact_name,contact_mailAddress,contact_contents)) {
+			result = SUCCESS;
 
-				return result;
-			}
-
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
+			return result;
 		}
 
 		return result;

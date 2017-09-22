@@ -8,7 +8,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * お問い合わせ画面へ遷移するアクション
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @since 2017/9/14
  * @version 1.1
  */
@@ -99,7 +99,7 @@ public class FirstContactAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * お問い合わせ画面へ遷移するためのメソッド
-	 * @author kanako miyazono
+	 * @author KANAKO MIYAZONO
 	 * @since 2017/9/14
 	 * @version 1.1
 	 * @return SUCCESS

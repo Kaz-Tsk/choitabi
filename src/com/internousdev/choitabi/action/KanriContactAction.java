@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 商品の情報をセレクトするアクション
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @since 2017/9/11
  * @version 1.1
  * @par
@@ -75,7 +75,7 @@ private static final long serialVersionUID = 1713916660493018447L;
 
     /**
      * 問い合わせ情報を取得するメソッド
-     * @author kanako miyazono
+     * @author KANAKO MIYAZONO
      * @since 2017/09/11
      * @version 1.1
      * @return ERROR、SUCCESS

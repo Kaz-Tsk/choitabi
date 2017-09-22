@@ -14,7 +14,7 @@ import com.mongodb.DBObject;
 
 /**
  * お問い合わせ取得に関するクラス
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @since 2017/9/6
  * @version 1.1
  */

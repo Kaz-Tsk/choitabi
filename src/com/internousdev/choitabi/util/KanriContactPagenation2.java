@@ -6,7 +6,7 @@ import com.internousdev.choitabi.dto.KanriContactDTO;
 
 /**
  * ページネーションが必要なリストのために、1ページごとの情報を保持するためのクラス
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @since 2017/09/11
  * @version 1.1
  */
@@ -26,7 +26,7 @@ public class KanriContactPagenation2 {
 
 	/**
 	 * ページネートされた商品リストを取得するメソッド
-	 * @author kanako miyazono
+	 * @author KANAKO MIYAZONO
 	 * @since 2017/09/11
 	 * @return paginatedItemList ページネートされた商品リスト
 	 */
@@ -53,7 +53,7 @@ public class KanriContactPagenation2 {
 
 	/**
 	 * ページIDを取得するメソッド
-	 * @author kanako miyazono
+	 * @author KANAKO MIYAZONO
 	 * @since 2017/09/11
 	 * @return pageId ページID
 	 */

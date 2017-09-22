@@ -1,7 +1,7 @@
 package com.internousdev.choitabi.dto;
 /**
  * ツアー情報を格納・取得するクラス
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @since 2017/9/11
  * @version 1.1
  */

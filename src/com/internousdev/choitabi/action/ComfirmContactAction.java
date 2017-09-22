@@ -9,7 +9,7 @@ import com.opensymphony.xwork2.ActionSupport;
 /**
  * 問い合わせ確認画面へ遷移するアクションクラス
  *
- * @author kanakomiyazono
+ * @author KANAKO MIYAZONO
  * @version 1.0
  * @since 1.0
  */

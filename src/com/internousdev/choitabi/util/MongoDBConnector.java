@@ -10,8 +10,7 @@ import com.mongodb.MongoClient;
 
 /**
  * MongoDBConnectorクラス
- * @author kanako miyazono
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @since 2017/09/05
  */
 public class MongoDBConnector {

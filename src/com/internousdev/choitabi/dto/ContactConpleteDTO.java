@@ -2,7 +2,7 @@ package com.internousdev.choitabi.dto;
 
 /**
  * お問い合わせ情報を保存するためのDTO
- * @author kanako miyazono
+ * @author KANAKO MIYAZONO
  * @version 1.0
  * @since 1.0
  */
