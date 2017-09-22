@@ -47,7 +47,7 @@ public class LoginDAO {
 				dto.setMailAddress(rs.getString("phone_email"));
 				dto.setPassword(rs.getString("password"));
 				dto.setUserId(rs.getInt("user_id"));
-				dto.setLoginFlg(rs.getBoolean("login_flg"));
+				dto.setLoginFlg(rs.getInt("login_flg"));
 				dto.setUserFlg(rs.getInt("user_flg"));
 			}
 		}catch(SQLException e){
@@ -58,6 +58,39 @@ public class LoginDAO {
 			e.printStackTrace();
 		}
 		return dto;
+	}
+
+
+/**
+ *ログインフラグを１に代入するメソッド
+ * @param userId
+ * @return loginFlg
+ */
+
+
+	public void  update(int userId){
+
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+
+		Connection con = db.getConnection();
+
+		String sql = "update  users set login_flg=1 where user_id=?";
+		try{
+
+			PreparedStatement ps = con.prepareStatement(sql);
+
+			ps.setInt(1, userId);
+			ps.executeUpdate();
+
+
+		}catch(SQLException e){
+			e.printStackTrace();
+		}try{
+			con.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+
 	}
 
 }

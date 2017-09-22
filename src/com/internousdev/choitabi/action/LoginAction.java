@@ -29,6 +29,10 @@ import com.opensymphony.xwork2.ActionSupport;
 	private String mailAddress;
 
 	/**
+	 * ログインフラグ
+	 */
+	private int loginFlg;
+	/**
 	 * セッション情報(ユーザーID)
 	 */
 	private Map<String,Object>session;
@@ -43,7 +47,7 @@ import com.opensymphony.xwork2.ActionSupport;
 	 * @author KAZUYUKI TASAKI
 	 * @since 2017/9/1
 	 * @version 1.0
-	 * @returnログイン成功:SUCCESS  失敗:ERROR  管理者:admin
+	 * @return ログイン成功:SUCCESS  失敗:ERROR  管理者:admin
 	 */
 	public String execute(){
 		String result = ERROR;
@@ -52,29 +56,34 @@ import com.opensymphony.xwork2.ActionSupport;
 
 		dto = dao.select(mailAddress, password);
 
+		if(loginFlg==1){
+			return ERROR;
+		}
+
 		if(mailAddress.equals(dto.getMailAddress())){
 			if(password.equals(dto.getPassword())){
+				System.out.println(dto.getLoginFlg());
+				if(dto.getLoginFlg()!=1){
 						if(admin){
+							dao.update(dto.getUserId());
 							int userFlg = (int)dto.getUserFlg();
-							if(userFlg ==3){
-								session.put("userFlg", dto.getUserFlg());
-								session.put("userId", dto.getUserId());
-								session.put("loginFlg",dto.isLoginFlg());
-								System.out.println(session);
-								result = "admin";
-							}else{
-								session.put("userFlg", dto.getUserFlg());
-								session.put("userId", dto.getUserId());
-								session.put("loginFlg", dto.isLoginFlg());
-								result = SUCCESS;
+								if(userFlg ==3){
+									session.put("userFlg", dto.getUserFlg());
+									session.put("userId", dto.getUserId());
+									session.put("loginFlg",dto.getLoginFlg());
+									result = "admin";
+								}else{
+									session.put("userFlg", dto.getUserFlg());
+									session.put("userId", dto.getUserId());
+									session.put("loginFlg", dto.getLoginFlg());
+									result = SUCCESS;
+								}
 							}
 						}
+			}
 					}
-				}
-
-
-		return result;
-	}
+				return result;
+			}
 
 
 	/**
@@ -86,7 +95,6 @@ import com.opensymphony.xwork2.ActionSupport;
 	}
 	/**
 	 * メールアドレス格納メソッド
-	 *
 	 * @param mailAddress メールアドレス
 	 */
 	public void setMailAddress(String mailAddress){
@@ -105,6 +113,22 @@ import com.opensymphony.xwork2.ActionSupport;
 	 */
 	public void setPassword(String password){
 		this.password = password;
+	}
+
+	/**
+	 * ログインフラグ取得メソッド
+	 * @return loginFlg
+	 */
+	public int getLoginFlg(){
+		return loginFlg;
+	}
+
+	/**
+	 * ログインフラグ格納メソッド
+	 * @param loginFlg
+	 */
+	public void setLoginFlg(int loginFlg){
+		this.loginFlg= loginFlg;
 	}
 
 	/**

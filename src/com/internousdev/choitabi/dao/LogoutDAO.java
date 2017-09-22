@@ -22,8 +22,8 @@ public class LogoutDAO {
 	 * @param loginFlg
 	 * @return count 正しく動作すれば行数、ERRORで０を返す。
 	 */
-	public int update(int userId, boolean loginFlg){
-		int count = 0;
+	public void update(int userId, int loginFlg){
+
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
 		Connection con = db.getConnection();
 
@@ -31,10 +31,10 @@ public class LogoutDAO {
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 
-			ps.setBoolean(1, loginFlg);
+			ps.setInt(1, loginFlg);
 			ps.setInt(2, userId);
-			count = ps.executeUpdate();
-			return count;
+			ps.executeUpdate();
+
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
@@ -43,7 +43,6 @@ public class LogoutDAO {
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
- 		return count;
 	}
 
 

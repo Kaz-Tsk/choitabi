@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.util.login.LogoutDAO;
+import com.internousdev.choitabi.dao.LogoutDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -31,7 +31,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	/**
 	 * ログインフラグ
 	 */
-	private boolean loginFlg;
+	private int loginFlg;
 
 	/**
 	 * ユーザーID
@@ -46,7 +46,9 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		String result = ERROR;
 		if(session.get("userId")!=null){
 			LogoutDAO dao = new LogoutDAO();
-			dao.update((int)session.get("userId"),false);
+			System.out.println(userId);
+			dao.update((int)session.get("userId"),0);
+			System.out.println(loginFlg);
 			session.clear();
 			if(session.isEmpty()){
 				result = SUCCESS;
@@ -75,7 +77,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	 * loginFlg格納
 	 * @param loginFlg
 	 */
-	public void setLoginFlg(boolean loginFlg){
+	public void setLoginFlg(int loginFlg){
 		this.loginFlg = loginFlg;
 	}
 
@@ -83,7 +85,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	 * loginFlg取得
 	 * @return
 	 */
-	public boolean isLoginFlg(){
+	public int getLoginFlg(){
 		return loginFlg;
 	}
 

@@ -1,3 +1,4 @@
+
 package com.internousdev.choitabi.dto;
 
 
@@ -8,7 +9,7 @@ public class UsersDTO {
 	private String mailAddress;
 	private int userId;
 	private int userFlg;
-	private boolean loginFlg;
+	private int loginFlg;
 
 
 
@@ -69,14 +70,14 @@ public class UsersDTO {
 	/**
 	 * @return loginFlg
 	 */
-	public boolean isLoginFlg(){
+	public int getLoginFlg(){
 		return loginFlg;
 	}
 
 	/**
 	 * @param loginFlg
 	 */
-	public void setLoginFlg(boolean loginFlg){
+	public void setLoginFlg(int loginFlg){
 		this.loginFlg = loginFlg;
 	}
 }
