@@ -6,6 +6,10 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class GoTourEditPageAction extends ActionSupport {
 
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -3005189118822441576L;
 	/**@author YUKA MATSUMURA
 	 * since 2017/0906
 	 * versin 1.1

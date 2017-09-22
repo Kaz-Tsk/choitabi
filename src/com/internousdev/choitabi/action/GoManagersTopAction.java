@@ -4,6 +4,11 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class GoManagersTopAction extends ActionSupport{
 
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 5593838660842244496L;
+
 	/**@author YUKA MATSUMURA
 	 * @since 2017/09/14
 	 * @version 1.1

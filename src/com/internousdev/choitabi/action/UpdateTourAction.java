@@ -16,6 +16,10 @@ public class UpdateTourAction extends ActionSupport{
 	 * (SUCCESSでもERRORでも画面一覧に戻るようにしています)
 	 * */
 
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 7529843417299461761L;
 	/**編集後の情報＝入力されたデータを格納する変数です（JSPを通して、ConfirmEditingActionの値を持ってきます）*/
 	/*ツアーID*/
 	private String editTourId;

@@ -5,6 +5,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class GoTourInsertPageAction extends ActionSupport{
 
 
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 103477118082355207L;
+
 	/**@author : YUKA MATSUMURA
 	 * @since : 2017/09/08
 	 * @version : 1.1

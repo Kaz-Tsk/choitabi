@@ -4,6 +4,11 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class ConfirmTourInsertingAction extends ActionSupport{
 
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 6481205050973520069L;
+
 	/**@author YUKA MATSUMURA
 	 * @since 2017/09/08
 	 * @version 1.1

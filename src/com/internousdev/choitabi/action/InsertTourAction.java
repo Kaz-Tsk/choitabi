@@ -9,6 +9,11 @@ public class InsertTourAction extends ActionSupport {
 
 
 
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 8260806374195833620L;
+
 	/**@author YUKA MATSUMURA
 	 * @since 2017/09/12
 	 * @version 1.1
