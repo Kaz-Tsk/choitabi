@@ -14,6 +14,5 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/internousdev.103163795/Downloads/mysql-connector-java-5.1.44/mongodb-driver-3.5.0-javadoc.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
