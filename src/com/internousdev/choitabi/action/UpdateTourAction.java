@@ -5,57 +5,89 @@ import java.sql.SQLException;
 import com.internousdev.choitabi.dao.UpdateTourDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * DBに登録されているツアーに対し、編集または削除の操作を行うアクション
+ * @author : YUKA MATSUMURA
+ * @since : 2017/09/08
+ * @version : 1.1
+ * */
 public class UpdateTourAction extends ActionSupport{
 
-	/**@author : YUKA MATSUMURA
-	 * @since : 2017/09/08
-	 * @version : 1.1
-	 *
-	 * 管理画面でツアーの編集・削除の操作を行うアクションクラスです。
-	 * DAOを呼び出してSQLのデータを操作し、処理結果が1以上であれば＝更新が成功していれば、SUCCESSを返します。
-	 * (SUCCESSでもERRORでも画面一覧に戻るようにしています)
-	 * */
+	/**
+	 *シリアルID
+	 */
+	private static final long serialVersionUID = 7529843417299461761L;
+
 
 	/**
 	 *
-	 */
-	private static final long serialVersionUID = 7529843417299461761L;
-	/**編集後の情報＝入力されたデータを格納する変数です（JSPを通して、ConfirmEditingActionの値を持ってきます）*/
-	/*ツアーID*/
+	 * */
 	private String editTourId;
-	/*ツアー名*/
+
+	/**
+	 *
+	 * */
 	private String editTourName;
-	/*価格*/
+
+	/**
+	 *
+	 * */
 	private String editPrice;
-	/*定員*/
+
+	/**
+	 *
+	 * */
 	private String editPersons;
-	/*出発地*/
+
+	/**
+	 *
+	 * */
 	private String editDeparture;
-	/*エリア*/
+
+	/**
+	 *
+	 * */
 	public String editRegion;
-	/*県*/
+
+	/**
+	 *
+	 * */
 	public String editPrefectures;
-	/*テーマ*/
+
+	/**
+	 *
+	 * */
 	public String editTheme;
-	/*コメント*/
+
+	/**
+	 *
+	 * */
 	public String editComment;
-	/*画像URL*/
+
+	/**
+	 *
+	 * */
 	public String editImg;
 
-	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
+	/**
+	 *
+	 * */
 	private String deleteCheck = "false";
 
-	/*エラーメッセージ（入力された情報が不完全だった場合に使われます）*/
+	/**
+	 *
+	 * */
 	private String errorMsg = "";
 
-	/**editPriceとeditPersonsは「String型」になっています。
-	 * 画面のフォームから入力された情報は文字列として扱われるため、
-	 * まずはそのまま受け取って、javaの機能で数値に変換しています。
+	/**
+	 * DBに登録されているツアーを編集、または削除するメソッド
+	 * @author : YUKA MATSUMURA
+	 * @since : 2017/09/08
+	 * @version : 1.1
 	 * @throws SQLException
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 * **/
-
 	public String execute() throws IllegalAccessException, InstantiationException, SQLException{
 		String result = ERROR;
 		int count = 0;
