@@ -95,7 +95,6 @@
 				    </tr>
 				</table>
 
-
 		<div class="shoppingcart">
 
 			<input type="hidden" name="tour_id"
@@ -124,7 +123,7 @@
 
 	</s:form>
 
-    </div>
+	</div>
     </div>
 
 
