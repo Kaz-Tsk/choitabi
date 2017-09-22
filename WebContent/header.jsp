@@ -45,7 +45,7 @@
 					class="glyphicon glyphicon-wrench"></span><s:text name="lang.header.kaniripage"/></div>
    <div class=navi2>
         <div class="navibox2"><a href="kanri_tourList.jsp"><s:text name="lang.header.tourlist"/></a></div>
-        <div class="navibox2"><a href="kanri_toiawaseKakunin.jsp"><s:text name="kanri_toiawaseKakunin"/></a></div>
+        <div class="navibox2"><a href="kanri_toiawaseKakunin.jsp"><s:text name="lang.header.kanritoiawase"/></a></div>
        <div class="navibox2"><a href="LogoutAction"><s:text name="lang.header.logout"/></a></div>
 	 </div>
 		</s:elseif>
