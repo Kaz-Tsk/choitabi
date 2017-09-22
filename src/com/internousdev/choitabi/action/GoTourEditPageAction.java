@@ -67,7 +67,7 @@ public class GoTourEditPageAction extends ActionSupport {
 
 	/*↓入力画面で、フォームに最初から入っている情報。最初は「編集前」と同じものが、確認画面から戻ったときは編集した内容が入ってきます。--------------------------------------------*/
 
-	private int defaultTourId;
+
 	/*ツアー名*/
 	private String defaultTourName;
 	/*価格*/
@@ -359,16 +359,6 @@ public class GoTourEditPageAction extends ActionSupport {
 
 
 /*フォームに入る情報のgetter/setter---------------------------------------------*/
-
-	/*フォームに入るツアーIDのgetter*/
-	public int getDefaultTourId(){
-		return defaultTourId;
-	}
-
-	/*フォームに入るツアーIDのsetter*/
-	public void setDefaultTourId(int defaultTourId){
-		this.defaultTourId = defaultTourId;
-	}
 
 	/*フォームに入るツアー名のgetter*/
 	public String getDefaultTourName(){

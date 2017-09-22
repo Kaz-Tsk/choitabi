@@ -132,6 +132,33 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	private String errorMsg = "";
 
 
+	/*default変数（確認ボタンを押してエラーが出た場合、これがないとフォームが空っぽに戻ってしまう）*
+		/*↓入力画面で、フォームに最初から入っている情報。最初は「編集前」と同じものが、確認画面から戻ったときは編集した内容が入ってきます。--------------------------------------------*/
+
+
+	/*ツアー名*/
+	private String defaultTourName;
+	/*価格*/
+	private int defaultPrice;
+	/*定員*/
+	private int defaultPersons;
+	/*出発地*/
+	private String defaultDeparture;
+	/*エリア*/
+	private String defaultRegion;
+	/*県*/
+	private String defaultPrefectures;
+	/*テーマ*/
+	private String defaultTheme;
+	/*コメント*/
+	private String defaultComment;
+	/*画像URL*/
+	private String defaultImg;
+
+
+
+
+
 
 	/**
 	 *入力内容を確認するメソッド。
@@ -148,6 +175,17 @@ public class ConfirmTourEditingAction extends ActionSupport{
 		}
 
 		try{
+
+			defaultTourName = editTourName;
+			defaultPrice = Integer.parseInt(editPrice);
+			defaultPersons = Integer.parseInt(editPersons);
+			defaultDeparture = editDeparture;
+			defaultRegion = editRegion;
+			defaultPrefectures = editPrefectures;
+			defaultTheme = editTheme;
+			defaultComment = editComment;
+			defaultImg = editImg;
+
 			if(deleteCheck.equals("true")){
 				result = SUCCESS;
 
@@ -155,25 +193,20 @@ public class ConfirmTourEditingAction extends ActionSupport{
 					 (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") ||
 					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme == null ||
 					  editComment.equals("") )) {
+
 				errorMsg = "未入力の情報があります";
-				System.out.println(errorMsg);
 
-				/*↓画像URLチェック用で作りました。が、現在は画像のプレビューを出すようにしたので不要としています。今後もしかしたら復活するかも…*/
-//			}else if(editImg.indexOf(".png") == -1 && editImg.indexOf(".jpg") == -1){
-//				/*後消し*/System.out.println(editImg.indexOf(".png"));
-//				/*後消し*/System.out.println(editImg.indexOf(".jpg"));
-//				errorMsg = "画像URLにはpngもしくはjpgを指定してください";
-//				System.out.println(errorMsg);
-
-			}else{
-				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
-				 * 変換できればOK。変換できない＝例外が起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
-				Integer.parseInt(editPrice);
-				Integer.parseInt(editPersons);
 			}
 
 		}catch(NumberFormatException e){
 			errorMsg = "価格・定員の欄には数値を入力してください";
+			defaultTourName = editTourName;
+			defaultDeparture = editDeparture;
+			defaultRegion = editRegion;
+			defaultPrefectures = editPrefectures;
+			defaultTheme = editTheme;
+			defaultComment = editComment;
+			defaultImg = editImg;
 		}catch(NullPointerException e){
 			e.printStackTrace();
 		}
@@ -499,7 +532,97 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	}
 
 
+	/*フォームに入る情報のgetter/setter---------------------------------------------*/
 
+	/*フォームに入るツアー名のgetter*/
+	public String getDefaultTourName(){
+		return defaultTourName;
+	}
+
+	/*フォームに入るツアー名のsetter*/
+	public void setDefaultTourName(String defaultTourName){
+		this.defaultTourName = defaultTourName;
+	}
+
+	/*フォームに入る価格のgetter*/
+	public int getDefaultPrice(){
+		return defaultPrice;
+	}
+
+	/*フォームに入る価格のsetter*/
+	public void setDefaultPrice(int defaultPrice){
+		this.defaultPrice = defaultPrice;
+	}
+
+	/*フォームに入る定員のgetter*/
+	public int getDefaultPersons(){
+		return defaultPersons;
+	}
+
+	/*フォームに入る定員のsetter*/
+	public void setDefaultPersons(int defaultPersons){
+		this.defaultPersons = defaultPersons;
+	}
+
+	/*フォームに入る出発地のgetter*/
+	public String getDefaultDeparture(){
+		return defaultDeparture;
+	}
+
+	/*フォームに入る出発地のsetter*/
+	public void setDefaultDeparture(String defaultDeparture){
+		this.defaultDeparture = defaultDeparture;
+	}
+
+	/*フォームに入るエリアのgetter*/
+	public String getDefaultRegion(){
+		return defaultRegion;
+	}
+
+	/*フォームに入るエリアのsetter*/
+	public void setDefaultRegion(String defaultRegion){
+		this.defaultRegion = defaultRegion;
+	}
+
+	/*フォームに入る県のgetter*/
+	public String getDefaultPrefectures(){
+		return defaultPrefectures;
+	}
+
+	/*フォームに入る県のsetter*/
+	public void setDefaultPrefectures(String defaultPrefectures){
+		this.defaultPrefectures = defaultPrefectures;
+	}
+
+	/*フォームに入るテーマのgetter*/
+	public String getDefaultTheme(){
+		return this.defaultTheme;
+	}
+
+	/*フォームに入るテーマのsetter*/
+	public void setDefaultTheme(String defaultTheme){
+		this.defaultTheme = defaultTheme;
+	}
+
+	/*フォームに入るコメントのgetter*/
+	public String getDefaultComment(){
+		return defaultComment;
+	}
+
+	/*フォームに入るコメントのsetter*/
+	public void setDefaultComment(String defaultComment){
+		this.defaultComment = defaultComment;
+	}
+
+	/*フォームに入る画像URLのgetter*/
+	public String getDefaultImg(){
+		return defaultImg;
+	}
+
+	/*フォームに入る画像URLのsetter*/
+	public void setDefaultImg(String defaultImg){
+		this.defaultImg = defaultImg;
+	}
 
 
 
