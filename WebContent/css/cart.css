@@ -68,7 +68,6 @@ html {
 	margin-bottom: 80px;
 }
 
-
 .empty {
 	padding-top: 200px;
 	padding-bottom: 165px;
@@ -76,24 +75,9 @@ html {
 }
 
 .footer {
-	margin-top: 150px;
+	position: absolute;
 	text-align:center;
-	height: 80px;
 	clear:left;
 	width:100%;
-}
-
-.link a:link{
-	color:#ffffff;
-}
-.link a:visited{
-	color:#ffffff;
-}
-
-.link a:hover{
-	color:#ffffff;
-}
-
-.link a:active{
-	color:#ffffff;
+	bottom: 0;
 }
