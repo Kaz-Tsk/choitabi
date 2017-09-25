@@ -57,10 +57,6 @@
 	        <td><s:property value="currentPrice"/><s:text name="lang.kanri_tourHensyuuKakunin.yen"/></td>
 	    </tr>
 	    <tr>
-	        <th><s:text name="lang.kanri_tourHensyuuKakunin.persons"/></th>
-	        <td><s:property value="currentPersons"/><s:text name="lang.kanri_tourHensyuuKakunin.persons_number"/></td>
-	    </tr>
-	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.departure"/></th>
 	        <td><s:property value="currentDeparture"/></td>
 	    </tr>

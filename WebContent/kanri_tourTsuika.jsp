@@ -64,15 +64,6 @@
 		</tr>
 		<tr>
 			<th>
-				<s:text name="lang.kanri_tourTsuika.persons"/>
-			</th>
-			<td>
-				<input type="text" size="5" name="newPersons" value='<s:property value="newPersons"/>'></input>
-				<s:text name="lang.kanri_tourTsuika.persons_number"/>
-			</td>
-		</tr>
-		<tr>
-			<th>
 				<s:text name="lang.kanri_tourTsuika.departure"/>
 			</th>
 			<td>

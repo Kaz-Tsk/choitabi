@@ -56,12 +56,6 @@
    			<s:text name="lang.kanri_tourHensyuu.yen"/></td>
    </tr>
    <tr>
-   		<th><s:text name="lang.kanri_tourHensyuu.persons"/></th>
-   		<td><s:property value="currentPersons"/><s:text name="lang.kanri_tourHensyuu.persons_number"/></td>
-   		<td><input type="text" size="5" name="editPersons" value='<s:property value="defaultPersons"/>'></input>
-   			<s:text name="lang.kanri_tourHensyuu.persons_number"/></td>
-   </tr>
-   <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.departure"/></th><td>
    		<s:property value="currentDeparture"/></td>
    		<td><input type="text" name="editDeparture" value='<s:property value = "defaultDeparture"/>'></input></td>
@@ -123,7 +117,6 @@
 	   	<s:hidden name= "currentTourId" property = "currentTourId"/>
 	   	<s:hidden name = "currentTourName" property="currentTourName" />
 	   	<s:hidden name = "currentPrice" property="currentPrice" />
-	   	<s:hidden name = "currentPersons" property="currentPersons" />
 	   	<s:hidden name = "currentDeparture" property="currentDeparture" />
 	    <s:hidden name = "currentRegion" property="currentRegion" />
 	   	<s:hidden name = "currentPrefectures" property="currentPrefectures" />
