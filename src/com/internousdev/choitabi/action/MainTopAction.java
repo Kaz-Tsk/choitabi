@@ -21,7 +21,8 @@ public class MainTopAction extends ActionSupport implements SessionAware {
 	/**
 	 * シリアルID
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -792986107628544292L;
+
 	/**
 	 * セッション情報(ユーザーID)
 	 */
