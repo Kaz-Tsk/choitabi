@@ -136,8 +136,8 @@ $('.main_img').slick({
     <script type="text/javascript" src="js/slick.min.js"></script>
 
     <!-- フッター -->
-    <footer>
-          <jsp:include page="footer.jsp"/>
-</footer>
+<footer style="text-align:center;">
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	</footer>
 </body>
 </html>

@@ -37,9 +37,9 @@
 </div>
 
 <!-- footer include部分 -->
-<footer style=margin-top:300px;>
-	<s:include value="footer.jsp"></s:include>
-</footer>
+<footer style="text-align:center;">
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	</footer>
 </body>
 
 </html>

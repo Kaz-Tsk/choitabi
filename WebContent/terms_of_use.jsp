@@ -103,9 +103,6 @@
 
 		<p>以上</p>
         </div>
-<!-- フッター部分----------------------- -->
-   <footer>
-          <jsp:include page="footer.jsp"/>
-</footer>
+
 </body>
 </html>

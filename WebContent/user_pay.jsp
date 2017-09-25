@@ -301,8 +301,8 @@
 			<h2 style="text-align:center; margin-top:200px;"><s:text name="lang.user_pay.error"/></h2>
 	</s:else>
 </div>
-	<footer>
-
+	<footer style="text-align:center;">
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
 </body>
 </html>

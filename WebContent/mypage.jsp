@@ -59,8 +59,8 @@
 		</div>
 	</div>
 	<!-- footer include -->
-	<footer>
-		<s:include value="footer.jsp"></s:include>
+<footer style="text-align:center;">
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
 </body>
 </html>
