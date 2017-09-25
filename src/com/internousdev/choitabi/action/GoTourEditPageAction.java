@@ -36,11 +36,6 @@ public class GoTourEditPageAction extends ActionSupport {
 	private int currentPrice;
 
 	/**
-	 * 編集前の定員
-	 * */
-	private int currentPersons;
-
-	/**
 	 * 編集前の出発地
 	 * */
 	private String currentDeparture;
@@ -83,11 +78,6 @@ public class GoTourEditPageAction extends ActionSupport {
 	 *編集後の価格
 	 * */
 	private int editPrice;
-
-	/**
-	 *編集後の定員
-	 * */
-	private int editPersons;
 
 	/**
 	 *編集後の出発地
@@ -133,11 +123,6 @@ public class GoTourEditPageAction extends ActionSupport {
 	 *フォームに表示する価格
 	 * */
 	private int defaultPrice;
-
-	/**
-	 *フォームに表示する定員
-	 * */
-	private int defaultPersons;
 
 	/**
 	 *フォームに表示する出発地
@@ -200,7 +185,6 @@ public class GoTourEditPageAction extends ActionSupport {
 			currentTourId = stdto.getTourId();
 			currentTourName = stdto.getTourName();
 			currentPrice = stdto.getPrice();
-			currentPersons = stdto.getPersons();
 			currentDeparture = stdto.getDeparture();
 			currentRegion = stdto.getRegion();
 			currentPrefectures = stdto.getPrefectures();
@@ -212,7 +196,6 @@ public class GoTourEditPageAction extends ActionSupport {
 			if(this.from.equals("tourListPage")){
 				defaultTourName = currentTourName;
 				defaultPrice = currentPrice;
-				defaultPersons = currentPersons;
 				defaultDeparture = currentDeparture;
 				defaultRegion = currentRegion;
 				defaultPrefectures = currentPrefectures;
@@ -225,7 +208,6 @@ public class GoTourEditPageAction extends ActionSupport {
 			}else if(this.from.equals("confirmingPage")){
 				defaultTourName = editTourName;
 				defaultPrice = editPrice;
-				defaultPersons = editPersons;
 				defaultDeparture = editDeparture;
 				defaultRegion = editRegion;
 				defaultPrefectures = editPrefectures;
@@ -295,22 +277,6 @@ public class GoTourEditPageAction extends ActionSupport {
 	 * */
 	public void setCurrentPrice(int currentPrice){
 		this.currentPrice = currentPrice;
-	}
-
-	/**
-	 * 編集前の定員を取得するメソッド
-	 * @return currentPersons 編集前の定員
-	 * */
-	public int getCurrentPersons(){
-		return currentPersons;
-	}
-
-	/**
-	 * 編集前の定員を格納するメソッド
-	 * @param currentPersons 編集前の定員
-	 * */
-	public void setCurrentPersons(int currentPersons){
-		this.currentPersons = currentPersons;
 	}
 
 	/**
@@ -446,22 +412,6 @@ public class GoTourEditPageAction extends ActionSupport {
 	}
 
 	/**
-	 *編集後の定員を取得するメソッド
-	 *@return editPersons 編集後の定員
-	 * */
-	public int getEditPersons(){
-		return editPersons;
-	}
-
-	/**
-	 *編集後の定員を格納するメソッド
-	 *@param editPersons 編集後の定員
-	 * */
-	public void setEditPersons(int editPersons){
-		this.editPersons = editPersons;
-	}
-
-	/**
 	 * 編集後の出発地を取得するメソッド
 	 * @return editDeparture 編集後の出発地
 	 * */
@@ -590,22 +540,6 @@ public class GoTourEditPageAction extends ActionSupport {
 	 * */
 	public void setDefaultPrice(int defaultPrice){
 		this.defaultPrice = defaultPrice;
-	}
-
-	/**
-	 *フォームに表示する定員を取得するメソッド
-	 *@return defaultPersons フォームに表示する定員
-	 * */
-	public int getDefaultPersons(){
-		return defaultPersons;
-	}
-
-	/**
-	 *フォームに表示する定員を格納するメソッド
-	 *@param defaultPersons フォームに表示する定員
-	 * */
-	public void setDefaultPersons(int defaultPersons){
-		this.defaultPersons = defaultPersons;
 	}
 
 	/**
