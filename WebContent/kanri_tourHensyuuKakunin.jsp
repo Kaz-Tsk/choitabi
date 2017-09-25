@@ -105,13 +105,6 @@
 	        <td><s:property value = "EditPrice"/><s:text name="lang.kanri_tourHensyuuKakunin.yen"/></td>
 	    </tr>
 	    <tr>
-	        <th><s:text name="lang.kanri_tourHensyuuKakunin.persons"/></th>
-	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
-	        <td><s:property value="currentPersons"/><s:text name="lang.kanri_tourHensyuuKakunin.persons_number"/></td>
-	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td><s:property value = "editPersons"/><s:text name="lang.kanri_tourHensyuuKakunin.persons_number"/></td>
-	    </tr>
-	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.departure"/></th>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
 	        <td><s:property value="currentDeparture"/></td>
@@ -123,42 +116,42 @@
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
 	        <td><s:property value="currentRegion"/></td>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td><s:property value = "editRegion"/></td>
+	        <td><s:property value="editRegion"/></td>
 	    </tr>
 	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.prefectures"/></th>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
 	        <td><s:property value="currentPrefectures"/></td>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td><s:property value = "editPrefectures"/></td>
+	        <td><s:property value="editPrefectures"/></td>
 	    </tr>
 	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.theme"/></th>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
 	        <td><s:property value="currentTheme"/></td>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td><s:property value = "editTheme"/></td>
+	        <td><s:property value="editTheme"/></td>
 	    </tr>
 	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.comment"/></th>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
-	        <td width="200px"><font size = "2px"><s:property value="currentComment"/></font></td>
+	        <td width="200px"><font size="2px"><s:property value="currentComment"/></font></td>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td width="200px"><font size = "2px"><s:property value="editComment"/></font></td>
+	        <td width="200px"><font size="2px"><s:property value="editComment"/></font></td>
 	    </tr>
 	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_url"/></th>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
 	        <td width="200px"><s:property value="currentImg"/></td>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td width="200px"><s:property value = "editImg"/></td>
+	        <td width="200px"><s:property value="editImg"/></td>
 	    </tr>
 	    <tr>
 	        <th><s:text name="lang.kanri_tourHensyuuKakunin.image_preview"/></th>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit"/></td>
 	        <td width="300px"><img src='<s:property value="currentImg"/>' height="20%" alt="現在の画像"/></td>
 	        <td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit"/></td>
-	        <td width="300px"><img src='<s:property value = "editImg"/>' height="20%" alt="編集後の画像"/></td>
+	        <td width="300px"><img src='<s:property value="editImg"/>' height="20%" alt="編集後の画像"/></td>
 	    </tr>
 	</table>
 </s:else>
@@ -173,10 +166,10 @@
 	<a href=
 	    '<s:url action="UpdateTourAction">
 		    <s:param name="editTourId" value="currentTourId"/>
-		    <s:param name="editTourName" value = "editTourName"/>
-		    <s:param name="editPrice" value = "editPrice"/>
-		    <s:param name="editDeparture" value = "editDeparture"/>
-		    <s:param name="editRegion" value = "editRegion"/>
+		    <s:param name="editTourName" value="editTourName"/>
+		    <s:param name="editPrice" value="editPrice"/>
+		    <s:param name="editDeparture" value="editDeparture"/>
+		    <s:param name="editRegion" value="editRegion"/>
 		    <s:param name="editPrefectures" value="editPrefectures"/>
 		    <s:param name="editTheme" value="editTheme"/>
 		    <s:param name="editComment" value="editComment"/>

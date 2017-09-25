@@ -16,7 +16,7 @@
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourTsuikaKakunin"
  		var="lang" />
 	<!-- CSSの読み込み -->
-	<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
+	<link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
 </head>
 
 <header>
@@ -44,7 +44,7 @@
 	        	<s:text name="lang.kanri_tourTsuikaKakunin.tour_name"/>
 	        </th>
 	        <td>
-	        	<s:property value = "newTourName"/>
+	        	<s:property value="newTourName"/>
 	        </td>
 	    </tr>
 	    <tr>
@@ -120,9 +120,9 @@
 	    '<s:url action="InsertTourAction">
 		    <s:param name="newTourId" value="newTourId"/>
 		    <s:param name="newTourName" value = "newTourName"/>
-		    <s:param name="newPrice" value = "newPrice"/>
-		    <s:param name="newDeparture" value = "newDeparture"/>
-		    <s:param name="newRegion" value = "newRegion"/>
+		    <s:param name="newPrice" value="newPrice"/>
+		    <s:param name="newDeparture" value="newDeparture"/>
+		    <s:param name="newRegion" value="newRegion"/>
 		    <s:param name="newPrefectures" value="newPrefectures"/>
 		    <s:param name="newTheme" value="newTheme"/>
 		    <s:param name="newComment" value="newComment"/>
@@ -139,10 +139,10 @@
    <a href=
 	    '<s:url action="GoTourInsertPageAction">
 		    <s:param name="newTourId" value="newTourId"/>
-		    <s:param name="newTourName" value = "newTourName"/>
-		    <s:param name="newPrice" value = "newPrice"/>
-		    <s:param name="newDeparture" value = "newDeparture"/>
-		    <s:param name="newRegion" value = "newRegion"/>
+		    <s:param name="newTourName" value="newTourName"/>
+		    <s:param name="newPrice" value="newPrice"/>
+		    <s:param name="newDeparture" value="newDeparture"/>
+		    <s:param name="newRegion" value="newRegion"/>
 		    <s:param name="newPrefectures" value="newPrefectures"/>
 		    <s:param name="newTheme" value="newTheme"/>
 		    <s:param name="newComment" value="newComment"/>
