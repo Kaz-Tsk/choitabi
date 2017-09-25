@@ -128,8 +128,8 @@
 		    <s:param name="newComment" value="newComment"/>
 			<s:param name="newImg" value="newImg"/>
 	    </s:url>'>
-	    <input type="submit" value='<s:text name="lang.kanri_tourTsuikaKakunin.complete"/>'>
-    </a>
+	<input type="submit" value='<s:text name="lang.kanri_tourTsuikaKakunin.complete"/>'/><br>
+</a>
 <br>
 <br>
 <hr>

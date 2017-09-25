@@ -65,6 +65,7 @@ $('.main_img').slick({
 <div class= "phrase"><h1><s:text name="lang.index.catch"/></h1></div>
 
 <!-- 検索アイコン↓ -->
+<div class="main">
     <div class= "theme_box">
     <h2><s:text name="lang.index.searchT"/></h2>
     <div class="theme_sub">
@@ -132,6 +133,7 @@ $('.main_img').slick({
   </figcaption>
 </figure>
 </div>
+    </div>
     </div>
     <script type="text/javascript" src="js/slick.min.js"></script>
 

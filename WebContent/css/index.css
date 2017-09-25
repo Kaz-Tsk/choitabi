@@ -67,15 +67,20 @@ b{
 	justify-content: center;
 }
 
-body a:link{
+.main a:link{
 	              color:#ffffff;
 }
-body a:visited{
+ .main a:visited{
 	              color:#ffffff;
 }
-body a:hover{
+ .main a:hover{
 	              color:#ffffff;
 }
-body a:active{
+ .main a:active{
 	              color:#ffffff;
+}
+
+/*--フッターの設定-----------*/
+footer{
+	margin-top:60px;
 }
