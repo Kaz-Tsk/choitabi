@@ -25,7 +25,6 @@ public class UpdateTourDAO {
 	 * @param editTourID 編集するツアーのID
 	 * @param editTourName 編集後のツアー名
 	 * @param editPrice 編集後の価格
-	 * @param editPersons 編集後の定員
 	 * @param editDeparture 編集後の出発地
 	 * @param editRegion 編集後のエリア
 	 * @param editPrefectures 編集後の都道府県
@@ -35,7 +34,7 @@ public class UpdateTourDAO {
 	 * @param deleteCheck 削除用チェックボックスの状態
 	 * @return count 操作の完了したデータ数
 	 * */
-	public int updateTour(String editTourId, String editTourName,String editPrice, String editPersons, String editDeparture,
+	public int updateTour(String editTourId, String editTourName,String editPrice, String editDeparture,
 								String editRegion, String editPrefectures,String editTheme, String editComment, String editImg,
 								String deleteCheck){
 		int count = 0;
@@ -51,27 +50,25 @@ public class UpdateTourDAO {
 					String sql = "UPDATE tour SET"
 							+ " tour_name = ?," //1
 							+ " price = ?,"//2
-							+ " persons = ?,"//3
-							+ " departure = ?,"//4
-							+ " region = ?,"//5
-							+ " prefectures = ?,"//6
-							+ " theme = ?,"//7
-							+ " comment = ?,"//8
-							+ " img = ?"//9
-							+ " WHERE tour_id = ?;";//10
+							+ " departure = ?,"//3
+							+ " region = ?,"//4
+							+ " prefectures = ?,"//5
+							+ " theme = ?,"//6
+							+ " comment = ?,"//7
+							+ " img = ?"//8
+							+ " WHERE tour_id = ?;";//9
 
 					PreparedStatement ps = con.prepareStatement(sql);
 
 					ps.setString(1, editTourName);
 					ps.setInt(2, Integer.parseInt(editPrice));
-					ps.setInt(3, Integer.parseInt(editPersons));
-					ps.setString(4, editDeparture);
-					ps.setString(5, editRegion);
-					ps.setString(6,  editPrefectures);
-					ps.setString(7, editTheme);
-					ps.setString(8, editComment);
-					ps.setString(9, editImg);
-					ps.setInt(10, Integer.parseInt(editTourId));
+					ps.setString(3, editDeparture);
+					ps.setString(4, editRegion);
+					ps.setString(5,  editPrefectures);
+					ps.setString(6, editTheme);
+					ps.setString(7, editComment);
+					ps.setString(8, editImg);
+					ps.setInt(9, Integer.parseInt(editTourId));
 
 					count = ps.executeUpdate();
 

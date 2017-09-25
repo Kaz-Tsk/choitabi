@@ -21,7 +21,6 @@ public class InsertTourDAO {
  * @version 1.1
  * @param newTourName 新規ツアー名
  * @param newPrice 新規ツアーの価格
- * @param newPersons 新規ツアーの定員
  * @param newDepartre 新規ツアーの出発地
  * @param newRegion 新規ツアーのエリア
  * @param newPrefectures 新規ツアーの都道府県
@@ -30,7 +29,7 @@ public class InsertTourDAO {
  * @param newImg 新規ツアーの画像URL
  * @return count 変更の完了したデータ数
  * */
-	public int insertTour(String newTourName,String newPrice,String newPersons,String newDeparture,
+	public int insertTour(String newTourName,String newPrice, String newDeparture,
 								String newRegion, String newPrefectures,String newTheme, String newComment, String newImg){
 
 		int count = 0;
@@ -44,25 +43,24 @@ public class InsertTourDAO {
 			String sql = "INSERT INTO tour VALUES(0," //←※これでオートインクリメントになります
 					+ " ?," //1
 					+ " ?,"//2
+					+ " 0," //定員の部分
 					+ " ?,"//3
 					+ " ?,"//4
 					+ " ?,"//5
 					+ " ?,"//6
 					+ " ?,"//7
 					+ " ?,"//8
-					+ " ?"//9
 					+ ");";
 
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, newTourName);
 			ps.setInt(2, Integer.parseInt(newPrice));
-			ps.setInt(3, Integer.parseInt(newPersons));
-			ps.setString(4, newDeparture);
-			ps.setString(5, newRegion);
-			ps.setString(6, newPrefectures);
-			ps.setString(7, newTheme);
-			ps.setString(8, newComment);
-			ps.setString(9, newImg);
+			ps.setString(3, newDeparture);
+			ps.setString(4, newRegion);
+			ps.setString(5, newPrefectures);
+			ps.setString(6, newTheme);
+			ps.setString(7, newComment);
+			ps.setString(8, newImg);
 
 			count = ps.executeUpdate();
 
