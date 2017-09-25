@@ -136,24 +136,51 @@ public class ConfirmTourEditingAction extends ActionSupport{
 		/*↓入力画面で、フォームに最初から入っている情報。最初は「編集前」と同じものが、確認画面から戻ったときは編集した内容が入ってきます。--------------------------------------------*/
 
 
-	/*ツアー名*/
+	/**
+	 *フォームに表示するツアー名
+	 * */
 	private String defaultTourName;
-	/*価格*/
+
+	/**
+	 *フォームに表示する価格
+	 * */
 	private int defaultPrice;
-	/*定員*/
+
+	/**
+	 *フォームに表示する定員
+	 * */
 	private int defaultPersons;
-	/*出発地*/
+
+	/**
+	 *フォームに表示する出発地
+	 * */
 	private String defaultDeparture;
-	/*エリア*/
-	private String defaultRegion;
-	/*県*/
-	private String defaultPrefectures;
-	/*テーマ*/
-	private String defaultTheme;
-	/*コメント*/
-	private String defaultComment;
-	/*画像URL*/
-	private String defaultImg;
+
+	/**
+	 *フォームに表示するエリア
+	 * */
+	public String defaultRegion;
+
+	/**
+	 *フォームに表示する都道府県
+	 * */
+	public String defaultPrefectures;
+
+	/**
+	 *フォームに表示するテーマ
+	 * */
+	public String defaultTheme;
+
+	/**
+	 *フォームに表示するコメント
+	 * */
+	public String defaultComment;
+
+	/**
+	 *フォームに表示する画像URL
+	 * */
+	public String defaultImg;
+
 
 
 
@@ -534,92 +561,146 @@ public class ConfirmTourEditingAction extends ActionSupport{
 
 	/*フォームに入る情報のgetter/setter---------------------------------------------*/
 
-	/*フォームに入るツアー名のgetter*/
+	/**
+	 *フォームに表示するツアー名を取得するメソッド
+	 *@return defaultTourName フォームに表示するツアー名
+	 * */
 	public String getDefaultTourName(){
 		return defaultTourName;
 	}
 
-	/*フォームに入るツアー名のsetter*/
+	/**
+	 *フォームに表示するツアー名を格納するメソッド
+	 *@param defaultTourName フォームに表示するツアー名
+	 * */
 	public void setDefaultTourName(String defaultTourName){
 		this.defaultTourName = defaultTourName;
 	}
 
-	/*フォームに入る価格のgetter*/
+	/**
+	 *フォームに表示する価格を取得するメソッド
+	 *@return defaultPrice フォームに表示する価格
+	 * */
 	public int getDefaultPrice(){
 		return defaultPrice;
 	}
 
-	/*フォームに入る価格のsetter*/
+	/**
+	 *フォームに表示する価格を格納するメソッド
+	 *@param defaultPrice フォームに表示する価格
+	 * */
 	public void setDefaultPrice(int defaultPrice){
 		this.defaultPrice = defaultPrice;
 	}
 
-	/*フォームに入る定員のgetter*/
+	/**
+	 *フォームに表示する定員を取得するメソッド
+	 *@return defaultPersons フォームに表示する定員
+	 * */
 	public int getDefaultPersons(){
 		return defaultPersons;
 	}
 
-	/*フォームに入る定員のsetter*/
+	/**
+	 *フォームに表示する定員を格納するメソッド
+	 *@param defaultPersons フォームに表示する定員
+	 * */
 	public void setDefaultPersons(int defaultPersons){
 		this.defaultPersons = defaultPersons;
 	}
 
-	/*フォームに入る出発地のgetter*/
+	/**
+	 *フォームに表示する出発地を取得するメソッド
+	 *@return defaultDeparture フォームに表示する出発地
+	 * */
 	public String getDefaultDeparture(){
 		return defaultDeparture;
 	}
 
-	/*フォームに入る出発地のsetter*/
+	/**
+	 *フォームに表示する出発地を格納するメソッド
+	 *@param defaultDeparture フォームに表示する出発地
+	 * */
 	public void setDefaultDeparture(String defaultDeparture){
 		this.defaultDeparture = defaultDeparture;
 	}
 
-	/*フォームに入るエリアのgetter*/
+	/**
+	 *フォームに表示するエリアを取得するメソッド
+	 *@return defaultRegion フォームに表示するエリア
+	 * */
 	public String getDefaultRegion(){
 		return defaultRegion;
 	}
 
-	/*フォームに入るエリアのsetter*/
+	/**
+	 *フォームに表示するエリアを格納するメソッド
+	 *@return defaultRegion フォームに表示するエリア
+	 * */
 	public void setDefaultRegion(String defaultRegion){
 		this.defaultRegion = defaultRegion;
 	}
 
-	/*フォームに入る県のgetter*/
+	/**
+	 *フォームに表示する都道府県を取得するメソッド
+	 *@return defaultPrefectures フォームに表示する都道府県
+	 * */
 	public String getDefaultPrefectures(){
 		return defaultPrefectures;
 	}
 
-	/*フォームに入る県のsetter*/
+	/**
+	 *フォームに表示する都道府県を格納するメソッド
+	 *@param defaultPrefectures フォームに表示する都道府県
+	 * */
 	public void setDefaultPrefectures(String defaultPrefectures){
 		this.defaultPrefectures = defaultPrefectures;
 	}
 
-	/*フォームに入るテーマのgetter*/
+	/**
+	 *フォームに表示するテーマを取得するメソッド
+	 *@return defaultTheme フォームに表示するテーマ
+	 * */
 	public String getDefaultTheme(){
 		return this.defaultTheme;
 	}
 
-	/*フォームに入るテーマのsetter*/
+	/**
+	 *フォームに表示するテーマを格納するメソッド
+	 *@param defaultTheme フォームに表示するテーマ
+	 * */
 	public void setDefaultTheme(String defaultTheme){
 		this.defaultTheme = defaultTheme;
 	}
 
-	/*フォームに入るコメントのgetter*/
+	/**
+	 *フォームに表示するコメントを取得するメソッド
+	 *@return defaultComment フォームに表示するコメント
+	 * */
 	public String getDefaultComment(){
 		return defaultComment;
 	}
 
-	/*フォームに入るコメントのsetter*/
+	/**
+	 *フォームに表示するコメントを格納するメソッド
+	 *@param defaultComment フォームに表示するコメント
+	 * */
 	public void setDefaultComment(String defaultComment){
 		this.defaultComment = defaultComment;
 	}
 
-	/*フォームに入る画像URLのgetter*/
+	/**
+	 *フォームに表示する画像URLを取得するメソッド
+	 *@return defaultImg フォームに表示する画像URL
+	 * */
 	public String getDefaultImg(){
 		return defaultImg;
 	}
 
-	/*フォームに入る画像URLのsetter*/
+	/**
+	 *フォームに表示する画像URLを格納するメソッド
+	 *@param defaultImg フォームに表示する画像URL
+	 * */
 	public void setDefaultImg(String defaultImg){
 		this.defaultImg = defaultImg;
 	}

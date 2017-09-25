@@ -125,47 +125,47 @@ public class GoTourEditPageAction extends ActionSupport {
 	 * 最初は「編集前」と同じものが、確認画面から戻ったときは編集した内容が入ってきます。*/
 
 	/**
-	 *フォーム内のツアー名
+	 *フォームに表示するツアー名
 	 * */
 	private String defaultTourName;
 
 	/**
-	 *フォーム内の価格
+	 *フォームに表示する価格
 	 * */
 	private int defaultPrice;
 
 	/**
-	 *フォーム内の定員
+	 *フォームに表示する定員
 	 * */
 	private int defaultPersons;
 
 	/**
-	 *フォーム内の出発地
+	 *フォームに表示する出発地
 	 * */
 	private String defaultDeparture;
 
 	/**
-	 *フォーム内のエリア
+	 *フォームに表示するエリア
 	 * */
 	public String defaultRegion;
 
 	/**
-	 *フォーム内の都道府県
+	 *フォームに表示する都道府県
 	 * */
 	public String defaultPrefectures;
 
 	/**
-	 *フォーム内のテーマ
+	 *フォームに表示するテーマ
 	 * */
 	public String defaultTheme;
 
 	/**
-	 *フォーム内のコメント
+	 *フォームに表示するコメント
 	 * */
 	public String defaultComment;
 
 	/**
-	 *フォーム内の画像URL
+	 *フォームに表示する画像URL
 	 * */
 	public String defaultImg;
 
