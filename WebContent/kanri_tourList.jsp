@@ -33,24 +33,23 @@
 		<s:hidden name="currentPage" value="1"/>
 		<input type="submit" value='<s:text name="lang.kanri_tourList.search"/>'>
 	</form>
-	---------------テーマで検索---------------<br>
-	<!-- ↑↓ここ、あとでプロパティファイルに追記 -->
+	---------------<s:text name="lang.kanri_tourList.search_tour_by_theme"/>---------------<br>
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'グルメ'"/></s:url>'>
-    【グルメ】
+    <s:text name="lang.kanri_tourList.gourmet"/>
     </a>
     ・
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'名所'"/></s:url>'>
-    【名所】
+    <s:text name="lang.kanri_tourList.place"/>
     </a>
     ・
     <a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'アクティビティ'"/></s:url>'>
-    【アクティビティ】
+    <s:text name="lang.kanri_tourList.activity"/>
     </a>
 
 
