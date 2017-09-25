@@ -101,7 +101,7 @@
     <s:property value="currentPage"/> / <s:property value="maxPage"/>
 
 	<s:if test="currentPage < maxPage">
-	    <a class="link2" href='
+	    <a href='
 		    <s:url action="IndicateTourListAction">
 		    		<s:param name="selectWord" value="selectWord"/>
 		    		<s:param name="currentPage" value="currentPage+1"/>
