@@ -17,7 +17,7 @@ CREATE TABLE  tour  (
 );
 
 
-create table purchases(
+create table cart(
 cart_id int not null primary key auto_increment,
 user_id int not null,
 tour_id int not null,
@@ -26,7 +26,9 @@ price decimal(10,0) null default null,
 registration_date timestamp not null default current_timestamp,
 updated_date timestamp not null default current_timestamp,
 is_deleted boolean default false,/*商品選択削除*/
-foreign key(user_id) references openconnect.users(user_id) on delete cascade
+purchase_flg int not null default 0,
+foreign key(user_id) references openconnect.users(user_id) on delete cascade,
+foreign key(tour_id) references choitabi.tour(tour_id) on delete cascade
 );
 
 insert into tour(tour_id,tour_name,price,persons,departure,region,prefectures,theme,comment,img)
