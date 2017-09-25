@@ -215,7 +215,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 					errorMsg = "価格の欄には数値を入力してください";
 				}
 			defaultTourName = editTourName;
-			defaultPrice = currentPrice;
+			defaultPrice = currentPrice; //ここ（数値の部分）だけ、エラーの場合は編集前のデータに直るようにしています
 			defaultDeparture = editDeparture;
 			defaultRegion = editRegion;
 			defaultPrefectures = editPrefectures;
