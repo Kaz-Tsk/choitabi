@@ -66,6 +66,10 @@ public class DoPaymentAction extends ActionSupport implements SessionAware{
 
 					total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
 
+					//CartDAOに合計金額を格納する
+					CartDTO dto = new CartDTO();
+
+					dto.setTotal_price(total_price);
 				}
 
 				result = SUCCESS;
@@ -113,7 +117,7 @@ public class DoPaymentAction extends ActionSupport implements SessionAware{
 	 * 合計金額を取得するメソッド
 	 * @return Total_price 合計金額
 	 */
-	public BigDecimal getTotal() {
+	public BigDecimal getTotalPrice() {
 		return total_price;
 	}
 
@@ -121,7 +125,7 @@ public class DoPaymentAction extends ActionSupport implements SessionAware{
 	 * 合計金額を格納するメソッド
 	 * @param total_price 合計金額
 	 */
-	public void setTotal(BigDecimal total) {
+	public void setTotalPrice(BigDecimal total) {
 		this.total_price = total;
 	}
 
