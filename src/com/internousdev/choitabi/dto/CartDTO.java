@@ -93,6 +93,11 @@ public class CartDTO {
      */
     private BigDecimal sub_total;
 
+    /**
+     * 決済フラグ
+     */
+    private int purchase_flg;
+
 
 
     /**
@@ -349,6 +354,20 @@ public class CartDTO {
      */
     public void setSub_total(BigDecimal sub_total) {
         this.sub_total = sub_total;
+    }
+
+    /**
+     * 決済フラグを取得するメソッド
+     */
+    public int setPurchase_flg() {
+    	return purchase_flg;
+    }
+
+    /**
+     * 決済フラグを格納するメソッド
+     */
+    public void getPurchase_flg(int purchase_flg) {
+    	this.purchase_flg = purchase_flg;
     }
 
 }

@@ -36,6 +36,11 @@ public class SelectCartDTO {
 	     */
 	    private String img;
 
+	    /**
+	     * 決済フラグ
+	     */
+	    private int purchase_flg;
+
 
 
 	    /**
@@ -116,6 +121,20 @@ public class SelectCartDTO {
 	     */
 	    public void setImg(String img){
 	        this.img = img;
+	    }
+
+	    /**
+	     * 決済フラグを取得するメソッド
+	     */
+	    public int setPurchase_flg() {
+	    	return purchase_flg;
+	    }
+
+	    /**
+	     * 決済フラグを格納するメソッド
+	     */
+	    public void getPurchase_flg(int purchase_flg) {
+	    	this.purchase_flg = purchase_flg;
 	    }
 
 	}
