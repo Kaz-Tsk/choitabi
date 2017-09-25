@@ -123,29 +123,14 @@
                             </script></td>
             </tr>
 
-            <tr>
-              <th class="col-md-9"><s:text
-                  name="lang.pay_check.usingpoint" /></th>
-              <td class="col-md-3" style="color: red;">- &yen;<s:property
-                  value="use_point" /></td>
-            </tr>
-
             <tr class="ordertotal">
               <th class="col-md-9"><s:text
                   name="lang.pay_check.Totalpayment" /></th>
               <td class="col-md-3" style="font-weight: bold;">&yen;<script
                   type="text/javascript">
-                              cal_totalAll(<s:property value="use_point" />);
                             </script></td>
             </tr>
 
-            <tr class="get_point">
-              <th class="col-md-9"><s:text
-                  name="lang.pay_check.getpoint" /></th>
-              <td class="col-md-3" style="font-weight: bold;"><s:property
-                  value="get_point" />
-                <s:text name="lang.pay_check.points" /></td>
-            </tr>
           </table>
 
           <h2>
