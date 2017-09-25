@@ -172,7 +172,12 @@ method= "execute">
 <result name= "success">index.jsp</result>
 </action>
 
-
+<!-- カートから支払い画面の遷移 -->
+    <action name="GoPaymentAction" class="com.internousdev.choitabi.action.GoPaymentAction"
+      method="execute">
+      <result name="success">user_pay.jsp</result>
+      <result name="error">cart.jsp</result>
+    </action>
 
 
 
