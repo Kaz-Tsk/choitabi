@@ -88,7 +88,9 @@
 
 	</div>
 
-
+<footer style="padding-top:110%; text-align:center;">
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	</footer>
 
 
 </body>
