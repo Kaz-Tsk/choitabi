@@ -51,13 +51,6 @@
     </a>
     <br>
 
-	<!-- 顧客情報一覧へ遷移 -->
-    <br>
-    <a href="./kanri_customerList.jsp">
-    ■<s:text name="lang.kanri_top.customer_list"/>■
-    </a>
-    <br>
-
 	<!-- 購入履歴へ遷移 -->
     <br>
     <a href="./kanri_history.jsp">
