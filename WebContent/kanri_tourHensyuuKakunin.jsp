@@ -184,7 +184,7 @@
 			<s:param name="editImg" value="editImg"/>
 		    <s:param name="deleteCheck" value="deleteCheck"/>
 	    </s:url>'>
-	    <input type="submit" value='<s:text name="lang.kanri_tourHensyuuKakunin.complete"/>'>
+	    <s:text name="lang.kanri_tourHensyuuKakunin.complete"/>
     </a>
 <br>
 <br>
