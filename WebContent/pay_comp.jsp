@@ -76,8 +76,8 @@
           }
         </script>
   </div>
-  <footer>
-    <s:include value="footerload.jsp" />
-  </footer>
+<footer style="text-align:center;">
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	</footer>
 </body>
 </html>

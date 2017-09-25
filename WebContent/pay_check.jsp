@@ -205,9 +205,9 @@
         class="nextlink"><s:text name="lang.pay_check.text4" /></a>
     </div>
   </div>
-  <footer>
-    <s:include value="footerload.jsp" />
-  </footer>
+ <footer style="text-align:center;">
+		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	</footer>
 
 </body>
 </html>

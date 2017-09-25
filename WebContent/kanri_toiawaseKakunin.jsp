@@ -119,9 +119,7 @@
           </div>
 
 
-          <footer>
-		          <c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
-	      </footer>
+
 
 
 
