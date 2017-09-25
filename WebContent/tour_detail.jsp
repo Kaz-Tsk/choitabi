@@ -58,7 +58,7 @@
 <div class="center">
 
 <div class="sidebar">
-	<s:include value="test_tour.jsp" />
+	<s:include value="tour.jsp" />
 </div>
 
 
