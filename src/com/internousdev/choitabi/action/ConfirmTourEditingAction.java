@@ -215,6 +215,7 @@ public class ConfirmTourEditingAction extends ActionSupport{
 					errorMsg = "価格の欄には数値を入力してください";
 				}
 			defaultTourName = editTourName;
+			defaultPrice = currentPrice;
 			defaultDeparture = editDeparture;
 			defaultRegion = editRegion;
 			defaultPrefectures = editPrefectures;
