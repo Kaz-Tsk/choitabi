@@ -4,104 +4,191 @@ import com.internousdev.choitabi.dao.SelectOneTourDAO;
 import com.internousdev.choitabi.dto.SelectTourDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * ツアーの編集画面に遷移するアクション
+ * @author YUKA MATSUMURA
+ * @since 2017/0906
+ * @versin 1.1
+ * **/
 public class GoTourEditPageAction extends ActionSupport {
 
 	/**
-	 *
+	 *シリアルID
 	 */
 	private static final long serialVersionUID = -3005189118822441576L;
-	/**@author YUKA MATSUMURA
-	 * since 2017/0906
-	 * versin 1.1
-	 *
-	 * 管理画面でツアー情報の更新・削除操作を行うためのクラスです。
-	 * ツアー一覧画面からツアーの「編集」をクリックすると、このアクションが働いて選択されたーツアーの情報を取ってきます。
-	 * 取ってきた情報は、「編集中だったデータ」として、次の「kanri_tourHensyuu.jsp」に表示されます。
-	 *
-	 * **/
 
-	/*編集中だった情報を保管するための変数---------------------------------------------------------------------*/
-	/*ツアーID*/
+	/*【1/3】編集前のツアー情報を保管するための変数
+	 * DBから取得したデータが入ります。*/
+
+	/**
+	 * 編集前（選択した）のツアーID
+	 * */
 	private int currentTourId;
-	/*ツアー名*/
+
+	/**
+	 * 編集前のツアー名
+	 * */
 	private String currentTourName;
-	/*価格*/
+
+	/**
+	 * 編集前の価格
+	 * */
 	private int currentPrice;
-	/*定員*/
+
+	/**
+	 * 編集前の定員
+	 * */
 	private int currentPersons;
-	/*出発地*/
+
+	/**
+	 * 編集前の出発地
+	 * */
 	private String currentDeparture;
-	/*エリア*/
+
+	/**
+	 * 編集前のエリア
+	 * */
 	private String currentRegion;
-	/*県*/
+
+	/**
+	 * 編集前の都道府県
+	 * */
 	private String currentPrefectures;
-	/*テーマ*/
+
+	/**
+	 * 編集前のテーマ
+	 * */
 	private String currentTheme;
-	/*コメント*/
+
+	/**
+	 * 編集前のコメント
+	 * */
 	private String currentComment;
-	/*画像URL*/
+
+	/**
+	 *編集前の画像URL
+	 * */
 	private String currentImg;
 
 
-	/*編集後の情報を保管するための変数（編集内容確認ページから戻ってきたときに、編集内容を一緒に持って来れるように作っています）-----------------------------*/
+	/*【2/3】編集後の情報を保管するための変数
+	 * （編集内容確認ページから戻ってきたときに、編集内容を一緒に持って来れるように作っています）*/
 
-	/*ツアー名*/
+	/**
+	 *編集後のツアー名
+	 * */
 	private String editTourName;
-	/*価格*/
+
+	/**
+	 *編集後の価格
+	 * */
 	private int editPrice;
-	/*定員*/
+
+	/**
+	 *編集後の定員
+	 * */
 	private int editPersons;
-	/*出発地*/
+
+	/**
+	 *編集後の出発地
+	 * */
 	private String editDeparture;
-	/*エリア*/
-	private String editRegion;
-	/*県*/
-	private String editPrefectures;
-	/*テーマ*/
-	private String editTheme;
-	/*コメント*/
-	private String editComment;
-	/*画像URL*/
-	private String editImg;
+
+	/**
+	 *編集後のエリア
+	 * */
+	public String editRegion;
+
+	/**
+	 *編集後の都道府県
+	 * */
+	public String editPrefectures;
+
+	/**
+	 *編集後のテーマ
+	 * */
+	public String editTheme;
+
+	/**
+	 *編集後のコメント
+	 * */
+	public String editComment;
+
+	/**
+	 *編集後の画像URL
+	 * */
+	public String editImg;
 
 
-	/*↓入力画面で、フォームに最初から入っている情報。最初は「編集前」と同じものが、確認画面から戻ったときは編集した内容が入ってきます。--------------------------------------------*/
 
+	/*【3/3】入力画面で、フォームに最初から入っている情報。
+	 * 最初は「編集前」と同じものが、確認画面から戻ったときは編集した内容が入ってきます。*/
 
-	/*ツアー名*/
+	/**
+	 *フォーム内のツアー名
+	 * */
 	private String defaultTourName;
-	/*価格*/
+
+	/**
+	 *フォーム内の価格
+	 * */
 	private int defaultPrice;
-	/*定員*/
+
+	/**
+	 *フォーム内の定員
+	 * */
 	private int defaultPersons;
-	/*出発地*/
+
+	/**
+	 *フォーム内の出発地
+	 * */
 	private String defaultDeparture;
-	/*エリア*/
-	private String defaultRegion;
-	/*県*/
-	private String defaultPrefectures;
-	/*テーマ*/
-	private String defaultTheme;
-	/*コメント*/
-	private String defaultComment;
-	/*画像URL*/
-	private String defaultImg;
+
+	/**
+	 *フォーム内のエリア
+	 * */
+	public String defaultRegion;
+
+	/**
+	 *フォーム内の都道府県
+	 * */
+	public String defaultPrefectures;
+
+	/**
+	 *フォーム内のテーマ
+	 * */
+	public String defaultTheme;
+
+	/**
+	 *フォーム内のコメント
+	 * */
+	public String defaultComment;
+
+	/**
+	 *フォーム内の画像URL
+	 * */
+	public String defaultImg;
 
 
-	/*削除確認チェック(チェックボックスにレ点がつくと、ここがtrueになります)*/
+	/**
+	 * 削除用チェックボックスの状態
+	 * */
 	private String deleteCheck = "false";
 
-	/*ツアー一覧から入力画面に来たか、入力内容確認画面から来たかを保持するための変数
-	 * （これによって、入力フォームにデフォルトで表示する内容を変えます）
-	 * ツアー一覧からアクセスされたら「tourList」が入り、変更前の情報がフォームに表示されます
-	 * 入力内容確認画面から戻ってきたら「confirm」が入り、編集していた内容が残ります*/
+	/**
+	 * 遷移元
+	 * */
 	private String from;
 
 
 
 
-	/*executeメソッド-------------------------------------------------*/
-
+	/**
+	 * ツアーの編集画面に遷移し、入力画面を表示するメソッド。
+	 * @author YUKA MATSUMURA
+	 * @since 2017/0906
+	 * @versin 1.1
+	 * **/
 	public String execute(){
 		String result = ERROR;
 
@@ -156,319 +243,498 @@ public class GoTourEditPageAction extends ActionSupport {
 
 
 
-	/*編集中だった情報のgetter/setter---------------------------------------------*/
+	/*【1/3】現在のツアー情報のgetter/setter---------------------------------------------*/
 
 
-
-	/*編集中だったツアーIDのgetter*/
+	/**
+	 * 編集するツアーのIDを取得するメソッド。
+	 * @return currentTourId 編集するツアーのID
+	 * */
 	public int getCurrentTourId(){
 		return currentTourId;
 	}
 
-	/*編集中だったツアーIDのsetter*/
+	/**
+	 * 編集するツアーのIDを格納するメソッド。
+	 * @param currentTourId 編集するツアーのID
+	 * */
 	public void setCurrentTourId(int currentTourId){
 		this.currentTourId = currentTourId;
 	}
 
-	/*編集中だったツアー名のgetter*/
+
+	/**
+	 * 編集前のツアー名を取得するメソッド
+	 * @return currentTourName 編集前のツアー名
+	 * */
 	public String getCurrentTourName(){
 		return currentTourName;
 	}
 
-	/*編集中だったツアー名のsetter*/
+
+	/**
+	 * 編集前のツアー名を格納するメソッド
+	 * @param currentTourName 編集前のツアー名
+	 * */
 	public void setCurrentTourName(String currentTourName){
 		this.currentTourName = currentTourName;
 	}
 
-	/*編集中だった価格のgetter*/
+
+	/**
+	 * 編集前の価格を取得するメソッド
+	 * @return currentPrice 編集前の価格
+	 * */
 	public int getCurrentPrice(){
 		return currentPrice;
 	}
 
-	/*編集中だった価格のsetter*/
+	/**
+	 * 編集前の価格を格納するメソッド
+	 * @param currentPrice 編集前の価格
+	 * */
 	public void setCurrentPrice(int currentPrice){
 		this.currentPrice = currentPrice;
 	}
 
-	/*編集中だった定員のgetter*/
+	/**
+	 * 編集前の定員を取得するメソッド
+	 * @return currentPersons 編集前の定員
+	 * */
 	public int getCurrentPersons(){
 		return currentPersons;
 	}
 
-	/*編集中だった定員のsetter*/
+	/**
+	 * 編集前の定員を格納するメソッド
+	 * @param currentPersons 編集前の定員
+	 * */
 	public void setCurrentPersons(int currentPersons){
 		this.currentPersons = currentPersons;
 	}
 
-	/*編集中だった出発地のgetter*/
+	/**
+	 * 編集前の出発地を取得するメソッド
+	 * @return currentDeparture 編集前の出発地
+	 * */
 	public String getCurrentDeparture(){
 		return currentDeparture;
 	}
 
-	/*編集中だった出発地のsetter*/
+	/**
+	 * 編集前の出発地を格納するメソッド
+	 * @param currentDeparture 編集前の出発地
+	 * */
 	public void setCurrentDeparture(String currentDeparture){
 		this.currentDeparture = currentDeparture;
 	}
 
-	/*編集中だったエリアのgetter*/
+	/**
+	 * 編集前のエリアを取得するメソッド
+	 * @return currentRegion 編集前のエリア
+	 * */
 	public String getCurrentRegion(){
 		return currentRegion;
 	}
 
-	/*編集中だったエリアのsetter*/
+	/**
+	 * 編集前のエリアを格納するメソッド
+	 * @param currentRegion 編集前のエリア
+	 * */
 	public void setCurrentRegion(String currentRegion){
 		this.currentRegion = currentRegion;
 	}
 
-	/*編集中だった県のgetter*/
+	/**
+	 *編集前の都道府県を取得するメソッド
+	 *@return currentPrefectures 編集前の都道府県
+	 * */
 	public String getCurrentPrefectures(){
 		return currentPrefectures;
 	}
 
-	/*編集中だった県のsetter*/
+	/**
+	 *編集前の都道府県を格納するメソッド
+	 *@param currentPrefectures 編集前の都道府県
+	 * */
 	public void setCurrentPrefectures(String currentPrefectures){
 		this.currentPrefectures = currentPrefectures;
 	}
 
-	/*編集中だったテーマのgetter*/
+	/**
+	 *編集前のテーマを取得するメソッド
+	 *@return currentTheme 編集前のテーマ
+	 * */
 	public String getCurrentTheme(){
 		return this.currentTheme;
 	}
 
-	/*編集中だったテーマのsetter*/
+	/**
+	 *編集前のテーマを格納するメソッド
+	 *@param currentTheme 編集前のテーマ
+	 * */
 	public void setCurrentTheme(String currentTheme){
 		this.currentTheme = currentTheme;
 	}
 
-	/*編集中だったコメントのgetter*/
+	/**
+	 *編集前のコメントを取得するメソッド
+	 *@return currentComment 編集前のコメント
+	 * */
 	public String getCurrentComment(){
 		return currentComment;
 	}
 
-	/*編集中だったコメントのsetter*/
+	/**
+	 *編集前のコメントを格納するメソッド
+	 *@param currentComment 編集前のコメント
+	 * */
 	public void setCurrentComment(String currentComment){
 		this.currentComment = currentComment;
 	}
 
-	/*編集中だった画像URLのgetter*/
+	/**
+	 *編集前の画像URLを取得するメソッド
+	 *@return currentImg 編集前の画像URL
+	 * */
 	public String getCurrentImg(){
 		return currentImg;
 	}
 
-	/*編集中だった画像URLのsetter*/
+	/**
+	 *編集前の画像URLを取得するメソッド
+	 *@return currentImg 編集前の画像URL
+	 * */
 	public void setCurrentImg(String currentImg){
 		this.currentImg = currentImg;
 	}
 
 
-	/*編集中だった情報のgetter/setter---------------------------------------------*/
+	/*編集後の情報のgetter/setter---------------------------------------------*/
 
 
-	/*編集中だったツアー名のgetter*/
+	/**
+	 *編集後のツアー名を取得するメソッド
+	 *@return editTourName 編集後のツアー名
+	 * */
 	public String getEditTourName(){
 		return editTourName;
 	}
 
-	/*編集中だったツアー名のsetter*/
+	/**
+	 *編集後のツアー名を格納するメソッド
+	 *@param editTourName 編集後のツアー名
+	 * */
 	public void setEditTourName(String editTourName){
 		this.editTourName = editTourName;
 	}
 
-	/*編集中だった価格のgetter*/
+	/**
+	 *編集後の価格を取得するメソッド
+	 *@return editPrice 編集後の価格
+	 * */
 	public int getEditPrice(){
 		return editPrice;
 	}
 
-	/*編集中だった価格のsetter*/
+	/**
+	 *編集後の価格を格納するメソッド
+	 *@param editPrice 編集後の価格
+	 * */
 	public void setEditPrice(int editPrice){
 		this.editPrice = editPrice;
 	}
 
-	/*編集中だった定員のgetter*/
+	/**
+	 *編集後の定員を取得するメソッド
+	 *@return editPersons 編集後の定員
+	 * */
 	public int getEditPersons(){
 		return editPersons;
 	}
 
-	/*編集中だった定員のsetter*/
+	/**
+	 *編集後の定員を格納するメソッド
+	 *@param editPersons 編集後の定員
+	 * */
 	public void setEditPersons(int editPersons){
 		this.editPersons = editPersons;
 	}
 
-	/*編集中だった出発地のgetter*/
+	/**
+	 * 編集後の出発地を取得するメソッド
+	 * @return editDeparture 編集後の出発地
+	 * */
 	public String getEditDeparture(){
 		return editDeparture;
 	}
 
-	/*編集中だった出発地のsetter*/
+	/**
+	 * 編集後の出発地を格納するメソッド
+	 * @param editDeparture 編集後の出発地
+	 * */
 	public void setEditDeparture(String editDeparture){
 		this.editDeparture = editDeparture;
 	}
 
-	/*編集中だったエリアのgetter*/
+	/**
+	 *編集後のエリアを取得するメソッド
+	 *@return editRegion 編集後の出発地
+	 * */
 	public String getEditRegion(){
 		return editRegion;
 	}
 
-	/*編集中だったエリアのsetter*/
+	/**
+	 *編集後のエリアを格納するメソッド
+	 *@param editRegion 編集後のエリア
+	 * */
 	public void setEditRegion(String editRegion){
 		this.editRegion = editRegion;
 	}
 
-	/*編集中だった県のgetter*/
+	/**
+	 *編集後の都道府県を取得するメソッド
+	 *@return editPrefectures 編集後の都道府県
+	 * */
 	public String getEditPrefectures(){
 		return editPrefectures;
 	}
 
-	/*編集中だった県のsetter*/
+	/**
+	 *編集後の都道府県を格納するメソッド
+	 *@param editPrefectures 編集後の都道府県
+	 * */
 	public void setEditPrefectures(String editPrefectures){
 		this.editPrefectures = editPrefectures;
 	}
 
-	/*編集中だったテーマのgetter*/
+	/**
+	 *編集後のテーマを取得するメソッド
+	 *@return editTheme 編集後のテーマ
+	 * */
 	public String getEditTheme(){
 		return this.editTheme;
 	}
 
-	/*編集中だったテーマのsetter*/
+	/**
+	 *編集後のテーマを格納するメソッド
+	 *@param editTheme 編集後のテーマ
+	 * */
 	public void setEditTheme(String editTheme){
 		this.editTheme = editTheme;
 	}
 
-	/*編集中だったコメントのgetter*/
+	/**
+	 *編集後のコメントを取得するメソッド
+	 *@return editComment 編集後のコメント
+	 * */
 	public String getEditComment(){
 		return editComment;
 	}
 
-	/*編集中だったコメントのsetter*/
+	/**
+	 *編集後のコメントを格納するメソッド
+	 *@param editComment 編集後のコメント
+	 * */
 	public void setEditComment(String editComment){
 		this.editComment = editComment;
 	}
 
-	/*編集中だった画像URLのgetter*/
+	/**
+	 *編集後の画像URLを取得するメソッド
+	 *@return editImg 編集後の画像URL
+	 * */
 	public String getEditImg(){
 		return editImg;
 	}
 
-	/*編集中だった画像URLのsetter*/
+	/**
+	 *編集後の画像URLを格納するメソッド
+	 *@param editImg 編集後の画像URL
+	 * */
 	public void setEditImg(String editImg){
 		this.editImg = editImg;
 	}
 
 
+/*フォームに表示する情報のgetter/setter---------------------------------------------*/
 
-
-
-/*フォームに入る情報のgetter/setter---------------------------------------------*/
-
-	/*フォームに入るツアー名のgetter*/
+	/**
+	 *フォームに表示するツアー名を取得するメソッド
+	 *@return defaultTourName フォームに表示するツアー名
+	 * */
 	public String getDefaultTourName(){
 		return defaultTourName;
 	}
 
-	/*フォームに入るツアー名のsetter*/
+	/**
+	 *フォームに表示するツアー名を格納するメソッド
+	 *@param defaultTourName フォームに表示するツアー名
+	 * */
 	public void setDefaultTourName(String defaultTourName){
 		this.defaultTourName = defaultTourName;
 	}
 
-	/*フォームに入る価格のgetter*/
+	/**
+	 *フォームに表示する価格を取得するメソッド
+	 *@return defaultPrice フォームに表示する価格
+	 * */
 	public int getDefaultPrice(){
 		return defaultPrice;
 	}
 
-	/*フォームに入る価格のsetter*/
+	/**
+	 *フォームに表示する価格を格納するメソッド
+	 *@param defaultPrice フォームに表示する価格
+	 * */
 	public void setDefaultPrice(int defaultPrice){
 		this.defaultPrice = defaultPrice;
 	}
 
-	/*フォームに入る定員のgetter*/
+	/**
+	 *フォームに表示する定員を取得するメソッド
+	 *@return defaultPersons フォームに表示する定員
+	 * */
 	public int getDefaultPersons(){
 		return defaultPersons;
 	}
 
-	/*フォームに入る定員のsetter*/
+	/**
+	 *フォームに表示する定員を格納するメソッド
+	 *@param defaultPersons フォームに表示する定員
+	 * */
 	public void setDefaultPersons(int defaultPersons){
 		this.defaultPersons = defaultPersons;
 	}
 
-	/*フォームに入る出発地のgetter*/
+	/**
+	 *フォームに表示する出発地を取得するメソッド
+	 *@return defaultDeparture フォームに表示する出発地
+	 * */
 	public String getDefaultDeparture(){
 		return defaultDeparture;
 	}
 
-	/*フォームに入る出発地のsetter*/
+	/**
+	 *フォームに表示する出発地を格納するメソッド
+	 *@param defaultDeparture フォームに表示する出発地
+	 * */
 	public void setDefaultDeparture(String defaultDeparture){
 		this.defaultDeparture = defaultDeparture;
 	}
 
-	/*フォームに入るエリアのgetter*/
+	/**
+	 *フォームに表示するエリアを取得するメソッド
+	 *@return defaultRegion フォームに表示するエリア
+	 * */
 	public String getDefaultRegion(){
 		return defaultRegion;
 	}
 
-	/*フォームに入るエリアのsetter*/
+	/**
+	 *フォームに表示するエリアを格納するメソッド
+	 *@return defaultRegion フォームに表示するエリア
+	 * */
 	public void setDefaultRegion(String defaultRegion){
 		this.defaultRegion = defaultRegion;
 	}
 
-	/*フォームに入る県のgetter*/
+	/**
+	 *フォームに表示する都道府県を取得するメソッド
+	 *@return defaultPrefectures フォームに表示する都道府県
+	 * */
 	public String getDefaultPrefectures(){
 		return defaultPrefectures;
 	}
 
-	/*フォームに入る県のsetter*/
+	/**
+	 *フォームに表示する都道府県を格納するメソッド
+	 *@param defaultPrefectures フォームに表示する都道府県
+	 * */
 	public void setDefaultPrefectures(String defaultPrefectures){
 		this.defaultPrefectures = defaultPrefectures;
 	}
 
-	/*フォームに入るテーマのgetter*/
+	/**
+	 *フォームに表示するテーマを取得するメソッド
+	 *@return defaultTheme フォームに表示するテーマ
+	 * */
 	public String getDefaultTheme(){
 		return this.defaultTheme;
 	}
 
-	/*フォームに入るテーマのsetter*/
+	/**
+	 *フォームに表示するテーマを格納するメソッド
+	 *@param defaultTheme フォームに表示するテーマ
+	 * */
 	public void setDefaultTheme(String defaultTheme){
 		this.defaultTheme = defaultTheme;
 	}
 
-	/*フォームに入るコメントのgetter*/
+	/**
+	 *フォームに表示するコメントを取得するメソッド
+	 *@return defaultComment フォームに表示するコメント
+	 * */
 	public String getDefaultComment(){
 		return defaultComment;
 	}
 
-	/*フォームに入るコメントのsetter*/
+	/**
+	 *フォームに表示するコメントを格納するメソッド
+	 *@param defaultComment フォームに表示するコメント
+	 * */
 	public void setDefaultComment(String defaultComment){
 		this.defaultComment = defaultComment;
 	}
 
-	/*フォームに入る画像URLのgetter*/
+	/**
+	 *フォームに表示する画像URLを取得するメソッド
+	 *@return defaultImg フォームに表示する画像URL
+	 * */
 	public String getDefaultImg(){
 		return defaultImg;
 	}
 
-	/*フォームに入る画像URLのsetter*/
+	/**
+	 *フォームに表示する画像URLを格納するメソッド
+	 *@param defaultImg フォームに表示する画像URL
+	 * */
 	public void setDefaultImg(String defaultImg){
 		this.defaultImg = defaultImg;
 	}
 
 	/*その他の情報のgetter/setter----------------------*/
 
-	/*削除チェックボックス判定のgetter*/
+	/**
+	 * 削除用チェックボックスの状態を取得するメソッド
+	 * @return deleteCheck 削除用チェックボックスの状態
+	 * */
 	public String getDeleteCheck(){
 		return deleteCheck;
 	}
 
-	/*削除チェックボックス判定のsetter*/
+	/**
+	 * 削除用チェックボックスの状態を格納するメソッド
+	 * @param deleteCheck 削除用チェックボックスの状態
+	 * */
 	public void setDeleteCheck(String deleteCheck){
 		this.deleteCheck = deleteCheck;
 	}
 
-	/*どのページからきたかのgetter*/
-
+	/**
+	 * 遷移元を取得するメソッド
+	 * @return from 遷移元
+	 * */
 	public String getFrom(){
 		return from;
 	}
-	/*どのページからきたかのgetter*/
 
+
+	/**
+	 * 遷移元を格納するメソッド
+	 * @rparam from 遷移元
+	 * */
 	public void setFrom(String from){
 		this.from = from;
 	}
