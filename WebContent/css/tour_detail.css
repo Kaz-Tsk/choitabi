@@ -67,7 +67,9 @@ table {
 }
 
 footer {
-	margin-top:634px;
+	position: absolute;
+	bottom: 0;
+	display: block;
     text-align:center;
     height: 80px;
     clear:left;
