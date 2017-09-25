@@ -39,23 +39,23 @@
       <br>
       <h1>
         <span class="maintext"><s:text
-            name="lang.cart_done.text1" /></span>
+            name="lang.pay_comp.text1" /></span>
       </h1>
       <h2>
-        <s:text name="lang.cart_done.text2" />
+        <s:text name="lang.pay_comp.text2" />
       </h2>
       <br>
       <h4>
-        <s:text name="lang.cart_done.text3" />
+        <s:text name="lang.pay_comp.text3" />
         &nbsp;：&nbsp;<span class="pointbox">&nbsp;<s:property
-            value="get_point" /> <s:text name="lang.cartcheck.points" /></span>
+            value="get_point" /> <s:text name="lang.pay_comp.points" /></span>
       </h4>
       <h4>
         (※
-        <s:text name="lang.cart_done.text4" />
+        <s:text name="lang.pay_comp.text4" />
         &nbsp;<a href="GoMypageAction"><s:text
-            name="lang.cart_done.text5" /></a>&nbsp;
-        <s:text name="lang.cart_done.text6" />
+            name="lang.pay_comp.text5" /></a>&nbsp;
+        <s:text name="lang.pay_comp.text6" />
         )
       </h4>
     </div>
