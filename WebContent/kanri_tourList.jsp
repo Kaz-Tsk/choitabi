@@ -25,7 +25,7 @@
 
 <body>
 	<h1>ツアー情報一覧</h1>
-
+<br>
 <!-- ↓ツアー名検索の部分です -->
     ---------------<s:text name="lang.kanri_tourList.search_tour_by_name"/>---------------
     <form action="IndicateTourListAction">
@@ -34,6 +34,12 @@
 		<input type="submit" value='<s:text name="lang.kanri_tourList.search"/>'>
 	</form>
 	---------------<s:text name="lang.kanri_tourList.search_tour_by_theme"/>---------------<br>
+	<a href='<s:url action="IndicateTourListAction">
+    <s:param name="currentPage" value="1"/>
+    <s:param name="selectTheme" value="''"/></s:url>'>
+    <s:text name="lang.kanri_tourList.all"/>
+    </a>
+	・
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'グルメ'"/></s:url>'>

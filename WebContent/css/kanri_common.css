@@ -25,6 +25,7 @@ table{
     border:2px solid grey;
     border-spacing:0px;
     font-size:16px;
+    text-align:center;
 }
 
 th{
