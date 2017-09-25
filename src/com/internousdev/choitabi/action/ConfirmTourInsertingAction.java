@@ -12,7 +12,6 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ConfirmTourInsertingAction extends ActionSupport{
 
 	/*
-	 * 管理者トップ画面→GoTourInsertPageAction→入力画面→【このAction】→入力内容確認画面→InsertTourAction
 	 * フォームから入力されたデータに漏れや不適切な部分（価格に文字列が入っている場合など）がないかをチェックし、
 	 * OKならばSUCCESSを返します。
 	 * */

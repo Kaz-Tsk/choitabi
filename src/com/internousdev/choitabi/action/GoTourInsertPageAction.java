@@ -4,9 +4,9 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 新規ツアーの登録画面に遷移するアクション
- * @author : YUKA MATSUMURA
- * @since : 2017/09/08
- * @version : 1.1
+ * @author YUKA MATSUMURA
+ * @since 2017/09/08
+ * @version 1.1
  * */
 public class GoTourInsertPageAction extends ActionSupport{
 
