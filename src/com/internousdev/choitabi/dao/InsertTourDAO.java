@@ -49,7 +49,7 @@ public class InsertTourDAO {
 					+ " ?,"//5
 					+ " ?,"//6
 					+ " ?,"//7
-					+ " ?,"//8
+					+ " ?"//8
 					+ ");";
 
 			PreparedStatement ps = con.prepareStatement(sql);

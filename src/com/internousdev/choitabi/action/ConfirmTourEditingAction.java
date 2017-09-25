@@ -186,6 +186,17 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			editImg = "img/no_image.jpg";
 		}
 
+		if(deleteCheck.equals("true")){
+			result = SUCCESS;
+
+		}else if(deleteCheck.equals("false") &&
+				 (editTourName.equals("")|| editPrice.equals("") ||
+				  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme == null ||
+				  editComment.equals("") )) {
+
+			errorMsg = "未入力の情報があります";
+		}
+
 		try{
 
 			defaultTourName = editTourName;
@@ -197,20 +208,12 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			defaultComment = editComment;
 			defaultImg = editImg;
 
-			if(deleteCheck.equals("true")){
-				result = SUCCESS;
-
-			}else if(deleteCheck.equals("false") &&
-					 (editTourName.equals("")|| editPrice.equals("") ||
-					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme == null ||
-					  editComment.equals("") )) {
-
-				errorMsg = "未入力の情報があります";
-
-			}
-
 		}catch(NumberFormatException e){
-			errorMsg = "価格の欄には数値を入力してください";
+				if(editPrice.equals("")){
+					errorMsg = "未入力の情報があります";
+				}else{
+					errorMsg = "価格の欄には数値を入力してください";
+				}
 			defaultTourName = editTourName;
 			defaultDeparture = editDeparture;
 			defaultRegion = editRegion;
