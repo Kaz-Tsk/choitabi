@@ -57,14 +57,6 @@
 	    </tr>
 	    <tr>
 	        <th>
-	        	<s:text name="lang.kanri_tourTsuikaKakunin.persons"/>
-	        </th>
-	        <td>
-	        	<s:property value="newPersons"/>
-	        </td>
-	    </tr>
-	    <tr>
-	        <th>
 	        	<s:text name="lang.kanri_tourTsuikaKakunin.departure"/>
 	        </th>
 	        <td>
@@ -129,7 +121,6 @@
 		    <s:param name="newTourId" value="newTourId"/>
 		    <s:param name="newTourName" value = "newTourName"/>
 		    <s:param name="newPrice" value = "newPrice"/>
-		    <s:param name="newPersons" value = "newPersons"/>
 		    <s:param name="newDeparture" value = "newDeparture"/>
 		    <s:param name="newRegion" value = "newRegion"/>
 		    <s:param name="newPrefectures" value="newPrefectures"/>
@@ -150,7 +141,6 @@
 		    <s:param name="newTourId" value="newTourId"/>
 		    <s:param name="newTourName" value = "newTourName"/>
 		    <s:param name="newPrice" value = "newPrice"/>
-		    <s:param name="newPersons" value = "newPersons"/>
 		    <s:param name="newDeparture" value = "newDeparture"/>
 		    <s:param name="newRegion" value = "newRegion"/>
 		    <s:param name="newPrefectures" value="newPrefectures"/>

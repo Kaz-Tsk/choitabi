@@ -32,10 +32,6 @@ public class InsertTourAction extends ActionSupport {
 	 * */
 	private String newPrice;
 
-	/**
-	 * 新規ツアーの定員
-	 * */
-	private String newPersons;
 
 	/**
 	 * 新規ツアーの出発地
@@ -80,7 +76,7 @@ public class InsertTourAction extends ActionSupport {
 		int count = 0;
 		InsertTourDAO itdao = new InsertTourDAO();
 
-		count = itdao.insertTour(newTourName, newPrice,newPersons,
+		count = itdao.insertTour(newTourName, newPrice,
 	                            		 newDeparture, newRegion, newPrefectures, newTheme, newComment, newImg);/*←（）内は全部引数です*/
 
 		if(count > 0){
@@ -126,22 +122,6 @@ public class InsertTourAction extends ActionSupport {
 	 * */
 	public void setNewPrice(String newPrice){
 		this.newPrice = newPrice;
-	}
-
-	/**
-	 * 新規ツアーの定員を取得するメソッド
-	 * @return newPersons 新規ツアーの定員
-	 * */
-	public String getNewPersons(){
-		return newPersons;
-	}
-
-	/**
-	 * 新規ツアーの定員を格納するメソッド
-	 * @param newPersons 新規ツアーの定員
-	 * */
-	public void setNewPersons(String newPersons){
-		this.newPersons = newPersons;
 	}
 
 	/**

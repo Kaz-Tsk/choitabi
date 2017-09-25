@@ -35,11 +35,6 @@ public class UpdateTourAction extends ActionSupport{
 	private String editPrice;
 
 	/**
-	 *編集後の定員
-	 * */
-	private String editPersons;
-
-	/**
 	 *編集後の出発地
 	 * */
 	private String editDeparture;
@@ -88,7 +83,7 @@ public class UpdateTourAction extends ActionSupport{
 		int count = 0;
 
 		UpdateTourDAO utdao = new UpdateTourDAO();
-		count = utdao.updateTour(editTourId, editTourName, editPrice,editPersons,
+		count = utdao.updateTour(editTourId, editTourName, editPrice,
 	                            		 editDeparture, editRegion, editPrefectures, editTheme, editComment, editImg,deleteCheck);/*←（）内は全部引数です*/
 
 		if(count > 0){
@@ -151,22 +146,6 @@ public class UpdateTourAction extends ActionSupport{
 	 * */
 	public void setEditPrice(String editPrice){
 			this.editPrice = editPrice;
-	}
-
-	/**
-	 *編集後の定員を取得するメソッド
-	 *@return editPersons 編集後の定員
-	 * */
-	public String getEditPersons(){
-		return editPersons;
-	}
-
-	/**
-	 *編集後の定員を格納するメソッド
-	 *@param editPersons 編集後の定員
-	 * */
-	public void setEditPersons(String editPersons){
-		this.editPersons = editPersons;
 	}
 
 	/**

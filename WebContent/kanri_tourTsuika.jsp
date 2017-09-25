@@ -64,15 +64,6 @@
 		</tr>
 		<tr>
 			<th>
-				<s:text name="lang.kanri_tourTsuika.persons"/>
-			</th>
-			<td>
-				<input type="text" size="5" name="newPersons" value='<s:property value="newPersons"/>'></input>
-				<s:text name="lang.kanri_tourTsuika.persons_number"/>
-			</td>
-		</tr>
-		<tr>
-			<th>
 				<s:text name="lang.kanri_tourTsuika.departure"/>
 			</th>
 			<td>
@@ -100,26 +91,28 @@
 				<s:text name="lang.kanri_tourTsuika.theme"/>
 			</th>
 			<td>
-				<s:if test='newTheme.equals("グルメ")'>
-				<label><input type="radio" name="newTheme" value="グルメ" checked/>グルメ</label>
-				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
-				<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
-				</s:if>
-				<s:if test='newTheme.equals("名所")'>
-				<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
-				<label><input type="radio" name="newTheme" value="名所" checked/>名所</label>
-				<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
-				</s:if>
-				<s:if test='newTheme.equals("アクティビティ")'>
-				<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
-				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
-				<label><input type="radio" name="newTheme" value="アクティビティ" checked/>アクティビティ</label>
-				</s:if>
 				<s:if test='newTheme == null'>
 				<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
 				<label><input type="radio" name="newTheme" value="名所"/>名所</label>
 				<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
 				</s:if>
+				<s:else>
+					<s:if test='newTheme.equals("グルメ")'>
+					<label><input type="radio" name="newTheme" value="グルメ" checked/>グルメ</label>
+					<label><input type="radio" name="newTheme" value="名所"/>名所</label>
+					<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
+					</s:if>
+					<s:if test='newTheme.equals("名所")'>
+					<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
+					<label><input type="radio" name="newTheme" value="名所" checked/>名所</label>
+					<label><input type="radio" name="newTheme" value="アクティビティ"/>アクティビティ</label>
+					</s:if>
+					<s:if test='newTheme.equals("アクティビティ")'>
+					<label><input type="radio" name="newTheme" value="グルメ"/>グルメ</label>
+					<label><input type="radio" name="newTheme" value="名所"/>名所</label>
+					<label><input type="radio" name="newTheme" value="アクティビティ" checked/>アクティビティ</label>
+					</s:if>
+				</s:else>
 
 			</td>
 		</tr>

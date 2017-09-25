@@ -33,11 +33,6 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	private String newPrice;
 
 	/**
-	 * 新規ツアーの定員
-	 * */
-	private String newPersons;
-
-	/**
 	 * 新規ツアーの出発地
 	 * */
 	private String newDeparture;
@@ -87,7 +82,7 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 		}
 
 		try{
-			if (	newTourName.equals("") || newPrice.equals("") || newPersons.equals("") || newDeparture.equals("") ||
+			if (	newTourName.equals("") || newPrice.equals("") || newDeparture.equals("") ||
 				newRegion.equals("") || newPrefectures.equals("") || newTheme == null || newComment.equals("") ) {
 
 				errorMsg = "未入力の情報があります";
@@ -96,11 +91,10 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝例外が起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
 				Integer.parseInt(newPrice);
-				Integer.parseInt(newPersons);
 			}
 
 		}catch(NumberFormatException e){
-			errorMsg = "価格・定員の欄には数値を入力してください";
+			errorMsg = "価格の欄には数値を入力してください";
 		}catch(NullPointerException e){
 			e.printStackTrace();
 		}
@@ -144,22 +138,6 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	 * */
 	public void setNewPrice(String newPrice){
 		this.newPrice = newPrice;
-	}
-
-	/**
-	 * 新規ツアーの定員を取得するメソッド
-	 * @return newPersons 新規ツアーの定員
-	 * */
-	public String getNewPersons(){
-		return newPersons;
-	}
-
-	/**
-	 * 新規ツアーの定員を格納するメソッド
-	 * @param newPersons 新規ツアーの定員
-	 * */
-	public void setNewPersons(String newPersons){
-		this.newPersons = newPersons;
 	}
 
 	/**

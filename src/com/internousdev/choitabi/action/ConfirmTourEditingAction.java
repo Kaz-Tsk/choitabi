@@ -32,11 +32,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	private int currentPrice;
 
 	/**
-	 * 編集前の定員
-	 * */
-	private int currentPersons;
-
-	/**
 	 * 編集前の出発地
 	 * */
 	private String currentDeparture;
@@ -85,11 +80,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	 *編集後の価格
 	 * */
 	private String editPrice;
-
-	/**
-	 *編集後の定員
-	 * */
-	private String editPersons;
 
 	/**
 	 *編集後の出発地
@@ -147,11 +137,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	private int defaultPrice;
 
 	/**
-	 *フォームに表示する定員
-	 * */
-	private int defaultPersons;
-
-	/**
 	 *フォームに表示する出発地
 	 * */
 	private String defaultDeparture;
@@ -201,11 +186,21 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			editImg = "img/no_image.jpg";
 		}
 
+		if(deleteCheck.equals("true")){
+			result = SUCCESS;
+
+		}else if(deleteCheck.equals("false") &&
+				 (editTourName.equals("")|| editPrice.equals("") ||
+				  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme == null ||
+				  editComment.equals("") )) {
+
+			errorMsg = "未入力の情報があります";
+		}
+
 		try{
 
 			defaultTourName = editTourName;
 			defaultPrice = Integer.parseInt(editPrice);
-			defaultPersons = Integer.parseInt(editPersons);
 			defaultDeparture = editDeparture;
 			defaultRegion = editRegion;
 			defaultPrefectures = editPrefectures;
@@ -213,20 +208,12 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			defaultComment = editComment;
 			defaultImg = editImg;
 
-			if(deleteCheck.equals("true")){
-				result = SUCCESS;
-
-			}else if(deleteCheck.equals("false") &&
-					 (editTourName.equals("")|| editPrice.equals("") || editPersons.equals("") ||
-					  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme == null ||
-					  editComment.equals("") )) {
-
-				errorMsg = "未入力の情報があります";
-
-			}
-
 		}catch(NumberFormatException e){
-			errorMsg = "価格・定員の欄には数値を入力してください";
+				if(editPrice.equals("")){
+					errorMsg = "未入力の情報があります";
+				}else{
+					errorMsg = "価格の欄には数値を入力してください";
+				}
 			defaultTourName = editTourName;
 			defaultDeparture = editDeparture;
 			defaultRegion = editRegion;
@@ -296,22 +283,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	 * */
 	public void setCurrentPrice(int currentPrice){
 		this.currentPrice = currentPrice;
-	}
-
-	/**
-	 *編集前の定員を取得するメソッド
-	 *@return currentPersons 編集前の定員
-	 * */
-	public int getCurrentPersons(){
-		return currentPersons;
-	}
-
-	/**
-	 *編集前の定員を格納するメソッド
-	 *@param currentPersons 編集前の定員
-	 * */
-	public void setCurrentPersons(int currentPersons){
-		this.currentPersons = currentPersons;
 	}
 
 	/**
@@ -447,22 +418,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	}
 
 	/**
-	 *編集後の定員を取得するメソッド
-	 *@rturn editPersons 編集後の定員
-	 * */
-	public String getEditPersons(){
-		return editPersons;
-	}
-
-	/**
-	 *編集後の定員を格納するメソッド
-	 *@param editPersons 編集後の定員
-	 * */
-	public void setEditPersons(String editPersons){
-		this.editPersons = editPersons;
-	}
-
-	/**
 	 *編集後の出発地を取得するメソッド
 	 *@return editDeparture 編集後の出発地
 	 * */
@@ -591,22 +546,6 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	 * */
 	public void setDefaultPrice(int defaultPrice){
 		this.defaultPrice = defaultPrice;
-	}
-
-	/**
-	 *フォームに表示する定員を取得するメソッド
-	 *@return defaultPersons フォームに表示する定員
-	 * */
-	public int getDefaultPersons(){
-		return defaultPersons;
-	}
-
-	/**
-	 *フォームに表示する定員を格納するメソッド
-	 *@param defaultPersons フォームに表示する定員
-	 * */
-	public void setDefaultPersons(int defaultPersons){
-		this.defaultPersons = defaultPersons;
 	}
 
 	/**

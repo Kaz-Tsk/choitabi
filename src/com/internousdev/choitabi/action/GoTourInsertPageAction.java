@@ -32,11 +32,6 @@ public class GoTourInsertPageAction extends ActionSupport{
 	private String newPrice;
 
 	/**
-	 * 新規ツアーの定員
-	 * */
-	private String newPersons;
-
-	/**
 	 * 新規ツアーの出発地
 	 * */
 	private String newDeparture;
@@ -108,22 +103,6 @@ public class GoTourInsertPageAction extends ActionSupport{
 	 * */
 	public void setNewPrice(String newPrice){
 		this.newPrice = newPrice;
-	}
-
-	/**
-	 * 新規ツアーの定員を取得するメソッド
-	 * @return newPersons 新規ツアーの定員
-	 * */
-	public String getNewPersons(){
-		return newPersons;
-	}
-
-	/**
-	 * 新規ツアーの定員を格納するメソッド
-	 * @param newPersons 新規ツアーの定員
-	 * */
-	public void setNewPersons(String newPersons){
-		this.newPersons = newPersons;
 	}
 
 	/**
