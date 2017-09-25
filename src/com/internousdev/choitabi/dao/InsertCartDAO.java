@@ -65,7 +65,7 @@ public class InsertCartDAO {
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
 		Connection con = db.getConnection();
-		String sql = "insert into purchases (user_id, tour_id, order_count, price) values(?, ?, ?, ?)";
+		String sql = "insert into cart (user_id, tour_id, order_count, price) values(?, ?, ?, ?)";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -113,7 +113,7 @@ public class InsertCartDAO {
 		Connection con = db.getConnection();
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
-		String sql = "select * from purchases where user_id = ?";
+		String sql = "select * from cart where user_id = ?";
 		String select2 = "SELECT * FROM tour WHERE tour_id = ?";
 
 		try {

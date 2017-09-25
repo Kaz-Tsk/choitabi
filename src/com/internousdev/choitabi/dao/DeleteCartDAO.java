@@ -30,7 +30,7 @@ public class DeleteCartDAO {
 		int delete = 0;
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/?useSSL=true&requireSSL=true","choitabi","root","mysql");
 		Connection con = db.getConnection();
-		String sql = "delete from purchases where user_id=? and cart_id=?";
+		String sql = "delete from cart where user_id=? and cart_id=?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
