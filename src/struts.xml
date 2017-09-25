@@ -28,10 +28,7 @@
              com.internousdev.choitabi.property.test_tour
              com.internousdev.choitabi.property.index
              com.internousdev.choitabi.property.about
-             com.internousdev.choitabi.property.Q&amp;A
-             com.internousdev.choitabi.property.pay_check
-             com.internousdev.choitabi.property.pay_comp
-             com.internousdev.choitabi.property.user_pay"
+             com.internousdev.choitabi.property.Q&amp;A"
 
       />
 
@@ -182,6 +179,29 @@ method= "execute">
       <result name="error">cart.jsp</result>
     </action>
 
+    <!-- クレジット情報確認 -->
+    <action name="CheckCreditAction"
+      class="com.internousdev.choitabi.action.CheckCreditAction" method="execute">
+      <result name="success" type="chain">DoPaymentAction</result>
+      <result name="error">user_pay.jsp</result>
+    </action>
+
+    <!--クレジット支払いから購入確認画面へ遷移 -->
+    <action name="DoPaymentAction"
+      class="com.internousdev.choitabi.action.DoPaymentAction" method="execute">
+      <result name="success">cart_check.jsp</result>
+      <result name="error">user_pay.jsp</result>
+      <result name="login" type="chain">LoginAction</result>
+    </action>
+
+
+    <!-- 購入を完了する -->
+    <action name="PayCompAction"
+      class="com.internousdev.choitabi.action.PayCompAction" method="execute">
+      <result name="success">pay_comp.jsp</result>
+      <result name="error">cart_check.jsp</result>
+      <result name="login" type="chain">LoginAction</result>
+    </action>
 
 
 
