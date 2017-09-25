@@ -113,7 +113,7 @@ public class InsertCartDAO {
 		Connection con = db.getConnection();
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
-		String sql = "select * from cart where user_id = ?";
+		String sql = "select * from cart where user_id=?";
 		String select2 = "SELECT * FROM tour WHERE tour_id = ?";
 
 		try {
@@ -138,7 +138,7 @@ public class InsertCartDAO {
 					dto.setTour_name(rs2.getString("tour_name"));
 					dto.setPrice(rs2.getBigDecimal("price"));
 					dto.setSub_total(dto.getPrice().multiply(BigDecimal.valueOf(dto.getOrder_count())));
-					dto.setImg(rs.getString("img"));
+					dto.setImg(rs2.getString("img"));
 
 				}
 
