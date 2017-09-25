@@ -39,3 +39,10 @@ form{
     height: 7px;
     background: repeating-linear-gradient(-45deg, #DAA520, #DAA520 2px, white 2px, white 4px);
   }
+
+  .footer {
+	position: relative;
+	padding-top: 20px;
+	bottom: 0;
+	background-color:orange;
+}

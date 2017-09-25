@@ -42,16 +42,23 @@ pageEncoding="UTF-8"%>
                           3営業日以内にご返信させていただきます。
                       </small>
                       </h1>
+                      <br>
+                      <br>
+                      <br>
+
                       <h2><s:text name = "lang.contact_send.thankyou"/></h2>
               </div>
+                      <br>
+                      <center><a href="index.jsp"><s:text name = "lang.contact_send.return_to_top"/></a></center>
 
-                       <a href="index.jsp"><s:text name = "lang.contact_send.return_to_top"/></a>
-
-
-       <footer style="text-align:center;">
-		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
-	</footer>
-
+<br>
+<br>
+<br>
+                       <div class="footer">
+	                        <footer style="text-align:center;">
+		                            <c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+	                        </footer>
+                       </div>
        </body>
 
 
