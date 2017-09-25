@@ -25,11 +25,6 @@ public class SelectTourDTO {
 	private int price;
 
 	/**
-	 *定員
-	 * */
-	private int persons;
-
-	/**
 	 *出発地
 	 * */
 	private String departure;
@@ -109,22 +104,6 @@ public class SelectTourDTO {
 	 * */
 	public void setPrice(int price){
 		this.price = price;
-	}
-
-	/**
-	 *定員を取得するメソッド
-	 *@return persons 定員
-	 * */
-	public int getPersons(){
-		return persons;
-	}
-
-	/**
-	 *定員を格納するメソッド
-	 *@param persond 定員
-	 * */
-	public void setPersons(int persons){
-		this.persons = persons;
 	}
 
 	/**
