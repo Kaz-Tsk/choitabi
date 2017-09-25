@@ -175,7 +175,6 @@
 		    <s:param name="editTourId" value="currentTourId"/>
 		    <s:param name="editTourName" value = "editTourName"/>
 		    <s:param name="editPrice" value = "editPrice"/>
-		    <s:param name="editPersons" value = "editPersons"/>
 		    <s:param name="editDeparture" value = "editDeparture"/>
 		    <s:param name="editRegion" value = "editRegion"/>
 		    <s:param name="editPrefectures" value="editPrefectures"/>
