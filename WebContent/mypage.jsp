@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib prefix="s" uri="/struts-tags"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -16,41 +16,46 @@
 <title>mypage</title>
 </head>
 <body>
-<!-- header include -->
+	<!-- header include -->
 	<s:include value="header.jsp"></s:include>
 
 	<!-- main部分 -->
 	<div class="main">
 		<div class="mypage-container">
 
-				<div class="admin-param">
-					<s:action var="select" name="MypageAction"/>
-					<s:iterator value="#select.User">
-					<div class = "param-box">
-					<h2><s:text name="lang.mypage.userdata"/></h2>
-					<table >
-						<tr>
-							<td><s:text name="lang.mypage.name"/></td>
-							<td><s:property value="familyNameKanji"/><s:property value="givenNameKanji"/></td>
-						</tr>
-						<tr>
-							<td><s:text name="lang.mypage.address"/></td>
-							<td><s:property value="address"/></td>
-						</tr>
-						<tr>
-							<td><s:text name="lang.mypage.mailaddress"/></td>
-							<td><s:property value="mailAddress"/></td>
-						</tr>
-						<tr>
-							<td ><s:text name="lang.mypage.telnumber"/></td>
-							<td><s:property value="telNumber"/></td>
-						</tr>
-					</table>
-					<br>
-					<s:form action = "UserPurchaseHistoryAction">
-						<button type= "submit" ><s:text name="lang.mypage.purchasehistory"/></button>
-					</s:form>
-				</div>
+			<div class="admin-param">
+				<s:action var="select" name="MypageAction" />
+				<s:iterator value="#select.User">
+					<div class="param-box">
+						<h2>
+							<s:text name="lang.mypage.userdata" />
+						</h2>
+						<table>
+							<tr>
+								<td><s:text name="lang.mypage.name" /></td>
+								<td><s:property value="familyNameKanji" />
+									<s:property value="givenNameKanji" /></td>
+							</tr>
+							<tr>
+								<td><s:text name="lang.mypage.address" /></td>
+								<td><s:property value="address" /></td>
+							</tr>
+							<tr>
+								<td><s:text name="lang.mypage.mailaddress" /></td>
+								<td><s:property value="mailAddress" /></td>
+							</tr>
+							<tr>
+								<td><s:text name="lang.mypage.telnumber" /></td>
+								<td><s:property value="telNumber" /></td>
+							</tr>
+						</table>
+						<br>
+						<s:form action="UserPurchaseHistoryAction">
+							<button type="submit">
+								<s:text name="lang.mypage.purchasehistory" />
+							</button>
+						</s:form>
+					</div>
 
 
 
@@ -59,7 +64,7 @@
 		</div>
 	</div>
 	<!-- footer include -->
-<footer style="text-align:center;">
+	<footer style="text-align: center;">
 		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
 </body>

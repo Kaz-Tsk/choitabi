@@ -24,7 +24,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	private static final long serialVersionUID = -2136617804303987697L;
 
 	/**
-	 * session情報
+	 * セッション情報
 	 */
 	private Map<String,Object>session;
 
@@ -40,7 +40,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 
 	/**
 	 * ログアウトする為の実行メソッド
-	 * @return ログアウト成功でSUCCESS　失敗でERROR
+	 * @return ログアウト成功でSUCCESS　失敗でERRORを返す
 	 */
 	public String execute(){
 		String result = ERROR;
@@ -52,13 +52,13 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 			session.clear();
 			if(session.isEmpty()){
 				result = SUCCESS;
-				}
+			}
 		}
 		return result;
 	}
 
 	/**
-	 * session格納
+	 * セッション情報格納
 	 * @param session
 	 */
 	public void setSession(Map<String,Object>session){
@@ -66,7 +66,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	}
 
 	/**
-	 * session取得
+	 * セッション情報取得
 	 * @return session
 	 */
 	public Map<String,Object>getSession(){
@@ -74,7 +74,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	}
 
 	/**
-	 * loginFlg格納
+	 * ログインフラグ格納
 	 * @param loginFlg
 	 */
 	public void setLoginFlg(int loginFlg){
@@ -82,15 +82,15 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	}
 
 	/**
-	 * loginFlg取得
-	 * @return
+	 * ログインフラグ取得
+	 * @return loginFlg
 	 */
 	public int getLoginFlg(){
 		return loginFlg;
 	}
 
 	/**
-	 * userId格納
+	 * ユーザーID格納
 	 * @param userId
 	 */
 	public void setUserId(int userId){
@@ -98,7 +98,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	}
 
 	/**
-	 * userId取得
+	 * ユーザーID取得
 	 * @return userId
 	 */
 	public int getUserId(){

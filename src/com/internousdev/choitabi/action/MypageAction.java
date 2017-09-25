@@ -24,7 +24,7 @@ public class MypageAction extends ActionSupport implements SessionAware {
 	private static final long serialVersionUID = 8087800859437095577L;
 
 	/**
-	 * session
+	 * セッション情報
 	 */
 	private Map<String,Object>session;
 
@@ -34,13 +34,13 @@ public class MypageAction extends ActionSupport implements SessionAware {
 	private ArrayList<MypageDTO> User = new ArrayList<MypageDTO>();
 
 	/**
-	 * userId
+	 * ユーザーID
 	 */
 	private int userId;
 
 	/**
 	 * ユーザー情報を表示するための実行メソッド
-	 * @return ユーザー情報取得でSUCCESS　失敗でERROR
+	 * @return ユーザー情報取得でSUCCESS　失敗でERRORを返す
 	 */
 	public String execute(){
 		if(session.get("userId")==null){
@@ -60,7 +60,7 @@ public class MypageAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * session取得
+	 * セッション情報取得
 	 * @return session
 	 */
 	public Map<String,Object>getSession(){
@@ -68,7 +68,7 @@ public class MypageAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * session格納
+	 * セッション情報格納
 	 * @param session
 	 */
 	public void setSession(Map<String,Object>session){
@@ -92,7 +92,7 @@ public class MypageAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * userId取得
+	 * ユーザーID取得
 	 * @return userId
 	 */
 	public int getUserId(){
@@ -100,7 +100,7 @@ public class MypageAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * userId格納
+	 * ユーザーID格納
 	 * @param userId
 	 */
 	public void setUserId(int userId){

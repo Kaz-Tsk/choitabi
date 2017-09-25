@@ -20,13 +20,14 @@ import com.internousdev.util.DBConnector;
  *@version 1.0
  */
 public class LoginDAO {
-/**
- * 取得メソッド
- * DBに格納されているusersテーブルからユーザー情報を取得するメソッド
- * @param mailAddress メールアドレス
- * @param password パスワード
- * @param dto ユーザー情報
- */
+	/**
+	 * 取得メソッド
+	 * DBに格納されているusersテーブルからユーザー情報を取得するメソッド
+	 * @param mailAddress メールアドレス
+	 * @param password パスワード
+	 * @param dto ユーザー情報
+	 * @return dtoにユーザー情報を格納する
+	 */
 	public UsersDTO select(String mailAddress, String password){
 
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
@@ -61,11 +62,11 @@ public class LoginDAO {
 	}
 
 
-/**
- *ログインフラグを１に代入するメソッド
- * @param userId
- * @return loginFlg
- */
+	/**
+	 *ログインフラグを１に更新するメソッド
+	 * @param userId
+	 * @return loginFlgを１を更新する
+	 */
 
 
 	public void  update(int userId){

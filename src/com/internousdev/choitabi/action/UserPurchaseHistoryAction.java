@@ -15,7 +15,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * 購入履歴：商品一覧を取得するクラス
  * @author KAZUYUKI TASAKI
  * 	@since 2017/9/14
- *@version 1.0
+ * @version 1.0
  */
 public class UserPurchaseHistoryAction extends ActionSupport implements SessionAware{
 
@@ -25,7 +25,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	private static final long serialVersionUID = 8895639892537692245L;
 
 	/**
-	 * userId
+	 * ユーザーID
 	 */
 	private int userId;
 
@@ -60,7 +60,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	private String registrationAt;
 
 	/**
-	 * session
+	 * セッション情報
 	 */
 	private Map<String,Object>session;
 
@@ -70,7 +70,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	private ArrayList<HistoryDTO>UserPurchaseHistoryList = new ArrayList<HistoryDTO>();
 
 	/**
-	 * 購入履歴リスト生成メソッド
+	 * 購入履歴の情報を格納するメソッド
 	 */
 	public String execute(){
 		String result =ERROR;
@@ -78,21 +78,20 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 
 		if(session.containsKey("userId")){
 			userId = (int)session.get("userId");
-		}
-
-
-		ArrayList<HistoryDTO>allList = new ArrayList<HistoryDTO>();
-		UserPurchaseHistoryDAO dao = new UserPurchaseHistoryDAO();
-		allList = dao.UserPurchaseHistoryList(userId);
-
-		if(allList.size()!=0){
-			result = SUCCESS;
+			ArrayList<HistoryDTO>allList = new ArrayList<HistoryDTO>();
+			UserPurchaseHistoryDAO dao = new UserPurchaseHistoryDAO();
+			allList = dao.UserPurchaseHistoryList(userId);
+			if(allList.size()!=0){
+				result = SUCCESS;
+			}else{
+				result = ERROR;
+			}
 		}
 		return result;
 	}
 
 	/**
-	 * userId取得
+	 * ユーザーID取得
 	 * @return userId
 	 */
 	public int getUserId(){
@@ -100,7 +99,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * userId格納
+	 * ユーザーID格納
 	 * @param userId
 	 */
 	public void setUserId(int userId){
@@ -108,7 +107,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * tourId取得
+	 * ツアーID取得
 	 * @return tourId
 	 */
 	public int getTourId(){
@@ -116,7 +115,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * tourId格納
+	 * ツアーID格納
 	 * @param tourId
 	 */
 	public void setTourId(int tourId){
@@ -124,7 +123,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * tourName取得
+	 * ツアー名取得
 	 * @return tourName
 	 */
 	public String getTourName(){
@@ -132,7 +131,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * tourName格納
+	 * ツアー名格納
 	 * @param tourName
 	 */
 	public void setTourName(String tourName){
@@ -140,7 +139,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * price取得
+	 * 単価取得
 	 * @return price
 	 */
 	public float getPrice(){
@@ -148,7 +147,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * price格納
+	 * 単価格納
 	 * @param price
 	 */
 	public void setPrice(float price){
@@ -156,7 +155,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 *counts取得
+	 *人数取得
 	 *@return counts
 	 */
 	public int getCounts(){
@@ -164,13 +163,14 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * counts格納
+	 * 人数格納
+	 * @param counts
 	 */
 	public void setCounts(int counts){
 		this.counts = counts;
 	}
 	/**
-	 *subtotal取得
+	 * 合計金額取得
 	 * @return subtotal
 	 */
 	public float getSubtotal(){
@@ -178,7 +178,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * subtotal格納
+	 * 合計金額格納
 	 * @param subtotal
 	 */
 	public void setSubtotal(float subtotal){
@@ -186,21 +186,22 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * registrationAt取得
+	 * 購入日取得
+	 * @registrationAt
 	 */
 	public String getRegisrtationAt(){
 		return registrationAt;
 	}
 
 	/**
-	 * registation格納
+	 * 購入日格納
 	 * @param registationAt
 	 */
 	public void setRegistrationAt(String registrationAt){
 		this.registrationAt = registrationAt;
 	}
 	/**
-	 * session取得
+	 * セッション情報取得
 	 * @return session
 	 */
 	public Map<String,Object>getSession(){
@@ -208,7 +209,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * session格納
+	 * セッション情報格納
 	 * @param session
 	 */
 	public void setSession(Map<String,Object>session){
@@ -216,7 +217,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * UserPurchaseHistoryList取得
+	 * 	購入履歴リスト取得
 	 * @return UserPurchaseHistoryList
 	 */
 	public ArrayList<HistoryDTO>getUserPurchaseHistoryList(){
@@ -224,7 +225,7 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	}
 
 	/**
-	 * UserPurchaseHistoryList格納
+	 * 購入履歴リスト格納
 	 * @param UserPurchaseHistoryList
 	 */
 	public void setUserPurchaseHistoryList(ArrayList<HistoryDTO>UserPurchaseHistoryList){

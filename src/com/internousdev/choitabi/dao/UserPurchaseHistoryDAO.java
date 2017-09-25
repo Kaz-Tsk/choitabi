@@ -26,10 +26,9 @@ public class UserPurchaseHistoryDAO {
 	public ArrayList<HistoryDTO>UserPurchaseHistoryList = new ArrayList<HistoryDTO>();
 
 	/**
-	 * 購入履歴を取得してリストに格納するメソッド
+	 *購入履歴に格納するメソッド
 	 * @param userId
-	 * @param tourName
-	 * @return UserPurchaseHistoryList
+	 * @return UserPurchaselist 購入履歴
 	 */
 	public ArrayList<HistoryDTO>UserPurchaseHistoryList(int userId){
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root","mysql");
@@ -37,34 +36,30 @@ public class UserPurchaseHistoryDAO {
 		ArrayList<HistoryDTO>UserPurchaseHistoryList = new ArrayList<HistoryDTO>();
 
 
-		String sql = "select*from purchases left join tour on purchases.tour_id = tour.tour_id where user_id=?";
+		String sql = "select tour_name,order_count,price,registration_date from cart left join tour on cart.tour_id = tour.tour_id where user_id=? and purchase_flg=1";
 
-	try{
-		PreparedStatement ps = con.prepareStatement(sql);
-		ps.setInt(1, userId);
-		ResultSet rs = ps.executeQuery();
-
-		while(rs.next()){
-			HistoryDTO dto = new HistoryDTO();
-
-			dto.setUserId(rs.getInt("user_id"));
-			dto.setTourId(rs.getInt("tour_id"));
-			dto.setCounts(rs.getInt("order_count"));
-			dto.setRegistrationAt(rs.getString("registration_date"));
-
-			dto.setTourName(rs.getString("tour_name"));
-			dto.setPrice(rs.getFloat("price"));
-			dto.setSubtotal(dto.getPrice()*dto.getCounts());
-		}
-	}catch(SQLException e){
-		e.printStackTrace();
-	}finally{
 		try{
-			con.close();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, userId);
+			ResultSet rs = ps.executeQuery();
+
+			while(rs.next()){
+				HistoryDTO dto = new HistoryDTO();
+				dto.setCounts(rs.getInt("order_count"));
+				dto.setRegistrationAt(rs.getString("registration_date"));
+				dto.setTourName(rs.getString("tour_name"));
+				dto.setPrice(rs.getFloat("price"));
+				dto.setSubtotal(dto.getPrice()*dto.getCounts());
+			}
 		}catch(SQLException e){
 			e.printStackTrace();
+		}finally{
+			try{
+				con.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
 		}
-	}
-	return UserPurchaseHistoryList;
+		return UserPurchaseHistoryList;
 	}
 }

@@ -18,9 +18,9 @@ import com.internousdev.util.DBConnector;
 public class LogoutDAO {
 
 	/**
+	 * ログアウトするための実行メソッド
 	 * @param userId
 	 * @param loginFlg
-	 * @return count 正しく動作すれば行数、ERRORで０を返す。
 	 */
 	public void update(int userId, int loginFlg){
 
@@ -44,6 +44,4 @@ public class LogoutDAO {
 			e.printStackTrace();
 		}
 	}
-
-
 }

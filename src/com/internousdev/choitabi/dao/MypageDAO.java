@@ -20,7 +20,7 @@ public class MypageDAO {
 	/**
 	 * userIdでMypageに必要な情報を取得してリストに格納するメソッド
 	 * @param userId
-	 * @return User
+	 * @return Userに情報を格納する
 	 */
 
 	public ArrayList<MypageDTO> select(int userId){

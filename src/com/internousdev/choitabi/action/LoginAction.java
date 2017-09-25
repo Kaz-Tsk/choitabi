@@ -12,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * ログイン画面からログインするクラス
  * 	@author KAZUYUKI TASAKI
  * @since 2017/9/1
- *@version 1.0
+ * @version 1.0
  */
 	public class LoginAction  extends ActionSupport implements SessionAware {
 	/**
@@ -47,7 +47,7 @@ import com.opensymphony.xwork2.ActionSupport;
 	 * @author KAZUYUKI TASAKI
 	 * @since 2017/9/1
 	 * @version 1.0
-	 * @return ログイン成功:SUCCESS  失敗:ERROR  管理者:admin
+	 * @return ログイン成功:SUCCESS  失敗:ERROR  管理者:admin を返す
 	 */
 	public String execute(){
 		String result = ERROR;

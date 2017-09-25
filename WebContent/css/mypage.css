@@ -1,74 +1,75 @@
-header{
-	position:fixed;
-	width:100%;
-	z-index:1;
-}
-body{
-	position:relative;
-	width:100%;
-	height:100vh;
-}
-.main{
-	position:absolute;
-	width:100%;
-	height:100vh;
-
-}
-.mypage-container{
-	width:800px;
-	height:400px;
-	margin:auto;
-	text-align:center;
-	position:absolute;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
 }
 
-.param-box{
-	display:table-cell;
-	vertical-align:middle;
-	height:400px;
-	width:700px;
-}
-.param-box h2{
-	margin-top:0;
+body {
+	position: relative;
+	width: 100%;
+	height: 100vh;
 }
 
-table{
-	margin:0 auto;
-	width:700px;
-	height:200px;:
-
+.main {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
 }
-table td{
-	border:2px solid black;
+
+.mypage-container {
+	width: 800px;
+	height: 400px;
+	margin: auto;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.param-box {
+	display: table-cell;
+	vertical-align: middle;
+	height: 400px;
+	width: 700px;
+}
+
+.param-box h2 {
+	margin-top: 0;
+}
+
+table {
+	margin: 0 auto;
+	width: 700px;
+	height: 200px;
+	:
+}
+
+table td {
+	border: 2px solid black;
 	font-size: 20px;
 }
-.admin-param{
-	text-align:center;
-	display:inline-block;
-	width:700px;
-	height:400px;
 
-}
-
-
-
-button{
+.admin-param {
+	text-align: center;
 	display: inline-block;
-    padding: 1em 2.5em;
-    text-decoration: none;
-    background: #fa8605;/*ボタン色*/
-    color: #ffffff;
-    border-bottom: solid 4px #c0c0c0;
-    border-radius: 3px;
+	width: 700px;
+	height: 400px;
 }
 
-footer{
+button {
+	display: inline-block;
+	padding: 1em 2.5em;
+	text-decoration: none;
+	background: #fa8605; /*ボタン色*/
+	color: #ffffff;
+	border-bottom: solid 4px #c0c0c0;
+	border-radius: 3px;
+}
+
+footer {
 	width: 100%;
-	bottom:0;
-	position:fixed;
+	bottom: 0;
+	position: fixed;
 }
