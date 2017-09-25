@@ -181,8 +181,8 @@
 						</h2>
 					</div>
 					<div id="textform" class="col-sm-8 form-inline">
-						<input type="hidden" name="creditNumber" id="creditNumber" /> <input
-							type="text" id="num1" pattern="[0-9]{4}" required maxlength="4"
+						<input type="hidden" name="creditNumber" id="creditNumber" /> 
+						<input type="text" id="num1" pattern="[0-9]{4}" required maxlength="4"
 							size="2" onKeyUp="nextField(this, 'num2', 4)"
 							class="form-control">- <input type="text" id="num2"
 							pattern="[0-9]{4}" required maxlength="4" size="4"
@@ -209,7 +209,7 @@
 					</div>
 					<div id="textform" class="col-sm-8">
 						<input name="nameE" class="form-control" type="text" size="15"
-							maxlength="40" placeholder="TARO YAMADA" required
+							maxlength="40" placeholder="TARO TANAKA" required
 							pattern="[a-z\s]+$" id="nameE">
 					</div>
 				</div>
@@ -262,25 +262,7 @@
 						<s:text name="lang.user_pay.year" />
 					</div>
 				</div>
-				<div class="row" id="pointform">
-					<div class="col-sm-4" id="formtitle">
-						<h2><s:text name="lang.user_pay.possession"/></h2>
-					</div>
-					<div id="textform" class="col-sm-8 form-inline">
-						<s:property value="point" />
-						<s:text name="lang.user_pay.point"/> &emsp;(
-						<s:property value="point" />
-						&nbsp;<s:text name="lang.user_pay.yen"/>&nbsp;<s:text name="lang.user_pay.equivalent"/>)
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4" id="formtitle">
-						<h2><s:text name="lang.user_pay.usepoint"/></h2>
-					</div>
-					<div id="textform" class="col-sm-8 form-inline">
-						<input type="text" name="use_point" class="form-control" id="usepointform" onChange="checkPoint(<s:property value="total"/>,<s:property value="point"/>)" pattern="[1-9][0-9]*">&emsp;<s:text name="lang.user_pay.point"/>
-					</div>
-				</div>
+
 
 			</div>
 
