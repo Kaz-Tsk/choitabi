@@ -8,7 +8,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title><s:text name="lang.pay_comp.tab" /></title>
+
+<!-- 国際化 ※ここでは国を判別しています。
+    言語コード( ja,en など)を示すロケールID を取得します。-->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<fmt:setBundle basename="com.internousdev.choitabi.property.pay_comp"
+	var="lang" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title><s:text name="lang.pay_comp.title" /></title>
 <link rel="stylesheet" type="text/css" href="css/cart_done.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   type="text/javascript"></script>

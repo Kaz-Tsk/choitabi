@@ -17,8 +17,18 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE-Edge">
-<meta name="viewport" content="width-device-width,intial-scale-1">
+
+<!-- 国際化 ※ここでは国を判別しています。
+    言語コード( ja,en など)を示すロケールID を取得します。-->
+<fmt:setLocale value="${pageContext.request.locale.language}" />
+<fmt:setBundle basename="com.internousdev.choitabi.property.user_pay"
+	var="lang" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
 <title><s:text name="lang.user_pay.title" /></title>
 <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/user_pay.css">
