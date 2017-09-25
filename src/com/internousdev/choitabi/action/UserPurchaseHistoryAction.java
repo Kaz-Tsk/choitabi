@@ -35,11 +35,6 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	private int tourId;
 
 	/**
-	 * ツアー名
-	 */
-	private String tourName="";
-
-	/**
 	 * 単価
 	 */
 	private float price;
@@ -120,22 +115,6 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 	 */
 	public void setTourId(int tourId){
 		this.tourId = tourId;
-	}
-
-	/**
-	 * ツアー名取得
-	 * @return tourName
-	 */
-	public String getTourName(){
-		return tourName;
-	}
-
-	/**
-	 * ツアー名格納
-	 * @param tourName
-	 */
-	public void setTourName(String tourName){
-		this.tourName = tourName;
 	}
 
 	/**
