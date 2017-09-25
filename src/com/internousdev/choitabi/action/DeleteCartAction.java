@@ -92,7 +92,7 @@ public class DeleteCartAction extends ActionSupport implements SessionAware {
                 if(cartList.size() > 0) {
                     for(int i = 0; i < cartList.size(); i++ ) {
 
-                    	total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
+                    	total_price = total_price.add(cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
 
                     }
 
