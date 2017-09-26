@@ -15,7 +15,7 @@
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourHensyuuKakunin"
  		var="lang" />
  	<!-- CSSの読み込み -->
-<link rel = "stylesheet" type = "text/css" href = "./css/kanri_common.css">
+<link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
 </head>
 
 <header>
