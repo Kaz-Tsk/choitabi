@@ -17,24 +17,23 @@
 
 	<!-- body部分 -->
 	<div class="container">
-
-		<h2>購入履歴</h2>
-
+		<h2><s:text name="lang.purchase_history.history"/></h2>
 		<table class="history-table">
+
 			<s:if test="%{!UserPurchaseHistoryList.isEmpty()}">
-				<tr>
-					<th>ツアー名</th>
-					<th>価格</th>
-					<th>人数</th>
-					<th>合計金額</th>
-					<th>購入日</th>
-				</tr>
 				<s:iterator value="UserPurchaseHistoryList">
 					<tr>
+						<th><s:text name="lang.purchase_history.tourname"/></th>
+						<th><s:text name="lang.purchase_history.price"/></th>
+						<th><s:text name="lang.purchase_history.totalprice"/></th>
+						<th><s:text name="lang.purchase_history.Number"/></th>
+						<th><s:text name="lang.purchase_history.purchasedata"/></th>
+					</tr>
+					<tr>
 						<td><s:property value="tourName" /></td>
-						<td><s:property value="price" />円</td>
-						<td><s:property value="counts" />人</td>
-						<td><s:property value="subtotal" />円</td>
+						<td><s:property value="Math.floor(price)" /></td>
+						<td><s:property value="counts" /></td>
+						<td><s:property value="Math.floor(subtotal)" /></td>
 						<td><s:property value="registrationAt" /></td>
 					</tr>
 				</s:iterator>
@@ -42,7 +41,7 @@
 
 			<s:else>
 				<div class="error-message">
-					<h1>購入履歴はありません</h1>
+					<h1><s:text name="lang.purchase_history.Nohistory"/></h1>
 				</div>
 			</s:else>
 		</table>
