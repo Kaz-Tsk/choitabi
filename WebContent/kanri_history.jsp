@@ -59,7 +59,7 @@
 						<td><s:property value="tour_name"/></td>
 						<td class="notwide"><s:property value="order_count"/></td>
 						<td><fmt:formatNumber value="${total_price}" pattern="###,###,###" /></td>
-						<td><fmt:formatDate value="${registration_date}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+						<td><s:property value="registration_date"/></td>
 					</tr>
 				</s:iterator>
 			</table>
