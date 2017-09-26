@@ -30,6 +30,9 @@ header {
 	left: 0;
 	right: 0;
 }
+.error-message{
+	text-align:center;
+}
 
 table {
 	text-align: center;
