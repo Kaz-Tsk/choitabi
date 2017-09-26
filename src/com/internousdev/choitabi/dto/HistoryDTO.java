@@ -3,6 +3,8 @@
  */
 package com.internousdev.choitabi.dto;
 
+import java.math.BigDecimal;
+
 /**
  * 購入履歴に関するDTOクラス
  * @author KAZUYUKI TASAKI
@@ -24,7 +26,7 @@ public class HistoryDTO {
 	/**
 	 * price
 	 */
-	private float price;
+	private BigDecimal price;
 
 	/**
 	 * counts
@@ -34,7 +36,7 @@ public class HistoryDTO {
 	/**
 	 * subtotal
 	 */
-	private float subtotal;
+	private BigDecimal subtotal;
 
 	/**
 	 * registrationAt
@@ -83,7 +85,7 @@ public class HistoryDTO {
 	 *price
 	 *@return price
 	 */
-	public float getPrice(){
+	public BigDecimal getPrice(){
 		return price;
 	}
 
@@ -91,7 +93,7 @@ public class HistoryDTO {
 	 * price
 	 * @param price
 	 */
-	public void setPrice(float price){
+	public void setPrice(BigDecimal price){
 		this.price = price;
 	}
 
@@ -115,15 +117,15 @@ public class HistoryDTO {
 	 * subtototal
 	 * @return subtotal
 	 */
-	public float getSubtotal(){
+	public BigDecimal getSubtotal(){
 		return subtotal;
 	}
 
 	/**
-	 * subtototal
-	 * @param subtototal
+	 * subtotal
+	 * @param subtotal
 	 */
-	public void setSubtotal(float subtotal){
+	public void setSubtotal(BigDecimal subtotal){
 		this.subtotal = subtotal;
 	}
 

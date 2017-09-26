@@ -73,10 +73,9 @@ public class UserPurchaseHistoryAction extends ActionSupport implements SessionA
 
 		if(session.containsKey("userId")){
 			userId = (int)session.get("userId");
-			ArrayList<HistoryDTO>allList = new ArrayList<HistoryDTO>();
 			UserPurchaseHistoryDAO dao = new UserPurchaseHistoryDAO();
-			allList = dao.UserPurchaseHistoryList(userId);
-			if(allList.size()!=0){
+			UserPurchaseHistoryList = dao.UserPurchaseHistoryList(userId);
+			if(UserPurchaseHistoryList.size()!=0){
 				result = SUCCESS;
 			}else{
 				result = ERROR;

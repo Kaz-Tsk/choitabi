@@ -3,6 +3,7 @@
  */
 package com.internousdev.choitabi.dao;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,15 +29,14 @@ public class UserPurchaseHistoryDAO {
 	/**
 	 *購入履歴に格納するメソッド
 	 * @param userId
-	 * @return UserPurchaselist 購入履歴
+	 * @return UserPurchaseHistoryList 購入履歴
 	 */
 	public ArrayList<HistoryDTO>UserPurchaseHistoryList(int userId){
 		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root","mysql");
 		Connection con = db.getConnection();
 		ArrayList<HistoryDTO>UserPurchaseHistoryList = new ArrayList<HistoryDTO>();
 
-
-		String sql = "select tour_name,order_count,price,registration_date from cart left join tour on cart.tour_id = tour.tour_id where user_id=? and purchase_flg=1";
+		String sql = "select tour_name,order_count,cart.price,date_format(registration_date,'%Y/%m/%d')  AS 'registration_date' from cart left join tour on cart.tour_id = tour.tour_id where user_id=? and purchase_flg=1";
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -48,8 +48,10 @@ public class UserPurchaseHistoryDAO {
 				dto.setCounts(rs.getInt("order_count"));
 				dto.setRegistrationAt(rs.getString("registration_date"));
 				dto.setTourName(rs.getString("tour_name"));
-				dto.setPrice(rs.getFloat("price"));
-				dto.setSubtotal(dto.getPrice()*dto.getCounts());
+				dto.setPrice(rs.getBigDecimal("cart.price"));
+				dto.setSubtotal(dto.getPrice().multiply(BigDecimal.valueOf(dto.getCounts())));
+
+				UserPurchaseHistoryList.add(dto);
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
