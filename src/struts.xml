@@ -180,6 +180,7 @@ method= "execute">
       method="execute">
       <result name="success">user_pay.jsp</result>
       <result name="error">cart.jsp</result>
+      <result name="login" type="chain">LoginAction</result>
     </action>
 
     <!-- クレジット情報確認 -->
@@ -202,7 +203,7 @@ method= "execute">
     <action name="PayCompAction"
       class="com.internousdev.choitabi.action.PayCompAction" method="execute">
       <result name="success">pay_comp.jsp</result>
-      <result name="error">cart_check.jsp</result>
+      <result name="error">pay_check.jsp</result>
       <result name="login" type="chain">LoginAction</result>
     </action>
 

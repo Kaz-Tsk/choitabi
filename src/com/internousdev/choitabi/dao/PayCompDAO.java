@@ -1,6 +1,5 @@
 package com.internousdev.choitabi.dao;
 
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -46,6 +45,7 @@ public class PayCompDAO {
     		dto.setUser_id(rs.getInt("user_id"));//ユーザーID
     		dto.setCart_id(rs.getInt("cart_id"));//カートID
     		dto.setTour_id(rs.getInt("tour_id"));//ツアーID
+    		dto.setOrder_count(rs.getInt("order_count"));//予約人数
 
 			cartList.add(dto);
 		}
@@ -74,20 +74,20 @@ public class PayCompDAO {
 	 * @param total_price 合計金額
 	 * @return addCount 登録件数
 	 */
-    public int payInsert(int user_id,int tour_id,int order_count, BigDecimal total_price) {
+    public int payInsert(int user_id,int tour_id,int order_count/*, BigDecimal total_price*/) {
         int addCount = 0;
 
         MySqlConnector db = new MySqlConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","choitabi","root","mysql");
 		Connection con = db.getConnection();
 
-        String sql = "insert into payments (user_id,tour_id,order_count,total_price) values(?,?,?,?)";
+        String sql = "update  cart set purchase_flg=1 where user_id=? and tour_id=? and order_count=?";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, user_id);
             ps.setInt(2, tour_id);
             ps.setInt(3, order_count);
-            ps.setBigDecimal(4, total_price);
+            /*ps.setBigDecimal(4, total_price);*/
             addCount = ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -52,7 +52,7 @@ public class DoPaymentAction extends ActionSupport implements SessionAware{
 	 */
 	public String execute() {
 		String result = ERROR;
-
+System.out.println("取得ID" + user_id);
 		if(session.containsKey("userId")){
 			user_id = (int)session.get("userId");
 
@@ -64,8 +64,8 @@ public class DoPaymentAction extends ActionSupport implements SessionAware{
 			if(cartList.size()>0){
 				for(int i = 0; i <cartList.size(); i++) {
 
-					total_price = total_price.add((cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count()))));
-
+					total_price = total_price.add(cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));
+					System.out.println("total_price" + total_price);
 					//CartDAOに合計金額を格納する
 					CartDTO dto = new CartDTO();
 
@@ -117,7 +117,7 @@ public class DoPaymentAction extends ActionSupport implements SessionAware{
 	 * 合計金額を取得するメソッド
 	 * @return Total_price 合計金額
 	 */
-	public BigDecimal getTotalPrice() {
+	public BigDecimal getTotal_price() {
 		return total_price;
 	}
 
@@ -125,21 +125,21 @@ public class DoPaymentAction extends ActionSupport implements SessionAware{
 	 * 合計金額を格納するメソッド
 	 * @param total_price 合計金額
 	 */
-	public void setTotalPrice(BigDecimal total) {
-		this.total_price = total;
+	public void setTotalPrice(BigDecimal total_price) {
+		this.total_price = total_price;
 	}
 
 	/**
-	 * カード情報リストを取得するメソッド
-	 * @return cartList カード情報リスト
+	 * カート情報リストを取得するメソッド
+	 * @return cartList カート情報リスト
 	 */
 	public ArrayList<CartDTO> getCartList() {
 		return cartList;
 	}
 
 	/**
-	 * カード情報リストを格納するメソッド
-	 * @param cartList カード情報リスト
+	 * カート情報リストを格納するメソッド
+	 * @param cartList カート情報リスト
 	 */
 	public void setCartList(ArrayList<CartDTO> cartList) {
 		this.cartList = cartList;

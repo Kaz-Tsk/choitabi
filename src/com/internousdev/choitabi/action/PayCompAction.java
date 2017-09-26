@@ -1,7 +1,6 @@
 package com.internousdev.choitabi.action;
 
 import java.math.BigDecimal;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
@@ -60,30 +59,41 @@ public class PayCompAction extends ActionSupport implements SessionAware{
      * @since 2017/09/25
      * @version 1.1
      */
-	public String execute() throws SQLException {
+	public String execute() {
 		String result = ERROR;
+		System.out.println("PayompAction-result:" + result);
 
 		if (session.containsKey("userId")) {
 			CartDTO dto = new CartDTO();
 
 			user_id = (int) session.get("userId");
 
+			System.out.println("PayCompAction-user_id:" + user_id);
+
+
 			PayCompDAO dao = new PayCompDAO();
 
 			//アレイリストに情報を入れる
 			cartList = dao.cartSelect(user_id);
 
+			System.out.println("PayCompAction-取得データ数:" + cartList.size());
+
 			for(int i = 0; i < cartList.size(); i++ ){
 				total_price = dto.getTotal_price();
-				if(dao.payInsert(user_id,cartList.get(i).getTour_id(),cartList.get(i).getOrder_count(),total_price) != 0){
-
-					result=SUCCESS;
+				System.out.println("---取得データ---");
+				System.out.println(cartList.get(i).getTour_id());
+				System.out.println(cartList.get(i).getOrder_count());
+				if(dao.payInsert(user_id, cartList.get(i).getTour_id(), cartList.get(i).getOrder_count()/*, total_price)*/) != 0){
+					result = SUCCESS;
 				}
 			}
+
+
 		}
 		else{
 			result = LOGIN;
 		}
+		System.out.println("PayCompAction-result:" + result);
 		return result;
 	}
 
