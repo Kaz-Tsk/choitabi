@@ -42,7 +42,7 @@ public class KanriHistoryDAO {
 				+ "openconnect.users.given_name_kanji, choitabi.cart.tour_id, choitabi.tour.tour_name,"
 				+ "choitabi.cart.order_count, choitabi.tour.price, choitabi.cart.registration_date"
 				+ " from (openconnect.users inner join choitabi.payoff on openconnect.users.user_id = choitabi.cart.user_id) "
-				+ "inner join choitabi.tour on choitabi.cart.tour_id = choitabi.tour.tour_id";
+				+ "inner join choitabi.tour on choitabi.cart.tour_id = choitabi.tour.tour_id where user_id=? and purchase_flg=1";
 
 		if (!searchName.equals("")) {
 			sql = sql + " " + "where choitabi.tour.tour_name like \"%" + searchName + "%\"";

@@ -136,10 +136,10 @@ public class KanriHistoryAction extends ActionSupport {
 			this.setDisplayList(allPages.get(pageNum-1).getPaginatedList());
 
 			result = SUCCESS;
-			}
+		}
 
 		return result;
-		}
+	}
 
 
 
