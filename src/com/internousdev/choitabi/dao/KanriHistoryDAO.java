@@ -32,48 +32,48 @@ public class KanriHistoryDAO {
 	     * @param registration_date 登録日
 	     */
 
-	    ArrayList<CartDTO> searchList=new ArrayList<CartDTO>();
+	ArrayList<CartDTO> searchList=new ArrayList<CartDTO>();
 
-	    public ArrayList<CartDTO> display(String searchName){
+	public ArrayList<CartDTO> display(String searchName){
 
-			DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
-			Connection con = db.getConnection();
-	        String sql = "select openconnect.users.user_id, openconnect.users.family_name_kanji,"
-	        		+ "openconnect.users.given_name_kanji, choitabi.purchases.tour_id, choitabi.tour.tour_name,"
-	        		+ "choitabi.purchases.order_count, choitabi.tour.price, choitabi.purchases.registration_date"
-	        		+ " from (openconnect.users inner join choitabi.payoff on openconnect.users.user_id = choitabi.payoff.user_id) "
-	        		+ "inner join choitabi.tour on choitabi.purchases.tour_id = choitabi.tour.tour_id";
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+		Connection con = db.getConnection();
+		String sql = "select openconnect.users.user_id, openconnect.users.family_name_kanji,"
+				+ "openconnect.users.given_name_kanji, choitabi.cart.tour_id, choitabi.tour.tour_name,"
+				+ "choitabi.cart.order_count, choitabi.tour.price, choitabi.cart.registration_date"
+				+ " from (openconnect.users inner join choitabi.payoff on openconnect.users.user_id = choitabi.cart.user_id) "
+				+ "inner join choitabi.tour on choitabi.cart.tour_id = choitabi.tour.tour_id";
 
-	        if (!searchName.equals("")) {
-	            sql = sql + " " + "where choitabi.tour.tour_name like \"%" + searchName + "%\"";
-	            }
+		if (!searchName.equals("")) {
+			sql = sql + " " + "where choitabi.tour.tour_name like \"%" + searchName + "%\"";
+		}
 
-	        try{
-	            PreparedStatement ps= con.prepareStatement(sql);
-	            ResultSet rs=ps.executeQuery();
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
 
-	            while (rs.next()) {
-	                CartDTO dto= new CartDTO();
-	                dto.setUser_id(rs.getInt("user_id"));
-	                dto.setFamily_name_kanji(rs.getString("family_name_kanji"));
-	                dto.setGiven_name_kanji(rs.getString("given_name_kanji"));
-	                dto.setTour_id(rs.getInt("tour_id"));
-	                dto.setTour_name(rs.getString("tour_name"));
-	                dto.setOrder_count(rs.getInt("order_count"));
-	                dto.setTotal_price(rs.getBigDecimal("price").multiply(rs.getBigDecimal("total_price")));
-	                dto.setRegistration_date(rs.getString("registration_date"));
-	                searchList.add(dto);
-	                }
+			while (rs.next()) {
+				CartDTO dto = new CartDTO();
+				dto.setUser_id(rs.getInt("user_id"));
+				dto.setFamily_name_kanji(rs.getString("family_name_kanji"));
+				dto.setGiven_name_kanji(rs.getString("given_name_kanji"));
+				dto.setTour_id(rs.getInt("tour_id"));
+				dto.setTour_name(rs.getString("tour_name"));
+				dto.setOrder_count(rs.getInt("order_count"));
+				dto.setTotal_price(rs.getBigDecimal("price").multiply(rs.getBigDecimal("total_price")));
+				dto.setRegistration_date(rs.getString("registration_date"));
+				searchList.add(dto);
+			}
 
-	            rs.close();
-	            ps.close();
-	            con.close();
+			rs.close();
+			ps.close();
+			con.close();
 
-	        }catch (SQLException e){
-	            e.printStackTrace();
-	            }
+		}catch (SQLException e){
+			e.printStackTrace();
+		}
 
-	        return searchList;
-	        }
+		return searchList;
+	}
 
-	    }
+}
