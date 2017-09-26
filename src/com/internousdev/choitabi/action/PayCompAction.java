@@ -68,15 +68,10 @@ public class PayCompAction extends ActionSupport implements SessionAware{
 
 			user_id = (int) session.get("userId");
 
-			System.out.println("PayCompAction-user_id:" + user_id);
-
-
 			PayCompDAO dao = new PayCompDAO();
 
 			//アレイリストに情報を入れる
 			cartList = dao.cartSelect(user_id);
-
-			System.out.println("PayCompAction-取得データ数:" + cartList.size());
 
 			for(int i = 0; i < cartList.size(); i++ ){
 				total_price = dto.getTotal_price();
@@ -93,7 +88,6 @@ public class PayCompAction extends ActionSupport implements SessionAware{
 		else{
 			result = LOGIN;
 		}
-		System.out.println("PayCompAction-result:" + result);
 		return result;
 	}
 

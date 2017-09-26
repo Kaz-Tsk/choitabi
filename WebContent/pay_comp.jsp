@@ -25,7 +25,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   type="text/javascript"></script>
 </head>
-<body>
+<body style="text-align:center">
   <script type="text/javascript">
       window.onunload = function() {
       };//Firefoxにも適用する場合には記述する
@@ -42,7 +42,7 @@
             name="lang.pay_comp.text1" /></span>
       </h1>
       <h2>
-        <s:text name="lang.pay_comp.text2" />
+        <s:text name="lang.pay_comp.text2"/>
       </h2>
       <br>
     </div>

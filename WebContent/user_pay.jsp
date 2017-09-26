@@ -39,7 +39,7 @@
 <script type="text/javascript" src="js/cart_check.js"></script>
 </head>
 
-<body>
+<body style="margin:0 auto;">
 	<div id="pagecover">
 		<!-- ヘッダーここから -->
 
