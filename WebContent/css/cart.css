@@ -67,7 +67,13 @@ html {
 }
 
 .empty {
-	padding-top: 200px;
+	padding-top: 260px;
 	padding-bottom: 179px;
 	text-align: center;
+}
+
+.footer {
+	position: relative;
+	padding-top: 20px;
+	bottom: 0;
 }

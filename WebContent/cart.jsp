@@ -60,7 +60,9 @@
 		</div>
 
 		<s:if test="%{cartList.size() > 0 && #session.userId != null}">
+
 			<table class="cartlist">
+
 				<thead>
 					<tr>
 						<th class="img"><s:text name="lang.cart.img" /></th>
@@ -74,6 +76,7 @@
 				</thead>
 
 				<tbody>
+
 					<s:iterator value="cartList">
 						<tr>
 							<td class="img2"><img src="<s:property value="img" />"
@@ -106,12 +109,15 @@
 											<option>10</option>
 										</select>
 									</div>
+
 									<div class="count">
 
 										<input type="submit" class="btn btn-primary"
 											value="<s:text name="lang.cart.update"/>" />
 									</div>
+
 								</s:form> <br> <br></td>
+
 							<td><s:form action="DeleteCartAction">
 									<!--  --<input id="order" type="hidden" name="order_count"
 								value="<s:property value="order_count"/>">-->
@@ -123,9 +129,13 @@
 
 								</s:form></td>
 						</tr>
+
 					</s:iterator>
+
 				</tbody>
+
 			</table>
+
 			<h2 class="total">
 				<s:text name="lang.cart.total_price" />
 				<fmt:formatNumber value="${total_price}" pattern="###,###,###" />
@@ -138,11 +148,10 @@
 					<s:text name="lang.cart.payment" />
 				</button>
 			</s:form>
+
 		</s:if>
+
 		<s:else>
-			<br>
-			<br>
-			<br>
 			<h1 class='empty'>
 				<s:text name="lang.cart.empty" />
 			</h1>
