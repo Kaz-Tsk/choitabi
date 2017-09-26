@@ -31,7 +31,8 @@
              com.internousdev.choitabi.property.Q&amp;A
              com.internousdev.choitabi.property.user_pay
              com.internousdev.choitabi.property.pay_check
-             com.internousdev.choitabi.property.pay_comp"
+             com.internousdev.choitabi.property.pay_comp
+             com.internousdev.choitabi.property.purchase_history"
 
       />
 
