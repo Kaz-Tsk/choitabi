@@ -44,10 +44,10 @@
 
 <body>
 
-<!-------------- ヘッダー -------------->
-<header>
-  <s:include value="header.jsp" />
-</header>
+	<!-------------- ヘッダー -------------->
+	<header>
+		<s:include value="header.jsp" />
+	</header>
 
 	<div id="contents" style="margin-bottom: 50px;">
 
@@ -61,9 +61,9 @@
 
 		<s:if test="%{cartList.size() > 0 && #session.userId != null}">
 			<table class="cartlist">
-			    <thead>
+				<thead>
 					<tr>
-					    <th class="img"><s:text name="lang.cart.img" /></th>
+						<th class="img"><s:text name="lang.cart.img" /></th>
 						<th><s:text name="lang.cart.tour_name" /></th>
 						<th class="okisa"><s:text name="lang.cart.price" /></th>
 						<th class="okisa"><s:text name="lang.cart.order_count" /></th>
@@ -76,8 +76,8 @@
 				<tbody>
 					<s:iterator value="cartList">
 						<tr>
-							<td class="img2"><img src="<s:property value="img" />" alt=""
-								width="130" height="100"></td>
+							<td class="img2"><img src="<s:property value="img" />"
+								alt="" width="130" height="100"></td>
 							<td><s:property value="tour_name" /></td>
 
 							<td><fmt:formatNumber value="${price}" pattern="###,###,###" />
@@ -124,7 +124,7 @@
 								</s:form></td>
 						</tr>
 					</s:iterator>
-					</tbody>
+				</tbody>
 			</table>
 			<h2 class="total">
 				<s:text name="lang.cart.total_price" />
@@ -150,11 +150,11 @@
 
 	</div>
 
-<div class="footer">
-	<footer style="text-align:center;">
-		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
-	</footer>
-</div>
+	<div class="footer">
+		<footer style="text-align: center;">
+			<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
+		</footer>
+	</div>
 
 
 </body>

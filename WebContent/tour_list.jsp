@@ -47,48 +47,50 @@
 
 <body>
 
-<header>
-	<s:include value="header.jsp"/>
-</header>
+	<header>
+		<s:include value="header.jsp" />
+	</header>
 
-<div class="center">
-<div class = "sidebar">
-<s:include value="tour.jsp" />
-</div>
-
-
-	<div id="contents">
+	<div class="center">
+		<div class="sidebar">
+			<s:include value="tour.jsp" />
+		</div>
 
 
-		<div class="subtitle"><s:text name="lang.tour_list.cart" /></div>
+		<div id="contents">
 
-		<div class="display_list">
-			<s:iterator value="selectList">
-				<div class="template">
-				<div class="hvr-float-shadow">
-					<div class="tour_img">
-						<a
-							href="<s:url action="TourDetailAction"><s:param name="tour_id" value="%{tour_id}"/></s:url>"><img
-							class="tour_img" src="<s:property value="img"/>"
-							height="250px"> <s:hidden value="tour_id" /> </a>
+
+			<div class="subtitle">
+				<s:text name="lang.tour_list.cart" />
+			</div>
+
+			<div class="display_list">
+				<s:iterator value="selectList">
+					<div class="template">
+						<div class="hvr-float-shadow">
+							<div class="tour_img">
+								<a
+									href="<s:url action="TourDetailAction"><s:param name="tour_id" value="%{tour_id}"/></s:url>"><img
+									class="tour_img" src="<s:property value="img"/>" height="250px">
+									<s:hidden value="tour_id" /> </a>
+							</div>
+						</div>
+						<div class="tour_name">
+							<s:property value="tour_name" />
+						</div>
+						<div class="tour_price">
+							￥
+							<fmt:formatNumber value="${price}" pattern="###,###,###" />
+						</div>
 					</div>
-					</div>
-					<div class="tour_name">
-						<s:property value="tour_name" />
-					</div>
-					<div class="tour_price">
-						￥
-						<fmt:formatNumber value="${price}" pattern="###,###,###" />
-					</div>
-				</div>
-			</s:iterator>
+				</s:iterator>
+			</div>
+
 		</div>
 
 	</div>
 
-	</div>
-
-<footer style="padding-top:110%; text-align:center;">
+	<footer style="padding-top: 110%; text-align: center;">
 		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
 

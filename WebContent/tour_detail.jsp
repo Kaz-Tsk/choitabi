@@ -46,88 +46,88 @@
 
 <body>
 
-<!-- ヘッダーここから -->
+	<!-- ヘッダーここから -->
 
 	<header>
 		<s:include value="header.jsp" />
 	</header>
 
-<!-- ヘッダーここまで -->
+	<!-- ヘッダーここまで -->
 
 
-<div class="center">
+	<div class="center">
 
-<div class="sidebar">
-	<s:include value="tour.jsp" />
-</div>
-
-
-	<div class="contents">
-
-		<div class="subtitle">
-		    <s:text name="lang.tour_detail.subtitle" />
+		<div class="sidebar">
+			<s:include value="tour.jsp" />
 		</div>
 
-		<s:form action="InsertCartAction">
-			<s:iterator value="displayList">
 
-				<p class="tour_name">
+		<div class="contents">
+
+			<div class="subtitle">
+				<s:text name="lang.tour_detail.subtitle" />
+			</div>
+
+			<s:form action="InsertCartAction">
+				<s:iterator value="displayList">
+
+					<p class="tour_name">
 						<s:property value="tour_name" />
-				</p>
+					</p>
 
 
-				<img src="<s:property value= "img"/>" class= "img">
+					<img src="<s:property value= "img"/>" class="img">
 
 
-				<table style="border:solid 1px white">
-				    <tr>
-				        <th><s:text name="lang.tour_detail.comment" /></th>
-				        <td><s:property escape="false" value="comment" /></td>
-				    </tr>
-				    <tr>
-				        <th class="priceth"><s:text name="lang.tour_detail.price" /></th>
-				        <td><div class="pricetd">￥<fmt:formatNumber value="${price}" pattern="###,###,###" />
-				        <span class="tax">
-				            <s:text name="lang.tour_detail.tax" />
-				        </span>
-				        </div>
-				        </td>
-				    </tr>
-				</table>
+					<table style="border: solid 1px white">
+						<tr>
+							<th><s:text name="lang.tour_detail.comment" /></th>
+							<td><s:property escape="false" value="comment" /></td>
+						</tr>
+						<tr>
+							<th class="priceth"><s:text name="lang.tour_detail.price" /></th>
+							<td><div class="pricetd">
+									￥
+									<fmt:formatNumber value="${price}" pattern="###,###,###" />
+									<span class="tax"> <s:text name="lang.tour_detail.tax" />
+									</span>
+								</div></td>
+						</tr>
+					</table>
 
-		<div class="shoppingcart">
+					<div class="shoppingcart">
 
-			<input type="hidden" name="tour_id"
-				   value="<s:property value="tour_id"/>" />
+						<input type="hidden" name="tour_id"
+							value="<s:property value="tour_id"/>" />
 
 
-            <!-- 参加人数 必要か不必要か -->
-				<s:text name="lang.tour_detail.persons" />
-					<select name="order_count">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>10</option>
-					</select> <input type="submit" class="btn btn-warning"
-			         	      		 value="<s:text name= "lang.tour_detail.cart"/>" />
+						<!-- 参加人数 必要か不必要か -->
+						<s:text name="lang.tour_detail.persons" />
+						<select name="order_count">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+						</select> <input type="submit" class="btn btn-warning"
+							value="<s:text name= "lang.tour_detail.cart"/>" />
 
 					</div>
 
-	</s:iterator>
+				</s:iterator>
 
-	</s:form>
+			</s:form>
 
+		</div>
 	</div>
-    </div>
 
 
-<footer style="text-align:center;">
+	<footer style="text-align: center;">
 		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
 
