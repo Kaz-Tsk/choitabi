@@ -31,9 +31,9 @@
 					</tr>
 					<tr>
 						<td><s:property value="tourName" /></td>
-						<td><s:property value="Math.floor(price)" /></td>
+						<td><s:property value="price" /></td>
 						<td><s:property value="counts" /></td>
-						<td><s:property value="Math.floor(subtotal)" /></td>
+						<td><s:property value="subtotal" /></td>
 						<td><s:property value="registrationAt" /></td>
 					</tr>
 				</s:iterator>
