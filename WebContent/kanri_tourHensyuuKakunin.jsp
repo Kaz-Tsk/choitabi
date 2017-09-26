@@ -31,13 +31,12 @@
 
 		<!-- 画面上部に表示するメッセージの部分------------------------------------------------ -->
 		<s:if test="deleteCheck.equals('true')">
-			<font color="red"><s:text
-					name="lang.kanri_tourHensyuuKakunin.direction_for_delete" /></font>
+			<font color="red">
+			<s:text name="lang.kanri_tourHensyuuKakunin.direction_for_delete" /></font>
 		</s:if>
 		<s:else>
 			<s:text name="lang.kanri_tourHensyuuKakunin.direction_for_edit" />
 		</s:else>
-		<br>
 		<hr>
 		<!-- メッセージの部分ここまで---------------------------------------------------------- -->
 
@@ -47,9 +46,8 @@
 		<s:if test="deleteCheck.equals('true')">
 			<table>
 				<tr>
-				<tr>
 					<th><s:text name="lang.kanri_tourHensyuuKakunin.tour_id" /></th>
-					<td colspan="4"><s:property value="currentTourId" /></td>
+					<td><s:property value="currentTourId" /></td>
 				</tr>
 				<tr>
 					<th><s:text name="lang.kanri_tourHensyuuKakunin.tour_name" /></th>
@@ -90,7 +88,6 @@
 
 		<s:else>
 			<table>
-				<tr>
 				<tr>
 					<th><s:text name="lang.kanri_tourHensyuuKakunin.tour_id" /></th>
 					<td colspan="4"><s:property value="currentTourId" /></td>
