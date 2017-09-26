@@ -165,19 +165,6 @@
 					</div>
 					<div id="freme">
 						<div class="row" id="pricearea">
-							<div class="col-sm-4" id="pricetitle">
-								<h2>
-									<s:text name="lang.user_pay.total" />
-								</h2>
-							</div>
-							<div id="textform" class="col-sm-8">
-								<font color="#c91010;">&emsp;<span id="totalprice"><script
-											type="text/javascript">
-									decimal_floor(<s:property value="total" />);
-								</script></span>&nbsp;<s:text
-										name="lang.user_pay.yen" />
-								</font>
-							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-4" id="formtitle">

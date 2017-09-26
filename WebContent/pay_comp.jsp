@@ -21,7 +21,7 @@
 <meta name="author" content="">
 
 <title><s:text name="lang.pay_comp.title" /></title>
-<link rel="stylesheet" type="text/css" href="css/cart_done.css">
+<link rel="stylesheet" type="text/css" href="css/pay_comp.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   type="text/javascript"></script>
 </head>
@@ -45,19 +45,6 @@
         <s:text name="lang.pay_comp.text2" />
       </h2>
       <br>
-      <h4>
-        <s:text name="lang.pay_comp.text3" />
-        &nbsp;：&nbsp;<span class="pointbox">&nbsp;<s:property
-            value="get_point" /> <s:text name="lang.pay_comp.points" /></span>
-      </h4>
-      <h4>
-        (※
-        <s:text name="lang.pay_comp.text4" />
-        &nbsp;<a href="GoMypageAction"><s:text
-            name="lang.pay_comp.text5" /></a>&nbsp;
-        <s:text name="lang.pay_comp.text6" />
-        )
-      </h4>
     </div>
     <script type="text/javascript">
           //History API が使えるブラウザかどうかをチェック
