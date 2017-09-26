@@ -62,28 +62,27 @@ import com.opensymphony.xwork2.ActionSupport;
 
 		if(mailAddress.equals(dto.getMailAddress())){
 			if(password.equals(dto.getPassword())){
-				System.out.println(dto.getLoginFlg());
 				if(dto.getLoginFlg()!=1){
-						if(admin){
-							dao.update(dto.getUserId());
-							int userFlg = (int)dto.getUserFlg();
-								if(userFlg ==3){
-									session.put("userFlg", dto.getUserFlg());
-									session.put("userId", dto.getUserId());
-									session.put("loginFlg",dto.getLoginFlg());
-									result = "admin";
-								}else{
-									session.put("userFlg", dto.getUserFlg());
-									session.put("userId", dto.getUserId());
-									session.put("loginFlg", dto.getLoginFlg());
-									result = SUCCESS;
-								}
-							}
+					if(admin){
+						dao.update(dto.getUserId());
+						int userFlg = (int)dto.getUserFlg();
+						if(userFlg ==3){
+							session.put("userFlg", dto.getUserFlg());
+							session.put("userId", dto.getUserId());
+							session.put("loginFlg",dto.getLoginFlg());
+							result = "admin";
+						}else{
+							session.put("userFlg", dto.getUserFlg());
+							session.put("userId", dto.getUserId());
+							session.put("loginFlg", dto.getLoginFlg());
+							result = SUCCESS;
 						}
-			}
 					}
-				return result;
+				}
 			}
+		}
+		return result;
+	}
 
 
 	/**
@@ -145,6 +144,6 @@ import com.opensymphony.xwork2.ActionSupport;
 	public void setSession(Map<String,Object> session){
 		this.session = session;
 	}
-}
+	}
 
 
