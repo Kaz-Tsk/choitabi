@@ -21,14 +21,14 @@
 		<table class="history-table">
 
 			<s:if test="%{!UserPurchaseHistoryList.isEmpty()}">
-				<s:iterator value="UserPurchaseHistoryList">
 					<tr>
 						<th><s:text name="lang.purchase_history.tourname"/></th>
 						<th><s:text name="lang.purchase_history.price"/></th>
-						<th><s:text name="lang.purchase_history.totalprice"/></th>
 						<th><s:text name="lang.purchase_history.Number"/></th>
+						<th><s:text name="lang.purchase_history.totalprice"/></th>
 						<th><s:text name="lang.purchase_history.purchasedata"/></th>
 					</tr>
+					<s:iterator value="UserPurchaseHistoryList">
 					<tr>
 						<td><s:property value="tourName" /></td>
 						<td><s:property value="price" /></td>

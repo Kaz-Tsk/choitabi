@@ -25,7 +25,7 @@ public class SelectCartDAO {
 		Connection con = db.getConnection();
 		ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
-		String sql = "select * from cart where user_id=?";
+		String sql = "select * from cart where user_id=? and purchase_flg=0";
 		String select2 = "SELECT * FROM tour WHERE tour_id=?";
 
 		try {
