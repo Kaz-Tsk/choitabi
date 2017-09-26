@@ -52,8 +52,8 @@
     <br>
 
 	<!-- 購入履歴へ遷移 -->
-    <br>
-    <a href="./kanri_history.jsp">
+		<br>
+    <a href='<s:url action="KanriHistoryAction"></s:url>'>
     ■<s:text name="lang.kanri_top.parchase_history"/>■
     </a>
     <br>
