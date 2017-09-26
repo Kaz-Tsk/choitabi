@@ -24,7 +24,7 @@
 </header>
 
 <body>
-
+<div class="editArea">
 <h1>ツアー追加　内容確認</h1>
 <s:text name="lang.kanri_tourTsuikaKakunin.direction"/>
 <hr>
@@ -159,7 +159,7 @@
 <br>
 <br>
 <br>
-
+</div>
 
 </body>
 </html>
