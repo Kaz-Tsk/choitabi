@@ -7,6 +7,10 @@
 
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript">
+	window.onunload = function(){};//FireFox
+	history.forward();
+</script>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <title>login</title>
