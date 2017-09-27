@@ -142,20 +142,25 @@
 				<s:text name="lang.cart.tax_include" />
 			</h2>
 
-			<!-- 購入ボタンフォーム -->
-					<s:form action="GoPaymentAction">
-						<button type="submit" class="btn btn-warning center-block">
-							<s:text name="lang.cart.payment" />
-						</button>
-					</s:form>
+			<table class="kaimonobox">
+				<tr>
 
-				<!-- ツアーリストへ戻る -->
-					<s:form action="TourListAction">
-						<s:param name="theme" value="%{'グルメ'}" />
-						<button type="submit" class="btn btn-default center-block">
-							<s:text name="lang.cart.tour" />
-						</button>
-					</s:form>
+					<!-- 購入ボタンフォーム -->
+					<td class="kaimonotd"><s:form action="GoPaymentAction">
+							<button type="submit" class="btn btn-warning center-block">
+								<s:text name="lang.cart.payment" />
+							</button>
+						</s:form></td>
+
+					<!-- ツアーリストへ戻る -->
+					<td class="kaimonotd"><s:form action="TourListAction">
+							<s:param name="theme" value="%{'グルメ'}" />
+							<button type="submit" class="btn btn-default center-block">
+								<s:text name="lang.cart.tour" />
+							</button>
+						</s:form></td>
+				</tr>
+			</table>
 		</s:if>
 
 		<s:else>

@@ -59,7 +59,7 @@ body {
 	margin-right: 150px;
 	margin-top: 35px;
 	font-size: 30px;
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 }
 
 .empty {
@@ -70,13 +70,16 @@ body {
 
 .footer {
 	position: relative;
-	padding-top: 20px;
+	padding-top: 30px;
 	bottom: 0;
 }
 
 .kaimonobox {
-	float: left;
-	display: inline-block;
+	margin: 0 auto 0;
+}
+
+.kaimonotd {
+	padding: 10px;
 }
 
 a {
