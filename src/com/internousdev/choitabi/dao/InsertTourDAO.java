@@ -130,7 +130,7 @@ public class InsertTourDAO {
 
 			ResultSet rs = ps.executeQuery();
 
-			if(rs != null){
+			if(rs.next() == false){
 				result = true;
 				return result;
 			}else{
