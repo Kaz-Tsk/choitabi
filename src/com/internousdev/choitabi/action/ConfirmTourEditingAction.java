@@ -189,37 +189,45 @@ public class ConfirmTourEditingAction extends ActionSupport{
 		//削除のチェックボックスにチェックが入っていたら、そのままSUCCESS
 		if(deleteCheck.equals("true")){
 			result = SUCCESS;
+		}
 
 				//チェックが入っていなかった場合は、編集内容の入力チェック。
-		}else if(deleteCheck.equals("false") &&
-						(editTourName.equals("")|| editPrice.equals("") || editDeparture.equals("") ||
-								editRegion == null || editPrefectures.equals("") || editTheme == null || editComment.equals("") )) {
+			try{
+				if (	editTourName.equals("") || editPrice.equals("") || editDeparture.equals("") ||
+						editRegion == null || editPrefectures.equals("") || editTheme == null || editComment.equals("") ) {
 
 					errorMsg = "未入力の情報があります";
+					defaultTourName = editTourName;
+					defaultPrice = Integer.parseInt(editPrice);
+					defaultDeparture = editDeparture;
+					defaultRegion = editRegion;
+					defaultPrefectures = editPrefectures;
+					defaultTheme = editTheme;
+					defaultComment = editComment;
+					defaultImg = editImg;
 
-			try{
+				}else{
+					/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
+					 * 変換できればOK。変換できない＝例外が起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
+					defaultTourName = editTourName;
+					defaultPrice = Integer.parseInt(editPrice);
+					defaultDeparture = editDeparture;
+					defaultRegion = editRegion;
+					defaultPrefectures = editPrefectures;
+					defaultTheme = editTheme;
+					defaultComment = editComment;
+					defaultImg = editImg;
 
-//				if(Integer.parseInt(editPrice) < 0){
-//					errorMsg = "価格は1円以上に設定してください";
-//				}
 
-				defaultTourName = editTourName;
-				defaultPrice = Integer.parseInt(editPrice);
-				defaultDeparture = editDeparture;
-				defaultRegion = editRegion;
-				defaultPrefectures = editPrefectures;
-				defaultTheme = editTheme;
-				defaultComment = editComment;
-				defaultImg = editImg;
+					if(Integer.parseInt(editPrice) < 1){
+						errorMsg = "価格は1円以上に設定してください";
+					}
+				}
 
 			}catch(NumberFormatException e){
-				if(editPrice.equals("")){
-					errorMsg = "未入力の情報があります";
-				}else{
-					errorMsg = "価格の欄には数値を入力してください";
-				}
+				errorMsg = "価格の欄には数値を入力してください";
 				defaultTourName = editTourName;
-				defaultPrice = currentPrice; //ここ（数値の部分）だけ、エラーの場合は編集前のデータに直るようにしています
+				defaultPrice = currentPrice; //ここだけ編集前の価格に戻るようにしています。;
 				defaultDeparture = editDeparture;
 				defaultRegion = editRegion;
 				defaultPrefectures = editPrefectures;
@@ -230,15 +238,14 @@ public class ConfirmTourEditingAction extends ActionSupport{
 				e.printStackTrace();
 			}
 
-		}
+			/*エラーメッセージが空白だったら、OKとしてSUCCESSを返します*/
+			if(errorMsg.equals("")){
+				result = SUCCESS;
+			}
 
-		/*エラーメッセージが空白だったら、OKとしてSUCCESSを返します*/
-		if(errorMsg.equals("")){
-			result = SUCCESS;
-		}
-		return result;
+			return result;
 
-	}
+		}
 
 
 
