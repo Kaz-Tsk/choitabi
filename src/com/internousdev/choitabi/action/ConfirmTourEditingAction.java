@@ -186,44 +186,50 @@ public class ConfirmTourEditingAction extends ActionSupport{
 			editImg = "img/no_image.jpg";
 		}
 
+		//削除のチェックボックスにチェックが入っていたら、そのままSUCCESS
 		if(deleteCheck.equals("true")){
 			result = SUCCESS;
 
+				//チェックが入っていなかった場合は、編集内容の入力チェック。
 		}else if(deleteCheck.equals("false") &&
-				 (editTourName.equals("")|| editPrice.equals("") ||
-				  editDeparture.equals("") || editRegion.equals("") || editPrefectures.equals("") || editTheme == null ||
-				  editComment.equals("") )) {
+						(editTourName.equals("")|| editPrice.equals("") || editDeparture.equals("") ||
+								editRegion == null || editPrefectures.equals("") || editTheme == null || editComment.equals("") )) {
 
-			errorMsg = "未入力の情報があります";
-		}
+					errorMsg = "未入力の情報があります";
 
-		try{
+			try{
 
-			defaultTourName = editTourName;
-			defaultPrice = Integer.parseInt(editPrice);
-			defaultDeparture = editDeparture;
-			defaultRegion = editRegion;
-			defaultPrefectures = editPrefectures;
-			defaultTheme = editTheme;
-			defaultComment = editComment;
-			defaultImg = editImg;
+//				if(Integer.parseInt(editPrice) < 0){
+//					errorMsg = "価格は1円以上に設定してください";
+//				}
 
-		}catch(NumberFormatException e){
+				defaultTourName = editTourName;
+				defaultPrice = Integer.parseInt(editPrice);
+				defaultDeparture = editDeparture;
+				defaultRegion = editRegion;
+				defaultPrefectures = editPrefectures;
+				defaultTheme = editTheme;
+				defaultComment = editComment;
+				defaultImg = editImg;
+
+			}catch(NumberFormatException e){
 				if(editPrice.equals("")){
 					errorMsg = "未入力の情報があります";
 				}else{
 					errorMsg = "価格の欄には数値を入力してください";
 				}
-			defaultTourName = editTourName;
-			defaultPrice = currentPrice; //ここ（数値の部分）だけ、エラーの場合は編集前のデータに直るようにしています
-			defaultDeparture = editDeparture;
-			defaultRegion = editRegion;
-			defaultPrefectures = editPrefectures;
-			defaultTheme = editTheme;
-			defaultComment = editComment;
-			defaultImg = editImg;
-		}catch(NullPointerException e){
-			e.printStackTrace();
+				defaultTourName = editTourName;
+				defaultPrice = currentPrice; //ここ（数値の部分）だけ、エラーの場合は編集前のデータに直るようにしています
+				defaultDeparture = editDeparture;
+				defaultRegion = editRegion;
+				defaultPrefectures = editPrefectures;
+				defaultTheme = editTheme;
+				defaultComment = editComment;
+				defaultImg = editImg;
+			}catch(NullPointerException e){
+				e.printStackTrace();
+			}
+
 		}
 
 		/*エラーメッセージが空白だったら、OKとしてSUCCESSを返します*/

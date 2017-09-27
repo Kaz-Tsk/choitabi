@@ -82,14 +82,16 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 
 		try{
 			if (	newTourName.equals("") || newPrice.equals("") || newDeparture.equals("") ||
-				newRegion.equals("") || newPrefectures.equals("") || newTheme == null || newComment.equals("") ) {
+				newRegion == null || newPrefectures.equals("") || newTheme == null || newComment.equals("") ) {
 
 				errorMsg = "未入力の情報があります";
 
 			}else{
 				/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
 				 * 変換できればOK。変換できない＝例外が起きた場合は、例外処理でエラーメッセージの表示に飛びます*/
-				Integer.parseInt(newPrice);
+				if(Integer.parseInt(newPrice) < 1){
+					errorMsg = "価格は1円以上に設定してください";
+				}
 			}
 
 		}catch(NumberFormatException e){
@@ -97,6 +99,8 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 		}catch(NullPointerException e){
 			e.printStackTrace();
 		}
+
+
 
 		if(errorMsg.equals("")){
 			result = SUCCESS;
