@@ -121,13 +121,14 @@ public class KanriHistoryAction extends ActionSupport {
 				dto = allList.get(i);
 				String str = dto.getTour_name();
 
-				if(str.startsWith(tour_name)) {
+				if(str.indexOf(tour_name) != -1) {
 					searchList.add(dto);
 				}
 			}
 		}
 
 		number = searchList.size();
+		/*あと消し*/System.out.println("KanriHistoryAction-検索後の取得データ数：" + number);
 
 		if(number > 0) {
 			//ページネーション処理

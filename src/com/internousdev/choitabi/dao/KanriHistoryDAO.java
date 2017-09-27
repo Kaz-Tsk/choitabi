@@ -46,11 +46,14 @@ public class KanriHistoryDAO {
 				+ "openconnect.users.given_name_kanji, choitabi.cart.tour_id, choitabi.tour.tour_name,"
 				+ "choitabi.cart.order_count, choitabi.tour.price, choitabi.cart.registration_date"
 				+ " from (openconnect.users inner join choitabi.cart on openconnect.users.user_id = choitabi.cart.user_id) "
-				+ "inner join choitabi.tour on choitabi.cart.tour_id = choitabi.tour.tour_id where purchase_flg=1";
+				+ "inner join choitabi.tour on choitabi.cart.tour_id = choitabi.tour.tour_id where choitabi.cart.purchase_flg=1"
+				+ " AND choitabi.tour.tour_name like \"%" + searchName + "%\"";
 
-		if (!searchName.equals("")) {
-			sql = sql + " " + "where choitabi.tour.tour_name like \"%" + searchName + "%\"";
-		}
+//		if (!searchName.equals("")) {
+//			sql = sql + " " + "AND choitabi.tour.tour_name like \"%" + searchName + "%\"";
+//		}
+
+		/*あと消し*/System.out.println("KanriHstoryDAO-作成SQL文：" + sql);
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -77,6 +80,8 @@ public class KanriHistoryDAO {
 		}catch (SQLException e){
 			e.printStackTrace();
 		}
+
+		System.out.println("KanriHistoryDAO-検索後ツアー数：" + searchList.size());
 
 		return searchList;
 	}
