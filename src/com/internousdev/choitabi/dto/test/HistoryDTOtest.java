@@ -1,5 +1,7 @@
 package com.internousdev.choitabi.dto.test;
 
+import java.math.BigDecimal;
+
 import org.junit.Test;
 
 import com.internousdev.choitabi.dto.HistoryDTO;
@@ -348,32 +350,32 @@ public class HistoryDTOtest extends TestCase {
 	@Test
 	public void testGetPrice1() {
 		HistoryDTO test = new HistoryDTO();
-		float expected = 0f;
+		BigDecimal expected = BigDecimal.valueOf(0.0);
 
 		test.setPrice(expected);
 
-		assertEquals(expected, test.getPrice(),0.00000000001f);
+		assertEquals(expected, test.getPrice());
 	}
 
 	@Test
 	public void testGetPrice2() {
 		HistoryDTO test = new HistoryDTO();
-		float expected =  3.4028235E38f;//3.4x(10の38乗)
+		BigDecimal expected =  BigDecimal.valueOf(9999999.99);
 
 		test.setPrice(expected);
 
-		assertEquals(expected, test.getPrice(),0.00000000001f);
+		assertEquals(expected, test.getPrice());
 	}
 
 
 	@Test
 	public void testGetPrice3() {
 		HistoryDTO test = new HistoryDTO();
-		float expected = 1.4E-45f;//1.4x(10の-45乗)
+		BigDecimal expected = BigDecimal.valueOf(9999999.99);//1.4x(10の-45乗)
 
 		test.setPrice(expected);
 
-		assertEquals(expected, test.getPrice(),0.00000000001f);
+		assertEquals(expected, test.getPrice());
 	}
 
 
@@ -381,11 +383,11 @@ public class HistoryDTOtest extends TestCase {
 	public void testGetPrice4() {
 		HistoryDTO test = new HistoryDTO();
 		try {
-			float priceMax = Integer.parseInt("4.4028235E38f");
+			BigDecimal priceMax = BigDecimal.valueOf(10000000.00);
 			test.setPrice(priceMax);
 
 		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"4.4028235E38f\"");
+			assertEquals(e.getMessage(), "For input string: \"10000000.00\"");
 		}
 	}
 
@@ -394,11 +396,11 @@ public class HistoryDTOtest extends TestCase {
 	public void testGetPrice5() {
 		HistoryDTO test = new HistoryDTO();
 		try {
-			float priceMin = Integer.parseInt("-4.4028235E38f");
+			BigDecimal priceMin = BigDecimal.valueOf(-10000000.00);
 			test.setPrice(priceMin);
 
 		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-4.4028235E38f\"");
+			assertEquals(e.getMessage(), "For input string: \"-10000000.00\"");
 		}
 	}
 
@@ -406,44 +408,44 @@ public class HistoryDTOtest extends TestCase {
 	@Test
 	public void testSetPrice1() {
 		HistoryDTO test = new HistoryDTO();
-		float expected = 0f;
+		BigDecimal expected = BigDecimal.valueOf(0.0);
 
 		test.setPrice(expected);
 
-		assertEquals(expected, test.getPrice(),0.00000000001f);
+		assertEquals(expected, test.getPrice());
 	}
 
 
 	@Test
 	public void testSetPrice2() {
 		HistoryDTO test = new HistoryDTO();
-		float expected =  3.4028235E38f;
+		BigDecimal expected =  BigDecimal.valueOf(9999999.99);
 
 		test.setPrice(expected);
 
-		assertEquals(expected, test.getPrice(),0.00000000001f);
+		assertEquals(expected, test.getPrice());
 	}
 
 
 	@Test
 	public void testSetPrice3() {
 		HistoryDTO test = new HistoryDTO();
-		float expected = 1.4E-45f;
+		BigDecimal expected = BigDecimal.valueOf(-9999999.99);
 
 		test.setPrice(expected);
 
-		assertEquals(expected, test.getPrice(),0.00000000001f);
+		assertEquals(expected, test.getPrice());
 	}
 
 	@Test
 	public void testSetPrice4() {
 		HistoryDTO test = new HistoryDTO();
 		try {
-			float priceMin = Integer.parseInt("4.4028235E38f");
+			BigDecimal priceMin = BigDecimal.valueOf(10000000.00);
 			test.setPrice(priceMin);
 
 		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"4.4028235E38f\"");
+			assertEquals(e.getMessage(), "For input string: \"10000000.00\"");
 		}
 	}
 
@@ -451,11 +453,11 @@ public class HistoryDTOtest extends TestCase {
 	public void testSetPrice5() {
 		HistoryDTO test = new HistoryDTO();
 		try {
-			float priceMin = Integer.parseInt("-4.4028235E38f");
+			BigDecimal priceMin = BigDecimal.valueOf(-10000000.00);
 			test.setPrice(priceMin);
 
 		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-4.4028235E38f\"");
+			assertEquals(e.getMessage(), "For input string: \"-10000000.00\"");
 		}
 	}
 	/*
@@ -474,32 +476,32 @@ public class HistoryDTOtest extends TestCase {
 	@Test
 	public void testGetsubtotal1() {
 		HistoryDTO test = new HistoryDTO();
-		float expected = 0f;
+		BigDecimal expected = BigDecimal.valueOf(0.0);
 
 		test.setSubtotal(expected);
 
-		assertEquals(expected, test.getSubtotal(),0.00000000001f);
+		assertEquals(expected, test.getSubtotal());
 	}
 
 	@Test
 	public void testGetsubtotal2() {
 		HistoryDTO test = new HistoryDTO();
-		float expected =  3.4028235E38f;//3.4x(10の38乗)
+		BigDecimal expected =  BigDecimal.valueOf(9999999.99);//3.4x(10の38乗)
 
 		test.setSubtotal(expected);
 
-		assertEquals(expected, test.getSubtotal(),0.00000000001f);
+		assertEquals(expected, test.getSubtotal());
 	}
 
 
 	@Test
 	public void testGetsubtotal3() {
 		HistoryDTO test = new HistoryDTO();
-		float expected = 1.4E-45f;//1.4x(10の-45乗)
+		BigDecimal expected = BigDecimal.valueOf(9999999.99);//1.4x(10の-45乗)
 
 		test.setSubtotal(expected);
 
-		assertEquals(expected, test.getSubtotal(),0.00000000001f);
+		assertEquals(expected, test.getSubtotal());
 	}
 
 
@@ -507,11 +509,11 @@ public class HistoryDTOtest extends TestCase {
 	public void testGetsubtotal4() {
 		HistoryDTO test = new HistoryDTO();
 		try {
-			float subtotalMax = Integer.parseInt("4.4028235E38f");
+			BigDecimal subtotalMax = BigDecimal.valueOf(10000000.00);
 			test.setSubtotal(subtotalMax);
 
 		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"4.4028235E38f\"");
+			assertEquals(e.getMessage(), "For input string: \"10000000.00\"");
 		}
 	}
 
@@ -520,11 +522,11 @@ public class HistoryDTOtest extends TestCase {
 	public void testGetsubtotal5() {
 		HistoryDTO test = new HistoryDTO();
 		try {
-			float subtotalMin = Integer.parseInt("-4.4028235E38f");
+			BigDecimal subtotalMin = BigDecimal.valueOf(-10000000.00);
 			test.setSubtotal(subtotalMin);
 
 		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-4.4028235E38f\"");
+			assertEquals(e.getMessage(), "For input string: \"-10000000.00\"");
 		}
 	}
 
@@ -532,44 +534,44 @@ public class HistoryDTOtest extends TestCase {
 	@Test
 	public void testSetsubtotal1() {
 		HistoryDTO test = new HistoryDTO();
-		float expected = 0f;
+		BigDecimal expected = BigDecimal.valueOf(0.0);
 
 		test.setSubtotal(expected);
 
-		assertEquals(expected, test.getSubtotal(),0.00000000001f);
+		assertEquals(expected, test.getSubtotal());
 	}
 
 
 	@Test
 	public void testSetsubtotal2() {
 		HistoryDTO test = new HistoryDTO();
-		float expected =  3.4028235E38f;
+		BigDecimal expected =  BigDecimal.valueOf(9999999.99);
 
 		test.setSubtotal(expected);
 
-		assertEquals(expected, test.getSubtotal(),0.00000000001f);
+		assertEquals(expected, test.getSubtotal());
 	}
 
 
 	@Test
 	public void testSetsubtotal3() {
 		HistoryDTO test = new HistoryDTO();
-		float expected = 1.4E-45f;
+		BigDecimal expected = BigDecimal.valueOf(-9999999.99);
 
 		test.setSubtotal(expected);
 
-		assertEquals(expected, test.getSubtotal(),0.00000000001f);
+		assertEquals(expected, test.getSubtotal());
 	}
 
 	@Test
 	public void testSetsubtotal4() {
 		HistoryDTO test = new HistoryDTO();
 		try {
-			float subtotalMin = Integer.parseInt("4.4028235E38f");
+			BigDecimal subtotalMin = BigDecimal.valueOf(10000000.00);
 			test.setSubtotal(subtotalMin);
 
 		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"4.4028235E38f\"");
+			assertEquals(e.getMessage(), "For input string: \"10000000.00\"");
 		}
 	}
 
@@ -577,11 +579,11 @@ public class HistoryDTOtest extends TestCase {
 	public void testSetsubtotal5() {
 		HistoryDTO test = new HistoryDTO();
 		try {
-			float subtotalMin = Integer.parseInt("-4.4028235E38f");
+			BigDecimal subtotalMin = BigDecimal.valueOf(-10000000.00);
 			test.setSubtotal(subtotalMin);
 
 		} catch (RuntimeException e) {
-			assertEquals(e.getMessage(), "For input string: \"-4.4028235E38f\"");
+			assertEquals(e.getMessage(), "For input string: \"-10000000.00\"");
 		}
 	}
 	/*
