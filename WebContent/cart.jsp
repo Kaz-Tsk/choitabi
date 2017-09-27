@@ -142,27 +142,20 @@
 				<s:text name="lang.cart.tax_include" />
 			</h2>
 
-			<div class="kaimonobox">
-				<div class="kaimonoboxbtn">
+			<!-- 購入ボタンフォーム -->
 					<s:form action="GoPaymentAction">
-						<!-- 購入ボタンフォーム -->
 						<button type="submit" class="btn btn-warning center-block">
 							<s:text name="lang.cart.payment" />
 						</button>
 					</s:form>
-				</div>
 
 				<!-- ツアーリストへ戻る -->
-				<div class="kaimonoboxbtn">
-					<a
-						href='<s:url action="TourListAction">
-							<s:param name="theme" value="%{'グルメ'}" /></s:url>'>
+					<s:form action="TourListAction">
+						<s:param name="theme" value="%{'グルメ'}" />
 						<button type="submit" class="btn btn-default center-block">
 							<s:text name="lang.cart.tour" />
 						</button>
-					</a>
-				</div>
-			</div>
+					</s:form>
 		</s:if>
 
 		<s:else>
