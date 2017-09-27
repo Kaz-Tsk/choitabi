@@ -36,7 +36,9 @@
 				<div class="navibox"><a href="Q&A.jsp" class="underline"><s:text name="lang.header.Q&A"/></a></div>
 				<div class="navibox"><a href="LogoutAction" class="underline"><s:text name="lang.header.logout"/></a></div>
 				<div class="navibox"><a href="MypageAction" class="underline"><s:text name="lang.header.Mypage"/></a></div>
+				<div class="navibox"><a href="SelectCartAction" class="underline"><s:text name="lang.header.Cart"/></a></div>
 			</div>
+
 	</s:if>
 
 	<!-- 管理者ログイン時ヘッダー  -->
