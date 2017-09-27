@@ -1,3 +1,5 @@
+
+
 package com.internousdev.choitabi.action;
 
 import java.math.BigDecimal;
@@ -63,7 +65,7 @@ public class KanriHistoryAction extends ActionSupport {
 	/**
 	 * 検索ワード
 	 */
-	private String search_name;
+	private String searchName;
 
 	/**
 	 * 検索結果リスト
@@ -259,16 +261,16 @@ public class KanriHistoryAction extends ActionSupport {
 	 * 検索ワードを取得するメソッド
 	 * @return search_name 検索ワード
 	 */
-	public String getSearch_name() {
-		return search_name;
+	public String getSearchName() {
+		return searchName;
 	}
 
 	/**
 	 * 検索ワードを格納するメソッド
 	 * @param search_name 検索ワード
 	 */
-	public void setSearch_name(String search_name) {
-		this.search_name = search_name;
+	public void setSearchName(String searchName) {
+		this.searchName = searchName;
 	}
 
 	/**

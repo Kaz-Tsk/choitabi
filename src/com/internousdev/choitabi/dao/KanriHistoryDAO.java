@@ -40,7 +40,7 @@ public class KanriHistoryDAO {
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql");
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/?useSSL=true&requireSSL=true","openconnect","root","mysql");
 		Connection con = db.getConnection();
 		String sql = "select openconnect.users.user_id, openconnect.users.family_name_kanji,"
 				+ "openconnect.users.given_name_kanji, choitabi.cart.tour_id, choitabi.tour.tour_name,"

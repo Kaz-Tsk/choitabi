@@ -32,12 +32,13 @@
 	<div id="contents">
 		<h3><s:text name="lang.kanri_history.orderSearch"/></h3>
 		<div class="toursearch">
-			<s:form action="KanriHistoryAction" method="post">
+			 <s:form action="KanriHistoryAction" method="post">
 				<p>
 					<s:text name="lang.kanri_history.tour_name"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="tour_name">
-					<input type="submit" id="submit" value="&#xf002; <s:text name="lang.kanri_history.search"/>">
+					<input type="submit" id="submit" value=<s:text name="lang.kanri_history.search"/>>
 				</p>
 			</s:form>
+
 		</div>
 
 		<div class="tourdisplay">
