@@ -63,7 +63,38 @@
    <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.region"/></th>
    		<td><s:property value="currentRegion"/></td>
-   		<td><input type="text" name="editRegion" value='<s:property value="defaultRegion"/>'></input></td>
+   						<td><s:if test='defaultRegion == null'>
+						<label><input type="radio" name="editRegion" value="東北" />東北</label>
+						<label><input type="radio" name="editRegion" value="関東" />関東</label>
+						<label><input type="radio" name="editRegion" value="関西" />関西</label>
+						<label><input type="radio" name="editRegion" value="九州" />九州</label>
+					</s:if>
+					<s:else>
+						<s:if test='defaultRegion.equals("東北")'>
+							<label><input type="radio" name="editRegion" value="東北" checked/>東北</label>
+							<label><input type="radio" name="editRegion" value="関東" />関東</label>
+							<label><input type="radio" name="editRegion" value="関西" />関西</label>
+							<label><input type="radio" name="editRegion" value="九州" />九州</label>
+						</s:if>
+						<s:if test='defaultRegion.equals("関東")'>
+							<label><input type="radio" name="editRegion" value="東北" />東北</label>
+							<label><input type="radio" name="editRegion" value="関東" checked/>関東</label>
+							<label><input type="radio" name="editRegion" value="関西" />関西</label>
+							<label><input type="radio" name="editRegion" value="九州" />九州</label>
+						</s:if>
+						<s:if test='defaultRegion.equals("関西")'>
+							<label><input type="radio" name="editRegion" value="東北" />東北</label>
+							<label><input type="radio" name="editRegion" value="関東" />関東</label>
+							<label><input type="radio" name="editRegion" value="関西" checked/>関西</label>
+							<label><input type="radio" name="editRegion" value="九州" />九州</label>
+						</s:if>
+						<s:if test='defaultRegion.equals("九州")'>
+							<label><input type="radio" name="editRegion" value="東北" />東北</label>
+							<label><input type="radio" name="editRegion" value="関東" />関東</label>
+							<label><input type="radio" name="editRegion" value="関西" />関西</label>
+							<label><input type="radio" name="editRegion" value="九州" checked/>九州</label>
+						</s:if>
+					</s:else></td>
    </tr>
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.prefectures"/></th>
