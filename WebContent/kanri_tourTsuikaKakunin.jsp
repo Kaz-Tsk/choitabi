@@ -18,6 +18,8 @@
 	var="lang" />
 <!-- CSSの読み込み -->
 <link rel="stylesheet" type="text/css" href="./css/kanri_common.css">
+
+
 </head>
 
 <header>
@@ -92,7 +94,7 @@
 			<s:param name="newImg" value="newImg"/>
 	    </s:url>'>
 			<input type="submit"
-			value='<s:text name="lang.kanri_tourTsuikaKakunin.complete"/>' /><br>
+			value='<s:text name="lang.kanri_tourTsuikaKakunin.complete" />' onSubmit="return double()"/><br>
 		</a> <br> <br>
 		<hr>
 		<br>
@@ -118,6 +120,7 @@
 				name="lang.kanri_tourTsuikaKakunin.return_top" />
 		</a> <br> <br> <br>
 	</div>
+
 
 </body>
 </html>

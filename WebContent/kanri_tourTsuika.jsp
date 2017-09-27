@@ -152,7 +152,7 @@
 			<th>
 				<s:text name="lang.kanri_tourTsuika.image_url"/>
 			</th>
-			<td><input type="text" size="40" name="newImg" value='<s:property value="newImg"/>'></input>
+			<td><input type="file" name="newImg"></input>
 				<br>
 				<font size="2px"><s:text name="lang.kanri_tourTsuika.direction_for_image_url"/></font>
 			</td>

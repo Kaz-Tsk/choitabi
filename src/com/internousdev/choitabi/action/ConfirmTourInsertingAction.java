@@ -101,7 +101,6 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 		}
 
 
-
 		if(errorMsg.equals("")){
 			result = SUCCESS;
 		}
