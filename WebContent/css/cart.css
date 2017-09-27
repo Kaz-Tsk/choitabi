@@ -73,3 +73,12 @@ body {
 	padding-top: 20px;
 	bottom: 0;
 }
+
+.kaimonobox {
+	float: left;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+}
