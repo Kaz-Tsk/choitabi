@@ -70,23 +70,47 @@
 				<input type="text" name="newDeparture" value='<s:property value="newDeparture"/>'></input>
 			</td>
 		</tr>
-		<tr>
-			<th>
-				<s:text name="lang.kanri_tourTsuika.region"/>
-			</th>
-			<td>
-				<input type="text" name="newRegion" value='<s:property value="newRegion"/>'></input>
-			</td>
-		</tr>
-		<tr>
-			<th>
-				<s:text name="lang.kanri_tourTsuika.prefectures"/>
-			</th>
-			<td>
-				<input type="text" name="newPrefectures" value='<s:property value="newPrefectures"/>'></input>
-			</td>
-		</tr>
-		<tr>
+			<tr>
+				<th><s:text name="lang.kanri_tourTsuika.region" /></th>
+				<td><s:if test='newRegion == null'>
+						<label><input type="radio" name="newRegion" value="東北" />東北</label>
+						<label><input type="radio" name="newRegion" value="関東" />関東</label>
+						<label><input type="radio" name="newRegion" value="関西" />関西</label>
+						<label><input type="radio" name="newRegion" value="九州" />九州</label>
+					</s:if>
+					<s:else>
+						<s:if test='newRegion.equals("東北")'>
+							<label><input type="radio" name="newRegion" value="東北" checked/>東北</label>
+							<label><input type="radio" name="newRegion" value="関東" />関東</label>
+							<label><input type="radio" name="newRegion" value="関西" />関西</label>
+							<label><input type="radio" name="newRegion" value="九州" />九州</label>
+						</s:if>
+						<s:if test='newRegion.equals("関東")'>
+							<label><input type="radio" name="newRegion" value="東北" />東北</label>
+							<label><input type="radio" name="newRegion" value="関東" checked/>関東</label>
+							<label><input type="radio" name="newRegion" value="関西" />関西</label>
+							<label><input type="radio" name="newRegion" value="九州" />九州</label>
+						</s:if>
+						<s:if test='newRegion.equals("関西")'>
+							<label><input type="radio" name="newRegion" value="東北" />東北</label>
+							<label><input type="radio" name="newRegion" value="関東" />関東</label>
+							<label><input type="radio" name="newRegion" value="関西" checked/>関西</label>
+							<label><input type="radio" name="newRegion" value="九州" />九州</label>
+						</s:if>
+						<s:if test='newRegion.equals("九州")'>
+							<label><input type="radio" name="newRegion" value="東北" />東北</label>
+							<label><input type="radio" name="newRegion" value="関東" />関東</label>
+							<label><input type="radio" name="newRegion" value="関西" />関西</label>
+							<label><input type="radio" name="newRegion" value="九州" checked/>九州</label>
+						</s:if>
+					</s:else></td>
+			</tr>
+			<tr>
+				<th><s:text name="lang.kanri_tourTsuika.prefectures" /></th>
+				<td><input type="text" name="newPrefectures"
+					value='<s:property value="newPrefectures"/>'></input></td>
+			</tr>
+			<tr>
 			<th>
 				<s:text name="lang.kanri_tourTsuika.theme"/>
 			</th>
