@@ -261,7 +261,7 @@
 
 					<!-- カートの中身画面へ遷移 -->
 					<div class="buttonfreme">
-						<span class="back"><a href="GoCartAction" class="backlink"><s:text
+						<span class="back"><a href="SelectCartAction" class="backlink"><s:text
 									name="lang.user_pay.back" /></a></span>
 						<!-- 購入確認画面へ遷移 -->
 						<input type="submit" value="<s:text name="lang.user_pay.next"/>"
