@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!-- と宣言することで、JSPファイルとして機能させることが出来る -->
 <!-- (<%%>を使うとJSPファイルの中でJava言語を使ってプログラムを書くことが出来る) -->
 
 <!-- 国際化 -->
-<%@ taglib uri="/struts-tags" prefix="s" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
 <!DOCTYPE html>
@@ -27,9 +27,12 @@
 
 <title><s:text name="lang.cart.cart" /></title>
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- Bootstrap cdn -->
 <link rel="stylesheet"
@@ -48,6 +51,17 @@
 	<header>
 		<s:include value="header.jsp" />
 	</header>
+
+	<script type="text/javascript">
+		function no2click(form) {
+			var e = form.elements;
+			for (var i = 0; i < e.length; i++) {
+				if (e[i].type == 'submit') {
+					e[i].disabled = true;
+				}
+			}
+		}
+	</script>
 
 	<div id="contents" style="margin-bottom: 50px;">
 
@@ -118,7 +132,8 @@
 
 								</s:form> <br> <br></td>
 
-							<td><s:form action="DeleteCartAction">
+							<td><s:form action="DeleteCartAction"
+									onSubmit="return no2click(this)">
 									<!--  --<input id="order" type="hidden" name="order_count"
 								value="<s:property value="order_count"/>">-->
 									<s:hidden name="user_id" value="%{user_id}" />
