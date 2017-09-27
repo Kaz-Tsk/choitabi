@@ -150,7 +150,7 @@
 		<!-- カート内の商品を削除する -->
 		<action name="DeleteCartAction" class="com.internousdev.choitabi.action.DeleteCartAction"
 			method="execute">
-			<result name="success">cart.jsp</result>
+			<result name="success" type="redirect">/SelectCartAction</result>
 			<result name="error">cart.jsp</result>
 		</action>
 
