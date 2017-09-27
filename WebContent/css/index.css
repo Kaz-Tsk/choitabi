@@ -67,6 +67,9 @@ b{
 	justify-content: center;
 }
 
+footer{
+	margin-top:100px;
+}
 .main a:link{
 	              color:#ffffff;
 }
