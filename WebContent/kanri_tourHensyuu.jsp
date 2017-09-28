@@ -31,7 +31,7 @@
 <font color="red"><s:property value="errorMsg"/></font>
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
-<form action="ConfirmTourEditingAction">
+<form action="ConfirmTourEditingAction" method="post" enctype="multipart/form-data" >
 <table>
    <tr>
    		<th></th>
@@ -132,7 +132,7 @@
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.image_url"/></th>
    		<td><s:property value="currentImg"/></td>
-   		<td><input type="text" name="editImg" value='<s:property value = "defaultImg"/>'>
+   		<td><input type="file" name="editFile" accept="imag/*">
    		    <br><font size="2px"><s:text name="lang.kanri_tourHensyuu.direction_for_image_url"/></font></td>
    </tr>
 </table>

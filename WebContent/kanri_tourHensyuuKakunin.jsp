@@ -150,7 +150,7 @@
 					<td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit" /></td>
 					<td width="200px"><s:property value="currentImg" /></td>
 					<td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit" /></td>
-					<td width="200px"><s:property value="editImg" /></td>
+					<td width="200px"><s:property value="editFileFileName" /></td>
 				</tr>
 				<tr>
 					<th><s:text name="lang.kanri_tourHensyuuKakunin.image_preview" /></th>
@@ -158,7 +158,7 @@
 					<td width="300px"><img src='<s:property value="currentImg"/>'
 						height="20%" alt="現在の画像" /></td>
 					<td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit" /></td>
-					<td width="300px"><img src='<s:property value="editImg"/>'
+					<td width="300px"><img src='<s:property value="editFileFileName"/>'
 						height="20%" alt="編集後の画像" /></td>
 				</tr>
 			</table>
@@ -183,6 +183,7 @@
 		    <s:param name="editComment" value="editComment"/>
 			<s:param name="editImg" value="editImg"/>
 		    <s:param name="deleteCheck" value="deleteCheck"/>
+		    <s:param name="editFileFileName" value="editFileFileName"/>
 	    </s:url>'>
 			<input type="submit"
 			value='<s:text name="lang.kanri_tourHensyuuKakunin.complete"/>' /><br>

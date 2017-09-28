@@ -1,5 +1,13 @@
 package com.internousdev.choitabi.action;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.struts2.interceptor.ServletRequestAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -8,7 +16,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * @since 2017/09/07
  * @version 1.1
  * */
-public class ConfirmTourEditingAction extends ActionSupport{
+public class ConfirmTourEditingAction extends ActionSupport implements ServletRequestAware{
 
 	/**
 	 * シリアルID
@@ -167,6 +175,27 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	public String defaultImg;
 
 
+	/*画像アップロード処理に必要な変数--------------------*/
+
+    /**
+     * リクエスト
+     */
+    private HttpServletRequest request;
+
+    /**
+     * 画像のファイルデータ
+     * */
+    private File editFile;
+
+	/**
+	 * 編集後ツアーの画像URL/名前
+	 * */
+	private String editFileFileName;
+
+	/**
+	 * 編集後ツアー画像のファイル形式
+	 * */
+	public String editFileContentType;
 
 
 
@@ -182,9 +211,44 @@ public class ConfirmTourEditingAction extends ActionSupport{
 		String result = ERROR;
 
 		/*もし、画像URLに何も書かれていなかったら、デフォルトの「NO IMAGE」画像のURLを入れておきます。*/
-		if(editImg.equals("")){
-			editImg = "img/no_image.jpg";
+
+		//テスト-------------------------------------------------------------
+
+		if(editFile == null || editFile.length() == 0){
+			editFileFileName = "img/no_image.jpg";
+		}else{
+
+			//テスト中-----------------------------------------------
+			/*送られてきたリクエストから、画像の送り先ディレクトリを取得する*/
+
+			try{
+				String basePath = request.getServletContext().getRealPath("/");
+				System.out.println("ConfirmTourEditingAction-取得コンテクスト：" + request.getServletContext().getRealPath("/"));
+
+				File destFile = new File(basePath + "img", editFileFileName);//このパスの場所に、この名前で画像を保存したい。
+				FileUtils.copyFile(editFile, destFile);
+				editFileFileName = "./img/" + editFileFileName;
+
+				System.out.println("取得ファイル名：" + editFileFileName);
+				System.out.println("取得ファイル形式：" + editFileContentType);
+
+			} catch (IOException e1) {
+				System.out.println("画像のアップロードに失敗しました");
+				e1.printStackTrace();
+			} catch (NullPointerException e2){
+				System.out.println("画像のアップロードに失敗しました");
+				e2.printStackTrace();
+			}
 		}
+
+
+
+
+
+
+
+
+		//テスト-------------------------------------------------------------
 
 		//削除のチェックボックスにチェックが入っていたら、そのままSUCCESS
 		if(deleteCheck.equals("true")){
@@ -695,6 +759,75 @@ public class ConfirmTourEditingAction extends ActionSupport{
 	public void setErrorMsg(String errorMsg){
 		this.errorMsg = errorMsg;
 	}
+
+	/*画像アップロードに使う変数のgetter/setter----*/
+
+    /**リクエストを取得するメソッド
+     * @return request リクエスト
+     */
+    public HttpServletRequest getRequest() {
+        return request;
+    }
+
+    /**
+     * リクエストを格納するメソッド
+     * @param request リクエスト
+     */
+    public void setServletRequest(HttpServletRequest request) {
+        this.request = request;
+    }
+
+    /**
+     * 画像のファイルデータを取得するメソッド
+     * @return editFile 画像のファイルデータ
+     * */
+     public File getEditFile(){
+    	 return editFile;
+     }
+
+     /**
+      * 画像のファイルデータを格納するメソッド
+      * @return fileFile 画像のファイルデータ
+      * */
+      public void setEditFile(File editFile){
+     	 this.editFile =  editFile;
+      }
+
+
+  	/**
+  	 *新規ツアーの画像URLを取得するメソッド
+  	 *@return editFileFileName 新規ツアーの画像URL
+  	 * */
+  	public String getEditFileFileName(){
+  		return editFileFileName;
+  	}
+
+  	/**
+  	 *新規ツアーの画像URLを格納するメソッド
+  	 *@param editFileFileName 新規ツアーの画像URL
+  	 * */
+  	public void setEditFileFileName(String editFileFileName){
+  		this.editFileFileName = editFileFileName;
+  	}
+
+  	/**
+  	 * 新規ツアー画像のファイル形式を取得するメソッド
+  	 * @return editFileContentType 新規ツアー画像のファイル形式
+  	 * */
+  	public String getEditFileContentType(){
+  		return editFileContentType;
+  	}
+
+  	/**
+  	 * 新規ツアー画像のファイル形式を格納するメソッド
+  	 * @return editFileContentType 新規ツアー画像のファイル形式
+  	 * */
+  	public void setEditFileContentType(String editFileContentType){
+  		this.editFileContentType  = editFileContentType;
+  	}
+
+
+
 
 
 }

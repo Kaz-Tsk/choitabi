@@ -1,5 +1,6 @@
 package com.internousdev.choitabi.action;
 
+import java.io.File;
 import java.sql.SQLException;
 
 import com.internousdev.choitabi.dao.UpdateTourDAO;
@@ -69,6 +70,28 @@ public class UpdateTourAction extends ActionSupport{
 	 * */
 	private String deleteCheck = "false";
 
+
+	/*画像のアップデートに使う変数------------------*/
+
+	   /**
+     * 画像のファイルデータ
+     * */
+    private File editFile;
+
+	/**
+	 * 編集後ツアーの画像URL/名前
+	 * */
+	private String editFileFileName;
+
+	/**
+	 * 編集後ツアー画像のファイル形式
+	 * */
+	public String editFileContentType;
+
+
+
+
+
 	/**
 	 * DBに登録されているツアーを編集、または削除するメソッド
 	 * @author : YUKA MATSUMURA
@@ -84,7 +107,7 @@ public class UpdateTourAction extends ActionSupport{
 
 		UpdateTourDAO utdao = new UpdateTourDAO();
 		count = utdao.updateTour(editTourId, editTourName, editPrice,
-	                            		 editDeparture, editRegion, editPrefectures, editTheme, editComment, editImg,deleteCheck);/*←（）内は全部引数です*/
+	                            		 editDeparture, editRegion, editPrefectures, editTheme, editComment, editFileFileName,deleteCheck);/*←（）内は全部引数です*/
 
 		if(count > 0){
 			result = SUCCESS;
@@ -262,6 +285,57 @@ public class UpdateTourAction extends ActionSupport{
 		this.deleteCheck = deleteCheck;
 	}
 
+
+	/*画像のアップデートに使う変数のgetter/setter--------------------------------*/
+
+	 /**
+     * 画像のファイルデータを取得するメソッド
+     * @return editFile 画像のファイルデータ
+     * */
+     public File getEditFile(){
+    	 return editFile;
+     }
+
+     /**
+      * 画像のファイルデータを格納するメソッド
+      * @return fileFile 画像のファイルデータ
+      * */
+      public void setEditFile(File editFile){
+     	 this.editFile =  editFile;
+      }
+
+
+  	/**
+  	 *新規ツアーの画像URLを取得するメソッド
+  	 *@return editFileFileName 新規ツアーの画像URL
+  	 * */
+  	public String getEditFileFileName(){
+  		return editFileFileName;
+  	}
+
+  	/**
+  	 *新規ツアーの画像URLを格納するメソッド
+  	 *@param editFileFileName 新規ツアーの画像URL
+  	 * */
+  	public void setEditFileFileName(String editFileFileName){
+  		this.editFileFileName = editFileFileName;
+  	}
+
+  	/**
+  	 * 新規ツアー画像のファイル形式を取得するメソッド
+  	 * @return editFileContentType 新規ツアー画像のファイル形式
+  	 * */
+  	public String getEditFileContentType(){
+  		return editFileContentType;
+  	}
+
+  	/**
+  	 * 新規ツアー画像のファイル形式を格納するメソッド
+  	 * @return editFileContentType 新規ツアー画像のファイル形式
+  	 * */
+  	public void setEditFileContentType(String editFileContentType){
+  		this.editFileContentType  = editFileContentType;
+  	}
 
 
 

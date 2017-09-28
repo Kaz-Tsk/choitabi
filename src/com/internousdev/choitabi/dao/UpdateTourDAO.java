@@ -35,7 +35,7 @@ public class UpdateTourDAO {
 	 * @return count 操作の完了したデータ数
 	 * */
 	public int updateTour(String editTourId, String editTourName,String editPrice, String editDeparture,
-								String editRegion, String editPrefectures,String editTheme, String editComment, String editImg,
+								String editRegion, String editPrefectures,String editTheme, String editComment, String editFileFileName,
 								String deleteCheck){
 		int count = 0;
 
@@ -46,6 +46,7 @@ public class UpdateTourDAO {
 					/*SQLに接続し、コマンドを実行してもらいます*/
 					DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root", "mysql");
 					Connection con = dbc.getConnection();
+					editFileFileName = editFileFileName.replace("./img/","img/");
 
 					String sql = "UPDATE tour SET"
 							+ " tour_name = ?," //1
@@ -67,7 +68,7 @@ public class UpdateTourDAO {
 					ps.setString(5,  editPrefectures);
 					ps.setString(6, editTheme);
 					ps.setString(7, editComment);
-					ps.setString(8, editImg);
+					ps.setString(8, editFileFileName);
 					ps.setInt(9, Integer.parseInt(editTourId));
 
 					count = ps.executeUpdate();
