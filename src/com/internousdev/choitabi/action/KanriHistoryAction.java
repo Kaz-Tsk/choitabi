@@ -134,8 +134,8 @@ public class KanriHistoryAction extends ActionSupport {
 			//ページネーション処理
 			ArrayList<PageObjectHistory> allPages = new ArrayList<PageObjectHistory>();
 			AllPagesC allp = new AllPagesC();
-			allPages = allp.paginate(searchList, 5);
-			this.setMaxPage(allp.getMaxPage(searchList, 5));
+			allPages = allp.paginate(searchList, searchList.size());
+			this.setMaxPage(allp.getMaxPage(searchList, searchList.size()));
 			this.setDisplayList(allPages.get(pageNum-1).getPaginatedList());
 
 			result = SUCCESS;
