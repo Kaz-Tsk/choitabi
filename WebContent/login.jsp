@@ -11,10 +11,13 @@
 	window.onunload = function(){};//FireFox
 	history.forward();
 </script>
+<!-- ブラウザバック防止の為の遷移処理 -->
+<s:if test="getLogoutparam()==1">
 	<script type="text/javascript">
-		location.href("index.jsp");
+		location.replace("login.jsp");
+		location.replace("login.jsp");
 	</script>
-
+</s:if>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <title>login</title>

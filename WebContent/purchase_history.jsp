@@ -16,35 +16,37 @@
 	</header>
 
 	<!-- body部分 -->
+	<div class= "main">
 	<div class="container">
-		<h2><s:text name="lang.purchase_history.history"/></h2>
-		<table class="history-table">
-
+		<h2>
+			<s:text name="lang.purchase_history.history" />
+		</h2>
+		<table>
 			<s:if test="%{!UserPurchaseHistoryList.isEmpty()}">
+				<tr>
+					<th class="table-head"><s:text name="lang.purchase_history.tourname" /></th>
+					<th class="table-head"><s:text name="lang.purchase_history.price" /></th>
+					<th class="table-head"><s:text name="lang.purchase_history.Number" /></th>
+					<th class="table-head"><s:text name="lang.purchase_history.totalprice" /></th>
+					<th class="table-head"><s:text name="lang.purchase_history.purchasedata" /></th>
+				</tr>
+				<s:iterator value="UserPurchaseHistoryList">
 					<tr>
-						<th><s:text name="lang.purchase_history.tourname"/></th>
-						<th><s:text name="lang.purchase_history.price"/></th>
-						<th><s:text name="lang.purchase_history.Number"/></th>
-						<th><s:text name="lang.purchase_history.totalprice"/></th>
-						<th><s:text name="lang.purchase_history.purchasedata"/></th>
-					</tr>
-					<s:iterator value="UserPurchaseHistoryList">
-					<tr>
-						<td><s:property value="tourName" /></td>
-						<td><s:property value="price" /></td>
-						<td><s:property value="counts" /></td>
-						<td><s:property value="subtotal" /></td>
-						<td><s:property value="registrationAt" /></td>
+						<td class="table-data"><s:property value="tourName" /></td>
+						<td class="table-data"><s:property value="price" /></td>
+						<td class="table-data"><s:property value="counts" /></td>
+						<td class="table-data"><s:property value="subtotal" /></td>
+						<td class="table-data"><s:property value="registrationAt" /></td>
 					</tr>
 				</s:iterator>
 			</s:if>
-
 			<s:else>
-				<div class="error-message">
-					<h1><s:text name="lang.purchase_history.Nohistory"/></h1>
-				</div>
+				<h1>
+					<s:text name="lang.purchase_history.Nohistory" />
+				</h1>
 			</s:else>
 		</table>
+	</div>
 	</div>
 
 
