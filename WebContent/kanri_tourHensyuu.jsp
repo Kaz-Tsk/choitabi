@@ -131,7 +131,7 @@
    </tr>
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.image_url"/></th>
-   		<td><s:property value="currentImg"/></td>
+   		<td><s:property value="currentImg"/><br><img src='<s:property value="currentImg"/>' height="20%" alt="現在の画像" /></td>
    		<td><input type="file" name="editFile" accept="imag/*">
    		    <br><font size="2px"><s:text name="lang.kanri_tourHensyuu.direction_for_image_url"/></font></td>
    </tr>
