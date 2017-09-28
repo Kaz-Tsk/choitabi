@@ -1,6 +1,5 @@
 package com.internousdev.choitabi.action;
 
-import java.io.File;
 import java.sql.SQLException;
 
 import com.internousdev.choitabi.dao.UpdateTourDAO;
@@ -61,11 +60,6 @@ public class UpdateTourAction extends ActionSupport{
 	public String editComment;
 
 	/**
-	 *編集後の画像URL
-	 * */
-	public String editImg;
-
-	/**
 	 *削除用チェックボックスの状態
 	 * */
 	private String deleteCheck = "false";
@@ -73,20 +67,11 @@ public class UpdateTourAction extends ActionSupport{
 
 	/*画像のアップデートに使う変数------------------*/
 
-	   /**
-     * 画像のファイルデータ
-     * */
-    private File editFile;
 
 	/**
 	 * 編集後ツアーの画像URL/名前
 	 * */
 	private String editFileFileName;
-
-	/**
-	 * 編集後ツアー画像のファイル形式
-	 * */
-	public String editFileContentType;
 
 
 
@@ -251,21 +236,6 @@ public class UpdateTourAction extends ActionSupport{
 		this.editComment = editComment;
 	}
 
-	/**
-	 *編集後の画像URLを取得するメソッド
-	 *@return editImg 編集後の画像URL
-	 * */
-	public String getEditImg(){
-		return editImg;
-	}
-
-	/**
-	 *編集後の画像URLを格納するメソッド
-	 *@param editImg 編集後の画像URL
-	 * */
-	public void setEditImg(String editImg){
-		this.editImg = editImg;
-	}
 
 	/*編集時のチェック項目（削除チェックボックス、エラーメッセージ）のgetter/setter--------------------*/
 
@@ -288,22 +258,6 @@ public class UpdateTourAction extends ActionSupport{
 
 	/*画像のアップデートに使う変数のgetter/setter--------------------------------*/
 
-	 /**
-     * 画像のファイルデータを取得するメソッド
-     * @return editFile 画像のファイルデータ
-     * */
-     public File getEditFile(){
-    	 return editFile;
-     }
-
-     /**
-      * 画像のファイルデータを格納するメソッド
-      * @return fileFile 画像のファイルデータ
-      * */
-      public void setEditFile(File editFile){
-     	 this.editFile =  editFile;
-      }
-
 
   	/**
   	 *新規ツアーの画像URLを取得するメソッド
@@ -321,21 +275,7 @@ public class UpdateTourAction extends ActionSupport{
   		this.editFileFileName = editFileFileName;
   	}
 
-  	/**
-  	 * 新規ツアー画像のファイル形式を取得するメソッド
-  	 * @return editFileContentType 新規ツアー画像のファイル形式
-  	 * */
-  	public String getEditFileContentType(){
-  		return editFileContentType;
-  	}
 
-  	/**
-  	 * 新規ツアー画像のファイル形式を格納するメソッド
-  	 * @return editFileContentType 新規ツアー画像のファイル形式
-  	 * */
-  	public void setEditFileContentType(String editFileContentType){
-  		this.editFileContentType  = editFileContentType;
-  	}
 
 
 

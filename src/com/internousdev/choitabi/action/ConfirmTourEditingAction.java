@@ -114,10 +114,6 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 	 * */
 	public String editComment;
 
-	/**
-	 *編集後の画像URL
-	 * */
-	public String editImg;
 
 	/**
 	 * 削除用チェックボックスの状態
@@ -169,10 +165,7 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 	 * */
 	public String defaultComment;
 
-	/**
-	 *フォームに表示する画像URL
-	 * */
-	public String defaultImg;
+
 
 
 	/*画像アップロード処理に必要な変数--------------------*/
@@ -268,7 +261,6 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 					defaultPrefectures = editPrefectures;
 					defaultTheme = editTheme;
 					defaultComment = editComment;
-					defaultImg = editImg;
 
 				}else{
 					/*価格・定員に関して、入力された情報が数値に変換できるかをチェックしています。
@@ -280,7 +272,7 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 					defaultPrefectures = editPrefectures;
 					defaultTheme = editTheme;
 					defaultComment = editComment;
-					defaultImg = editImg;
+
 
 
 					if(Integer.parseInt(editPrice) < 1){
@@ -297,7 +289,6 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 				defaultPrefectures = editPrefectures;
 				defaultTheme = editTheme;
 				defaultComment = editComment;
-				defaultImg = editImg;
 			}catch(NullPointerException e){
 				e.printStackTrace();
 			}
@@ -575,21 +566,6 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 		this.editComment = editComment;
 	}
 
-	/**
-	 *編集後の画像URLを取得するメソッド
-	 *@return editImg 編集後の画像URL
-	 * */
-	public String getEditImg(){
-		return editImg;
-	}
-
-	/**
-	 *編集後の画像URLを格納するメソッド
-	 *@param editImg 編集後の画像URL
-	 * */
-	public void setEditImg(String editImg){
-		this.editImg = editImg;
-	}
 
 
 	/*フォームに入る情報のgetter/setter---------------------------------------------*/
@@ -705,24 +681,6 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 	public void setDefaultComment(String defaultComment){
 		this.defaultComment = defaultComment;
 	}
-
-	/**
-	 *フォームに表示する画像URLを取得するメソッド
-	 *@return defaultImg フォームに表示する画像URL
-	 * */
-	public String getDefaultImg(){
-		return defaultImg;
-	}
-
-	/**
-	 *フォームに表示する画像URLを格納するメソッド
-	 *@param defaultImg フォームに表示する画像URL
-	 * */
-	public void setDefaultImg(String defaultImg){
-		this.defaultImg = defaultImg;
-	}
-
-
 
 
 
