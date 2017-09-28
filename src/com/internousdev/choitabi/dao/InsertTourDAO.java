@@ -65,7 +65,7 @@ public class InsertTourDAO {
 				ps.setString(5, newPrefectures);
 				ps.setString(6, newTheme);
 				ps.setString(7, newComment);
-				ps.setString(8, newImg);
+				ps.setString(8, "img/" + newImg);
 
 				count = ps.executeUpdate();
 
@@ -126,7 +126,7 @@ public class InsertTourDAO {
 			ps.setString(5, newPrefectures);
 			ps.setString(6, newTheme);
 			ps.setString(7, newComment);
-			ps.setString(8, newImg);
+			ps.setString(8, "img/" + newImg);
 
 			ResultSet rs = ps.executeQuery();
 

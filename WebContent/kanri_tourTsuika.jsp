@@ -35,7 +35,7 @@
 	<font color="red"><s:property value="errorMsg"/></font>
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、「確認」ボタンあります） -->
-	<form action="ConfirmTourInsertingAction">
+	<form action="ConfirmTourInsertingAction" method="post" enctype="multipart/form-data" >
 	<table>
 		<tr>
 			<th>
@@ -152,7 +152,7 @@
 			<th>
 				<s:text name="lang.kanri_tourTsuika.image_url"/>
 			</th>
-			<td><input type="file" name="newImg"></input>
+			<td><input type="file" name="file" accept="image/*" ></input>
 				<br>
 				<font size="2px"><s:text name="lang.kanri_tourTsuika.direction_for_image_url"/></font>
 			</td>

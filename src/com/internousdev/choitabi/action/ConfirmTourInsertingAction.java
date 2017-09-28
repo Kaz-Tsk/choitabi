@@ -1,5 +1,13 @@
 package com.internousdev.choitabi.action;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.struts2.interceptor.ServletRequestAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 
@@ -9,7 +17,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * @since 2017/09/08
  * @version 1.1
  * */
-public class ConfirmTourInsertingAction extends ActionSupport{
+public class ConfirmTourInsertingAction extends ActionSupport implements ServletRequestAware{
 
 	/*
 	 * フォームから入力されたデータに漏れや不適切な部分（価格に文字列が入っている場合など）がないかをチェックし、
@@ -57,15 +65,31 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	private String newComment;
 
 	/**
-	 * 新規ツアーの画像URL
-	 * */
-	private String newImg;
-
-	/**
 	 * エラーメッセージ
 	 * */
 	private String errorMsg="";
 
+	/*画像アップロード処理に必要な変数*/
+
+    /**
+     * リクエスト
+     */
+    private HttpServletRequest request;
+
+    /**
+     * 画像のファイルデータ
+     * */
+    private File file;
+
+	/**
+	 * 新規ツアーの画像URL/名前
+	 * */
+	private String fileFileName;
+
+	/**
+	 * 新規ツアー画像のファイル形式
+	 * */
+	public String fileContentType;
 
 
 	/**
@@ -76,9 +100,43 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 		String result = ERROR;
 
 		/*もし、画像に何も指定されていなかったら、デフォルトで「NO IMAGE」の画像を入れます。*/
-		if(newImg.equals("")){
-			newImg = "img/no_image.jpg";
+		if(file == null || file.length() == 0){
+			fileFileName = "no_image.jpg";
+		}else{
+
+			//テスト中-----------------------------------------------
+			/*送られてきたリクエストから、画像の送り先ディレクトリを取得する*/
+
+			try{
+				String sendTo = request.getServletContext().getRealPath("/");
+				System.out.println("ConfirmTourInsertingAction-取得コンテクスト：" + request.getServletContext().getRealPath("/"));
+
+				File destFile = new File(sendTo + "img", fileFileName);//このパスの場所に、この名前で画像を保存したい。
+				fileFileName = ".img/ " + fileFileName;
+				FileUtils.copyFile(file, destFile);
+
+				System.out.println("取得ファイル名：" + fileFileName);
+				System.out.println("取得ファイル形式：" + fileContentType);
+
+			} catch (IOException e1) {
+				System.out.println("画像のアップロードに失敗しました");
+				e1.printStackTrace();
+			} catch (NullPointerException e2){
+				System.out.println("画像のアップロードに失敗しました");
+				e2.printStackTrace();
+			}
 		}
+
+
+
+
+
+
+
+
+
+
+		//-------------------------------------------------
 
 		try{
 			if (	newTourName.equals("") || newPrice.equals("") || newDeparture.equals("") ||
@@ -226,16 +284,16 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	 *新規ツアーの画像URLを取得するメソッド
 	 *@return newImg 新規ツアーの画像URL
 	 * */
-	public String getNewImg(){
-		return newImg;
+	public String getFileFileName(){
+		return fileFileName;
 	}
 
 	/**
 	 *新規ツアーの画像URLを格納するメソッド
 	 *@param newImg 新規ツアーの画像URL
 	 * */
-	public void setNewImg(String newImg){
-		this.newImg = newImg;
+	public void setFileFileName(String fileFileName){
+		this.fileFileName = fileFileName;
 	}
 
 	/*エラーメッセージのgetter/setter------------------*/
@@ -256,6 +314,59 @@ public class ConfirmTourInsertingAction extends ActionSupport{
 	public void setErrorMsg(String errorMsg){
 		this.errorMsg = errorMsg;
 	}
+
+	/*画像アップロードに使う変数のgetter/setter----*/
+    /**リクエストを取得するメソッド
+     * @return request リクエスト
+     */
+    public HttpServletRequest getRequest() {
+        return request;
+    }
+
+    /**
+     * リクエストを格納するメソッド
+     * @param request リクエスト
+     */
+    public void setServletRequest(HttpServletRequest request) {
+        this.request = request;
+    }
+
+    /**
+     * 画像のファイルデータを取得するメソッド
+     * @return newImgFile 画像のファイルデータ
+     * */
+     public File getFile(){
+    	 return file;
+     }
+
+     /**
+      * 画像のファイルデータを格納するメソッド
+      * @return fileFile 画像のファイルデータ
+      * */
+      public void setFile(File file){
+     	 this.file =  file;
+      }
+
+  	/**
+  	 * 新規ツアー画像のファイル形式を取得するメソッド
+  	 * @return fileContentType 新規ツアー画像のファイル形式
+  	 * */
+  	public String getfileContentType(){
+  		return fileContentType;
+  	}
+
+  	/**
+  	 * 新規ツアー画像のファイル形式を格納するメソッド
+  	 * @return fileContentType 新規ツアー画像のファイル形式
+  	 * */
+  	public void setfileContentType(String fileContentType){
+  		this.fileContentType  = fileContentType;
+  	}
+
+
+
+
+
 
 
 
