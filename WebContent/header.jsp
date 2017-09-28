@@ -34,7 +34,11 @@
 			<div class="navi">
 				<div class="navibox"><a href="about.jsp" class="underline"><s:text name="lang.header.about"/></a></div>
 				<div class="navibox"><a href="Q&A.jsp" class="underline"><s:text name="lang.header.Q&A"/></a></div>
-				<div class="navibox"><a href="LogoutAction" class="underline"><s:text name="lang.header.logout"/></a></div>
+				<div class="navibox"><a href=""onclick="document.logout.submit();return false;" class="underline"><s:text name="lang.header.logout"/></a>
+					<form name="logout" method="post" action="LogoutAction">
+						<input type="hidden" name="logoutparam" value=1>
+					</form>
+				</div>
 				<div class="navibox"><a href="MypageAction" class="underline"><s:text name="lang.header.Mypage"/></a></div>
 				<div class="navibox"><a href="SelectCartAction" class="underline"><s:text name="lang.header.Cart"/></a></div>
 			</div>

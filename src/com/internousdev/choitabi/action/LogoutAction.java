@@ -38,6 +38,8 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	 */
 	private int userId;
 
+	private int logoutparam;
+
 	/**
 	 * ログアウトする為の実行メソッド
 	 * @return ログアウト成功でSUCCESS　失敗でERRORを返す
@@ -46,7 +48,7 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		String result = ERROR;
 		if(session.get("userId")!=null){
 			LogoutDAO dao = new LogoutDAO();
-			System.out.println(userId);
+			System.out.println(logoutparam);
 			dao.update((int)session.get("userId"),0);
 			session.clear();
 			if(session.isEmpty()){
@@ -102,5 +104,13 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 	 */
 	public int getUserId(){
 		return userId;
+	}
+
+	public int getLogoutparam(){
+		return logoutparam;
+	}
+
+	public void setLogoutparam(int logoutparam){
+		this.logoutparam = logoutparam;
 	}
 }

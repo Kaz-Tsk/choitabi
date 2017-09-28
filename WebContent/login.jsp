@@ -11,6 +11,10 @@
 	window.onunload = function(){};//FireFox
 	history.forward();
 </script>
+	<script type="text/javascript">
+		location.href("index.jsp");
+	</script>
+
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <title>login</title>
