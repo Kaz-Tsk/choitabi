@@ -69,12 +69,12 @@
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.image_url" /></th>
-				<td><s:property value="fileFileName" /></td>
+				<td><s:property value="NewFileFileName" /></td>
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.image_preview" />
 				</th>
-				<td><img src='<s:property value="fileFileName"/>' height="20%"
+				<td><img src='<s:property value="newFileFileName"/>' height="20%"
 					alt="ツアー画像" /></td>
 			</tr>
 		</table>
@@ -91,7 +91,9 @@
 		    <s:param name="newPrefectures" value="newPrefectures"/>
 		    <s:param name="newTheme" value="newTheme"/>
 		    <s:param name="newComment" value="newComment"/>
-			<s:param name="newImg" value="newImg"/>
+
+			<s:param name="newFileFileName" value="newFileFileName"/>
+			<s:param name="newFileContentType" value="newFileContentType"/>
 	    </s:url>'>
 			<input type="submit"
 			value='<s:text name="lang.kanri_tourTsuikaKakunin.complete" />' onSubmit="return double()"/><br>

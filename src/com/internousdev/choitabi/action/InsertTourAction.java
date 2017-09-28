@@ -1,6 +1,9 @@
 package com.internousdev.choitabi.action;
 
+import java.io.File;
 import java.sql.SQLException;
+
+import javax.servlet.http.HttpServletRequest;
 
 import com.internousdev.choitabi.dao.InsertTourDAO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -58,10 +61,32 @@ public class InsertTourAction extends ActionSupport {
 	 * */
 	private String newComment;
 
+//	/**
+//	 * 新規ツアーの画像URL
+//	 * */
+//	private String newImg;
+
+
+	/*画像のアップロードに使う変数*/
+    /**
+     * リクエスト
+     */
+    private HttpServletRequest request;
+
+    /**
+     * 画像のファイルデータ
+     * */
+    private File newFile;
+
 	/**
-	 * 新規ツアーの画像URL
+	 * 新規ツアーの画像URL/名前
 	 * */
-	private String newImg;
+	private String newFileFileName;
+
+	/**
+	 * 新規ツアー画像のファイル形式
+	 * */
+	public String newFileContentType;
 
 
 	/**
@@ -75,9 +100,11 @@ public class InsertTourAction extends ActionSupport {
 		String result = ERROR;
 		int count = 0;
 		InsertTourDAO itdao = new InsertTourDAO();
+		System.out.println("InsertTourAction-取得ファイル名：" + newFileFileName);
+		newFileFileName = newFileFileName.replace("./img/","");
 
 		count = itdao.insertTour(newTourName, newPrice,
-	                            		 newDeparture, newRegion, newPrefectures, newTheme, newComment, newImg);/*←（）内は全部引数です*/
+	                            		 newDeparture, newRegion, newPrefectures, newTheme, newComment, newFileFileName);/*←（）内は全部引数です*/
 
 		if(count > 0){
 			result = SUCCESS;
@@ -204,21 +231,72 @@ public class InsertTourAction extends ActionSupport {
 		this.newComment = newComment;
 	}
 
-	/**
-	 *新規ツアーの画像URLを取得するメソッド
-	 *@return newImg 新規ツアーの画像URL
-	 * */
-	public String getNewImg(){
-		return newImg;
-	}
+//	/**
+//	 *新規ツアーの画像URLを取得するメソッド
+//	 *@return newImg 新規ツアーの画像URL
+//	 * */
+//	public String getNewImg(){
+//		return newImg;
+//	}
+//
+//	/**
+//	 *新規ツアーの画像URLを格納するメソッド
+//	 *@param newImg 新規ツアーの画像URL
+//	 * */
+//	public void setNewImg(String newImg){
+//		this.newImg = newImg;
+//	}
 
-	/**
-	 *新規ツアーの画像URLを格納するメソッド
-	 *@param newImg 新規ツアーの画像URL
-	 * */
-	public void setNewImg(String newImg){
-		this.newImg = newImg;
-	}
+	/*画像のアップロードに使う変数のgetter/setter-----*/
+    /**
+     * 画像のファイルデータを取得するメソッド
+     * @return newFile 画像のファイルデータ
+     * */
+     public File getNewFile(){
+    	 return newFile;
+     }
+
+     /**
+      * 画像のファイルデータを格納するメソッド
+      * @return fileFile 画像のファイルデータ
+      * */
+      public void setNewFile(File newFile){
+     	 this.newFile =  newFile;
+      }
+
+
+  	/**
+  	 *新規ツアーの画像URLを取得するメソッド
+  	 *@return newFileFileName 新規ツアーの画像URL
+  	 * */
+  	public String getNewFileFileName(){
+  		return newFileFileName;
+  	}
+
+  	/**
+  	 *新規ツアーの画像URLを格納するメソッド
+  	 *@param newFileFileName 新規ツアーの画像URL
+  	 * */
+  	public void setNewFileFileName(String newFileFileName){
+  		this.newFileFileName = newFileFileName;
+  	}
+
+  	/**
+  	 * 新規ツアー画像のファイル形式を取得するメソッド
+  	 * @return newFileContentType 新規ツアー画像のファイル形式
+  	 * */
+  	public String getNewFileContentType(){
+  		return newFileContentType;
+  	}
+
+  	/**
+  	 * 新規ツアー画像のファイル形式を格納するメソッド
+  	 * @return newFileContentType 新規ツアー画像のファイル形式
+  	 * */
+  	public void setNewFileContentType(String newFileContentType){
+  		this.newFileContentType  = newFileContentType;
+  	}
+
 
 
 

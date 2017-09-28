@@ -79,17 +79,17 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
     /**
      * 画像のファイルデータ
      * */
-    private File file;
+    private File newFile;
 
 	/**
 	 * 新規ツアーの画像URL/名前
 	 * */
-	private String fileFileName;
+	private String newFileFileName;
 
 	/**
 	 * 新規ツアー画像のファイル形式
 	 * */
-	public String fileContentType;
+	public String newFileContentType;
 
 
 	/**
@@ -100,8 +100,8 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 		String result = ERROR;
 
 		/*もし、画像に何も指定されていなかったら、デフォルトで「NO IMAGE」の画像を入れます。*/
-		if(file == null || file.length() == 0){
-			fileFileName = "no_image.jpg";
+		if(newFile == null || newFile.length() == 0){
+			newFileFileName = "img/no_image.jpg";
 		}else{
 
 			//テスト中-----------------------------------------------
@@ -111,12 +111,12 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 				String basePath = request.getServletContext().getRealPath("/");
 				System.out.println("ConfirmTourInsertingAction-取得コンテクスト：" + request.getServletContext().getRealPath("/"));
 
-				File destFile = new File(basePath + "img", fileFileName);//このパスの場所に、この名前で画像を保存したい。
-				FileUtils.copyFile(file, destFile);
-				fileFileName = "./img/" + fileFileName;
+				File destFile = new File(basePath + "img", newFileFileName);//このパスの場所に、この名前で画像を保存したい。
+				FileUtils.copyFile(newFile, destFile);
+				newFileFileName = "./img/" + newFileFileName;
 
-				System.out.println("取得ファイル名：" + fileFileName);
-				System.out.println("取得ファイル形式：" + fileContentType);
+				System.out.println("取得ファイル名：" + newFileFileName);
+				System.out.println("取得ファイル形式：" + newFileContentType);
 
 			} catch (IOException e1) {
 				System.out.println("画像のアップロードに失敗しました");
@@ -126,12 +126,6 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 				e2.printStackTrace();
 			}
 		}
-
-
-
-
-
-
 
 
 
@@ -280,21 +274,7 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 		this.newComment = newComment;
 	}
 
-	/**
-	 *新規ツアーの画像URLを取得するメソッド
-	 *@return newImg 新規ツアーの画像URL
-	 * */
-	public String getFileFileName(){
-		return fileFileName;
-	}
 
-	/**
-	 *新規ツアーの画像URLを格納するメソッド
-	 *@param newImg 新規ツアーの画像URL
-	 * */
-	public void setFileFileName(String fileFileName){
-		this.fileFileName = fileFileName;
-	}
 
 	/*エラーメッセージのgetter/setter------------------*/
 
@@ -333,34 +313,51 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 
     /**
      * 画像のファイルデータを取得するメソッド
-     * @return newImgFile 画像のファイルデータ
+     * @return newFile 画像のファイルデータ
      * */
-     public File getFile(){
-    	 return file;
+     public File getNewFile(){
+    	 return newFile;
      }
 
      /**
       * 画像のファイルデータを格納するメソッド
       * @return fileFile 画像のファイルデータ
       * */
-      public void setFile(File file){
-     	 this.file =  file;
+      public void setNewFile(File newFile){
+     	 this.newFile =  newFile;
       }
+
+
+  	/**
+  	 *新規ツアーの画像URLを取得するメソッド
+  	 *@return newFileFileName 新規ツアーの画像URL
+  	 * */
+  	public String getNewFileFileName(){
+  		return newFileFileName;
+  	}
+
+  	/**
+  	 *新規ツアーの画像URLを格納するメソッド
+  	 *@param newFileFileName 新規ツアーの画像URL
+  	 * */
+  	public void setNewFileFileName(String newFileFileName){
+  		this.newFileFileName = newFileFileName;
+  	}
 
   	/**
   	 * 新規ツアー画像のファイル形式を取得するメソッド
-  	 * @return fileContentType 新規ツアー画像のファイル形式
+  	 * @return newFileContentType 新規ツアー画像のファイル形式
   	 * */
-  	public String getfileContentType(){
-  		return fileContentType;
+  	public String getNewFileContentType(){
+  		return newFileContentType;
   	}
 
   	/**
   	 * 新規ツアー画像のファイル形式を格納するメソッド
-  	 * @return fileContentType 新規ツアー画像のファイル形式
+  	 * @return newFileContentType 新規ツアー画像のファイル形式
   	 * */
-  	public void setfileContentType(String fileContentType){
-  		this.fileContentType  = fileContentType;
+  	public void setNewFileContentType(String newFileContentType){
+  		this.newFileContentType  = newFileContentType;
   	}
 
 

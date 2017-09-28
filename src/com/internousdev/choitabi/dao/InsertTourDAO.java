@@ -31,13 +31,13 @@ public class InsertTourDAO {
  * @return count 変更の完了したデータ数
  * */
 	public int insertTour(String newTourName,String newPrice, String newDeparture,
-								String newRegion, String newPrefectures,String newTheme, String newComment, String newImg){
+								String newRegion, String newPrefectures,String newTheme, String newComment, String newFileFileName){
 
 		int count = 0;
 
 		try{
 
-			if(DupulicationCheck(newTourName, newPrice, newDeparture, newRegion, newPrefectures, newTheme, newComment, newImg) == false ){
+			if(DupulicationCheck(newTourName, newPrice, newDeparture, newRegion, newPrefectures, newTheme, newComment, newFileFileName) == false ){
 				return count;
 
 			}else{
@@ -65,7 +65,7 @@ public class InsertTourDAO {
 				ps.setString(5, newPrefectures);
 				ps.setString(6, newTheme);
 				ps.setString(7, newComment);
-				ps.setString(8, "img/" + newImg);
+				ps.setString(8, "img/" + newFileFileName);
 
 				count = ps.executeUpdate();
 
@@ -97,7 +97,7 @@ public class InsertTourDAO {
 
 
 	public boolean DupulicationCheck(String newTourName,String newPrice, String newDeparture,
-			String newRegion, String newPrefectures,String newTheme, String newComment, String newImg){
+			String newRegion, String newPrefectures,String newTheme, String newComment, String newFileFileName){
 
 		boolean result = false;
 
@@ -126,7 +126,7 @@ public class InsertTourDAO {
 			ps.setString(5, newPrefectures);
 			ps.setString(6, newTheme);
 			ps.setString(7, newComment);
-			ps.setString(8, "img/" + newImg);
+			ps.setString(8, "img/" + newFileFileName);
 
 			ResultSet rs = ps.executeQuery();
 
