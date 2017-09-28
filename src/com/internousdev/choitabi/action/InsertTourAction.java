@@ -102,6 +102,7 @@ public class InsertTourAction extends ActionSupport {
 		InsertTourDAO itdao = new InsertTourDAO();
 		System.out.println("InsertTourAction-取得ファイル名：" + newFileFileName);
 		newFileFileName = newFileFileName.replace("./img/","");
+		newFileFileName = newFileFileName.replace("img/","");
 
 		count = itdao.insertTour(newTourName, newPrice,
 	                            		 newDeparture, newRegion, newPrefectures, newTheme, newComment, newFileFileName);/*←（）内は全部引数です*/

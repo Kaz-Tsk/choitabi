@@ -101,7 +101,7 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 
 		/*もし、画像に何も指定されていなかったら、デフォルトで「NO IMAGE」の画像を入れます。*/
 		if(newFile == null || newFile.length() == 0){
-			newFileFileName = "no_image.jpg";
+			newFileFileName = "img/no_image.jpg";
 		}else{
 
 			//テスト中-----------------------------------------------
