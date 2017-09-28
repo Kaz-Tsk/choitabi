@@ -16,37 +16,42 @@
 	</header>
 
 	<!-- body部分 -->
-	<div class= "main">
-	<div class="container">
-		<h2>
-			<s:text name="lang.purchase_history.history" />
-		</h2>
-		<table>
-			<s:if test="%{!UserPurchaseHistoryList.isEmpty()}">
-				<tr>
-					<th class="table-head"><s:text name="lang.purchase_history.tourname" /></th>
-					<th class="table-head"><s:text name="lang.purchase_history.price" /></th>
-					<th class="table-head"><s:text name="lang.purchase_history.Number" /></th>
-					<th class="table-head"><s:text name="lang.purchase_history.totalprice" /></th>
-					<th class="table-head"><s:text name="lang.purchase_history.purchasedata" /></th>
-				</tr>
-				<s:iterator value="UserPurchaseHistoryList">
+	<div class="main">
+		<div class="container">
+			<h2>
+				<s:text name="lang.purchase_history.history" />
+			</h2>
+			<table>
+				<s:if test="%{!UserPurchaseHistoryList.isEmpty()}">
 					<tr>
-						<td class="table-data"><s:property value="tourName" /></td>
-						<td class="table-data"><s:property value="price" /></td>
-						<td class="table-data"><s:property value="counts" /></td>
-						<td class="table-data"><s:property value="subtotal" /></td>
-						<td class="table-data"><s:property value="registrationAt" /></td>
+						<th class="table-head"><s:text
+								name="lang.purchase_history.tourname" /></th>
+						<th class="table-head"><s:text
+								name="lang.purchase_history.price" /></th>
+						<th class="table-head"><s:text
+								name="lang.purchase_history.Number" /></th>
+						<th class="table-head"><s:text
+								name="lang.purchase_history.totalprice" /></th>
+						<th class="table-head"><s:text
+								name="lang.purchase_history.purchasedata" /></th>
 					</tr>
-				</s:iterator>
-			</s:if>
-			<s:else>
-				<h1>
-					<s:text name="lang.purchase_history.Nohistory" />
-				</h1>
-			</s:else>
-		</table>
-	</div>
+					<s:iterator value="UserPurchaseHistoryList">
+						<tr>
+							<td class="table-data"><s:property value="tourName" /></td>
+							<td class="table-data"><s:property value="price" /></td>
+							<td class="table-data"><s:property value="counts" /></td>
+							<td class="table-data"><s:property value="subtotal" /></td>
+							<td class="table-data"><s:property value="registrationAt" /></td>
+						</tr>
+					</s:iterator>
+				</s:if>
+				<s:else>
+					<h1>
+						<s:text name="lang.purchase_history.Nohistory" />
+					</h1>
+				</s:else>
+			</table>
+		</div>
 	</div>
 
 
