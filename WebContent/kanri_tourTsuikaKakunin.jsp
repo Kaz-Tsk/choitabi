@@ -69,12 +69,12 @@
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.image_url" /></th>
-				<td><s:property value="newImg" /></td>
+				<td><s:property value="fileFileName" /></td>
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.image_preview" />
 				</th>
-				<td><img src='<s:property value="newImg"/>' height="20%"
+				<td><img src='<s:property value="fileFileName"/>' height="20%"
 					alt="ツアー画像" /></td>
 			</tr>
 		</table>

@@ -108,12 +108,12 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 			/*送られてきたリクエストから、画像の送り先ディレクトリを取得する*/
 
 			try{
-				String sendTo = request.getServletContext().getRealPath("/");
+				String basePath = request.getServletContext().getRealPath("/");
 				System.out.println("ConfirmTourInsertingAction-取得コンテクスト：" + request.getServletContext().getRealPath("/"));
 
-				File destFile = new File(sendTo + "img", fileFileName);//このパスの場所に、この名前で画像を保存したい。
-				fileFileName = ".img/ " + fileFileName;
+				File destFile = new File(basePath + "img", fileFileName);//このパスの場所に、この名前で画像を保存したい。
 				FileUtils.copyFile(file, destFile);
+				fileFileName = "./img/" + fileFileName;
 
 				System.out.println("取得ファイル名：" + fileFileName);
 				System.out.println("取得ファイル形式：" + fileContentType);
