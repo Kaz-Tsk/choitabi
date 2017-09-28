@@ -1,9 +1,11 @@
 package com.internousdev.choitabi.action;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.choitabi.dto.CartDTO;
 import com.internousdev.util.creditcard.manager.CreditUtil;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -57,6 +59,8 @@ import com.opensymphony.xwork2.ActionSupport;
 		 */
 		private String creditBrand;
 
+		private ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
+
 
 		/**
 		 * 実行メソッド クレジットの種類を判別
@@ -66,12 +70,13 @@ import com.opensymphony.xwork2.ActionSupport;
 		 * @version 1.1
 		 */
 		public String execute() {
+			System.out.println("カートリスト" + cartList);
 
 			if(creditNumber.startsWith("4")){
 				creditId = 1;
 			}else if(creditNumber.startsWith("5")){
 				creditId = 2;
-			} else if(creditNumber.startsWith("3")){
+			}else if(creditNumber.startsWith("3")){
 				creditId = 3;
 			}else{
 				errmsg1="*入力された情報に間違いがあります。";
@@ -250,6 +255,14 @@ import com.opensymphony.xwork2.ActionSupport;
 		 */
 		public void setCreditBrand(String creditBrand) {
 			this.creditBrand = creditBrand;
+		}
+
+		public ArrayList<CartDTO> getCartList(){
+			return this.cartList;
+		}
+
+		public void setCartList(ArrayList<CartDTO> cartList){
+			this.cartList = cartList;
 		}
 
 	}

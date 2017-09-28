@@ -25,28 +25,24 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   type="text/javascript"></script>
 </head>
-<body style="text-align:center">
-  <script type="text/javascript">
+<body>
+	<script type="text/javascript">
       window.onunload = function() {
       };//Firefoxにも適用する場合には記述する
       history.forward();
     </script>
-  <div id="pagecover">
-    <header>
-      <s:include value="header.jsp"></s:include>
-    </header>
-    <div class="main">
-      <br>
-      <h1>
-        <span class="maintext"><s:text
-            name="lang.pay_comp.text1" /></span>
-      </h1>
-      <h2>
-        <s:text name="lang.pay_comp.text2"/>
-      </h2>
-      <br>
-    </div>
-    <script type="text/javascript">
+	<div id="pagecover">
+		<header>
+			<s:include value="header.jsp"></s:include>
+		</header>
+		<div class="main">
+			<br>
+			<h1>
+				<span class="maintext"><s:text name="lang.pay_comp.text1" /></span>
+			</h1>
+			<br>
+		</div>
+		<script type="text/javascript">
           //History API が使えるブラウザかどうかをチェック
           if (window.history && window.history.pushState) {
             //. ブラウザ履歴に１つ追加
@@ -62,8 +58,8 @@
             });
           }
         </script>
-  </div>
-<footer style="text-align:center;">
+	</div>
+	<footer style="text-align: center;">
 		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
 </body>

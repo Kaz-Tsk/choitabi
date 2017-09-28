@@ -60,8 +60,9 @@ System.out.println("取得ID" + user_id);
 
 			//アレイリストに情報を入れる
 			cartList = cartDao.selectCart(user_id);
-
+System.out.println("カーとリスト："+ cartList);
 			if(cartList.size()>0){
+				System.out.println("テスト");
 				for(int i = 0; i <cartList.size(); i++) {
 
 					total_price = total_price.add(cartList.get(i).getPrice().multiply(BigDecimal.valueOf(cartList.get(i).getOrder_count())));

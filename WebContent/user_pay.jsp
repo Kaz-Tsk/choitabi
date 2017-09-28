@@ -157,6 +157,7 @@
 
 		<!-- ログイン時 -->
 		<s:if test="%{cartList!=null && #session.userId != null}">
+		${cartList}
 			<s:form action="CheckCreditAction" name="paymentForm" theme="simple">
 				<div id="container" style="margin-top: 40px;">
 					<div class="panel-title">

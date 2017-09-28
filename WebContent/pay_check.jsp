@@ -24,8 +24,7 @@
 
 <title><s:text name="lang.pay_check.title" /></title>
 <script type="text/javascript" src="./js/cart_check.js"></script>
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css"  href="css/pay_check.css">
 </head>
 <body>
 	<div id="pagecover">
@@ -36,7 +35,6 @@
 		<div class="mainbox">
 			<h4 style="text-decoration: underline;">
 				<s:text name="lang.pay_check.text" />
-				&nbsp;
 				<s:text name="lang.pay_check.text2" />
 			</h4>
 			<br>
@@ -67,13 +65,11 @@
 							</tr>
 
 						</s:iterator>
+						<tr>
+							<th><s:text name="lang.pay_check.cart.totalprice" /></th>
+							<td><fmt:formatNumber value="${total_price}" pattern="###,###,###" /></td>
+						</tr>
 					</table>
-					<h2>
-						<s:text name="lang.pay_check.breakdown" />
-					</h2>
-					<h2>
-						<s:text name="lang.pay_check.methodofpayment" />
-					</h2>
 					<table class="table table borderd">
 						<tr>
 							<th class="col-md-4"><s:text
@@ -81,7 +77,6 @@
 							<td class="col-md-8"><s:text name="lang.pay_check.credit" /><br></td>
 						</tr>
 					</table>
-					<fmt:formatNumber value="${total_price}" pattern="###,###,###" />
 				</div>
 			</div>
 		</div>
