@@ -14,8 +14,8 @@
 <!-- ブラウザバック防止の為の遷移処理 -->
 <s:if test="getLogoutparam()==1">
 	<script type="text/javascript">
-		location.replace("login.jsp");
-		location.replace("login.jsp");
+		location.href="login.jsp"
+		location.href="login.jsp"
 	</script>
 </s:if>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
