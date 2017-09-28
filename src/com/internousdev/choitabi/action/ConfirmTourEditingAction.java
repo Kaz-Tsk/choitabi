@@ -216,20 +216,15 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 
 			try{
 				String basePath = request.getServletContext().getRealPath("/");
-				System.out.println("ConfirmTourEditingAction-取得コンテクスト：" + request.getServletContext().getRealPath("/"));
 
 				File destFile = new File(basePath + "img", editFileFileName);//このパスの場所に、この名前で画像を保存したい。
 				FileUtils.copyFile(editFile, destFile);
 				editFileFileName = "./img/" + editFileFileName;
 
-				System.out.println("取得ファイル名：" + editFileFileName);
-				System.out.println("取得ファイル形式：" + editFileContentType);
 
 			} catch (IOException e1) {
-				System.out.println("画像のアップロードに失敗しました");
 				e1.printStackTrace();
 			} catch (NullPointerException e2){
-				System.out.println("画像のアップロードに失敗しました");
 				e2.printStackTrace();
 			}
 		}

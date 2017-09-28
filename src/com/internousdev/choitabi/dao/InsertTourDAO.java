@@ -37,6 +37,7 @@ public class InsertTourDAO {
 
 		try{
 
+			/*DupulicationCheck...*/
 			if(DupulicationCheck(newTourName, newPrice, newDeparture, newRegion, newPrefectures, newTheme, newComment, newFileFileName) == false ){
 				return count;
 

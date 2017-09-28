@@ -58,12 +58,6 @@ public class InsertTourAction extends ActionSupport {
 	 * */
 	private String newComment;
 
-//	/**
-//	 * 新規ツアーの画像URL
-//	 * */
-//	private String newImg;
-
-
 	/**
 	 * 新規ツアーの画像URL/名前
 	 * */
@@ -82,7 +76,7 @@ public class InsertTourAction extends ActionSupport {
 		String result = ERROR;
 		int count = 0;
 		InsertTourDAO itdao = new InsertTourDAO();
-		System.out.println("InsertTourAction-取得ファイル名：" + newFileFileName);
+
 		newFileFileName = newFileFileName.replace("./img/","");
 		newFileFileName = newFileFileName.replace("img/","");
 
