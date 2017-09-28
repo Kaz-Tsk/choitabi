@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<link rel="stylesheet" type="text/css" href="css/cart_check.css">
 <meta charset="UTF-8">
 
 <!-- 国際化 ※ここでは国を判別しています。
@@ -24,7 +23,6 @@
 
 <title><s:text name="lang.pay_check.title" /></title>
 <script type="text/javascript" src="./js/cart_check.js"></script>
-<link rel="stylesheet" type="text/css"  href="css/pay_check.css">
 </head>
 <body>
 	<div id="pagecover">
@@ -43,12 +41,12 @@
 					<h2>
 						<s:text name="lang.pay_check.Itemsinabasket" />
 					</h2>
-					<table class="table table borderd">
+					<table class="table1">
 						<tr>
-							<th class="col-md-5"><s:text name="lang.pay_check.tour" /></th>
-							<th class="col-md-2"><s:text name="lang.pay_check.price" /></th>
-							<th class="col-md-2"><s:text name="lang.pay_check.quantity" /></th>
-							<th class="col-md-3"><s:text name="lang.pay_check.subtotal" /></th>
+							<th class="th"><s:text name="lang.pay_check.tour" /></th>
+							<th class="th"><s:text name="lang.pay_check.price" /></th>
+							<th class="th"><s:text name="lang.pay_check.quantity" /></th>
+							<th class="th"><s:text name="lang.pay_check.subtotal" /></th>
 						</tr>
 
 						<s:iterator value="cartList">
@@ -63,18 +61,22 @@
 								<td><fmt:formatNumber value="${sub_total}"
 										pattern="###,###,###" /> <s:text name="lang.cart.yen" /></td>
 							</tr>
-
 						</s:iterator>
-						<tr>
-							<th><s:text name="lang.pay_check.cart.totalprice" /></th>
-							<td><fmt:formatNumber value="${total_price}" pattern="###,###,###" /></td>
-						</tr>
 					</table>
-					<table class="table table borderd">
+					<hr>
+					<table class="table2">
+					<tr><th><s:text name="lang.pay_check.cart.totalprice" /></th>
+							<td><fmt:formatNumber value="${total_price}" pattern="###,###,###" /><s:text name="lang.cart.yen" /></td></tr>
+					</table>
+					<hr>
+					<table class="table3">
 						<tr>
-							<th class="col-md-4"><s:text
-									name="lang.pay_check.methodofpayment" /></th>
-							<td class="col-md-8"><s:text name="lang.pay_check.credit" /><br></td>
+							<th><s:text name="lang.pay_check.methodofpayment" /></th>
+							<td><s:text name="lang.pay_check.credit" /><br></td>
+						</tr>
+						<tr>
+							<th><s:text name="lang.pay_check.cardnumber" /></th>
+							<td><fmt:formatNumber value="${total_price}" pattern="###,###,###" /></td>
 						</tr>
 					</table>
 				</div>
