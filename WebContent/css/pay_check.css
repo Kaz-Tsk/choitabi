@@ -1,4 +1,4 @@
-..container-fluid{
+.container-fluid{
 	width:1000px;
 	height:100px;
 }
@@ -15,7 +15,7 @@
  }
 
  .table3{
- 	width:410px;
+ 	width:580px;
 	height:100px;
  }
 
@@ -24,7 +24,7 @@
 }
 
 .button{
-	margin-top:350px;
+	margin-top:340px;
 	margin-left:30px;
 }
 
