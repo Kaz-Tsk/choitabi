@@ -156,6 +156,7 @@
 	    <a href='
 		    <s:url action="IndicateTourListAction">
 		    		<s:param name="selectWord" value="selectWord"/>
+		    		<s:param name="selectRegion" value="selectRegion"/>
 		    		<s:param name="currentPage" value="currentPage-1"/>
 		    </s:url>'>
 		    ＜＜
@@ -171,6 +172,7 @@
 	    <a href='
 		    <s:url action="IndicateTourListAction">
 		    		<s:param name="selectWord" value="selectWord"/>
+		    		<s:param name="selectRegion" value="selectRegion"/>
 		    		<s:param name="currentPage" value="currentPage+1"/>
 		    </s:url>'>
 		    ＞＞
