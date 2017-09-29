@@ -33,30 +33,91 @@
 		<s:hidden name="currentPage" value="1"/>
 		<input type="submit" value='<s:text name="lang.kanri_tourList.search"/>'>
 	</form>
+	<!-- テーマで探す -->
 	---------------<s:text name="lang.kanri_tourList.search_tour_by_theme"/>---------------<br>
+	<!-- すべて -->
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="''"/></s:url>'>
+    <s:param name="selectTheme" value="''"/>
+    <s:param name="selectRegion" value="''" />
+    </s:url>'>
     <s:text name="lang.kanri_tourList.all"/>
     </a>
 	・
+	<!-- グルメ -->
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="'グルメ'"/></s:url>'>
+    <s:param name="selectTheme" value="'グルメ'"/>
+    <s:param name="selectRegion" value="''" />
+    </s:url>'>
     <s:text name="lang.kanri_tourList.gourmet"/>
     </a>
     ・
+    <!-- 名所 -->
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="'名所'"/></s:url>'>
+    <s:param name="selectTheme" value="'名所'"/>
+    <s:param name="selectRegion" value="''" />
+    </s:url>'>
     <s:text name="lang.kanri_tourList.place"/>
     </a>
     ・
+    <!-- アクティビティ -->
     <a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="'アクティビティ'"/></s:url>'>
+    <s:param name="selectTheme" value="'アクティビティ'"/>
+    <s:param name="selectRegion" value="''" />
+    </s:url>'>
     <s:text name="lang.kanri_tourList.activity"/>
     </a>
+    <br>
+    <!-- エリアで探す -->
+    ---------------<s:text name="lang.kanri_tourList.search_tour_by_region"/>---------------<br>
+    <!-- すべて -->
+	<a href='<s:url action="IndicateTourListAction">
+    <s:param name="currentPage" value="1"/>
+    <s:param name="selectTheme" value="''"/>
+    <s:param name="selectRegion" value="''" />
+    </s:url>'>
+    <s:text name="lang.kanri_tourList.all"/>
+    </a>
+	・
+	<!-- 東北 -->
+	<a href='<s:url action="IndicateTourListAction">
+    <s:param name="currentPage" value="1"/>
+    <s:param name="selectTheme" value="''"/>
+     <s:param name="selectRegion" value="'東北'"/>
+    </s:url>'>
+    <s:text name="lang.kanri_tourList.tohoku"/>
+    </a>
+    ・
+    <!-- 関東 -->
+	<a href='<s:url action="IndicateTourListAction">
+    <s:param name="currentPage" value="1"/>
+    <s:param name="selectTheme" value="''"/>
+    <s:param name="selectRegion" value="'関東'"/>
+    </s:url>'>
+    <s:text name="lang.kanri_tourList.kanto"/>
+    </a>
+    ・
+    <!-- 関西 -->
+    <a href='<s:url action="IndicateTourListAction">
+    <s:param name="currentPage" value="1"/>
+    <s:param name="selectTheme" value="''"/>
+    <s:param name="selectRegion" value="'関西'"/>
+    </s:url>'>
+    <s:text name="lang.kanri_tourList.kansai"/>
+    </a>
+    ・
+    <!-- 九州 -->
+    <a href='<s:url action="IndicateTourListAction">
+    <s:param name="currentPage" value="1"/>
+    <s:param name="selectTheme" value="''"/>
+    <s:param name="selectRegion" value="'九州'"/>
+    </s:url>'>
+    <s:text name="lang.kanri_tourList.kyushu"/>
+    </a>
+    <br>
 
 
 <!-- ツアーの情報が表示されるテーブルです -->

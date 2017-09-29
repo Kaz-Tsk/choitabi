@@ -31,7 +31,7 @@ public class SelectTourListDAO {
  * @return allTourLis 条件に該当するすべてのツアー情報を格納したDTOのアレイリスト
  *
  * */
-	public ArrayList<SelectTourDTO> selectTourList(String selectWord, String selectTheme){
+	public ArrayList<SelectTourDTO> selectTourList(String selectWord, String selectTheme, String selectRegion){
 
 		/*呼び出し元に返すツアー情報のリストを作ります*/
 			ArrayList<SelectTourDTO> allTourList = new ArrayList<SelectTourDTO>();
@@ -40,10 +40,11 @@ public class SelectTourListDAO {
 			/*SQLに接続し、コマンドを実行してもらいます*/
 			DBConnector dbc = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "choitabi", "root", "mysql");
 			Connection con = dbc.getConnection();
-			String sql = "SELECT * FROM tour WHERE tour_name LIKE ? AND theme LIKE ?";
+			String sql = "SELECT * FROM tour WHERE tour_name LIKE ? AND theme LIKE ? AND region LIKE ?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, "%" + selectWord + "%");
 			ps.setString(2, "%" + selectTheme + "%");
+			ps.setString(3, "%" + selectRegion + "%");
 			ResultSet rs = ps.executeQuery();
 
 

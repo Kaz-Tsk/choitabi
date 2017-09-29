@@ -17,14 +17,9 @@ import com.opensymphony.xwork2.ActionSupport;
 public class IndicateTourListAction extends ActionSupport{
 
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 2211634393797926367L;
-
-	/**
 	 * シリアルID
 	 */
-
+	private static final long serialVersionUID = 2211634393797926367L;
 
 	/**
 	 * 検索ワード
@@ -35,6 +30,12 @@ public class IndicateTourListAction extends ActionSupport{
 	 * 検索テーマ
 	 * */
 	private String selectTheme = "";
+
+	/**
+	 * 検索エリア
+	 * */
+	private String selectRegion = "";
+
 
 	/**
 	 * 全件分のツアーリスト
@@ -68,7 +69,7 @@ public class IndicateTourListAction extends ActionSupport{
 
 		/*DAOでツアーの一覧を持ってきます*/
 		SelectTourListDAO stldao = new SelectTourListDAO();
-		allTourList = stldao.selectTourList(selectWord, selectTheme);
+		allTourList = stldao.selectTourList(selectWord, selectTheme, selectRegion);
 
 		/*ここからページネート処理*/
 		TourListPagination tlp = new TourListPagination();
@@ -123,6 +124,24 @@ public class IndicateTourListAction extends ActionSupport{
 	public void setSelectTheme(String selectTheme){
 		this.selectTheme = selectTheme;
 	}
+
+	/**
+	 * 検索エリアを取得するメソッド
+	 * @return selectRegion 検索エリア
+	 * */
+	public String getSelectRegion(){
+		return selectRegion;
+	}
+
+	/**
+	 * 検索エリアを格納するメソッド
+	 * @param selectRegion 検索エリア
+	 * */
+	public void setSelectRegion(String selectRegion){
+		this.selectRegion = selectRegion;
+	}
+
+
 
 	/**
 	 * 全件分のツアーリストを取得するメソッド
