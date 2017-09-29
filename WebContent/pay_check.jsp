@@ -24,14 +24,18 @@
 <title><s:text name="lang.pay_check.title" /></title>
 <script type="text/javascript" src="./js/cart_check.js"></script>
 
+<!--pay_check.cssリンク -------------------------------------------------- -->
 <link rel = "stylesheet" type= "text/css" href = "css/pay_check.css">
 </head>
 <body>
 	<div id="pagecover">
+
+<!-- ヘッダー-------------------------------------------- -->
 		<header>
 			<s:include value="header.jsp"></s:include>
 		</header>
 
+<!-- 決済内容確認項目---------------------------------------------------------------------------------------------------------------------------------- -->
 		<div class="mainbox">
 			<br>
 			<div class="container-fluid">
@@ -78,6 +82,8 @@
 			</div>
 		</div>
 		<br>
+
+<!-- 購入ボタンを囲っているdiv--------------------------------------------- -->
 		<div class = "button">
 		<s:form action="PayCompAction">
 			<!-- 購入ボタンフォーム -->
@@ -89,9 +95,10 @@
 		</s:form>
 		</div>
 	</div>
+
+<!-- フッター-------------------------------------------------------------------------- -->
 	<footer style="text-align: center;">
 		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
-
 </body>
 </html>
