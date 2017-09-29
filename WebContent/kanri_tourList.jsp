@@ -28,7 +28,7 @@
 <br>
 <!-- ↓ツアー名検索の部分です -->
     ---------------<s:text name="lang.kanri_tourList.search_tour_by_name"/>---------------
-    <form action="IndicateTourListAction">
+    <form action="IndicateTourListAction" method="post">
 		<input type="text" name="selectWord"/>
 		<s:hidden name="currentPage" value="1"/>
 		<input type="submit" value='<s:text name="lang.kanri_tourList.search"/>'>
