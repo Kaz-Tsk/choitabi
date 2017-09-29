@@ -45,6 +45,11 @@ public class DoPaymentAction extends ActionSupport implements SessionAware{
 	private ArrayList<CartDTO> cartList = new ArrayList<CartDTO>();
 
 	/**
+	 * クレジットカードナンバー
+	 */
+	private String creditNumber;
+
+	/**
 	 * クレジットカード情報の照合、格納を実行するメソッド
 	 * @author SHUN NAGAO
 	 * @since 2017/09/22
@@ -162,4 +167,19 @@ System.out.println("カーとリスト："+ cartList);
 		this.tour_id = tour_id;
 	}
 
+	/**
+	 * クレジットカードナンバーを取得するメソッド
+	 * @return creditNumber クレジットカードナンバー
+	 */
+	public String getcreditNumber() {
+		return creditNumber;
+	}
+
+	/**
+	 * クレジットカードナンバーを格納するメソッド
+	 * @param creditNumber クレジットカードナンバー
+	 */
+	public void setcreditNumber(String creditNumber) {
+		this.creditNumber = creditNumber;
+	}
 }

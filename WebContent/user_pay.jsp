@@ -157,7 +157,6 @@
 
 		<!-- ログイン時 -->
 		<s:if test="%{cartList!=null && #session.userId != null}">
-		${cartList}
 			<s:form action="CheckCreditAction" name="paymentForm" theme="simple">
 				<div id="container" style="margin-top: 40px;">
 					<div class="panel-title">
@@ -186,12 +185,6 @@
 									class="form-control">- <input type="text" id="num4"
 									pattern="[0-9]{3,4}" maxlength="4" size="4" required
 									class="form-control"><br>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-offset-4 col-sm-8" id="paycaution">
-								<font color="red"><s:text name="lang.user_pay.caution" /></font><br>
-								<font color="red"><s:text name="lang.user_pay.caution2" /></font>
 							</div>
 						</div>
 						<div class="row">

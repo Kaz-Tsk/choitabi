@@ -31,16 +31,9 @@
 		</header>
 
 		<div class="mainbox">
-			<h4 style="text-decoration: underline;">
-				<s:text name="lang.pay_check.text" />
-				<s:text name="lang.pay_check.text2" />
-			</h4>
 			<br>
 			<div class="container-fluid">
 				<div class="table-responsive">
-					<h2>
-						<s:text name="lang.pay_check.Itemsinabasket" />
-					</h2>
 					<table class="table1">
 						<tr>
 							<th class="th"><s:text name="lang.pay_check.tour" /></th>
@@ -76,7 +69,7 @@
 						</tr>
 						<tr>
 							<th><s:text name="lang.pay_check.cardnumber" /></th>
-							<td><fmt:formatNumber value="${total_price}" pattern="###,###,###" /></td>
+							<td><s:property value="creditNumber"></s:property></td>
 						</tr>
 					</table>
 				</div>
