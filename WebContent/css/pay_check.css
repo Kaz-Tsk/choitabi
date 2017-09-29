@@ -1,6 +1,5 @@
 .container-fluid{
 	width:1000px;
-	height:100px;
 }
 
 .table1{
@@ -10,12 +9,12 @@
 }
 
  .table2{
- 	width:510px;
+ 	width:540px;
 	height:100px;
  }
 
  .table3{
- 	width:580px;
+ 	width:565px;
 	height:100px;
  }
 
@@ -24,11 +23,11 @@
 }
 
 .button{
-	margin-top:340px;
+	margin-top:50px;
 	margin-left:30px;
 }
 
 footer {
 	width: 100%;
-	margin-top:100px;
+	margin-top:50px;
 }
