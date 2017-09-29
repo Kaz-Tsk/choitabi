@@ -11,11 +11,14 @@
  .table2{
  	width:540px;
 	height:100px;
+	table-layout: fixed;
+	text-align:left;
  }
 
  .table3{
  	width:565px;
 	height:100px;
+	text-align:left;
  }
 
 .th{
