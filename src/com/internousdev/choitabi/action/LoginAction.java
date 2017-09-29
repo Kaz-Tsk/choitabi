@@ -53,7 +53,6 @@ import com.opensymphony.xwork2.ActionSupport;
 		String result = ERROR;
 		LoginDAO dao = new LoginDAO();
 		UsersDTO dto = new UsersDTO();
-
 		dto = dao.select(mailAddress, password);
 
 		if(loginFlg==1){

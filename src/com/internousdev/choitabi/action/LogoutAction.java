@@ -48,7 +48,6 @@ public class LogoutAction extends ActionSupport implements SessionAware{
 		String result = ERROR;
 		if(session.get("userId")!=null){
 			LogoutDAO dao = new LogoutDAO();
-			System.out.println(logoutparam);
 			dao.update((int)session.get("userId"),0);
 			session.clear();
 			if(session.isEmpty()){

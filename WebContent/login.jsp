@@ -8,14 +8,15 @@
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript">
-	window.onunload = function(){};//FireFox
+	window.onunload = function() {
+	};//FireFox
 	history.forward();
 </script>
 <!-- ブラウザバック防止の為の遷移処理 -->
 <s:if test="getLogoutparam()==1">
 	<script type="text/javascript">
-		location.href="login.jsp"
-		location.href="login.jsp"
+		location.href = "login.jsp"
+		location.href = "login.jsp"
 	</script>
 </s:if>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
