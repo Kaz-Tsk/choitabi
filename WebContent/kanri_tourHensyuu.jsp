@@ -32,7 +32,7 @@
 
 <!-- ↓ここから編集フォーム（テーブルまるごとと、チェックボックス、「確認」ボタンあります） -->
 <form action="ConfirmTourEditingAction" method="post" enctype="multipart/form-data" >
-<table>
+<table  style="word-break:break-all">
    <tr>
    		<th></th>
    		<th><s:text name="lang.kanri_tourHensyuu.before_edit"/></th>

@@ -87,7 +87,7 @@
 		</s:if>
 
 		<s:else>
-			<table>
+			<table style="word-break:break-all">
 				<tr>
 					<th><s:text name="lang.kanri_tourHensyuuKakunin.tour_id" /></th>
 					<td colspan="4"><s:property value="currentTourId" /></td>
