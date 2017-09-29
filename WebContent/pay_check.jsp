@@ -23,6 +23,8 @@
 
 <title><s:text name="lang.pay_check.title" /></title>
 <script type="text/javascript" src="./js/cart_check.js"></script>
+
+<link rel = "stylesheet" type= "text/css" href = "css/pay_check.css">
 </head>
 <body>
 	<div id="pagecover">
@@ -76,6 +78,7 @@
 			</div>
 		</div>
 		<br>
+		<div class = "button">
 		<s:form action="PayCompAction">
 			<!-- 購入ボタンフォーム -->
 			<s:param name="user_id" value="user_id" />
@@ -84,6 +87,7 @@
 				<s:text name="lang.pay_check.totalpayment" />
 			</button>
 		</s:form>
+		</div>
 	</div>
 	<footer style="text-align: center;">
 		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />

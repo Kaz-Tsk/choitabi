@@ -1,17 +1,34 @@
-.mainbox{
-	width:100%;
-	height:100vh;
+..container-fluid{
+	width:1000px;
+	height:100px;
 }
 
-.table1, .table2, .table3{
-	width:100%
+.table1{
+	width:900px;
+	height:100px;
+
 }
+
+ .table2{
+ 	width:510px;
+	height:100px;
+ }
+
+ .table3{
+ 	width:410px;
+	height:100px;
+ }
 
 .th{
-	width:40%;
+	width:30%;
+}
+
+.button{
+	margin-top:350px;
+	margin-left:30px;
 }
 
 footer {
 	width: 100%;
-	bottom: 0;
+	margin-top:100px;
 }
