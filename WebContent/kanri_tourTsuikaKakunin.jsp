@@ -31,7 +31,6 @@
 		<h1><s:text name="lang.kanri_tourTsuikaKakunin.title"/></h1>
 		<s:text name="lang.kanri_tourTsuikaKakunin.direction" />
 		<hr>
-		追加ツアー情報
 		<table>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.tour_id" /></th>
