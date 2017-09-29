@@ -56,7 +56,7 @@ public class InsertTourAction extends ActionSupport {
 	private String newComment;
 
 	/**
-	 * 新規ツアーの画像URL/名前
+	 * 新規ツアーの画像名
 	 * */
 	private String newFileFileName;
 
@@ -209,16 +209,16 @@ public class InsertTourAction extends ActionSupport {
 	/*画像のアップロードに使う変数のgetter/setter-----*/
 
   	/**
-  	 *新規ツアーの画像URLを取得するメソッド
-  	 *@return newFileFileName 新規ツアーの画像URL
+  	 *新規ツアーの画像名を取得するメソッド
+  	 *@return newFileFileName 新規ツアーの画像名
   	 * */
   	public String getNewFileFileName(){
   		return newFileFileName;
   	}
 
   	/**
-  	 *新規ツアーの画像URLを格納するメソッド
-  	 *@param newFileFileName 新規ツアーの画像URL
+  	 *新規ツアーの画像名を格納するメソッド
+  	 *@param newFileFileName 新規ツアーの画像名
   	 * */
   	public void setNewFileFileName(String newFileFileName){
   		this.newFileFileName = newFileFileName;
