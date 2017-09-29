@@ -127,7 +127,7 @@
 	</div>
 
 
-	<footer style="text-align: center;">
+	<footer style="text-align: center; padding-top:50px">
 		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
 
