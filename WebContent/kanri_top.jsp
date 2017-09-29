@@ -62,7 +62,7 @@
 
 		<!-- 購入履歴へ遷移 -->
 		<br> <a href='<s:url action="KanriHistoryAction"></s:url>'> ■<s:text
-				name="lang.kanri_top.parchase_history" />■
+				name="lang.kanri_top.purchase_history" />■
 		</a> <br>
 
 		<!-- お問い合わせ画面へ遷移 -->
