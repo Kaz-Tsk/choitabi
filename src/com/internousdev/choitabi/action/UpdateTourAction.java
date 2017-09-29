@@ -18,7 +18,6 @@ public class UpdateTourAction extends ActionSupport{
 	 */
 	private static final long serialVersionUID = 7529843417299461761L;
 
-
 	/**
 	 *編集先ツアーID
 	 * */
@@ -69,7 +68,7 @@ public class UpdateTourAction extends ActionSupport{
 
 
 	/**
-	 * 編集後ツアーの画像URL/名前
+	 * 編集後ツアーの画像名
 	 * */
 	private String editFileFileName;
 
@@ -260,7 +259,7 @@ public class UpdateTourAction extends ActionSupport{
 
 
   	/**
-  	 *新規ツアーの画像URLを取得するメソッド
+  	 *新規ツアーの画像名を取得するメソッド
   	 *@return editFileFileName 新規ツアーの画像URL
   	 * */
   	public String getEditFileFileName(){
@@ -268,7 +267,7 @@ public class UpdateTourAction extends ActionSupport{
   	}
 
   	/**
-  	 *新規ツアーの画像URLを格納するメソッド
+  	 *新規ツアーの画像名を格納するメソッド
   	 *@param editFileFileName 新規ツアーの画像URL
   	 * */
   	public void setEditFileFileName(String editFileFileName){

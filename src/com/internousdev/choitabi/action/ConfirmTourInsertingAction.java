@@ -82,7 +82,7 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
     private File newFile;
 
 	/**
-	 * 新規ツアーの画像URL/名前
+	 * 新規ツアーの画像名
 	 * */
 	private String newFileFileName;
 
@@ -99,15 +99,15 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 	public String execute(){
 		String result = ERROR;
 
+		/*最初に画像の処理*/
 		/*もし、画像に何も指定されていなかったら、デフォルトで「NO IMAGE」の画像を入れます。*/
 		if(newFile == null || newFile.length() == 0){
 			newFileFileName = "img/no_image.jpg";
 		}else{
 
-			//テスト中-----------------------------------------------
-			/*送られてきたリクエストから、画像の送り先ディレクトリを取得する*/
 
 			try{
+				/*送られてきたリクエストから、画像の送り先ディレクトリを取得する*/
 				String basePath = request.getServletContext().getRealPath("/");
 
 				File destFile = new File(basePath + "img", newFileFileName);//このパスの場所に、この名前で画像を保存したい。
@@ -122,11 +122,7 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 			}
 		}
 
-
-
-
-		//-------------------------------------------------
-
+		/*ここから入力された値のチェック*/
 		try{
 			if (	newTourName.equals("") || newPrice.equals("") || newDeparture.equals("") ||
 				newRegion == null || newPrefectures.equals("") || newTheme == null || newComment.equals("") ) {
@@ -324,16 +320,16 @@ public class ConfirmTourInsertingAction extends ActionSupport implements Servlet
 
 
   	/**
-  	 *新規ツアーの画像URLを取得するメソッド
-  	 *@return newFileFileName 新規ツアーの画像URL
+  	 *新規ツアーの画像名を取得するメソッド
+  	 *@return newFileFileName 新規ツアーの画像名
   	 * */
   	public String getNewFileFileName(){
   		return newFileFileName;
   	}
 
   	/**
-  	 *新規ツアーの画像URLを格納するメソッド
-  	 *@param newFileFileName 新規ツアーの画像URL
+  	 *新規ツアーの画像名を格納するメソッド
+  	 *@param newFileFileName 新規ツアーの画像名
   	 * */
   	public void setNewFileFileName(String newFileFileName){
   		this.newFileFileName = newFileFileName;

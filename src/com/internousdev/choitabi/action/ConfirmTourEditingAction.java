@@ -181,7 +181,7 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
     private File editFile;
 
 	/**
-	 * 編集後ツアーの画像URL/名前
+	 * 編集後ツアーの画像名
 	 * */
 	private String editFileFileName;
 
@@ -203,18 +203,14 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 	public String execute(){
 		String result = ERROR;
 
+		/*最初に画像の処理*/
 		/*もし、画像URLに何も書かれていなかったら、デフォルトの「NO IMAGE」画像のURLを入れておきます。*/
-
-		//テスト-------------------------------------------------------------
-
 		if(editFile == null || editFile.length() == 0){
 			editFileFileName = "img/no_image.jpg";
 		}else{
 
-			//テスト中-----------------------------------------------
-			/*送られてきたリクエストから、画像の送り先ディレクトリを取得する*/
-
 			try{
+				/*送られてきたリクエストから、画像の送り先ディレクトリを取得する*/
 				String basePath = request.getServletContext().getRealPath("/");
 
 				File destFile = new File(basePath + "img", editFileFileName);//このパスの場所に、この名前で画像を保存したい。
@@ -229,15 +225,7 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 			}
 		}
 
-
-
-
-
-
-
-
-		//テスト-------------------------------------------------------------
-
+		/*ここから、フォームに入力された値のチェック*/
 		//削除のチェックボックスにチェックが入っていたら、そのままSUCCESS
 		if(deleteCheck.equals("true")){
 			result = SUCCESS;
@@ -748,16 +736,16 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 
 
   	/**
-  	 *新規ツアーの画像URLを取得するメソッド
-  	 *@return editFileFileName 新規ツアーの画像URL
+  	 *新規ツアーの画像名を取得するメソッド
+  	 *@return editFileFileName 新規ツアーの画像名
   	 * */
   	public String getEditFileFileName(){
   		return editFileFileName;
   	}
 
   	/**
-  	 *新規ツアーの画像URLを格納するメソッド
-  	 *@param editFileFileName 新規ツアーの画像URL
+  	 *新規ツアーの画像名を格納するメソッド
+  	 *@param editFileFileName 新規ツアーの画像名
   	 * */
   	public void setEditFileFileName(String editFileFileName){
   		this.editFileFileName = editFileFileName;

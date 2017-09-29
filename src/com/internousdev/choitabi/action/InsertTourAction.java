@@ -5,21 +5,18 @@ import java.sql.SQLException;
 import com.internousdev.choitabi.dao.InsertTourDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * 新規ツアーの登録を行うアクション
+ * @author YUKA MATSUMURA
+ * @since 2017/09/12
+ * @version 1.1
+ * */
 public class InsertTourAction extends ActionSupport {
-
-
 
 	/**
 	 *シリアルID
 	 */
 	private static final long serialVersionUID = 8260806374195833620L;
-
-	/**
-	 * 新規ツアーの登録を行うアクション
-	 * @author YUKA MATSUMURA
-	 * @since 2017/09/12
-	 * @version 1.1
-	 * */
 
 
 	/**
