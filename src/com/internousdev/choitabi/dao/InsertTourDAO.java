@@ -27,7 +27,7 @@ public class InsertTourDAO {
  * @param newPrefectures 新規ツアーの都道府県
  * @param newTheme 新規ツアーのテーマ
  * @param newComment 新規ツアーのコメント
- * @param newImg 新規ツアーの画像URL
+ * @param newFileFileName 新規ツアーの画像名
  * @return count 変更の完了したデータ数
  * */
 	public int insertTour(String newTourName,String newPrice, String newDeparture,
@@ -77,7 +77,7 @@ public class InsertTourDAO {
 			}
 
 			/*以下はエラー時の処理です。
-			 * エラーが出たら、返すリストをnull=「リスト作れなかったよ」と合図させ、SUCCESSとERRORを見分けます。
+			 * エラーが出たら0を戻し、SUCCESSとERRORを見分けます。
 			 * */
 			}catch(SQLException e){
 				e.printStackTrace();
@@ -97,6 +97,21 @@ public class InsertTourDAO {
 	}
 
 
+	/**
+	 *登録するツアーが既存のものと重複していないかを確認するメソッド
+	 * @author YUKA MATSUMURA
+	 * @sinse 2017/09/27
+	 * @version 1.1
+	 * @param newTourName 新規ツアー名
+	 * @param newPrice 新規ツアーの価格
+	 * @param newDepartre 新規ツアーの出発地
+	 * @param newRegion 新規ツアーのエリア
+	 * @param newPrefectures 新規ツアーの都道府県
+	 * @param newTheme 新規ツアーのテーマ
+	 * @param newComment 新規ツアーのコメント
+	 * @param newFileFileName 新規ツアーの画像名
+	 * @return result 内容の重複したツアーが存在しているか(tour_id以外すべての内容が重複したデータがあればfalse、なければtrueを返す)
+	 * */
 	public boolean DupulicationCheck(String newTourName,String newPrice, String newDeparture,
 			String newRegion, String newPrefectures,String newTheme, String newComment, String newFileFileName){
 

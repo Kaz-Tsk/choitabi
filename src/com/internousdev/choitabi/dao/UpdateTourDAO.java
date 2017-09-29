@@ -30,7 +30,7 @@ public class UpdateTourDAO {
 	 * @param editPrefectures 編集後の都道府県
 	 * @param editTheme 編集後のテーマ
 	 * @param editComment 編集後のコメント
-	 * @param editImg 編集後の画像URL
+	 * @param editFileFileName 編集後の画像名
 	 * @param deleteCheck 削除用チェックボックスの状態
 	 * @return count 操作の完了したデータ数
 	 * */
