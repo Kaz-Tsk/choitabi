@@ -44,7 +44,7 @@
 		<!-- 以下、画面真ん中に表示するテーブルの部分------------------------------------------ -->
 
 		<s:if test="deleteCheck.equals('true')">
-			<table>
+			<table style="word-break:break-all">
 				<tr>
 					<th><s:text name="lang.kanri_tourHensyuuKakunin.tour_id" /></th>
 					<td><s:property value="currentTourId" /></td>

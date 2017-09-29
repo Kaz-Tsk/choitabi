@@ -31,7 +31,7 @@
 		<h1><s:text name="lang.kanri_tourTsuikaKakunin.title"/></h1>
 		<s:text name="lang.kanri_tourTsuikaKakunin.direction" />
 		<hr>
-		<table>
+		<table style="word-break:break-all">
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.tour_id" /></th>
 				<td><s:text name="lang.kanri_tourTsuikaKakunin.direction_for_tour_id" /></td>
