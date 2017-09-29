@@ -10,7 +10,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>ツアー情報一覧</title>
+	<title><s:text name="lang.kanri_tourList.title"/></title>
 	<!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourList"
@@ -24,7 +24,7 @@
 </header>
 
 <body>
-	<h1>ツアー情報一覧</h1>
+	<h1><s:text name="lang.kanri_tourList.title"/></h1>
 <br>
 <!-- ↓ツアー名検索の部分です -->
     ---------------<s:text name="lang.kanri_tourList.search_tour_by_name"/>---------------

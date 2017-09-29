@@ -10,7 +10,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>ツアー追加</title>
+	<title><s:text name="lang.kanri_tourTsuika.title"/></title>
 	<!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_tourTsuika"
@@ -26,7 +26,7 @@
 
 <body>
 
-	<h1>新規ツアー登録　情報入力画面</h1>
+	<h1><s:text name="lang.kanri_tourTsuika.title"/></h1>
 	<hr>
     	<s:text name="lang.kanri_tourTsuika.direction"/>
 	<br>

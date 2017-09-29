@@ -10,7 +10,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>管理ページトップ</title>
+	<title><s:text name="lang.kanri_top.title"/></title>
 	<!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
 	<fmt:setLocale value="${pageContext.request.locale.language}"/>
 	<fmt:setBundle basename="com.internousdev.choitabi.property.kanri_top"
@@ -35,11 +35,11 @@
         <jsp:include page="header.jsp"/>
 </header>
 <div class="main">
-	<h1>管理者画面トップ</h1>
+	<h1><s:text name="lang.kanri_top.title"/></h1>
     <hr>
     <br>
 
-    -----管理メニュー-----<br>
+    -----<s:text name="lang.kanri_top.menu"/>-----<br>
     <!-- ■で囲ってある部分がメニュー項目の表示部分(国際化済み)です ※■は目印です。なくても動きます -->
 
 	<!-- ツアー一覧へ遷移 -->

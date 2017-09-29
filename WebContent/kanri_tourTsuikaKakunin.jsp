@@ -10,7 +10,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>ツアー追加内容確認</title>
+<title><s:text name="lang.kanri_tourTsuikaKakunin.title"/></title>
 <!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <fmt:setBundle
@@ -28,7 +28,7 @@
 
 <body>
 	<div class="editArea">
-		<h1>ツアー追加 内容確認</h1>
+		<h1><s:text name="lang.kanri_tourTsuikaKakunin.title"/></h1>
 		<s:text name="lang.kanri_tourTsuikaKakunin.direction" />
 		<hr>
 		追加ツアー情報

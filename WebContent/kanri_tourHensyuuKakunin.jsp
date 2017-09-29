@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ツアー編集内容確認</title>
+<title><s:text name="lang.kanri_tourHensyuuKakunin.title"/></title>
 <!-- 国際化：ロケールIDの取得とプロパティファイルの読み込み -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <fmt:setBundle
@@ -26,7 +26,7 @@
 <body>
 
 	<div class="editArea">
-		<h1>ツアー情報編集 内容確認</h1>
+		<h1><s:text name="lang.kanri_tourHensyuuKakunin.title"/></h1>
 		<hr>
 
 		<!-- 画面上部に表示するメッセージの部分------------------------------------------------ -->
