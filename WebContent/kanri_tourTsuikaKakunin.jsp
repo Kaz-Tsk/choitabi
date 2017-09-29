@@ -92,7 +92,6 @@
 		    <s:param name="newComment" value="newComment"/>
 
 			<s:param name="newFileFileName" value="newFileFileName"/>
-			<s:param name="newFileContentType" value="newFileContentType"/>
 	    </s:url>'>
 			<input type="submit"
 			value='<s:text name="lang.kanri_tourTsuikaKakunin.complete" />' onSubmit="return double()"/><br>
