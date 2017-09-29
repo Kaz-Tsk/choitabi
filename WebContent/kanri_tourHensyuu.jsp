@@ -127,7 +127,7 @@
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.comment"/></th>
    		<td width="200px"><font size="2px"><s:property value="currentComment"/></font></td>
-   		<td><textarea rows="10" cols="30"name="editComment"><s:property value = "defaultComment"/></textarea></td>
+   		<td><textarea rows="10" cols="30"name="editComment" maxlength="200"><s:property value = "defaultComment"/></textarea></td>
    </tr>
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.image_url"/></th>

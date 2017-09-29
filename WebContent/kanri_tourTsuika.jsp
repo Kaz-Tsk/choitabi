@@ -145,7 +145,7 @@
 				<s:text name="lang.kanri_tourTsuika.comment"/>
 			</th>
 			<td>
-				<textarea rows="10" cols="45"name="newComment"><s:property value="newComment"/></textarea>
+				<textarea rows="10" cols="45"name="newComment" maxlength="200"><s:property value="newComment"/></textarea>
 			</td>
 		</tr>
 		<tr>
