@@ -125,14 +125,8 @@
 
 		</div>
 	</div>
-
-
-	<footer style="text-align: center; margin-top:200%">
+</body>
+<footer style="text-align: center;">
 		<c:import url="http://www.internousdev.com/openconnect/footer.jsp" />
 	</footer>
-
-
-
-
-</body>
 </html>

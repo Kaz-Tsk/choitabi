@@ -12,8 +12,7 @@
 }
 
 .center {
-	width: 1500px;
-	margin: 0 auto;
+	width: 1500px;s
 	text-align: center;
 }
 
@@ -68,13 +67,7 @@ table {
 }
 
 footer {
-	position: absolute;
-	bottom: 0;
-	display: block;
-    text-align:center;
-    height: 80px;
-    clear:left;
-    width:100%;
+   padding-top:50%;
 }
 
 .link a:link{
