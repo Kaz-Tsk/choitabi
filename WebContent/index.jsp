@@ -34,7 +34,6 @@
 	<script type="text/javascript">
 	<!--
 		var referrer = document.referrer;
-		document.write("リファラ：" + referrer);
 		if (referrer.indexOf("LoginAction") > 0) {
 			location.href = "index.jsp";
 		}

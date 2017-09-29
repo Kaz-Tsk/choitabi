@@ -30,7 +30,6 @@
 	<script type="text/javascript">
 <!--
 	var referrer = document.referrer;
-	document.write("リファラ："+referrer);
 	if(referrer.indexOf("login")>0){
 		location.href="kanri_top.jsp";
 	}
