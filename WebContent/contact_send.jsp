@@ -36,11 +36,11 @@ pageEncoding="UTF-8"%>
                       <small><s:text name = "lang.contact_send.contact_transmission_completion_simasita"/>
                           <br>
                           <br>
-                          お問い合わせいただいた内容につきましては、
+                         <s:text name="lang.contact_send.manager_comment"/>
                           <br>
                           <br>
-                          3営業日以内にご返信させていただきます。
-                      </small>
+                          <s:text name="lang.contact_send.manager_comment2"/>
+                              </small>
                       </h1>
                       <br>
                       <br>
