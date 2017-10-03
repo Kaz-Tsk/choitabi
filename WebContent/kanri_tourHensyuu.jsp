@@ -51,7 +51,7 @@
 
       <tr>
    		<th><s:text name="lang.kanri_tourHensyuu.price"/></th>
-   		<td><s:property value="currentPrice"/><s:text name="lang.kanri_tourHensyuu.yen"/></td>
+   		<td><fmt:formatNumber value="${currentPrice}"/><s:text name="lang.kanri_tourHensyuu.yen"/></td>
    		<td><input type="text" size="5" name="editPrice" value='<s:property value="defaultPrice"/>'></input>
    			<s:text name="lang.kanri_tourHensyuu.yen"/></td>
    </tr>
