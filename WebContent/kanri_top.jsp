@@ -54,8 +54,7 @@
 		<!-- ツアー一覧へ遷移 -->
 		<br> <a
 			href='<s:url action="IndicateTourListAction">
-    <s:param name="currentPage" value="1"/>
-    <s:param name="selectWord" value = ""/></s:url>'>
+			<s:param name="currentPage" value="1"/></s:url>'>
 			■<s:text name="lang.kanri_top.tour_management" />■
 		</a> <br>
 

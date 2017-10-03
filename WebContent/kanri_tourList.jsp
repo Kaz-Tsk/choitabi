@@ -38,8 +38,6 @@
 	<!-- すべて -->
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="''"/>
-    <s:param name="selectRegion" value="''" />
     </s:url>'>
     <s:text name="lang.kanri_tourList.all"/>
     </a>
@@ -48,7 +46,6 @@
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'グルメ'"/>
-    <s:param name="selectRegion" value="''" />
     </s:url>'>
     <s:text name="lang.kanri_tourList.gourmet"/>
     </a>
@@ -57,7 +54,6 @@
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'名所'"/>
-    <s:param name="selectRegion" value="''" />
     </s:url>'>
     <s:text name="lang.kanri_tourList.place"/>
     </a>
@@ -66,7 +62,6 @@
     <a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
     <s:param name="selectTheme" value="'アクティビティ'"/>
-    <s:param name="selectRegion" value="''" />
     </s:url>'>
     <s:text name="lang.kanri_tourList.activity"/>
     </a>
@@ -76,8 +71,6 @@
     <!-- すべて -->
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="''"/>
-    <s:param name="selectRegion" value="''" />
     </s:url>'>
     <s:text name="lang.kanri_tourList.all"/>
     </a>
@@ -85,7 +78,6 @@
 	<!-- 東北 -->
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="''"/>
      <s:param name="selectRegion" value="'東北'"/>
     </s:url>'>
     <s:text name="lang.kanri_tourList.tohoku"/>
@@ -94,7 +86,6 @@
     <!-- 関東 -->
 	<a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="''"/>
     <s:param name="selectRegion" value="'関東'"/>
     </s:url>'>
     <s:text name="lang.kanri_tourList.kanto"/>
@@ -103,7 +94,6 @@
     <!-- 関西 -->
     <a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="''"/>
     <s:param name="selectRegion" value="'関西'"/>
     </s:url>'>
     <s:text name="lang.kanri_tourList.kansai"/>
@@ -112,7 +102,6 @@
     <!-- 九州 -->
     <a href='<s:url action="IndicateTourListAction">
     <s:param name="currentPage" value="1"/>
-    <s:param name="selectTheme" value="''"/>
     <s:param name="selectRegion" value="'九州'"/>
     </s:url>'>
     <s:text name="lang.kanri_tourList.kyushu"/>
