@@ -41,8 +41,8 @@ form{
   }
 
   footer {
-	position: relative;
-	padding-top: 20px;
+	position: fixed;
 	bottom: 0;
+	width: 100%;
 	background-color:white;
 }
