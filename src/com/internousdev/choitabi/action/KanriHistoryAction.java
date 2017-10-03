@@ -128,7 +128,6 @@ public class KanriHistoryAction extends ActionSupport {
 		}
 
 		number = searchList.size();
-		/*あと消し*/System.out.println("KanriHistoryAction-検索後の取得データ数：" + number);
 
 		if(number > 0) {
 			//ページネーション処理

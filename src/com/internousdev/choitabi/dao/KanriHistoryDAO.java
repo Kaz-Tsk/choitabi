@@ -53,8 +53,6 @@ public class KanriHistoryDAO {
 //			sql = sql + " " + "AND choitabi.tour.tour_name like \"%" + searchName + "%\"";
 //		}
 
-		/*あと消し*/System.out.println("KanriHstoryDAO-作成SQL文：" + sql);
-
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
@@ -80,8 +78,6 @@ public class KanriHistoryDAO {
 		}catch (SQLException e){
 			e.printStackTrace();
 		}
-
-		System.out.println("KanriHistoryDAO-検索後ツアー数：" + searchList.size());
 
 		return searchList;
 	}
