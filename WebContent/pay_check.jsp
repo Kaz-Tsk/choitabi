@@ -75,7 +75,7 @@
 						</tr>
 						<tr>
 							<th><s:text name="lang.pay_check.cardnumber" /></th>
-							<td><s:property value="creditNumber"></s:property></td>
+							<td>************<s:property value="creditNumber"></s:property></td>
 						</tr>
 					</table>
 				</div>

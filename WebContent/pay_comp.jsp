@@ -37,8 +37,8 @@
 		</header>
 		<div class="main">
 			<br>
-			<h1>
-				<span class="maintext"><s:text name="lang.pay_comp.text1" /></span>
+			<h1 class="thankyou">
+				<s:text name="lang.pay_comp.text1" />
 			</h1>
 			<br>
 		</div>
