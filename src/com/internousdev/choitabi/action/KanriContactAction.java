@@ -67,7 +67,7 @@ private static final long serialVersionUID = 1713916660493018447L;
      * ページネーション
      */
     private int maxPage;
-    private int pageNum =0;//とりあえず0にしておきます。
+    private int pageNum =1;//とりあえず1にしておきます。
     private int number;
     public ArrayList<KanriContactDTO> displayList = new ArrayList<KanriContactDTO>();
 
@@ -110,8 +110,8 @@ private static final long serialVersionUID = 1713916660493018447L;
 
             	   ArrayList<KanriContactPagenation2> KanriPages = new ArrayList<KanriContactPagenation2>();
                    KanriContactPagenation Kanrip = new KanriContactPagenation();
-                   KanriPages=Kanrip.paginate(searchList, 10);//peginateメソッド呼び出し
-                   maxPage = Kanrip.getMaxPage(searchList, 10);
+                   KanriPages=Kanrip.paginate(searchList, 5);//peginateメソッド呼び出し
+                   maxPage = Kanrip.getMaxPage(searchList, 5);
 
                    displayList = KanriPages.get(pageNum-1).getPaginatedList();
 
