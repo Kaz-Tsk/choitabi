@@ -55,7 +55,7 @@
 				</tr>
 				<tr>
 					<th><s:text name="lang.kanri_tourHensyuuKakunin.price" /></th>
-					<td><s:property value="currentPrice" />
+					<td><fmt:formatNumber value="${currentPrice}"/>
 						<s:text name="lang.kanri_tourHensyuuKakunin.yen" /></td>
 				</tr>
 				<tr>
@@ -102,10 +102,10 @@
 				<tr>
 					<th><s:text name="lang.kanri_tourHensyuuKakunin.price" /></th>
 					<td><s:text name="lang.kanri_tourHensyuuKakunin.before_edit" /></td>
-					<td><s:property value="currentPrice" />
+					<td><fmt:formatNumber value="${currentPrice}"/>
 						<s:text name="lang.kanri_tourHensyuuKakunin.yen" /></td>
 					<td><s:text name="lang.kanri_tourHensyuuKakunin.after_edit" /></td>
-					<td><s:property value="EditPrice" />
+					<td><fmt:formatNumber value="${editPrice}"/>
 						<s:text name="lang.kanri_tourHensyuuKakunin.yen" /></td>
 				</tr>
 				<tr>

@@ -42,7 +42,7 @@
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.price" /></th>
-				<td><s:property value="newPrice" /></td>
+				<td><fmt:formatNumber value="${newPrice}"/></td>
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.departure" /></th>

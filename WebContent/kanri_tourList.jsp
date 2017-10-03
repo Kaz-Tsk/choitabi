@@ -134,7 +134,7 @@
 		<tr>
 			<td><s:property value="tourId"></s:property></td>
 			<td><s:property value="tourName"></s:property></td>
-			<td><s:property value="price"></s:property> 円</td>
+			<td><fmt:formatNumber value="${price}" pattern="###,###,###"/>円</td>
 			<td><s:property value="region"></s:property></td>
 			<td><s:property value="theme"/></td>
 			<td>
