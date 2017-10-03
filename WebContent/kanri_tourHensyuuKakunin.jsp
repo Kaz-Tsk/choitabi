@@ -187,11 +187,8 @@
 	    </s:url>'>
 			<input type="submit"
 			value='<s:text name="lang.kanri_tourHensyuuKakunin.complete"/>' /><br>
-		</a> <br> <br>
-
-		<hr>
-
-
+		</a>
+		<br>
 		<br>
 		<!-- ↓「入力画面に戻る」の項目部分 ※別のアクションの同名の変数に値を移しています-->
 		<!-- 入力済みの情報が残るように、EditTourActionにも入力内容を保持する変数を用意します。 -->
@@ -221,13 +218,29 @@
 		    <s:param name="editComment" value="editComment"/>
 			<s:param name="editImg" value="editImg"/>
 	    </s:url>'>
-			<s:text name="lang.kanri_tourHensyuuKakunin.return_input_page" /><br>
-		</a> <br> <br> <br>
-
+			<input type="submit"
+			value='<s:text name="lang.kanri_tourHensyuuKakunin.return"/>' /><br>
+		</a>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<br>
+		<!-- 「ツアー一覧に戻る」の部分 -->
+		<a
+			href='<s:url action="IndicateTourListAction">
+    	<s:param name="currentPage" value="1"/></s:url>'>
+			<s:text name="lang.kanri_tourHensyuu.return_list" />
+		</a>
+		<br>
+		<br>
 		<!-- 「管理トップページに戻る」の項目部分 -->
 		<a href='<s:url action="GoManagersTopAction"/>'> <s:text
 				name="lang.kanri_tourHensyuuKakunin.return_top" /><br>
-		</a> <br> <br> <br>
+		</a>
+		<br>
+		<br>
+		<br>
 	</div>
 
 </body>

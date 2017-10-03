@@ -28,13 +28,16 @@
 
 <body>
 	<div class="editArea">
-		<h1><s:text name="lang.kanri_tourTsuikaKakunin.title"/></h1>
+		<h1>
+			<s:text name="lang.kanri_tourTsuikaKakunin.title" />
+		</h1>
 		<s:text name="lang.kanri_tourTsuikaKakunin.direction" />
 		<hr>
-		<table style="word-break:break-all">
+		<table style="word-break: break-all">
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.tour_id" /></th>
-				<td><s:text name="lang.kanri_tourTsuikaKakunin.direction_for_tour_id" /></td>
+				<td><s:text
+						name="lang.kanri_tourTsuikaKakunin.direction_for_tour_id" /></td>
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.tour_name" /></th>
@@ -42,7 +45,7 @@
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.price" /></th>
-				<td><fmt:formatNumber value="${newPrice}"/></td>
+				<td><fmt:formatNumber value="${newPrice}" /></td>
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.departure" /></th>
@@ -63,8 +66,8 @@
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.comment" /></th>
-				<td width="200px"><font size="2px">
-				<s:property value="newComment" /></font></td>
+				<td width="200px"><font size="2px"> <s:property
+							value="newComment" /></font></td>
 			</tr>
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.image_url" /></th>
@@ -73,8 +76,8 @@
 			<tr>
 				<th><s:text name="lang.kanri_tourTsuikaKakunin.image_preview" />
 				</th>
-				<td><img src='<s:property value="newFileFileName"/>' height="20%"
-					alt="ツアー画像" /></td>
+				<td><img src='<s:property value="newFileFileName"/>'
+					height="20%" alt="ツアー画像" /></td>
 			</tr>
 		</table>
 		<br>
@@ -94,10 +97,9 @@
 			<s:param name="newFileFileName" value="newFileFileName"/>
 	    </s:url>'>
 			<input type="submit"
-			value='<s:text name="lang.kanri_tourTsuikaKakunin.complete" />' onSubmit="return double()"/><br>
+			value='<s:text name="lang.kanri_tourTsuikaKakunin.complete" />'
+			onSubmit="return double()" /><br>
 		</a> <br> <br>
-		<hr>
-		<br>
 		<!-- ↓「入力画面に戻る」の項目 ※別のアクションの同名の変数に値を移しています-->
 		<!-- 入力済みの情報が残るように、GoTourInsertPageActionにも「new」変数を用意します。 -->
 		<a
@@ -112,13 +114,30 @@
 		    <s:param name="newComment" value="newComment"/>
 			<s:param name="newImg" value="newImg"/>
 	    </s:url>'>
-			<s:text name="lang.kanri_tourTsuikaKakunin.return_input_page" /><br>
-		</a> <br>
-
+			<input type="submit"
+			value='<s:text name="lang.kanri_tourTsuikaKakunin.return" />'
+			onSubmit="return double()" /><br>
+		</a>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<br>
+		<!-- 「ツアー一覧に戻る」の部分 -->
+		<a
+			href='<s:url action="IndicateTourListAction">
+    	<s:param name="currentPage" value="1"/></s:url>'>
+			<s:text name="lang.kanri_tourHensyuu.return_list" />
+		</a>
+		<br>
+		<br>
 		<!-- ↓「管理トップページに戻る」の項目 -->
 		<a href='<s:url action="GoManagersTopAction"/>'> <s:text
 				name="lang.kanri_tourTsuikaKakunin.return_top" />
-		</a> <br> <br> <br>
+		</a>
+		<br>
+		<br>
+		<br>
 	</div>
 
 
