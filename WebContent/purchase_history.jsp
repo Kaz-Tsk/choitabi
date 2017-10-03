@@ -41,7 +41,7 @@
 							<td class="table-data"><s:property value="tourName" /></td>
 							<td class="table-data"><fmt:formatNumber value="${price}" pattern="###,###,###"/></td>
 							<td class="table-data"><s:property value="counts" /></td>
-							<td class="table-data"><s:property value="subtotal" /></td>
+							<td class="table-data"><fmt:formatNumber value="${subtotal}" pattern="###,###,###"/></td>
 							<td class="table-data"><s:property value="registrationAt" /></td>
 						</tr>
 					</s:iterator>
