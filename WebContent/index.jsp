@@ -34,7 +34,7 @@
 	<script type="text/javascript">
 	<!--
 		var referrer = document.referrer;
-		if (referrer.indexOf("LoginAction") > 0) {
+		if (referrer.indexOf("LoginAction") > 0 || referrer.indexOf("login")>0) {
 			location.href = "index.jsp";
 		}
 	// -->
