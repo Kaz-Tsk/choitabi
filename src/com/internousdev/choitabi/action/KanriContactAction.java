@@ -105,8 +105,6 @@ private static final long serialVersionUID = 1713916660493018447L;
 
 
             if(number > 0){//記録されたデータが一つ以上あったら…
-            		/*動作確認*/System.out.println("KAnriContactAction -現在のページ：" + pageNum);
-
 
             	   ArrayList<KanriContactPagenation2> KanriPages = new ArrayList<KanriContactPagenation2>();
                    KanriContactPagenation Kanrip = new KanriContactPagenation();

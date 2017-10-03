@@ -78,12 +78,6 @@ public class ComfirmContactAction extends ActionSupport implements SessionAware 
     			errorMessage="お問い合わせ内容が入力されていません";
     			return ERROR;}
 
-
-    	System.out.println("名前：" + contact_name);
-    	System.out.println("メールアドレス：" + contact_mailAddress);
-    	System.out.println("問い合わせ内容：" + contact_contents);
-
-
         return SUCCESS;
     }
 
