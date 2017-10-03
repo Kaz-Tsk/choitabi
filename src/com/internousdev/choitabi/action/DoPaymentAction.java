@@ -65,7 +65,6 @@ System.out.println("取得ID" + user_id);
 
 			//アレイリストに情報を入れる
 			cartList = cartDao.selectCart(user_id);
-System.out.println("カーとリスト："+ cartList);
 			if(cartList.size()>0){
 				System.out.println("テスト");
 				for(int i = 0; i <cartList.size(); i++) {
@@ -77,6 +76,8 @@ System.out.println("カーとリスト："+ cartList);
 
 					dto.setTotal_price(total_price);
 				}
+				String lastCreditNumber = creditNumber.substring(12, creditNumber.length());
+				creditNumber = "************" + lastCreditNumber;
 
 				result = SUCCESS;
 			}else{
@@ -171,7 +172,7 @@ System.out.println("カーとリスト："+ cartList);
 	 * クレジットカードナンバーを取得するメソッド
 	 * @return creditNumber クレジットカードナンバー
 	 */
-	public String getcreditNumber() {
+	public String getCreditNumber() {
 		return creditNumber;
 	}
 
@@ -179,7 +180,7 @@ System.out.println("カーとリスト："+ cartList);
 	 * クレジットカードナンバーを格納するメソッド
 	 * @param creditNumber クレジットカードナンバー
 	 */
-	public void setcreditNumber(String creditNumber) {
+	public void setCreditNumber(String creditNumber) {
 		this.creditNumber = creditNumber;
 	}
 }

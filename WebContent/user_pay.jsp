@@ -208,7 +208,7 @@
 								</h2>
 							</div>
 							<div id="textform" class="col-sm-8">
-								<input  name="securityCode" type="password"
+								<input  name="securityCode" type="password" class="form-control"
 									size="5" maxlength="4" placeholder="123" pattern="[0-9]{3,4}"
 									required id="securityCode">
 							</div>
