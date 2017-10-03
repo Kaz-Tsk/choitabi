@@ -81,9 +81,9 @@ td{
         background-color:gainsboro;
 }
 footer {
-	position: fixed;
+	position: relative;
+	padding-top: 20px;
 	bottom: 0;
-	width: 100%;
 	background-color:white;
 }
 
