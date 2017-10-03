@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +39,7 @@
 					<s:iterator value="UserPurchaseHistoryList">
 						<tr>
 							<td class="table-data"><s:property value="tourName" /></td>
-							<td class="table-data"><s:property value="price" /></td>
+							<td class="table-data"><fmt:formatNumber value="${price}" pattern="###,###,###"/></td>
 							<td class="table-data"><s:property value="counts" /></td>
 							<td class="table-data"><s:property value="subtotal" /></td>
 							<td class="table-data"><s:property value="registrationAt" /></td>

@@ -204,9 +204,9 @@ public class ConfirmTourEditingAction extends ActionSupport implements ServletRe
 		String result = ERROR;
 
 		/*最初に画像の処理*/
-		/*もし、画像URLに何も書かれていなかったら、デフォルトの「NO IMAGE」画像のURLを入れておきます。*/
+		/*もし、新しい画像に何も指定されていなかったら、編集前の画像URLをそのまま持ってきます。。*/
 		if(editFile == null || editFile.length() == 0){
-			editFileFileName = "img/no_image.jpg";
+			editFileFileName = currentImg;
 		}else{
 
 			try{
