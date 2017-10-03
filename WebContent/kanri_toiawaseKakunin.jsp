@@ -89,6 +89,15 @@
 
                 <s:if test= "{ pageNum > 0 }">
 
+<!-- 前へを使うページ -->
+
+					  <s:if test="pageNum == 1">
+                      </s:if>
+                      <s:else>
+					  <a href='<s:url action="KanriContactAction">
+					  <s:param name="pageNum" value="pageNum-1"/>
+					  </s:url>'><s:text name="lang.kanri_toiawaseKakunin.back"/></a>
+					  </s:else>
 
 <!-- 次へを使うページ -->
                       <s:if test = "pageNum == maxPage">
@@ -99,15 +108,7 @@
 					  </s:url>'><s:text name="lang.kanri_toiawaseKakunin.next"/></a>
                       </s:else>
 
-<!-- 前へを使うページ -->
 
-					  <s:if test="pageNum == 1">
-                      </s:if>
-                      <s:else>
-					  <a href='<s:url action="KanriContactAction">
-					  <s:param name="pageNum" value="pageNum-1"/>
-					  </s:url>'><s:text name="lang.kanri_toiawaseKakunin.back"/></a>
-					  </s:else>
 
 
                  </s:if>

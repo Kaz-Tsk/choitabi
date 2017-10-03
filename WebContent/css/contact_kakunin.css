@@ -87,17 +87,7 @@ footer {
 	background-color:white;
 }
 
-.link a:link{
-	color:#ffffff;
-}
-.link a:visited{
-	color:#ffffff;
+.contactLink{
+	text-align:center;
 }
 
-.link a:hover{
-	color:#ffffff;
-}
-
-.link a:active{
-	color:#ffffff;
-}
