@@ -49,7 +49,7 @@ pageEncoding="UTF-8"%>
                       <h2><s:text name = "lang.contact_send.thankyou"/></h2>
               </div>
                       <br>
-                      <center><a href="index.jsp"><s:text name = "lang.contact_send.return_to_top"/></a></center>
+                      <center> <a href="index.jsp"><s:text name = "lang.contact_send.return_to_top"/></a></center>
 
 <br>
 <br>
